@@ -433,7 +433,10 @@ window.BAND_DISCOGRAPHY = {
     { name: "来自VC的礼物", type: "专辑", date: "2005-01-01", songs: [
       { name: "来自VC的礼物", duration: 280 } ] },
     { name: "伟大的复兴", type: "专辑", date: "2008-12-12", songs: [
-      { name: "伟大的复兴", duration: 270 } ] },
+        { name: "1978", duration: 270 }, { name: "沙滩绅士", duration: 276 }, { name: "午后三点", duration: 259 },,
+        { name: "柔光", duration: 247 }, { name: "低声细语", duration: 285 }, { name: "Me&I", duration: 261 },,
+        { name: "夜空多灿烂", duration: 283 }, { name: "木偶剧", duration: 261 },,
+        { name: "Ocean Is Dead", duration: 125 }, { name: "The Great Disappointment", duration: 303 } ] },
     { name: "THE SUPERVC", type: "专辑", date: "2017-01-01", songs: [
       { name: "躁不完的青春", duration: 280 }, { name: "带我回家", duration: 270 } ] },
     { name: "新世纪罗曼史", type: "专辑", date: "2020-01-01", songs: [
@@ -638,7 +641,9 @@ window.BAND_DISCOGRAPHY = {
     { name: "我们不由自主的亲吻对方", type: "专辑", date: "2008-01-01", rating: 7.8, songs: [
       { name: "候鸟", duration: 280 }, { name: "大圣", duration: 290 }, { name: "谁", duration: 270 } ] },
     { name: "兰州 兰州", type: "专辑", date: "2011-09-30", rating: 8.0, songs: [
-      { name: "兰州 兰州", duration: 290 } ] },
+        { name: "兰州 兰州", duration: 393 }, { name: "阿帮阿忙", duration: 281 }, { name: "随风而逝", duration: 339 },,
+        { name: "不叫鸟", duration: 307 }, { name: "小草草", duration: 258 }, { name: "那只船", duration: 268 },,
+        { name: "清晨日暮", duration: 373 }, { name: "一个和一万个", duration: 245 }, { name: "红与黑", duration: 368 } ] },
     { name: "守望者", type: "专辑", date: "2013-01-01", songs: [
       { name: "守望者", duration: 280 } ] },
     { name: "一天", type: "专辑", date: "2017-01-01", songs: [
