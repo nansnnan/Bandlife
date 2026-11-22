@@ -488,9 +488,14 @@ window.BAND_DISCOGRAPHY = {
   ],
   "布衣乐队": [
     { name: "那么久", type: "专辑", date: "2007-12-18", rating: 7.8, songs: [
-      { name: "我爱你亲爱的姑娘", duration: 229 }, { name: "羊肉面", duration: 280 }, { name: "丢", duration: 334 } ] },
+      { name: "那么久", duration: 325 }, { name: "在你身旁", duration: 268 }, { name: "唯一的理由", duration: 312 },
+      { name: "羊肉面", duration: 300 }, { name: "丢", duration: 334 }, { name: "风", duration: 210 },
+      { name: "我爱你亲爱的姑娘", duration: 229 }, { name: "小朋友", duration: 136 }, { name: "三十里铺", duration: 286 },
+      { name: "新的一天", duration: 215 } ] },
     { name: "布衣", type: "专辑", date: "2009-09-26", rating: 8.0, songs: [
-      { name: "三峰", duration: 291 }, { name: "遥远的地方", duration: 329 }, { name: "粼蓝曲", duration: 405 } ] },
+      { name: "三峰", duration: 291 }, { name: "遥远的地方", duration: 329 }, { name: "不累", duration: 276 },
+      { name: "你是我的希望", duration: 234 }, { name: "粼蓝曲", duration: 405 }, { name: "世事难料", duration: 437 },
+      { name: "光荣的愤怒", duration: 172 }, { name: "离别", duration: 257 }, { name: "雪花", duration: 408 } ] },
     { name: "秋天", type: "专辑", date: "2010-11-18", songs: [
       { name: "秋天", duration: 280 } ] },
     { name: "出发", type: "专辑", date: "2013-10-18", songs: [
