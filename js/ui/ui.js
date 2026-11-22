@@ -315,7 +315,7 @@ function renderCreateSong() {
         <label>自定义歌词</label>
         <textarea id="song-lyrics" rows="6" placeholder="输入歌词（填写完整歌词可提升歌曲质量）" style="width:100%;resize:vertical;"></textarea>
       </div>
-      <button class="btn-primary" data-action="submit-song" style="width:100%;">创作歌曲（消耗 3 天）</button>
+      <button class="btn-primary" data-action="submit-song" style="width:100%;">创作歌曲（消耗 30 天）</button>
     </div>
 
     <div class="section-title" style="margin-top:20px;">未发布的歌曲（${songs.length}）</div>
@@ -361,7 +361,7 @@ function submitSong() {
     lyrics: document.getElementById("song-lyrics").value,
     members,
   });
-  advanceTime(3);  // 创作耗时
+  advanceTime(30);  // 创作耗时（约 1 个月，符合真实乐队单曲创作周期）
   renderCreateSong();
   renderTopbar();
 }
