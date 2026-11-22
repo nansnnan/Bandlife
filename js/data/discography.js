@@ -923,9 +923,16 @@ window.BAND_DISCOGRAPHY = {
     { name: "金桔希子", type: "EP", date: "2016-01-01", rating: 8.0, songs: [
       { name: "My Jinji", duration: 300 }, { name: "Burgundy Red", duration: 280 } ] },
     { name: "Cassa Nova", type: "专辑", date: "2018-01-01", rating: 8.1, songs: [
-      { name: "Slow", duration: 290 } ] },
+       { name: "Almost Mature '87", duration: 201 }, { name: "Greedy", duration: 258 },
+       { name: "Cool of Lullaby", duration: 322 }, { name: "Angel Disco Love", duration: 248 },
+       { name: "Slow", duration: 122 }, { name: "Oriental", duration: 159 }, { name: "Summum Bonum", duration: 281 },
+       { name: "Libidream", duration: 296 }, { name: "10-Year-Taipei (Matured '17)", duration: 218 } ] },
     { name: "Soft Storm", type: "专辑", date: "2020-01-01", songs: [
-      { name: "Candlelight", duration: 280 } ] },
+       { name: "Soft Storm", duration: 141 }, { name: "Overlove", duration: 237 },
+       { name: "Under the Skin", duration: 210 }, { name: "Passerby (feat. Michael Seyer)", duration: 240 },
+       { name: "Teahouse", duration: 230 }, { name: "Overlove (Rehab)", duration: 230 },
+       { name: "Hyperfocus", duration: 200 }, { name: "Midnight with Paul", duration: 230 },
+       { name: "Candlelight (feat. OHHYUK)", duration: 250 } ] },
   ],
   "声音碎片": [
     { name: "世界是噪音的花园", type: "专辑", date: "2002-01-01", songs: [
