@@ -588,6 +588,8 @@ window.BAND_DISCOGRAPHY = {
       { name: "Distance", duration: 260 }, { name: "这是你想要的生活吗", duration: 280 }, { name: "孤独之书", duration: 270 },
       { name: "月亮拥抱我", duration: 270 }, { name: "由于时间与地域的关系", duration: 280 }, { name: "谈恋爱前不如先养猫", duration: 260 },
       { name: "海", duration: 270 }, { name: "Indigo", duration: 280 }, { name: "愿你有故乡", duration: 290 } ] },
+    { name: "世界/青年", type: "专辑", date: "2023-05-04", songs: [
+      { name: "城市动物园", duration: 280 }, { name: "慢游", duration: 270 } ] },
   ],
   "鹿先森乐队": [
     { name: "所有的酒, 都不如你", type: "专辑", date: "2016-01-01", rating: 7.5, songs: [
