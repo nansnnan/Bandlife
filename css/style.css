@@ -584,11 +584,84 @@ select { cursor: pointer; }
 
 /* 响应式 */
 @media (max-width: 768px) {
-  .sidebar { width: 64px; }
-  .nav-item { justify-content: center; padding: 12px; }
-  .nav-item span { font-size: 20px; }
-  .nav-item .nav-label { display: none; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-2 { grid-template-columns: 1fr; }
+  /* ===== 游戏视图布局重排：顶部栏 + 时间栏 + 内容 + 底部导航 ===== */
+  .view[data-view="game"] { flex-direction: column; }
+  .topbar { order: 0; padding: 8px 12px; gap: 8px; }
   .topbar-center { display: none; }
+  .band-badge { font-size: 13px; padding: 5px 12px; }
+  .topbar-date { font-size: 12px; }
+  .timebar { order: 1; padding: 7px 12px; border-top: none; border-bottom: 1px solid var(--border); }
+  .time-advance { gap: 6px; }
+  .btn-time { padding: 6px 12px; font-size: 12px; }
+  .time-info { font-size: 11px; }
+  .game-body { order: 2; flex: 1; overflow: hidden; }
+
+  /* ===== 侧边栏变底部导航 ===== */
+  .sidebar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    width: 100%; height: 58px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 2px;
+    border-top: 1px solid var(--border);
+    border-right: none;
+    z-index: 60;
+    background: var(--bg-2);
+  }
+  .nav-item { flex-direction: column; padding: 4px 2px; gap: 2px; border-radius: 8px; }
+  .nav-item span { font-size: 18px; }
+  .nav-item .nav-label { display: block; font-size: 9px; line-height: 1; }
+
+  /* ===== 内容区留出底部空间 ===== */
+  .content { padding: 12px; padding-bottom: 72px; }
+
+  /* ===== 迷你播放器移到导航栏上方 ===== */
+  .mini-player { bottom: 58px; padding: 0 12px; gap: 12px; height: 52px; }
+  .mini-info { width: auto; flex: 1; min-width: 0; }
+  .mini-progress { display: none; }
+
+  /* ===== 播放器：左右结构变上下结构 ===== */
+  .player-layout { flex-direction: column; height: auto; gap: 12px; }
+  .player-left { width: 100%; max-height: 38vh; }
+  .player-right { width: 100%; padding: 16px; }
+  .player-detail-header { gap: 14px; }
+  .player-disc { width: 80px; height: 80px; }
+  .disc-center { width: 30px; height: 30px; font-size: 14px; }
+  .player-song-name { font-size: 20px; }
+  .player-artist-name { font-size: 13px; }
+  .player-stats { gap: 14px; }
+  .ps-num { font-size: 15px; }
+  .player-controls .mini-btn { width: 40px; height: 40px; }
+
+  /* ===== 评分网站：左右结构变上下结构 ===== */
+  .rating-layout { flex-direction: column; height: auto; gap: 12px; }
+  .rating-left { width: 100%; max-height: 32vh; }
+  .rating-right { width: 100%; padding: 16px; }
+  .rating-detail-header { gap: 14px; }
+  .rating-detail-cover { width: 70px; height: 70px; font-size: 32px; }
+  .rating-detail-name { font-size: 20px; }
+  .rating-avg-score { font-size: 40px; }
+  .rating-platforms { grid-template-columns: 1fr; }
+
+  /* ===== grid 单列 ===== */
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+
+  /* ===== 创建界面 ===== */
+  .panel { padding: 20px 16px; max-height: 92vh; width: 95%; }
+  .mode-cards { flex-direction: column; }
+  .panel-title { font-size: 20px; }
+
+  /* ===== 主菜单 ===== */
+  .menu-logo h1 { font-size: 34px; letter-spacing: 5px; }
+  .logo-graphic { font-size: 48px; }
+  .logo-sub { font-size: 12px; }
+  .menu-buttons { width: 240px; }
+
+  /* ===== 设置界面 ===== */
+  .settings-panel { padding: 20px 16px; }
+
+  /* ===== 事件日志 ===== */
+  .event-log { max-height: 200px; }
 }

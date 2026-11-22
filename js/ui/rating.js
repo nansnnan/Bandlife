@@ -3,6 +3,24 @@
 let currentRatingRelease = null;
 let currentPlatformName = null;   // 当前查看的平台评论，null = 查看所有平台
 
+// 收集所有可评分作品（玩家作品 + 竞争对手作品）
+function collectAllReleases() {
+  const releases = [];
+  for (const rel of Game.releases) {
+    releases.push(rel);
+  }
+  for (const r of Game.rivals) {
+    for (const rel of r.releases) {
+      // 给竞争对手作品一个稳定 id（若缺失）
+      if (!rel.id) {
+        rel.id = "rival_" + r.name + "_" + rel.album + "_" + rel.name;
+      }
+      releases.push(rel);
+    }
+  }
+  return releases;
+}
+
 // 五角星 path（24x24）
 const STAR_PATH = "M12 2.5 L14.9 8.4 L21.5 9.3 L16.7 13.9 L17.9 20.5 L12 17.2 L6.1 20.5 L7.3 13.9 L2.5 9.3 L9.1 8.4 Z";
 
@@ -32,7 +50,7 @@ function renderStars(count) {
 
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
-  const releases = Game.releases;
+  const releases = collectAllReleases();
   if (!currentRatingRelease && releases.length) {
     currentRatingRelease = releases[releases.length - 1];
   }
@@ -54,7 +72,7 @@ function renderRatingView() {
             <div class="rating-item-cover">${r.releaseType === "专辑" ? "💿" : r.releaseType === "EP" ? "📀" : "🎵"}</div>
             <div>
               <div class="rating-item-name">${r.name}</div>
-              <div class="rating-item-sub">${r.releaseType} · ${r.style}</div>
+              <div class="rating-item-sub">${r.isRival ? r.bandName + " · " : ""}${r.releaseType} · ${r.style}</div>
             </div>
             <div class="rating-item-score">${r.avgScore ?? "—"}</div>
           </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无已发布作品</div>`}
@@ -187,7 +205,7 @@ function levelColor(score) {
 }
 
 function selectRating(id) {
-  currentRatingRelease = Game.releases.find(r => r.id === id);
+  currentRatingRelease = collectAllReleases().find(r => r.id === id);
   currentPlatformName = null;   // 切换作品时回到平台列表
   renderRatingView();
 }

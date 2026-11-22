@@ -104,7 +104,7 @@ function renderPlayerDetail(track) {
       </div>
     </div>
     <div class="player-progress-wrap">
-      <span class="pp-time">${fmtTime(curSec)}</span>
+      <span class="pp-time" id="player-cur-time">${fmtTime(curSec)}</span>
       <div class="player-progress"><div class="player-progress-bar" style="width:${progress}%"></div></div>
       <span class="pp-time">${fmtTime(totalSec)}</span>
     </div>
@@ -174,6 +174,11 @@ function updateProgressUI() {
   if (bar) bar.style.width = pct + "%";
   const detailBar = document.querySelector(".player-progress-bar");
   if (detailBar) detailBar.style.width = pct + "%";
+  // 实时更新当前时间显示
+  const curTimeEl = document.getElementById("player-cur-time");
+  if (curTimeEl && Player.current) {
+    curTimeEl.textContent = fmtTime(Math.round(Player.progress * Player.current.duration));
+  }
 }
 
 function togglePlay() {
@@ -214,8 +219,10 @@ function updateMiniPlayer() {
     document.getElementById("mini-title").textContent = Player.current.name;
     document.getElementById("mini-artist").textContent = Player.current.artist;
     document.querySelector(".mini-btn.play").innerHTML = Player.playing ? ICONS.pause : ICONS.play;
-    // 给游戏视图底部留出迷你播放栏的高度，避免遮挡时间推进栏
-    if (gameView) gameView.style.paddingBottom = "56px";
+    // 桌面端给游戏视图底部留出迷你播放栏高度；手机端时间栏在顶部，无需额外留白
+    if (gameView && window.innerWidth > 768) {
+      gameView.style.paddingBottom = "56px";
+    }
   } else {
     mp.classList.remove("show");
     if (gameView) gameView.style.paddingBottom = "";
