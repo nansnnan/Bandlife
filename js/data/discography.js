@@ -505,8 +505,11 @@ window.BAND_DISCOGRAPHY = {
       { name: "甜蜜与杀害", duration: 280 } ] },
     { name: "阳光、欢乐、枪", type: "专辑", date: "2012-04-05", songs: [
       { name: "Sun Fun Gun", duration: 270 } ] },
-    { name: "幻象波普星", type: "专辑", date: "2014-04-25", songs: [
-      { name: "幻象波普星", duration: 290 } ] },
+    { name: "幻象波普星", type: "专辑", date: "2014-04-20", songs: [
+      { name: "我们飞向太空", duration: 395 }, { name: "幻象波普星", duration: 210 }, { name: "星光", duration: 266 },
+      { name: "阿司匹林", duration: 274 }, { name: "梦幻想", duration: 383 }, { name: "画", duration: 277 },
+      { name: "金色褪去，燃于天际", duration: 382 }, { name: "徙鸟", duration: 379 }, { name: "她在月光下", duration: 324 },
+      { name: "暖浪拂心田", duration: 285 } ] },
     { name: "生之响往", type: "专辑", date: "2018-04-25", rating: 8.0, songs: [
       { name: "火车驶向云外，梦安魂于九霄", duration: 320 }, { name: "生之响往", duration: 280 } ] },
     { name: "赤子白仙", type: "专辑", date: "2020-07-13", songs: [
