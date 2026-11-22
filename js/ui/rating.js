@@ -51,6 +51,12 @@ function renderStars(count) {
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
   const releases = collectAllReleases();
+  // 打开界面时自动为所有作品生成评分，列表直接显示分数，无需点击
+  for (const rel of releases) {
+    if (!rel.ratings || !rel.ratings.length) {
+      generateRatings(rel);
+    }
+  }
   if (!currentRatingRelease && releases.length) {
     currentRatingRelease = releases[releases.length - 1];
   }
