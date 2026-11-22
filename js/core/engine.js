@@ -296,12 +296,15 @@ function generateComments(release, count) {
   if (release.commentList && release.commentList.length) return release.commentList;
   const list = [];
   const ratio = release.quality / 100;
+  // 评论情绪比例用平方关系，让正负面更贴合评分（高分几乎全正面，低分几乎全负面）
+  const praiseProb = ratio * ratio * 0.85;
+  const criticizeProb = (1 - ratio) * (1 - ratio) * 0.85;
   for (let i = 0; i < count; i++) {
     const r = Game.rng();
     let pool;
-    if (r < ratio * 0.7) pool = window.COMMENT_TEMPLATES.praise;
-    else if (r < ratio * 0.7 + (1 - ratio) * 0.6) pool = window.COMMENT_TEMPLATES.criticize;
-    else if (r < 0.85) pool = window.COMMENT_TEMPLATES.neutral;
+    if (r < praiseProb) pool = window.COMMENT_TEMPLATES.praise;
+    else if (r < praiseProb + criticizeProb) pool = window.COMMENT_TEMPLATES.criticize;
+    else if (r < 0.9) pool = window.COMMENT_TEMPLATES.neutral;
     else pool = window.COMMENT_TEMPLATES.short;
     let text = pick(pool);
     text = text.replace(/\{song\}/g, release.name)

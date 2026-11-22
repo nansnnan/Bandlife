@@ -97,6 +97,9 @@ function renderStars(count) {
 
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
+  // 保存左侧列表滚动位置，避免重渲染后回到顶部
+  const leftEl = document.querySelector('.rating-left');
+  const scrollTop = leftEl ? leftEl.scrollTop : 0;
   const tracks = collectAllRatingTracks();
   // 打开界面时自动为所有歌曲生成评分，列表直接显示分数，无需点击
   for (const t of tracks) {
@@ -126,6 +129,9 @@ function renderRatingView() {
       <div class="rating-right" id="rating-detail">${detailHTML}</div>
     </div>
   `;
+  // 恢复左侧列表滚动位置
+  const newLeftEl = document.querySelector('.rating-left');
+  if (newLeftEl) newLeftEl.scrollTop = scrollTop;
 }
 
 // 渲染单个专辑分组（含展开的歌曲列表）
@@ -238,13 +244,16 @@ function generatePlatformComments(rel, platformName) {
   const rating = rel.ratings.find(x => x.platform === platformName);
   const ratio = rating ? rating.score / rating.scale : 0.5;
   const count = rand(6, 12);
+  // 评论情绪比例用平方关系，让正负面更贴合该平台评分
+  const praiseProb = ratio * ratio * 0.85;
+  const criticizeProb = (1 - ratio) * (1 - ratio) * 0.85;
   const list = [];
   for (let i = 0; i < count; i++) {
     const r = Game.rng();
     let pool;
-    if (r < ratio * 0.75) pool = window.COMMENT_TEMPLATES.praise;
-    else if (r < ratio * 0.75 + (1 - ratio) * 0.6) pool = window.COMMENT_TEMPLATES.criticize;
-    else if (r < 0.88) pool = window.COMMENT_TEMPLATES.neutral;
+    if (r < praiseProb) pool = window.COMMENT_TEMPLATES.praise;
+    else if (r < praiseProb + criticizeProb) pool = window.COMMENT_TEMPLATES.criticize;
+    else if (r < 0.9) pool = window.COMMENT_TEMPLATES.neutral;
     else pool = window.COMMENT_TEMPLATES.short;
     let text = pick(pool)
       .replace(/\{song\}/g, rel.name)

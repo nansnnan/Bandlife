@@ -66,6 +66,9 @@ function groupTracksByAlbum(tracks) {
 // ===== 渲染播放器视图 =====
 function renderPlayerView() {
   const el = document.querySelector('[data-game-view="player"]');
+  // 保存左侧列表滚动位置，避免重渲染后回到顶部
+  const listEl = document.querySelector('.player-track-list');
+  const scrollTop = listEl ? listEl.scrollTop : 0;
   const tracks = collectAllTracks();
   const groups = groupTracksByAlbum(tracks);
   el.innerHTML = `
@@ -82,6 +85,9 @@ function renderPlayerView() {
       </div>
     </div>
   `;
+  // 恢复左侧列表滚动位置
+  const newListEl = document.querySelector('.player-track-list');
+  if (newListEl) newListEl.scrollTop = scrollTop;
 }
 
 // 渲染播放器专辑分组（含展开的歌曲列表）
