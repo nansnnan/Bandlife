@@ -445,7 +445,9 @@ window.BAND_DISCOGRAPHY = {
   "惘闻": [
     { name: "凌水河", type: "专辑", date: "2000-09-01", songs: [ { name: "凌水河", duration: 360 } ] },
     { name: "二十八天失眠日记", type: "专辑", date: "2003-08-01", rating: 7.3, songs: [
-      { name: "失眠日记", duration: 300 } ] },
+      { name: "光", duration: 583 }, { name: "垂死的岁末", duration: 468 }, { name: "丰收", duration: 469 },
+      { name: "奔丧", duration: 368 }, { name: "报仇", duration: 309 }, { name: "汉人", duration: 273 },
+      { name: "辞行", duration: 349 }, { name: "素食者", duration: 351 }, { name: "A Song For Yu Wen", duration: 206 } ] },
     { name: "Re:Re:Re:", type: "专辑", date: "2005-12-01", rating: 7.1, songs: [
       { name: "Re:Re:Re:", duration: 320 } ] },
     { name: "7 Objects in Another Infinite Space", type: "专辑", date: "2007-04-14", rating: 7.0, songs: [
@@ -465,7 +467,8 @@ window.BAND_DISCOGRAPHY = {
       { name: "万佛朝宗", duration: 420 }, { name: "逃离母宇宙", duration: 440 }, { name: "酒神经", duration: 400 },
       { name: "最后旅程", duration: 460 }, { name: "Welcome to Utopia", duration: 480 } ] },
     { name: "岁月鸿沟", type: "专辑", date: "2016-04-25", rating: 7.5, songs: [
-      { name: "岁月鸿沟", duration: 380 } ] },
+      { name: "黄泉水", duration: 895 }, { name: "红墙黑墙", duration: 487 }, { name: "海洋之心", duration: 653 },
+      { name: "少年宫", duration: 818 }, { name: "21世纪不适症", duration: 540 }, { name: "归零", duration: 320 } ] },
     { name: "看不见的城市", type: "专辑", date: "2018-07-02", rating: 7.5, songs: [
       { name: "破晓", duration: 420 }, { name: "水之湄", duration: 360 },
       { name: "大连,勿语", duration: 480 }, { name: "老虎棒子鸡", duration: 600 } ] },
