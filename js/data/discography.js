@@ -455,10 +455,9 @@ window.BAND_DISCOGRAPHY = {
     { name: "IV", type: "专辑", date: "2008-05-17", rating: 7.4, songs: [
       { name: "污水塘", duration: 380 }, { name: "Rust Inside", duration: 360 } ] },
     { name: "L&R", type: "专辑", date: "2010-04-09", rating: 6.6, songs: [
-      { name: "About the Childhood", duration: 438 }, { name: "Still Life", duration: 361 },
-      { name: "Inhibitor for Anxiety Disorder", duration: 530 }, { name: "←M→", duration: 367 },
-      { name: "Hanged on the Timeline", duration: 626 }, { name: "Happy Together or Rehearsal", duration: 596 },
-      { name: "Vaselin", duration: 356 } ] },
+      { name: "童篇", duration: 438 }, { name: "近景", duration: 361 }, { name: "焦虑抑制剂", duration: 530 },,
+      { name: "M", duration: 367 }, { name: "悬在时间轴上", duration: 626 }, { name: "合乐", duration: 596 },,
+      { name: "凡士林", duration: 356 } ] },
     { name: "0.7", type: "专辑", date: "2012-06-08", rating: 7.9, songs: [
       { name: "2012", duration: 403 }, { name: "Rain Watcher", duration: 338 },
       { name: "Lonely God", duration: 570 }, { name: "Angelo's Portrait", duration: 459 } ] },
@@ -473,7 +472,9 @@ window.BAND_DISCOGRAPHY = {
       { name: "破晓", duration: 420 }, { name: "水之湄", duration: 360 },
       { name: "大连,勿语", duration: 480 }, { name: "老虎棒子鸡", duration: 600 } ] },
     { name: "十万个为什么", type: "专辑", date: "2020-09-23", rating: 6.9, songs: [
-      { name: "醉忘川", duration: 400 }, { name: "孤独的鸟", duration: 380 } ] },
+      { name: "鍛高潭", duration: 410 }, { name: "幽魂", duration: 522 }, { name: "五五路", duration: 440 },,
+      { name: "假若明天来临", duration: 353 }, { name: "流浪者之歌", duration: 553 }, { name: "孤独的鸟", duration: 425 },,
+      { name: "敢问路在何方", duration: 538 }, { name: "醉忘川", duration: 500 } ] },
     { name: "辛丑壬寅", type: "专辑", date: "2022-01-01", rating: 6.6, songs: [
       { name: "野火", duration: 400 }, { name: "辛丑", duration: 380 } ] },
   ],
