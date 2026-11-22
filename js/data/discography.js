@@ -12,8 +12,11 @@ window.BAND_DISCOGRAPHY = {
     { name: "演义", type: "专辑", date: "1998-12-20", songs: [
       { name: "演义", duration: 330 }, { name: "时间", duration: 300 }, { name: "缘生缘灭", duration: 280 },
       { name: "送别", duration: 290 }, { name: "英雄", duration: 310 }, { name: "玩笑", duration: 270 } ] },
-    { name: "浪漫骑士", type: "专辑", date: "2008-06-01", songs: [
-      { name: "浪漫骑士", duration: 320 }, { name: "斑马线", duration: 300 }, { name: "大象", duration: 280 } ] },
+    { name: "浪漫骑士", type: "专辑", date: "2008-06-13", songs: [
+      { name: "啸叫列车", duration: 320 }, { name: "快乐的忧愁", duration: 300 }, { name: "浪漫骑士", duration: 320 },
+      { name: "酒狂", duration: 310 }, { name: "路", duration: 300 }, { name: "封禅祭", duration: 330 },
+      { name: "承诺", duration: 290 }, { name: "追溯", duration: 310 }, { name: "绝望致谎言", duration: 300 },
+      { name: "大风歌", duration: 320 } ] },
     { name: "芒刺", type: "专辑", date: "2013-11-08", songs: [
       { name: "芒刺", duration: 310 }, { name: "斑马线", duration: 290 }, { name: "麋鹿的眼泪", duration: 300 },
       { name: "睡莲", duration: 280 } ] },
@@ -35,12 +38,18 @@ window.BAND_DISCOGRAPHY = {
       { name: "我们这一代", duration: 300 }, { name: "不能让我的烦恼没机会表白", duration: 310 },
       { name: "逃离", duration: 280 }, { name: "已足够", duration: 270 } ] },
     { name: "黑豹V", type: "专辑", date: "2004-07-22", songs: [
-      { name: "生活方式", duration: 290 }, { name: "空", duration: 280 }, { name: "孤焰烈火", duration: 300 } ] },
+      { name: "生活方式", duration: 290 }, { name: "空", duration: 280 }, { name: "孤焰烈火", duration: 300 },
+      { name: "I Don't Want To Say Goodbye", duration: 290 }, { name: "错觉", duration: 280 }, { name: "未知的世纪", duration: 300 },
+      { name: "旋转", duration: 280 }, { name: "继续地飞", duration: 300 }, { name: "透明的影子", duration: 290 },
+      { name: "照亮我心", duration: 310 } ] },
     { name: "我们是谁", type: "专辑", date: "2013-07-11", songs: [
       { name: "枷锁", duration: 290 }, { name: "潮汐", duration: 300 }, { name: "寻找", duration: 280 },
       { name: "我们", duration: 310 } ] },
     { name: "本色", type: "专辑", date: "2017-04-20", songs: [
-      { name: "孤独的灵魂", duration: 300 }, { name: "兄弟", duration: 290 }, { name: "干杯", duration: 280 } ] },
+      { name: "How do we find a way", duration: 240 }, { name: "键盘·狭", duration: 221 }, { name: "孤独的灵魂", duration: 246 },
+      { name: "炙热", duration: 187 }, { name: "Back to rock", duration: 231 }, { name: "低头士", duration: 140 },
+      { name: "无畏", duration: 197 }, { name: "较量", duration: 196 }, { name: "战", duration: 179 },
+      { name: "干杯", duration: 222 }, { name: "放不开你", duration: 230 }, { name: "兄弟", duration: 210 } ] },
     { name: "尽余欢", type: "EP", date: "2015-12-14", songs: [ { name: "送别", duration: 280 }, { name: "兄弟", duration: 270 } ] },
   ],
   "零点乐队": [
@@ -51,11 +60,14 @@ window.BAND_DISCOGRAPHY = {
       { name: "面具", duration: 307 }, { name: "永恒的起点", duration: 325 }, { name: "共同的起点", duration: 391 },
       { name: "一切都会好", duration: 354 }, { name: "I Am Sorry别误会", duration: 309 }, { name: "过去", duration: 382 } ] },
     { name: "每一夜每一天", type: "专辑", date: "1998-01-01", songs: [
-      { name: "每一夜每一天", duration: 280 } ] },
+      { name: "粉墨人生", duration: 222 }, { name: "回心转意", duration: 350 }, { name: "该让我如何爱你", duration: 281 },
+      { name: "别和他一样", duration: 237 }, { name: "放开我", duration: 261 } ] },
     { name: "00:00:00", type: "专辑", date: "1999-09-21", songs: [
       { name: "00:00:00", duration: 290 } ] },
     { name: "没有什么不可以", type: "专辑", date: "2002-01-20", songs: [
-      { name: "没有什么不可以", duration: 290 } ] },
+      { name: "Don't Runaway", duration: 236 }, { name: "好好过吧", duration: 218 }, { name: "冒险家", duration: 260 },
+      { name: "没有什么不可以", duration: 299 }, { name: "梦游", duration: 303 }, { name: "飘", duration: 228 },
+      { name: "我要", duration: 301 }, { name: "相信自己", duration: 213 }, { name: "战胜自己", duration: 259 } ] },
     { name: "越来越", type: "专辑", date: "2003-09-01", songs: [
       { name: "越来越", duration: 280 } ] },
     { name: "风雷动", type: "专辑", date: "2005-01-01", songs: [
@@ -132,8 +144,11 @@ window.BAND_DISCOGRAPHY = {
   "新裤子": [
     { name: "新裤子", type: "专辑", date: "1998-01-01", rating: 8.1, songs: [
       { name: "我们的时代", duration: 280 }, { name: "过时", duration: 270 }, { name: "流行一代", duration: 260 } ] },
-    { name: "龙虎人丹", type: "专辑", date: "2005-01-01", rating: 8.0, songs: [
-      { name: "龙虎人丹", duration: 228 }, { name: "两个女朋友", duration: 250 }, { name: "爱瑞巴迪", duration: 240 } ] },
+    { name: "龙虎人丹", type: "专辑", date: "2005-12-01", rating: 8.2, songs: [
+      { name: "你就是我的明星", duration: 148 }, { name: "Bye Bye Disco", duration: 305 }, { name: "两个男朋友", duration: 204 },
+      { name: "神秘的香波", duration: 233 }, { name: "龙虎人丹", duration: 227 }, { name: "需要爱", duration: 248 },
+      { name: "爱带我回家", duration: 292 }, { name: "爱瑞巴迪", duration: 176 }, { name: "我想她", duration: 215 },
+      { name: "御宅", duration: 306 } ] },
     { name: "野人也有爱", type: "专辑", date: "2008-11-14", songs: [
       { name: "野人也有爱", duration: 250 }, { name: "我们可以在一起", duration: 311 } ] },
     { name: "Go East", type: "专辑", date: "2009-01-01", songs: [ { name: "Go East", duration: 260 } ] },
@@ -160,7 +175,11 @@ window.BAND_DISCOGRAPHY = {
     { name: "一些风景", type: "专辑", date: "2012-05-25", songs: [
       { name: "陈先生", duration: 280 }, { name: "海风", duration: 290 }, { name: "彭啊湃", duration: 300 } ] },
     { name: "广东姑娘", type: "专辑", date: "2015-03-09", rating: 8.1, songs: [
-      { name: "广东姑娘", duration: 266 }, { name: "晚上好 春天小姐", duration: 257 }, { name: "初恋", duration: 280 } ] },
+      { name: "海风", duration: 280 }, { name: "心肝痛", duration: 270 }, { name: "广东姑娘", duration: 266 },
+      { name: "走鬼", duration: 280 }, { name: "我的头发就是这样被吹乱的啊", duration: 290 }, { name: "像将军那样喝酒", duration: 270 },
+      { name: "龙哥有真爱", duration: 280 }, { name: "东莞的月亮", duration: 270 }, { name: "我哈你", duration: 260 },
+      { name: "晚上好，春天小姐", duration: 257 }, { name: "猪母上山咬老虎", duration: 280 }, { name: "美丽漂亮，英俊潇洒", duration: 270 },
+      { name: "请到老祖宗", duration: 280 } ] },
     { name: "梦幻丽莎发廊", type: "专辑", date: "2017-03-29", rating: 8.2, songs: [
       { name: "梦幻丽莎发廊", duration: 248 }, { name: "阿珍爱上了阿强", duration: 409 } ] },
     { name: "故事会", type: "专辑", date: "2019-02-21", rating: 8.0, songs: [
@@ -173,8 +192,13 @@ window.BAND_DISCOGRAPHY = {
   "重塑雕像的权利": [
     { name: "CUT OFF!", type: "EP", date: "2005-01-01", rating: 8.0, songs: [
       { name: "Cut Off", duration: 300 } ] },
-    { name: "WATCH OUT!CLIMATE HAS CHANGED,FAT MUM RISES...", type: "专辑", date: "2009-01-01", rating: 8.1, songs: [
-      { name: "Watch Out", duration: 280 }, { name: "Surrender", duration: 290 } ] },
+    { name: "WATCH OUT!CLIMATE HAS CHANGED,FAT MUM RISES...", type: "专辑", date: "2009-01-09", rating: 8.1, songs: [
+      { name: "Watch Out, Climate Has Changed...", duration: 95 }, { name: "Surrender", duration: 338 },
+      { name: "My Great Location", duration: 232 }, { name: "Momentarily Out Of Mind", duration: 182 },
+      { name: "Escape Behind...I", duration: 150 }, { name: "Vis-A-Vis", duration: 206 },
+      { name: "Escape Behind...II", duration: 286 }, { name: "Up Next_Bela Lugosi's Back", duration: 515 },
+      { name: "Billy Cannot Stop", duration: 321 }, { name: "By Your Both Sides, Left And Right", duration: 333 },
+      { name: "...Fat Mum Rises!", duration: 77 } ] },
     { name: "Before The Applause", type: "专辑", date: "2017-09-15", rating: 8.3, songs: [
       { name: "Pigs In The River", duration: 300 }, { name: "8+2+8 I", duration: 280 },
       { name: "8+2+8 II", duration: 280 }, { name: "Sounds for Celebration", duration: 290 } ] },
@@ -236,7 +260,8 @@ window.BAND_DISCOGRAPHY = {
     { name: "木马", type: "专辑", date: "1999-12-01", rating: 8.2, songs: [
       { name: "低处生活", duration: 280 }, { name: "没有声音的房间", duration: 290 } ] },
     { name: "Yellow Star", type: "EP", date: "2003-04-21", songs: [
-      { name: "Yellow Star", duration: 280 } ] },
+      { name: "爱得像蜜糖", duration: 280 }, { name: "我失去了她", duration: 270 }, { name: "美丽的南方", duration: 290 },
+      { name: "Feifei Run", duration: 300 }, { name: "伟大的演奏家", duration: 280 } ] },
     { name: "果冻帝国", type: "专辑", date: "2004-09-01", rating: 8.0, songs: [
       { name: "果冻帝国", duration: 280 }, { name: "我失去了她", duration: 270 } ] },
     { name: "丝绒公路", type: "专辑", date: "2007-01-01", songs: [
@@ -269,16 +294,28 @@ window.BAND_DISCOGRAPHY = {
       { name: "希格希日", duration: 293 }, { name: "波如来", duration: 200 }, { name: "杭盖", duration: 355 },
       { name: "酒歌", duration: 214 }, { name: "四季", duration: 332 }, { name: "金手镯", duration: 251 } ] },
     { name: "四季", type: "专辑", date: "2012-05-01", rating: 7.9, songs: [
-      { name: "希格希日", duration: 280 }, { name: "海然海然", duration: 270 } ] },
+      { name: "戈壁路", duration: 213 }, { name: "乌仁都西", duration: 163 }, { name: "圆顶帽", duration: 188 },
+      { name: "海然海然", duration: 203 }, { name: "樟登树", duration: 146 }, { name: "察哈尔", duration: 238 },
+      { name: "希格希日", duration: 293 }, { name: "波如莱", duration: 200 }, { name: "花儿", duration: 181 },
+      { name: "杭盖", duration: 355 }, { name: "四季", duration: 332 } ] },
     { name: "回到你身旁", type: "专辑", date: "2014-05-22", songs: [
-      { name: "回到你身旁", duration: 226 }, { name: "硕特英雄", duration: 236 },
-      { name: "乌兰巴托之夜", duration: 293 } ] },
+      { name: "回到你身旁", duration: 226 }, { name: "硕特英雄", duration: 236 }, { name: "五条好汉", duration: 350 },
+      { name: "思念女儿", duration: 278 }, { name: "青海摇篮曲", duration: 169 }, { name: "鸿雁", duration: 241 },
+      { name: "金扣子", duration: 349 }, { name: "乌兰巴托之夜", duration: 293 }, { name: "白河滩上的兔子", duration: 252 },
+      { name: "金秋", duration: 340 }, { name: "我的母亲", duration: 287 }, { name: "呼和那木吉拉的骏马", duration: 259 },
+      { name: "漂亮的蒙古马", duration: 426 }, { name: "达亚波尔", duration: 224 }, { name: "河套湾高树", duration: 269 } ] },
     { name: "花斑马", type: "专辑", date: "2016-05-15", songs: [
-      { name: "花斑马", duration: 346 }, { name: "轮回", duration: 271 }, { name: "初升的太阳", duration: 347 } ] },
+      { name: "花斑马", duration: 346 }, { name: "轮回", duration: 271 }, { name: "阿里河，母亲河", duration: 151 },
+      { name: "海然海然", duration: 303 }, { name: "初升的太阳", duration: 347 }, { name: "美丽的草原我的家", duration: 222 },
+      { name: "上海产的半导体", duration: 266 }, { name: "小兔子", duration: 225 }, { name: "辽阔的草原", duration: 384 },
+      { name: "故乡山峰", duration: 249 }, { name: "天上的风", duration: 290 }, { name: "圣主", duration: 161 } ] },
     { name: "故乡", type: "专辑", date: "2017-01-01", songs: [
       { name: "故乡", duration: 280 } ] },
     { name: "杭盖与铜管", type: "专辑", date: "2019-01-01", songs: [
-      { name: "鸿雁", duration: 271 }, { name: "丁吉图湾", duration: 286 } ] },
+      { name: "鸿雁", duration: 271 }, { name: "丁吉图湾", duration: 286 }, { name: "四岁的海骝马", duration: 39 },
+      { name: "古纳根乌兰巴特", duration: 338 }, { name: "北边的芨芨草", duration: 352 }, { name: "花斑马", duration: 324 },
+      { name: "约会", duration: 351 }, { name: "乌仁都希", duration: 222 }, { name: "戈壁路", duration: 284 },
+      { name: "初升的太阳", duration: 340 }, { name: "喇嘛大叔寻亲记", duration: 212 }, { name: "上海产的半导体", duration: 284 } ] },
   ],
   "九宝乐队": [
     { name: "十丈铜嘴", type: "专辑", date: "2012-05-05", rating: 7.9, songs: [
@@ -337,9 +374,10 @@ window.BAND_DISCOGRAPHY = {
     { name: "欢迎来到北京", type: "专辑", date: "2007-03-01", songs: [
       { name: "欢迎来到北京", duration: 270 } ] },
     { name: "歪打正着", type: "专辑", date: "2012-11-01", songs: [
-      { name: "歪打正着", duration: 280 } ] },
+      { name: "歪打正着", duration: 280 }, { name: "碎肉拌面肉啃肉", duration: 270 },
+      { name: "八千里路云和月", duration: 280 }, { name: "十年", duration: 270 } ] },
     { name: "皂.白", type: "专辑", date: "2016-01-01", songs: [
-      { name: "皂.白", duration: 270 } ] },
+      { name: "永远的乌托邦", duration: 270 }, { name: "Ta", duration: 280 } ] },
   ],
   "达达乐队": [
     { name: "天使", type: "专辑", date: "2001-01-01", rating: 8.0, songs: [
