@@ -654,8 +654,12 @@ window.BAND_DISCOGRAPHY = {
       { name: "天涯路口", duration: 280 }, { name: "阿奶", duration: 270 } ] },
   ],
   "落日飞车": [
-    { name: "Bossa Nova", type: "专辑", date: "2011-01-01", songs: [
-      { name: "Bossa Nova", duration: 280 } ] },
+    { name: "Bossa Nova", type: "专辑", date: "2011-09-22", songs: [
+      { name: "Bomb of Love", duration: 180 }, { name: "No Man's Land", duration: 260 }, { name: "Hogi Hogi LaLa Jo", duration: 185 },
+      { name: "Punk", duration: 184 }, { name: "A Little Piece of Sadness", duration: 99 }, { name: "Pinky Pinky", duration: 122 },
+      { name: "Little Monkey Rides on the Little Donkey", duration: 226 }, { name: "I Know You Know I Love You", duration: 120 },
+      { name: "Blues", duration: 284 }, { name: "No Man's Land (Reprise)", duration: 111 }, { name: "Queen", duration: 185 },
+      { name: "My Monday Throne", duration: 277 } ] },
     { name: "金桔希子", type: "EP", date: "2016-01-01", rating: 8.0, songs: [
       { name: "My Jinji", duration: 300 }, { name: "Burgundy Red", duration: 280 } ] },
     { name: "Cassa Nova", type: "专辑", date: "2018-01-01", rating: 8.1, songs: [
