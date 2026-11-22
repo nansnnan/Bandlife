@@ -65,7 +65,9 @@ window.BAND_DISCOGRAPHY = {
       { name: "粉墨人生", duration: 222 }, { name: "回心转意", duration: 350 }, { name: "该让我如何爱你", duration: 281 },
       { name: "别和他一样", duration: 237 }, { name: "放开我", duration: 261 } ] },
     { name: "00:00:00", type: "专辑", date: "1999-09-21", songs: [
-      { name: "00:00:00", duration: 290 } ] },
+       { name: "无依无靠", duration: 258 }, { name: "等你把梦做完", duration: 278 }, { name: "爱太难", duration: 297 },
+       { name: "回到从前", duration: 269 }, { name: "记忆中的天空", duration: 309 }, { name: "Bar Street", duration: 276 },
+       { name: "往日", duration: 300 }, { name: "永远不说再见", duration: 306 }, { name: "梦", duration: 379 } ] },
     { name: "没有什么不可以", type: "专辑", date: "2002-01-20", songs: [
       { name: "Don't Runaway", duration: 236 }, { name: "好好过吧", duration: 218 }, { name: "冒险家", duration: 260 },
       { name: "没有什么不可以", duration: 299 }, { name: "梦游", duration: 303 }, { name: "飘", duration: 228 },
@@ -451,16 +453,34 @@ window.BAND_DISCOGRAPHY = {
   ],
   "脑浊": [
     { name: "踩响失真", type: "专辑", date: "2002-01-01", songs: [
-      { name: "Turn On The Distortion", duration: 260 } ] },
+       { name: "2008", duration: 172 }, { name: "Call The Police", duration: 256 },
+       { name: "No Dirty Punx", duration: 217 }, { name: "Sail", duration: 202 },
+       { name: "The party's down", duration: 142 }, { name: "Coming Down To Beijing", duration: 265 },
+       { name: "Living In The City (Live)", duration: 277 }, { name: "Lick Me Baby", duration: 113 },
+       { name: "My Simple Life", duration: 230 }, { name: "Tuqian Song's", duration: 95 },
+       { name: "No Apologize", duration: 97 } ] },
     { name: "American Dreamer", type: "专辑", date: "2004-08-01", songs: [
-      { name: "American Dreamer", duration: 270 } ] },
+       { name: "Listen to My Back", duration: 169 }, { name: "Stay Free", duration: 129 },
+       { name: "Second Hand Pogo", duration: 164 }, { name: "Played", duration: 113 },
+       { name: "Coming to the USA", duration: 201 }, { name: "Fun and Fight Tonight", duration: 183 },
+       { name: "Holy Bullshit", duration: 135 }, { name: "Summer Afternoon", duration: 114 },
+       { name: "8899", duration: 180 }, { name: "Give Me the Cash", duration: 204 },
+       { name: "Oi! Man", duration: 115 }, { name: "Human", duration: 146 },
+       { name: "Such a Dangerous", duration: 202 }, { name: "Hangout Tonight", duration: 133 },
+       { name: "Come Together", duration: 182 }, { name: "New York City", duration: 147 } ] },
     { name: "欢迎来到北京", type: "专辑", date: "2007-03-01", songs: [
       { name: "欢迎来到北京", duration: 270 } ] },
     { name: "歪打正着", type: "专辑", date: "2012-11-01", songs: [
       { name: "歪打正着", duration: 280 }, { name: "碎肉拌面肉啃肉", duration: 270 },
       { name: "八千里路云和月", duration: 280 }, { name: "十年", duration: 270 } ] },
     { name: "皂.白", type: "专辑", date: "2016-01-01", songs: [
-      { name: "永远的乌托邦", duration: 270 }, { name: "Ta", duration: 280 } ] },
+       { name: "Future", duration: 0 }, { name: "My Week", duration: 0 }, { name: "无所畏", duration: 0 },
+       { name: "My Generation", duration: 0 }, { name: "你还好吗 我的愤怒", duration: 0 }, { name: "等等 我的青春", duration: 0 },
+       { name: "绿色生命线", duration: 0 }, { name: "无法忍受", duration: 0 }, { name: "野火", duration: 0 },
+       { name: "无所畏 (30秒预告版)", duration: 0 }, { name: "再见乌托邦", duration: 0 }, { name: "理想的新街口", duration: 0 },
+       { name: "我比你OK", duration: 0 }, { name: "游击队之歌", duration: 0 }, { name: "顽主", duration: 0 },
+       { name: "TA", duration: 0 }, { name: "Call the Police", duration: 0 }, { name: "摇滚的琴人", duration: 0 },
+       { name: "永远的乌托邦", duration: 0 } ] },
   ],
   "达达乐队": [
     { name: "天使", type: "专辑", date: "2001-01-01", rating: 8.0, songs: [
@@ -549,7 +569,11 @@ window.BAND_DISCOGRAPHY = {
       { name: "假若明天来临", duration: 353 }, { name: "流浪者之歌", duration: 553 }, { name: "孤独的鸟", duration: 425 },,
       { name: "敢问路在何方", duration: 538 }, { name: "醉忘川", duration: 500 } ] },
     { name: "辛丑壬寅", type: "专辑", date: "2022-01-01", rating: 6.6, songs: [
-      { name: "野火", duration: 400 }, { name: "辛丑", duration: 380 } ] },
+       { name: "凿壁寻光 (Light behind the wall)", duration: 528 }, { name: "消失的图书馆 (Gone Library)", duration: 290 },
+       { name: "白加黑 (Black Pill & White Pill)", duration: 563 }, { name: "辛丑 (Painful Clown)", duration: 380 },
+       { name: "壬寅 (Ninja Tiger)", duration: 392 },
+       { name: "奥林匹克广场 (There's a Walmart underneath the Olympic Square)", duration: 510 },
+       { name: "野火 (Wild Fire)", duration: 455 } ] },
   ],
   "沼泽乐队": [
     { name: "沧浪星", type: "专辑", date: "2010-12-18", rating: 7.0, songs: [
@@ -589,7 +613,10 @@ window.BAND_DISCOGRAPHY = {
        { name: "疯狂生死恋", duration: 241 }, { name: "橙色", duration: 177 }, { name: "最后,我们会一起去海边", duration: 373 },
        { name: "生命意味", duration: 238 } ] },
     { name: "阳光、欢乐、枪", type: "专辑", date: "2012-04-05", songs: [
-      { name: "Sun Fun Gun", duration: 270 } ] },
+       { name: "亲爱的，我想做你女朋友", duration: 151 }, { name: "天歌", duration: 471 }, { name: "和鲨鱼一起冲浪", duration: 170 },
+       { name: "黑吻", duration: 299 }, { name: "永远选你想要的", duration: 276 }, { name: "乐队", duration: 381 },
+       { name: "重庆", duration: 317 }, { name: "最寂寞的一天", duration: 301 }, { name: "清晨里燃烧的太阳", duration: 369 },
+       { name: "伙计们真摇滚，那天我也在D22", duration: 391 }, { name: "你真有名 (Unreleased Bonus Track)", duration: 135 } ] },
     { name: "幻象波普星", type: "专辑", date: "2014-04-20", songs: [
       { name: "我们飞向太空", duration: 395 }, { name: "幻象波普星", duration: 210 }, { name: "星光", duration: 266 },
       { name: "阿司匹林", duration: 274 }, { name: "梦幻想", duration: 383 }, { name: "画", duration: 277 },
@@ -721,9 +748,17 @@ window.BAND_DISCOGRAPHY = {
     { name: "奇怪的老式娱乐", type: "EP", date: "2013-10-01", songs: [
       { name: "奇怪的老式娱乐", duration: 280 } ] },
     { name: "Loop 循环", type: "专辑", date: "2015-08-01", rating: 7.8, songs: [
-      { name: "Loop", duration: 300 } ] },
+       { name: "Hook", duration: 257 }, { name: "A Glossy Flirt", duration: 419 },
+       { name: "Black Hole’s Metronome", duration: 259 }, { name: "Suicidium Morbus", duration: 282 },
+       { name: "Electric Echo", duration: 284 }, { name: "Corridor 17", duration: 272 },
+       { name: "No Replay", duration: 378 }, { name: "Tech Chords 1.0", duration: 85 },
+       { name: "Aamir", duration: 378 }, { name: "Sorrow", duration: 337 }, { name: "她在每晚的夜空中穿行", duration: 387 } ] },
     { name: "碎片", type: "专辑", date: "2019-01-01", songs: [
-      { name: "碎片", duration: 290 } ] },
+       { name: "CHAOS", duration: 339 }, { name: "NEUTRAL LIFE", duration: 345 },
+       { name: "WHY WE CHOSE TO DIE IN BERLIN", duration: 429 }, { name: "ENTER THE GAP", duration: 221 },
+       { name: "COPY SHOP", duration: 361 }, { name: "VAMPIRE LOVERS", duration: 327 },
+       { name: "FROZEN SONG", duration: 315 }, { name: "TURN BLACK", duration: 323 },
+       { name: "FROM THE FUTURE", duration: 368 }, { name: "THE LOOP SIN", duration: 483 } ] },
   ],
   "大波浪": [
     { name: "THE BIG WAVE", type: "专辑", date: "2016-09-01", rating: 7.8, songs: [
