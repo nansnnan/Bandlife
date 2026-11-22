@@ -263,8 +263,11 @@ window.BAND_DISCOGRAPHY = {
   "杭盖乐队": [
     { name: "介绍杭盖", type: "专辑", date: "2008-07-28", rating: 8.0, songs: [
       { name: "我的陶布竖尔", duration: 280 }, { name: "酒歌", duration: 270 }, { name: "四季", duration: 290 } ] },
-    { name: "远走的人", type: "专辑", date: "2010-01-01", rating: 8.1, songs: [
-      { name: "远走的人", duration: 300 } ] },
+    { name: "远走的人", type: "专辑", date: "2010-10-25", rating: 8.1, songs: [
+      { name: "戈壁路", duration: 213 }, { name: "乌仁都希", duration: 163 }, { name: "圆顶的帽子", duration: 188 },
+      { name: "海然，海然", duration: 203 }, { name: "樟登树", duration: 146 }, { name: "察哈尔", duration: 238 },
+      { name: "希格希日", duration: 293 }, { name: "波如来", duration: 200 }, { name: "杭盖", duration: 355 },
+      { name: "酒歌", duration: 214 }, { name: "四季", duration: 332 }, { name: "金手镯", duration: 251 } ] },
     { name: "四季", type: "专辑", date: "2012-05-01", rating: 7.9, songs: [
       { name: "希格希日", duration: 280 }, { name: "海然海然", duration: 270 } ] },
     { name: "回到你身旁", type: "专辑", date: "2014-05-22", songs: [
@@ -279,7 +282,9 @@ window.BAND_DISCOGRAPHY = {
   ],
   "九宝乐队": [
     { name: "十丈铜嘴", type: "专辑", date: "2012-05-05", rating: 7.9, songs: [
-      { name: "十丈铜嘴", duration: 280 }, { name: "骏马", duration: 270 } ] },
+      { name: "圣赞", duration: 132 }, { name: "神秘之力", duration: 207 }, { name: "十丈铜嘴", duration: 235 },
+      { name: "骑兵", duration: 236 }, { name: "娜明达赖", duration: 168 }, { name: "吆呼尔", duration: 164 },
+      { name: "英雄", duration: 206 }, { name: "钟声为谁而鸣", duration: 305 }, { name: "神秘之力(Acoustic)", duration: 205 } ] },
     { name: "九宝", type: "专辑", date: "2013-12-13", rating: 8.0, songs: [
       { name: "九宝", duration: 290 } ] },
     { name: "灵眼", type: "专辑", date: "2016-08-19", rating: 8.1, songs: [
@@ -380,7 +385,9 @@ window.BAND_DISCOGRAPHY = {
       { name: "2012", duration: 403 }, { name: "Rain Watcher", duration: 338 },
       { name: "Lonely God", duration: 570 }, { name: "Angelo's Portrait", duration: 459 } ] },
     { name: "八匹马", type: "专辑", date: "2014-06-03", rating: 7.6, songs: [
-      { name: "Welcome to Utopia", duration: 400 } ] },
+      { name: "北方向北", duration: 380 }, { name: "大连天空", duration: 400 }, { name: "第八层地狱", duration: 460 },
+      { name: "万佛朝宗", duration: 420 }, { name: "逃离母宇宙", duration: 440 }, { name: "酒神经", duration: 400 },
+      { name: "最后旅程", duration: 460 }, { name: "Welcome to Utopia", duration: 480 } ] },
     { name: "岁月鸿沟", type: "专辑", date: "2016-04-25", rating: 7.5, songs: [
       { name: "岁月鸿沟", duration: 380 } ] },
     { name: "看不见的城市", type: "专辑", date: "2018-07-02", rating: 7.5, songs: [
@@ -410,7 +417,8 @@ window.BAND_DISCOGRAPHY = {
     { name: "噪音袭击世界", type: "专辑", date: "2007-09-29", songs: [
       { name: "噪音袭击世界", duration: 290 } ] },
     { name: "白日梦蓝", type: "专辑", date: "2009-03-01", rating: 8.1, songs: [
-      { name: "白日梦蓝", duration: 290 }, { name: "24小时摇滚聚会", duration: 288 } ] },
+      { name: "白日梦蓝", duration: 296 }, { name: "春天来了", duration: 330 }, { name: "电影", duration: 387 },
+      { name: "二十四小时摇滚聚会", duration: 288 }, { name: "最后一班车", duration: 322 }, { name: "金色年华，无限伤感", duration: 252 } ] },
     { name: "甜蜜与杀害", type: "专辑", date: "2011-03-18", songs: [
       { name: "甜蜜与杀害", duration: 280 } ] },
     { name: "阳光、欢乐、枪", type: "专辑", date: "2012-04-05", songs: [
