@@ -728,9 +728,15 @@ window.BAND_DISCOGRAPHY = {
   ],
   "声音碎片": [
     { name: "世界是噪音的花园", type: "专辑", date: "2002-01-01", songs: [
-      { name: "世界是噪音的花园", duration: 290 } ] },
+       { name: "自欺", duration: 313 }, { name: "平衡", duration: 245 }, { name: "妄想狂", duration: 260 },
+       { name: "狂欢", duration: 250 }, { name: "这一刻", duration: 245 }, { name: "所有人都必须这样吗", duration: 267 },
+       { name: "从内部成熟", duration: 290 }, { name: "请不要关我的灯", duration: 302 }, { name: "投降", duration: 317 },
+       { name: "秘密路线", duration: 292 }, { name: "世界是噪音的花园", duration: 311 } ] },
     { name: "优美的低于生活", type: "专辑", date: "2005-01-01", rating: 8.1, songs: [
-      { name: "优美的低于生活", duration: 290 }, { name: "从现在开始", duration: 280 } ] },
+       { name: "优美的低于生活", duration: 330 }, { name: "通过愤怒之门", duration: 371 }, { name: "在流逝之外", duration: 383 },
+       { name: "在时代华美的盛宴上", duration: 304 }, { name: "不合时宜的忧伤", duration: 256 }, { name: "向外", duration: 300 },
+       { name: "烟灰", duration: 336 }, { name: "赞歌", duration: 400 }, { name: "从现在开始", duration: 297 },
+       { name: "再轻松一些", duration: 312 } ] },
     { name: "把光芒洒向更开阔的地方", type: "专辑", date: "2008-09-30", rating: 8.3, songs: [
       { name: "情歌而已", duration: 290 }, { name: "天边一朵云", duration: 280 },
       { name: "黑白电影", duration: 280 }, { name: "陌生城市的早晨", duration: 300 },
