@@ -85,6 +85,8 @@ function bindEvents() {
       // 播放器
       case "play-track":
         playTrack(target.dataset.id); break;
+      case "toggle-player-album":
+        togglePlayerAlbum(parseInt(target.dataset.index)); break;
       case "player-toggle":
         togglePlay(); break;
       case "player-prev":

@@ -5,7 +5,7 @@ let currentPlatformName = null;   // 当前查看的平台评论，null = 查看
 let expandedAlbums = new Set();   // 已展开的专辑索引
 
 // 收集所有可评分歌曲（玩家作品拆成单曲 + 竞争对手每首作品）
-function collectAllTracks() {
+function collectAllRatingTracks() {
   const tracks = [];
   // 玩家作品：拆成歌曲
   for (const rel of Game.releases) {
@@ -97,7 +97,7 @@ function renderStars(count) {
 
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
-  const tracks = collectAllTracks();
+  const tracks = collectAllRatingTracks();
   // 打开界面时自动为所有歌曲生成评分，列表直接显示分数，无需点击
   for (const t of tracks) {
     if (!t.ratings || !t.ratings.length) {
@@ -277,7 +277,7 @@ function levelColor(score) {
 }
 
 function selectRating(id) {
-  currentRatingRelease = collectAllTracks().find(r => r.id === id);
+  currentRatingRelease = collectAllRatingTracks().find(r => r.id === id);
   currentPlatformName = null;   // 切换作品时回到平台列表
   renderRatingView();
 }

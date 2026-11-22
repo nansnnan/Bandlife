@@ -17,13 +17,16 @@ const Player = {
   current: null,
 };
 
-// 收集所有可播放的歌曲（我的作品 + 竞争对手作品）
+// 播放器展开状态
+const playerExpandedAlbums = new Set();
+
+// 收集所有可播放的歌曲（我的作品 + 竞争对手作品），带专辑信息
 function collectAllTracks() {
   const tracks = [];
   for (const rel of Game.releases) {
     tracks.push({
       id: rel.id, name: rel.name, artist: rel.bandName || Game.band.name,
-      style: rel.style, releaseType: rel.releaseType, plays: rel.plays,
+      album: rel.name, style: rel.style, releaseType: rel.releaseType, plays: rel.plays,
       likes: rel.likes, comments: rel.comments, duration: rel.songs.reduce((s, x) => s + x.duration, 0),
       lyrics: rel.songs.map(s => s.lyrics).filter(Boolean).join("\n\n"),
       source: rel, isRival: false, quality: rel.quality,
@@ -33,7 +36,7 @@ function collectAllTracks() {
     for (const rel of r.releases) {
       tracks.push({
         id: rel.id || rel.name, name: rel.name, artist: rel.bandName,
-        style: rel.style, releaseType: rel.releaseType, plays: rel.plays,
+        album: rel.album || rel.name, style: rel.style, releaseType: rel.releaseType, plays: rel.plays,
         likes: rel.likes, comments: rel.comments, duration: rel.duration || 240,
         lyrics: "", source: rel, isRival: true, quality: rel.quality,
       });
@@ -42,26 +45,36 @@ function collectAllTracks() {
   return tracks;
 }
 
+// 按「歌手 + 专辑」分组
+function groupTracksByAlbum(tracks) {
+  const groups = [];
+  const map = {};
+  for (const t of tracks) {
+    const key = (t.artist || "未知") + "||" + (t.album || t.name);
+    if (!map[key]) {
+      map[key] = { artist: t.artist, album: t.album || t.name, releaseType: t.releaseType, tracks: [] };
+      groups.push(map[key]);
+    }
+    map[key].tracks.push(t);
+  }
+  for (const g of groups) {
+    g.tracks.sort((a, b) => (b.plays || 0) - (a.plays || 0));
+  }
+  return groups;
+}
+
 // ===== 渲染播放器视图 =====
 function renderPlayerView() {
   const el = document.querySelector('[data-game-view="player"]');
   const tracks = collectAllTracks();
+  const groups = groupTracksByAlbum(tracks);
   el.innerHTML = `
     <div class="section-title">🎧 音乐播放器</div>
     <div class="player-layout">
       <div class="player-left">
-        <div class="player-list-title">热门歌曲（${tracks.length}）</div>
+        <div class="player-list-title">专辑列表（${groups.length}）</div>
         <div class="player-track-list">
-          ${tracks.length ? tracks.slice().sort((a, b) => b.plays - a.plays).map((t, i) => `
-            <div class="track-item ${Player.current && Player.current.id === t.id ? "active" : ""}" data-action="play-track" data-id="${t.id}">
-              <div class="track-idx">${i + 1}</div>
-              <div class="track-main">
-                <div class="track-name">${t.name}</div>
-                <div class="track-artist">${t.artist} · ${t.style}</div>
-              </div>
-              <div class="track-plays">${formatNumber(t.plays)}</div>
-              <div class="track-play-btn">${ICONS.play}</div>
-            </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无歌曲，去创作并发布吧</div>`}
+          ${groups.length ? groups.map((g, i) => renderPlayerAlbumGroup(g, i)).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无歌曲，去创作并发布吧</div>`}
         </div>
       </div>
       <div class="player-right" id="player-detail">
@@ -69,6 +82,38 @@ function renderPlayerView() {
       </div>
     </div>
   `;
+}
+
+// 渲染播放器专辑分组（含展开的歌曲列表）
+function renderPlayerAlbumGroup(g, index) {
+  const expanded = playerExpandedAlbums.has(index);
+  const totalPlays = g.tracks.reduce((s, t) => s + (t.plays || 0), 0);
+  return `
+    <div class="player-album-group">
+      <div class="player-album-item" data-action="toggle-player-album" data-index="${index}">
+        <div class="player-album-cover">${g.releaseType === "专辑" ? "💿" : g.releaseType === "EP" ? "📀" : "🎵"}</div>
+        <div class="player-album-main">
+          <div class="player-album-name">${escapeHtml(g.album)}</div>
+          <div class="player-album-sub">${escapeHtml(g.artist)} · ${g.tracks.length} 首 · ${formatNumber(totalPlays)} 播放</div>
+        </div>
+        <div class="player-album-arrow">${expanded ? "▾" : "▸"}</div>
+      </div>
+      ${expanded ? `<div class="player-album-tracks">
+        ${g.tracks.map(t => `
+          <div class="player-track-item ${Player.current && Player.current.id === t.id ? "active" : ""}" data-action="play-track" data-id="${t.id}">
+            <div class="player-track-name">${escapeHtml(t.name)}</div>
+            <div class="player-track-plays">${formatNumber(t.plays)}</div>
+            <div class="player-track-play-btn">${ICONS.play}</div>
+          </div>`).join("")}
+      </div>` : ""}
+    </div>
+  `;
+}
+
+function togglePlayerAlbum(index) {
+  if (playerExpandedAlbums.has(index)) playerExpandedAlbums.delete(index);
+  else playerExpandedAlbums.add(index);
+  renderPlayerView();
 }
 
 // 渲染播放详情
