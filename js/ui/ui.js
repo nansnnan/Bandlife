@@ -76,6 +76,7 @@ function initCreateForm() {
 function renderMemberEditor(count) {
   const editor = document.getElementById("member-editor");
   if (!editor) return;
+  const isReal = createMode === "real";
   const defaultRoles = ["主唱", "吉他手", "贝斯手", "鼓手", "键盘手", "吉他手"];
   const roleOptions = ["主唱", "吉他手", "贝斯手", "鼓手", "键盘手"];
   let html = "";
@@ -88,8 +89,11 @@ function renderMemberEditor(count) {
         <select class="member-role" style="width:92px;">
           ${roleOptions.map(r => `<option ${r === role ? "selected" : ""}>${r}</option>`).join("")}
         </select>
-        <input type="number" class="member-skill" value="${skill}" min="20" max="99" style="width:76px;" title="初始能力 20~99">
+        <input type="number" class="member-skill" value="${skill}" min="20" max="99" style="width:76px;" title="初始能力 20~99" ${isReal ? "disabled" : ""}>
       </div>`;
+  }
+  if (isReal) {
+    html += `<div style="color:var(--text-faint);font-size:12px;margin-top:4px;">真实模式下成员初始实力由系统随机生成，不可手动修改。</div>`;
   }
   editor.innerHTML = html;
 }
@@ -130,8 +134,12 @@ function handleCreateAction(action) {
   } else if (action === "create-back") {
     if (createStep === "band") { createStep = "mode"; updateCreateStep(); }
   } else if (action === "create-next") {
-    if (createStep === "mode") { createStep = "band"; updateCreateStep(); }
-    else if (createStep === "band") { submitCreate(); }
+    if (createStep === "mode") {
+      createStep = "band";
+      updateCreateStep();
+      // 切换到乐队信息时，按当前模式重新渲染成员编辑（真实模式能力锁定为随机）
+      renderMemberEditor(parseInt(document.getElementById("band-members").value));
+    } else if (createStep === "band") { submitCreate(); }
   } else if (action === "settings-back") {
     if (Game.band) { showView("game"); }
     else { showView("menu"); }

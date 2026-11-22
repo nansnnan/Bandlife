@@ -1,24 +1,71 @@
-// 评分网站 UI：模拟豆瓣等现实评分网站，多平台评分展示 + 各平台评论详情页
+// 评分网站 UI：按专辑分组展示 + 多平台评分 + 各平台评论详情页
 
 let currentRatingRelease = null;
 let currentPlatformName = null;   // 当前查看的平台评论，null = 查看所有平台
+let expandedAlbums = new Set();   // 已展开的专辑索引
 
-// 收集所有可评分作品（玩家作品 + 竞争对手作品）
-function collectAllReleases() {
-  const releases = [];
+// 收集所有可评分歌曲（玩家作品拆成单曲 + 竞争对手每首作品）
+function collectAllTracks() {
+  const tracks = [];
+  // 玩家作品：拆成歌曲
   for (const rel of Game.releases) {
-    releases.push(rel);
-  }
-  for (const r of Game.rivals) {
-    for (const rel of r.releases) {
-      // 给竞争对手作品一个稳定 id（若缺失）
-      if (!rel.id) {
-        rel.id = "rival_" + r.name + "_" + rel.album + "_" + rel.name;
-      }
-      releases.push(rel);
+    for (const song of rel.songs) {
+      tracks.push({
+        id: song.id || (rel.id + "_" + song.name),
+        name: song.name,
+        bandName: rel.bandName || Game.band.name,
+        album: rel.name,
+        releaseType: rel.releaseType,
+        style: song.style || rel.style,
+        quality: song.quality,
+        dayIndex: rel.dayIndex,
+        isRival: false,
+      });
     }
   }
-  return releases;
+  // 竞争对手作品：每个 rel 是一首歌
+  for (const r of Game.rivals) {
+    for (const rel of r.releases) {
+      rel.id = rel.id || ("rival_" + r.name + "_" + rel.album + "_" + rel.name);
+      tracks.push({
+        id: rel.id,
+        name: rel.name,
+        bandName: rel.bandName,
+        album: rel.album || rel.name,
+        releaseType: rel.releaseType,
+        style: rel.style,
+        quality: rel.quality,
+        dayIndex: rel.dayIndex,
+        isRival: true,
+      });
+    }
+  }
+  return tracks;
+}
+
+// 按「乐队 + 专辑」分组
+function groupByAlbum(tracks) {
+  const groups = [];
+  const map = {};
+  for (const t of tracks) {
+    const key = (t.bandName || "未知乐队") + "||" + (t.album || t.name);
+    if (!map[key]) {
+      map[key] = { bandName: t.bandName || "未知乐队", album: t.album || t.name, releaseType: t.releaseType, tracks: [] };
+      groups.push(map[key]);
+    }
+    map[key].tracks.push(t);
+  }
+  return groups;
+}
+
+// 专辑总评分 = 组内歌曲评分的平均
+function calcAlbumScore(tracks) {
+  if (!tracks.length) return 0;
+  let sum = 0, count = 0;
+  for (const t of tracks) {
+    if (t.avgScore != null) { sum += t.avgScore; count++; }
+  }
+  return count ? Math.round(sum / count * 10) / 10 : 0;
 }
 
 // 五角星 path（24x24）
@@ -50,15 +97,16 @@ function renderStars(count) {
 
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
-  const releases = collectAllReleases();
-  // 打开界面时自动为所有作品生成评分，列表直接显示分数，无需点击
-  for (const rel of releases) {
-    if (!rel.ratings || !rel.ratings.length) {
-      generateRatings(rel);
+  const tracks = collectAllTracks();
+  // 打开界面时自动为所有歌曲生成评分，列表直接显示分数，无需点击
+  for (const t of tracks) {
+    if (!t.ratings || !t.ratings.length) {
+      generateRatings(t);
     }
   }
-  if (!currentRatingRelease && releases.length) {
-    currentRatingRelease = releases[releases.length - 1];
+  const groups = groupByAlbum(tracks);
+  if (!currentRatingRelease && tracks.length) {
+    currentRatingRelease = tracks[0];
   }
   let detailHTML;
   if (currentRatingRelease) {
@@ -72,18 +120,36 @@ function renderRatingView() {
     <div class="section-title">⭐ 评分网站</div>
     <div class="rating-layout">
       <div class="rating-left">
-        <div class="rating-list-title">作品列表</div>
-        ${releases.length ? releases.slice().reverse().map(r => `
-          <div class="rating-item ${currentRatingRelease && currentRatingRelease.id === r.id ? "active" : ""}" data-action="select-rating" data-id="${r.id}">
-            <div class="rating-item-cover">${r.releaseType === "专辑" ? "💿" : r.releaseType === "EP" ? "📀" : "🎵"}</div>
-            <div>
-              <div class="rating-item-name">${r.name}</div>
-              <div class="rating-item-sub">${r.isRival ? r.bandName + " · " : ""}${r.releaseType} · ${r.style}</div>
-            </div>
-            <div class="rating-item-score">${r.avgScore ?? "—"}</div>
-          </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无已发布作品</div>`}
+        <div class="rating-list-title">专辑列表（${groups.length}）</div>
+        ${groups.length ? groups.map((g, i) => renderAlbumGroup(g, i)).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无已发布作品</div>`}
       </div>
       <div class="rating-right" id="rating-detail">${detailHTML}</div>
+    </div>
+  `;
+}
+
+// 渲染单个专辑分组（含展开的歌曲列表）
+function renderAlbumGroup(g, index) {
+  const expanded = expandedAlbums.has(index);
+  const totalScore = calcAlbumScore(g.tracks);
+  return `
+    <div class="album-group">
+      <div class="album-item" data-action="toggle-album" data-index="${index}">
+        <div class="album-cover">${g.releaseType === "专辑" ? "💿" : g.releaseType === "EP" ? "📀" : "🎵"}</div>
+        <div class="album-main">
+          <div class="album-name">${escapeHtml(g.album)}</div>
+          <div class="album-sub">${escapeHtml(g.bandName)} · ${g.tracks.length} 首</div>
+        </div>
+        <div class="album-score">${totalScore}</div>
+        <div class="album-arrow">${expanded ? "▾" : "▸"}</div>
+      </div>
+      ${expanded ? `<div class="album-tracks">
+        ${g.tracks.map(t => `
+          <div class="album-track ${currentRatingRelease && currentRatingRelease.id === t.id ? "active" : ""}" data-action="select-rating" data-id="${t.id}">
+            <span class="album-track-name">${escapeHtml(t.name)}</span>
+            <span class="album-track-score">${t.avgScore ?? "—"}</span>
+          </div>`).join("")}
+      </div>` : ""}
     </div>
   `;
 }
@@ -99,7 +165,7 @@ function renderRatingDetail(rel) {
       <div class="rating-detail-cover">${rel.releaseType === "专辑" ? "💿" : rel.releaseType === "EP" ? "📀" : "🎵"}</div>
       <div class="rating-detail-meta">
         <h2 class="rating-detail-name">${rel.name}</h2>
-        <div class="rating-detail-artist">${rel.bandName || Game.band.name} · ${rel.style} · ${rel.releaseType}</div>
+        <div class="rating-detail-artist">${rel.bandName || Game.band.name} · ${rel.style || ""} · ${rel.releaseType || ""} · 收录于《${rel.album || ""}》</div>
         <div class="rating-avg-wrap">
           <div class="rating-avg-score">${avg}</div>
           <div class="rating-avg-info">
@@ -184,13 +250,13 @@ function generatePlatformComments(rel, platformName) {
       .replace(/\{song\}/g, rel.name)
       .replace(/\{band\}/g, rel.bandName || Game.band?.name || "")
       .replace(/\{style\}/g, rel.style || "")
-      .replace(/\{album\}/g, rel.name)
+      .replace(/\{album\}/g, rel.album || rel.name)
       .replace(/\{ep\}/g, rel.name);
     list.push({
       user: pick(window.COMMENT_USERS),
       text,
       likes: rand(0, 5000),
-      time: formatDateShort(Math.max(0, Game.dayIndex - rand(0, Math.max(1, Game.dayIndex - rel.dayIndex)))),
+      time: formatDateShort(Math.max(0, Game.dayIndex - rand(0, Math.max(1, Game.dayIndex - (rel.dayIndex || 0))))),
     });
   }
   return list;
@@ -211,8 +277,14 @@ function levelColor(score) {
 }
 
 function selectRating(id) {
-  currentRatingRelease = collectAllReleases().find(r => r.id === id);
+  currentRatingRelease = collectAllTracks().find(r => r.id === id);
   currentPlatformName = null;   // 切换作品时回到平台列表
+  renderRatingView();
+}
+
+function toggleAlbum(index) {
+  if (expandedAlbums.has(index)) expandedAlbums.delete(index);
+  else expandedAlbums.add(index);
   renderRatingView();
 }
 

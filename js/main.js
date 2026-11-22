@@ -101,6 +101,8 @@ function bindEvents() {
       // 评分
       case "select-rating":
         selectRating(target.dataset.id); break;
+      case "toggle-album":
+        toggleAlbum(parseInt(target.dataset.index)); break;
       case "select-platform":
         selectPlatform(target.dataset.platform); break;
       case "back-platforms":
