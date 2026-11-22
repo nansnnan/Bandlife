@@ -1,5 +1,13 @@
 // 音乐播放器 UI：模拟现实播放器（网易云风格），含歌曲列表、播放详情、评论区、迷你播放条
 
+// 播放控制图标（用 SVG 替代 Unicode 符号，避免在部分字体下渲染成方框）
+const ICONS = {
+  play: '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="display:block"><path d="M8 5v14l11-7z"/></svg>',
+  pause: '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="display:block"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>',
+  prev: '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="display:block"><path d="M6 6h2v12H6zM9 12l8-6v12z"/></svg>',
+  next: '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="display:block"><path d="M16 6h2v12h-2zM7 6l8 6-8 6z"/></svg>',
+};
+
 const Player = {
   queue: [],       // 播放队列（展平的歌曲对象）
   index: -1,
@@ -52,7 +60,7 @@ function renderPlayerView() {
                 <div class="track-artist">${t.artist} · ${t.style}</div>
               </div>
               <div class="track-plays">${formatNumber(t.plays)}</div>
-              <div class="track-play-btn">▶</div>
+              <div class="track-play-btn">${ICONS.play}</div>
             </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无歌曲，去创作并发布吧</div>`}
         </div>
       </div>
@@ -66,12 +74,13 @@ function renderPlayerView() {
 // 渲染播放详情
 function renderPlayerDetail(track) {
   const source = track.source;
-  // 生成评论列表
-  let comments = source.commentList;
-  if (!comments || !comments.length) {
-    comments = generateComments(source, Math.min(20, Math.max(3, Math.round(source.comments / 50))));
+  // 生成评论列表（基于真实评论总数，评论数为 0 时不生成）
+  const commentCount = Math.min(20, Math.round(source.comments / 50));
+  let comments = source.commentList || [];
+  if (!comments.length && commentCount > 0) {
+    comments = generateComments(source, commentCount);
   }
-  const progress = Player.playing ? Math.round(Player.progress * 100) : 0;
+  const progress = Math.round(Player.progress * 100);
   const curSec = Math.round(Player.progress * track.duration);
   const totalSec = track.duration;
   return `
@@ -100,14 +109,14 @@ function renderPlayerDetail(track) {
       <span class="pp-time">${fmtTime(totalSec)}</span>
     </div>
     <div class="player-controls">
-      <button class="mini-btn" data-action="player-prev">⏮</button>
-      <button class="mini-btn play" data-action="player-toggle">${Player.playing ? "⏸" : "▶"}</button>
-      <button class="mini-btn" data-action="player-next">⏭</button>
+      <button class="mini-btn" data-action="player-prev">${ICONS.prev}</button>
+      <button class="mini-btn play" data-action="player-toggle">${Player.playing ? ICONS.pause : ICONS.play}</button>
+      <button class="mini-btn" data-action="player-next">${ICONS.next}</button>
     </div>
     ${track.lyrics ? `<div class="player-lyrics"><div class="lyrics-title">歌词</div><pre>${escapeHtml(track.lyrics)}</pre></div>` : ""}
     <div class="player-comments">
       <div class="comments-title">评论区（${formatNumber(track.comments)}）</div>
-      ${comments.map(c => `
+      ${comments.length ? comments.map(c => `
         <div class="comment-item">
           <div class="comment-avatar">${c.user.charAt(0)}</div>
           <div class="comment-body">
@@ -115,7 +124,7 @@ function renderPlayerDetail(track) {
             <div class="comment-text">${escapeHtml(c.text)}</div>
             <div class="comment-likes">👍 ${formatNumber(c.likes)}</div>
           </div>
-        </div>`).join("")}
+        </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:20px;">暂无评论</div>`}
     </div>
   `;
 }
@@ -199,13 +208,17 @@ function nextTrack() {
 // ===== 迷你播放器 =====
 function updateMiniPlayer() {
   const mp = document.getElementById("mini-player");
+  const gameView = document.querySelector('.view[data-view="game"]');
   if (Player.current) {
     mp.classList.add("show");
     document.getElementById("mini-title").textContent = Player.current.name;
     document.getElementById("mini-artist").textContent = Player.current.artist;
-    document.querySelector(".mini-btn.play").textContent = Player.playing ? "⏸" : "▶";
+    document.querySelector(".mini-btn.play").innerHTML = Player.playing ? ICONS.pause : ICONS.play;
+    // 给游戏视图底部留出迷你播放栏的高度，避免遮挡时间推进栏
+    if (gameView) gameView.style.paddingBottom = "56px";
   } else {
     mp.classList.remove("show");
+    if (gameView) gameView.style.paddingBottom = "";
   }
 }
 
