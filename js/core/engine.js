@@ -175,6 +175,11 @@ function tickDaily() {
 // 每周更新：竞争对手按真实发行日期发布作品
 function tickWeekly() {
   for (const r of Game.rivals) {
+    // 先更新活跃状态（2000 年后成立的乐队，到达成立年份后激活）
+    if (!r.active && Game.dayIndex >= r.activeDay) {
+      r.active = true;
+      addEvent(`${r.name}（${r.style}）于本年度正式成立并进入乐坛。`);
+    }
     if (!r.active) continue;
     if (r.catalog && r.releaseIndex < r.catalog.length) {
       const track = r.catalog[r.releaseIndex];

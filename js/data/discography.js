@@ -143,20 +143,22 @@ window.BAND_DISCOGRAPHY = {
       { name: "一半真情流露", duration: 280 } ] },
   ],
   "重塑雕像的权利": [
-    { name: "CUT OFF!", type: "EP", date: "2005-01-01", songs: [
+    { name: "CUT OFF!", type: "EP", date: "2005-01-01", rating: 8.0, songs: [
       { name: "Cut Off", duration: 300 } ] },
     { name: "WATCH OUT!CLIMATE HAS CHANGED,FAT MUM RISES...", type: "专辑", date: "2009-01-01", rating: 8.1, songs: [
       { name: "Watch Out", duration: 280 }, { name: "Surrender", duration: 290 } ] },
     { name: "Before The Applause", type: "专辑", date: "2017-09-15", rating: 8.3, songs: [
       { name: "Pigs In The River", duration: 300 }, { name: "8+2+8 I", duration: 280 },
-      { name: "Before The Applause", duration: 310 } ] },
+      { name: "8+2+8 II", duration: 280 }, { name: "Sounds for Celebration", duration: 290 } ] },
   ],
   "草东没有派对": [
-    { name: "丑奴儿", type: "专辑", date: "2016-04-30", rating: 9.1, songs: [
-      { name: "烂泥", duration: 280 }, { name: "山海", duration: 300 }, { name: "大风吹", duration: 250 },
-      { name: "勇敢的人", duration: 290 }, { name: "情歌", duration: 270 } ] },
+    { name: "丑奴儿", type: "专辑", date: "2016-02-19", rating: 9.1, songs: [
+      { name: "Intro", duration: 87 }, { name: "丑", duration: 118 }, { name: "烂泥", duration: 150 },
+      { name: "勇敢的人", duration: 221 }, { name: "大风吹", duration: 236 }, { name: "艾玛", duration: 202 },
+      { name: "等", duration: 156 }, { name: "鬼", duration: 160 }, { name: "在", duration: 280 },
+      { name: "山海", duration: 251 }, { name: "我们", duration: 219 }, { name: "情歌", duration: 257 } ] },
     { name: "瓦合", type: "专辑", date: "2023-05-20", rating: 8.5, songs: [
-      { name: "床", duration: 280 }, { name: "八", duration: 260 } ] },
+      { name: "床", duration: 232 }, { name: "但", duration: 142 }, { name: "缸", duration: 280 }, { name: "芽", duration: 270 } ] },
   ],
   "海龟先生": [
     { name: "POGO不如跳舞", type: "EP", date: "2005-11-01", songs: [
@@ -241,12 +243,18 @@ window.BAND_DISCOGRAPHY = {
       { name: "直到如今", duration: 296 }, { name: "彷徨", duration: 287 }, { name: "真梦", duration: 310 } ] },
   ],
   "夜叉乐队": [
-    { name: "夜叉", type: "专辑", date: "2001-01-01", songs: [
-      { name: "夜叉", duration: 280 }, { name: "向死而生", duration: 290 } ] },
-    { name: "死墙", type: "专辑", date: "2008-01-01", songs: [
-      { name: "死墙", duration: 270 } ] },
-    { name: "暗流", type: "专辑", date: "2016-01-01", songs: [
-      { name: "暗流", duration: 280 } ] },
+    { name: "自由", type: "专辑", date: "2000-12-01", rating: 8.0, songs: [
+      { name: "自由", duration: 280 } ] },
+    { name: "发发发", type: "专辑", date: "2003-06-01", songs: [
+      { name: "发发发", duration: 270 } ] },
+    { name: "Keep on Fighting", type: "EP", date: "2006-07-15", songs: [
+      { name: "Keep on Fighting", duration: 280 } ] },
+    { name: "You Aren't The Loser", type: "专辑", date: "2010-01-01", songs: [
+      { name: "You Aren't The Loser", duration: 280 } ] },
+    { name: "暗流", type: "专辑", date: "2015-09-01", songs: [
+      { name: "暗流", duration: 280 }, { name: "与魔鬼同行", duration: 420 } ] },
+    { name: "我即是神", type: "专辑", date: "2018-01-01", songs: [
+      { name: "我即是神", duration: 280 } ] },
   ],
   "反光镜": [
     { name: "Reflector", type: "EP", date: "2002-01-01", songs: [
@@ -493,10 +501,29 @@ window.BAND_DISCOGRAPHY = {
       { name: "Hello Hello", duration: 270 }, { name: "晚安", duration: 280 } ] },
   ],
   "旅行团": [
-    { name: "于是我不再唱歌", type: "专辑", date: "2011-01-01", rating: 7.9, songs: [
-      { name: "于是我不再唱歌", duration: 280 }, { name: "生命是场马拉松", duration: 290 } ] },
-    { name: "感+觉", type: "专辑", date: "2019-01-01", songs: [
-      { name: "感+觉", duration: 270 } ] },
+    { name: "来福胶泥", type: "专辑", date: "2008-05-08", rating: 7.9, songs: [
+      { name: "回到巴巴拉拉的城堡", duration: 280 }, { name: "The Story Of Sun and I", duration: 270 },
+      { name: "罗马假日", duration: 280 }, { name: "中央花园", duration: 270 } ] },
+    { name: "等你吃饭", type: "EP", date: "2009-04-17", songs: [
+      { name: "等你吃饭", duration: 260 }, { name: "悠长假期", duration: 270 } ] },
+    { name: "Wonderful Day", type: "专辑", date: "2011-06-24", songs: [
+      { name: "利物浦", duration: 280 }, { name: "柳江", duration: 270 }, { name: "厦门之夏", duration: 280 } ] },
+    { name: "于是我不再唱歌", type: "专辑", date: "2013-12-28", rating: 8.0, songs: [
+      { name: "于是我不再唱歌", duration: 295 }, { name: "Bye Bye", duration: 220 },
+      { name: "小龙人", duration: 200 }, { name: "天后舞厅", duration: 206 },
+      { name: "北京夏夜", duration: 228 } ] },
+    { name: "B-SIDE", type: "专辑", date: "2015-05-15", songs: [
+      { name: "生命是场马拉松", duration: 280 }, { name: "悲伤珊瑚群", duration: 270 } ] },
+    { name: "10 Day's", type: "专辑", date: "2015-12-21", songs: [
+      { name: "逝去的歌", duration: 290 }, { name: "父亲", duration: 280 }, { name: "新开世界", duration: 270 } ] },
+    { name: "永远都会在", type: "专辑", date: "2017-07-06", rating: 8.1, songs: [
+      { name: "永远都会在", duration: 280 }, { name: "你", duration: 270 }, { name: "西雅图阳光", duration: 280 } ] },
+    { name: "感+", type: "专辑", date: "2018-06-21", songs: [
+      { name: "夏之恋", duration: 280 }, { name: "圣地亚哥", duration: 270 }, { name: "我的蒙娜丽莎", duration: 280 } ] },
+    { name: "似近似远", type: "专辑", date: "2020-09-16", songs: [
+      { name: "红色的河", duration: 290 } ] },
+    { name: "似你似我", type: "专辑", date: "2020-11-30", songs: [
+      { name: "天涯路口", duration: 280 }, { name: "阿奶", duration: 270 } ] },
   ],
   "落日飞车": [
     { name: "Bossa Nova", type: "专辑", date: "2011-01-01", songs: [
