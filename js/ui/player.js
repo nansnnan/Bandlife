@@ -34,7 +34,7 @@ function collectAllTracks() {
       tracks.push({
         id: rel.id || rel.name, name: rel.name, artist: rel.bandName,
         style: rel.style, releaseType: rel.releaseType, plays: rel.plays,
-        likes: rel.likes, comments: rel.comments, duration: 240,
+        likes: rel.likes, comments: rel.comments, duration: rel.duration || 240,
         lyrics: "", source: rel, isRival: true, quality: rel.quality,
       });
     }

@@ -62,10 +62,36 @@ function initCreateForm() {
   });
   updateCityOptions();
   provSel.addEventListener("change", updateCityOptions);
+  // 成员编辑：根据人数生成可编辑的成员行，人数变化时重新生成
+  const memberCountSel = document.getElementById("band-members");
+  renderMemberEditor(parseInt(memberCountSel.value));
+  memberCountSel.addEventListener("change", () => renderMemberEditor(parseInt(memberCountSel.value)));
   // 默认乐队名
   if (!document.getElementById("band-name").value) {
     document.getElementById("band-name").value = "";
   }
+}
+
+// 根据人数渲染成员编辑行（名字、角色、初始能力）
+function renderMemberEditor(count) {
+  const editor = document.getElementById("member-editor");
+  if (!editor) return;
+  const defaultRoles = ["主唱", "吉他手", "贝斯手", "鼓手", "键盘手", "吉他手"];
+  const roleOptions = ["主唱", "吉他手", "贝斯手", "鼓手", "键盘手"];
+  let html = "";
+  for (let i = 0; i < count; i++) {
+    const role = defaultRoles[i % defaultRoles.length];
+    const skill = rand(50, 75);
+    html += `
+      <div style="display:flex;gap:8px;margin-bottom:8px;align-items:center;">
+        <input type="text" class="member-name" value="成员${i + 1}" style="flex:1;">
+        <select class="member-role" style="width:92px;">
+          ${roleOptions.map(r => `<option ${r === role ? "selected" : ""}>${r}</option>`).join("")}
+        </select>
+        <input type="number" class="member-skill" value="${skill}" min="20" max="99" style="width:76px;" title="初始能力 20~99">
+      </div>`;
+  }
+  editor.innerHTML = html;
 }
 
 function updateCityOptions() {
@@ -125,11 +151,17 @@ function submitCreate() {
   const memberCount = parseInt(document.getElementById("band-members").value);
   const province = document.getElementById("origin-province").value;
   const city = document.getElementById("origin-city").value;
-  // 生成成员
-  const roles = ["主唱", "吉他手", "贝斯手", "鼓手", "键盘手", "吉他手"];
+  // 读取成员编辑行，生成成员列表（含名字、角色、初始能力）
+  const memberNames = [...document.querySelectorAll("#member-editor .member-name")].map(i => i.value.trim());
+  const memberRoles = [...document.querySelectorAll("#member-editor .member-role")].map(s => s.value);
+  const memberSkills = [...document.querySelectorAll("#member-editor .member-skill")].map(i => parseInt(i.value) || 60);
   const lineupArr = [];
   for (let i = 0; i < memberCount; i++) {
-    lineupArr.push({ name: "", role: roles[i % roles.length] });
+    lineupArr.push({
+      name: memberNames[i] || `成员${i + 1}`,
+      role: memberRoles[i] || "乐手",
+      skill: memberSkills[i],
+    });
   }
   const bandData = {
     name, style, styleCategory: styleObj?.category || "摇滚",
@@ -266,8 +298,11 @@ function renderCreateSong() {
           <input type="text" id="song-arranger" placeholder="编曲人（默认乐队名）" value="${b.name}">
         </div>
         <div class="form-group">
-          <label>歌曲时长（秒）</label>
-          <input type="number" id="song-duration" value="240" min="60" max="1200">
+          <label>歌曲时长</label>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <input type="number" id="song-duration-min" value="4" min="1" max="20" style="width:90px;"> 分
+            <input type="number" id="song-duration-sec" value="0" min="0" max="59" style="width:90px;"> 秒
+          </div>
         </div>
       </div>
       <div class="form-group">
@@ -312,7 +347,7 @@ function renderCreateSong() {
 function submitSong() {
   const name = document.getElementById("song-name").value.trim();
   if (!name) { alert("请输入歌曲名称"); return; }
-  const members = [...document.querySelectorAll(".song-member:checked")].map(cb => Game.band.members[parseInt(cb.value)].name || Game.band.members[parseInt(cb.value)].role);
+  const members = [...document.querySelectorAll(".song-member:checked")].map(cb => Game.band.members[parseInt(cb.value)].id);
   const style = document.getElementById("song-style").value;
   const styleObj = window.MUSIC_STYLES.find(s => s.name === style);
   const song = createSong({
@@ -322,7 +357,7 @@ function submitSong() {
     lyricist: document.getElementById("song-lyricist").value,
     composer: document.getElementById("song-composer").value,
     arranger: document.getElementById("song-arranger").value,
-    duration: parseInt(document.getElementById("song-duration").value) || 240,
+    duration: (parseInt(document.getElementById("song-duration-min").value) || 0) * 60 + (parseInt(document.getElementById("song-duration-sec").value) || 0) || 240,
     lyrics: document.getElementById("song-lyrics").value,
     members,
   });
@@ -397,19 +432,20 @@ function renderTrain() {
   el.innerHTML = `
     <div class="section-title">训练</div>
     <div class="card">
-      <div class="card-title">提升乐队能力</div>
-      <p style="color:var(--text-dim);font-size:13px;margin-bottom:16px;">${Game.mode === "real" ? "训练消耗预算（每天 ¥200），可提升对应能力。" : "沙盒模式：训练免费。"}</p>
+      <div class="card-title">成员成长训练</div>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:16px;">${Game.mode === "real" ? "训练消耗预算（每天 ¥200），提升单个成员的能力，进而提升乐队整体能力。" : "沙盒模式：训练免费。"}</p>
       <div class="grid grid-2">
-        ${Object.entries(b.skill).map(([k, v]) => `
+        ${b.members.map(m => `
           <div class="card" style="margin-bottom:0;">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <span style="font-weight:600;">${skillName(k)}</span>
-              <span style="color:var(--text-dim);font-size:13px;">${Math.round(v)}${b.training[k] ? ` <span style="color:var(--green)">+${Math.round(b.training[k])}</span>` : ""}</span>
+              <span style="font-weight:600;">${escapeHtml(m.name)} <span class="badge badge-purple">${m.role}</span></span>
+              <span style="color:var(--text-dim);font-size:13px;">能力 ${Math.round(m.skill)}</span>
             </div>
-            <div class="progress" style="margin-bottom:10px;"><div class="progress-bar" style="width:${Math.min(100, v + b.training[k])}%"></div></div>
+            <div class="progress" style="margin-bottom:10px;"><div class="progress-bar" style="width:${m.skill}%"></div></div>
+            <div style="color:var(--text-faint);font-size:12px;margin-bottom:10px;">累计训练 ${m.trained || 0} 天</div>
             <div style="display:flex;gap:8px;">
-              <button class="btn-time" data-action="train" data-skill="${k}" data-days="7">训练 7 天</button>
-              <button class="btn-time" data-action="train" data-skill="${k}" data-days="30">训练 30 天</button>
+              <button class="btn-time" data-action="train" data-member="${m.id}" data-days="7">训练 7 天</button>
+              <button class="btn-time" data-action="train" data-member="${m.id}" data-days="30">训练 30 天</button>
             </div>
           </div>`).join("")}
       </div>
@@ -417,8 +453,8 @@ function renderTrain() {
   `;
 }
 
-function handleTrain(skill, days) {
-  const res = train(skill, parseInt(days));
+function handleTrain(memberId, days) {
+  const res = trainMember(memberId, parseInt(days));
   if (!res.ok) { alert(res.msg); return; }
   renderTrain();
   renderTopbar();
@@ -438,8 +474,12 @@ function renderTour() {
           <select id="tour-province"></select>
         </div>
         <div class="form-group">
-          <label>城市</label>
+          <label>地级市</label>
           <select id="tour-city"></select>
+        </div>
+        <div class="form-group">
+          <label>县级市/区（可选）</label>
+          <select id="tour-county"><option value="">（不选，用地级市）</option></select>
         </div>
         <div class="form-group">
           <label>演出规模</label>
@@ -468,6 +508,7 @@ function renderTour() {
   });
   updateTourCity();
   provSel.addEventListener("change", updateTourCity);
+  document.getElementById("tour-city").addEventListener("change", updateTourCounty);
   window._tourCities = [];
   renderTourList();
 }
@@ -481,6 +522,23 @@ function updateTourCity() {
     const opt = document.createElement("option");
     opt.value = c; opt.textContent = c;
     citySel.appendChild(opt);
+  });
+  updateTourCounty();
+}
+
+function updateTourCounty() {
+  const prov = document.getElementById("tour-province").value;
+  const city = document.getElementById("tour-city").value;
+  const countySel = document.getElementById("tour-county");
+  countySel.innerHTML = '<option value="">（不选，用地级市）</option>';
+  const region = window.CHINA_REGIONS.find(r => r.province === prov);
+  const cityObj = region ? region.cities.find(c => c.name === city) : null;
+  const districts = cityObj ? cityObj.districts : [];
+  districts.forEach(d => {
+    if (d === city) return;
+    const opt = document.createElement("option");
+    opt.value = d; opt.textContent = d;
+    countySel.appendChild(opt);
   });
 }
 
@@ -501,9 +559,11 @@ function renderTourList() {
 
 function handleTourAdd() {
   const city = document.getElementById("tour-city").value;
+  const county = document.getElementById("tour-county").value;
+  const label = county ? `${city}·${county}` : city;
   if (!window._tourCities) window._tourCities = [];
-  if (window._tourCities.includes(city)) { return; }
-  window._tourCities.push(city);
+  if (window._tourCities.includes(label)) { return; }
+  window._tourCities.push(label);
   renderTourList();
 }
 

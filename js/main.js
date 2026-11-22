@@ -72,7 +72,7 @@ function bindEvents() {
 
       // 训练
       case "train":
-        handleTrain(target.dataset.skill, target.dataset.days); break;
+        handleTrain(target.dataset.member, target.dataset.days); break;
 
       // 巡演
       case "tour-add":
@@ -101,6 +101,10 @@ function bindEvents() {
       // 评分
       case "select-rating":
         selectRating(target.dataset.id); break;
+      case "select-platform":
+        selectPlatform(target.dataset.platform); break;
+      case "back-platforms":
+        backToPlatforms(); break;
 
       default:
         break;

@@ -1,6 +1,6 @@
 // 核心状态管理 + 工具函数 + 常量
 
-const GAME_VERSION = "1.0.0";
+const GAME_VERSION = "1.1.0";
 const START_YEAR = 2000, START_MONTH = 1, START_DAY = 1;
 
 // 全局游戏状态
@@ -53,8 +53,19 @@ function dayToDate(dayIndex) {
   return { year: y, month: m, day: d };
 }
 
-// {year, month, day} -> dayIndex
+// {year, month, day} -> dayIndex（2000 年之前返回负数）
 function dateToDay(year, month, day) {
+  const before = year < START_YEAR || (year === START_YEAR && month < START_MONTH) || (year === START_YEAR && month === START_MONTH && day < START_DAY);
+  if (before) {
+    // 从目标日期往前数到 2000-01-01，返回负数
+    let dayIndex = 0, y = year, m = month, d = day;
+    while (y < START_YEAR || (y === START_YEAR && m < START_MONTH) || (y === START_YEAR && m === START_MONTH && d < START_DAY)) {
+      dayIndex--;
+      d++;
+      if (d > daysInMonth(y, m)) { d = 1; m++; if (m > 12) { m = 1; y++; } }
+    }
+    return dayIndex;
+  }
   let dayIndex = 0, y = START_YEAR, m = START_MONTH, d = START_DAY;
   while (y < year || (y === year && m < month) || (y === year && m === month && d < day)) {
     dayIndex++;

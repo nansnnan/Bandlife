@@ -10,10 +10,12 @@ const PROVINCIAL_CAPITALS = [
 ];
 
 function cityScale(cityName) {
-  if (MAJOR_CITIES.includes(cityName)) return 10;
-  if (PROVINCIAL_CAPITALS.includes(cityName)) return 8;
+  const base = cityName.split("·")[0];  // 若是县级市，取所属地级市
+  if (MAJOR_CITIES.includes(base)) return 10;
+  if (PROVINCIAL_CAPITALS.includes(base)) return 8;
   // 直辖市/特别行政区
-  if (["北京市","天津市","上海市","重庆市"].includes(cityName)) return 10;
+  if (["北京市","天津市","上海市","重庆市"].includes(base)) return 10;
+  if (cityName.includes("·")) return 4;   // 县级市/区，规模较小
   return 6;  // 普通地级市
 }
 

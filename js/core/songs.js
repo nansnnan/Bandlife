@@ -10,7 +10,7 @@ function createSong(data) {
     lyricist: data.lyricist || Game.band.name,
     composer: data.composer || Game.band.name,
     arranger: data.arranger || Game.band.name,
-    members: data.members || Game.band.members.map(m => m.name),
+    members: data.members || Game.band.members.map(m => m.id),
     duration: data.duration || 240,   // 秒
     lyrics: data.lyrics || "",
     quality: 0,
@@ -33,7 +33,14 @@ function calcSongQuality(song) {
   const comp = s.composition + t.composition * 2 + styleBonus;
   const lyr = s.lyrics + t.lyrics * 2 + styleBonus;
   const arr = s.arrangement + t.arrangement * 2 + styleBonus;
-  const perf = s.performance + t.performance * 2;
+  // 演奏能力：由被指派成员的平均能力决定
+  const memberIds = song.members || [];
+  const memberSkills = memberIds.map(id => {
+    const m = Game.band.members.find(x => x.id === id);
+    return m ? m.skill : 50;
+  });
+  const avgMemberSkill = memberSkills.length ? memberSkills.reduce((a, b) => a + b, 0) / memberSkills.length : s.performance;
+  const perf = avgMemberSkill + t.performance * 2;
   const voc = s.vocal + t.vocal * 2;
   // 歌词是否填写（自定义歌词加分）
   const lyricBonus = song.lyrics && song.lyrics.trim().length > 20 ? 8 : 0;
@@ -107,8 +114,8 @@ function releaseCost(type, songCount, options) {
   return base + perSong + promotion;
 }
 
-// ===== 训练 =====
-function train(skillKey, days) {
+// ===== 训练（针对单个成员） =====
+function trainMember(memberId, days) {
   const cost = days * 200;  // 每天训练成本
   if (Game.mode === "real" && Game.finance.balance < cost) {
     return { ok: false, msg: "预算不足，无法训练" };
@@ -117,14 +124,16 @@ function train(skillKey, days) {
     Game.finance.balance -= cost;
     Game.finance.totalExpense += cost;
   }
-  // 训练提升对应能力（有上限）
+  const member = Game.band.members.find(m => m.id === memberId);
+  if (!member) return { ok: false, msg: "成员不存在" };
   const gain = days * 0.15 * randf(0.8, 1.2);
-  Game.band.training[skillKey] = clamp(Game.band.training[skillKey] + gain, 0, 30);
-  Game.band.skill[skillKey] = clamp(Game.band.skill[skillKey] + gain * 0.5, 20, 99);
+  member.skill = clamp(member.skill + gain, 20, 99);
+  member.trained = (member.trained || 0) + days;
+  refreshBandSkill();  // 成员能力提升后刷新乐队整体能力
   advanceTime(days);
-  addEvent(`乐队进行了 ${days} 天的${skillName(skillKey)}训练。`);
+  addEvent(`成员 ${member.name}（${member.role}）进行了 ${days} 天的训练。`);
   saveGame();
-  return { ok: true, cost };
+  return { ok: true, cost, member };
 }
 
 function skillName(key) {

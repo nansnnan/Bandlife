@@ -568,6 +568,19 @@ select { cursor: pointer; }
 .platform-stars { font-size: 16px; color: var(--yellow); margin: 8px 0; letter-spacing: 2px; }
 .platform-level { font-size: 13px; font-weight: 600; color: var(--accent-2); margin-bottom: 6px; }
 .platform-desc { font-size: 11px; color: var(--text-faint); line-height: 1.5; }
+.platform-comments-btn {
+  margin-top: 12px; width: 100%;
+  font-size: 12px; padding: 7px 0;
+}
+.platform-comments { }
+.platform-comments-head {
+  background: var(--bg-2); border: 1px solid var(--border); border-top: 3px solid #666;
+  border-radius: 10px; padding: 20px; margin-bottom: 8px;
+}
+.platform-comments-name { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+.platform-comments-score { font-size: 40px; font-weight: 900; line-height: 1.1; }
+.platform-comments-level { font-size: 14px; font-weight: 600; color: var(--accent-2); margin: 6px 0; }
+.platform-comments-stars { margin-bottom: 8px; }
 
 /* 响应式 */
 @media (max-width: 768px) {

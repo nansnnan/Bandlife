@@ -31,14 +31,23 @@ function initFinance(mode) {
 // ===== 构建乐队对象 =====
 function buildBand(bandData) {
   const lineup = bandData.lineup || [];
-  // 乐队能力（受编制和成员影响）
-  const memberCount = lineup.length;
-  const base = 40 + memberCount * 3;  // 成员越多基础能力略高
+  // 成员：各自独立的技能（可在创建时单独编辑，也可后续训练提升）
   const members = lineup.map((m, i) => ({
+    id: "m" + i,
     name: m.name || `成员${i + 1}`,
     role: m.role || "乐手",
-    skill: clamp(Math.round(base + randf(-10, 10)), 20, 95),
+    skill: m.skill != null ? clamp(Math.round(m.skill), 20, 99) : clamp(Math.round(50 + randf(-10, 15)), 20, 99),
+    trained: 0,   // 累计训练天数
   }));
+  const avgSkill = members.length ? members.reduce((s, m) => s + m.skill, 0) / members.length : 50;
+  // 乐队各项能力（0-100），由成员平均能力派生
+  const skill = {
+    composition: clamp(Math.round(avgSkill + randf(-5, 8)), 20, 95),   // 作曲
+    lyrics: clamp(Math.round(avgSkill + randf(-5, 8)), 20, 95),        // 作词
+    arrangement: clamp(Math.round(avgSkill + randf(-5, 8)), 20, 95),   // 编曲
+    performance: clamp(Math.round(avgSkill + randf(-5, 8)), 20, 95),   // 演奏
+    vocal: clamp(Math.round(avgSkill + randf(-5, 8)), 20, 95),         // 唱功
+  };
   return {
     name: bandData.name,
     style: bandData.style,
@@ -47,23 +56,52 @@ function buildBand(bandData) {
     origin: bandData.origin || "北京市",
     originProvince: bandData.originProvince || "北京市",
     members: members,
-    // 乐队各项能力（0-100），受成员技能影响
-    skill: {
-      composition: clamp(Math.round(base + randf(-8, 12)), 20, 95),   // 作曲
-      lyrics: clamp(Math.round(base + randf(-8, 12)), 20, 95),        // 作词
-      arrangement: clamp(Math.round(base + randf(-8, 12)), 20, 95),   // 编曲
-      performance: clamp(Math.round(base + randf(-8, 12)), 20, 95),   // 演奏
-      vocal: clamp(Math.round(base + randf(-8, 12)), 20, 95),         // 唱功
-    },
+    skill: skill,
     training: { composition: 0, lyrics: 0, arrangement: 0, performance: 0, vocal: 0 },
   };
 }
 
+// 重新根据成员平均能力刷新乐队整体能力（成员训练后调用）
+function refreshBandSkill() {
+  const b = Game.band;
+  if (!b || !b.members.length) return;
+  const avgSkill = b.members.reduce((s, m) => s + m.skill, 0) / b.members.length;
+  const base = avgSkill + (b.training.performance || 0) * 0.5;
+  b.skill.composition = clamp(Math.round(base + randf(-3, 5)), 20, 99);
+  b.skill.lyrics = clamp(Math.round(base + randf(-3, 5)), 20, 99);
+  b.skill.arrangement = clamp(Math.round(base + randf(-3, 5)), 20, 99);
+  b.skill.performance = clamp(Math.round(base + randf(-3, 5)), 20, 99);
+  b.skill.vocal = clamp(Math.round(base + randf(-3, 5)), 20, 99);
+}
+
 // ===== 初始化竞争对手 =====
+// 解析 "YYYY-MM-DD" 为游戏内天数
+function dateStrToDay(dateStr) {
+  const [y, m, d] = (dateStr || "2000-01-01").split("-").map(Number);
+  return dateToDay(y, m, d);
+}
+
+// 把乐队的真实作品目录展开为按时间排序的歌曲列表
+function buildRivalCatalog(bandName) {
+  const disc = window.BAND_DISCOGRAPHY[bandName] || [];
+  const songs = [];
+  for (const album of disc) {
+    for (const song of album.songs) {
+      songs.push({
+        name: song.name, duration: song.duration, date: album.date,
+        album: album.name, type: album.type, rating: album.rating,
+      });
+    }
+  }
+  songs.sort((a, b) => a.date.localeCompare(b.date));
+  return songs;
+}
+
 function initRivals() {
   return window.RIVAL_BANDS.map(b => {
     const formedDay = Math.max(0, dateToDay(b.formed, 1, 1) - dateToDay(2000, 1, 1));
-    return {
+    const catalog = buildRivalCatalog(b.name);
+    const rival = {
       ...b,
       active: b.formed <= 2000,
       activeDay: formedDay,           // 从第几天开始活跃
@@ -72,7 +110,35 @@ function initRivals() {
       totalPlays: 0,
       releases: [],
       lastReleaseDay: -rand(30, 180),
+      catalog: catalog,
+      releaseIndex: 0,
     };
+    // 游戏开始（2000 年）前已发行的真实作品：保留并生成历史播放量数据
+    for (const track of catalog) {
+      const day = dateStrToDay(track.date);
+      if (day <= 0) {
+        const quality = track.rating
+          ? clamp(Math.round(track.rating * 10), 10, 98)
+          : clamp(b.popularity * 7 + randf(-15, 15), 10, 98);
+        const ageDays = Math.abs(day);
+        const rel = {
+          name: track.name, bandName: b.name, style: b.style, quality,
+          duration: track.duration, plays: 0, likes: 0, comments: 0,
+          dayIndex: day,
+          releaseType: track.type === "EP" ? "EP" : track.type === "专辑" ? "专辑" : "单曲",
+          isRival: true, album: track.album,
+        };
+        // 历史播放量：平均日播放 × 发行天数 × 衰减
+        const baseDaily = quality * 50 * (0.5 + b.popularity / 10);
+        rel.plays = Math.round(baseDaily * ageDays * 0.5);
+        rel.likes = Math.round(rel.plays * likeRate(quality));
+        rel.comments = Math.round(rel.plays * commentRate(quality));
+        rival.releases.push(rel);
+        rival.totalPlays += rel.plays;
+        rival.releaseIndex++;
+      }
+    }
+    return rival;
   });
 }
 
@@ -106,14 +172,16 @@ function tickDaily() {
   }
 }
 
-// 每周更新：竞争对手动态
+// 每周更新：竞争对手按真实发行日期发布作品
 function tickWeekly() {
-  // 竞争对手可能发布新作品
   for (const r of Game.rivals) {
     if (!r.active) continue;
-    if (Game.dayIndex - r.lastReleaseDay > rand(60, 200)) {
-      rivalRelease(r);
-      r.lastReleaseDay = Game.dayIndex;
+    if (r.catalog && r.releaseIndex < r.catalog.length) {
+      const track = r.catalog[r.releaseIndex];
+      if (dateStrToDay(track.date) <= Game.dayIndex) {
+        rivalRelease(r);
+        r.lastReleaseDay = Game.dayIndex;
+      }
     }
   }
 }
@@ -128,30 +196,31 @@ function tickMonthly() {
   }
 }
 
-// ===== 竞争对手发布 =====
+// ===== 竞争对手发布（真实作品） =====
 function rivalRelease(rival) {
-  const quality = clamp(rival.currentPopularity * 7 + randf(-15, 15), 10, 98);
+  const catalog = rival.catalog;
+  if (!catalog || rival.releaseIndex >= catalog.length) return;
+  const track = catalog[rival.releaseIndex];
+  const quality = track.rating
+    ? clamp(Math.round(track.rating * 10), 10, 98)
+    : clamp(rival.currentPopularity * 7 + randf(-15, 15), 10, 98);
   const song = {
-    name: rivalSongName(rival),
+    name: track.name,
     bandName: rival.name,
     style: rival.style,
     quality,
+    duration: track.duration,
     plays: 0,
     likes: 0,
     comments: 0,
     dayIndex: Game.dayIndex,
-    releaseType: "单曲",
+    releaseType: track.type === "EP" ? "EP" : track.type === "专辑" ? "专辑" : "单曲",
     isRival: true,
+    album: track.album,
   };
   rival.releases.push(song);
-  rival.totalPlays = 0;
-  addEvent(`${rival.name} 发布新单曲《${song.name}》。`);
-}
-
-function rivalSongName(rival) {
-  const prefixes = ["夜", "风", "梦", "光", "路", "远方", "归", "海", "星", "城", "少年", "浮生", "流年", "回声", "荒野", "灯火"];
-  const suffixes = ["之歌", "的呼唤", "背后", "之上", "未央", "行", "谣", "序曲", "挽歌", "慢", "不眠", "如昨", "无问", "散场", "无期", "归途"];
-  return pick(prefixes) + pick(suffixes);
+  rival.releaseIndex++;
+  addEvent(`${rival.name} 发布${song.releaseType}《${song.name}》（收录于《${track.album}》）。`);
 }
 
 // ===== 播放量增长模型 =====
