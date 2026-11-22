@@ -143,15 +143,22 @@ window.BAND_DISCOGRAPHY = {
   ],
   "新裤子": [
     { name: "新裤子", type: "专辑", date: "1998-01-01", rating: 8.1, songs: [
-      { name: "我们的时代", duration: 280 }, { name: "过时", duration: 270 }, { name: "流行一代", duration: 260 } ] },
+      { name: "我OK", duration: 236 }, { name: "我们的时代", duration: 275 }, { name: "嘿！你", duration: 180 },,
+      { name: "爱", duration: 210 }, { name: "每一天", duration: 225 }, { name: "猴子", duration: 195 },,
+      { name: "我不想失去你", duration: 270 }, { name: "过时", duration: 248 } ] },
     { name: "龙虎人丹", type: "专辑", date: "2005-12-01", rating: 8.2, songs: [
       { name: "你就是我的明星", duration: 148 }, { name: "Bye Bye Disco", duration: 305 }, { name: "两个男朋友", duration: 204 },
       { name: "神秘的香波", duration: 233 }, { name: "龙虎人丹", duration: 227 }, { name: "需要爱", duration: 248 },
       { name: "爱带我回家", duration: 292 }, { name: "爱瑞巴迪", duration: 176 }, { name: "我想她", duration: 215 },
       { name: "御宅", duration: 306 } ] },
     { name: "野人也有爱", type: "专辑", date: "2008-11-14", songs: [
-      { name: "野人也有爱", duration: 250 }, { name: "我们可以在一起", duration: 311 } ] },
-    { name: "Go East", type: "专辑", date: "2009-01-01", songs: [ { name: "Go East", duration: 260 } ] },
+      { name: "北海怪兽", duration: 240 }, { name: "金色偶像", duration: 250 }, { name: "双喜", duration: 230 },,
+      { name: "熊猫", duration: 245 }, { name: "著名导演", duration: 240 }, { name: "伤心酒店", duration: 255 },,
+      { name: "隔离", duration: 235 }, { name: "我们可以在一起", duration: 311 } ] },
+    { name: "Go East", type: "专辑", date: "2009-01-01", songs: [
+      { name: "野人也有爱", duration: 250 }, { name: "我爱你", duration: 240 }, { name: "我不想失去你", duration: 270 },,
+      { name: "御宅", duration: 306 }, { name: "爱带我回家", duration: 292 }, { name: "电脑", duration: 230 },,
+      { name: "我们不能在一起", duration: 245 }, { name: "Bye-bye Disco", duration: 305 } ] },
     { name: "Sex Drugs Internet", type: "专辑", date: "2011-01-01", songs: [
       { name: "Sex Drugs Internet", duration: 270 } ] },
     { name: "生命因你而火热", type: "专辑", date: "2016-04-01", rating: 8.3, songs: [
@@ -173,7 +180,13 @@ window.BAND_DISCOGRAPHY = {
       { name: "童年往事", duration: 310 }, { name: "绿苍苍", duration: 219 },
       { name: "阿炳耀", duration: 292 }, { name: "十年水流东 十年水流西（天合原始版）", duration: 218 } ] },
     { name: "一些风景", type: "专辑", date: "2012-05-25", songs: [
-      { name: "陈先生", duration: 280 }, { name: "海风", duration: 290 }, { name: "彭啊湃", duration: 300 } ] },
+      { name: "曹操你别怕", duration: 270 }, { name: "抄电表", duration: 260 }, { name: "莫怪你老爹", duration: 280 },,
+      { name: "酒鬼猪哥伯", duration: 250 }, { name: "彭啊湃", duration: 300 }, { name: "陈先生", duration: 280 },,
+      { name: "清明过纸", duration: 265 }, { name: "两顿饱", duration: 240 }, { name: "上县城", duration: 255 },,
+      { name: "做梦", duration: 270 }, { name: "大会", duration: 250 }, { name: "世情", duration: 260 },,
+      { name: "收冬", duration: 245 }, { name: "城市找猪", duration: 280 }, { name: "踏架脚车牵条猪(2012)", duration: 367 },,
+      { name: "鲜花在岸上开", duration: 300 }, { name: "含叭哩细", duration: 240 }, { name: "雨来淋秀才", duration: 255 },,
+      { name: "隆啊隆，骑马去海丰", duration: 270 }, { name: "一些风景", duration: 290 }, { name: "海风", duration: 290 } ] },
     { name: "广东姑娘", type: "专辑", date: "2015-03-09", rating: 8.1, songs: [
       { name: "海风", duration: 280 }, { name: "心肝痛", duration: 270 }, { name: "广东姑娘", duration: 266 },
       { name: "走鬼", duration: 280 }, { name: "我的头发就是这样被吹乱的啊", duration: 290 }, { name: "像将军那样喝酒", duration: 270 },
@@ -181,13 +194,29 @@ window.BAND_DISCOGRAPHY = {
       { name: "晚上好，春天小姐", duration: 257 }, { name: "猪母上山咬老虎", duration: 280 }, { name: "美丽漂亮，英俊潇洒", duration: 270 },
       { name: "请到老祖宗", duration: 280 } ] },
     { name: "梦幻丽莎发廊", type: "专辑", date: "2017-03-29", rating: 8.2, songs: [
-      { name: "梦幻丽莎发廊", duration: 248 }, { name: "阿珍爱上了阿强", duration: 409 } ] },
+      { name: "初恋", duration: 292 }, { name: "热带", duration: 259 }, { name: "石牌桥", duration: 210 },,
+      { name: "有所追求", duration: 182 }, { name: "阿虎", duration: 196 }, { name: "梦幻丽莎发廊", duration: 249 },,
+      { name: "柔河里", duration: 200 }, { name: "秧歌舞", duration: 191 }, { name: "很多很多", duration: 264 },,
+      { name: "九条人", duration: 148 }, { name: "阿珍爱上了阿强", duration: 409 },,
+      { name: "楼房来四散起 路不见狗相连", duration: 147 } ] },
     { name: "故事会", type: "专辑", date: "2019-02-21", rating: 8.0, songs: [
-      { name: "故事会", duration: 280 }, { name: "世界的理想", duration: 307 } ] },
+      { name: "仙女", duration: 260 }, { name: "小燕子", duration: 240 }, { name: "烂尾楼", duration: 270 },,
+      { name: "匈奴王", duration: 250 }, { name: "深圳的街头", duration: 280 }, { name: "阿琳娜", duration: 260 },,
+      { name: "喜鹊", duration: 240 }, { name: "老鼠影", duration: 255 }, { name: "最寒冷的一天", duration: 270 },,
+      { name: "满天神佛请来保庇我", duration: 260 }, { name: "马白草", duration: 250 },,
+      { name: "深圳的街头(卡拉OK)", duration: 280 } ] },
     { name: "活鱼逆流而上，死鱼随波逐流", type: "专辑", date: "2021-08-18", songs: [
-      { name: "活鱼逆流而上", duration: 290 } ] },
+      { name: "南方恋曲", duration: 260 }, { name: "左车道", duration: 270 }, { name: "越南", duration: 250 },,
+      { name: "他把反话正面讲", duration: 265 }, { name: "活生生的生活", duration: 280 },,
+      { name: "Canton Express", duration: 300 }, { name: "伤心的人", duration: 270 },,
+      { name: "世界的理想", duration: 307 }, { name: "活鱼逆流而上，死鱼随波逐流", duration: 290 },,
+      { name: "地球仪", duration: 280 }, { name: "夜已晚", duration: 270 } ] },
     { name: "一半真情流露，一半靠表演", type: "专辑", date: "2021-08-18", songs: [
-      { name: "一半真情流露", duration: 280 } ] },
+      { name: "无嫫歌", duration: 260 }, { name: "阮厝阿嫂爱唱歌", duration: 270 },,
+      { name: "一半真情流露，一半靠表演", duration: 280 }, { name: "Love Makes Me Lose Control", duration: 250 },,
+      { name: "食醉狗", duration: 240 }, { name: "猪肉炒辣椒", duration: 230 }, { name: "塑料花", duration: 255 },,
+      { name: "另一条食醉狗", duration: 260 }, { name: "另一个地球仪", duration: 270 }, { name: "隔壁的诗人", duration: 290 },,
+      { name: "在码头", duration: 300 } ] },
   ],
   "重塑雕像的权利": [
     { name: "CUT OFF!", type: "EP", date: "2005-01-01", rating: 8.0, songs: [
