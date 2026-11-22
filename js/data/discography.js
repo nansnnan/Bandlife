@@ -457,7 +457,10 @@ window.BAND_DISCOGRAPHY = {
   ],
   "刺猬乐队": [
     { name: "Happy Idle Kid", type: "专辑", date: "2006-03-12", songs: [
-      { name: "快乐的懒孩子", duration: 280 } ] },
+      { name: "Idle", duration: 268 }, { name: "Buffer", duration: 184 }, { name: "Cool Bad Girl", duration: 106 },
+      { name: "Wink", duration: 200 }, { name: "Smart", duration: 245 }, { name: "Elra", duration: 213 },
+      { name: "Teenage Regrets", duration: 215 }, { name: "Cure Me in Your Case", duration: 184 }, { name: "One", duration: 213 },
+      { name: "柏油公路", duration: 246 }, { name: "Lapse", duration: 228 } ] },
     { name: "噪音袭击世界", type: "专辑", date: "2007-10-01", songs: [
       { name: "玩具和儿童节", duration: 221 }, { name: "南瓜", duration: 219 }, { name: "小鬼", duration: 101 },
       { name: "爱之废语", duration: 199 }, { name: "龙珠", duration: 186 }, { name: "新星 新星", duration: 252 },
@@ -574,13 +577,17 @@ window.BAND_DISCOGRAPHY = {
   ],
   "房东的猫": [
     { name: "房东的猫", type: "专辑", date: "2017-01-26", rating: 7.8, songs: [
-      { name: "美好事物", duration: 280 }, { name: "秋酿", duration: 260 }, { name: "往往", duration: 270 } ] },
+      { name: "美好事物", duration: 280 }, { name: "不知归期的故人", duration: 270 }, { name: "秋酿", duration: 260 },
+      { name: "往往", duration: 270 }, { name: "简情歌(钢琴版)", duration: 250 }, { name: "短叹", duration: 270 },
+      { name: "所以来吧", duration: 280 } ] },
     { name: "柔软", type: "专辑", date: "2018-04-01", songs: [
-      { name: "柔软", duration: 280 }, { name: "如常", duration: 270 } ] },
+      { name: "远去的飞鸟", duration: 270 }, { name: "柔软", duration: 280 }, { name: "如常", duration: 270 },
+      { name: "独一", duration: 260 }, { name: "等我们老了，就定居在重庆", duration: 290 }, { name: "白", duration: 270 },
+      { name: "你是我最愚蠢的一次浪漫", duration: 280 } ] },
     { name: "这是你想要的生活吗", type: "专辑", date: "2020-04-18", songs: [
-      { name: "这是你想要的生活吗", duration: 280 }, { name: "孤独之书", duration: 270 } ] },
-    { name: "世界/青年", type: "专辑", date: "2023-05-04", songs: [
-      { name: "城市动物园", duration: 280 }, { name: "慢游", duration: 270 } ] },
+      { name: "Distance", duration: 260 }, { name: "这是你想要的生活吗", duration: 280 }, { name: "孤独之书", duration: 270 },
+      { name: "月亮拥抱我", duration: 270 }, { name: "由于时间与地域的关系", duration: 280 }, { name: "谈恋爱前不如先养猫", duration: 260 },
+      { name: "海", duration: 270 }, { name: "Indigo", duration: 280 }, { name: "愿你有故乡", duration: 290 } ] },
   ],
   "鹿先森乐队": [
     { name: "所有的酒, 都不如你", type: "专辑", date: "2016-01-01", rating: 7.5, songs: [
