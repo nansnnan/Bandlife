@@ -198,28 +198,55 @@ window.BAND_DISCOGRAPHY = {
       { name: "旧城之王", duration: 280 } ] },
   ],
   "舌头乐队": [
-    { name: "舌头", type: "专辑", date: "2001-01-01", rating: 8.3, songs: [
-      { name: "妈妈一起飞吧", duration: 300 }, { name: "中国摇滚", duration: 290 } ] },
-    { name: "用母语说", type: "专辑", date: "2011-01-01", songs: [ { name: "用母语说", duration: 280 } ] },
+    { name: "小鸡出壳", type: "专辑", date: "1999-01-01", rating: 8.3, songs: [
+      { name: "小鸡出壳", duration: 300 }, { name: "复制者", duration: 280 } ] },
+    { name: "这就是你", type: "专辑", date: "2002-01-01", rating: 8.1, songs: [
+      { name: "这就是你", duration: 300 } ] },
+    { name: "妈妈一起飞吧，妈妈一起摇滚吧", type: "专辑", date: "2014-08-01", songs: [
+      { name: "妈妈一起飞吧", duration: 400 } ] },
+    { name: "原始人爱空调协会", type: "专辑", date: "2016-08-01", rating: 7.9, songs: [
+      { name: "时光机器", duration: 300 } ] },
+    { name: "怎么能够说我爱你", type: "专辑", date: "2019-01-01", songs: [
+      { name: "怎么能够说我爱你", duration: 300 } ] },
+    { name: "中国制造", type: "专辑", date: "2021-01-01", songs: [
+      { name: "猫和老鼠", duration: 280 }, { name: "摇滚教父", duration: 270 } ] },
   ],
   "杭盖乐队": [
-    { name: "杭盖", type: "专辑", date: "2007-01-01", songs: [
-      { name: "希格希日", duration: 280 }, { name: "乌兰巴托之夜", duration: 290 } ] },
-    { name: "四季", type: "专辑", date: "2010-01-01", rating: 8.0, songs: [
-      { name: "四季", duration: 300 }, { name: "酒歌", duration: 270 } ] },
-    { name: "杭盖与蒙古长调", type: "专辑", date: "2014-01-01", songs: [
-      { name: "初升的太阳", duration: 280 } ] },
+    { name: "介绍杭盖", type: "专辑", date: "2008-07-28", rating: 8.0, songs: [
+      { name: "我的陶布竖尔", duration: 280 }, { name: "酒歌", duration: 270 }, { name: "四季", duration: 290 } ] },
+    { name: "远走的人", type: "专辑", date: "2010-01-01", rating: 8.1, songs: [
+      { name: "远走的人", duration: 300 } ] },
+    { name: "四季", type: "专辑", date: "2012-05-01", rating: 7.9, songs: [
+      { name: "希格希日", duration: 280 }, { name: "海然海然", duration: 270 } ] },
+    { name: "回到你身旁", type: "专辑", date: "2014-05-22", songs: [
+      { name: "回到你身旁", duration: 226 }, { name: "硕特英雄", duration: 236 },
+      { name: "乌兰巴托之夜", duration: 293 } ] },
+    { name: "花斑马", type: "专辑", date: "2016-05-15", songs: [
+      { name: "花斑马", duration: 346 }, { name: "轮回", duration: 271 }, { name: "初升的太阳", duration: 347 } ] },
+    { name: "故乡", type: "专辑", date: "2017-01-01", songs: [
+      { name: "故乡", duration: 280 } ] },
+    { name: "杭盖与铜管", type: "专辑", date: "2019-01-01", songs: [
+      { name: "鸿雁", duration: 271 }, { name: "丁吉图湾", duration: 286 } ] },
   ],
   "九宝乐队": [
-    { name: "十丈铜嘴", type: "专辑", date: "2012-01-01", songs: [
+    { name: "十丈铜嘴", type: "专辑", date: "2012-05-05", rating: 7.9, songs: [
       { name: "十丈铜嘴", duration: 280 }, { name: "骏马", duration: 270 } ] },
-    { name: "九宝", type: "专辑", date: "2014-01-01", rating: 7.9, songs: [
-      { name: "灵眼", duration: 290 }, { name: "诺恩吉雅", duration: 280 } ] },
+    { name: "九宝", type: "专辑", date: "2013-12-13", rating: 8.0, songs: [
+      { name: "九宝", duration: 290 } ] },
+    { name: "灵眼", type: "专辑", date: "2016-08-19", rating: 8.1, songs: [
+      { name: "灵眼", duration: 290 }, { name: "顽固", duration: 280 } ] },
+    { name: "Awakening From Dukkha", type: "精选", date: "2020-11-18", songs: [
+      { name: "特斯河之赞", duration: 290 }, { name: "黑心", duration: 280 } ] },
+    { name: "究极之境", type: "专辑", date: "2025-09-24", songs: [
+      { name: "直到如今", duration: 296 }, { name: "彷徨", duration: 287 }, { name: "真梦", duration: 310 } ] },
   ],
   "夜叉乐队": [
     { name: "夜叉", type: "专辑", date: "2001-01-01", songs: [
       { name: "夜叉", duration: 280 }, { name: "向死而生", duration: 290 } ] },
-    { name: "死墙", type: "专辑", date: "2008-01-01", songs: [ { name: "死墙", duration: 270 } ] },
+    { name: "死墙", type: "专辑", date: "2008-01-01", songs: [
+      { name: "死墙", duration: 270 } ] },
+    { name: "暗流", type: "专辑", date: "2016-01-01", songs: [
+      { name: "暗流", duration: 280 } ] },
   ],
   "反光镜": [
     { name: "Reflector", type: "EP", date: "2002-01-01", songs: [
@@ -246,10 +273,20 @@ window.BAND_DISCOGRAPHY = {
       { name: "皂.白", duration: 270 } ] },
   ],
   "达达乐队": [
-    { name: "天使", type: "专辑", date: "2000-01-01", rating: 8.0, songs: [
-      { name: "天使", duration: 280 }, { name: "南方", duration: 290 } ] },
-    { name: "黄金时代", type: "专辑", date: "2003-01-01", rating: 8.2, songs: [
-      { name: "黄金时代", duration: 290 }, { name: "把悲伤留给自己", duration: 280 } ] },
+    { name: "天使", type: "专辑", date: "2001-01-01", rating: 8.0, songs: [
+      { name: "化学心情下的爱情反应", duration: 294 }, { name: "我的天使", duration: 184 },
+      { name: "瞬间", duration: 243 }, { name: "节日快乐", duration: 198 },
+      { name: "暴雨", duration: 261 }, { name: "玩偶", duration: 276 },
+      { name: "1999", duration: 280 }, { name: "毛病", duration: 249 },
+      { name: "荒诞", duration: 143 }, { name: "五分儿", duration: 168 },
+      { name: "UNO", duration: 162 } ] },
+    { name: "黄金时代", type: "专辑", date: "2003-12-25", rating: 8.2, songs: [
+      { name: "不经意间", duration: 280 }, { name: "无双", duration: 270 },
+      { name: "巴巴罗萨", duration: 290 }, { name: "Song F", duration: 300 },
+      { name: "午夜说再见", duration: 280 }, { name: "浮出水面", duration: 270 },
+      { name: "等待", duration: 290 }, { name: "黄金时代", duration: 280 },
+      { name: "南方", duration: 300 }, { name: "收音机之恋", duration: 260 },
+      { name: "ROCKLIFE", duration: 270 } ] },
   ],
   "果味VC": [
     { name: "双重生命", type: "专辑", date: "2001-01-01", rating: 7.9, songs: [
@@ -291,10 +328,17 @@ window.BAND_DISCOGRAPHY = {
       { name: "野火", duration: 400 }, { name: "辛丑", duration: 380 } ] },
   ],
   "沼泽乐队": [
-    { name: "沼泽", type: "专辑", date: "2003-01-01", songs: [
-      { name: "沼泽", duration: 300 } ] },
-    { name: "失乐园", type: "专辑", date: "2009-01-01", rating: 8.0, songs: [
-      { name: "失乐园", duration: 320 } ] },
+    { name: "沧浪星", type: "专辑", date: "2010-12-18", rating: 7.0, songs: [
+      { name: "沧浪星", duration: 320 } ] },
+    { name: "1911", type: "专辑", date: "2011-12-31", rating: 8.4, songs: [
+      { name: "1911 第一回", duration: 938 }, { name: "1911 第二回", duration: 793 },
+      { name: "1911 第三回", duration: 508 }, { name: "1911 第四回", duration: 1399 } ] },
+    { name: "远", type: "专辑", date: "2013-01-01", rating: 6.4, songs: [
+      { name: "远", duration: 320 } ] },
+    { name: "琴晚", type: "专辑", date: "2015-01-01", rating: 7.0, songs: [
+      { name: "琴晚", duration: 320 } ] },
+    { name: "争鸣", type: "专辑", date: "2018-01-01", rating: 8.7, songs: [
+      { name: "争鸣", duration: 2580 } ] },
   ],
   "刺猬乐队": [
     { name: "Happy Idle Kid", type: "专辑", date: "2006-03-12", songs: [
@@ -330,9 +374,18 @@ window.BAND_DISCOGRAPHY = {
       { name: "梦中的你", duration: 280 }, { name: "海鸥", duration: 290 }, { name: "你的爱情", duration: 270 } ] },
   ],
   "布衣乐队": [
-    { name: "布衣", type: "专辑", date: "2002-01-01", songs: [
-      { name: "布衣", duration: 280 }, { name: "西北风", duration: 270 } ] },
-    { name: "那么久", type: "专辑", date: "2010-01-01", songs: [ { name: "那么久", duration: 290 } ] },
+    { name: "那么久", type: "专辑", date: "2007-12-18", rating: 7.8, songs: [
+      { name: "我爱你亲爱的姑娘", duration: 229 }, { name: "羊肉面", duration: 280 }, { name: "丢", duration: 334 } ] },
+    { name: "布衣", type: "专辑", date: "2009-09-26", rating: 8.0, songs: [
+      { name: "三峰", duration: 291 }, { name: "遥远的地方", duration: 329 }, { name: "粼蓝曲", duration: 405 } ] },
+    { name: "秋天", type: "专辑", date: "2010-11-18", songs: [
+      { name: "秋天", duration: 280 } ] },
+    { name: "出发", type: "专辑", date: "2013-10-18", songs: [
+      { name: "出发", duration: 280 } ] },
+    { name: "小怪兽", type: "专辑", date: "2018-09-03", songs: [
+      { name: "小怪兽", duration: 280 } ] },
+    { name: "八宝茶", type: "专辑", date: "2021-03-14", songs: [
+      { name: "好风", duration: 366 }, { name: "云", duration: 280 } ] },
   ],
   "扭曲的机器": [
     { name: "扭曲的机器", type: "专辑", date: "2000-01-01", songs: [
@@ -347,52 +400,97 @@ window.BAND_DISCOGRAPHY = {
   "窒息乐队": [
     { name: "窒息", type: "专辑", date: "2004-01-01", songs: [
       { name: "窒息", duration: 280 }, { name: "极限", duration: 270 } ] },
+    { name: "无界", type: "专辑", date: "2020-07-27", songs: [
+      { name: "黎明之下", duration: 280 }, { name: "亚特兰蒂斯", duration: 290 },
+      { name: "巨鲸落", duration: 280 } ] },
   ],
   "郁乐队": [
-    { name: "Die From Sorrow", type: "专辑", date: "2009-01-01", songs: [
-      { name: "Die From Sorrow", duration: 300 } ] },
-    { name: "异海之王", type: "专辑", date: "2015-01-01", songs: [
+    { name: "日落伊甸园", type: "EP", date: "2009-01-01", songs: [
+      { name: "仙女座", duration: 280 }, { name: "悲伤致死", duration: 270 } ] },
+    { name: "悲伤之旅", type: "专辑", date: "2012-01-01", rating: 7.8, songs: [
+      { name: "悲伤之旅", duration: 280 }, { name: "仙女座", duration: 290 },
+      { name: "针锋相对", duration: 270 }, { name: "Die From Sorrow", duration: 300 } ] },
+    { name: "异海之王", type: "专辑", date: "2016-01-01", songs: [
       { name: "异海之王", duration: 290 } ] },
+    { name: "盛大的狂欢", type: "专辑", date: "2024-02-19", songs: [
+      { name: "盛大的狂欢", duration: 280 } ] },
   ],
   "声音玩具": [
-    { name: "爱是昂贵的", type: "专辑", date: "2006-01-01", rating: 8.2, songs: [
-      { name: "爱是昂贵的", duration: 300 } ] },
-    { name: "劳动之余", type: "专辑", date: "2018-01-01", songs: [
-      { name: "劳动之余", duration: 290 } ] },
+    { name: "最美妙的旅行", type: "专辑", date: "2003-12-01", rating: 8.4, songs: [
+      { name: "星期天大街", duration: 300 }, { name: "秘密的爱", duration: 280 },
+      { name: "爱玲", duration: 290 }, { name: "不朽", duration: 660 },
+      { name: "伟大说谎者", duration: 280 } ] },
+    { name: "爱是昂贵的", type: "专辑", date: "2015-01-01", rating: 8.5, songs: [
+      { name: "请问哪里才能买到晶体管收音机", duration: 300 }, { name: "明天你依旧在我身旁", duration: 280 },
+      { name: "生命", duration: 290 }, { name: "抚琴小夜曲", duration: 280 } ] },
+    { name: "劳动之余", type: "专辑", date: "2021-04-30", rating: 8.2, songs: [
+      { name: "你的城市", duration: 280 }, { name: "昨夜我飞向遥远的火星", duration: 290 },
+      { name: "没有人能够比我们更接近对方", duration: 300 }, { name: "爱是昂贵的", duration: 280 } ] },
   ],
   "秘密行动": [
-    { name: "秘密行动", type: "专辑", date: "2013-01-01", songs: [
-      { name: "秘密行动", duration: 280 } ] },
+    { name: "奇怪的老式娱乐", type: "EP", date: "2013-10-01", songs: [
+      { name: "奇怪的老式娱乐", duration: 280 } ] },
+    { name: "Loop 循环", type: "专辑", date: "2015-08-01", rating: 7.8, songs: [
+      { name: "Loop", duration: 300 } ] },
     { name: "碎片", type: "专辑", date: "2019-01-01", songs: [
       { name: "碎片", duration: 290 } ] },
   ],
   "大波浪": [
-    { name: "大波浪", type: "专辑", date: "2014-01-01", songs: [
-      { name: "大波浪", duration: 280 } ] },
-    { name: "霓虹", type: "专辑", date: "2019-01-01", songs: [
-      { name: "霓虹", duration: 290 } ] },
+    { name: "THE BIG WAVE", type: "专辑", date: "2016-09-01", rating: 7.8, songs: [
+      { name: "Fill in", duration: 280 }, { name: "Not Just Imagining", duration: 270 } ] },
+    { name: "蓝色的脸", type: "专辑", date: "2018-01-01", rating: 8.0, songs: [
+      { name: "No Such Disease", duration: 280 }, { name: "他的方式", duration: 270 } ] },
+    { name: "新逻辑", type: "专辑", date: "2021-01-01", songs: [
+      { name: "新逻辑", duration: 280 } ] },
+    { name: "不止一面", type: "专辑", date: "2021-01-01", songs: [
+      { name: "不止一面", duration: 280 } ] },
   ],
   "房东的猫": [
-    { name: "房东的猫", type: "专辑", date: "2015-01-01", songs: [
-      { name: "云烟成雨", duration: 270 }, { name: "秋酿", duration: 260 } ] },
-    { name: "这是你想要的生活吗", type: "专辑", date: "2020-01-01", rating: 7.8, songs: [
-      { name: "这是你想要的生活吗", duration: 280 } ] },
+    { name: "房东的猫", type: "专辑", date: "2017-01-26", rating: 7.8, songs: [
+      { name: "美好事物", duration: 280 }, { name: "秋酿", duration: 260 }, { name: "往往", duration: 270 } ] },
+    { name: "柔软", type: "专辑", date: "2018-04-01", songs: [
+      { name: "柔软", duration: 280 }, { name: "如常", duration: 270 } ] },
+    { name: "这是你想要的生活吗", type: "专辑", date: "2020-04-18", songs: [
+      { name: "这是你想要的生活吗", duration: 280 }, { name: "孤独之书", duration: 270 } ] },
+    { name: "世界/青年", type: "专辑", date: "2023-05-04", songs: [
+      { name: "城市动物园", duration: 280 }, { name: "慢游", duration: 270 } ] },
   ],
   "鹿先森乐队": [
-    { name: "春风十里", type: "专辑", date: "2016-01-01", rating: 7.5, songs: [
-      { name: "春风十里", duration: 280 }, { name: "所有的酒都不如你", duration: 270 } ] },
+    { name: "所有的酒, 都不如你", type: "专辑", date: "2016-01-01", rating: 7.5, songs: [
+      { name: "春风十里", duration: 375 }, { name: "晚安", duration: 280 } ] },
+    { name: "华年", type: "专辑", date: "2018-01-01", songs: [
+      { name: "华年", duration: 280 }, { name: "之间", duration: 270 } ] },
+    { name: "在心碎处", type: "专辑", date: "2020-01-01", songs: [
+      { name: "再唱一次这首歌好吗?", duration: 280 } ] },
+    { name: "滔滔", type: "专辑", date: "2023-01-01", songs: [
+      { name: "生之河", duration: 280 } ] },
   ],
   "低苦艾": [
-    { name: "低苦艾", type: "专辑", date: "2006-01-01", songs: [
-      { name: "兰州 兰州", duration: 290 } ] },
-    { name: "苦艾酒", type: "专辑", date: "2011-01-01", rating: 7.8, songs: [
+    { name: "苦艾酒", type: "EP", date: "2006-01-01", songs: [
       { name: "苦艾酒", duration: 280 } ] },
+    { name: "低苦艾", type: "专辑", date: "2007-05-06", songs: [
+      { name: "低苦艾", duration: 280 } ] },
+    { name: "我们不由自主的亲吻对方", type: "专辑", date: "2008-01-01", rating: 7.8, songs: [
+      { name: "候鸟", duration: 280 }, { name: "大圣", duration: 290 }, { name: "谁", duration: 270 } ] },
+    { name: "兰州 兰州", type: "专辑", date: "2011-09-30", rating: 8.0, songs: [
+      { name: "兰州 兰州", duration: 290 } ] },
+    { name: "守望者", type: "专辑", date: "2013-01-01", songs: [
+      { name: "守望者", duration: 280 } ] },
+    { name: "一天", type: "专辑", date: "2017-01-01", songs: [
+      { name: "一天", duration: 280 } ] },
+    { name: "驰名商标", type: "专辑", date: "2020-01-01", songs: [
+      { name: "驰名商标", duration: 280 } ] },
   ],
   "丢火车": [
-    { name: "丢火车", type: "专辑", date: "2006-01-01", songs: [
-      { name: "茶底世界", duration: 280 } ] },
-    { name: "白兰鸽巡游记", type: "专辑", date: "2013-01-01", songs: [
-      { name: "白兰鸽巡游记", duration: 290 } ] },
+    { name: "丢火车", type: "EP", date: "2008-01-01", songs: [
+      { name: "茶底世界", duration: 281 } ] },
+    { name: "火车日记", type: "专辑", date: "2011-12-20", songs: [
+      { name: "火车日记", duration: 322 }, { name: "白兰鸽巡游记", duration: 240 } ] },
+    { name: "游歌", type: "EP", date: "2014-10-21", songs: [
+      { name: "游歌", duration: 280 } ] },
+    { name: "浮生", type: "专辑", date: "2017-10-26", songs: [
+      { name: "索菲亚", duration: 280 }, { name: "浮生", duration: 290 },
+      { name: "Hello Hello", duration: 270 }, { name: "晚安", duration: 280 } ] },
   ],
   "旅行团": [
     { name: "于是我不再唱歌", type: "专辑", date: "2011-01-01", rating: 7.9, songs: [
@@ -404,14 +502,25 @@ window.BAND_DISCOGRAPHY = {
     { name: "Bossa Nova", type: "专辑", date: "2011-01-01", songs: [
       { name: "Bossa Nova", duration: 280 } ] },
     { name: "金桔希子", type: "EP", date: "2016-01-01", rating: 8.0, songs: [
-      { name: "金桔希子", duration: 300 } ] },
+      { name: "My Jinji", duration: 300 }, { name: "Burgundy Red", duration: 280 } ] },
     { name: "Cassa Nova", type: "专辑", date: "2018-01-01", rating: 8.1, songs: [
-      { name: "Cassa Nova", duration: 290 } ] },
+      { name: "Slow", duration: 290 } ] },
+    { name: "Soft Storm", type: "专辑", date: "2020-01-01", songs: [
+      { name: "Candlelight", duration: 280 } ] },
   ],
   "声音碎片": [
+    { name: "世界是噪音的花园", type: "专辑", date: "2002-01-01", songs: [
+      { name: "世界是噪音的花园", duration: 290 } ] },
     { name: "优美的低于生活", type: "专辑", date: "2005-01-01", rating: 8.1, songs: [
-      { name: "优美的低于生活", duration: 290 }, { name: "把光芒洒向更开阔的地方", duration: 300 } ] },
-    { name: "致我的迷茫兄弟", type: "专辑", date: "2019-01-01", songs: [
-      { name: "致我的迷茫兄弟", duration: 280 } ] },
+      { name: "优美的低于生活", duration: 290 }, { name: "从现在开始", duration: 280 } ] },
+    { name: "把光芒洒向更开阔的地方", type: "专辑", date: "2008-09-30", rating: 8.3, songs: [
+      { name: "情歌而已", duration: 290 }, { name: "天边一朵云", duration: 280 },
+      { name: "黑白电影", duration: 280 }, { name: "陌生城市的早晨", duration: 300 },
+      { name: "顺流而下", duration: 280 } ] },
+    { name: "没有鸟鸣,关上窗吧", type: "专辑", date: "2019-01-01", rating: 8.2, songs: [
+      { name: "送流水", duration: 300 }, { name: "致我的迷茫兄弟", duration: 280 },
+      { name: "少年游", duration: 290 }, { name: "神游", duration: 280 } ] },
+    { name: "有限身 无穷念", type: "专辑", date: "2022-01-01", songs: [
+      { name: "有限身无穷念", duration: 280 } ] },
   ],
 };
