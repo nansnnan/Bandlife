@@ -47,7 +47,9 @@ window.BAND_DISCOGRAPHY = {
     { name: "别误会", type: "专辑", date: "1995-12-01", rating: 7.8, songs: [
       { name: "别误会", duration: 324 }, { name: "爱不爱我", duration: 331 }, { name: "相信自己", duration: 213 } ] },
     { name: "永恒的起点", type: "专辑", date: "1997-01-01", songs: [
-      { name: "永恒的起点", duration: 290 } ] },
+      { name: "放弃", duration: 310 }, { name: "别让我离开你", duration: 271 }, { name: "爱不爱我", duration: 330 },
+      { name: "面具", duration: 307 }, { name: "永恒的起点", duration: 325 }, { name: "共同的起点", duration: 391 },
+      { name: "一切都会好", duration: 354 }, { name: "I Am Sorry别误会", duration: 309 }, { name: "过去", duration: 382 } ] },
     { name: "每一夜每一天", type: "专辑", date: "1998-01-01", songs: [
       { name: "每一夜每一天", duration: 280 } ] },
     { name: "00:00:00", type: "专辑", date: "1999-09-21", songs: [
@@ -59,7 +61,9 @@ window.BAND_DISCOGRAPHY = {
     { name: "风雷动", type: "专辑", date: "2005-01-01", songs: [
       { name: "风雷动", duration: 270 } ] },
     { name: "多么爱你，你知道吗？！", type: "专辑", date: "2014-09-17", songs: [
-      { name: "相信我", duration: 285 }, { name: "多么爱你", duration: 297 } ] },
+      { name: "相信我", duration: 285 }, { name: "多么爱你", duration: 297 }, { name: "当思念变成回忆", duration: 297 },
+      { name: "无论我走到哪里总会想起你", duration: 235 }, { name: "好寂寞", duration: 340 }, { name: "爱不离", duration: 307 },
+      { name: "冲出霾伏", duration: 306 }, { name: "零点快乐", duration: 258 }, { name: "我曾以为", duration: 286 } ] },
     { name: "我还爱着你", type: "专辑", date: "2016-08-01", songs: [
       { name: "我还爱着你", duration: 280 } ] },
   ],
@@ -76,14 +80,24 @@ window.BAND_DISCOGRAPHY = {
       { name: "西湖", duration: 253 }, { name: "异乡", duration: 359 }, { name: "为你唱首歌", duration: 253 },
       { name: "不要停止我的音乐", duration: 258 } ] },
     { name: "盛开", type: "专辑", date: "2010-05-04", songs: [
-      { name: "盛开", duration: 280 }, { name: "博卡拉", duration: 290 }, { name: "改变你的生活", duration: 270 } ] },
+      { name: "盛开", duration: 280 }, { name: "博卡拉", duration: 290 }, { name: "改变你的生活", duration: 270 },
+      { name: "最后一班列车", duration: 280 }, { name: "空隙", duration: 290 }, { name: "生命中最美丽的一天", duration: 310 } ] },
     { name: "愿爱无忧", type: "专辑", date: "2014-08-12", rating: 7.9, songs: [
       { name: "引子", duration: 120 }, { name: "扎西德勒", duration: 280 }, { name: "哈利路亚", duration: 290 },
-      { name: "夏天", duration: 270 }, { name: "愿爱无忧", duration: 300 } ] },
+      { name: "夏天", duration: 270 }, { name: "行星消失的夜空", duration: 300 }, { name: "戴着镣铐起舞", duration: 280 },
+      { name: "汪洋中的一条船", duration: 290 }, { name: "太阳照常升起", duration: 270 }, { name: "野歌", duration: 280 },
+      { name: "美丽新世界", duration: 290 }, { name: "两个人的假期", duration: 270 }, { name: "思疆调", duration: 260 },
+      { name: "愿爱无忧", duration: 300 } ] },
     { name: "今日青年", type: "专辑", date: "2016-11-01", songs: [
       { name: "四相", duration: 200 }, { name: "今日青年", duration: 290 }, { name: "黑名单上的人", duration: 280 },
-      { name: "Downtown", duration: 270 } ] },
-    { name: "过海", type: "专辑", date: "2019-01-01", songs: [ { name: "过海", duration: 300 } ] },
+      { name: "黄皮肤的吉普赛", duration: 290 }, { name: "冲锋队", duration: 270 }, { name: "自由吧电台", duration: 280 },
+      { name: "Downtown", duration: 270 }, { name: "支离", duration: 280 }, { name: "如期", duration: 290 },
+      { name: "午夜芭蕾", duration: 270 }, { name: "好梦", duration: 280 } ] },
+    { name: "过海", type: "专辑", date: "2019-12-16", songs: [
+      { name: "过海", duration: 300 }, { name: "渡口", duration: 280 }, { name: "海", duration: 290 },
+      { name: "彼岸", duration: 280 }, { name: "潮汐", duration: 290 }, { name: "浪", duration: 270 },
+      { name: "归航", duration: 280 }, { name: "孤岛", duration: 290 }, { name: "远方", duration: 270 },
+      { name: "光", duration: 280 } ] },
   ],
   "万能青年旅店": [
     { name: "万能青年旅店", type: "专辑", date: "2010-11-12", rating: 9.3, songs: [
@@ -99,9 +113,15 @@ window.BAND_DISCOGRAPHY = {
   ],
   "二手玫瑰": [
     { name: "二手玫瑰", type: "专辑", date: "2003-01-01", rating: 8.5, songs: [
-      { name: "伎俩", duration: 280 }, { name: "火车快开", duration: 290 }, { name: "允许部分艺术家先富起来", duration: 300 } ] },
-    { name: "娱乐江湖", type: "专辑", date: "2006-10-21", songs: [
-      { name: "娱乐江湖", duration: 290 }, { name: "生存", duration: 280 }, { name: "青春", duration: 270 } ] },
+      { name: "伎俩", duration: 257 }, { name: "火车快开", duration: 347 }, { name: "允许部分艺术家先富起来", duration: 271 },
+      { name: "征婚启示", duration: 289 }, { name: "招安", duration: 384 }, { name: "采花", duration: 269 },
+      { name: "因为所以", duration: 247 }, { name: "嫂子颂", duration: 342 }, { name: "公益歌曲", duration: 212 },
+      { name: "好花红", duration: 423 } ] },
+    { name: "娱乐江湖", type: "专辑", date: "2006-10-17", songs: [
+      { name: "狼心狗肺", duration: 280 }, { name: "娱乐江湖", duration: 290 }, { name: "E时代桃源", duration: 270 },
+      { name: "夜深了", duration: 280 }, { name: "感觉错了", duration: 290 }, { name: "起飞", duration: 270 },
+      { name: "命运", duration: 280 }, { name: "跳大神", duration: 290 }, { name: "可是我还是在歌唱", duration: 280 },
+      { name: "春天的故事", duration: 270 } ] },
     { name: "一枝独秀", type: "专辑", date: "2013-08-12", rating: 8.0, songs: [
       { name: "坏东西", duration: 182 }, { name: "仙儿", duration: 305 }, { name: "舞曲", duration: 350 },
       { name: "串门", duration: 307 }, { name: "黄诗", duration: 234 }, { name: "白花", duration: 401 },
@@ -120,19 +140,27 @@ window.BAND_DISCOGRAPHY = {
     { name: "Sex Drugs Internet", type: "专辑", date: "2011-01-01", songs: [
       { name: "Sex Drugs Internet", duration: 270 } ] },
     { name: "生命因你而火热", type: "专辑", date: "2016-04-01", rating: 8.3, songs: [
-      { name: "没有理想的人不伤心", duration: 300 }, { name: "你要跳舞吗", duration: 280 },
-      { name: "生活因你而火热", duration: 290 }, { name: "难过时 把舞跳", duration: 270 } ] },
+      { name: "你要跳舞吗", duration: 193 }, { name: "我们最好的时光就是现在", duration: 293 },
+      { name: "没有理想的人不伤心", duration: 341 }, { name: "每一次我们开始争吵", duration: 234 },
+      { name: "生活因你而火热", duration: 291 }, { name: "难过时把舞跳", duration: 253 },
+      { name: "关于夜晚和失眠的世界", duration: 347 }, { name: "没有你的旅途没有意义", duration: 245 },
+      { name: "在我死去之前", duration: 205 }, { name: "走在什刹海的冰面上", duration: 276 } ] },
     { name: "爱 广播 飞机", type: "专辑", date: "2021-03-18", songs: [
       { name: "我好希望未来不来", duration: 222 }, { name: "夏日终曲", duration: 320 },
       { name: "最后的乐队", duration: 302 } ] },
   ],
   "五条人": [
     { name: "县城记", type: "专辑", date: "2009-07-11", rating: 8.4, songs: [
-      { name: "十年水流东 十年水流西", duration: 320 }, { name: "县城记", duration: 300 } ] },
+      { name: "十年水流东 十年水流西", duration: 285 }, { name: "道山靓仔", duration: 328 },
+      { name: "倒港纸", duration: 260 }, { name: "乐乐哭哭", duration: 184 },
+      { name: "踏架脚车牵条猪", duration: 367 }, { name: "李阿伯", duration: 446 },
+      { name: "梦想化工厂", duration: 244 }, { name: "问题出现我再告诉大家", duration: 213 },
+      { name: "童年往事", duration: 310 }, { name: "绿苍苍", duration: 219 },
+      { name: "阿炳耀", duration: 292 }, { name: "十年水流东 十年水流西（天合原始版）", duration: 218 } ] },
     { name: "一些风景", type: "专辑", date: "2012-05-25", songs: [
-      { name: "道山靓仔", duration: 300 }, { name: "陈先生", duration: 280 } ] },
+      { name: "陈先生", duration: 280 }, { name: "海风", duration: 290 }, { name: "彭啊湃", duration: 300 } ] },
     { name: "广东姑娘", type: "专辑", date: "2015-03-09", rating: 8.1, songs: [
-      { name: "广东姑娘", duration: 266 }, { name: "晚上好 春天小姐", duration: 257 } ] },
+      { name: "广东姑娘", duration: 266 }, { name: "晚上好 春天小姐", duration: 257 }, { name: "初恋", duration: 280 } ] },
     { name: "梦幻丽莎发廊", type: "专辑", date: "2017-03-29", rating: 8.2, songs: [
       { name: "梦幻丽莎发廊", duration: 248 }, { name: "阿珍爱上了阿强", duration: 409 } ] },
     { name: "故事会", type: "专辑", date: "2019-02-21", rating: 8.0, songs: [
@@ -165,25 +193,44 @@ window.BAND_DISCOGRAPHY = {
       { name: "你好再见", duration: 270 } ] },
     { name: "海龟先生", type: "专辑", date: "2012-12-31", rating: 8.1, songs: [
       { name: "玛卡瑞纳", duration: 300 }, { name: "Young", duration: 280 }, { name: "一起跳舞", duration: 270 },
-      { name: "男孩别哭", duration: 290 } ] },
+      { name: "Porn Star", duration: 260 }, { name: "Little Bar", duration: 280 }, { name: "Keep the Fire", duration: 270 },
+      { name: "男孩别哭", duration: 290 }, { name: "微笑", duration: 280 }, { name: "California", duration: 270 } ] },
     { name: "Where are you going?", type: "专辑", date: "2014-06-28", songs: [
       { name: "Where are you going？", duration: 300 }, { name: "悬崖巴士", duration: 280 },
-      { name: "给摇滚绑架", duration: 290 } ] },
+      { name: "脱狱", duration: 270 }, { name: "她", duration: 260 }, { name: "接纳", duration: 280 },
+      { name: "给摇滚绑架", duration: 290 }, { name: "那时阳光明媚", duration: 270 },
+      { name: "变形金刚", duration: 280 }, { name: "Snoopy", duration: 260 }, { name: "Last chance", duration: 270 } ] },
     { name: "咔咪哈咪哈", type: "专辑", date: "2019-03-07", songs: [
-      { name: "龟波气功", duration: 280 }, { name: "内人广林", duration: 270 }, { name: "海龟之歌", duration: 290 } ] },
+      { name: "龟波气功", duration: 280 }, { name: "内人广林", duration: 270 }, { name: "海龟之歌", duration: 290 },
+      { name: "热血新纪录", duration: 280 }, { name: "赖宁", duration: 270 }, { name: "我", duration: 260 },
+      { name: "望望先辈", duration: 280 }, { name: "恩典", duration: 270 }, { name: "锡安", duration: 260 },
+      { name: "好时光", duration: 280 } ] },
     { name: "死不回头", type: "专辑", date: "2021-05-08", songs: [
-      { name: "老手", duration: 280 }, { name: "你知道", duration: 270 } ] },
+      { name: "老手", duration: 280 }, { name: "你知道", duration: 270 }, { name: "黑暗暂把他们隐藏", duration: 280 },
+      { name: "迷呓之喑", duration: 270 }, { name: "盼望", duration: 260 }, { name: "捕风", duration: 280 },
+      { name: "伪君子", duration: 270 }, { name: "湾仔", duration: 260 }, { name: "忽然闯入", duration: 280 },
+      { name: "海的女儿", duration: 270 } ] },
   ],
   "后海大鲨鱼": [
     { name: "Queen Sea Big Shark", type: "专辑", date: "2007-01-01", songs: [
-      { name: "Hello! Passengers", duration: 280 }, { name: "Money Fucker", duration: 270 } ] },
-    { name: "后海大鲨鱼", type: "专辑", date: "2008-01-01", rating: 8.0, songs: [
-      { name: "心要野", duration: 290 }, { name: "猛犸", duration: 300 } ] },
+      { name: "Lightning Metropolis", duration: 280 }, { name: "Hard Heart(Love Spy)", duration: 270 },
+      { name: "No!No!No!", duration: 260 }, { name: "Tiger Dance", duration: 270 },
+      { name: "Kiss!Kill!Bang", duration: 260 }, { name: "Girl Boss", duration: 280 },
+      { name: "Man On The Moon", duration: 270 }, { name: "Hello!Passengers", duration: 280 },
+      { name: "Hold Your Hand", duration: 270 }, { name: "Dirty Mind", duration: 260 },
+      { name: "Money Fxxke", duration: 270 }, { name: "Lady Sisters", duration: 280 },
+      { name: "Get Away", duration: 260 }, { name: "Love Is Pop", duration: 270 } ] },
     { name: "浪潮", type: "专辑", date: "2010-01-01", songs: [
-      { name: "浪潮", duration: 280 }, { name: "超能力", duration: 270 } ] },
+      { name: "Glow in the dark", duration: 280 }, { name: "Back 2 the future", duration: 270 },
+      { name: "E Ocean", duration: 260 }, { name: "Comxxpuda", duration: 280 },
+      { name: "Loop of the sun", duration: 270 }, { name: "Wave", duration: 280 },
+      { name: "Neo! Man", duration: 260 }, { name: "Star Z", duration: 270 },
+      { name: "Youth", duration: 280 }, { name: "C.B.D", duration: 270 } ] },
     { name: "心要野", type: "专辑", date: "2015-03-18", rating: 8.3, songs: [
-      { name: "心要野", duration: 300 }, { name: "时间之间", duration: 290 }, { name: "后海冲浪手", duration: 280 },
-      { name: "Bling Bling Bling", duration: 270 } ] },
+      { name: "心要野", duration: 280 }, { name: "喜马拉雅", duration: 270 }, { name: "猛犸", duration: 280 },
+      { name: "时间之间", duration: 290 }, { name: "今夜留给今夜吧", duration: 270 }, { name: "漂流去世界最中心", duration: 280 },
+      { name: "88奥林匹克", duration: 260 }, { name: "偷月亮的人", duration: 270 }, { name: "时髦人都好Fancy", duration: 280 },
+      { name: "后海冲浪手", duration: 270 }, { name: "Bling Bling Bling", duration: 280 } ] },
   ],
   "木马乐队": [
     { name: "木马", type: "专辑", date: "1999-12-01", rating: 8.2, songs: [
@@ -257,16 +304,25 @@ window.BAND_DISCOGRAPHY = {
       { name: "我即是神", duration: 280 } ] },
   ],
   "反光镜": [
-    { name: "Reflector", type: "EP", date: "2002-01-01", songs: [
-      { name: "Reflector", duration: 250 } ] },
-    { name: "成长瞬间", type: "专辑", date: "2007-01-01", songs: [
-      { name: "成长瞬间", duration: 270 } ] },
-    { name: "释你", type: "EP", date: "2010-01-01", songs: [
-      { name: "释你", duration: 260 } ] },
-    { name: "我们的歌", type: "专辑", date: "2013-12-27", rating: 7.8, songs: [
-      { name: "我们的歌", duration: 280 } ] },
-    { name: "因为,所以", type: "专辑", date: "2019-01-01", songs: [
-      { name: "因为所以", duration: 270 } ] },
+    { name: "Reflector", type: "EP", date: "2002-05-01", songs: [
+      { name: "别上当", duration: 250 }, { name: "天天有时间", duration: 260 }, { name: "韩怂", duration: 250 } ] },
+    { name: "成长瞬间", type: "专辑", date: "2007-10-11", songs: [
+      { name: "成长瞬间", duration: 270 }, { name: "无烦恼", duration: 260 }, { name: "晚安北京", duration: 280 },
+      { name: "果儿", duration: 270 }, { name: "还我蔚蓝", duration: 260 }, { name: "You are my sunshine", duration: 280 },
+      { name: "陌生的房间", duration: 270 }, { name: "毒药", duration: 260 }, { name: "无奈", duration: 270 },
+      { name: "坦白", duration: 260 }, { name: "路", duration: 280 } ] },
+    { name: "释你", type: "EP", date: "2010-04-26", songs: [
+      { name: "溶化", duration: 260 }, { name: "只有音乐才是我的解药", duration: 280 }, { name: "嘿！姑娘", duration: 270 },
+      { name: "释你", duration: 280 }, { name: "麻痹", duration: 260 }, { name: "长大", duration: 270 } ] },
+    { name: "我们的歌", type: "专辑", date: "2013-12-21", rating: 7.8, songs: [
+      { name: "Intro", duration: 60 }, { name: "冲", duration: 260 }, { name: "我们的歌", duration: 280 },
+      { name: "大海", duration: 270 }, { name: "算了吧", duration: 260 }, { name: "孩子不哭", duration: 280 },
+      { name: "约定", duration: 270 }, { name: "那四年", duration: 280 }, { name: "情愿放弃一切", duration: 270 } ] },
+    { name: "因为,所以", type: "专辑", date: "2019-02-22", songs: [
+      { name: "intro", duration: 60 }, { name: "明天再说", duration: 270 }, { name: "这不是我想要的感觉", duration: 280 },
+      { name: "如果不能选择，我们就去歌唱", duration: 270 }, { name: "没人在乎你", duration: 260 },
+      { name: "青春的代价", duration: 280 }, { name: "以为", duration: 270 }, { name: "因为所以", duration: 280 },
+      { name: "来到你身边", duration: 260 } ] },
   ],
   "脑浊": [
     { name: "踩响失真", type: "专辑", date: "2002-01-01", songs: [
