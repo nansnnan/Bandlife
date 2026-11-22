@@ -418,7 +418,10 @@ window.BAND_DISCOGRAPHY = {
     { name: "IV", type: "专辑", date: "2008-05-17", rating: 7.4, songs: [
       { name: "污水塘", duration: 380 }, { name: "Rust Inside", duration: 360 } ] },
     { name: "L&R", type: "专辑", date: "2010-04-09", rating: 6.6, songs: [
-      { name: "童篇", duration: 438 }, { name: "近景", duration: 361 } ] },
+      { name: "About the Childhood", duration: 438 }, { name: "Still Life", duration: 361 },
+      { name: "Inhibitor for Anxiety Disorder", duration: 530 }, { name: "←M→", duration: 367 },
+      { name: "Hanged on the Timeline", duration: 626 }, { name: "Happy Together or Rehearsal", duration: 596 },
+      { name: "Vaselin", duration: 356 } ] },
     { name: "0.7", type: "专辑", date: "2012-06-08", rating: 7.9, songs: [
       { name: "2012", duration: 403 }, { name: "Rain Watcher", duration: 338 },
       { name: "Lonely God", duration: 570 }, { name: "Angelo's Portrait", duration: 459 } ] },
