@@ -396,8 +396,11 @@ window.BAND_DISCOGRAPHY = {
       { name: "ROCKLIFE", duration: 270 } ] },
   ],
   "果味VC": [
-    { name: "双重生命", type: "专辑", date: "2001-01-01", rating: 7.9, songs: [
-      { name: "双重生命", duration: 270 } ] },
+    { name: "双重生命", type: "专辑", date: "2001-11-11", rating: 7.9, songs: [
+      { name: "模糊", duration: 280 }, { name: "超音速列车", duration: 260 }, { name: "年轻人", duration: 270 },
+      { name: "Love Me girl", duration: 290 }, { name: "基因", duration: 270 }, { name: "北欧洲", duration: 300 },
+      { name: "透明", duration: 280 }, { name: "Big Bang", duration: 270 }, { name: "十四层", duration: 290 },
+      { name: "双重生命", duration: 300 } ] },
     { name: "来自VC的礼物", type: "专辑", date: "2005-01-01", songs: [
       { name: "来自VC的礼物", duration: 280 } ] },
     { name: "伟大的复兴", type: "专辑", date: "2008-12-12", songs: [
@@ -455,8 +458,11 @@ window.BAND_DISCOGRAPHY = {
   "刺猬乐队": [
     { name: "Happy Idle Kid", type: "专辑", date: "2006-03-12", songs: [
       { name: "快乐的懒孩子", duration: 280 } ] },
-    { name: "噪音袭击世界", type: "专辑", date: "2007-09-29", songs: [
-      { name: "噪音袭击世界", duration: 290 } ] },
+    { name: "噪音袭击世界", type: "专辑", date: "2007-10-01", songs: [
+      { name: "玩具和儿童节", duration: 221 }, { name: "南瓜", duration: 219 }, { name: "小鬼", duration: 101 },
+      { name: "爱之废语", duration: 199 }, { name: "龙珠", duration: 186 }, { name: "新星 新星", duration: 252 },
+      { name: "噪音袭击世界", duration: 158 }, { name: "这不是你自己但这是未来", duration: 187 }, { name: "分离", duration: 253 },
+      { name: "我们最后的话", duration: 185 }, { name: "白纸年华", duration: 237 } ] },
     { name: "白日梦蓝", type: "专辑", date: "2009-03-01", rating: 8.1, songs: [
       { name: "白日梦蓝", duration: 296 }, { name: "春天来了", duration: 330 }, { name: "电影", duration: 387 },
       { name: "二十四小时摇滚聚会", duration: 288 }, { name: "最后一班车", duration: 322 }, { name: "金色年华，无限伤感", duration: 252 } ] },
@@ -484,7 +490,10 @@ window.BAND_DISCOGRAPHY = {
     { name: "时代之梦", type: "EP", date: "2016-01-01", songs: [
       { name: "时代之梦", duration: 280 }, { name: "重来", duration: 270 } ] },
     { name: "回到海洋", type: "专辑", date: "2021-09-06", songs: [
-      { name: "梦中的你", duration: 280 }, { name: "海鸥", duration: 290 }, { name: "你的爱情", duration: 270 } ] },
+      { name: "梦中的你", duration: 280 }, { name: "琴岛漫步", duration: 290 }, { name: "暗示", duration: 300 },
+      { name: "你的爱情", duration: 270 }, { name: "海鸥", duration: 290 }, { name: "Noise In My Head", duration: 260 },
+      { name: "只是感觉", duration: 280 }, { name: "没什么比你更难忘", duration: 290 }, { name: "Magic Elevator", duration: 300 },
+      { name: "10th", duration: 270 } ] },
   ],
   "布衣乐队": [
     { name: "那么久", type: "专辑", date: "2007-12-18", rating: 7.8, songs: [
