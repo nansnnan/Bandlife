@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>乐队时代 · 乐队模拟游戏</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- ===== 主菜单 ===== -->
+    <div class="view" data-view="menu">
+      <div class="menu-bg"></div>
+      <div class="menu-content">
+        <div class="menu-logo">
+          <div class="logo-graphic">♫</div>
+          <h1>乐队时代</h1>
+          <p class="logo-sub">BAND ERA · 乐队模拟经营</p>
+        </div>
+        <div class="menu-buttons">
+          <button class="btn-primary" data-action="new-game">开始新的乐队生涯</button>
+          <button class="btn-secondary" data-action="continue-game">继续游戏</button>
+          <button class="btn-secondary" data-action="open-settings">设置</button>
+        </div>
+        <div class="menu-footer">v<span id="menu-version">1.0.0</span></div>
+      </div>
+    </div>
+
+    <!-- ===== 创建乐队 ===== -->
+    <div class="view" data-view="create">
+      <div class="panel">
+        <h2 class="panel-title">创建你的乐队</h2>
+        <div class="create-step" data-step="mode">
+          <h3>选择游戏模式</h3>
+          <div class="mode-cards">
+            <div class="mode-card" data-mode="real">
+              <div class="mode-icon">💰</div>
+              <h4>真实模式</h4>
+              <p>有预算限制，需合理规划训练、创作、巡演与发布的开销，经营乐队走向巅峰。</p>
+            </div>
+            <div class="mode-card" data-mode="sandbox">
+              <div class="mode-icon">🎸</div>
+              <h4>沙盒模式</h4>
+              <p>资金无限，自由创作与巡演，专注于音乐本身，无经营压力。</p>
+            </div>
+          </div>
+        </div>
+        <div class="create-step" data-step="band">
+          <h3>乐队信息</h3>
+          <div class="form-group">
+            <label>乐队名称</label>
+            <input type="text" id="band-name" placeholder="输入乐队名称" maxlength="20">
+          </div>
+          <div class="form-group">
+            <label>音乐风格</label>
+            <select id="band-style"></select>
+          </div>
+          <div class="form-group">
+            <label>乐队编制</label>
+            <select id="band-lineup">
+              <option value="标准摇滚编制">标准摇滚编制（主唱·吉他·贝斯·鼓）</option>
+              <option value="双吉他编制">双吉他编制（主唱·双吉他·贝斯·鼓）</option>
+              <option value="三人编制">三人编制（主唱兼吉他·贝斯·鼓）</option>
+              <option value="五人编制">五人编制（主唱·双吉他·贝斯·鼓·键盘）</option>
+              <option value="民谣编制">民谣编制（主唱·木吉他·鼓·键盘）</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>成员人数</label>
+            <select id="band-members">
+              <option value="3">3 人</option>
+              <option value="4" selected>4 人</option>
+              <option value="5">5 人</option>
+              <option value="6">6 人</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>出道地区（省）</label>
+            <select id="origin-province"></select>
+          </div>
+          <div class="form-group">
+            <label>出道地区（城市）</label>
+            <select id="origin-city"></select>
+          </div>
+        </div>
+        <div class="create-actions">
+          <button class="btn-secondary" data-action="create-back">上一步</button>
+          <button class="btn-primary" data-action="create-next">下一步</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 主游戏界面 ===== -->
+    <div class="view" data-view="game">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="band-badge" id="top-band-name">乐队</div>
+          <div class="topbar-date" id="top-date">2000年1月1日</div>
+        </div>
+        <div class="topbar-center">
+          <div class="stat-chip" title="总粉丝"><span class="stat-ico">👥</span><span id="top-fans">0</span></div>
+          <div class="stat-chip" title="名气"><span class="stat-ico">⭐</span><span id="top-rep">50</span></div>
+          <div class="stat-chip" title="总播放量"><span class="stat-ico">▶</span><span id="top-plays">0</span></div>
+          <div class="stat-chip money" title="预算"><span class="stat-ico">💰</span><span id="top-money">—</span></div>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn" data-action="open-settings" title="设置">⚙</button>
+          <button class="icon-btn" data-action="back-menu" title="返回主菜单">⌂</button>
+        </div>
+      </header>
+
+      <div class="game-body">
+        <nav class="sidebar">
+          <button class="nav-item active" data-nav="dashboard"><span>🏠</span><span class="nav-label">总览</span></button>
+          <button class="nav-item" data-nav="create-song"><span>🎵</span><span class="nav-label">创作歌曲</span></button>
+          <button class="nav-item" data-nav="release"><span>💿</span><span class="nav-label">发布作品</span></button>
+          <button class="nav-item" data-nav="player"><span>🎧</span><span class="nav-label">音乐播放器</span></button>
+          <button class="nav-item" data-nav="rating"><span>⭐</span><span class="nav-label">评分网站</span></button>
+          <button class="nav-item" data-nav="tour"><span>🎤</span><span class="nav-label">巡演</span></button>
+          <button class="nav-item" data-nav="train"><span>🏋️</span><span class="nav-label">训练</span></button>
+        </nav>
+
+        <main class="content">
+          <div class="game-view" data-game-view="dashboard"></div>
+          <div class="game-view" data-game-view="create-song"></div>
+          <div class="game-view" data-game-view="release"></div>
+          <div class="game-view" data-game-view="player"></div>
+          <div class="game-view" data-game-view="rating"></div>
+          <div class="game-view" data-game-view="tour"></div>
+          <div class="game-view" data-game-view="train"></div>
+        </main>
+      </div>
+
+      <!-- 时间推进栏 -->
+      <footer class="timebar">
+        <div class="time-advance">
+          <button class="btn-time" data-action="advance-1">+1 天</button>
+          <button class="btn-time" data-action="advance-7">+1 周</button>
+          <button class="btn-time" data-action="advance-30">+1 月</button>
+        </div>
+        <div class="time-info" id="time-info">第 1 天</div>
+      </footer>
+    </div>
+
+    <!-- ===== 设置 ===== -->
+    <div class="view" data-view="settings">
+      <div class="panel settings-panel">
+        <h2 class="panel-title">设置</h2>
+        <div class="settings-about">
+          <h3>当前版本</h3>
+          <div class="version-display">v<span id="settings-version">1.0.0</span></div>
+        </div>
+        <div class="settings-updates">
+          <h3>更新公告</h3>
+          <div id="update-logs"></div>
+        </div>
+        <div class="settings-actions">
+          <button class="btn-secondary" data-action="settings-back">返回</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 音乐播放器弹窗（常驻底部播放条） ===== -->
+    <div class="mini-player" id="mini-player">
+      <div class="mini-info">
+        <div class="mini-cover">♫</div>
+        <div class="mini-text">
+          <div class="mini-title" id="mini-title">未播放</div>
+          <div class="mini-artist" id="mini-artist">—</div>
+        </div>
+      </div>
+      <div class="mini-controls">
+        <button class="mini-btn" data-action="mini-prev">⏮</button>
+        <button class="mini-btn play" data-action="mini-play">▶</button>
+        <button class="mini-btn" data-action="mini-next">⏭</button>
+      </div>
+      <div class="mini-progress" id="mini-progress">
+        <div class="mini-progress-bar" id="mini-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 脚本加载顺序：数据 -> 引擎 -> UI -->
+  <script src="js/data/cities.js"></script>
+  <script src="js/data/styles.js"></script>
+  <script src="js/data/bands.js"></script>
+  <script src="js/data/comments.js"></script>
+  <script src="js/data/platforms.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/version.js"></script>
+  <script src="js/core/engine.js"></script>
+  <script src="js/core/songs.js"></script>
+  <script src="js/core/tour.js"></script>
+  <script src="js/ui/ui.js"></script>
+  <script src="js/ui/player.js"></script>
+  <script src="js/ui/rating.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
