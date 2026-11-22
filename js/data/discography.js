@@ -669,23 +669,41 @@ window.BAND_DISCOGRAPHY = {
     { name: "等你吃饭", type: "EP", date: "2009-04-17", songs: [
       { name: "等你吃饭", duration: 260 }, { name: "悠长假期", duration: 270 } ] },
     { name: "Wonderful Day", type: "专辑", date: "2011-06-24", songs: [
-      { name: "利物浦", duration: 280 }, { name: "柳江", duration: 270 }, { name: "厦门之夏", duration: 280 } ] },
+      { name: "天上人间(Intro)", duration: 60 }, { name: "行人要走斑马线", duration: 240 },,
+      { name: "利物浦", duration: 250 }, { name: "Our Monday Is Free", duration: 230 },,
+      { name: "柳江", duration: 260 }, { name: "厦门之夏", duration: 245 }, { name: "岛屿", duration: 250 },,
+      { name: "船", duration: 260 }, { name: "残酷青春", duration: 240 }, { name: "Marry", duration: 230 },,
+      { name: "80", duration: 220 }, { name: "Wonderful Day", duration: 250 } ] },
     { name: "于是我不再唱歌", type: "专辑", date: "2013-12-28", rating: 8.0, songs: [
       { name: "于是我不再唱歌", duration: 295 }, { name: "Bye Bye", duration: 220 },
       { name: "小龙人", duration: 200 }, { name: "天后舞厅", duration: 206 },
       { name: "北京夏夜", duration: 228 } ] },
     { name: "B-SIDE", type: "专辑", date: "2015-05-15", songs: [
-      { name: "生命是场马拉松", duration: 280 }, { name: "悲伤珊瑚群", duration: 270 } ] },
+      { name: "生命是场马拉松", duration: 280 }, { name: "Sleep", duration: 260 }, { name: "时间的手", duration: 250 },,
+      { name: "悲伤珊瑚群", duration: 270 }, { name: "问号", duration: 245 }, { name: "轮廓", duration: 260 },,
+      { name: "红色的雅儒路体校", duration: 240 }, { name: "控", duration: 250 }, { name: "驾", duration: 255 } ] },
     { name: "10 Day's", type: "专辑", date: "2015-12-21", songs: [
-      { name: "逝去的歌", duration: 290 }, { name: "父亲", duration: 280 }, { name: "新开世界", duration: 270 } ] },
+      { name: "此时此刻", duration: 260 }, { name: "Africa", duration: 240 }, { name: "逝去的歌", duration: 290 },,
+      { name: "父亲", duration: 280 }, { name: "新开世界", duration: 270 }, { name: "我们的爱在地震带", duration: 250 },,
+      { name: "星辰", duration: 255 }, { name: "奔跑在孤傲的路上", duration: 260 },,
+      { name: "Goodnight girl", duration: 245 }, { name: "隐秘的国", duration: 265 } ] },
     { name: "永远都会在", type: "专辑", date: "2017-07-06", rating: 8.1, songs: [
-      { name: "永远都会在", duration: 280 }, { name: "你", duration: 270 }, { name: "西雅图阳光", duration: 280 } ] },
+      { name: "永远都会在", duration: 280 }, { name: "你", duration: 270 }, { name: "西雅图阳光", duration: 280 },,
+      { name: "封夜", duration: 260 }, { name: "乘风而来", duration: 270 }, { name: "滚", duration: 255 },,
+      { name: "勇", duration: 260 }, { name: "此刻是唯一的意义", duration: 290 } ] },
     { name: "感+", type: "专辑", date: "2018-06-21", songs: [
-      { name: "夏之恋", duration: 280 }, { name: "圣地亚哥", duration: 270 }, { name: "我的蒙娜丽莎", duration: 280 } ] },
+      { name: "夏之恋", duration: 280 }, { name: "圣地亚哥", duration: 270 }, { name: "爱情的模样", duration: 275 },,
+      { name: "我的蒙娜丽莎", duration: 280 }, { name: "情书", duration: 260 }, { name: "My Shadow", duration: 250 },,
+      { name: "终结日", duration: 270 }, { name: "没有说明书的机器", duration: 260 }, { name: "爱的备份", duration: 270 },,
+      { name: "周末玩具", duration: 265 }, { name: "亲爱的", duration: 280 } ] },
     { name: "似近似远", type: "专辑", date: "2020-09-16", songs: [
-      { name: "红色的河", duration: 290 } ] },
+      { name: "你没有名字", duration: 260 }, { name: "红色的河", duration: 290 }, { name: "温柔的代价", duration: 280 },,
+      { name: "风定忧深", duration: 270 }, { name: "生命的独特", duration: 265 }, { name: "夜明灯", duration: 280 },,
+      { name: "红色的河(Feat.吴青峰)", duration: 290 } ] },
     { name: "似你似我", type: "专辑", date: "2020-11-30", songs: [
-      { name: "天涯路口", duration: 280 }, { name: "阿奶", duration: 270 } ] },
+      { name: "天涯路口", duration: 280 }, { name: "她在哪，家在哪", duration: 270 }, { name: "老朋友", duration: 265 },,
+      { name: "最好的时候", duration: 280 }, { name: "夏夜的绚烂", duration: 275 }, { name: "阿奶", duration: 270 },,
+      { name: "下一站", duration: 280 } ] },
   ],
   "落日飞车": [
     { name: "Bossa Nova", type: "专辑", date: "2011-09-22", songs: [
