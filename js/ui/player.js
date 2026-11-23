@@ -140,6 +140,10 @@ function buildCharts() {
 
 function renderPlayerView() {
   const el = document.querySelector('[data-game-view="player"]');
+  const prevScrollEl = el.querySelector('.player-scroll');
+  const prevScrollTop = prevScrollEl ? prevScrollEl.scrollTop : 0;
+  const prevListEl = el.querySelector('.player-track-list');
+  const prevListTop = prevListEl ? prevListEl.scrollTop : 0;
   const { singles, albums } = buildCharts();
   const tab = window._playerChartTab || "单曲热度";
   const isAlbums = (tab === "专辑热度" || tab === "专辑销量");
@@ -230,6 +234,10 @@ function renderPlayerView() {
       </div>
     </div>
   `;
+  const newScroll = el.querySelector('.player-scroll');
+  if (newScroll) newScroll.scrollTop = prevScrollTop;
+  const newList = el.querySelector('.player-track-list');
+  if (newList) newList.scrollTop = prevListTop;
 }
 
 

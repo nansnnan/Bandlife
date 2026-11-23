@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.15",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复音乐播放器左侧列表点击后回到最上方的问题，现保持原滚动位置。",
+    ],
+  },
+  {
     version: "1.2.14",
     date: "2026-11-24",
     size: "小更新",
