@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.7",
+    date: "2026-11-23",
+    size: "小更新",
+    items: [
+      "修复评分网站点击后榜单名次与评分自行变化的问题，评分现已稳定。",
+      "修复播放器评论区时间全部为 2000 年 1 月 1 日的问题，评论时间已按发行到当前的区间差异化分布。",
+    ],
+  },
+  {
     version: "1.2.6",
     date: "2026-11-23",
     size: "小更新",

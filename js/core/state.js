@@ -1,6 +1,6 @@
 // 核心状态管理 + 工具函数 + 常量
 
-const GAME_VERSION = "1.2.6";
+const GAME_VERSION = "1.2.7";
 const START_YEAR = 2000, START_MONTH = 1, START_DAY = 1;
 
 // 全局游戏状态
@@ -40,14 +40,22 @@ function daysInMonth(y, m) { return [31, isLeapYear(y) ? 29 : 28, 31, 30, 31, 30
 function dayToDate(dayIndex) {
   let y = START_YEAR, m = START_MONTH, d = START_DAY;
   let remain = dayIndex;
-  while (remain > 0) {
-    const dim = daysInMonth(y, m);
-    if (d + remain <= dim) { d += remain; remain = 0; }
-    else {
-      remain -= (dim - d + 1);
-      d = 1;
-      m++;
-      if (m > 12) { m = 1; y++; }
+  if (remain >= 0) {
+    while (remain > 0) {
+      const dim = daysInMonth(y, m);
+      if (d + remain <= dim) { d += remain; remain = 0; }
+      else {
+        remain -= (dim - d + 1);
+        d = 1;
+        m++;
+        if (m > 12) { m = 1; y++; }
+      }
+    }
+  } else {
+    while (remain < 0) {
+      d--;
+      if (d < 1) { m--; if (m < 1) { m = 12; y--; } d = daysInMonth(y, m); }
+      remain++;
     }
   }
   return { year: y, month: m, day: d };

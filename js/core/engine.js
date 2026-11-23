@@ -302,14 +302,21 @@ function commentRate(quality) {
 }
 
 // ===== 评分生成 =====
+function seededUnit(seed) {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return (h % 10000) / 10000;
+}
+
 // 为已发布作品生成各平台评分
 function generateRatings(release) {
   if (release.ratings && release.ratings.length) return release.ratings;
   const ratings = [];
   for (const pf of window.RATING_PLATFORMS) {
     const base = release.quality;
-    // 平台口味偏差 + 随机噪音
-    const bias = pf.type === "媒体乐评" ? randf(-4, 2) : randf(-3, 3);
+    // 平台口味偏差（基于 id + 平台名的确定性种子，保证同一作品评分稳定不变）
+    const u = seededUnit(String(release.id || release.name) + "|" + pf.name);
+    const bias = pf.type === "媒体乐评" ? (-4 + u * 6) : (-3 + u * 6);
     let score = clamp(base + bias, 0, 100);
     // 映射到平台分数制度
     const scaled = (score / 100) * pf.scale;
@@ -371,9 +378,9 @@ function generateComments(release, count) {
       .replace(/\{style\}/g, release.style || "")
       .replace(/\{album\}/g, release.name)
       .replace(/\{ep\}/g, release.name);
-    // 时间：偏向发布后的早期，形成自然的时间分布
-    const dayOffset = Math.floor(Math.pow(Game.rng(), 2) * spanDays);
-    const day = Math.max(0, Game.dayIndex - dayOffset);
+    // 时间：分布在「发布日 ~ 当前」之间（历史作品可早于 2000 年）
+    const dayOffset = Math.floor(Game.rng() * spanDays);
+    const day = Game.dayIndex - dayOffset;
     // 点赞：长尾分布（多数少赞、少数高赞）
     const likes = Math.round(Math.pow(Game.rng(), 3) * 8000);
     // 用户名尽量不重复
