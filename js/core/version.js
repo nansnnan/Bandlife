@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.22",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复评分网站评论日期全部集中在 2000年1月1日 的问题，现评论时间正确分布在作品发行日至今。",
+    ],
+  },
+  {
     version: "1.2.21",
     date: "2026-11-24",
     size: "小更新",

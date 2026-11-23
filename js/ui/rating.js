@@ -356,7 +356,7 @@ function generatePlatformComments(rel, platformName) {
       user: pick(window.COMMENT_USERS),
       text,
       likes: rand(0, 5000),
-      time: formatDateShort(Math.max(0, Game.dayIndex - rand(0, Math.max(1, Game.dayIndex - (rel.dayIndex || 0))))),
+      time: formatDateShort(Game.dayIndex - rand(0, Math.max(1, Game.dayIndex - (rel.dayIndex || 0)))),
     });
   }
   return list;
