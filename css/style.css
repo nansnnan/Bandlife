@@ -703,3 +703,8 @@ select { cursor: pointer; }
 .chart-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .chart-sub { font-size: 12px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .chart-val { font-size: 12px; color: var(--text-dim); flex-shrink: 0; }
+
+/* 专辑榜下拉展开的子曲目 */
+.chart-sub-item { margin-left: 24px; background: var(--bg-3); padding: 8px 12px; }
+.chart-sub-item .chart-rank { width: 20px; font-size: 12px; }
+.album-row .album-arrow { color: var(--text-faint); margin-left: 4px; }

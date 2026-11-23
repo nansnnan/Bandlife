@@ -8,6 +8,17 @@ const ICONS = {
   next: '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="display:block"><path d="M16 6h2v12h-2zM7 6l8 6-8 6z"/></svg>',
 };
 
+// 竞品作品稳定 id（旧存档无 id 时生成，保证各处一致）
+function rivalRelId(rel) {
+  if (!rel.id) rel.id = "rival_" + (rel.bandName || "") + "_" + (rel.album || rel.name) + "_" + rel.name + "_" + (rel.dayIndex || 0);
+  return rel.id;
+}
+function hashUnit(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+  return (h % 1000) / 1000;
+}
+
 const Player = {
   queue: [],       // 播放队列（展平的歌曲对象）
   index: -1,
@@ -35,7 +46,7 @@ function collectAllTracks() {
   for (const r of Game.rivals) {
     for (const rel of r.releases) {
       tracks.push({
-        id: rel.id || rel.name, name: rel.name, artist: rel.bandName,
+        id: rivalRelId(rel), name: rel.name, artist: rel.bandName,
         album: rel.album || rel.name, style: rel.style, releaseType: rel.releaseType, plays: rel.plays,
         likes: rel.likes, comments: rel.comments, duration: rel.duration || 240,
         lyrics: "", source: rel, isRival: true, quality: rel.quality,
@@ -67,39 +78,51 @@ function groupTracksByAlbum(tracks) {
 function buildCharts() {
   const singles = [];
   for (const rel of Game.releases) {
-    const n = rel.songs.length || 1;
-    const perPlays = Math.round((rel.plays || 0) / n);
-    const perSales = Math.round((rel.sales || 0) / n);
-    for (const song of rel.songs) {
+    const totalPlays = rel.plays || 0;
+    const totalSales = rel.sales || 0;
+    const weights = rel.songs.map(s => Math.max(1, s.quality || 50));
+    const totalW = weights.reduce((a, b) => a + b, 0) || 1;
+    rel.songs.forEach((song, idx) => {
+      const share = weights[idx] / totalW;
+      const jitter = 0.85 + 0.3 * hashUnit((song.id || song.name) + "|p");
       singles.push({
         id: song.id || (rel.id + "_" + song.name), playId: rel.id, name: song.name,
         bandName: rel.bandName || Game.band.name, album: rel.name,
-        plays: perPlays, sales: perSales, dayIndex: rel.dayIndex, quality: song.quality, isRival: false,
+        plays: Math.round(totalPlays * share * jitter),
+        sales: Math.round(totalSales * share),
+        dayIndex: rel.dayIndex, quality: song.quality, isRival: false,
       });
-    }
+    });
   }
   for (const r of Game.rivals) {
     for (const rel of r.releases) {
+      const jitter = 0.8 + 0.4 * hashUnit(rivalRelId(rel) + "|p");
       singles.push({
-        id: rel.id, playId: rel.id, name: rel.name,
+        id: rivalRelId(rel), playId: rivalRelId(rel), name: rel.name,
         bandName: rel.bandName || r.name, album: rel.album || rel.name,
-        plays: rel.plays || 0, sales: rel.sales || 0, dayIndex: rel.dayIndex, quality: rel.quality, isRival: true,
+        plays: Math.round((rel.plays || 0) * jitter), sales: rel.sales || 0,
+        dayIndex: rel.dayIndex, quality: rel.quality, isRival: true,
       });
     }
   }
   const albums = [];
   for (const rel of Game.releases) {
-    albums.push({ bandName: rel.bandName || Game.band.name, album: rel.name, plays: rel.plays || 0, sales: rel.sales || 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: false });
+    albums.push({
+      key: "own||" + rel.id, bandName: rel.bandName || Game.band.name, album: rel.name,
+      plays: rel.plays || 0, sales: rel.sales || 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: false,
+      tracks: rel.songs.map(s => ({ name: s.name, playId: rel.id })),
+    });
   }
   const map = {};
   for (const r of Game.rivals) {
     for (const rel of r.releases) {
-      const key = r.name + "||" + (rel.album || rel.name);
-      if (!map[key]) map[key] = { bandName: r.name, album: rel.album || rel.name, plays: 0, sales: 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: true };
+      const key = "riv||" + r.name + "||" + (rel.album || rel.name);
+      if (!map[key]) map[key] = { key, bandName: r.name, album: rel.album || rel.name, plays: 0, sales: 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: true, tracks: [] };
       const a = map[key];
       a.plays += rel.plays || 0;
       a.sales += rel.sales || 0;
       a.dayIndex = Math.min(a.dayIndex, rel.dayIndex);
+      a.tracks.push({ name: rel.name, playId: rivalRelId(rel) });
     }
   }
   for (const k in map) albums.push(map[k]);
@@ -117,20 +140,41 @@ function renderPlayerView() {
   else if (tab === "新歌热度") list = singles.filter(s => s.dayIndex >= Game.dayIndex - 30).sort((a, b) => b.plays - a.plays);
   else list = albums.slice().sort((a, b) => b.sales - a.sales);
 
-  const rows = list.slice(0, 100).map((it, i) => {
-    const title = isAlbums ? it.album : it.name;
-    const sub = isAlbums ? `${it.bandName} · ${it.releaseType}` : `${it.bandName} · ${it.album}`;
-    const val = tab === "专辑销量" ? formatNumber(it.sales) + " 张" : formatNumber(it.plays) + " 播放";
-    const clickable = !isAlbums;
-    return `<div class="chart-item ${clickable ? "clickable" : ""}" ${clickable ? `data-action="play-track" data-id="${it.playId}"` : ""}>
-      <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
-      <div class="chart-main">
-        <div class="chart-name">${escapeHtml(title)}</div>
-        <div class="chart-sub">${escapeHtml(sub)}</div>
-      </div>
-      <div class="chart-val">${val}</div>
-    </div>`;
-  }).join("");
+  if (!window._playerExpandedAlbums) window._playerExpandedAlbums = new Set();
+  const expanded = window._playerExpandedAlbums;
+
+  let rows;
+  if (isAlbums) {
+    rows = list.slice(0, 100).map((it, i) => {
+      const val = tab === "专辑销量" ? formatNumber(it.sales) + " 张" : formatNumber(it.plays) + " 播放";
+      const isOpen = expanded.has(it.key);
+      const subRows = isOpen ? (it.tracks || []).map((t, ti) => `<div class="chart-item clickable chart-sub-item" data-action="play-track" data-id="${escapeHtml(t.playId)}">
+        <span class="chart-rank">${ti + 1}</span>
+        <div class="chart-main"><div class="chart-name">${escapeHtml(t.name)}</div></div>
+        <div class="chart-val">▶</div>
+      </div>`).join("") : "";
+      return `<div class="chart-item clickable album-row" data-action="player-toggle-album" data-key="${escapeHtml(it.key)}">
+        <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
+        <div class="chart-main">
+          <div class="chart-name">${escapeHtml(it.album)}</div>
+          <div class="chart-sub">${escapeHtml(it.bandName)} · ${it.releaseType} · ${it.tracks ? it.tracks.length : 0} 首</div>
+        </div>
+        <div class="chart-val">${val} <span class="album-arrow">${isOpen ? "▾" : "▸"}</span></div>
+      </div>${subRows}`;
+    }).join("");
+  } else {
+    rows = list.slice(0, 100).map((it, i) => {
+      const val = formatNumber(it.plays) + " 播放";
+      return `<div class="chart-item clickable" data-action="play-track" data-id="${it.playId}">
+        <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
+        <div class="chart-main">
+          <div class="chart-name">${escapeHtml(it.name)}</div>
+          <div class="chart-sub">${escapeHtml(it.bandName)} · ${escapeHtml(it.album)}</div>
+        </div>
+        <div class="chart-val">${val}</div>
+      </div>`;
+    }).join("");
+  }
 
   el.innerHTML = `
     <div class="section-title">🎧 音乐播放器</div>
@@ -149,6 +193,9 @@ function renderPlayerView() {
     </div>
   `;
 }
+
+
+
 
 
 // 渲染播放器专辑分组（含展开的歌曲列表）

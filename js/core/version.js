@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.3",
+    date: "2026-11-23",
+    size: "小更新",
+    items: [
+      "音乐播放器单曲榜单点击即可播放。",
+      "专辑榜单点击可展开专辑曲目，点击曲目直接播放。",
+      "修正单曲播放量大量重复的问题，按歌曲质量与稳定扰动分配，更贴近实际。",
+    ],
+  },
+  {
     version: "1.2.2",
     date: "2026-11-23",
     size: "小更新",

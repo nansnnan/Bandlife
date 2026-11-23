@@ -93,6 +93,13 @@ function bindEvents() {
       // 播放器
       case "player-chart-tab":
         window._playerChartTab = target.dataset.tab; renderPlayerView(); break;
+      case "player-toggle-album": {
+        const key = target.dataset.key;
+        if (!window._playerExpandedAlbums) window._playerExpandedAlbums = new Set();
+        if (window._playerExpandedAlbums.has(key)) window._playerExpandedAlbums.delete(key);
+        else window._playerExpandedAlbums.add(key);
+        renderPlayerView(); break;
+      }
       case "play-track":
         playTrack(target.dataset.id); break;
       case "toggle-player-album":
