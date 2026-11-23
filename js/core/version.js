@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.16",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "调整音乐播放器页面布局，背景音乐等顶部内容改为随页面一起滚动，不再固定占据上半部分、不单独浮在上层。",
+    ],
+  },
+  {
     version: "1.2.15",
     date: "2026-11-24",
     size: "小更新",
