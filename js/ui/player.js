@@ -203,26 +203,30 @@ function renderPlayerView() {
   }
 
   el.innerHTML = `
-    <div class="section-title">🎧 音乐播放器</div>
-    <div class="player-bgm clickable" data-action="select-bgm">
-      <span class="player-bgm-icon">🎵</span>
-      <div class="player-bgm-main">
-        <div class="player-bgm-name">背景音乐 · At the night</div>
-        <div class="player-bgm-note">这是背景音乐，不属于下方排行榜（点击查看播放）</div>
-      </div>
-    </div>
-    ${renderMyRankDropdown(myRankItems)}
-    <div class="chart-tabs">
-      ${["单曲热度", "专辑热度", "新歌热度", "专辑销量"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${t}榜</button>`).join("")}
-    </div>
-    <div class="player-layout">
-      <div class="player-left">
-        <div class="player-track-list chart-list">
-          ${list.length ? rows : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无数据</div>`}
+    <div class="player-fixed-head">
+      <div class="section-title">🎧 音乐播放器</div>
+      <div class="player-bgm clickable" data-action="select-bgm">
+        <span class="player-bgm-icon">🎵</span>
+        <div class="player-bgm-main">
+          <div class="player-bgm-name">背景音乐 · At the night</div>
+          <div class="player-bgm-note">这是背景音乐，不属于下方排行榜（点击查看播放）</div>
         </div>
       </div>
-      <div class="player-right" id="player-detail">
-        ${Player.bgmMode ? renderBgmDetail() : (Player.current ? renderPlayerDetail(Player.current) : `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击榜单中的歌曲开始播放</p></div>`)}
+      <div class="chart-tabs">
+        ${["单曲热度", "专辑热度", "新歌热度", "专辑销量"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${t}榜</button>`).join("")}
+      </div>
+    </div>
+    <div class="player-scroll">
+      ${renderMyRankDropdown(myRankItems)}
+      <div class="player-layout">
+        <div class="player-left">
+          <div class="player-track-list chart-list">
+            ${list.length ? rows : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无数据</div>`}
+          </div>
+        </div>
+        <div class="player-right" id="player-detail">
+          ${Player.bgmMode ? renderBgmDetail() : (Player.current ? renderPlayerDetail(Player.current) : `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击榜单中的歌曲开始播放</p></div>`)}
+        </div>
       </div>
     </div>
   `;

@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.13",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "播放器页面背景音乐卡片改为固定在页面顶部，锁死不动、不随榜单滚动，也不再遮挡下方榜单。",
+    ],
+  },
+  {
     version: "1.2.12",
     date: "2026-11-24",
     size: "小更新",

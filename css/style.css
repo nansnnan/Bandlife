@@ -774,3 +774,12 @@ select { cursor: pointer; }
 .player-bgm-note { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
 .player-bgm.clickable { cursor: pointer; }
 .player-bgm.clickable:hover { background: var(--card); }
+
+/* 播放器：背景音乐锁死顶部固定头，内容区独立滚动，不随滚动遮挡榜单 */
+.game-view[data-game-view="player"].active {
+  display: flex; flex-direction: column;
+  height: 100%; min-height: 0;
+}
+.player-fixed-head { flex-shrink: 0; }
+.player-bgm { position: static; }
+.player-scroll { flex: 1; min-height: 0; overflow-y: auto; }
