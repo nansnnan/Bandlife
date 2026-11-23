@@ -760,3 +760,15 @@ select { cursor: pointer; }
 }
 .switch input:checked + .switch-slider { background: #4aa3ff; }
 .switch input:checked + .switch-slider::before { transform: translateX(22px); }
+
+/* 播放器页面顶部背景音乐卡片（置顶） */
+.player-bgm {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; margin-bottom: 12px;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
+  position: sticky; top: 0; z-index: 5;
+}
+.player-bgm-icon { font-size: 20px; flex-shrink: 0; }
+.player-bgm-main { flex: 1; min-width: 0; }
+.player-bgm-name { font-weight: 600; font-size: 14px; }
+.player-bgm-note { font-size: 12px; color: var(--text-dim); margin-top: 2px; }

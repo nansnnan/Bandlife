@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.8",
+    date: "2026-11-23",
+    size: "小更新",
+    items: [
+      "音乐播放器页面顶部始终显示背景音乐「At the night」，并注明它不属于排行榜。",
+    ],
+  },
+  {
     version: "1.2.7",
     date: "2026-11-23",
     size: "小更新",

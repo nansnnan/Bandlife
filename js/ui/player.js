@@ -203,6 +203,13 @@ function renderPlayerView() {
 
   el.innerHTML = `
     <div class="section-title">🎧 音乐播放器</div>
+    <div class="player-bgm">
+      <span class="player-bgm-icon">🎵</span>
+      <div class="player-bgm-main">
+        <div class="player-bgm-name">背景音乐 · At the night</div>
+        <div class="player-bgm-note">这是背景音乐，不属于下方排行榜</div>
+      </div>
+    </div>
     ${renderMyRankDropdown(myRankItems)}
     <div class="chart-tabs">
       ${["单曲热度", "专辑热度", "新歌热度", "专辑销量"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${t}榜</button>`).join("")}
