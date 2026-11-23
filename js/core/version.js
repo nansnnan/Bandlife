@@ -29,6 +29,17 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.19",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "评论区新增大量评论文本，好评/差评/中性各扩充，共新增 130+ 条。",
+      "修复评分网站低分作品出现大量好评的问题，评论情感现严格跟随评分。",
+      "新增 150 字以上的中长评论内容。",
+      "新增 140 个贴近现实风格的评论用户名。",
+    ],
+  },
+  {
     version: "1.2.18",
     date: "2026-11-24",
     size: "小更新",

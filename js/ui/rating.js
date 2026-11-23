@@ -343,18 +343,10 @@ function generatePlatformComments(rel, platformName) {
   const rating = rel.ratings.find(x => x.platform === platformName);
   const ratio = rating ? rating.score / rating.scale : 0.5;
   const count = rand(6, 12);
-  // 评论情绪比例用平方关系，让正负面更贴合该平台评分
-  const praiseProb = ratio * ratio * 0.85;
-  const criticizeProb = (1 - ratio) * (1 - ratio) * 0.85;
   const list = [];
   for (let i = 0; i < count; i++) {
-    const r = Game.rng();
-    let pool;
-    if (r < praiseProb) pool = window.COMMENT_TEMPLATES.praise;
-    else if (r < praiseProb + criticizeProb) pool = window.COMMENT_TEMPLATES.criticize;
-    else if (r < 0.9) pool = window.COMMENT_TEMPLATES.neutral;
-    else pool = window.COMMENT_TEMPLATES.short;
-    let text = pick(pool)
+    const tpl = pickCommentTemplate(ratio);
+    const text = tpl
       .replace(/\{song\}/g, rel.name)
       .replace(/\{band\}/g, rel.bandName || Game.band?.name || "")
       .replace(/\{style\}/g, rel.style || "")

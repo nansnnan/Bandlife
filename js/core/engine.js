@@ -349,41 +349,50 @@ function calcAvgScore(ratings) {
 }
 
 // ===== 生成评论 =====
+function pickCommentTemplate(ratio) {
+  const T = window.COMMENT_TEMPLATES;
+  const r = Game.rng();
+  const isLong = Game.rng() < 0.15;
+  let emo;
+  if (ratio >= 0.66) emo = r < 0.6 ? "praise" : (r < 0.72 ? "criticize" : "neutral");
+  else if (ratio >= 0.5) emo = r < 0.35 ? "praise" : (r < 0.62 ? "criticize" : "neutral");
+  else if (ratio >= 0.34) emo = r < 0.08 ? "praise" : (r < 0.6 ? "criticize" : "neutral");
+  else emo = r < 0.62 ? "criticize" : "neutral";
+  let pools;
+  if (isLong) {
+    const lp = T["long" + emo.charAt(0).toUpperCase() + emo.slice(1)];
+    pools = lp && lp.length ? lp : T[emo];
+  } else if (Game.rng() < 0.12) {
+    pools = emo === "praise" ? T.shortPraise : emo === "criticize" ? T.shortCriticize : T.neutral;
+  } else {
+    pools = T[emo];
+  }
+  return pick(pools);
+}
+
 function generateComments(release, count) {
   if (release.commentList && release.commentList.length) return release.commentList;
   const list = [];
-  const ratio = release.quality / 100;
-  const praiseProb = ratio * ratio * 0.85;
-  const criticizeProb = (1 - ratio) * (1 - ratio) * 0.85;
+  const ratio = (release.quality || 50) / 100;
   const usedText = new Set();
   const userPool = shuffle(window.COMMENT_USERS);
   const spanDays = Math.max(1, Game.dayIndex - (release.dayIndex || 0));
   for (let i = 0; i < count; i++) {
-    const r = Game.rng();
-    let poolArr;
-    if (r < praiseProb) poolArr = window.COMMENT_TEMPLATES.praise;
-    else if (r < praiseProb + criticizeProb) poolArr = window.COMMENT_TEMPLATES.criticize;
-    else if (r < 0.9) poolArr = window.COMMENT_TEMPLATES.neutral;
-    else poolArr = window.COMMENT_TEMPLATES.short;
-    // 尽量选取未使用过的模板，避免同一作品评论重复
     let tpl = null;
     for (let t = 0; t < 12; t++) {
-      const cand = pick(poolArr);
+      const cand = pickCommentTemplate(ratio);
       if (!usedText.has(cand)) { tpl = cand; usedText.add(cand); break; }
     }
-    if (!tpl) tpl = pick(poolArr);
+    if (!tpl) tpl = pickCommentTemplate(ratio);
     const text = tpl
       .replace(/\{song\}/g, release.name)
       .replace(/\{band\}/g, release.bandName || Game.band?.name || "")
       .replace(/\{style\}/g, release.style || "")
       .replace(/\{album\}/g, release.name)
       .replace(/\{ep\}/g, release.name);
-    // 时间：分布在「发布日 ~ 当前」之间（历史作品可早于 2000 年）
     const dayOffset = Math.floor(Game.rng() * spanDays);
     const day = Game.dayIndex - dayOffset;
-    // 点赞：长尾分布（多数少赞、少数高赞）
     const likes = Math.round(Math.pow(Game.rng(), 3) * 8000);
-    // 用户名尽量不重复
     const user = userPool[i % userPool.length] + (i >= userPool.length ? (Math.floor(i / userPool.length) + 1) : "");
     list.push({ user, text, likes, time: formatDateShort(day) });
   }
