@@ -280,6 +280,7 @@ function renderCreateSong() {
   const el = document.querySelector('[data-game-view="create-song"]');
   const b = Game.band;
   const songs = Game.songs.filter(s => !s.released);
+  const INSTR = ["木吉他", "电吉他", "贝斯", "鼓", "键盘", "钢琴", "小提琴", "大提琴", "小号", "萨克斯", "合成器", "和声"];
   el.innerHTML = `
     <div class="section-title">创作歌曲</div>
     <div class="card">
@@ -313,10 +314,14 @@ function renderCreateSong() {
           </div>
         </div>
       </div>
+      <div class="form-group" id="song-players-wrap" style="display:none;">
+        <label>演奏者（按已选乐器填写姓名）</label>
+        <div id="song-players" style="display:flex;flex-direction:column;gap:8px;"></div>
+      </div>
       <div class="form-group">
-        <label>参与成员</label>
-        <div id="song-members" style="display:flex;flex-wrap:wrap;gap:8px;">
-          ${b.members.map((m, i) => `<label style="display:flex;align-items:center;gap:4px;font-size:13px;"><input type="checkbox" class="song-member" value="${i}" checked> ${m.role}·${m.name || "成员" + (i+1)}</label>`).join("")}
+        <label>歌曲编制（选择参与的乐器）</label>
+        <div id="song-instrument-box" style="display:flex;flex-wrap:wrap;gap:12px;">
+          ${INSTR.map(ins => `<label style="display:flex;align-items:center;gap:4px;font-size:13px;cursor:pointer;"><input type="checkbox" class="song-instrument" value="${ins}"> ${ins}</label>`).join("")}
         </div>
       </div>
       <div class="form-group">
@@ -350,12 +355,34 @@ function renderCreateSong() {
     styleSel.appendChild(opt);
   });
   styleSel.value = b.style;
+  // 歌曲编制：勾选乐器后在上方生成对应演奏者输入框
+  document.getElementById("song-instrument-box").addEventListener("change", updateSongPlayers);
+}
+
+function updateSongPlayers() {
+  const selected = [...document.querySelectorAll(".song-instrument:checked")].map(c => c.value);
+  const wrap = document.getElementById("song-players-wrap");
+  const box = document.getElementById("song-players");
+  if (!wrap || !box) return;
+  if (!selected.length) { wrap.style.display = "none"; box.innerHTML = ""; return; }
+  wrap.style.display = "";
+  const prev = {};
+  box.querySelectorAll(".song-player-input").forEach(i => { prev[i.dataset.ins] = i.value; });
+  box.innerHTML = selected.map(ins => `
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="width:72px;color:var(--text-dim);font-size:13px;">${ins}</span>
+      <input type="text" class="song-player-input" data-ins="${ins}" value="${escapeHtml(prev[ins] || "")}" placeholder="演奏者姓名" style="flex:1;">
+    </div>`).join("");
 }
 
 function submitSong() {
   const name = document.getElementById("song-name").value.trim();
   if (!name) { alert("请输入歌曲名称"); return; }
-  const members = [...document.querySelectorAll(".song-member:checked")].map(cb => Game.band.members[parseInt(cb.value)].id);
+  const instrumentation = [...document.querySelectorAll(".song-instrument:checked")].map(cb => {
+    const ins = cb.value;
+    const inp = document.querySelector(`#song-players .song-player-input[data-ins="${ins}"]`);
+    return { instrument: ins, player: inp ? inp.value.trim() : "" };
+  });
   const style = document.getElementById("song-style").value;
   const styleObj = window.MUSIC_STYLES.find(s => s.name === style);
   const song = createSong({
@@ -367,7 +394,7 @@ function submitSong() {
     arranger: document.getElementById("song-arranger").value,
     duration: (parseInt(document.getElementById("song-duration-min").value) || 0) * 60 + (parseInt(document.getElementById("song-duration-sec").value) || 0) || 240,
     lyrics: document.getElementById("song-lyrics").value,
-    members,
+    instrumentation,
   });
   advanceTime(30);  // 创作耗时（约 1 个月，符合真实乐队单曲创作周期）
   renderCreateSong();
@@ -378,6 +405,8 @@ function submitSong() {
 function renderRelease() {
   const el = document.querySelector('[data-game-view="release"]');
   const songs = Game.songs.filter(s => !s.released);
+  if (!window._releaseQueue) window._releaseQueue = [];
+  window._releaseQueue = window._releaseQueue.filter(id => songs.some(s => s.id === id));
   el.innerHTML = `
     <div class="section-title">发布作品</div>
     <div class="card">
@@ -395,14 +424,14 @@ function renderRelease() {
         <input type="text" id="release-title" placeholder="作品名称（默认用第一首歌名）">
       </div>
       <div class="form-group">
-        <label>选择歌曲（勾选）</label>
-        <div id="release-songs">
-          ${songs.length ? songs.map(s => `
-            <label style="display:flex;align-items:center;gap:8px;padding:8px;background:var(--bg-2);border-radius:8px;margin-bottom:6px;">
-              <input type="checkbox" class="release-song" value="${s.id}">
-              <span>${s.name}</span><span class="badge badge-purple">${s.style}</span>
-            </label>`).join("") : `<div style="color:var(--text-faint);padding:12px;">暂无未发布歌曲，请先创作</div>`}
+        <label>选择歌曲（下拉选择后添加到列表，可自由调整顺序）</label>
+        <div style="display:flex;gap:8px;">
+          <select id="release-song-select" style="flex:1;">
+            ${songs.length ? songs.map(s => `<option value="${s.id}">${escapeHtml(s.name)}</option>`).join("") : `<option value="">（暂无未发布歌曲）</option>`}
+          </select>
+          <button class="btn-time" data-action="release-add">添加</button>
         </div>
+        <div id="release-queue-list" style="margin-top:10px;"></div>
       </div>
       <div class="form-group">
         <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="release-promotion" style="width:auto;"> 投入推广（¥30,000，+5% 质量）</label>
@@ -420,18 +449,69 @@ function renderRelease() {
         </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:20px;">暂无已发布作品</div>`}
     </div>
   `;
+  renderReleaseQueue();
+}
+
+function renderReleaseQueue() {
+  const box = document.getElementById("release-queue-list");
+  if (!box) return;
+  const q = window._releaseQueue || [];
+  if (!q.length) {
+    box.innerHTML = `<div style="color:var(--text-faint);text-align:center;padding:12px;">尚未添加歌曲</div>`;
+    return;
+  }
+  box.innerHTML = q.map((id, i) => {
+    const s = Game.songs.find(x => x.id === id);
+    return `
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px;background:var(--bg-2);border-radius:8px;margin-bottom:6px;">
+        <span>${i + 1}. ${escapeHtml(s ? s.name : "(已发布)")}${s ? ` <span class="badge badge-purple">${escapeHtml(s.style)}</span>` : ""}</span>
+        <span style="display:flex;gap:4px;">
+          <button class="mini-btn" data-action="release-up" data-index="${i}" ${i === 0 ? "disabled" : ""}>↑</button>
+          <button class="mini-btn" data-action="release-down" data-index="${i}" ${i === q.length - 1 ? "disabled" : ""}>↓</button>
+          <button class="mini-btn" data-action="release-remove" data-index="${i}">✕</button>
+        </span>
+      </div>`;
+  }).join("");
+}
+
+
+function handleReleaseAdd() {
+  const sel = document.getElementById("release-song-select");
+  if (!sel) return;
+  const id = sel.value;
+  if (!id) return;
+  if (!window._releaseQueue) window._releaseQueue = [];
+  if (!window._releaseQueue.includes(id)) window._releaseQueue.push(id);
+  renderReleaseQueue();
+}
+
+function handleReleaseRemove(index) {
+  if (!window._releaseQueue) return;
+  window._releaseQueue.splice(index, 1);
+  renderReleaseQueue();
+}
+
+function handleReleaseMove(index, dir) {
+  const q = window._releaseQueue || [];
+  const ni = index + dir;
+  if (ni < 0 || ni >= q.length) return;
+  [q[index], q[ni]] = [q[ni], q[index]];
+  renderReleaseQueue();
 }
 
 function submitRelease() {
   const type = document.getElementById("release-type").value;
   const title = document.getElementById("release-title").value.trim();
-  const ids = [...document.querySelectorAll(".release-song:checked")].map(cb => cb.value);
+  const ids = (window._releaseQueue || []).slice();
   const promotion = document.getElementById("release-promotion").checked;
+  if (!ids.length) { alert("请先添加要发布的歌曲"); return; }
   const res = releaseWork(type, ids, { title, promotion });
   if (!res.ok) { alert(res.msg); return; }
+  window._releaseQueue = [];
   renderRelease();
   renderTopbar();
 }
+
 
 // ===== 训练视图 =====
 function renderTrain() {

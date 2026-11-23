@@ -11,6 +11,7 @@ function createSong(data) {
     composer: data.composer || Game.band.name,
     arranger: data.arranger || Game.band.name,
     members: data.members || Game.band.members.map(m => m.id),
+    instrumentation: data.instrumentation || [],
     duration: data.duration || 240,   // 秒
     lyrics: data.lyrics || "",
     quality: 0,
@@ -51,7 +52,7 @@ function calcSongQuality(song) {
 // ===== 发布作品 =====
 // type: '单曲' | 'EP' | '专辑'
 function releaseWork(type, songIds, options = {}) {
-  const songs = Game.songs.filter(s => songIds.includes(s.id) && !s.released);
+  const songs = songIds.map(id => Game.songs.find(s => s.id === id)).filter(s => s && !s.released);
   if (!songs.length) return { ok: false, msg: "没有可发布的歌曲" };
 
   // 校验数量

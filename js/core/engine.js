@@ -201,31 +201,41 @@ function tickMonthly() {
   }
 }
 
-// ===== 竞争对手发布（真实作品） =====
+// ===== 竞争对手发布（按专辑整张一次性发布） =====
 function rivalRelease(rival) {
   const catalog = rival.catalog;
   if (!catalog || rival.releaseIndex >= catalog.length) return;
-  const track = catalog[rival.releaseIndex];
-  const quality = track.rating
-    ? clamp(Math.round(track.rating * 10), 10, 98)
-    : clamp(rival.currentPopularity * 7 + randf(-15, 15), 10, 98);
-  const song = {
-    name: track.name,
-    bandName: rival.name,
-    style: rival.style,
-    quality,
-    duration: track.duration,
-    plays: 0,
-    likes: 0,
-    comments: 0,
-    dayIndex: Game.dayIndex,
-    releaseType: track.type === "EP" ? "EP" : track.type === "专辑" ? "专辑" : "单曲",
-    isRival: true,
-    album: track.album,
-  };
-  rival.releases.push(song);
-  rival.releaseIndex++;
-  addEvent(`${rival.name} 发布${song.releaseType}《${song.name}》（收录于《${track.album}》）。`);
+  const first = catalog[rival.releaseIndex];
+  const albumName = first.album || first.name;
+  const now = Game.dayIndex;
+  let count = 0, releaseType = "";
+  // 同属一张专辑且发行日期已到的歌曲，一次性全部上架
+  while (rival.releaseIndex < catalog.length) {
+    const track = catalog[rival.releaseIndex];
+    if (track.album !== first.album) break;
+    if (dateStrToDay(track.date) > now) break;
+    const quality = track.rating
+      ? clamp(Math.round(track.rating * 10), 10, 98)
+      : clamp(rival.currentPopularity * 7 + randf(-15, 15), 10, 98);
+    releaseType = track.type === "EP" ? "EP" : track.type === "专辑" ? "专辑" : "单曲";
+    rival.releases.push({
+      name: track.name,
+      bandName: rival.name,
+      style: rival.style,
+      quality,
+      duration: track.duration,
+      plays: 0,
+      likes: 0,
+      comments: 0,
+      dayIndex: now,
+      releaseType,
+      isRival: true,
+      album: track.album,
+    });
+    rival.releaseIndex++;
+    count++;
+  }
+  if (count > 0) addEvent(`${rival.name} 发布${releaseType}《${albumName}》（共 ${count} 首）。`);
 }
 
 // ===== 播放量增长模型 =====

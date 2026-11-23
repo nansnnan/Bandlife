@@ -67,6 +67,14 @@ function bindEvents() {
       // 发布
       case "submit-release":
         submitRelease(); break;
+      case "release-add":
+        handleReleaseAdd(); break;
+      case "release-remove":
+        handleReleaseRemove(parseInt(target.dataset.index)); break;
+      case "release-up":
+        handleReleaseMove(parseInt(target.dataset.index), -1); break;
+      case "release-down":
+        handleReleaseMove(parseInt(target.dataset.index), 1); break;
       case "open-release":
         openRelease(target.dataset.id); break;
 
