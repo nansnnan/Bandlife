@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.26",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "调整训练档位概率，成功方向合计约 33%、失败方向约 17%（原先各 25%），平常仍 50%，训练整体更容易获得提升。",
+    ],
+  },
+  {
     version: "1.2.25",
     date: "2026-11-24",
     size: "小更新",
