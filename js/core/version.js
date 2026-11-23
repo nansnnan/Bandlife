@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.23",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "训练改为随机档位：大成功+10%/成功+5%/小成功+2%/平常不变/小失败-2%/失败-5%/大失败-10%，概率呈正态分布（平常50%，大成功与大失败各2%），以 30 天为基准缩放效果。",
+    ],
+  },
+  {
     version: "1.2.22",
     date: "2026-11-24",
     size: "小更新",

@@ -135,6 +135,18 @@ function releaseCost(type, songCount, options) {
 }
 
 // ===== 训练（针对单个成员） =====
+// 训练档位（正态分布：平常50%，大成功/大失败各2%，其余成功7%、小成功16%、小失败16%、失败7%）
+function rollTraining() {
+  const r = Math.random() * 100;
+  if (r < 2) return { delta: 10, label: "大成功" };
+  if (r < 9) return { delta: 5, label: "成功" };
+  if (r < 25) return { delta: 2, label: "小成功" };
+  if (r < 75) return { delta: 0, label: "平常" };
+  if (r < 91) return { delta: -2, label: "小失败" };
+  if (r < 98) return { delta: -5, label: "失败" };
+  return { delta: -10, label: "大失败" };
+}
+
 function trainMember(memberId, days) {
   const cost = days * 200;  // 每天训练成本
   if (Game.mode === "real" && Game.finance.balance < cost) {
@@ -146,14 +158,17 @@ function trainMember(memberId, days) {
   }
   const member = Game.band.members.find(m => m.id === memberId);
   if (!member) return { ok: false, msg: "成员不存在" };
-  const gain = days * 0.15 * randf(0.8, 1.2);
-  member.skill = clamp(member.skill + gain, 20, 99);
+  const roll = rollTraining();
+  const mult = days / 30;  // 以 30 天为基准缩放档位效果
+  const delta = roll.delta * mult;
+  member.skill = clamp(member.skill + delta, 20, 99);
   member.trained = (member.trained || 0) + days;
-  refreshBandSkill();  // 成员能力提升后刷新乐队整体能力
+  refreshBandSkill();  // 成员能力变化后刷新乐队整体能力
   advanceTime(days);
-  addEvent(`成员 ${member.name}（${member.role}）进行了 ${days} 天的训练。`);
+  const sign = delta > 0 ? "+" : "";
+  addEvent(`成员 ${member.name}（${member.role}）训练 ${days} 天：${roll.label}，能力 ${sign}${delta.toFixed(1)}。`);
   saveGame();
-  return { ok: true, cost, member };
+  return { ok: true, cost, member, label: roll.label, delta };
 }
 
 function skillName(key) {
