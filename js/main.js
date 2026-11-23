@@ -103,6 +103,26 @@ function bindEvents() {
         handleCreateAction(action);
         break;
 
+      // 存档导入导出
+      case "export-save": {
+        if (!Game || !Game.band) { alert("当前没有可导出的存档"); break; }
+        const json = exportSaveData();
+        if (!json) { alert("导出失败"); break; }
+        const blob = new Blob([json], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "bandlife-" + (Game.band.name || "save") + "-" + new Date().toISOString().slice(0, 10) + ".json";
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        break;
+      }
+      case "import-save": {
+        const inp = document.getElementById("save-file-input");
+        if (inp) inp.click();
+        break;
+      }
+
       // 时间推进
       case "advance-1":
         advanceTime(1); renderTopbar(); refreshCurrentView(); break;
@@ -228,6 +248,22 @@ function refreshCurrentView() {
 function init() {
   initBgm();
   bindEvents();
+  const saveInput = document.getElementById("save-file-input");
+  if (saveInput) {
+    saveInput.addEventListener("change", (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const res = importSaveData(reader.result);
+        if (!res.ok) { alert(res.msg); return; }
+        alert("存档导入成功，页面将刷新并载入存档。");
+        location.reload();
+      };
+      reader.readAsText(file);
+      e.target.value = "";
+    });
+  }
   renderMenu();
   showView("menu");
 }

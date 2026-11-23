@@ -250,6 +250,15 @@ function renderDashboard() {
       </div>
     </div>
 
+    <div class="card" style="margin-top:24px;">
+      <div class="card-title">💾 存档管理</div>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:12px;">游戏不会自动保存存档到文件，进度仅存于本机浏览器缓存；清理缓存、更换设备或使用无痕模式会导致进度丢失，请定期导出备份。</p>
+      <div style="display:flex;gap:8px;">
+        <button class="btn-secondary" data-action="export-save">导出存档</button>
+        <button class="btn-secondary" data-action="import-save">导入存档</button>
+      </div>
+    </div>
+
     <div class="section-title" style="margin-top:24px;">已发布作品（${releases.length}）</div>
     <div id="dashboard-releases">
       ${releases.length ? releases.slice().reverse().map(r => `

@@ -1,6 +1,6 @@
 // 核心状态管理 + 工具函数 + 常量
 
-const GAME_VERSION = "1.2.24";
+const GAME_VERSION = "1.2.25";
 const START_YEAR = 2000, START_MONTH = 1, START_DAY = 1;
 
 // 全局游戏状态
@@ -115,4 +115,16 @@ function hasSave() {
 }
 function clearSave() {
   try { localStorage.removeItem("bandSim_save"); } catch (e) { /* 忽略 */ }
+}
+function exportSaveData() {
+  if (!Game || !Game.band) return null;
+  Game.version = GAME_VERSION;
+  try { return JSON.stringify(Game, null, 2); } catch (e) { return null; }
+}
+function importSaveData(text) {
+  let data;
+  try { data = JSON.parse(text); } catch (e) { return { ok: false, msg: "存档文件不是有效的 JSON" }; }
+  if (!data || !data.band || !data.band.members) return { ok: false, msg: "存档内容无效，缺少乐队数据" };
+  try { localStorage.setItem("bandSim_save", JSON.stringify(data)); } catch (e) { return { ok: false, msg: "写入本地存储失败" }; }
+  return { ok: true, data };
 }

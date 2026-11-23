@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.25",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增存档导入/导出功能（主菜单、设置、游戏内仪表盘均可操作）：导出为 JSON 文件，导入后读取存档并刷新载入。",
+      "增加提示：游戏不会自动保存存档到文件，进度仅存于本机浏览器缓存，需定期手动导出备份。",
+    ],
+  },
+  {
     version: "1.2.24",
     date: "2026-11-24",
     size: "小更新",
