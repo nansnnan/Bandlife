@@ -155,6 +155,21 @@ function bindEvents() {
       }
       case "play-track":
         playTrack(target.dataset.id); break;
+      case "seek": {
+        const rect = target.getBoundingClientRect();
+        const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        if (Player.bgmMode) {
+          const a = document.getElementById("bgm");
+          if (a && a.duration) a.currentTime = ratio * a.duration;
+        } else if (Player.current) {
+          Player.progress = ratio;
+          const bar = document.querySelector('[data-game-view="player"] .player-progress-bar');
+          const cur = document.querySelector('[data-game-view="player"] #player-cur-time');
+          if (bar) bar.style.width = (ratio * 100) + "%";
+          if (cur) cur.textContent = fmtTime(ratio * Player.current.duration);
+        }
+        break;
+      }
       case "select-bgm":
         Player.bgmMode = true; renderPlayerView(); break;
       case "bgm-toggle": {

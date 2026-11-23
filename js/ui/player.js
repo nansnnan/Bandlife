@@ -272,8 +272,11 @@ function togglePlayerAlbum(index) {
 // 渲染播放详情
 function renderPlayerDetail(track) {
   const source = track.source;
+  const plays = source.plays ?? track.plays;
+  const likes = source.likes ?? track.likes;
+  const totalComments = source.comments ?? track.comments;
   // 生成评论列表（基于真实评论总数，评论数为 0 时不生成）
-  const commentCount = Math.min(20, Math.round(source.comments / 50));
+  const commentCount = Math.min(20, Math.round(totalComments / 50));
   let comments = source.commentList || [];
   if (!comments.length && commentCount > 0) {
     comments = generateComments(source, commentCount);
@@ -295,15 +298,15 @@ function renderPlayerDetail(track) {
           <span class="badge badge-blue">${track.releaseType}</span>
         </div>
         <div class="player-stats">
-          <div class="ps-item"><div class="ps-num">${formatNumber(track.plays)}</div><div class="ps-label">播放量</div></div>
-          <div class="ps-item"><div class="ps-num">${formatNumber(track.likes)}</div><div class="ps-label">收藏</div></div>
-          <div class="ps-item"><div class="ps-num">${formatNumber(track.comments)}</div><div class="ps-label">评论</div></div>
+          <div class="ps-item"><div class="ps-num">${formatNumber(plays)}</div><div class="ps-label">播放量</div></div>
+          <div class="ps-item"><div class="ps-num">${formatNumber(likes)}</div><div class="ps-label">收藏</div></div>
+          <div class="ps-item"><div class="ps-num">${formatNumber(totalComments)}</div><div class="ps-label">评论</div></div>
         </div>
       </div>
     </div>
     <div class="player-progress-wrap">
       <span class="pp-time" id="player-cur-time">${fmtTime(curSec)}</span>
-      <div class="player-progress"><div class="player-progress-bar" style="width:${progress}%"></div></div>
+      <div class="player-progress" data-action="seek"><div class="player-progress-bar" style="width:${progress}%"></div></div>
       <span class="pp-time">${fmtTime(totalSec)}</span>
     </div>
     <div class="player-controls">
@@ -313,7 +316,7 @@ function renderPlayerDetail(track) {
     </div>
     ${track.lyrics ? `<div class="player-lyrics"><div class="lyrics-title">歌词</div><pre>${escapeHtml(track.lyrics)}</pre></div>` : ""}
     <div class="player-comments">
-      <div class="comments-title">评论区（${formatNumber(track.comments)}）</div>
+      <div class="comments-title">评论区（${formatNumber(totalComments)}）</div>
       ${comments.length ? comments.map(c => `
         <div class="comment-item">
           <div class="comment-avatar">${c.user.charAt(0)}</div>
@@ -353,7 +356,7 @@ function renderBgmDetail() {
     </div>
     <div class="player-progress-wrap">
       <span class="pp-time" id="bgm-cur-time">${fmtTime(cur)}</span>
-      <div class="player-progress"><div class="player-progress-bar" id="bgm-progress-bar" style="width:${pct}%"></div></div>
+      <div class="player-progress" data-action="seek"><div class="player-progress-bar" id="bgm-progress-bar" style="width:${pct}%"></div></div>
       <span class="pp-time">${fmtTime(dur)}</span>
     </div>
     <div class="player-controls">

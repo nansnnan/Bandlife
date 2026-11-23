@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.14",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "音乐播放器进度条支持点击快速调整播放进度（含背景音乐）。",
+      "修复播放器右侧详情的播放量、收藏、评论数不随时间推进更新的问题，现与左侧榜单同步实时更新。",
+    ],
+  },
+  {
     version: "1.2.13",
     date: "2026-11-24",
     size: "小更新",
