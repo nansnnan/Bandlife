@@ -97,6 +97,8 @@ function renderStars(count) {
 
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
+  const contentEl = document.querySelector('.content');
+  const prevScroll = contentEl ? contentEl.scrollTop : 0;
   const tab = window._ratingTab || "单曲评分榜";
   const tracks = collectAllRatingTracks();
   for (const t of tracks) if (!t.ratings || !t.ratings.length) generateRatings(t);
@@ -176,6 +178,7 @@ function renderRatingView() {
       <div class="player-right" id="rating-detail">${detailHTML}</div>
     </div>
   `;
+  if (contentEl) contentEl.scrollTop = prevScroll;
 }
 
 
