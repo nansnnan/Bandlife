@@ -708,3 +708,21 @@ select { cursor: pointer; }
 .chart-sub-item { margin-left: 24px; background: var(--bg-3); padding: 8px 12px; }
 .chart-sub-item .chart-rank { width: 20px; font-size: 12px; }
 .album-row .album-arrow { color: var(--text-faint); margin-left: 4px; }
+
+/* 播放器/评分控制按钮图标居中（修复 ▶ 等图标左偏） */
+.mini-btn { display: inline-flex; align-items: center; justify-content: center; }
+
+/* 我的作品排名下拉 */
+.my-rank-dropdown { margin-bottom: 12px; }
+.my-rank-dropdown summary {
+  cursor: pointer; padding: 8px 14px; background: var(--bg-2);
+  border: 1px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--text-dim);
+  list-style: none; display: inline-block;
+}
+.my-rank-dropdown summary::-webkit-details-marker { display: none; }
+.my-rank-list { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; max-height: 220px; overflow-y: auto; }
+.my-rank-item {
+  display: flex; justify-content: space-between; padding: 6px 12px;
+  background: var(--bg-2); border-radius: 6px; font-size: 13px;
+}
+.my-rank-pos { color: var(--accent-2); font-weight: 600; flex-shrink: 0; margin-left: 10px; }

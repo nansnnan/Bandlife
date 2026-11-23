@@ -114,6 +114,13 @@ function bindEvents() {
       // 评分
       case "rating-tab":
         window._ratingTab = target.dataset.tab; currentPlatformName = null; renderRatingView(); break;
+      case "rating-toggle-album": {
+        const key = target.dataset.key;
+        if (!window._ratingExpandedAlbums) window._ratingExpandedAlbums = new Set();
+        if (window._ratingExpandedAlbums.has(key)) window._ratingExpandedAlbums.delete(key);
+        else window._ratingExpandedAlbums.add(key);
+        renderRatingView(); break;
+      }
       case "select-rating-chart":
         selectRatingFromChart(target.dataset.id); break;
       case "select-rating":

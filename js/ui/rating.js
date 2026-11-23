@@ -97,38 +97,87 @@ function renderStars(count) {
 
 function renderRatingView() {
   const el = document.querySelector('[data-game-view="rating"]');
-  const tab = window._ratingTab || "专辑列表";
-  if (tab === "单曲评分榜") { el.innerHTML = renderSingleScoreChart(); return; }
-  if (tab === "专辑评分榜") { el.innerHTML = renderAlbumScoreChart(); return; }
-
-  const leftEl = document.querySelector('.rating-left');
-  const scrollTop = leftEl ? leftEl.scrollTop : 0;
+  const tab = window._ratingTab || "单曲评分榜";
   const tracks = collectAllRatingTracks();
-  for (const t of tracks) {
-    if (!t.ratings || !t.ratings.length) generateRatings(t);
-  }
+  for (const t of tracks) if (!t.ratings || !t.ratings.length) generateRatings(t);
   const groups = groupByAlbum(tracks);
-  if (!currentRatingRelease && tracks.length) currentRatingRelease = tracks[0];
+
+  if (!window._ratingExpandedAlbums) window._ratingExpandedAlbums = new Set();
+  const expanded = window._ratingExpandedAlbums;
+
+  const isAlbumChart = (tab === "专辑评分榜");
+  let list;
+  if (isAlbumChart) {
+    list = groups.map(g => ({ bandName: g.bandName, album: g.album, tracks: g.tracks, score: calcAlbumScore(g.tracks) }))
+      .filter(g => g.score > 0).sort((a, b) => b.score - a.score);
+  } else {
+    list = tracks.filter(t => t.avgScore != null).sort((a, b) => b.avgScore - a.avgScore);
+  }
+
+  const myRankItems = [];
+  if (isAlbumChart) {
+    for (const rel of Game.releases) {
+      const idx = list.findIndex(g => g.bandName === (rel.bandName || Game.band.name) && g.album === rel.name);
+      if (idx >= 0) myRankItems.push({ name: rel.name, rank: idx + 1 });
+    }
+  } else {
+    const mySongs = [];
+    for (const rel of Game.releases) for (const s of rel.songs) mySongs.push({ id: s.id || (rel.id + "_" + s.name), name: s.name });
+    for (const ms of mySongs) {
+      const idx = list.findIndex(t => t.id === ms.id);
+      if (idx >= 0) myRankItems.push({ name: ms.name, rank: idx + 1 });
+    }
+  }
+  myRankItems.sort((a, b) => a.rank - b.rank);
+
+  let rows;
+  if (isAlbumChart) {
+    rows = list.slice(0, 100).map((g, i) => {
+      const key = g.bandName + "||" + g.album;
+      const isOpen = expanded.has(key);
+      const subRows = isOpen ? g.tracks.slice().sort((a, b) => (b.avgScore || 0) - (a.avgScore || 0)).map((t, ti) => `<div class="chart-item clickable chart-sub-item" data-action="select-rating-chart" data-id="${escapeHtml(t.id)}">
+        <span class="chart-rank">${ti + 1}</span>
+        <div class="chart-main"><div class="chart-name">${escapeHtml(t.name)}</div></div>
+        <div class="chart-val">${t.avgScore ?? "—"}</div>
+      </div>`).join("") : "";
+      return `<div class="chart-item clickable album-row" data-action="rating-toggle-album" data-key="${escapeHtml(key)}">
+        <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
+        <div class="chart-main"><div class="chart-name">${escapeHtml(g.album)}</div><div class="chart-sub">${escapeHtml(g.bandName)} · ${g.tracks.length} 首</div></div>
+        <div class="chart-val">${g.score} <span class="album-arrow">${isOpen ? "▾" : "▸"}</span></div>
+      </div>${subRows}`;
+    }).join("");
+  } else {
+    rows = list.slice(0, 100).map((t, i) => `<div class="chart-item clickable" data-action="select-rating-chart" data-id="${escapeHtml(t.id)}">
+      <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
+      <div class="chart-main"><div class="chart-name">${escapeHtml(t.name)}</div><div class="chart-sub">${escapeHtml(t.bandName)} · ${escapeHtml(t.album || "")}</div></div>
+      <div class="chart-val">${t.avgScore}</div>
+    </div>`).join("");
+  }
+
   let detailHTML;
   if (currentRatingRelease) {
     detailHTML = currentPlatformName ? renderPlatformComments(currentRatingRelease, currentPlatformName) : renderRatingDetail(currentRatingRelease);
   } else {
-    detailHTML = `<div style="color:var(--text-faint);text-align:center;padding:40px;">选择左侧作品查看评分</div>`;
+    detailHTML = `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击榜单中的作品查看各平台评分</p></div>`;
   }
+
   el.innerHTML = `
     <div class="section-title">⭐ 评分网站</div>
-    ${renderRatingTabs("专辑列表")}
-    <div class="rating-layout">
-      <div class="rating-left">
-        <div class="rating-list-title">专辑列表（${groups.length}）</div>
-        ${groups.length ? groups.map((g, i) => renderAlbumGroup(g, i)).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无已发布作品</div>`}
+    ${renderMyRankDropdown(myRankItems)}
+    <div class="chart-tabs">
+      ${["单曲评分榜", "专辑评分榜"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="rating-tab" data-tab="${t}">${t}</button>`).join("")}
+    </div>
+    <div class="player-layout">
+      <div class="player-left">
+        <div class="player-track-list chart-list">
+          ${list.length ? rows : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无评分数据</div>`}
+        </div>
       </div>
-      <div class="rating-right" id="rating-detail">${detailHTML}</div>
+      <div class="player-right" id="rating-detail">${detailHTML}</div>
     </div>
   `;
-  const newLeftEl = document.querySelector('.rating-left');
-  if (newLeftEl) newLeftEl.scrollTop = scrollTop;
 }
+
 
 function renderRatingTabs(active) {
   return `<div class="chart-tabs">${["专辑列表", "单曲评分榜", "专辑评分榜"].map(t => `<button class="chart-tab ${t === active ? "active" : ""}" data-action="rating-tab" data-tab="${t}">${t}</button>`).join("")}</div>`;
@@ -170,14 +219,11 @@ function selectRatingFromChart(id) {
   const tracks = collectAllRatingTracks();
   const t = tracks.find(x => x.id === id);
   if (!t) return;
-  const groups = groupByAlbum(tracks);
-  const gi = groups.findIndex(g => g.bandName === t.bandName && g.album === (t.album || t.name));
-  if (gi >= 0) expandedAlbums.add(gi);
   currentRatingRelease = t;
   currentPlatformName = null;
-  window._ratingTab = "专辑列表";
   renderRatingView();
 }
+
 
 
 // 渲染单个专辑分组（含展开的歌曲列表）

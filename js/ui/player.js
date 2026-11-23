@@ -75,6 +75,14 @@ function groupTracksByAlbum(tracks) {
 }
 
 // ===== 渲染播放器视图 =====
+function renderMyRankDropdown(items) {
+  return `<details class="my-rank-dropdown"><summary>我的作品排名（${items.length}） ▾</summary>
+    <div class="my-rank-list">
+      ${items.length ? items.map(it => `<div class="my-rank-item"><span>${escapeHtml(it.name)}</span><span class="my-rank-pos">${it.rank > 100 ? "100+" : "第 " + it.rank + " 名"}</span></div>`).join("") : `<div style="color:var(--text-faint);padding:6px 12px;">暂无我的作品上榜</div>`}
+    </div>
+  </details>`;
+}
+
 function buildCharts() {
   const singles = [];
   for (const rel of Game.releases) {
@@ -140,6 +148,23 @@ function renderPlayerView() {
   else if (tab === "新歌热度") list = singles.filter(s => s.dayIndex >= Game.dayIndex - 30).sort((a, b) => b.plays - a.plays);
   else list = albums.slice().sort((a, b) => b.sales - a.sales);
 
+  const myRankItems = [];
+  if (!isAlbums) {
+    const mySongs = [];
+    for (const rel of Game.releases) for (const s of rel.songs) mySongs.push({ id: s.id || (rel.id + "_" + s.name), name: s.name });
+    for (const ms of mySongs) {
+      const idx = list.findIndex(x => x.id === ms.id);
+      if (idx >= 0) myRankItems.push({ name: ms.name, rank: idx + 1 });
+    }
+  } else {
+    for (const rel of Game.releases) {
+      const key = "own||" + rel.id;
+      const idx = list.findIndex(x => x.key === key);
+      if (idx >= 0) myRankItems.push({ name: rel.name, rank: idx + 1 });
+    }
+  }
+  myRankItems.sort((a, b) => a.rank - b.rank);
+
   if (!window._playerExpandedAlbums) window._playerExpandedAlbums = new Set();
   const expanded = window._playerExpandedAlbums;
 
@@ -178,6 +203,7 @@ function renderPlayerView() {
 
   el.innerHTML = `
     <div class="section-title">🎧 音乐播放器</div>
+    ${renderMyRankDropdown(myRankItems)}
     <div class="chart-tabs">
       ${["单曲热度", "专辑热度", "新歌热度", "专辑销量"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${t}榜</button>`).join("")}
     </div>
@@ -193,6 +219,7 @@ function renderPlayerView() {
     </div>
   `;
 }
+
 
 
 

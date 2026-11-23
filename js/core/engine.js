@@ -337,28 +337,39 @@ function generateComments(release, count) {
   if (release.commentList && release.commentList.length) return release.commentList;
   const list = [];
   const ratio = release.quality / 100;
-  // 评论情绪比例用平方关系，让正负面更贴合评分（高分几乎全正面，低分几乎全负面）
   const praiseProb = ratio * ratio * 0.85;
   const criticizeProb = (1 - ratio) * (1 - ratio) * 0.85;
+  const usedText = new Set();
+  const userPool = shuffle(window.COMMENT_USERS);
+  const spanDays = Math.max(1, Game.dayIndex - (release.dayIndex || 0));
   for (let i = 0; i < count; i++) {
     const r = Game.rng();
-    let pool;
-    if (r < praiseProb) pool = window.COMMENT_TEMPLATES.praise;
-    else if (r < praiseProb + criticizeProb) pool = window.COMMENT_TEMPLATES.criticize;
-    else if (r < 0.9) pool = window.COMMENT_TEMPLATES.neutral;
-    else pool = window.COMMENT_TEMPLATES.short;
-    let text = pick(pool);
-    text = text.replace(/\{song\}/g, release.name)
+    let poolArr;
+    if (r < praiseProb) poolArr = window.COMMENT_TEMPLATES.praise;
+    else if (r < praiseProb + criticizeProb) poolArr = window.COMMENT_TEMPLATES.criticize;
+    else if (r < 0.9) poolArr = window.COMMENT_TEMPLATES.neutral;
+    else poolArr = window.COMMENT_TEMPLATES.short;
+    // 尽量选取未使用过的模板，避免同一作品评论重复
+    let tpl = null;
+    for (let t = 0; t < 12; t++) {
+      const cand = pick(poolArr);
+      if (!usedText.has(cand)) { tpl = cand; usedText.add(cand); break; }
+    }
+    if (!tpl) tpl = pick(poolArr);
+    const text = tpl
+      .replace(/\{song\}/g, release.name)
       .replace(/\{band\}/g, release.bandName || Game.band?.name || "")
       .replace(/\{style\}/g, release.style || "")
       .replace(/\{album\}/g, release.name)
       .replace(/\{ep\}/g, release.name);
-    list.push({
-      user: pick(window.COMMENT_USERS),
-      text,
-      likes: rand(0, 5000),
-      time: formatDateShort(Math.max(0, Game.dayIndex - rand(0, Math.max(1, Game.dayIndex - release.dayIndex)))),
-    });
+    // 时间：偏向发布后的早期，形成自然的时间分布
+    const dayOffset = Math.floor(Math.pow(Game.rng(), 2) * spanDays);
+    const day = Math.max(0, Game.dayIndex - dayOffset);
+    // 点赞：长尾分布（多数少赞、少数高赞）
+    const likes = Math.round(Math.pow(Game.rng(), 3) * 8000);
+    // 用户名尽量不重复
+    const user = userPool[i % userPool.length] + (i >= userPool.length ? (Math.floor(i / userPool.length) + 1) : "");
+    list.push({ user, text, likes, time: formatDateShort(day) });
   }
   release.commentList = list;
   return list;
