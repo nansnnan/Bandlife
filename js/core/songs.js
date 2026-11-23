@@ -60,7 +60,20 @@ function releaseWork(type, songIds, options = {}) {
   if (type === "EP" && (songs.length < 2 || songs.length > 5)) return { ok: false, msg: "EP 需包含 2~5 首歌" };
   if (type === "专辑" && songs.length < 6) return { ok: false, msg: "专辑需至少 6 首歌" };
 
-  const cost = releaseCost(type, songs.length, options);
+  // 专辑销售校验（仅专辑适用）
+  if (type === "专辑" && options.saleMode === "数字") {
+    if (currentDate().year < 2012) return { ok: false, msg: "数字专辑要到 2012 年之后才会出现" };
+    if (!options.price || options.price > 30) return { ok: false, msg: "数字专辑定价不宜过高（不超过 30 元）" };
+  }
+  if (type === "专辑" && options.saleMode === "实体") {
+    if (!options.stock || options.stock < 1) return { ok: false, msg: "实体专辑需设定制作数量" };
+    if (!options.price || options.price < 30 || options.price > 200) return { ok: false, msg: "实体专辑定价建议在 30~200 元之间" };
+  }
+
+  let cost = releaseCost(type, songs.length, options);
+  if (type === "专辑" && options.saleMode === "实体") {
+    cost += (options.stock || 0) * 5;  // 实体专辑制作成本：5 元/张
+  }
   if (Game.mode === "real" && Game.finance.balance < cost) {
     return { ok: false, msg: `预算不足，需 ¥${cost.toLocaleString()}` };
   }
@@ -94,6 +107,12 @@ function releaseWork(type, songIds, options = {}) {
     commentList: null,
     promotion: !!options.promotion,
     isRival: false,
+    saleMode: (type === "专辑" && options.saleMode) ? options.saleMode : null,
+    price: options.price || 0,
+    stock: options.stock || 0,
+    salesDigital: 0,
+    salesPhysical: 0,
+    sales: 0,
   };
 
   // 标记歌曲已发布

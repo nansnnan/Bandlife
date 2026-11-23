@@ -433,6 +433,23 @@ function renderRelease() {
         </div>
         <div id="release-queue-list" style="margin-top:10px;"></div>
       </div>
+      <div class="form-group" id="release-sale-wrap">
+        <label>专辑销售（仅发布「专辑」时生效）</label>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px;">
+          <label style="display:flex;align-items:center;gap:4px;"><input type="radio" name="sale-mode" value="不销售" checked> 不销售</label>
+          <label style="display:flex;align-items:center;gap:4px;"><input type="radio" name="sale-mode" value="数字"> 数字专辑</label>
+          <label style="display:flex;align-items:center;gap:4px;"><input type="radio" name="sale-mode" value="实体"> 实体专辑</label>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <label style="flex:1;min-width:120px;">定价（元）
+            <input type="number" id="release-price" value="30" min="1" max="200" style="width:100%;">
+          </label>
+          <label style="flex:1;min-width:120px;display:none;" id="release-stock-wrap">实体制作数量
+            <input type="number" id="release-stock" value="500" min="1" style="width:100%;">
+          </label>
+        </div>
+        <div id="release-sale-hint" style="color:var(--text-faint);font-size:12px;margin-top:6px;"></div>
+      </div>
       <div class="form-group">
         <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="release-promotion" style="width:auto;"> 投入推广（¥30,000，+5% 质量）</label>
       </div>
@@ -450,6 +467,25 @@ function renderRelease() {
     </div>
   `;
   renderReleaseQueue();
+  document.querySelectorAll('input[name="sale-mode"]').forEach(r => r.addEventListener("change", updateSaleUI));
+  updateSaleUI();
+}
+
+function updateSaleUI() {
+  const mode = document.querySelector('input[name="sale-mode"]:checked')?.value || "不销售";
+  const stockWrap = document.getElementById("release-stock-wrap");
+  const hint = document.getElementById("release-sale-hint");
+  if (!stockWrap || !hint) return;
+  stockWrap.style.display = mode === "实体" ? "" : "none";
+  if (mode === "数字") {
+    hint.textContent = (typeof currentDate === "function" && currentDate().year < 2012)
+      ? "数字专辑要到 2012 年之后才会出现（当前年份暂不支持）。"
+      : "数字专辑无制作成本、不限量、销量更高；定价不超过 30 元。";
+  } else if (mode === "实体") {
+    hint.textContent = "实体专辑有制作成本（5 元/张），库存售罄会断货；定价范围 30~200 元，接受度更高。";
+  } else {
+    hint.textContent = "";
+  }
 }
 
 function renderReleaseQueue() {
@@ -504,8 +540,12 @@ function submitRelease() {
   const title = document.getElementById("release-title").value.trim();
   const ids = (window._releaseQueue || []).slice();
   const promotion = document.getElementById("release-promotion").checked;
+  const saleModeEl = document.querySelector('input[name="sale-mode"]:checked');
+  const saleMode = saleModeEl ? saleModeEl.value : "不销售";
+  const price = parseInt(document.getElementById("release-price").value) || 0;
+  const stock = parseInt(document.getElementById("release-stock").value) || 0;
   if (!ids.length) { alert("请先添加要发布的歌曲"); return; }
-  const res = releaseWork(type, ids, { title, promotion });
+  const res = releaseWork(type, ids, { title, promotion, saleMode: saleMode === "不销售" ? null : saleMode, price, stock });
   if (!res.ok) { alert(res.msg); return; }
   window._releaseQueue = [];
   renderRelease();

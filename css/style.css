@@ -678,3 +678,28 @@ select { cursor: pointer; }
   /* ===== 事件日志 ===== */
   .event-log { max-height: 200px; }
 }
+
+/* ===== 排行榜（播放器榜单） ===== */
+.chart-tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.chart-tab {
+  padding: 8px 16px; border-radius: 20px; background: var(--bg-2);
+  color: var(--text-dim); font-size: 13px; border: 1px solid var(--border);
+  transition: all var(--transition); cursor: pointer;
+}
+.chart-tab.active { background: var(--accent-grad); color: #fff; border-color: transparent; }
+.chart-list { display: flex; flex-direction: column; gap: 6px; }
+.chart-item {
+  display: flex; align-items: center; gap: 12px; padding: 10px 12px;
+  background: var(--bg-2); border-radius: 10px;
+}
+.chart-item.clickable { cursor: pointer; }
+.chart-item.clickable:hover { background: var(--card-hover); }
+.chart-rank {
+  width: 26px; text-align: center; font-weight: 700; font-size: 15px;
+  color: var(--text-faint); flex-shrink: 0;
+}
+.chart-rank.top { color: #ffc83d; }
+.chart-main { flex: 1; min-width: 0; }
+.chart-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chart-sub { font-size: 12px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chart-val { font-size: 12px; color: var(--text-dim); flex-shrink: 0; }

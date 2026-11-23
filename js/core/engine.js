@@ -133,6 +133,7 @@ function initRivals() {
         rel.plays = Math.round(baseDaily * ageDays * 0.5);
         rel.likes = Math.round(rel.plays * likeRate(quality));
         rel.comments = Math.round(rel.plays * commentRate(quality));
+        rel.sales = Math.round(rel.plays * 0.0015);
         rival.releases.push(rel);
         rival.totalPlays += rel.plays;
         rival.releaseIndex++;
@@ -164,6 +165,7 @@ function advanceTime(days) {
 function tickDaily() {
   for (const rel of Game.releases) {
     growRelease(rel, 1);
+    growSales(rel, 1);
   }
   for (const r of Game.rivals) {
     if (r.active && r.releases.length) {
@@ -231,6 +233,7 @@ function rivalRelease(rival) {
       releaseType,
       isRival: true,
       album: track.album,
+      sales: 0,
     });
     rival.releaseIndex++;
     count++;
@@ -252,6 +255,34 @@ function growRelease(rel, days) {
   rel.plays = Math.round((rel.plays || 0) + daily);
   rel.likes = Math.round((rel.likes || 0) + daily * likeRate(rel.quality));
   rel.comments = Math.round((rel.comments || 0) + daily * commentRate(rel.quality));
+  // 竞争对手作品同步累积销量（用于专辑销量榜）
+  if (rel.isRival) rel.sales = Math.round((rel.sales || 0) + daily * 0.0015);
+}
+
+// ===== 专辑销量增长（玩家专辑：数字/实体） =====
+function growSales(rel, days) {
+  if (rel.releaseType !== "专辑" || !rel.saleMode) return;
+  if (!rel.price) return;
+  const heat = Math.pow(Math.max(1, rel.plays || 0), 0.5);
+  rel.salesDigital = rel.salesDigital || 0;
+  rel.salesPhysical = rel.salesPhysical || 0;
+  if (rel.saleMode === "数字") {
+    const priceF = Math.max(0.2, 1 - rel.price / 60);
+    const unit = (rel.quality / 100) * heat * 0.08 * priceF * days;
+    rel.salesDigital += Math.round(unit * randf(0.7, 1.3));
+  } else {
+    if ((rel.stock || 0) <= 0) {
+      rel.sales = (rel.salesDigital || 0) + (rel.salesPhysical || 0);
+      return;
+    }
+    const priceF = Math.max(0.2, 1 - rel.price / 400);
+    const unit = (rel.quality / 100) * heat * 0.03 * priceF * days;
+    let add = Math.round(unit * randf(0.7, 1.3));
+    add = Math.min(add, rel.stock);
+    rel.salesPhysical += add;
+    rel.stock -= add;
+  }
+  rel.sales = (rel.salesDigital || 0) + (rel.salesPhysical || 0);
 }
 
 function likeRate(quality) {

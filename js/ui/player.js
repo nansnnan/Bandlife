@@ -64,31 +64,92 @@ function groupTracksByAlbum(tracks) {
 }
 
 // ===== 渲染播放器视图 =====
+function buildCharts() {
+  const singles = [];
+  for (const rel of Game.releases) {
+    const n = rel.songs.length || 1;
+    const perPlays = Math.round((rel.plays || 0) / n);
+    const perSales = Math.round((rel.sales || 0) / n);
+    for (const song of rel.songs) {
+      singles.push({
+        id: song.id || (rel.id + "_" + song.name), playId: rel.id, name: song.name,
+        bandName: rel.bandName || Game.band.name, album: rel.name,
+        plays: perPlays, sales: perSales, dayIndex: rel.dayIndex, quality: song.quality, isRival: false,
+      });
+    }
+  }
+  for (const r of Game.rivals) {
+    for (const rel of r.releases) {
+      singles.push({
+        id: rel.id, playId: rel.id, name: rel.name,
+        bandName: rel.bandName || r.name, album: rel.album || rel.name,
+        plays: rel.plays || 0, sales: rel.sales || 0, dayIndex: rel.dayIndex, quality: rel.quality, isRival: true,
+      });
+    }
+  }
+  const albums = [];
+  for (const rel of Game.releases) {
+    albums.push({ bandName: rel.bandName || Game.band.name, album: rel.name, plays: rel.plays || 0, sales: rel.sales || 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: false });
+  }
+  const map = {};
+  for (const r of Game.rivals) {
+    for (const rel of r.releases) {
+      const key = r.name + "||" + (rel.album || rel.name);
+      if (!map[key]) map[key] = { bandName: r.name, album: rel.album || rel.name, plays: 0, sales: 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: true };
+      const a = map[key];
+      a.plays += rel.plays || 0;
+      a.sales += rel.sales || 0;
+      a.dayIndex = Math.min(a.dayIndex, rel.dayIndex);
+    }
+  }
+  for (const k in map) albums.push(map[k]);
+  return { singles, albums };
+}
+
 function renderPlayerView() {
   const el = document.querySelector('[data-game-view="player"]');
-  // 保存左侧列表滚动位置，避免重渲染后回到顶部
-  const listEl = document.querySelector('.player-track-list');
-  const scrollTop = listEl ? listEl.scrollTop : 0;
-  const tracks = collectAllTracks();
-  const groups = groupTracksByAlbum(tracks);
+  const { singles, albums } = buildCharts();
+  const tab = window._playerChartTab || "单曲热度";
+  const isAlbums = (tab === "专辑热度" || tab === "专辑销量");
+  let list;
+  if (tab === "单曲热度") list = singles.slice().sort((a, b) => b.plays - a.plays);
+  else if (tab === "专辑热度") list = albums.slice().sort((a, b) => b.plays - a.plays);
+  else if (tab === "新歌热度") list = singles.filter(s => s.dayIndex >= Game.dayIndex - 30).sort((a, b) => b.plays - a.plays);
+  else list = albums.slice().sort((a, b) => b.sales - a.sales);
+
+  const rows = list.slice(0, 100).map((it, i) => {
+    const title = isAlbums ? it.album : it.name;
+    const sub = isAlbums ? `${it.bandName} · ${it.releaseType}` : `${it.bandName} · ${it.album}`;
+    const val = tab === "专辑销量" ? formatNumber(it.sales) + " 张" : formatNumber(it.plays) + " 播放";
+    const clickable = !isAlbums;
+    return `<div class="chart-item ${clickable ? "clickable" : ""}" ${clickable ? `data-action="play-track" data-id="${it.playId}"` : ""}>
+      <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
+      <div class="chart-main">
+        <div class="chart-name">${escapeHtml(title)}</div>
+        <div class="chart-sub">${escapeHtml(sub)}</div>
+      </div>
+      <div class="chart-val">${val}</div>
+    </div>`;
+  }).join("");
+
   el.innerHTML = `
     <div class="section-title">🎧 音乐播放器</div>
+    <div class="chart-tabs">
+      ${["单曲热度", "专辑热度", "新歌热度", "专辑销量"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${t}榜</button>`).join("")}
+    </div>
     <div class="player-layout">
       <div class="player-left">
-        <div class="player-list-title">专辑列表（${groups.length}）</div>
-        <div class="player-track-list">
-          ${groups.length ? groups.map((g, i) => renderPlayerAlbumGroup(g, i)).join("") : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无歌曲，去创作并发布吧</div>`}
+        <div class="player-track-list chart-list">
+          ${list.length ? rows : `<div style="color:var(--text-faint);text-align:center;padding:30px;">暂无数据</div>`}
         </div>
       </div>
       <div class="player-right" id="player-detail">
-        ${Player.current ? renderPlayerDetail(Player.current) : `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击左侧歌曲开始播放</p></div>`}
+        ${Player.current ? renderPlayerDetail(Player.current) : `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击榜单中的歌曲开始播放</p></div>`}
       </div>
     </div>
   `;
-  // 恢复左侧列表滚动位置
-  const newListEl = document.querySelector('.player-track-list');
-  if (newListEl) newListEl.scrollTop = scrollTop;
 }
+
 
 // 渲染播放器专辑分组（含展开的歌曲列表）
 function renderPlayerAlbumGroup(g, index) {

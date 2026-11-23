@@ -91,6 +91,8 @@ function bindEvents() {
         handleTourStart(); break;
 
       // 播放器
+      case "player-chart-tab":
+        window._playerChartTab = target.dataset.tab; renderPlayerView(); break;
       case "play-track":
         playTrack(target.dataset.id); break;
       case "toggle-player-album":
@@ -103,6 +105,10 @@ function bindEvents() {
         nextTrack(); break;
 
       // 评分
+      case "rating-tab":
+        window._ratingTab = target.dataset.tab; currentPlatformName = null; renderRatingView(); break;
+      case "select-rating-chart":
+        selectRatingFromChart(target.dataset.id); break;
       case "select-rating":
         selectRating(target.dataset.id); break;
       case "toggle-album":
