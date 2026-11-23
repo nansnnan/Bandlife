@@ -16,6 +16,18 @@ function initBgm() {
     cb.checked = bgmEnabled;
     cb.addEventListener("change", () => setBgm(cb.checked));
   }
+  if (bgmAudio) {
+    bgmAudio.addEventListener("timeupdate", () => {
+      if (typeof Player !== "undefined" && Player.bgmMode) {
+        const cur = bgmAudio.currentTime || 0;
+        const dur = bgmAudio.duration || 0;
+        const t = document.getElementById("bgm-cur-time");
+        const bar = document.getElementById("bgm-progress-bar");
+        if (t) t.textContent = fmtTime(cur);
+        if (bar && dur) bar.style.width = Math.round((cur / dur) * 100) + "%";
+      }
+    });
+  }
 }
 function setBgm(enabled) {
   bgmEnabled = enabled;
@@ -143,6 +155,13 @@ function bindEvents() {
       }
       case "play-track":
         playTrack(target.dataset.id); break;
+      case "select-bgm":
+        Player.bgmMode = true; renderPlayerView(); break;
+      case "bgm-toggle": {
+        const a = document.getElementById("bgm");
+        if (a) { if (a.paused) a.play().catch(() => {}); else a.pause(); }
+        renderPlayerView(); break;
+      }
       case "toggle-player-album":
         togglePlayerAlbum(parseInt(target.dataset.index)); break;
       case "player-toggle":

@@ -772,3 +772,5 @@ select { cursor: pointer; }
 .player-bgm-main { flex: 1; min-width: 0; }
 .player-bgm-name { font-weight: 600; font-size: 14px; }
 .player-bgm-note { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+.player-bgm.clickable { cursor: pointer; }
+.player-bgm.clickable:hover { background: var(--card); }

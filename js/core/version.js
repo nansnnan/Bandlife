@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.10",
+    date: "2026-11-23",
+    size: "小更新",
+    items: [
+      "背景音乐卡片可在播放器中点击播放，右侧显示播放/暂停与实时进度，不显示播放量和评论区。",
+    ],
+  },
+  {
     version: "1.2.9",
     date: "2026-11-23",
     size: "小更新",

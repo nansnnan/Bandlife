@@ -26,6 +26,7 @@ const Player = {
   progress: 0,     // 0~1
   timer: null,
   current: null,
+  bgmMode: false,  // 右侧是否展示背景音乐详情
 };
 
 // 播放器展开状态
@@ -203,11 +204,11 @@ function renderPlayerView() {
 
   el.innerHTML = `
     <div class="section-title">🎧 音乐播放器</div>
-    <div class="player-bgm">
+    <div class="player-bgm clickable" data-action="select-bgm">
       <span class="player-bgm-icon">🎵</span>
       <div class="player-bgm-main">
         <div class="player-bgm-name">背景音乐 · At the night</div>
-        <div class="player-bgm-note">这是背景音乐，不属于下方排行榜</div>
+        <div class="player-bgm-note">这是背景音乐，不属于下方排行榜（点击查看播放）</div>
       </div>
     </div>
     ${renderMyRankDropdown(myRankItems)}
@@ -221,7 +222,7 @@ function renderPlayerView() {
         </div>
       </div>
       <div class="player-right" id="player-detail">
-        ${Player.current ? renderPlayerDetail(Player.current) : `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击榜单中的歌曲开始播放</p></div>`}
+        ${Player.bgmMode ? renderBgmDetail() : (Player.current ? renderPlayerDetail(Player.current) : `<div class="player-empty"><div class="player-empty-disc">♫</div><p>点击榜单中的歌曲开始播放</p></div>`)}
       </div>
     </div>
   `;
@@ -327,6 +328,36 @@ function fmtTime(sec) {
   return `${m}:${String(s).padStart(2, "0")}`;
 }
 
+// 背景音乐详情（仅暂停与进度，不显示播放量与评论）
+function renderBgmDetail() {
+  const a = document.getElementById("bgm");
+  const dur = a && a.duration ? a.duration : 0;
+  const cur = a ? (a.currentTime || 0) : 0;
+  const pct = dur ? Math.round((cur / dur) * 100) : 0;
+  const playing = a && !a.paused;
+  return `
+    <div class="player-detail-header">
+      <div class="player-disc ${playing ? "spinning" : ""}">
+        <div class="disc-ring"></div>
+        <div class="disc-center">♫</div>
+      </div>
+      <div class="player-meta">
+        <div class="player-song-name">At the night</div>
+        <div class="player-artist-name">背景音乐 · 不参与榜单</div>
+        <div class="player-tags"><span class="badge badge-blue">背景音乐</span></div>
+      </div>
+    </div>
+    <div class="player-progress-wrap">
+      <span class="pp-time" id="bgm-cur-time">${fmtTime(cur)}</span>
+      <div class="player-progress"><div class="player-progress-bar" id="bgm-progress-bar" style="width:${pct}%"></div></div>
+      <span class="pp-time">${fmtTime(dur)}</span>
+    </div>
+    <div class="player-controls">
+      <button class="mini-btn play" data-action="bgm-toggle">${playing ? ICONS.pause : ICONS.play}</button>
+    </div>
+  `;
+}
+
 function escapeHtml(s) {
   return (s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }
@@ -340,6 +371,7 @@ function playTrack(id) {
   Player.index = idx;
   Player.current = tracks[idx];
   Player.progress = 0;
+  Player.bgmMode = false;
   startPlayback();
   renderPlayerView();
 }
