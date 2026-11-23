@@ -1,10 +1,39 @@
 // 主入口：初始化 + 全局事件委托 + 设置视图
 
+// ===== 背景音乐 =====
+let bgmAudio = null;
+let bgmEnabled = true;
+let bgmStarted = false;
+
+function initBgm() {
+  bgmAudio = document.getElementById("bgm");
+  try {
+    const saved = localStorage.getItem("bgmEnabled");
+    bgmEnabled = saved === null ? true : saved === "1";
+  } catch (e) { bgmEnabled = true; }
+  const cb = document.getElementById("bgm-toggle");
+  if (cb) {
+    cb.checked = bgmEnabled;
+    cb.addEventListener("change", () => setBgm(cb.checked));
+  }
+}
+function setBgm(enabled) {
+  bgmEnabled = enabled;
+  try { localStorage.setItem("bgmEnabled", enabled ? "1" : "0"); } catch (e) {}
+  if (!bgmAudio) return;
+  if (enabled) bgmAudio.play().catch(() => {});
+  else bgmAudio.pause();
+}
+function tryPlayBgm() {
+  if (bgmEnabled && bgmAudio) bgmAudio.play().catch(() => {});
+}
+
 // ===== 设置视图渲染 =====
 function renderSettings() {
   document.getElementById("settings-version").textContent = Game.version;
   const logsEl = document.getElementById("update-logs");
-  logsEl.innerHTML = window.UPDATE_LOGS.map(log => `
+  const log = window.UPDATE_LOGS[0];  // 只展示当前（最新）版本的更新内容
+  logsEl.innerHTML = log ? `
     <div class="update-log">
       <div class="ul-head">
         <span class="ul-version">v${log.version}</span>
@@ -12,13 +41,15 @@ function renderSettings() {
         <span class="ul-date">${log.date}</span>
       </div>
       <ul>${log.items.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
-    </div>
-  `).join("");
+    </div>` : "";
+  const cb = document.getElementById("bgm-toggle");
+  if (cb) cb.checked = bgmEnabled;
 }
 
 // ===== 全局事件委托 =====
 function bindEvents() {
   document.addEventListener("click", (e) => {
+    if (!bgmStarted) { bgmStarted = true; tryPlayBgm(); }
     // 模式卡片选择
     const modeCard = e.target.closest(".mode-card");
     if (modeCard) {
@@ -39,6 +70,16 @@ function bindEvents() {
     const action = target.dataset.action;
 
     switch (action) {
+      case "toggle-version-content": {
+        const row = document.getElementById("settings-content-row");
+        const content = document.getElementById("settings-content");
+        if (row && content) {
+          const open = content.style.display !== "none";
+          content.style.display = open ? "none" : "";
+          row.classList.toggle("open", !open);
+        }
+        break;
+      }
       // 主菜单/创建/设置
       case "new-game":
       case "continue-game":
@@ -151,6 +192,7 @@ function refreshCurrentView() {
 
 // ===== 初始化 =====
 function init() {
+  initBgm();
   bindEvents();
   renderMenu();
   showView("menu");

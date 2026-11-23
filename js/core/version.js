@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.6",
+    date: "2026-11-23",
+    size: "小更新",
+    items: [
+      "设置界面改为卡片样式：可开关背景音乐、查看当前版本，展开查看当前版本的更新内容（不再展示历史版本）。",
+      "新增背景音乐「At the night」，可在设置中开启或关闭。",
+    ],
+  },
+  {
     version: "1.2.5",
     date: "2026-11-23",
     size: "小更新",

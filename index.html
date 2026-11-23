@@ -149,13 +149,22 @@
     <!-- ===== 设置 ===== -->
     <div class="view" data-view="settings">
       <div class="panel settings-panel">
-        <h2 class="panel-title">设置</h2>
-        <div class="settings-about">
-          <h3>当前版本</h3>
-          <div class="version-display">v<span id="settings-version">1.0.0</span></div>
+        <div class="settings-row">
+          <span class="settings-label">背景音乐</span>
+          <label class="switch">
+            <input type="checkbox" id="bgm-toggle">
+            <span class="switch-slider"></span>
+          </label>
         </div>
-        <div class="settings-updates">
-          <h3>更新公告</h3>
+        <div class="settings-row">
+          <span class="settings-label">当前版本</span>
+          <span class="settings-value">v<span id="settings-version">1.2.6</span></span>
+        </div>
+        <div class="settings-row clickable" data-action="toggle-version-content" id="settings-content-row">
+          <span class="settings-label">版本内容</span>
+          <span class="settings-arrow">▶</span>
+        </div>
+        <div class="settings-content" id="settings-content" style="display:none;">
           <div id="update-logs"></div>
         </div>
         <div class="settings-actions">
@@ -165,6 +174,8 @@
     </div>
 
   </div>
+
+  <audio id="bgm" src="music/At%20the%20night.mp3" loop preload="auto"></audio>
 
   <!-- 脚本加载顺序：数据 -> 引擎 -> UI -->
   <script src="js/data/cities.js"></script>
