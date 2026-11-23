@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.17",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复音乐播放器左侧榜单播放量与右侧详情播放量不一致的问题，现两侧数据统一。",
+    ],
+  },
+  {
     version: "1.2.16",
     date: "2026-11-24",
     size: "小更新",

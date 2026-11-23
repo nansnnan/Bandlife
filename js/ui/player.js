@@ -100,6 +100,7 @@ function buildCharts() {
         plays: Math.round(totalPlays * share * jitter),
         sales: Math.round(totalSales * share),
         dayIndex: rel.dayIndex, quality: song.quality, isRival: false,
+        share, jitter, duration: song.duration, lyrics: song.lyrics || "", source: rel,
       });
     });
   }
@@ -111,6 +112,7 @@ function buildCharts() {
         bandName: rel.bandName || r.name, album: rel.album || rel.name,
         plays: Math.round((rel.plays || 0) * jitter), sales: rel.sales || 0,
         dayIndex: rel.dayIndex, quality: rel.quality, isRival: true,
+        share: 1, jitter, duration: rel.duration || 240, lyrics: "", source: rel,
       });
     }
   }
@@ -195,7 +197,7 @@ function renderPlayerView() {
   } else {
     rows = list.slice(0, 100).map((it, i) => {
       const val = formatNumber(it.plays) + " 播放";
-      return `<div class="chart-item clickable" data-action="play-track" data-id="${it.playId}">
+      return `<div class="chart-item clickable" data-action="play-track" data-id="${it.id}">
         <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
         <div class="chart-main">
           <div class="chart-name">${escapeHtml(it.name)}</div>
@@ -280,7 +282,9 @@ function togglePlayerAlbum(index) {
 // 渲染播放详情
 function renderPlayerDetail(track) {
   const source = track.source;
-  const plays = source.plays ?? track.plays;
+  const share = track.share || 1;
+  const jitter = track.jitter || 1;
+  const plays = Math.round((source.plays ?? track.plays ?? 0) * share * jitter);
   const likes = source.likes ?? track.likes;
   const totalComments = source.comments ?? track.comments;
   // 生成评论列表（基于真实评论总数，评论数为 0 时不生成）
@@ -379,12 +383,27 @@ function escapeHtml(s) {
 
 // ===== 播放控制 =====
 function playTrack(id) {
-  const tracks = collectAllTracks();
-  const idx = tracks.findIndex(t => t.id === id);
-  if (idx < 0) return;
-  Player.queue = tracks;
-  Player.index = idx;
-  Player.current = tracks[idx];
+  const { singles } = buildCharts();
+  const si = singles.findIndex(s => s.id === id);
+  if (si >= 0) {
+    const s = singles[si];
+    Player.queue = singles;
+    Player.index = si;
+    Player.current = {
+      id: s.id, name: s.name, artist: s.bandName, album: s.album, style: s.style,
+      releaseType: s.releaseType, duration: s.duration || 240,
+      likes: s.source.likes, comments: s.source.comments,
+      lyrics: s.lyrics || "", source: s.source, isRival: s.isRival, quality: s.quality,
+      share: s.share || 1, jitter: s.jitter || 1,
+    };
+  } else {
+    const tracks = collectAllTracks();
+    const idx = tracks.findIndex(t => t.id === id);
+    if (idx < 0) return;
+    Player.queue = tracks;
+    Player.index = idx;
+    Player.current = tracks[idx];
+  }
   Player.progress = 0;
   Player.bgmMode = false;
   startPlayback();
