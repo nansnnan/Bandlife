@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.5",
+    date: "2026-11-23",
+    size: "小更新",
+    items: [
+      "修复播放界面评论区同一专辑各曲评论数相同的问题，评论数已按曲差异化。",
+      "实体专辑销量按 1997 年起出现进行模拟：1997 年及以后发行的专辑拥有符合实际的实体销量，1997 年前不计实体专辑销量。",
+    ],
+  },
+  {
     version: "1.2.4",
     date: "2026-11-23",
     size: "小更新",

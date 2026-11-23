@@ -121,19 +121,27 @@ function initRivals() {
           ? clamp(Math.round(track.rating * 10), 10, 98)
           : clamp(b.popularity * 7 + randf(-15, 15), 10, 98);
         const ageDays = Math.abs(day);
+        const relYear = parseInt(track.date.slice(0, 4)) || 2000;
+        const cmtF = 0.5 + Game.rng() * 1.2;  // 评论差异化因子（同专辑各曲评论不同）
         const rel = {
           name: track.name, bandName: b.name, style: b.style, quality,
           duration: track.duration, plays: 0, likes: 0, comments: 0,
           dayIndex: day,
           releaseType: track.type === "EP" ? "EP" : track.type === "专辑" ? "专辑" : "单曲",
-          isRival: true, album: track.album,
+          isRival: true, album: track.album, cmtF,
         };
         // 历史播放量：平均日播放 × 发行天数 × 衰减
         const baseDaily = quality * 50 * (0.5 + b.popularity / 10);
         rel.plays = Math.round(baseDaily * ageDays * 0.5);
         rel.likes = Math.round(rel.plays * likeRate(quality));
-        rel.comments = Math.round(rel.plays * commentRate(quality));
-        rel.sales = Math.round(rel.plays * 0.0015);
+        rel.comments = Math.round(rel.plays * commentRate(quality) * cmtF);
+        // 实体专辑自 1997 年起出现：1997 年及以后发行的作品按实体销量模拟
+        let sales = 0;
+        if (relYear >= 1997) {
+          const yrs = Math.max(0.5, 2000 - relYear);
+          sales = Math.round(quality * 130 * (0.4 + b.popularity / 8) * yrs * (0.7 + Game.rng() * 0.6));
+        }
+        rel.sales = sales;
         rival.releases.push(rel);
         rival.totalPlays += rel.plays;
         rival.releaseIndex++;
@@ -234,6 +242,7 @@ function rivalRelease(rival) {
       isRival: true,
       album: track.album,
       sales: 0,
+      cmtF: 0.5 + Game.rng() * 1.2,
     });
     rival.releaseIndex++;
     count++;
@@ -254,7 +263,7 @@ function growRelease(rel, days) {
   const daily = baseRate * popularityFactor * decay * days;
   rel.plays = Math.round((rel.plays || 0) + daily);
   rel.likes = Math.round((rel.likes || 0) + daily * likeRate(rel.quality));
-  rel.comments = Math.round((rel.comments || 0) + daily * commentRate(rel.quality));
+  rel.comments = Math.round((rel.comments || 0) + daily * commentRate(rel.quality) * (rel.isRival ? (rel.cmtF || 1) : 1));
   // 竞争对手作品同步累积销量（用于专辑销量榜）
   if (rel.isRival) rel.sales = Math.round((rel.sales || 0) + daily * 0.0015);
 }
