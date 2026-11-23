@@ -200,7 +200,6 @@ function playTrack(id) {
   Player.progress = 0;
   startPlayback();
   renderPlayerView();
-  updateMiniPlayer();
 }
 
 function startPlayback() {
@@ -221,8 +220,6 @@ function startPlayback() {
 
 function updateProgressUI() {
   const pct = Math.round(Player.progress * 100);
-  const bar = document.getElementById("mini-progress-bar");
-  if (bar) bar.style.width = pct + "%";
   const detailBar = document.querySelector(".player-progress-bar");
   if (detailBar) detailBar.style.width = pct + "%";
   // 实时更新当前时间显示
@@ -238,7 +235,6 @@ function togglePlay() {
   if (Player.playing) startPlayback();
   else if (Player.timer) clearInterval(Player.timer);
   renderPlayerView();
-  updateMiniPlayer();
 }
 
 function prevTrack() {
@@ -248,7 +244,6 @@ function prevTrack() {
   Player.progress = 0;
   startPlayback();
   renderPlayerView();
-  updateMiniPlayer();
 }
 
 function nextTrack() {
@@ -258,26 +253,6 @@ function nextTrack() {
   Player.progress = 0;
   startPlayback();
   renderPlayerView();
-  updateMiniPlayer();
-}
-
-// ===== 迷你播放器 =====
-function updateMiniPlayer() {
-  const mp = document.getElementById("mini-player");
-  const gameView = document.querySelector('.view[data-view="game"]');
-  if (Player.current) {
-    mp.classList.add("show");
-    document.getElementById("mini-title").textContent = Player.current.name;
-    document.getElementById("mini-artist").textContent = Player.current.artist;
-    document.querySelector(".mini-btn.play").innerHTML = Player.playing ? ICONS.pause : ICONS.play;
-    // 桌面端给游戏视图底部留出迷你播放栏高度；手机端时间栏在顶部，无需额外留白
-    if (gameView && window.innerWidth > 768) {
-      gameView.style.paddingBottom = "56px";
-    }
-  } else {
-    mp.classList.remove("show");
-    if (gameView) gameView.style.paddingBottom = "";
-  }
 }
 
 // ===== 打开作品详情（从 dashboard/发布列表） =====
@@ -292,6 +267,5 @@ function showReleaseDetail(rel) {
     startPlayback();
   }
   renderPlayerView();
-  updateMiniPlayer();
 }
 window.showReleaseDetail = showReleaseDetail;

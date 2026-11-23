@@ -93,12 +93,6 @@ function bindEvents() {
         prevTrack(); break;
       case "player-next":
         nextTrack(); break;
-      case "mini-play":
-        togglePlay(); break;
-      case "mini-prev":
-        prevTrack(); break;
-      case "mini-next":
-        nextTrack(); break;
 
       // 评分
       case "select-rating":

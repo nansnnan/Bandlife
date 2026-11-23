@@ -359,35 +359,7 @@ select { cursor: pointer; }
 .update-log li::before { content: "·"; position: absolute; left: 4px; color: var(--accent); }
 .settings-actions { margin-top: 20px; text-align: center; }
 
-/* ===== 迷你播放器 ===== */
-.mini-player {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  height: 56px;
-  background: rgba(20,20,30,0.95);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  gap: 20px;
-  z-index: 100;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-.mini-player.show { transform: translateY(0); }
-.mini-info { display: flex; align-items: center; gap: 10px; width: 220px; }
-.mini-cover {
-  width: 40px; height: 40px;
-  border-radius: 8px;
-  background: var(--accent-grad);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 18px;
-}
-.mini-text { flex: 1; overflow: hidden; }
-.mini-title { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.mini-artist { font-size: 11px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.mini-controls { display: flex; gap: 8px; align-items: center; }
+/* ===== 播放控制按钮 ===== */
 .mini-btn {
   width: 34px; height: 34px;
   border-radius: 50%;
@@ -397,8 +369,6 @@ select { cursor: pointer; }
 }
 .mini-btn:hover { background: var(--card-hover); }
 .mini-btn.play { background: var(--accent-grad); color: #fff; }
-.mini-progress { flex: 1; height: 4px; background: var(--bg-3); border-radius: 2px; overflow: hidden; }
-.mini-progress-bar { height: 100%; width: 0; background: var(--accent-grad); transition: width 0.1s linear; }
 
 /* ===== 动画 ===== */
 @keyframes fadeInUp {
@@ -664,11 +634,6 @@ select { cursor: pointer; }
 
   /* ===== 内容区留出底部空间 ===== */
   .content { padding: 12px; padding-bottom: 72px; }
-
-  /* ===== 迷你播放器移到导航栏上方 ===== */
-  .mini-player { bottom: 58px; padding: 0 12px; gap: 12px; height: 52px; }
-  .mini-info { width: auto; flex: 1; min-width: 0; }
-  .mini-progress { display: none; }
 
   /* ===== 播放器：左右结构变上下结构 ===== */
   .player-layout { flex-direction: column; height: auto; gap: 12px; }
