@@ -372,30 +372,38 @@ function pickCommentTemplate(ratio) {
 
 function generateComments(release, count) {
   if (release.commentList && release.commentList.length) return release.commentList;
-  const list = [];
-  const ratio = (release.quality || 50) / 100;
+  const T = window.COMMENT_STREAM_TEMPLATES;
+  const U = window.COMMENT_STREAM_USERS;
+  const quality = (release.quality || 50) / 100;
+  const negProb = quality < 0.4 ? 0.4 : quality < 0.6 ? 0.18 : 0.05;
+  const posKeys = ["resonance", "resonance", "resonance", "nostalgic", "sad", "humor", "punchline"];
   const usedText = new Set();
-  const userPool = shuffle(window.COMMENT_USERS);
+  const userPool = shuffle(U);
   const spanDays = Math.max(1, Game.dayIndex - (release.dayIndex || 0));
+  const list = [];
   for (let i = 0; i < count; i++) {
+    const isNeg = Game.rng() < negProb;
+    let pool;
+    if (isNeg) pool = T.negative;
+    else if (Game.rng() < 0.18) pool = T.short;
+    else pool = T[posKeys[Math.floor(Game.rng() * posKeys.length)]];
     let tpl = null;
     for (let t = 0; t < 12; t++) {
-      const cand = pickCommentTemplate(ratio);
+      const cand = pick(pool);
       if (!usedText.has(cand)) { tpl = cand; usedText.add(cand); break; }
     }
-    if (!tpl) tpl = pickCommentTemplate(ratio);
+    if (!tpl) tpl = pick(pool);
     const text = tpl
       .replace(/\{song\}/g, release.name)
       .replace(/\{band\}/g, release.bandName || Game.band?.name || "")
       .replace(/\{style\}/g, release.style || "")
-      .replace(/\{album\}/g, release.name)
-      .replace(/\{ep\}/g, release.name);
-    const dayOffset = Math.floor(Game.rng() * spanDays);
-    const day = Game.dayIndex - dayOffset;
-    const likes = Math.round(Math.pow(Game.rng(), 3) * 8000);
+      .replace(/\{album\}/g, release.name);
+    const day = Game.dayIndex - Math.floor(Game.rng() * spanDays);
+    const likes = Math.round(Math.pow(Game.rng(), 4) * 15000);
     const user = userPool[i % userPool.length] + (i >= userPool.length ? (Math.floor(i / userPool.length) + 1) : "");
     list.push({ user, text, likes, time: formatDateShort(day) });
   }
+  list.sort((a, b) => b.likes - a.likes);
   release.commentList = list;
   return list;
 }

@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.20",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "音乐播放器评论区改用国内音乐平台风格的独立算法，新增 100+ 条共鸣/回忆/深夜/金句/吐槽风格评论模板与 150+ 个贴近现实的用户名，热评按点赞排序。",
+    ],
+  },
+  {
     version: "1.2.19",
     date: "2026-11-24",
     size: "小更新",
