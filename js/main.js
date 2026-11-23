@@ -42,7 +42,7 @@ function tryPlayBgm() {
 
 // ===== 设置视图渲染 =====
 function renderSettings() {
-  document.getElementById("settings-version").textContent = Game.version;
+  document.getElementById("settings-version").textContent = GAME_VERSION;
   const logsEl = document.getElementById("update-logs");
   const log = window.UPDATE_LOGS[0];  // 只展示当前（最新）版本的更新内容
   logsEl.innerHTML = log ? `

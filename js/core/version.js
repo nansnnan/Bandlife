@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.12",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复设置界面「当前版本」不随版本更新显示的问题，现始终显示当前版本号。",
+      "修复背景音乐在约 3 分钟处停止播放的问题（原音频文件在该处损坏，已重新编码修复，可完整播放）。",
+    ],
+  },
+  {
     version: "1.2.11",
     date: "2026-11-23",
     size: "小更新",
