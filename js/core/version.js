@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.21",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "调整播放量增长算法，加入随年代提升的时代因子，后期（播放器普及后）播放量增速明显加快；同时略放缓歌曲热度自然衰减，延长长尾。",
+    ],
+  },
+  {
     version: "1.2.20",
     date: "2026-11-24",
     size: "小更新",

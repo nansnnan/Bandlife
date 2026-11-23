@@ -259,8 +259,10 @@ function growRelease(rel, days) {
   // 增长随年龄衰减（先快后慢）
   const baseRate = rel.quality * (rel.isRival ? 50 : 60);
   const popularityFactor = rel.isRival ? 1 : (1 + Game.stats.reputation / 100);
-  const decay = Math.pow(0.995, ageDays);  // 衰减
-  const daily = baseRate * popularityFactor * decay * days;
+  const decay = Math.pow(0.997, ageDays);  // 衰减（略缓，延长长尾）
+  // 时代因子：随年份推进，播放器与听众规模扩大，播放量增速逐年提升（后期更快）
+  const eraFactor = 1 + Game.dayIndex / 365 * 0.25;
+  const daily = baseRate * popularityFactor * eraFactor * decay * days;
   rel.plays = Math.round((rel.plays || 0) + daily);
   rel.likes = Math.round((rel.likes || 0) + daily * likeRate(rel.quality));
   rel.comments = Math.round((rel.comments || 0) + daily * commentRate(rel.quality) * (rel.isRival ? (rel.cmtF || 1) : 1));
