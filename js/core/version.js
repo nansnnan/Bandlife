@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.27",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "训练档位将平常的 5% 概率分摊给小成功（平常 45%、小成功 25%），其余档位不变。",
+    ],
+  },
+  {
     version: "1.2.26",
     date: "2026-11-24",
     size: "小更新",

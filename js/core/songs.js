@@ -135,12 +135,12 @@ function releaseCost(type, songCount, options) {
 }
 
 // ===== 训练（针对单个成员） =====
-// 训练档位（正态偏成功：平常50%，成功方向合计33%，失败方向合计17%）
+// 训练档位（正态偏成功：平常45%，成功方向合计38%，失败方向合计17%）
 function rollTraining() {
   const r = Math.random() * 100;
   if (r < 3) return { delta: 10, label: "大成功" };
   if (r < 13) return { delta: 5, label: "成功" };
-  if (r < 33) return { delta: 2, label: "小成功" };
+  if (r < 38) return { delta: 2, label: "小成功" };
   if (r < 83) return { delta: 0, label: "平常" };
   if (r < 94) return { delta: -2, label: "小失败" };
   if (r < 98) return { delta: -5, label: "失败" };
