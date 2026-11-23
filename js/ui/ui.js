@@ -571,6 +571,7 @@ function renderTrain() {
             </div>
             <div class="progress" style="margin-bottom:10px;"><div class="progress-bar" style="width:${m.skill}%"></div></div>
             <div style="color:var(--text-faint);font-size:12px;margin-bottom:10px;">累计训练 ${m.trained || 0} 天</div>
+            ${m.lastTrain ? `<div style="margin-bottom:10px;"><span class="badge ${m.lastTrain.delta > 0 ? "badge-green" : m.lastTrain.delta < 0 ? "badge-red" : "badge-blue"}">上次训练：${m.lastTrain.label} ${m.lastTrain.delta >= 0 ? "+" : ""}${m.lastTrain.delta}</span></div>` : ""}
             <div style="display:flex;gap:8px;">
               <button class="btn-time" data-action="train" data-member="${m.id}" data-days="7">训练 7 天</button>
               <button class="btn-time" data-action="train" data-member="${m.id}" data-days="30">训练 30 天</button>

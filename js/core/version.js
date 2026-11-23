@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.24",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "训练结果改为在训练页面（成员卡片）展示，不再出现在首页动态。",
+    ],
+  },
+  {
     version: "1.2.23",
     date: "2026-11-24",
     size: "小更新",

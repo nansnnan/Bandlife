@@ -163,10 +163,9 @@ function trainMember(memberId, days) {
   const delta = roll.delta * mult;
   member.skill = clamp(member.skill + delta, 20, 99);
   member.trained = (member.trained || 0) + days;
+  member.lastTrain = { label: roll.label, delta: Math.round(delta * 10) / 10, days };
   refreshBandSkill();  // 成员能力变化后刷新乐队整体能力
   advanceTime(days);
-  const sign = delta > 0 ? "+" : "";
-  addEvent(`成员 ${member.name}（${member.role}）训练 ${days} 天：${roll.label}，能力 ${sign}${delta.toFixed(1)}。`);
   saveGame();
   return { ok: true, cost, member, label: roll.label, delta };
 }
