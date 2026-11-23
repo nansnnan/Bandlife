@@ -100,6 +100,7 @@ function buildCharts() {
         plays: Math.round(totalPlays * share * jitter),
         sales: Math.round(totalSales * share),
         dayIndex: rel.dayIndex, quality: song.quality, isRival: false,
+        style: rel.style, releaseType: rel.releaseType,
         share, jitter, duration: song.duration, lyrics: song.lyrics || "", source: rel,
       });
     });
@@ -112,6 +113,7 @@ function buildCharts() {
         bandName: rel.bandName || r.name, album: rel.album || rel.name,
         plays: Math.round((rel.plays || 0) * jitter), sales: rel.sales || 0,
         dayIndex: rel.dayIndex, quality: rel.quality, isRival: true,
+        style: rel.style, releaseType: rel.releaseType,
         share: 1, jitter, duration: rel.duration || 240, lyrics: "", source: rel,
       });
     }

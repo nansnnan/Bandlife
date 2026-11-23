@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.18",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复音乐播放器详情中风格与专辑类型显示为 Undefined 的问题。",
+    ],
+  },
+  {
     version: "1.2.17",
     date: "2026-11-24",
     size: "小更新",
