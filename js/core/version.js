@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.57",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "国家重要级长文：青藏铁路开工、西气东输一线开工、中共十六大召开（2500 字以上），累计 9 条。",
+    ],
+  },
+  {
     version: "1.2.56",
     date: "2026-11-24",
     size: "小更新",
