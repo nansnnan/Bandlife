@@ -505,13 +505,24 @@ function applyWeeklyNewsEffects() {
 function _pad2(n){ return (n<10?"0":"")+n; }
 function _dateStr(day){ const d=dayToDate(day); return d.year+"-"+_pad2(d.month)+"-"+_pad2(d.day); }
 
+function festivalPrio(name) {
+  const P = {
+    "春节":120,"国庆节":118,"建党节":100,"建军节":95,"中秋节":82,"除夕":78,"元旦":60,"端午节":70,"清明节":66,"元宵节":60,
+    "重阳节（老年节）":56,"劳动节":80,"南京大屠杀死难者国家公祭日":86,"烈士纪念日":84,"抗战胜利纪念日":80,"九一八纪念日":62,"七七抗战纪念日":60,
+    "台湾光复纪念日":54,"澳门回归祖国纪念日":56,"香港回归祖国纪念日":56,"教师节":62,"儿童节":56,"青年节":56,"妇女节":46,"护士节":42,
+    "记者节":36,"国家宪法日":52,"腊八节":40,"七夕":36,"植树节":30,"学雷锋纪念日":30,"中国人民警察节":42,"全民国家安全教育日":46,
+    "中国航天日":46,"全国防灾减灾日":46,"中国医师节":42,"全民健身日":30,"中国农民丰收节":38,"全民国防教育日":36,"全国消防日":36,"全国交通安全日":30,"中国医师节":42,"二七纪念日":34,"五卅纪念日 / 全国科技工作者日":38
+  };
+  return P[name] || 30;
+}
+
 function getSpecialNews(day) {
   const d = dayToDate(day);
   const y = String(d.year);
   // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
   if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
     const n = window.NEWS_NEW_YEAR[0];
-    return { title: n.title, body: n.body, social: true, level: "major" };
+    return { title: n.title, body: n.body, social: true, level: "major", _prio: 130 };
   }
   // 国家重要级：按事件表日期
   const M = window.MAJOR_EVENTS || [];
@@ -519,7 +530,7 @@ function getSpecialNews(day) {
     if (String(m.year) !== y) continue;
     const mm = m.date.match(/^(\d+)月(\d+)日/);
     if (mm && Number(mm[1]) === d.month && Number(mm[2]) === d.day) {
-      return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major" };
+      return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 110 };
     }
   }
   // 国家级节日
@@ -528,14 +539,15 @@ function getSpecialNews(day) {
   const md = d.month + "月" + d.day + "日";
   const makeFestival = (f) => {
     const fl = (window.NEWS_FESTIVAL_LONG || []).find(x => x.name === f.name);
-    if (fl) return { title: fl.title, body: fl.body, social: true, level: "festival" };
-    return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival" };
+    if (fl) return { title: fl.title, body: fl.body, social: true, level: "festival", _prio: festivalPrio(f.name) };
+    return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival", _prio: festivalPrio(f.name) };
   };
   for (const f of F) {
     if (f.type === "solar" && f.date === md) return makeFestival(f);
     if (f.type === "lunar") {
       const ls = (window.LUNAR_SOLAR || {})[y] || {};
-      for (const k in ls) { if (k.indexOf(f.name) >= 0 && ls[k] === ds) return makeFestival(f); }
+      const core = f.name.split(/[节（]/)[0];
+      for (const k in ls) { if ((k.indexOf(core) >= 0 || k.indexOf(f.name) >= 0) && ls[k] === ds) return makeFestival(f); }
     }
   }
   return null;
@@ -544,10 +556,8 @@ function getSpecialNews(day) {
 function getSpecialNewsWeek(startDay) {
   const list = [];
   for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) list.push(s); }
-  if (!list.length) return null;
-  // 优先正文最长者（重要节日/重大事件的长文 > 一般纪念日占位）
-  list.sort((a, b) => (b.body || "").length - (a.body || "").length);
-  return list[0];
+  list.sort((x, y) => (y._prio || 0) - (x._prio || 0) || (y.body || "").length - (x.body || "").length);
+  return list;
 }
 
 function _pickPlace(rnd, salt, level) {
@@ -584,8 +594,8 @@ function generateNewsIssue(week) {
   const leads = [];
   const usedLong = new Set();
   const usedLeadBands = new Set();
-  const special = getSpecialNewsWeek(startDay);
-  if (special) leads.push(special);
+  const specials = getSpecialNewsWeek(startDay);
+  specials.forEach(s => leads.push(s));
 
   const localLongs = window.NEWS_LOCAL_LONG || [];
   const addSocialLong = (i) => {
@@ -601,8 +611,9 @@ function generateNewsIssue(week) {
 
   const bandLongs = window.NEWS_LONG_TEMPLATES || [];
   const usedBandsLead = new Set();
+  const targetLeads = Math.max(5, leads.length + 1);
   let bi = 0;
-  while (leads.length < 5 && bandLongs.length && bi < 20) {
+  while (leads.length < targetLeads && bandLongs.length && bi < 20) {
     let lt = null;
     for (let t = 0; t < 30; t++) { const c = pick(bandLongs, "bl" + bi + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
     if (!lt) lt = pick(bandLongs, "bl" + bi);
