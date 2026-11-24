@@ -559,7 +559,8 @@ function getSpecialNews(day) {
 function getSpecialNewsWeek(startDay) {
   const list = [];
   for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) list.push(s); }
-  list.sort((x, y) => (y._prio || 0) - (x._prio || 0) || (y.body || "").length - (x.body || "").length);
+  // 同一周多个特殊日：字数多的放头条，字数少的放第二，其余顺延
+  list.sort((a, b) => (b.body || "").length - (a.body || "").length);
   return list;
 }
 

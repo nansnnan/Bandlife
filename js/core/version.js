@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.56",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "国家重要级长文：上海合作组织成立、北京申奥成功、中国正式加入 WTO（2500 字以上），累计 6 条。",
+    ],
+  },
+  {
     version: "1.2.55",
     date: "2026-11-24",
     size: "小更新",
