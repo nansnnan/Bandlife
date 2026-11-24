@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.54",
+    date: "2026-11-24",
+    size: "中更新",
+    items: [
+      "新增节日长文：香港回归、澳门回归、全国交通安全日、南京大屠杀死难者国家公祭日、重阳节、腊八节（1200～1800 字）。",
+      "43 个节日长文全部完成，均按人民日报风格撰写、篇幅达标。",
+    ],
+  },
+  {
     version: "1.2.53",
     date: "2026-11-24",
     size: "小更新",
