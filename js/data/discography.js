@@ -1218,11 +1218,15 @@ window.BAND_DISCOGRAPHY = {
   "回春丹": [
     { name: "耳鬼出风", type: "专辑", date: "2021-10-22", songs: [
        { name: "耳鬼出风", duration: 235 }, { name: "花桥", duration: 240 },
-       { name: "正义", duration: 250 }, { name: "梦特别娇", duration: 258 }, { name: "染春", duration: 245 } ] },
+       { name: "正义", duration: 250 }, { name: "梦特别娇", duration: 258 },
+       { name: "红心番石榴", duration: 232 }, { name: "大地雷公", duration: 230 },
+       { name: "五彩斑斓的黑", duration: 245 }, { name: "分分钟需要你", duration: 228 },
+       { name: "兴奋到死的东西", duration: 236 } ] },
     { name: "大把时间璀璨", type: "专辑", date: "2025-08-29", songs: [
-       { name: "降临", duration: 230 }, { name: "鲜花", duration: 341 },
-       { name: "骑士", duration: 245 }, { name: "梦蝶", duration: 240 }, { name: "喝彩", duration: 235 },
-       { name: "大力出奇迹", duration: 220 }, { name: "福寿螺", duration: 225 }, { name: "宝藏", duration: 238 } ] },
+       { name: "降临", duration: 230 }, { name: "骑士", duration: 245 }, { name: "梦蝶", duration: 240 },
+       { name: "喝彩", duration: 235 }, { name: "福寿螺", duration: 225 }, { name: "大力出奇迹", duration: 220 },
+       { name: "宝藏", duration: 238 }, { name: "松绑", duration: 232 }, { name: "染春", duration: 245 },
+       { name: "鲜花 (I'm Going To Remember U)", duration: 341 } ] },
     { name: "艾蜜莉", type: "单曲", date: "2020-01-01", songs: [ { name: "艾蜜莉", duration: 240 } ] },
     { name: "珍珠走廊", type: "EP", date: "2022-01-01", songs: [
        { name: "珍珠走廊", duration: 235 }, { name: "断气", duration: 220 }, { name: "大地雷公", duration: 230 } ] },
@@ -1243,7 +1247,7 @@ window.BAND_DISCOGRAPHY = {
        { name: "再见米卢", duration: 300 }, { name: "盲人摸象", duration: 320 }, { name: "游戏结束 (Outro)", duration: 200 } ] },
     { name: "Here Comes a New Challenger!", type: "EP", date: "2017-03-03", songs: [
        { name: "电动少女", duration: 300 }, { name: "清醒白日梦", duration: 280 },
-       { name: "晴天露雳", duration: 290 }, { name: "盒子", duration: 260 } ] },
+       { name: "晴天霹雳", duration: 290 }, { name: "盒子", duration: 260 } ] },
     { name: "Continue?", type: "EP", date: "2019-03-01", songs: [
        { name: "游戏继续", duration: 270 }, { name: "漂流人间", duration: 300 },
        { name: "冒险岛", duration: 280 }, { name: "家犬日记", duration: 260 }, { name: "怪兽", duration: 290 } ] },
@@ -1255,19 +1259,67 @@ window.BAND_DISCOGRAPHY = {
        { name: "恐龙最后还是毁灭了", duration: 280 }, { name: "植物人", duration: 270 },
        { name: "武汉", duration: 320 }, { name: "Good bye", duration: 250 } ] },
     { name: "电动少女 (8-Bit Remix)", type: "单曲", date: "2018-03-01", songs: [ { name: "电动少女 (8-Bit Remix)", duration: 280 } ] },
+    { name: "Naive", type: "单曲", date: "2017-10-01", songs: [ { name: "Naive", duration: 270 } ] },
+    { name: "Dog's Diary", type: "单曲", date: "2017-11-01", songs: [ { name: "Dog's Diary", duration: 265 } ] },
   ],
   "犬儒": [
-    { name: "天才艺术家", type: "单曲", date: "2021-01-01", songs: [ { name: "天才艺术家", duration: 240 } ] },
-    { name: "犬儒", type: "EP", date: "2023-01-01", songs: [
-       { name: "天才艺术家", duration: 240 }, { name: "皮囊", duration: 235 }, { name: "旁观者", duration: 245 } ] },
+    { name: "犬儒", type: "EP", date: "2022-12-10", songs: [
+       { name: "志铭", duration: 260 }, { name: "皮囊", duration: 250 },
+       { name: "病", duration: 245 }, { name: "圈", duration: 255 } ] },
+    { name: "天才艺术家", type: "专辑", date: "2023-05-23", songs: [
+       { name: "天才艺术家", duration: 240 }, { name: "阶梯", duration: 235 }, { name: "烂苹果", duration: 245 },
+       { name: "脏", duration: 238 }, { name: "皂角井", duration: 250 }, { name: "苍蝇", duration: 230 },
+       { name: "河边的想象", duration: 260 } ] },
+    { name: "心房", type: "专辑", date: "2025-09-20", songs: [
+       { name: "花丘", duration: 380 }, { name: "上杉朗", duration: 360 }, { name: "妈妈告诉我", duration: 350 },
+       { name: "心房", duration: 390 }, { name: "边云里", duration: 340 }, { name: "送给未来的你", duration: 370 },
+       { name: "I Want Your Love", duration: 330 }, { name: "就算", duration: 345 }, { name: "二楼", duration: 355 },
+       { name: "白鸟", duration: 365 }, { name: "给我", duration: 340 }, { name: "再见了朋友我们终会再相逢", duration: 400 } ] },
+    { name: "旧情歌", type: "单曲", date: "2023-01-01", songs: [ { name: "旧情歌", duration: 250 } ] },
+    { name: "河边的想象", type: "单曲", date: "2023-01-01", songs: [ { name: "河边的想象", duration: 260 } ] },
   ],
   "发光曲线": [
-    { name: "发光曲线", type: "专辑", date: "2016-01-01", songs: [
-       { name: "出发", duration: 330 }, { name: "夜行", duration: 360 }, { name: "静默", duration: 390 } ] },
+    { name: "Glow Curve", type: "专辑", date: "2011-01-01", songs: [
+       { name: "On", duration: 300 }, { name: "迷航", duration: 380 },
+       { name: "鲜花圣母", duration: 360 }, { name: "银河革命计划", duration: 340 } ] },
+    { name: "迷航 (DEDICATE TO MIND)", type: "专辑", date: "2013-09-26", songs: [
+       { name: "On", duration: 300 }, { name: "午夜快车", duration: 358 }, { name: "迷航", duration: 390 },
+       { name: "重影", duration: 340 }, { name: "鲜花圣母", duration: 380 }, { name: "银河革命计划", duration: 330 },
+       { name: "防火墙", duration: 320 }, { name: "醉鸟启示录", duration: 360 }, { name: "Off", duration: 200 } ] },
+    { name: "荒野星", type: "专辑", date: "2019-01-01", songs: [
+       { name: "荒野星", duration: 377 }, { name: "今夜我不关心人类", duration: 374 },
+       { name: "午夜快车", duration: 358 }, { name: "鲜花圣母", duration: 380 },
+       { name: "来临", duration: 205 }, { name: "无限引擎", duration: 503 } ] },
+    { name: "灰烬霓虹 (Invisible History)", type: "专辑", date: "2019-12-27", songs: [
+       { name: "灰烬霓虹", duration: 310 }, { name: "金钱不眠", duration: 423 }, { name: "今夜我不关心人类", duration: 374 },
+       { name: "荒野星", duration: 377 }, { name: "来临", duration: 205 }, { name: "无限引擎", duration: 503 },
+       { name: "午夜快车", duration: 358 }, { name: "银盐之梦", duration: 403 }, { name: "假寐史", duration: 361 }, { name: "鲜花圣母", duration: 409 } ] },
+    { name: "但愿人长久 (Life is a Moracle)", type: "专辑", date: "2023-06-01", songs: [
+       { name: "但愿人长久", duration: 380 }, { name: "筋疲力尽", duration: 360 },
+       { name: "起源：残响", duration: 400 }, { name: "荒原", duration: 350 } ] },
   ],
   "文雀": [
-    { name: "看风景的人", type: "专辑", date: "2015-01-01", songs: [
-       { name: "大雁", duration: 390 }, { name: "看风景的人", duration: 420 }, { name: "河", duration: 360 } ] },
-    { name: "大雁", type: "单曲", date: "2014-01-01", songs: [ { name: "大雁", duration: 390 } ] },
+    { name: "First EP", type: "EP", date: "2010-02-01", songs: [
+       { name: "大雁", duration: 390 }, { name: "南方", duration: 318 },
+       { name: "看风景的人", duration: 360 }, { name: "谁也别管谁", duration: 330 } ] },
+    { name: "彩虹山", type: "专辑", date: "2012-12-07", songs: [
+       { name: "彩虹山 Rainbow Mountain", duration: 479 }, { name: "本星", duration: 360 },
+       { name: "Double Treble", duration: 340 }, { name: "希望的形状", duration: 380 } ] },
+    { name: "看风景的人", type: "EP", date: "2015-05-18", songs: [
+       { name: "大雁", duration: 390 }, { name: "南方", duration: 318 }, { name: "看风景的人", duration: 360 },
+       { name: "谁也别管谁", duration: 330 }, { name: "寒心寺", duration: 345 } ] },
+    { name: "迷路记 Lost Mind", type: "EP", date: "2017-08-20", songs: [
+       { name: "迷路记", duration: 360 }, { name: "某年", duration: 340 }, { name: "归途", duration: 350 } ] },
+    { name: "庙雨连珠", type: "专辑", date: "2018-09-20", songs: [
+       { name: "庙雨", duration: 380 }, { name: "连珠", duration: 360 }, { name: "落梦池", duration: 345 } ] },
+    { name: "儿戏", type: "专辑", date: "2021-03-19", songs: [
+       { name: "儿戏", duration: 370 }, { name: "希望像星星一样闪烁", duration: 515 }, { name: "南方", duration: 318 } ] },
+    { name: "某", type: "EP", date: "2024-03-01", songs: [
+       { name: "某", duration: 360 }, { name: "某年", duration: 340 } ] },
+    { name: "两语", type: "专辑", date: "2026-01-01", songs: [
+       { name: "两语", duration: 380 }, { name: "神游夜话", duration: 400 } ] },
+    { name: "大雁", type: "单曲", date: "2015-05-18", songs: [ { name: "大雁", duration: 390 } ] },
+    { name: "A Letter Buried in Time", type: "EP", date: "2025-05-01", songs: [
+       { name: "A Letter Buried in Time", duration: 326 }, { name: "dizzy", duration: 277 } ] },
   ],
 };

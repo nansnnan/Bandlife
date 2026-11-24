@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.31",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "网络核验并补全 5 支中国乐队的完整音乐数据：回春丹、犬儒、发光曲线、文雀、Chinese Football（共 36 个专辑/EP/单曲条目、154 首歌曲）。",
+      "修正回春丹《大把时间璀璨》10 首、犬儒《犬儒》EP/《天才艺术家》/《心房》12 首、发光曲线《迷航》《灰烬霓虹》《但愿人长久》、文雀多张 EP/专辑、Chinese Football “游戏三部曲” 等曲目。",
+    ],
+  },
+  {
     version: "1.2.30",
     date: "2026-11-24",
     size: "小更新",
