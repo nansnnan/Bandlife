@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.32",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "精准校准 5 支中国乐队的专辑曲目与时长：犬儒 EP《犬儒》5 首、《天才艺术家》、发光曲线《但愿人长久》8 首、《灰烬霓虹》10 首、《荒野星》8 首、文雀《庙雨连珠》5 首、《儿戏》5 首、《两语》5 首等。",
+    ],
+  },
+  {
     version: "1.2.31",
     date: "2026-11-24",
     size: "小更新",

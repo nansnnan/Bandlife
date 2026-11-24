@@ -1264,12 +1264,11 @@ window.BAND_DISCOGRAPHY = {
   ],
   "犬儒": [
     { name: "犬儒", type: "EP", date: "2022-12-10", songs: [
-       { name: "志铭", duration: 260 }, { name: "皮囊", duration: 250 },
-       { name: "病", duration: 245 }, { name: "圈", duration: 255 } ] },
+       { name: "志铭", duration: 306 }, { name: "皮囊", duration: 234 },
+       { name: "病", duration: 226 }, { name: "圈", duration: 350 }, { name: "蔡家关", duration: 117 } ] },
     { name: "天才艺术家", type: "专辑", date: "2023-05-23", songs: [
-       { name: "天才艺术家", duration: 240 }, { name: "阶梯", duration: 235 }, { name: "烂苹果", duration: 245 },
-       { name: "脏", duration: 238 }, { name: "皂角井", duration: 250 }, { name: "苍蝇", duration: 230 },
-       { name: "河边的想象", duration: 260 } ] },
+       { name: "天才艺术家", duration: 218 }, { name: "阶梯", duration: 239 }, { name: "烂苹果", duration: 245 },
+       { name: "脏", duration: 238 }, { name: "皂角井", duration: 250 }, { name: "苍蝇", duration: 230 } ] },
     { name: "心房", type: "专辑", date: "2025-09-20", songs: [
        { name: "花丘", duration: 380 }, { name: "上杉朗", duration: 360 }, { name: "妈妈告诉我", duration: 350 },
        { name: "心房", duration: 390 }, { name: "边云里", duration: 340 }, { name: "送给未来的你", duration: 370 },
@@ -1286,17 +1285,19 @@ window.BAND_DISCOGRAPHY = {
        { name: "On", duration: 300 }, { name: "午夜快车", duration: 358 }, { name: "迷航", duration: 390 },
        { name: "重影", duration: 340 }, { name: "鲜花圣母", duration: 380 }, { name: "银河革命计划", duration: 330 },
        { name: "防火墙", duration: 320 }, { name: "醉鸟启示录", duration: 360 }, { name: "Off", duration: 200 } ] },
-    { name: "荒野星", type: "专辑", date: "2019-01-01", songs: [
-       { name: "荒野星", duration: 377 }, { name: "今夜我不关心人类", duration: 374 },
-       { name: "午夜快车", duration: 358 }, { name: "鲜花圣母", duration: 380 },
-       { name: "来临", duration: 205 }, { name: "无限引擎", duration: 503 } ] },
+    { name: "荒野星", type: "专辑", date: "2019-10-01", songs: [
+       { name: "灰烬霓虹", duration: 310 }, { name: "金钱不眠", duration: 423 },
+       { name: "今夜我不关心人类", duration: 374 }, { name: "荒野星", duration: 377 },
+       { name: "来临", duration: 205 }, { name: "无限引擎", duration: 503 },
+       { name: "银盐之梦", duration: 403 }, { name: "假寐史", duration: 361 } ] },
     { name: "灰烬霓虹 (Invisible History)", type: "专辑", date: "2019-12-27", songs: [
        { name: "灰烬霓虹", duration: 310 }, { name: "金钱不眠", duration: 423 }, { name: "今夜我不关心人类", duration: 374 },
        { name: "荒野星", duration: 377 }, { name: "来临", duration: 205 }, { name: "无限引擎", duration: 503 },
        { name: "午夜快车", duration: 358 }, { name: "银盐之梦", duration: 403 }, { name: "假寐史", duration: 361 }, { name: "鲜花圣母", duration: 409 } ] },
     { name: "但愿人长久 (Life is a Moracle)", type: "专辑", date: "2023-06-01", songs: [
-       { name: "但愿人长久", duration: 380 }, { name: "筋疲力尽", duration: 360 },
-       { name: "起源：残响", duration: 400 }, { name: "荒原", duration: 350 } ] },
+       { name: "起源", duration: 285 }, { name: "狩猎", duration: 326 }, { name: "哇噻考", duration: 304 },
+       { name: "千高原", duration: 275 }, { name: "起源：残响 (feat.梅志勇)", duration: 259 },
+       { name: "太阳之夜", duration: 331 }, { name: "筋疲力尽", duration: 294 }, { name: "卧游", duration: 341 } ] },
   ],
   "文雀": [
     { name: "First EP", type: "EP", date: "2010-02-01", songs: [
@@ -1304,21 +1305,25 @@ window.BAND_DISCOGRAPHY = {
        { name: "看风景的人", duration: 360 }, { name: "谁也别管谁", duration: 330 } ] },
     { name: "彩虹山", type: "专辑", date: "2012-12-07", songs: [
        { name: "彩虹山 Rainbow Mountain", duration: 479 }, { name: "本星", duration: 360 },
-       { name: "Double Treble", duration: 340 }, { name: "希望的形状", duration: 380 } ] },
+       { name: "Double Treble", duration: 340 } ] },
     { name: "看风景的人", type: "EP", date: "2015-05-18", songs: [
        { name: "大雁", duration: 390 }, { name: "南方", duration: 318 }, { name: "看风景的人", duration: 360 },
        { name: "谁也别管谁", duration: 330 }, { name: "寒心寺", duration: 345 } ] },
     { name: "迷路记 Lost Mind", type: "EP", date: "2017-08-20", songs: [
-       { name: "迷路记", duration: 360 }, { name: "某年", duration: 340 }, { name: "归途", duration: 350 } ] },
+       { name: "迷路记", duration: 360 }, { name: "归途", duration: 350 } ] },
     { name: "庙雨连珠", type: "专辑", date: "2018-09-20", songs: [
-       { name: "庙雨", duration: 380 }, { name: "连珠", duration: 360 }, { name: "落梦池", duration: 345 } ] },
+       { name: "春分", duration: 406 }, { name: "浮生若梦", duration: 467 }, { name: "一个人的快乐", duration: 309 },
+       { name: "我长话短说", duration: 375 }, { name: "Double", duration: 268 } ] },
     { name: "儿戏", type: "专辑", date: "2021-03-19", songs: [
-       { name: "儿戏", duration: 370 }, { name: "希望像星星一样闪烁", duration: 515 }, { name: "南方", duration: 318 } ] },
+       { name: "伏", duration: 446 }, { name: "儿戏", duration: 392 }, { name: "落梦池", duration: 414 },
+       { name: "不回去了", duration: 427 }, { name: "希望像星星一样闪烁", duration: 515 } ] },
     { name: "某", type: "EP", date: "2024-03-01", songs: [
-       { name: "某", duration: 360 }, { name: "某年", duration: 340 } ] },
-    { name: "两语", type: "专辑", date: "2026-01-01", songs: [
-       { name: "两语", duration: 380 }, { name: "神游夜话", duration: 400 } ] },
+       { name: "某时", duration: 360 }, { name: "某日", duration: 340 }, { name: "某月", duration: 350 } ] },
+    { name: "两语", type: "专辑", date: "2026-03-20", songs: [
+       { name: "银湾", duration: 380 }, { name: "天目山路", duration: 360 }, { name: "流", duration: 350 },
+       { name: "幻季", duration: 340 }, { name: "神游夜话", duration: 400 } ] },
     { name: "大雁", type: "单曲", date: "2015-05-18", songs: [ { name: "大雁", duration: 390 } ] },
+    { name: "我长话短说", type: "单曲", date: "2018-09-10", songs: [ { name: "我长话短说", duration: 375 } ] },
     { name: "A Letter Buried in Time", type: "EP", date: "2025-05-01", songs: [
        { name: "A Letter Buried in Time", duration: 326 }, { name: "dizzy", duration: 277 } ] },
   ],
