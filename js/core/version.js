@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.46",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "节日长讯按人民日报风格编写，首批上线元旦、春节、国庆（1200～1800 字）。",
+      "周刊同日多节日/事件时优先采用长文更重要者；每年 1 月 1 日新年贺词恢复。",
+      "重建先前丢失的地方社会模板（短讯 100、长讯 50）。",
+    ],
+  },
+  {
     version: "1.2.45",
     date: "2026-11-24",
     size: "小更新",

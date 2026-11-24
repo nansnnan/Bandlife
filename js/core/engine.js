@@ -526,23 +526,28 @@ function getSpecialNews(day) {
   const F = window.FESTIVALS || [];
   const ds = _dateStr(day);
   const md = d.month + "月" + d.day + "日";
+  const makeFestival = (f) => {
+    const fl = (window.NEWS_FESTIVAL_LONG || []).find(x => x.name === f.name);
+    if (fl) return { title: fl.title, body: fl.body, social: true, level: "festival" };
+    return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival" };
+  };
   for (const f of F) {
-    if (f.type === "solar" && f.date === md) {
-      return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival" };
-    }
+    if (f.type === "solar" && f.date === md) return makeFestival(f);
     if (f.type === "lunar") {
       const ls = (window.LUNAR_SOLAR || {})[y] || {};
-      for (const k in ls) { if (k.indexOf(f.name) >= 0 && ls[k] === ds) {
-        return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival" };
-      } }
+      for (const k in ls) { if (k.indexOf(f.name) >= 0 && ls[k] === ds) return makeFestival(f); }
     }
   }
   return null;
 }
 
 function getSpecialNewsWeek(startDay) {
-  for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) return s; }
-  return null;
+  const list = [];
+  for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) list.push(s); }
+  if (!list.length) return null;
+  // 优先正文最长者（重要节日/重大事件的长文 > 一般纪念日占位）
+  list.sort((a, b) => (b.body || "").length - (a.body || "").length);
+  return list[0];
 }
 
 function _pickPlace(rnd, salt, level) {
