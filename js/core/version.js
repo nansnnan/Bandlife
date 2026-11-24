@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.60",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "国家重要级长文两批共 8 条：反分裂国家法、神舟六号、十六届五中全会、取消农业税；社会主义荣辱观、青藏铁路通车、三峡大坝建成、十六届六中全会，累计 25 条（均 2500 字以上）。",
+    ],
+  },
+  {
     version: "1.2.59",
     date: "2026-11-24",
     size: "小更新",
