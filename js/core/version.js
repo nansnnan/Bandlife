@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.61",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "国家重要级长文两批共 8 条：物权法、中共十七大、嫦娥一号、劳动合同法；汶川抗震救灾（5月12日至7月31日持续）、北京奥运会（8月8日至24日持续）、神舟七号（9月25日至10月5日持续），累计 32 条。",
+    ],
+  },
+  {
     version: "1.2.60",
     date: "2026-11-24",
     size: "小更新",
