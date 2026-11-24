@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.29",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增日本动漫乐队第二批（13 支）：BanG Dream! 的 Poppin'Party/Roselia/Afterglow/Pastel*Palettes/Hello, Happy World!/Morfonica/RAISE A SUILEN/Ave Mujica，《NANA》的 BLAST/Trapnest，《Given》，Girls Band Cry 的 トゲナシトゲアリ，《Show by Rock!!》的 Plasmagica。",
+      "以上乐队均含专辑与单曲作品，与普通竞争对手同榜竞技，并按真实成立年份出场。",
+      "新增「后硬核」「古典摇滚」风格；已行网络核验 Given、トゲナシトゲアリ 的作品。",
+    ],
+  },
+  {
     version: "1.2.28",
     date: "2026-11-24",
     size: "小更新",

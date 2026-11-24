@@ -43,6 +43,19 @@ window.RIVAL_BANDS = [
   { name: "結束バンド", en: "Kessoku Band", style: "日系摇滚", origin: "东京都", formed: 2022, popularity: 9, desc: "出自《孤独摇滚！》（ぼっち・ざ・ろっく！），四人女子摇滚乐队，青春感与扎实演奏兼备。" },
   { name: "放学后茶会", en: "Ho-kago Tea Time", style: "流行摇滚", origin: "东京都", formed: 2009, popularity: 8, desc: "出自《轻音少女》（けいおん！），轻快温暖的校园流行摇滚，治愈系代表作。" },
   { name: "MyGO!!!!!", en: "MyGO!!!!!", style: "日系摇滚", origin: "东京都", formed: 2023, popularity: 8, desc: "出自《BanG Dream!》，以真实青春与情绪张力的日系摇滚著称。" },
+  { name: "Poppin'Party", en: "Poppin'Party", style: "流行摇滚", origin: "东京都", formed: 2015, popularity: 8, desc: "出自《BanG Dream!》，以“星之鼓动”为名的青春流行摇滚乐队。" },
+  { name: "Roselia", en: "Roselia", style: "日系摇滚", origin: "东京都", formed: 2017, popularity: 8, desc: "出自《BanG Dream!》，暗黑哥特风格、演奏力极高的实力派乐队。" },
+  { name: "Afterglow", en: "Afterglow", style: "流行摇滚", origin: "东京都", formed: 2017, popularity: 7, desc: "出自《BanG Dream!》，青梅竹马五人组，温暖有力的流行摇滚。" },
+  { name: "Pastel*Palettes", en: "Pastel*Palettes", style: "流行摇滚", origin: "东京都", formed: 2017, popularity: 7, desc: "出自《BanG Dream!》，偶像风格的明亮流行摇滚。" },
+  { name: "Hello, Happy World!", en: "Hello, Happy World!", style: "流行摇滚", origin: "东京都", formed: 2017, popularity: 7, desc: "出自《BanG Dream!》，以笑容与治愈为信条的欢乐乐队。" },
+  { name: "Morfonica", en: "Morfonica", style: "古典摇滚", origin: "东京都", formed: 2020, popularity: 7, desc: "出自《BanG Dream!》，小提琴与摇滚融合的古典摇滚乐队。" },
+  { name: "RAISE A SUILEN", en: "RAISE A SUILEN", style: "日系摇滚", origin: "东京都", formed: 2018, popularity: 8, desc: "出自《BanG Dream!》，重型电子摇滚与高速演奏的代表。" },
+  { name: "Ave Mujica", en: "Ave Mujica", style: "哥特摇滚", origin: "东京都", formed: 2023, popularity: 8, desc: "出自《BanG Dream!》，暗黑戏剧化、哥特金属气质的乐队。" },
+  { name: "BLAST（Black Stones）", en: "Black Stones", style: "朋克摇滚", origin: "东京都", formed: 1999, popularity: 8, desc: "出自《NANA》，充满朋克爆发力与街头气息的乐队。" },
+  { name: "Trapnest", en: "Trapnest", style: "流行摇滚", origin: "东京都", formed: 2000, popularity: 8, desc: "出自《NANA》，时尚华丽的顶流流行摇滚乐队。" },
+  { name: "Given", en: "Given", style: "日系摇滚", origin: "东京都", formed: 2019, popularity: 8, desc: "出自《Given》，以真挚情绪与吉他驱动的青春摇滚乐队。" },
+  { name: "トゲナシトゲアリ", en: "Togenashi Togeari", style: "日系摇滚", origin: "东京都", formed: 2023, popularity: 9, desc: "出自《Girls Band Cry》，痛感与呐喊交织的日系摇滚，近年备受瞩目。" },
+  { name: "Plasmagica", en: "Plasmagica", style: "流行摇滚", origin: "东京都", formed: 2015, popularity: 6, desc: "出自《Show by Rock!!》，猫系少女组成的活力流行摇滚乐队。" },
 ];
 
 // 台湾地级市补充（用于出道地区，附件 sheet 中台湾仅列"台湾省"）

@@ -39,6 +39,8 @@ window.MUSIC_STYLES = [
   { name: "民谣金属摇滚", en: "Folk Rock Metal", category: "摇滚", popularity: 6, difficulty: 6, desc: "摇滚与金属、民谣的混合，兼顾旋律与力量。" },
   { name: "日系摇滚", en: "J-Rock", category: "摇滚", popularity: 8, difficulty: 5, desc: "日本摇滚，旋律化、编曲精致，常与动画、游戏主题曲紧密相连。" },
   { name: "动画摇滚", en: "Anime Rock", category: "摇滚", popularity: 8, difficulty: 5, desc: "日本动画主题曲风格的摇滚，燃向、旋律性极强、青春感十足。" },
+  { name: "后硬核", en: "Post-Hardcore", category: "摇滚", popularity: 6, difficulty: 7, desc: "硬核的情绪化延伸，猛烈与旋律、嘶吼与清唱交织。" },
+  { name: "古典摇滚", en: "Orchestral Rock", category: "摇滚", popularity: 6, difficulty: 7, desc: "摇滚乐队与管弦乐融合，编制宏大、旋律优雅。" },
 
   // ===== 金属（独立大类补充） =====
   { name: "旋律死亡金属", en: "Melodic Death Metal", category: "金属", popularity: 5, difficulty: 8, desc: "死亡金属的旋律化，双吉他和声与悲壮旋律。" },
