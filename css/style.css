@@ -813,3 +813,15 @@ select { cursor: pointer; }
   .news-masthead-red { font-size: 38px; letter-spacing: 6px; }
   .news-top { flex-direction: column; align-items: flex-start; }
 }
+
+/* 新闻两栏与短讯分组 */
+.news-cols { display: flex; gap: 22px; margin-bottom: 14px; }
+.news-col { flex: 1; min-width: 0; }
+.news-cols .news-block { border-bottom: none; margin-bottom: 10px; padding-bottom: 0; }
+.news-shorts { column-count: 2; column-gap: 24px; border-top: 2px solid #b3241f; padding-top: 12px; margin-top: 8px; }
+.news-short-group { break-inside: avoid-column; margin-bottom: 12px; }
+.news-short-group h3 { font-size: 15px; font-weight: 900; color: #b3241f; margin: 0 0 6px; padding-bottom: 4px; border-bottom: 1px solid #e6e0d4; }
+@media (max-width: 768px) {
+  .news-cols { flex-direction: column; gap: 0; }
+  .news-shorts { column-count: 1; }
+}

@@ -501,85 +501,138 @@ function applyWeeklyNewsEffects() {
   });
 }
 
+// ===== 社会新闻：日期与地点 =====
+function _pad2(n){ return (n<10?"0":"")+n; }
+function _dateStr(day){ const d=dayToDate(day); return d.year+"-"+_pad2(d.month)+"-"+_pad2(d.day); }
+
+function getSpecialNews(day) {
+  const d = dayToDate(day);
+  const y = String(d.year);
+  // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
+  if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
+    const n = window.NEWS_NEW_YEAR[0];
+    return { title: n.title, body: n.body, social: true, level: "major" };
+  }
+  // 国家重要级：按事件表日期
+  const M = window.MAJOR_EVENTS || [];
+  for (const m of M) {
+    if (String(m.year) !== y) continue;
+    const mm = m.date.match(/^(\d+)月(\d+)日/);
+    if (mm && Number(mm[1]) === d.month && Number(mm[2]) === d.day) {
+      return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major" };
+    }
+  }
+  // 国家级节日
+  const F = window.FESTIVALS || [];
+  const ds = _dateStr(day);
+  const md = d.month + "月" + d.day + "日";
+  for (const f of F) {
+    if (f.type === "solar" && f.date === md) {
+      return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival" };
+    }
+    if (f.type === "lunar") {
+      const ls = (window.LUNAR_SOLAR || {})[y] || {};
+      for (const k in ls) { if (k.indexOf(f.name) >= 0 && ls[k] === ds) {
+        return { title: f.name + "：各地举行丰富多彩的庆祝活动", body: f.act + "。\n\n（本报编辑部）", social: true, level: "festival" };
+      } }
+    }
+  }
+  return null;
+}
+
+function getSpecialNewsWeek(startDay) {
+  for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) return s; }
+  return null;
+}
+
+function _pickPlace(rnd, salt, level) {
+  const CHINA = window.CHINA_REGIONS || [];
+  if (!CHINA.length) return { place: "某地", level: level };
+  const pick = (arr, s) => arr[Math.floor(rnd(s) * arr.length) % Math.max(1, arr.length)];
+  const prov = pick(CHINA, salt + "p");
+  const city = pick(prov.cities, salt + "c");
+  const county = pick(city.districts, salt + "d");
+  const countyName = (county && county !== city.name) ? county : "";
+  if (level === "county") {
+    if (!countyName) return { place: city.name, level: "city" };
+    const prefix = (city.name === prov.province) ? prov.province : city.name;
+    return { place: prefix + countyName, level: "county" };
+  }
+  if (level === "city") return { place: city.name, level: "city" };
+  return { place: prov.province, level: "province" };
+}
+
 function generateNewsIssue(week) {
-  const startDay = week * 7, endDay = startDay + 7;
+  const startDay = week * 7;
   const issueNo = week + 1;
   const date = dayToDate(startDay);
-  const allBands = window.RIVAL_BANDS || [];
-  const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
-  const R = debuted.length ? debuted : allBands;
-  const cities = ["北京","上海","广州","深圳","成都","武汉","杭州","西安","南京","重庆","长沙","郑州"];
   const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
   const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
   const albumsOf = (name) => ((window.BAND_DISCOGRAPHY && window.BAND_DISCOGRAPHY[name]) || []).map(x => x.name);
-  const fill = (tpl, salt) => {
-    const bObj = pick(R, salt + "b");
-    const bAlbums = albumsOf(bObj.name);
-    const album = bAlbums.length ? pick(bAlbums, salt + "a") : "新专辑";
-    return tpl
-      .replace(/\{band\}/g, bObj.name)
-      .replace(/\{style\}/g, bObj.style)
-      .replace(/\{album\}/g, album)
-      .replace(/\{city\}/g, pick(cities, salt + "c"));
-  };
-  const longTpls = window.NEWS_LONG_TEMPLATES || [];
-  const socialLongs = window.NEWS_LONG_OTHER_TEMPLATES || [];
-  const otherTplsAll = window.NEWS_OTHER_TEMPLATES || [];
+  const allBands = window.RIVAL_BANDS || [];
+  const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
+  const B = debuted.length ? debuted : allBands;
+  const cities = ["北京","上海","广州","深圳","成都","武汉","杭州","西安","南京","重庆"];
+  const pickLevel = (salt) => { const r = rnd(salt); return r < 0.6 ? "county" : r < 0.9 ? "city" : "province"; };
+
+  // ===== 长讯 5 篇：社会 ≥2 / 乐坛 ≤3 =====
+  const leads = [];
   const usedLong = new Set();
   const usedLeadBands = new Set();
-  const leads = [];
-  // 长文固定 5 篇；有社会模板时 4 乐坛 + 1 社会，否则 5 篇乐坛
-  const totalLead = 5;
-  const socialLeadCount = socialLongs.length ? 1 : 0;
-  const bandLeadCount = totalLead - socialLeadCount;
-  for (let i = 0; i < bandLeadCount; i++) {
+  const special = getSpecialNewsWeek(startDay);
+  if (special) leads.push(special);
+
+  const localLongs = window.NEWS_LOCAL_LONG || [];
+  const addSocialLong = (i) => {
+    const lvl = pickLevel("ll" + i);
+    const pool = localLongs.filter(x => x.level === lvl);
+    const item = pick(pool.length ? pool : localLongs, "lli" + i);
+    const pl = _pickPlace(rnd, "llp" + i, lvl);
+    const fill = (t) => t.replace(/\{place\}/g, pl.place);
+    leads.push({ title: fill(item.title), body: fill(item.body), social: true, level: lvl });
+  };
+  let si = 0;
+  while (leads.filter(l => l.social).length < 2 && localLongs.length && si < 6) { addSocialLong(si++); }
+
+  const bandLongs = window.NEWS_LONG_TEMPLATES || [];
+  const usedBandsLead = new Set();
+  let bi = 0;
+  while (leads.length < 5 && bandLongs.length && bi < 20) {
     let lt = null;
-    for (let t = 0; t < 30; t++) { const c = pick(longTpls, "lead" + i + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
-    if (!lt) lt = pick(longTpls, "lead" + i);
-    let bObj = pick(R, "leadB" + i);
-    for (let k = 0; k < 12 && usedLeadBands.has(bObj.name) && usedLeadBands.size < R.length; k++) bObj = pick(R, "leadB" + i + "_" + k);
-    usedLeadBands.add(bObj.name);
-    const bAlbums = albumsOf(bObj.name);
-    const la = bAlbums.length ? pick(bAlbums, "leadA" + i) : "新专辑";
-    const lc = pick(cities, "leadC" + i);
-    const fillLead = (t) => t.replace(/\{band\}/g, bObj.name).replace(/\{style\}/g, bObj.style).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
-    leads.push({ title: fillLead(lt.title), body: fillLead(lt.body), social: false });
+    for (let t = 0; t < 30; t++) { const c = pick(bandLongs, "bl" + bi + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
+    if (!lt) lt = pick(bandLongs, "bl" + bi);
+    let bObj = pick(B, "blb" + bi);
+    for (let k = 0; k < 12 && usedBandsLead.has(bObj.name) && usedBandsLead.size < B.length; k++) bObj = pick(B, "blb" + bi + "_" + k);
+    usedBandsLead.add(bObj.name);
+    const al = albumsOf(bObj.name); const la = al.length ? pick(al, "bla" + bi) : "新专辑";
+    const fillB = (t) => t.replace(/\{band\}/g, bObj.name).replace(/\{style\}/g, bObj.style).replace(/\{album\}/g, la).replace(/\{city\}/g, pick(cities, "blc" + bi));
+    leads.push({ title: fillB(lt.title), body: fillB(lt.body), social: false });
+    bi++;
   }
-  if (socialLongs.length) {
-    let st = null;
-    for (let t = 0; t < 30; t++) { const c = pick(socialLongs, "soc" + t); if (!usedLong.has(c)) { st = c; usedLong.add(c); break; } }
-    if (!st) st = pick(socialLongs, "soc");
-    const fillCity = (t) => t.replace(/\{city\}/g, pick(cities, "socC"));
-    const sl = { title: fillCity(st.title), body: fillCity(st.body), social: true };
-    const pos = Math.floor(rnd("leadPos") * (leads.length + 1));
-    leads.splice(pos, 0, sl);
-  }
-  // 短讯 5-10 篇；有社会模板时社会约 25%（至少 1），否则全乐坛
-  const bandTpls = window.NEWS_BAND_TEMPLATES || [];
-  const otherTpls = otherTplsAll;
-  const shortCount = 5 + Math.floor(rnd("sc") * 6);
-  const socialShort = otherTpls.length ? Math.max(1, Math.round(shortCount * 0.25)) : 0;
-  const bandShort = shortCount - socialShort;
+
+  // ===== 短讯 10 篇：社会 ≥4 / 乐坛 6 =====
   const items = [];
-  const used = new Set();
-  for (let i = 0; i < bandShort; i++) {
-    let tpl = null;
-    for (let t = 0; t < 30; t++) { const c = pick(bandTpls, "bs" + i + "_" + t); if (!used.has(c)) { tpl = c; used.add(c); break; } }
-    if (!tpl) tpl = pick(bandTpls, "bs" + i);
-    items.push({ band: true, text: fill(tpl, "bi" + i + "_") });
+  const usedShort = new Set();
+  const localShorts = window.NEWS_LOCAL_SHORT || [];
+  for (let i = 0; i < 4 && localShorts.length; i++) {
+    const lvl = pickLevel("sl" + i);
+    const pool = localShorts.filter(x => x.level === lvl);
+    const it = pick(pool.length ? pool : localShorts, "sli" + i);
+    const pl = _pickPlace(rnd, "slp" + i, lvl);
+    items.push({ band: false, text: it.text.replace(/\{place\}/g, pl.place) });
   }
-  for (let i = 0; i < socialShort; i++) {
+  const bandShorts = window.NEWS_BAND_TEMPLATES || [];
+  for (let i = 0; i < 6 && bandShorts.length; i++) {
     let tpl = null;
-    for (let t = 0; t < 30; t++) { const c = pick(otherTpls, "os" + i + "_" + t); if (!used.has(c)) { tpl = c; used.add(c); break; } }
-    if (!tpl) tpl = pick(otherTpls, "os" + i);
-    items.push({ band: false, text: tpl.replace(/\{city\}/g, pick(cities, "oci" + i)) });
+    for (let t = 0; t < 30; t++) { const c = pick(bandShorts, "bs" + i + "_" + t); if (!usedShort.has(c)) { tpl = c; usedShort.add(c); break; } }
+    if (!tpl) tpl = pick(bandShorts, "bs" + i);
+    const bObj = pick(B, "bsb" + i);
+    const al = albumsOf(bObj.name); const la = al.length ? pick(al, "bsa" + i) : "新专辑";
+    items.push({ band: true, text: tpl.replace(/\{band\}/g, bObj.name).replace(/\{style\}/g, bObj.style).replace(/\{album\}/g, la).replace(/\{city\}/g, pick(cities, "bsc" + i)) });
   }
-  const order = items.map((it, idx) => ({ it, k: rnd("ord" + idx) })).sort((p, q) => p.k - q.k).map(o => o.it);
-  items.length = 0;
-  order.forEach(o => items.push(o));
+
   const metaKw = ["沙盒模式","乐队生涯","资金无限","自由创作","正式成立"];
-  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);
-  const foundEv = (Game.events || []).find(e => e.day >= startDay && e.day < endDay && (e.text || "").indexOf("正式成立") >= 0);
-  if (foundEv && Game.band) items.unshift({ band: true, text: `新锐${Game.band.style}乐队「${Game.band.name}」正式成立，引发乐坛关注与期待。` });
+  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < startDay + 7 && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);
   return { issueNo, startDay, date, leads, items, weekEvents };
 }
+

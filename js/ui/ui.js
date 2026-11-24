@@ -297,18 +297,31 @@ function buildNewsIssue(week) {
 }
 
 function renderNewsIssue(issue) {
-  const WK = ["日", "一", "二", "三", "四", "五", "六"];
+  const WK = ["日","一","二","三","四","五","六"];
   const wk = WK[(((issue.startDay + 6) % 7) + 7) % 7];
   const evHtml = issue.weekEvents && issue.weekEvents.length
     ? `<div class="news-events">${issue.weekEvents.map(e => `<div class="news-event">· ${escapeHtml(e.text)}</div>`).join("")}</div>`
     : "";
-  const leadsHtml = (issue.leads || []).map((l, i) => {
+  const leads = issue.leads || [];
+  const renderLead = (l, big) => {
     const paras = (l.body || "").split("\n").filter(Boolean).map(p => `<p>${escapeHtml(p)}</p>`).join("");
-    return `<div class="news-block ${i === 0 ? "lead" : ""}">
-      <div class="news-headline ${i === 0 ? "big" : ""}">${escapeHtml(l.title)}</div>
-      <div class="news-article ${i === 0 ? "cols3" : "cols2"}">${paras}</div>
+    return `<div class="news-block ${big ? "lead" : ""}">
+      <div class="news-headline ${big ? "big" : ""}">${escapeHtml(l.title)}</div>
+      <div class="news-article ${big ? "cols3" : "cols2"}">${paras}</div>
     </div>`;
-  }).join("");
+  };
+  const head = leads[0];
+  const rest = leads.slice(1);
+  const headHtml = head ? renderLead(head, true) : "";
+  const restHtml = rest.length ? `<div class="news-cols">
+    <div class="news-col">${rest.slice(0, 2).map(l => renderLead(l, false)).join("")}</div>
+    <div class="news-col">${rest.slice(2, 4).map(l => renderLead(l, false)).join("")}</div>
+  </div>` : "";
+  const socialItems = (issue.items || []).filter(i => !i.band);
+  const bandItems = (issue.items || []).filter(i => i.band);
+  const shortGroup = (title, arr) => arr.length
+    ? `<div class="news-short-group"><h3>${title}</h3>${arr.map(i => `<div class="news-short"><p>${escapeHtml(i.text)}</p></div>`).join("")}</div>`
+    : "";
   return `
     <div class="news-paper">
       <div class="news-top">
@@ -321,10 +334,12 @@ function renderNewsIssue(issue) {
         </div>
       </div>
       <div class="news-rule"></div>
-      ${leadsHtml}
+      ${headHtml}
+      ${restHtml}
       ${evHtml}
       <div class="news-shorts">
-        ${issue.items.map(it => `<div class="news-short"><h4>${it.band ? "乐坛" : "社会"}</h4><p>${escapeHtml(it.text)}</p></div>`).join("")}
+        ${shortGroup("社会", socialItems)}
+        ${shortGroup("乐坛", bandItems)}
       </div>
     </div>`;
 }
