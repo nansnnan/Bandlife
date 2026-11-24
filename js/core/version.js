@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.53",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增节日长文：九一八纪念日、抗战胜利纪念日、烈士纪念日、中国农民丰收节、全民国防教育日、台湾光复纪念日（1200～1800 字），累计 37 篇。",
+    ],
+  },
+  {
     version: "1.2.52",
     date: "2026-11-24",
     size: "小更新",
