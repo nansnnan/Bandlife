@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.52",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增节日长文：全民健身日、中国人民警察节、二七纪念日、学雷锋纪念日、全国科技工作者日、七七抗战纪念日（人民日报风格，1200～1800 字），累计 31 篇。",
+    ],
+  },
+  {
     version: "1.2.51",
     date: "2026-11-24",
     size: "小更新",
