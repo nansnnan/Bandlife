@@ -317,7 +317,10 @@ function buildNewsIssue(week) {
   let lead = null;
   if (longTpls.length) {
     const lt = pick(longTpls, "lead");
-    lead = { title: fill(lt.title, "l0_"), body: fill(lt.body, "l1_") };
+    const lb = pick(bandNames, "leadB"), ls = pick(styles, "leadS");
+    const la = pick(albums.length ? albums : ["新专辑"], "leadA"), lc = pick(cities, "leadC");
+    const fillLead = (t) => t.replace(/\{band\}/g, lb).replace(/\{style\}/g, ls).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
+    lead = { title: fillLead(lt.title), body: fillLead(lt.body) };
   }
   // 短讯 7 条：5 乐坛 + 2 社会（加长文共 6/8 ≈ 75% 乐队相关）
   const bandTpls = window.NEWS_BAND_TEMPLATES || [];

@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.36",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复新闻头条标题与正文中所写乐队名不一致的问题，同一篇新闻现使用同一乐队、专辑与城市。",
+    ],
+  },
+  {
     version: "1.2.35",
     date: "2026-11-24",
     size: "小更新",
