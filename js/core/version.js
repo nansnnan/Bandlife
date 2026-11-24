@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.48",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复社会长文/短讯出现重复段的问题，同一期不再重复选用同一模板。",
+      "优化随机散列算法，避免相近种子取到相同的地名与内容。",
+    ],
+  },
+  {
     version: "1.2.47",
     date: "2026-11-24",
     size: "小更新",

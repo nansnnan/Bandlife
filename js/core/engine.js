@@ -327,9 +327,10 @@ function commentRate(quality) {
 
 // ===== 评分生成 =====
 function seededUnit(seed) {
-  let h = 0;
-  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
-  return (h % 10000) / 10000;
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) { h ^= seed.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995) >>> 0; h ^= h >>> 15;
+  return (h >>> 0) / 4294967296;
 }
 
 // 为已发布作品生成各平台评分
@@ -598,10 +599,13 @@ function generateNewsIssue(week) {
   specials.forEach(s => leads.push(s));
 
   const localLongs = window.NEWS_LOCAL_LONG || [];
+  const usedLocalLong = new Set();
   const addSocialLong = (i) => {
     const lvl = pickLevel("ll" + i);
     const pool = localLongs.filter(x => x.level === lvl);
-    const item = pick(pool.length ? pool : localLongs, "lli" + i);
+    let item = null;
+    for (let t = 0; t < 30; t++) { const c = pick(pool.length ? pool : localLongs, "lli" + i + "_" + t); if (c && !usedLocalLong.has(c)) { item = c; usedLocalLong.add(c); break; } }
+    if (!item) item = pick(pool.length ? pool : localLongs, "lli" + i);
     const pl = _pickPlace(rnd, "llp" + i, lvl);
     const fill = (t) => t.replace(/\{place\}/g, pl.place);
     leads.push({ title: fill(item.title), body: fill(item.body), social: true, level: lvl });
@@ -630,10 +634,13 @@ function generateNewsIssue(week) {
   const items = [];
   const usedShort = new Set();
   const localShorts = window.NEWS_LOCAL_SHORT || [];
+  const usedLocalShort = new Set();
   for (let i = 0; i < 4 && localShorts.length; i++) {
     const lvl = pickLevel("sl" + i);
     const pool = localShorts.filter(x => x.level === lvl);
-    const it = pick(pool.length ? pool : localShorts, "sli" + i);
+    let it = null;
+    for (let t = 0; t < 30; t++) { const c = pick(pool.length ? pool : localShorts, "sli" + i + "_" + t); if (c && !usedLocalShort.has(c)) { it = c; usedLocalShort.add(c); break; } }
+    if (!it) it = pick(pool.length ? pool : localShorts, "sli" + i);
     const pl = _pickPlace(rnd, "slp" + i, lvl);
     items.push({ band: false, text: it.text.replace(/\{place\}/g, pl.place) });
   }
