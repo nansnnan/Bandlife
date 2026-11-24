@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.28",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增日本动漫乐队（第一批）：《孤独摇滚！》結束バンド、《轻音少女》放学后茶会、《BanG Dream!》MyGO!!!!!，含专辑与单曲作品。",
+      "新增「日系摇滚」「动画摇滚」两种音乐风格。",
+      "动漫乐队作品曲名统一为日文原名（中译名），与普通竞争对手同榜竞技。",
+    ],
+  },
+  {
     version: "1.2.27",
     date: "2026-11-24",
     size: "小更新",

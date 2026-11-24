@@ -37,6 +37,8 @@ window.MUSIC_STYLES = [
   { name: "国摇", en: "Chinese Rock", category: "摇滚", popularity: 8, difficulty: 5, desc: "中国本土摇滚，融入中文歌词与中国现实关怀，本土特色鲜明。" },
   { name: "土摇", en: "Tuyao", category: "摇滚", popularity: 7, difficulty: 4, desc: "中国本土化摇滚的俗称，旋律通俗、接地气，传唱度高。" },
   { name: "民谣金属摇滚", en: "Folk Rock Metal", category: "摇滚", popularity: 6, difficulty: 6, desc: "摇滚与金属、民谣的混合，兼顾旋律与力量。" },
+  { name: "日系摇滚", en: "J-Rock", category: "摇滚", popularity: 8, difficulty: 5, desc: "日本摇滚，旋律化、编曲精致，常与动画、游戏主题曲紧密相连。" },
+  { name: "动画摇滚", en: "Anime Rock", category: "摇滚", popularity: 8, difficulty: 5, desc: "日本动画主题曲风格的摇滚，燃向、旋律性极强、青春感十足。" },
 
   // ===== 金属（独立大类补充） =====
   { name: "旋律死亡金属", en: "Melodic Death Metal", category: "金属", popularity: 5, difficulty: 8, desc: "死亡金属的旋律化，双吉他和声与悲壮旋律。" },

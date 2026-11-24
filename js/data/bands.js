@@ -40,6 +40,9 @@ window.RIVAL_BANDS = [
   { name: "旅行团", en: "The Life Journey", style: "独立流行", origin: "柳州市", formed: 2005, popularity: 7, desc: "清新明媚的独立流行，旋律悦耳。" },
   { name: "落日飞车", en: "Sunset Rollercoaster", style: "梦幻流行", origin: "台北市", formed: 2009, popularity: 7, desc: "复古浪漫的梦幻流行，慵懒迷人。" },
   { name: "声音碎片", en: "Sound Fragment", style: "独立摇滚", origin: "北京市", formed: 2001, popularity: 7, desc: "文艺气质的独立摇滚，歌词隽永。" },
+  { name: "結束バンド", en: "Kessoku Band", style: "日系摇滚", origin: "东京都", formed: 2022, popularity: 9, desc: "出自《孤独摇滚！》（ぼっち・ざ・ろっく！），四人女子摇滚乐队，青春感与扎实演奏兼备。" },
+  { name: "放学后茶会", en: "Ho-kago Tea Time", style: "流行摇滚", origin: "东京都", formed: 2009, popularity: 8, desc: "出自《轻音少女》（けいおん！），轻快温暖的校园流行摇滚，治愈系代表作。" },
+  { name: "MyGO!!!!!", en: "MyGO!!!!!", style: "日系摇滚", origin: "东京都", formed: 2023, popularity: 8, desc: "出自《BanG Dream!》，以真实青春与情绪张力的日系摇滚著称。" },
 ];
 
 // 台湾地级市补充（用于出道地区，附件 sheet 中台湾仅列"台湾省"）
