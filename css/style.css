@@ -780,3 +780,24 @@ select { cursor: pointer; }
 .menu-save-actions { display: flex; gap: 10px; margin-top: 10px; }
 .menu-save-actions .btn-secondary { flex: 1; }
 .save-hint { font-size: 12px; color: var(--text-faint); line-height: 1.6; margin: 12px 0; text-align: left; }
+
+/* ===== 时代周刊（新闻）===== */
+.news-paper-list { display: flex; flex-direction: column; gap: 20px; }
+.news-paper {
+  background: #f3efe4; color: #1c1a17;
+  border: 1px solid #cfc7b4; border-radius: 6px;
+  padding: 18px 20px;
+  font-family: "Songti SC", "SimSun", "Noto Serif SC", serif;
+}
+.news-masthead { text-align: center; border-bottom: 4px double #1c1a17; padding-bottom: 8px; margin-bottom: 12px; }
+.news-brand { font-size: 34px; font-weight: 900; letter-spacing: 6px; }
+.news-sub { font-size: 11px; letter-spacing: 3px; color: #5a5248; margin-top: 2px; }
+.news-meta { font-size: 12px; color: #5a5248; margin-top: 6px; letter-spacing: 2px; }
+.news-lead { font-size: 17px; font-weight: 700; line-height: 1.6; padding: 8px 0; border-bottom: 1px solid #cfc7b4; margin-bottom: 10px; }
+.news-events { background: rgba(0,0,0,0.04); border-left: 3px solid #8a7a5a; padding: 8px 12px; margin-bottom: 10px; font-size: 13px; line-height: 1.8; }
+.news-event { color: #3a342c; }
+.news-columns { column-count: 2; column-gap: 24px; }
+.news-item { break-inside: avoid; margin-bottom: 12px; }
+.news-item h4 { font-size: 12px; color: #8a7a5a; letter-spacing: 2px; margin-bottom: 4px; }
+.news-item p { font-size: 13px; line-height: 1.7; color: #2a2620; }
+@media (max-width: 768px) { .news-columns { column-count: 1; } }

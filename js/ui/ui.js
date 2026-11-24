@@ -204,6 +204,7 @@ function renderGameView(name) {
     "create-song": renderCreateSong,
     "release": renderRelease,
     "player": renderPlayerView,
+    "news": renderNews,
     "rating": renderRatingView,
     "tour": renderTour,
     "train": renderTrain,
@@ -276,12 +277,73 @@ function renderDashboard() {
           </div>
         </div>`).join("") : `<div style="color:var(--text-faint);text-align:center;padding:40px;">还没有发布作品，去「创作歌曲」开始你的第一首歌吧</div>`}
     </div>
-
-    <div class="section-title" style="margin-top:24px;">近期动态</div>
-    <div class="event-log">
-      ${Game.events.slice().reverse().slice(0, 30).map(e => `<div class="event-item"><span class="ev-day">${formatDateShort(e.day)}</span>${e.text}</div>`).join("")}
-    </div>
   `;
+}
+
+// ===== 新闻视图 =====
+function renderNews() {
+  const el = document.querySelector('[data-game-view="news"]');
+  const curWeek = Math.floor(Game.dayIndex / 7);
+  const issues = [];
+  for (let w = curWeek; w >= Math.max(0, curWeek - 3); w--) issues.push(buildNewsIssue(w));
+  el.innerHTML = `
+    <div class="section-title">📰 时代周刊</div>
+    <div class="news-paper-list">${issues.map(renderNewsIssue).join("")}</div>
+  `;
+}
+
+function buildNewsIssue(week) {
+  const startDay = week * 7, endDay = startDay + 7;
+  const issueNo = week + 1, dateStr = formatDateShort(startDay);
+  const R = window.RIVAL_BANDS || [];
+  const bandNames = R.map(b => b.name);
+  const styles = [...new Set(R.map(b => b.style))];
+  const cities = ["北京", "上海", "广州", "深圳", "成都", "武汉", "杭州", "西安", "南京", "重庆", "长沙", "郑州"];
+  const albums = [];
+  for (const bn in window.BAND_DISCOGRAPHY) window.BAND_DISCOGRAPHY[bn].forEach(a => albums.push(a.name));
+  const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
+  const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
+  const fill = (tpl, salt) => tpl
+    .replace(/\{band\}/g, pick(bandNames, salt + "b"))
+    .replace(/\{style\}/g, pick(styles, salt + "s"))
+    .replace(/\{album\}/g, pick(albums.length ? albums : ["新专辑"], salt + "a"))
+    .replace(/\{city\}/g, pick(cities, salt + "c"));
+  const bandTpls = window.NEWS_BAND_TEMPLATES || [];
+  const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
+  const items = [];
+  const used = new Set();
+  for (let i = 0; i < 8; i++) {
+    const isBand = i < 6;
+    const pool = isBand ? bandTpls : otherTpls;
+    let tpl = null;
+    for (let t = 0; t < 12; t++) {
+      const cand = pick(pool, "t" + i + "_" + t);
+      if (!used.has(cand)) { tpl = cand; used.add(cand); break; }
+    }
+    if (!tpl) tpl = pick(pool, "t" + i);
+    items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
+  }
+  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay).reverse().slice(0, 3);
+  return { issueNo, dateStr, lead: items[0], items: items.slice(1), weekEvents };
+}
+
+function renderNewsIssue(issue) {
+  const evHtml = issue.weekEvents && issue.weekEvents.length
+    ? `<div class="news-events">${issue.weekEvents.map(e => `<div class="news-event">· ${escapeHtml(e.text)}</div>`).join("")}</div>`
+    : "";
+  return `
+    <div class="news-paper">
+      <div class="news-masthead">
+        <div class="news-brand">时代周刊</div>
+        <div class="news-sub">THE BAND ERA TIMES</div>
+        <div class="news-meta">第 ${issue.issueNo} 期 · ${issue.dateStr}</div>
+      </div>
+      <div class="news-lead">${escapeHtml(issue.lead.text)}</div>
+      ${evHtml}
+      <div class="news-columns">
+        ${issue.items.map(it => `<div class="news-item"><h4>${it.band ? "乐坛" : "社会"}</h4><p>${escapeHtml(it.text)}</p></div>`).join("")}
+      </div>
+    </div>`;
 }
 
 // ===== 创作歌曲视图 =====
