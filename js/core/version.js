@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.50",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增节日长文：青年节、儿童节、妇女节、护士节、记者节、植树节（人民日报风格，1200～1800 字），累计 19 篇。",
+    ],
+  },
+  {
     version: "1.2.49",
     date: "2026-11-24",
     size: "小更新",
