@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.30",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增中国乐队：回春丹、犬儒、发光曲线、文雀、Chinese Football，均含专辑/EP/单曲作品，与普通竞争对手同榜竞技。",
+      "已网络核验回春丹、Chinese Football 的专辑与曲目。",
+    ],
+  },
+  {
     version: "1.2.29",
     date: "2026-11-24",
     size: "小更新",

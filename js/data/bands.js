@@ -56,6 +56,11 @@ window.RIVAL_BANDS = [
   { name: "Given", en: "Given", style: "日系摇滚", origin: "东京都", formed: 2019, popularity: 8, desc: "出自《Given》，以真挚情绪与吉他驱动的青春摇滚乐队。" },
   { name: "トゲナシトゲアリ", en: "Togenashi Togeari", style: "日系摇滚", origin: "东京都", formed: 2023, popularity: 9, desc: "出自《Girls Band Cry》，痛感与呐喊交织的日系摇滚，近年备受瞩目。" },
   { name: "Plasmagica", en: "Plasmagica", style: "流行摇滚", origin: "东京都", formed: 2015, popularity: 6, desc: "出自《Show by Rock!!》，猫系少女组成的活力流行摇滚乐队。" },
+  { name: "回春丹", en: "Young Dan", style: "独立摇滚", origin: "钦州市", formed: 2016, popularity: 8, desc: "广西钦州的独立摇滚乐队，复古与浪漫并存，以《鲜花》破圈。" },
+  { name: "犬儒", en: "Kanis", style: "独立摇滚", origin: "北京市", formed: 2016, popularity: 7, desc: "冷峻锋利的独立摇滚，歌词带着现实锋芒。" },
+  { name: "发光曲线", en: "Glow Curve", style: "后摇", origin: "北京市", formed: 2006, popularity: 6, desc: "北京后摇乐队，器乐层叠推进，情绪宏大。" },
+  { name: "文雀", en: "Sparrow", style: "后摇", origin: "北京市", formed: 2008, popularity: 7, desc: "北京后摇乐队，以《看风景的人》等作品闻名的器乐摇滚。" },
+  { name: "Chinese Football", en: "Chinese Football", style: "数学摇滚", origin: "武汉市", formed: 2011, popularity: 7, desc: "武汉 emo/数学摇滚乐队，以“游戏三部曲”构建青春叙事。" },
 ];
 
 // 台湾地级市补充（用于出道地区，附件 sheet 中台湾仅列"台湾省"）

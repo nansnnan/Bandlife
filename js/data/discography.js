@@ -1215,4 +1215,59 @@ window.BAND_DISCOGRAPHY = {
     { name: "Ave Mujica", type: "单曲", date: "2024-04-24", songs: [ { name: "Ave Mujica", duration: 240 } ] },
     { name: "堕天（堕天）", type: "单曲", date: "2024-08-21", songs: [ { name: "堕天（堕天）", duration: 250 } ] },
   ],
+  "回春丹": [
+    { name: "耳鬼出风", type: "专辑", date: "2021-10-22", songs: [
+       { name: "耳鬼出风", duration: 235 }, { name: "花桥", duration: 240 },
+       { name: "正义", duration: 250 }, { name: "梦特别娇", duration: 258 }, { name: "染春", duration: 245 } ] },
+    { name: "大把时间璀璨", type: "专辑", date: "2025-08-29", songs: [
+       { name: "降临", duration: 230 }, { name: "鲜花", duration: 341 },
+       { name: "骑士", duration: 245 }, { name: "梦蝶", duration: 240 }, { name: "喝彩", duration: 235 },
+       { name: "大力出奇迹", duration: 220 }, { name: "福寿螺", duration: 225 }, { name: "宝藏", duration: 238 } ] },
+    { name: "艾蜜莉", type: "单曲", date: "2020-01-01", songs: [ { name: "艾蜜莉", duration: 240 } ] },
+    { name: "珍珠走廊", type: "EP", date: "2022-01-01", songs: [
+       { name: "珍珠走廊", duration: 235 }, { name: "断气", duration: 220 }, { name: "大地雷公", duration: 230 } ] },
+    { name: "蜜虫", type: "EP", date: "2023-01-01", songs: [
+       { name: "蜜虫", duration: 225 }, { name: "丘丘", duration: 230 }, { name: "相思病", duration: 235 } ] },
+    { name: "鲜花", type: "单曲", date: "2023-09-30", songs: [ { name: "鲜花", duration: 341 } ] },
+    { name: "初恋", type: "单曲", date: "2021-01-01", songs: [ { name: "初恋", duration: 222 } ] },
+    { name: "亮闪闪", type: "单曲", date: "2024-01-01", songs: [ { name: "亮闪闪", duration: 210 } ] },
+    { name: "喝彩", type: "单曲", date: "2025-01-01", songs: [ { name: "喝彩", duration: 235 } ] },
+  ],
+  "Chinese Football": [
+    { name: "Chinese Football", type: "专辑", date: "2015-09-12", songs: [
+       { name: "游戏开始 (Intro)", duration: 122 }, { name: "守门员", duration: 251 },
+       { name: "飞鱼转身", duration: 384 }, { name: "400米操场", duration: 270 },
+       { name: "不是人人都能穿十号球衣", duration: 347 }, { name: "世界悲", duration: 386 },
+       { name: "游戏暂停 (Interlude)", duration: 76 }, { name: "地球上最后一个EMO男孩", duration: 300 },
+       { name: "红牌罚下", duration: 280 }, { name: "帽子戏法", duration: 285 },
+       { name: "再见米卢", duration: 300 }, { name: "盲人摸象", duration: 320 }, { name: "游戏结束 (Outro)", duration: 200 } ] },
+    { name: "Here Comes a New Challenger!", type: "EP", date: "2017-03-03", songs: [
+       { name: "电动少女", duration: 300 }, { name: "清醒白日梦", duration: 280 },
+       { name: "晴天露雳", duration: 290 }, { name: "盒子", duration: 260 } ] },
+    { name: "Continue?", type: "EP", date: "2019-03-01", songs: [
+       { name: "游戏继续", duration: 270 }, { name: "漂流人间", duration: 300 },
+       { name: "冒险岛", duration: 280 }, { name: "家犬日记", duration: 260 }, { name: "怪兽", duration: 290 } ] },
+    { name: "Win&Lose", type: "专辑", date: "2022-12-30", songs: [
+       { name: "游戏胜利", duration: 240 }, { name: "四月物语", duration: 260 },
+       { name: "夏日限定女朋友", duration: 250 }, { name: "人生游乐场", duration: 270 },
+       { name: "世界一分为二", duration: 280 }, { name: "单向列车号", duration: 300 },
+       { name: "游戏失败", duration: 240 }, { name: "人间失格", duration: 290 },
+       { name: "恐龙最后还是毁灭了", duration: 280 }, { name: "植物人", duration: 270 },
+       { name: "武汉", duration: 320 }, { name: "Good bye", duration: 250 } ] },
+    { name: "电动少女 (8-Bit Remix)", type: "单曲", date: "2018-03-01", songs: [ { name: "电动少女 (8-Bit Remix)", duration: 280 } ] },
+  ],
+  "犬儒": [
+    { name: "天才艺术家", type: "单曲", date: "2021-01-01", songs: [ { name: "天才艺术家", duration: 240 } ] },
+    { name: "犬儒", type: "EP", date: "2023-01-01", songs: [
+       { name: "天才艺术家", duration: 240 }, { name: "皮囊", duration: 235 }, { name: "旁观者", duration: 245 } ] },
+  ],
+  "发光曲线": [
+    { name: "发光曲线", type: "专辑", date: "2016-01-01", songs: [
+       { name: "出发", duration: 330 }, { name: "夜行", duration: 360 }, { name: "静默", duration: 390 } ] },
+  ],
+  "文雀": [
+    { name: "看风景的人", type: "专辑", date: "2015-01-01", songs: [
+       { name: "大雁", duration: 390 }, { name: "看风景的人", duration: 420 }, { name: "河", duration: 360 } ] },
+    { name: "大雁", type: "单曲", date: "2014-01-01", songs: [ { name: "大雁", duration: 390 } ] },
+  ],
 };
