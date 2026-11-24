@@ -524,11 +524,15 @@ function generateNewsIssue(week) {
   };
   const longTpls = window.NEWS_LONG_TEMPLATES || [];
   const socialLongs = window.NEWS_LONG_OTHER_TEMPLATES || [];
+  const otherTplsAll = window.NEWS_OTHER_TEMPLATES || [];
   const usedLong = new Set();
   const usedLeadBands = new Set();
   const leads = [];
-  // 长文固定 5 篇：4 篇乐坛（不同乐队、不同模板）+ 1 篇社会
-  for (let i = 0; i < 4; i++) {
+  // 长文固定 5 篇；有社会模板时 4 乐坛 + 1 社会，否则 5 篇乐坛
+  const totalLead = 5;
+  const socialLeadCount = socialLongs.length ? 1 : 0;
+  const bandLeadCount = totalLead - socialLeadCount;
+  for (let i = 0; i < bandLeadCount; i++) {
     let lt = null;
     for (let t = 0; t < 30; t++) { const c = pick(longTpls, "lead" + i + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
     if (!lt) lt = pick(longTpls, "lead" + i);
@@ -550,11 +554,11 @@ function generateNewsIssue(week) {
     const pos = Math.floor(rnd("leadPos") * (leads.length + 1));
     leads.splice(pos, 0, sl);
   }
-  // 短讯 5-10 篇，社会约 25%（至少 1 篇），模板不重复
+  // 短讯 5-10 篇；有社会模板时社会约 25%（至少 1），否则全乐坛
   const bandTpls = window.NEWS_BAND_TEMPLATES || [];
-  const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
+  const otherTpls = otherTplsAll;
   const shortCount = 5 + Math.floor(rnd("sc") * 6);
-  const socialShort = Math.max(1, Math.round(shortCount * 0.25));
+  const socialShort = otherTpls.length ? Math.max(1, Math.round(shortCount * 0.25)) : 0;
   const bandShort = shortCount - socialShort;
   const items = [];
   const used = new Set();
@@ -570,7 +574,6 @@ function generateNewsIssue(week) {
     if (!tpl) tpl = pick(otherTpls, "os" + i);
     items.push({ band: false, text: tpl.replace(/\{city\}/g, pick(cities, "oci" + i)) });
   }
-  // 打乱短讯顺序（确定性）
   const order = items.map((it, idx) => ({ it, k: rnd("ord" + idx) })).sort((p, q) => p.k - q.k).map(o => o.it);
   items.length = 0;
   order.forEach(o => items.push(o));

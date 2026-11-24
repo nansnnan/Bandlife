@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.42",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "删除所有社会新闻预设（社会短讯、社会长文），后续将新增新的社会模板规则。",
+      "新闻暂为全乐坛内容，每期 5 篇长文 + 5～10 篇短讯，均无重复。",
+      "暂停评论与新闻模板的扩充，恢复时间另行通知。",
+    ],
+  },
+  {
     version: "1.2.41",
     date: "2026-11-24",
     size: "小更新",
