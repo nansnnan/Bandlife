@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.41",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "时代周刊每期固定 5 篇长文（4 乐坛 + 1 社会）、5～10 篇短讯，均无重复内容，且每类至少含 1 篇社会新闻。",
+      "确保社会与乐坛比例约为 25% 与 75%。",
+      "按约定扩充模板：播放器评论 +20、评分评论 +20、新闻短讯 +20、新闻长讯 +20。",
+    ],
+  },
+  {
     version: "1.2.40",
     date: "2026-11-24",
     size: "小更新",
