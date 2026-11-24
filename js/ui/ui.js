@@ -312,23 +312,27 @@ function buildNewsIssue(week) {
     .replace(/\{style\}/g, pick(styles, salt + "s"))
     .replace(/\{album\}/g, pick(albums.length ? albums : ["新专辑"], salt + "a"))
     .replace(/\{city\}/g, pick(cities, salt + "c"));
-  // 头条长文
+  // 多篇长文（2-3 篇）
   const longTpls = window.NEWS_LONG_TEMPLATES || [];
-  let lead = null;
-  if (longTpls.length) {
-    const lt = pick(longTpls, "lead");
-    const lb = pick(bandNames, "leadB"), ls = pick(styles, "leadS");
-    const la = pick(albums.length ? albums : ["新专辑"], "leadA"), lc = pick(cities, "leadC");
+  const leads = [];
+  const usedLong = new Set();
+  const leadCount = 2 + (rnd("lc") < 0.5 ? 1 : 0);
+  for (let i = 0; i < leadCount && longTpls.length; i++) {
+    let lt = null;
+    for (let t = 0; t < 12; t++) { const c = pick(longTpls, "lead" + i + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
+    if (!lt) lt = pick(longTpls, "lead" + i);
+    const lb = pick(bandNames, "leadB" + i), ls = pick(styles, "leadS" + i);
+    const la = pick(albums.length ? albums : ["新专辑"], "leadA" + i), lc = pick(cities, "leadC" + i);
     const fillLead = (t) => t.replace(/\{band\}/g, lb).replace(/\{style\}/g, ls).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
-    lead = { title: fillLead(lt.title), body: fillLead(lt.body) };
+    leads.push({ title: fillLead(lt.title), body: fillLead(lt.body) });
   }
-  // 短讯 7 条：5 乐坛 + 2 社会（加长文共 6/8 ≈ 75% 乐队相关）
+  // 短讯 5 条：4 乐坛 + 1 社会
   const bandTpls = window.NEWS_BAND_TEMPLATES || [];
   const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
   const items = [];
   const used = new Set();
-  for (let i = 0; i < 7; i++) {
-    const isBand = i < 5;
+  for (let i = 0; i < 5; i++) {
+    const isBand = i < 4;
     const pool = isBand ? bandTpls : otherTpls;
     let tpl = null;
     for (let t = 0; t < 12; t++) {
@@ -339,7 +343,7 @@ function buildNewsIssue(week) {
     items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
   }
   const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay).reverse().slice(0, 3);
-  return { issueNo, startDay, date, lead, items, weekEvents };
+  return { issueNo, startDay, date, leads, items, weekEvents };
 }
 
 function renderNewsIssue(issue) {
@@ -348,10 +352,13 @@ function renderNewsIssue(issue) {
   const evHtml = issue.weekEvents && issue.weekEvents.length
     ? `<div class="news-events">${issue.weekEvents.map(e => `<div class="news-event">· ${escapeHtml(e.text)}</div>`).join("")}</div>`
     : "";
-  const leadHtml = issue.lead
-    ? `<div class="news-headline">${escapeHtml(issue.lead.title)}</div>
-       <div class="news-article">${(issue.lead.body || "").split("\n").filter(Boolean).map(p => `<p>${escapeHtml(p)}</p>`).join("")}</div>`
-    : "";
+  const leadsHtml = (issue.leads || []).map((l, i) => {
+    const paras = (l.body || "").split("\n").filter(Boolean).map(p => `<p>${escapeHtml(p)}</p>`).join("");
+    return `<div class="news-block ${i === 0 ? "lead" : ""}">
+      <div class="news-headline ${i === 0 ? "big" : ""}">${escapeHtml(l.title)}</div>
+      <div class="news-article ${i === 0 ? "cols3" : "cols2"}">${paras}</div>
+    </div>`;
+  }).join("");
   return `
     <div class="news-paper">
       <div class="news-top">
@@ -364,7 +371,7 @@ function renderNewsIssue(issue) {
         </div>
       </div>
       <div class="news-rule"></div>
-      ${leadHtml}
+      ${leadsHtml}
       ${evHtml}
       <div class="news-shorts">
         ${issue.items.map(it => `<div class="news-short"><h4>${it.band ? "乐坛" : "社会"}</h4><p>${escapeHtml(it.text)}</p></div>`).join("")}

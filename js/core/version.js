@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.37",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新闻页每期改为展示多篇长文（2～3 篇）+ 短讯，更符合报纸版面。",
+      "按约定扩充内容模板：播放器评论 +25 条、评分评论 +25 条、新闻短讯 +25 条、新闻长讯 +20 条。",
+    ],
+  },
+  {
     version: "1.2.36",
     date: "2026-11-24",
     size: "小更新",
