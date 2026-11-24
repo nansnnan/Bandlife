@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.33",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "继续核验并补全：犬儒《天才艺术家》专辑 9 首（补褪色、栋青南、喂），发光曲线首专《Glow Curve》6 首（补无法命名的时刻、不安门）。",
+    ],
+  },
+  {
     version: "1.2.32",
     date: "2026-11-24",
     size: "小更新",

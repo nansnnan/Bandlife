@@ -1268,7 +1268,8 @@ window.BAND_DISCOGRAPHY = {
        { name: "病", duration: 226 }, { name: "圈", duration: 350 }, { name: "蔡家关", duration: 117 } ] },
     { name: "天才艺术家", type: "专辑", date: "2023-05-23", songs: [
        { name: "天才艺术家", duration: 218 }, { name: "阶梯", duration: 239 }, { name: "烂苹果", duration: 245 },
-       { name: "脏", duration: 238 }, { name: "皂角井", duration: 250 }, { name: "苍蝇", duration: 230 } ] },
+       { name: "脏", duration: 238 }, { name: "皂角井", duration: 250 }, { name: "苍蝇", duration: 230 },
+       { name: "褪色", duration: 225 }, { name: "栋青南", duration: 240 }, { name: "喂", duration: 235 } ] },
     { name: "心房", type: "专辑", date: "2025-09-20", songs: [
        { name: "花丘", duration: 380 }, { name: "上杉朗", duration: 360 }, { name: "妈妈告诉我", duration: 350 },
        { name: "心房", duration: 390 }, { name: "边云里", duration: 340 }, { name: "送给未来的你", duration: 370 },
@@ -1279,8 +1280,8 @@ window.BAND_DISCOGRAPHY = {
   ],
   "发光曲线": [
     { name: "Glow Curve", type: "专辑", date: "2011-01-01", songs: [
-       { name: "On", duration: 300 }, { name: "迷航", duration: 380 },
-       { name: "鲜花圣母", duration: 360 }, { name: "银河革命计划", duration: 340 } ] },
+       { name: "On", duration: 300 }, { name: "迷航", duration: 380 }, { name: "无法命名的时刻", duration: 360 },
+       { name: "鲜花圣母", duration: 360 }, { name: "银河革命计划", duration: 340 }, { name: "不安门", duration: 320 } ] },
     { name: "迷航 (DEDICATE TO MIND)", type: "专辑", date: "2013-09-26", songs: [
        { name: "On", duration: 300 }, { name: "午夜快车", duration: 358 }, { name: "迷航", duration: 390 },
        { name: "重影", duration: 340 }, { name: "鲜花圣母", duration: 380 }, { name: "银河革命计划", duration: 330 },
