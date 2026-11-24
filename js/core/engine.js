@@ -521,7 +521,8 @@ function festivalPrio(name) {
 const _MAJOR_KEYS = ["神舟五号", "非典", "十六届三中全会", "十六届四中全会", "十六届五中全会", "十六届六中全会",
   "一号文件", "反分裂国家法", "农业税", "荣辱观", "三峡", "汶川", "奥运", "物权法", "嫦娥一号", "劳动合同法",
   "金融危机", "六十周年", "国庆60周年", "世博会", "玉树", "嫦娥二号", "十七届五中全会", "九十周年", "天宫一号",
-  "十七届六中全会", "青藏高原"];
+  "十七届六中全会", "青藏高原", "蛟龙", "辽宁舰", "十八大", "八项规定", "一带一路", "十八届三中全会", "4G",
+  "太空授课", "互联网大会", "公祭日", "南水北调", "深化改革"];
 function _matchMajorLong(year, m, d) {
   const y = String(year);
   const evName = String(m.event);
@@ -547,8 +548,8 @@ function getSpecialNews(day) {
   const rangeHit = (window.NEWS_MAJOR_LONG || [])
     .filter(x => x.range && dateStr >= x.range[0] && dateStr <= x.range[1])
     .sort((a, b) => (a.range[1] - a.range[0]) - (b.range[1] - b.range[0]))[0];
-  // 范围事件优先：其区间内始终展示同一条长讯
-  if (rangeHit) return { title: rangeHit.title, body: rangeHit.body, social: true, level: "major", _prio: 110 };
+  // 范围内遇到单日重大事件时，以单日事件为准；否则持续展示范围长讯
+  const _rngPri = rangeHit ? 115 : 0;
   // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
   if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
     const n = window.NEWS_NEW_YEAR[0];
@@ -563,9 +564,11 @@ function getSpecialNews(day) {
     const ml = _matchMajorLong(d.year, m, d);
     if (ml && !ml.range) return { title: ml.title, body: ml.body, social: true, level: "major", _prio: 118 };
   }
+  // 范围内无单日长文时，持续展示范围长讯（优先于占位条目）
+  if (rangeHit) return { title: rangeHit.title, body: rangeHit.body, social: true, level: "major", _prio: _rngPri };
   if (M.length) {
     const m = M[0];
-    return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 110 };
+    return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 108 };
   }
 
   // 国家级节日
