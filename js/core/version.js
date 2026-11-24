@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.55",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "接入国家重要级长文数据（NEWS_MAJOR_LONG 优先），按事件时间顺序撰写。",
+      "首批国家重要级长文：立法法施行、中欧签署入世协议、悉尼奥运会（2500 字以上）。",
+    ],
+  },
+  {
     version: "1.2.54",
     date: "2026-11-24",
     size: "中更新",

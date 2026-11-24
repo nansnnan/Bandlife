@@ -531,6 +531,8 @@ function getSpecialNews(day) {
     if (String(m.year) !== y) continue;
     const mm = m.date.match(/^(\d+)月(\d+)日/);
     if (mm && Number(mm[1]) === d.month && Number(mm[2]) === d.day) {
+      const ml = (window.NEWS_MAJOR_LONG || []).find(x => x.event === m.event);
+      if (ml) return { title: ml.title, body: ml.body, social: true, level: "major", _prio: 110 };
       return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 110 };
     }
   }
