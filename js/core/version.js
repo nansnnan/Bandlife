@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.35",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复新闻页出现未出道乐队消息的问题，新闻现仅引用已成立/出道的乐队。",
+      "《时代周刊》改版为人民日报式排版：红色报头、报头信息栏（年月日/星期/期号）、多栏长文头条，并新增长文新闻模板 20 条。",
+    ],
+  },
+  {
     version: "1.2.34",
     date: "2026-11-24",
     size: "小更新",

@@ -294,8 +294,12 @@ function renderNews() {
 
 function buildNewsIssue(week) {
   const startDay = week * 7, endDay = startDay + 7;
-  const issueNo = week + 1, dateStr = formatDateShort(startDay);
-  const R = window.RIVAL_BANDS || [];
+  const issueNo = week + 1;
+  const date = dayToDate(startDay);
+  const allBands = window.RIVAL_BANDS || [];
+  // 仅纳入已成立/出道的乐队，避免未出道乐队出现相关新闻
+  const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
+  const R = debuted.length ? debuted : allBands;
   const bandNames = R.map(b => b.name);
   const styles = [...new Set(R.map(b => b.style))];
   const cities = ["北京", "上海", "广州", "深圳", "成都", "武汉", "杭州", "西安", "南京", "重庆", "长沙", "郑州"];
@@ -308,12 +312,20 @@ function buildNewsIssue(week) {
     .replace(/\{style\}/g, pick(styles, salt + "s"))
     .replace(/\{album\}/g, pick(albums.length ? albums : ["新专辑"], salt + "a"))
     .replace(/\{city\}/g, pick(cities, salt + "c"));
+  // 头条长文
+  const longTpls = window.NEWS_LONG_TEMPLATES || [];
+  let lead = null;
+  if (longTpls.length) {
+    const lt = pick(longTpls, "lead");
+    lead = { title: fill(lt.title, "l0_"), body: fill(lt.body, "l1_") };
+  }
+  // 短讯 7 条：5 乐坛 + 2 社会（加长文共 6/8 ≈ 75% 乐队相关）
   const bandTpls = window.NEWS_BAND_TEMPLATES || [];
   const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
   const items = [];
   const used = new Set();
-  for (let i = 0; i < 8; i++) {
-    const isBand = i < 6;
+  for (let i = 0; i < 7; i++) {
+    const isBand = i < 5;
     const pool = isBand ? bandTpls : otherTpls;
     let tpl = null;
     for (let t = 0; t < 12; t++) {
@@ -324,24 +336,35 @@ function buildNewsIssue(week) {
     items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
   }
   const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay).reverse().slice(0, 3);
-  return { issueNo, dateStr, lead: items[0], items: items.slice(1), weekEvents };
+  return { issueNo, startDay, date, lead, items, weekEvents };
 }
 
 function renderNewsIssue(issue) {
+  const WK = ["日", "一", "二", "三", "四", "五", "六"];
+  const wk = WK[(((issue.startDay + 6) % 7) + 7) % 7];
   const evHtml = issue.weekEvents && issue.weekEvents.length
     ? `<div class="news-events">${issue.weekEvents.map(e => `<div class="news-event">· ${escapeHtml(e.text)}</div>`).join("")}</div>`
     : "";
+  const leadHtml = issue.lead
+    ? `<div class="news-headline">${escapeHtml(issue.lead.title)}</div>
+       <div class="news-article">${(issue.lead.body || "").split("\n").filter(Boolean).map(p => `<p>${escapeHtml(p)}</p>`).join("")}</div>`
+    : "";
   return `
     <div class="news-paper">
-      <div class="news-masthead">
-        <div class="news-brand">时代周刊</div>
-        <div class="news-sub">THE BAND ERA TIMES</div>
-        <div class="news-meta">第 ${issue.issueNo} 期 · ${issue.dateStr}</div>
+      <div class="news-top">
+        <div class="news-masthead-red">时代周刊</div>
+        <div class="news-info">
+          <div>${issue.date.year}年${issue.date.month}月${issue.date.day}日</div>
+          <div>星期${wk}</div>
+          <div>第 ${issue.issueNo} 期</div>
+          <div>本报编辑部 出版</div>
+        </div>
       </div>
-      <div class="news-lead">${escapeHtml(issue.lead.text)}</div>
+      <div class="news-rule"></div>
+      ${leadHtml}
       ${evHtml}
-      <div class="news-columns">
-        ${issue.items.map(it => `<div class="news-item"><h4>${it.band ? "乐坛" : "社会"}</h4><p>${escapeHtml(it.text)}</p></div>`).join("")}
+      <div class="news-shorts">
+        ${issue.items.map(it => `<div class="news-short"><h4>${it.band ? "乐坛" : "社会"}</h4><p>${escapeHtml(it.text)}</p></div>`).join("")}
       </div>
     </div>`;
 }
