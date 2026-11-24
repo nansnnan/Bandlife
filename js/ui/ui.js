@@ -342,7 +342,13 @@ function buildNewsIssue(week) {
     if (!tpl) tpl = pick(pool, "t" + i);
     items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
   }
-  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay).reverse().slice(0, 3);
+  const metaKw = ["沙盒模式", "乐队生涯", "资金无限", "自由创作", "正式成立"];
+  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);
+  // 乐队成立改写为新闻，融入当期报纸
+  const foundEv = (Game.events || []).find(e => e.day >= startDay && e.day < endDay && (e.text || "").indexOf("正式成立") >= 0);
+  if (foundEv && Game.band) {
+    items.unshift({ band: true, text: `新锐${Game.band.style}乐队「${Game.band.name}」正式成立，引发乐坛关注与期待。` });
+  }
   return { issueNo, startDay, date, leads, items, weekEvents };
 }
 

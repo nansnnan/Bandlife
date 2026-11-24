@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.38",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新闻页移除“沙盒模式开启/乐队生涯开始”等系统通知，乐队成立改写为新闻报道融入当期。",
+      "按约定扩充模板：播放器评论 +20、评分评论 +20、新闻短讯 +20、新闻长讯 +20。",
+    ],
+  },
+  {
     version: "1.2.37",
     date: "2026-11-24",
     size: "小更新",
