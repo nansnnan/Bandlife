@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.58",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增时间范围事件支持：长文可设定起止日期，在该范围内持续展示同一条新闻（不更换）。",
+      "国家重要级长文：十届全国人大一次会议、抗击非典疫情（2003年4月至6月持续）、神舟五号载人飞天、中共十六届三中全会，累计 13 条。",
+    ],
+  },
+  {
     version: "1.2.57",
     date: "2026-11-24",
     size: "小更新",

@@ -520,6 +520,14 @@ function festivalPrio(name) {
 function getSpecialNews(day) {
   const d = dayToDate(day);
   const y = String(d.year);
+  // 时间范围事件：在起止日期之间持续展示同一条长讯
+  const dateStr = d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
+  for (const x of (window.NEWS_MAJOR_LONG || [])) {
+    if (!x.range) continue;
+    if (dateStr >= x.range[0] && dateStr <= x.range[1]) {
+      return { title: x.title, body: x.body, social: true, level: "major", _prio: 110 };
+    }
+  }
   // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
   if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
     const n = window.NEWS_NEW_YEAR[0];
