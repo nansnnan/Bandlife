@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.45",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "时代周刊页面只展示当前一期，不再显示历史期号。",
+      "周刊中出现的乐队仅限已发行作品的乐队，未发作品的不再出现。",
+      "乐队长讯正文统一扩充至 250～500 字。",
+    ],
+  },
+  {
     version: "1.2.44",
     date: "2026-11-24",
     size: "小更新",

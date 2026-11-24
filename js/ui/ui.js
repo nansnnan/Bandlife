@@ -284,11 +284,10 @@ function renderDashboard() {
 function renderNews() {
   const el = document.querySelector('[data-game-view="news"]');
   const curWeek = Math.floor(Game.dayIndex / 7);
-  const issues = [];
-  for (let w = curWeek; w >= Math.max(0, curWeek - 3); w--) issues.push(buildNewsIssue(w));
+  const issue = buildNewsIssue(curWeek);
   el.innerHTML = `
     <div class="section-title">📰 时代周刊</div>
-    <div class="news-paper-list">${issues.map(renderNewsIssue).join("")}</div>
+    <div class="news-paper-list">${renderNewsIssue(issue)}</div>
   `;
 }
 

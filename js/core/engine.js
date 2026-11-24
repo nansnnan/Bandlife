@@ -569,9 +569,9 @@ function generateNewsIssue(week) {
   const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
   const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
   const albumsOf = (name) => ((window.BAND_DISCOGRAPHY && window.BAND_DISCOGRAPHY[name]) || []).map(x => x.name);
-  const allBands = window.RIVAL_BANDS || [];
-  const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
-  const B = debuted.length ? debuted : allBands;
+  let B = (Game.rivals || []).filter(r => r.releases && r.releases.length > 0);
+  if (!B.length) B = (window.RIVAL_BANDS || []).filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
+  if (!B.length) B = window.RIVAL_BANDS || [];
   const cities = ["北京","上海","广州","深圳","成都","武汉","杭州","西安","南京","重庆"];
   const pickLevel = (salt) => { const r = rnd(salt); return r < 0.6 ? "county" : r < 0.9 ? "city" : "province"; };
 
