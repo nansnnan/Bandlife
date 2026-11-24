@@ -517,33 +517,57 @@ function festivalPrio(name) {
   return P[name] || 30;
 }
 
+// 事件表名称与长文 event 字段常有差异，按年份 + 关键词宽松匹配
+const _MAJOR_KEYS = ["神舟五号", "非典", "十六届三中全会", "十六届四中全会", "十六届五中全会", "十六届六中全会",
+  "一号文件", "反分裂国家法", "农业税", "荣辱观", "三峡", "汶川", "奥运", "物权法", "嫦娥一号", "劳动合同法",
+  "金融危机", "六十周年", "国庆60周年", "世博会", "玉树", "嫦娥二号", "十七届五中全会", "九十周年", "天宫一号",
+  "十七届六中全会", "青藏高原"];
+function _matchMajorLong(year, m, d) {
+  const y = String(year);
+  const evName = String(m.event);
+  for (const x of (window.NEWS_MAJOR_LONG || [])) {
+    if (String(x.year) !== y) continue;
+    if (x.range) {
+      const ds = d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
+      if (ds >= x.range[0] && ds <= x.range[1]) return x;
+      continue;
+    }
+    if (x.event === evName) return x;
+    if (_MAJOR_KEYS.some(k => evName.indexOf(k) >= 0 && x.event.indexOf(k) >= 0)) return x;
+    const a = x.event.replace(/[《》]/g, ""), b = evName.replace(/[《》]/g, "");
+    if (a.length >= 4 && b.length >= 4 && (a.indexOf(b) >= 0 || b.indexOf(a) >= 0)) return x;
+  }
+  return null;
+}
+
 function getSpecialNews(day) {
   const d = dayToDate(day);
   const y = String(d.year);
-  // 时间范围事件：在起止日期之间持续展示同一条长讯
   const dateStr = d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
-  for (const x of (window.NEWS_MAJOR_LONG || [])) {
-    if (!x.range) continue;
-    if (dateStr >= x.range[0] && dateStr <= x.range[1]) {
-      return { title: x.title, body: x.body, social: true, level: "major", _prio: 110 };
-    }
-  }
+  const rangeHit = (window.NEWS_MAJOR_LONG || [])
+    .filter(x => x.range && dateStr >= x.range[0] && dateStr <= x.range[1])
+    .sort((a, b) => (a.range[1] - a.range[0]) - (b.range[1] - b.range[0]))[0];
+  // 范围事件优先：其区间内始终展示同一条长讯
+  if (rangeHit) return { title: rangeHit.title, body: rangeHit.body, social: true, level: "major", _prio: 110 };
   // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
   if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
     const n = window.NEWS_NEW_YEAR[0];
     return { title: n.title, body: n.body, social: true, level: "major", _prio: 130 };
   }
-  // 国家重要级：按事件表日期
-  const M = window.MAJOR_EVENTS || [];
-  for (const m of M) {
-    if (String(m.year) !== y) continue;
+  // 国家重要级长文：按事件表日期（长文优先，避免被同日的其他事件挤占）
+  const M = (window.MAJOR_EVENTS || []).filter(m => String(m.year) === y).filter(m => {
     const mm = m.date.match(/^(\d+)月(\d+)日/);
-    if (mm && Number(mm[1]) === d.month && Number(mm[2]) === d.day) {
-      const ml = (window.NEWS_MAJOR_LONG || []).find(x => x.event === m.event);
-      if (ml) return { title: ml.title, body: ml.body, social: true, level: "major", _prio: 110 };
-      return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 110 };
-    }
+    return mm && Number(mm[1]) === d.month && Number(mm[2]) === d.day;
+  });
+  for (const m of M) {
+    const ml = _matchMajorLong(d.year, m, d);
+    if (ml && !ml.range) return { title: ml.title, body: ml.body, social: true, level: "major", _prio: 118 };
   }
+  if (M.length) {
+    const m = M[0];
+    return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 110 };
+  }
+
   // 国家级节日
   const F = window.FESTIVALS || [];
   const ds = _dateStr(day);
