@@ -508,31 +508,51 @@ function generateNewsIssue(week) {
   const allBands = window.RIVAL_BANDS || [];
   const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
   const R = debuted.length ? debuted : allBands;
-  const bandNames = R.map(b => b.name);
-  const styles = [...new Set(R.map(b => b.style))];
   const cities = ["北京","上海","广州","深圳","成都","武汉","杭州","西安","南京","重庆","长沙","郑州"];
-  const albums = [];
-  for (const bn in window.BAND_DISCOGRAPHY) window.BAND_DISCOGRAPHY[bn].forEach(a => albums.push(a.name));
   const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
   const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
-  const fill = (tpl, salt) => tpl
-    .replace(/\{band\}/g, pick(bandNames, salt + "b"))
-    .replace(/\{style\}/g, pick(styles, salt + "s"))
-    .replace(/\{album\}/g, pick(albums.length ? albums : ["新专辑"], salt + "a"))
-    .replace(/\{city\}/g, pick(cities, salt + "c"));
+  const albumsOf = (name) => ((window.BAND_DISCOGRAPHY && window.BAND_DISCOGRAPHY[name]) || []).map(x => x.name);
+  // 同一篇内：乐队、专辑、风格均取自同一乐队，避免错配
+  const fill = (tpl, salt) => {
+    const bObj = pick(R, salt + "b");
+    const bAlbums = albumsOf(bObj.name);
+    const album = bAlbums.length ? pick(bAlbums, salt + "a") : "新专辑";
+    return tpl
+      .replace(/\{band\}/g, bObj.name)
+      .replace(/\{style\}/g, bObj.style)
+      .replace(/\{album\}/g, album)
+      .replace(/\{city\}/g, pick(cities, salt + "c"));
+  };
+  // 长文：2-3 篇，约 25% 为社会长文，乐队长文尽量来自不同乐队
   const longTpls = window.NEWS_LONG_TEMPLATES || [];
+  const socialLongs = window.NEWS_LONG_OTHER_TEMPLATES || [];
   const leads = [];
-  const usedLong = new Set();
   const leadCount = 2 + (rnd("lc") < 0.5 ? 1 : 0);
-  for (let i = 0; i < leadCount && longTpls.length; i++) {
+  const usedLong = new Set();
+  const usedLeadBands = new Set();
+  const socialCount = (leadCount >= 2 && socialLongs.length && rnd("social") < 0.6) ? 1 : 0;
+  for (let i = 0; i < leadCount; i++) {
+    if (socialCount && i === leadCount - 1 && socialLongs.length) {
+      let st = null;
+      for (let t = 0; t < 12; t++) { const c = pick(socialLongs, "soc" + t); if (!usedLong.has(c)) { st = c; usedLong.add(c); break; } }
+      if (!st) st = pick(socialLongs, "soc");
+      const fillCity = (t) => t.replace(/\{city\}/g, pick(cities, "socC" + i));
+      leads.push({ title: fillCity(st.title), body: fillCity(st.body) });
+      continue;
+    }
     let lt = null;
     for (let t = 0; t < 12; t++) { const c = pick(longTpls, "lead" + i + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
     if (!lt) lt = pick(longTpls, "lead" + i);
-    const lb = pick(bandNames, "leadB" + i), ls = pick(styles, "leadS" + i);
-    const la = pick(albums.length ? albums : ["新专辑"], "leadA" + i), lc = pick(cities, "leadC" + i);
-    const fillLead = (t) => t.replace(/\{band\}/g, lb).replace(/\{style\}/g, ls).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
+    let bObj = pick(R, "leadB" + i);
+    for (let k = 0; k < 8 && usedLeadBands.has(bObj.name) && usedLeadBands.size < R.length; k++) bObj = pick(R, "leadB" + i + "_" + k);
+    usedLeadBands.add(bObj.name);
+    const bAlbums = albumsOf(bObj.name);
+    const la = bAlbums.length ? pick(bAlbums, "leadA" + i) : "新专辑";
+    const lc = pick(cities, "leadC" + i);
+    const fillLead = (t) => t.replace(/\{band\}/g, bObj.name).replace(/\{style\}/g, bObj.style).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
     leads.push({ title: fillLead(lt.title), body: fillLead(lt.body) });
   }
+  // 短讯 5 条：4 乐坛 + 1 社会
   const bandTpls = window.NEWS_BAND_TEMPLATES || [];
   const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
   const items = [];
@@ -543,7 +563,7 @@ function generateNewsIssue(week) {
     let tpl = null;
     for (let t = 0; t < 12; t++) { const cand = pick(pool, "t" + i + "_" + t); if (!used.has(cand)) { tpl = cand; used.add(cand); break; } }
     if (!tpl) tpl = pick(pool, "t" + i);
-    items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
+    items.push({ band: isBand, text: isBand ? fill(tpl, "i" + i + "_") : tpl.replace(/\{city\}/g, pick(cities, "i" + i + "_c")) });
   }
   const metaKw = ["沙盒模式","乐队生涯","资金无限","自由创作","正式成立"];
   const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);

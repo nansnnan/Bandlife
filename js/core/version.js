@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.40",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "修复新闻中专辑与乐队错配的问题，专辑现均取自对应乐队的作品。",
+      "新闻长文可来自不同乐队，并加入约 25% 的社会长文（新增社会长文模板 20 篇）。",
+      "按约定扩充模板：播放器评论 +20、评分评论 +20、新闻短讯 +20。",
+    ],
+  },
+  {
     version: "1.2.39",
     date: "2026-11-24",
     size: "小更新",
