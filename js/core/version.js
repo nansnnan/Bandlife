@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.59",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "国家重要级长文：中央一号文件聚焦农民增收、雅典奥运会、中共十六届四中全会、西气东输一线全线贯通，累计 17 条。",
+    ],
+  },
+  {
     version: "1.2.58",
     date: "2026-11-24",
     size: "小更新",
