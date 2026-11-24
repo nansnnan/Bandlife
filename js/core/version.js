@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.43",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "新增地方社会新闻模板：县级/市级/省级短讯共 100 条（县 60 / 市 30 / 省 10）。",
+      "新增地方长讯共 50 条（县 30 / 市 15 / 省 5，字数按级别）。",
+      "新增国家重要级新年贺词（约 1800 字）。",
+    ],
+  },
+  {
     version: "1.2.42",
     date: "2026-11-24",
     size: "小更新",
