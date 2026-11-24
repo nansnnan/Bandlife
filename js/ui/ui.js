@@ -293,63 +293,7 @@ function renderNews() {
 }
 
 function buildNewsIssue(week) {
-  const startDay = week * 7, endDay = startDay + 7;
-  const issueNo = week + 1;
-  const date = dayToDate(startDay);
-  const allBands = window.RIVAL_BANDS || [];
-  // 仅纳入已成立/出道的乐队，避免未出道乐队出现相关新闻
-  const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
-  const R = debuted.length ? debuted : allBands;
-  const bandNames = R.map(b => b.name);
-  const styles = [...new Set(R.map(b => b.style))];
-  const cities = ["北京", "上海", "广州", "深圳", "成都", "武汉", "杭州", "西安", "南京", "重庆", "长沙", "郑州"];
-  const albums = [];
-  for (const bn in window.BAND_DISCOGRAPHY) window.BAND_DISCOGRAPHY[bn].forEach(a => albums.push(a.name));
-  const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
-  const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
-  const fill = (tpl, salt) => tpl
-    .replace(/\{band\}/g, pick(bandNames, salt + "b"))
-    .replace(/\{style\}/g, pick(styles, salt + "s"))
-    .replace(/\{album\}/g, pick(albums.length ? albums : ["新专辑"], salt + "a"))
-    .replace(/\{city\}/g, pick(cities, salt + "c"));
-  // 多篇长文（2-3 篇）
-  const longTpls = window.NEWS_LONG_TEMPLATES || [];
-  const leads = [];
-  const usedLong = new Set();
-  const leadCount = 2 + (rnd("lc") < 0.5 ? 1 : 0);
-  for (let i = 0; i < leadCount && longTpls.length; i++) {
-    let lt = null;
-    for (let t = 0; t < 12; t++) { const c = pick(longTpls, "lead" + i + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
-    if (!lt) lt = pick(longTpls, "lead" + i);
-    const lb = pick(bandNames, "leadB" + i), ls = pick(styles, "leadS" + i);
-    const la = pick(albums.length ? albums : ["新专辑"], "leadA" + i), lc = pick(cities, "leadC" + i);
-    const fillLead = (t) => t.replace(/\{band\}/g, lb).replace(/\{style\}/g, ls).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
-    leads.push({ title: fillLead(lt.title), body: fillLead(lt.body) });
-  }
-  // 短讯 5 条：4 乐坛 + 1 社会
-  const bandTpls = window.NEWS_BAND_TEMPLATES || [];
-  const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
-  const items = [];
-  const used = new Set();
-  for (let i = 0; i < 5; i++) {
-    const isBand = i < 4;
-    const pool = isBand ? bandTpls : otherTpls;
-    let tpl = null;
-    for (let t = 0; t < 12; t++) {
-      const cand = pick(pool, "t" + i + "_" + t);
-      if (!used.has(cand)) { tpl = cand; used.add(cand); break; }
-    }
-    if (!tpl) tpl = pick(pool, "t" + i);
-    items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
-  }
-  const metaKw = ["沙盒模式", "乐队生涯", "资金无限", "自由创作", "正式成立"];
-  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);
-  // 乐队成立改写为新闻，融入当期报纸
-  const foundEv = (Game.events || []).find(e => e.day >= startDay && e.day < endDay && (e.text || "").indexOf("正式成立") >= 0);
-  if (foundEv && Game.band) {
-    items.unshift({ band: true, text: `新锐${Game.band.style}乐队「${Game.band.name}」正式成立，引发乐坛关注与期待。` });
-  }
-  return { issueNo, startDay, date, leads, items, weekEvents };
+  return generateNewsIssue(week);
 }
 
 function renderNewsIssue(issue) {

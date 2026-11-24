@@ -180,6 +180,27 @@ function tickDaily() {
       for (const rel of r.releases) growRelease(rel, 1);
     }
   }
+  // 约 1% 概率：某首歌突然爆火（播放量暴涨）
+  const allRels = [];
+  for (const rel of Game.releases) allRels.push(rel);
+  for (const r of Game.rivals) if (r.active) for (const rel of r.releases) allRels.push(rel);
+  if (allRels.length) {
+    if (Game.rng() < 0.01) {
+      const rel = allRels[Math.floor(Game.rng() * allRels.length)];
+      const mult = 5 + Game.rng() * 8;
+      rel.plays = Math.round((rel.plays || 0) * mult + 30000);
+      addEvent(`《${rel.name}》（${rel.bandName}）突然爆火，播放量暴涨，登上各大榜单。`);
+    }
+    // 约 1% 概率：某首歌评分突然暴涨或骤降
+    if (Game.rng() < 0.01) {
+      const rel = allRels[Math.floor(Game.rng() * allRels.length)];
+      const up = Game.rng() < 0.5;
+      const ratings = generateRatings(rel);
+      ratings.forEach(rt => { rt.score = clamp(rt.score + (up ? 1 : -1) * (rt.scale / 10) * (2 + Game.rng() * 2), 0, rt.scale); });
+      rel.avgScore = calcAvgScore(ratings);
+      addEvent(`《${rel.name}》（${rel.bandName}）评分${up ? "暴涨" : "骤降"}，乐迷议论纷纷。`);
+    }
+  }
 }
 
 // 每周更新：竞争对手按真实发行日期发布作品
@@ -199,6 +220,7 @@ function tickWeekly() {
       }
     }
   }
+  applyWeeklyNewsEffects();
 }
 
 // 每月更新：市场与名气变化
@@ -430,4 +452,102 @@ function formatNumber(n) {
   if (n >= 1e8) return (n / 1e8).toFixed(1) + "亿";
   if (n >= 1e4) return (n / 1e4).toFixed(1) + "万";
   return String(Math.round(n));
+}
+
+
+// ===== 新闻生成与市场影响 =====
+function newsSentiment(text) {
+  const neg = ["争议","质疑","批评","失望","翻车","下滑","退步","风波","抄袭","骂声","吐槽","骤降","骤减","解散","失败","崩塌","拉胯","翻唱争议","暂停活动","休整"];
+  const pos = ["破纪录","登顶","爆火","好评","获奖","成功","热潮","突破","期待","恭喜","刷新","霸榜","力荐","走红","出圈","热榜","动容","暖心","暴涨","飙升","卖爆","惊艳","称赞","双丰收","力荐","高光"];
+  for (const k of neg) if (text.indexOf(k) >= 0) return -1;
+  for (const k of pos) if (text.indexOf(k) >= 0) return 1;
+  return 0;
+}
+
+function bandOfText(text) {
+  for (const r of Game.rivals) if (r.name && text.indexOf(r.name) >= 0) return { name: r.name, releases: r.releases };
+  if (Game.band && text.indexOf(Game.band.name) >= 0) return { name: Game.band.name, releases: Game.releases };
+  return null;
+}
+
+function applyBandNewsEffect(b, sens) {
+  if (!sens) return;
+  for (const rel of b.releases) {
+    const f = 0.06 + Game.rng() * 0.12;
+    rel.plays = Math.round((rel.plays || 0) * (1 + sens * f));
+    let ratings = rel.ratings;
+    if (!ratings && typeof generateRatings === "function") { try { ratings = generateRatings(rel); } catch (err) { ratings = null; } }
+    if (ratings && ratings.length) {
+      ratings.forEach(rt => { rt.score = clamp(rt.score + sens * (rt.scale / 10) * (0.1 + Game.rng() * 0.3), 0, rt.scale); });
+      rel.avgScore = calcAvgScore(ratings);
+    }
+  }
+}
+
+function applyWeeklyNewsEffects() {
+  const week = Math.floor(Game.dayIndex / 7) - 1;
+  if (week < 0) return;
+  if (!Game.newsApplied) Game.newsApplied = {};
+  if (Game.newsApplied[week]) return;
+  Game.newsApplied[week] = true;
+  const issue = generateNewsIssue(week);
+  if (!issue) return;
+  (issue.items || []).forEach(it => {
+    if (!it.band) return;
+    const sens = newsSentiment(it.text);
+    if (!sens) return;
+    const b = bandOfText(it.text);
+    if (b) applyBandNewsEffect(b, sens);
+  });
+}
+
+function generateNewsIssue(week) {
+  const startDay = week * 7, endDay = startDay + 7;
+  const issueNo = week + 1;
+  const date = dayToDate(startDay);
+  const allBands = window.RIVAL_BANDS || [];
+  const debuted = allBands.filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
+  const R = debuted.length ? debuted : allBands;
+  const bandNames = R.map(b => b.name);
+  const styles = [...new Set(R.map(b => b.style))];
+  const cities = ["北京","上海","广州","深圳","成都","武汉","杭州","西安","南京","重庆","长沙","郑州"];
+  const albums = [];
+  for (const bn in window.BAND_DISCOGRAPHY) window.BAND_DISCOGRAPHY[bn].forEach(a => albums.push(a.name));
+  const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
+  const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
+  const fill = (tpl, salt) => tpl
+    .replace(/\{band\}/g, pick(bandNames, salt + "b"))
+    .replace(/\{style\}/g, pick(styles, salt + "s"))
+    .replace(/\{album\}/g, pick(albums.length ? albums : ["新专辑"], salt + "a"))
+    .replace(/\{city\}/g, pick(cities, salt + "c"));
+  const longTpls = window.NEWS_LONG_TEMPLATES || [];
+  const leads = [];
+  const usedLong = new Set();
+  const leadCount = 2 + (rnd("lc") < 0.5 ? 1 : 0);
+  for (let i = 0; i < leadCount && longTpls.length; i++) {
+    let lt = null;
+    for (let t = 0; t < 12; t++) { const c = pick(longTpls, "lead" + i + "_" + t); if (!usedLong.has(c)) { lt = c; usedLong.add(c); break; } }
+    if (!lt) lt = pick(longTpls, "lead" + i);
+    const lb = pick(bandNames, "leadB" + i), ls = pick(styles, "leadS" + i);
+    const la = pick(albums.length ? albums : ["新专辑"], "leadA" + i), lc = pick(cities, "leadC" + i);
+    const fillLead = (t) => t.replace(/\{band\}/g, lb).replace(/\{style\}/g, ls).replace(/\{album\}/g, la).replace(/\{city\}/g, lc);
+    leads.push({ title: fillLead(lt.title), body: fillLead(lt.body) });
+  }
+  const bandTpls = window.NEWS_BAND_TEMPLATES || [];
+  const otherTpls = window.NEWS_OTHER_TEMPLATES || [];
+  const items = [];
+  const used = new Set();
+  for (let i = 0; i < 5; i++) {
+    const isBand = i < 4;
+    const pool = isBand ? bandTpls : otherTpls;
+    let tpl = null;
+    for (let t = 0; t < 12; t++) { const cand = pick(pool, "t" + i + "_" + t); if (!used.has(cand)) { tpl = cand; used.add(cand); break; } }
+    if (!tpl) tpl = pick(pool, "t" + i);
+    items.push({ band: isBand, text: fill(tpl, "i" + i + "_") });
+  }
+  const metaKw = ["沙盒模式","乐队生涯","资金无限","自由创作","正式成立"];
+  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < endDay && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);
+  const foundEv = (Game.events || []).find(e => e.day >= startDay && e.day < endDay && (e.text || "").indexOf("正式成立") >= 0);
+  if (foundEv && Game.band) items.unshift({ band: true, text: `新锐${Game.band.style}乐队「${Game.band.name}」正式成立，引发乐坛关注与期待。` });
+  return { issueNo, startDay, date, leads, items, weekEvents };
 }
