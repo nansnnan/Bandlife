@@ -520,26 +520,26 @@ window.BAND_DISCOGRAPHY = {
        { name: "8+2+8 II", duration: 618 }, { name: "PIGS IN THE RIVER", duration: 403 },
        { name: "AT MOSP HERE", duration: 726 }, { name: "THE LAST DANCE, W.", duration: 399 },
        { name: "SOUNDS FOR CELEBRATION", duration: 420 } ] },
-      { name: "Quiet Marrow", type: "EP", date: "2027-07-27", songs: [
-      { name: "Quiet Marrow", duration: 343 }, { name: "Canvas Glimmer", duration: 325 }, { name: "Anchor Nightfall", duration: 319 },
-      { name: "Highway", duration: 348 }, { name: "Undertow", duration: 394 }, { name: "Silver", duration: 346 } ] },
-    { name: "Vapor", type: "EP", date: "2031-12-24", songs: [
-      { name: "Vapor", duration: 277 }, { name: "Marrow Overcast", duration: 318 }, { name: "Canvas", duration: 324 },
-      { name: "Silence", duration: 318 }, { name: "Drift", duration: 328 } ] },
-    { name: "Nightfall Wires", type: "EP", date: "2036-06-30", songs: [
-      { name: "Nightfall Wires", duration: 277 }, { name: "Glimmer Overcast", duration: 321 }, { name: "Concrete", duration: 325 },
-      { name: "Carousel", duration: 309 }, { name: "Quiet", duration: 340 } ] },
-    { name: "Faded", type: "EP", date: "2040-02-29", songs: [
-      { name: "Faded", duration: 324 }, { name: "Mirrors Undertow", duration: 308 }, { name: "Hollow", duration: 295 },
-      { name: "Tide Rain", duration: 321 }, { name: "Gravel Drift", duration: 275 } ] },
-    { name: "Ember", type: "专辑", date: "2045-01-26", songs: [
-      { name: "Ember", duration: 198 }, { name: "Lantern", duration: 297 }, { name: "Canvas Midnight", duration: 338 },
-      { name: "Broken", duration: 355 }, { name: "Mirrors", duration: 297 }, { name: "Iron", duration: 347 },
-      { name: "Meridian", duration: 313 }, { name: "Anchor Bloom", duration: 240 }, { name: "Whisper", duration: 353 },
-      { name: "Marrow", duration: 346 }, { name: "Vapor Trail", duration: 326 } ] },
-    { name: "Glimmer Daybreak", type: "EP", date: "2048-08-09", songs: [
-      { name: "Glimmer Daybreak", duration: 315 }, { name: "Golden", duration: 336 }, { name: "Paperplane Neon", duration: 303 },
-      { name: "Faded Ashes", duration: 381 }, { name: "Wires", duration: 308 } ] },
+      { name: "Quiet Marrow（寂静的骨髓）", type: "EP", date: "2027-07-27", songs: [
+      { name: "Quiet Marrow（寂静的骨髓）", duration: 343 }, { name: "Canvas Glimmer（画布的微光）", duration: 325 }, { name: "Anchor Nightfall（锚的夜幕）", duration: 319 },
+      { name: "Highway（公路）", duration: 348 }, { name: "Undertow（暗流）", duration: 394 }, { name: "Silver（银色）", duration: 346 } ] },
+    { name: "Vapor（雾霭）", type: "EP", date: "2031-12-24", songs: [
+      { name: "Vapor（雾霭）", duration: 277 }, { name: "Marrow Overcast（骨髓的阴云）", duration: 318 }, { name: "Canvas（画布）", duration: 324 },
+      { name: "Silence（沉寂）", duration: 318 }, { name: "Drift（漂流）", duration: 328 } ] },
+    { name: "Nightfall Wires（夜幕的电线）", type: "EP", date: "2036-06-30", songs: [
+      { name: "Nightfall Wires（夜幕的电线）", duration: 277 }, { name: "Glimmer Overcast（微光的阴云）", duration: 321 }, { name: "Concrete（水泥）", duration: 325 },
+      { name: "Carousel（旋转木马）", duration: 309 }, { name: "Quiet（寂静）", duration: 340 } ] },
+    { name: "Faded（褪色）", type: "EP", date: "2040-02-29", songs: [
+      { name: "Faded（褪色）", duration: 324 }, { name: "Mirrors Undertow（镜子的暗流）", duration: 308 }, { name: "Hollow（空洞）", duration: 295 },
+      { name: "Tide Rain（潮汐的雨）", duration: 321 }, { name: "Gravel Drift（砾石的漂流）", duration: 275 } ] },
+    { name: "Ember（余烬）", type: "专辑", date: "2045-01-26", songs: [
+      { name: "Ember（余烬）", duration: 198 }, { name: "Lantern（灯笼）", duration: 297 }, { name: "Canvas Midnight（画布的午夜）", duration: 338 },
+      { name: "Broken（破碎）", duration: 355 }, { name: "Mirrors（镜子）", duration: 297 }, { name: "Iron（铁）", duration: 347 },
+      { name: "Meridian（子午线）", duration: 313 }, { name: "Anchor Bloom（锚的绽放）", duration: 240 }, { name: "Whisper（低语）", duration: 353 },
+      { name: "Marrow（骨髓）", duration: 346 }, { name: "Vapor Trail（雾霭的足迹）", duration: 326 } ] },
+    { name: "Glimmer Daybreak（微光的黎明）", type: "EP", date: "2048-08-09", songs: [
+      { name: "Glimmer Daybreak（微光的黎明）", duration: 315 }, { name: "Golden（金色）", duration: 336 }, { name: "Paperplane Neon（纸飞机的霓虹）", duration: 303 },
+      { name: "Faded Ashes（褪色的灰烬）", duration: 381 }, { name: "Wires（电线）", duration: 308 } ] },
     ],
   "草东没有派对": [
     { name: "丑奴儿", type: "专辑", date: "2016-02-19", rating: 9.1, songs: [
@@ -649,32 +649,32 @@ window.BAND_DISCOGRAPHY = {
        { name: "时间之间", duration: 370 }, { name: "今夜留给今夜吧", duration: 296 }, { name: "漂流去世界最中心", duration: 289 },
        { name: "88奥林匹克", duration: 351 }, { name: "偷月亮的人", duration: 414 }, { name: "时髦人都好fancy", duration: 227 },
        { name: "后海冲浪手", duration: 269 }, { name: "BlingBlingbling", duration: 284 } ] },
-      { name: "Silence Sundown", type: "专辑", date: "2027-12-19", songs: [
-      { name: "Silence Sundown", duration: 276 }, { name: "Overcast Drift", duration: 271 }, { name: "Sundown", duration: 270 },
-      { name: "Wires", duration: 270 }, { name: "Daybreak Echo", duration: 244 }, { name: "Mirrors", duration: 246 },
-      { name: "Silence", duration: 235 }, { name: "Shallow", duration: 281 }, { name: "Concrete", duration: 284 } ] },
-    { name: "Golden Trail", type: "专辑", date: "2032-04-07", songs: [
-      { name: "Golden Trail", duration: 301 }, { name: "Tide Vapor", duration: 269 }, { name: "Satellite", duration: 217 },
-      { name: "Concrete Signal", duration: 171 }, { name: "Anchor", duration: 274 }, { name: "Iron", duration: 238 },
-      { name: "Rain", duration: 283 }, { name: "Hollow Quiet", duration: 236 }, { name: "Daylight", duration: 381 },
-      { name: "Lantern", duration: 256 } ] },
-    { name: "Trail", type: "专辑", date: "2036-08-01", songs: [
-      { name: "Trail", duration: 240 }, { name: "Concrete Hollow", duration: 247 }, { name: "Satellite Rain", duration: 281 },
-      { name: "Iron Silence", duration: 281 }, { name: "Gravel", duration: 273 }, { name: "Carousel", duration: 267 },
-      { name: "Meridian", duration: 276 }, { name: "Highway", duration: 307 } ] },
-    { name: "Tide", type: "专辑", date: "2040-11-25", songs: [
-      { name: "Tide", duration: 282 }, { name: "Orbit Static", duration: 236 }, { name: "Highway Daylight", duration: 304 },
-      { name: "Static Overcast", duration: 163 }, { name: "Ashes", duration: 234 }, { name: "Mirrors Sundown", duration: 178 },
-      { name: "Vapor Undertow", duration: 222 }, { name: "Velvet", duration: 243 }, { name: "Quiet", duration: 280 },
-      { name: "Silence Anchor", duration: 235 } ] },
-    { name: "Motel Drift", type: "专辑", date: "2044-05-31", songs: [
-      { name: "Motel Drift", duration: 266 }, { name: "Neon", duration: 458 }, { name: "Overcast Orbit", duration: 282 },
-      { name: "Ember", duration: 251 }, { name: "Gravel Daybreak", duration: 468 }, { name: "Broken", duration: 188 },
-      { name: "Faded Sundown", duration: 216 } ] },
-    { name: "Ember Canvas", type: "专辑", date: "2048-09-23", songs: [
-      { name: "Ember Canvas", duration: 226 }, { name: "Glimmer", duration: 267 }, { name: "Hollow", duration: 442 },
-      { name: "Overcast", duration: 258 }, { name: "Paperplane", duration: 269 }, { name: "Rain Sundown", duration: 295 },
-      { name: "Concrete Broken", duration: 351 }, { name: "Marrow", duration: 252 }, { name: "Orbit", duration: 312 } ] },
+      { name: "Silence Sundown（沉寂的日落）", type: "专辑", date: "2027-12-19", songs: [
+      { name: "Silence Sundown（沉寂的日落）", duration: 276 }, { name: "Overcast Drift（阴云的漂流）", duration: 271 }, { name: "Sundown（日落）", duration: 270 },
+      { name: "Wires（电线）", duration: 270 }, { name: "Daybreak Echo（黎明的回声）", duration: 244 }, { name: "Mirrors（镜子）", duration: 246 },
+      { name: "Silence（沉寂）", duration: 235 }, { name: "Shallow（浅滩）", duration: 281 }, { name: "Concrete（水泥）", duration: 284 } ] },
+    { name: "Golden Trail（金色的足迹）", type: "专辑", date: "2032-04-07", songs: [
+      { name: "Golden Trail（金色的足迹）", duration: 301 }, { name: "Tide Vapor（潮汐的雾霭）", duration: 269 }, { name: "Satellite（卫星）", duration: 217 },
+      { name: "Concrete Signal（水泥的信号）", duration: 171 }, { name: "Anchor（锚）", duration: 274 }, { name: "Iron（铁）", duration: 238 },
+      { name: "Rain（雨）", duration: 283 }, { name: "Hollow Quiet（空洞的寂静）", duration: 236 }, { name: "Daylight（日光）", duration: 381 },
+      { name: "Lantern（灯笼）", duration: 256 } ] },
+    { name: "Trail（足迹）", type: "专辑", date: "2036-08-01", songs: [
+      { name: "Trail（足迹）", duration: 240 }, { name: "Concrete Hollow（水泥的空洞）", duration: 247 }, { name: "Satellite Rain（卫星的雨）", duration: 281 },
+      { name: "Iron Silence（铁的沉寂）", duration: 281 }, { name: "Gravel（砾石）", duration: 273 }, { name: "Carousel（旋转木马）", duration: 267 },
+      { name: "Meridian（子午线）", duration: 276 }, { name: "Highway（公路）", duration: 307 } ] },
+    { name: "Tide（潮汐）", type: "专辑", date: "2040-11-25", songs: [
+      { name: "Tide（潮汐）", duration: 282 }, { name: "Orbit Static（轨道的静电）", duration: 236 }, { name: "Highway Daylight（公路的日光）", duration: 304 },
+      { name: "Static Overcast（静电的阴云）", duration: 163 }, { name: "Ashes（灰烬）", duration: 234 }, { name: "Mirrors Sundown（镜子的日落）", duration: 178 },
+      { name: "Vapor Undertow（雾霭的暗流）", duration: 222 }, { name: "Velvet（天鹅绒）", duration: 243 }, { name: "Quiet（寂静）", duration: 280 },
+      { name: "Silence Anchor（沉寂的锚）", duration: 235 } ] },
+    { name: "Motel Drift（汽车旅馆的漂流）", type: "专辑", date: "2044-05-31", songs: [
+      { name: "Motel Drift（汽车旅馆的漂流）", duration: 266 }, { name: "Neon（霓虹）", duration: 458 }, { name: "Overcast Orbit（阴云的轨道）", duration: 282 },
+      { name: "Ember（余烬）", duration: 251 }, { name: "Gravel Daybreak（砾石的黎明）", duration: 468 }, { name: "Broken（破碎）", duration: 188 },
+      { name: "Faded Sundown（褪色的日落）", duration: 216 } ] },
+    { name: "Ember Canvas（余烬的画布）", type: "专辑", date: "2048-09-23", songs: [
+      { name: "Ember Canvas（余烬的画布）", duration: 226 }, { name: "Glimmer（微光）", duration: 267 }, { name: "Hollow（空洞）", duration: 442 },
+      { name: "Overcast（阴云）", duration: 258 }, { name: "Paperplane（纸飞机）", duration: 269 }, { name: "Rain Sundown（雨的日落）", duration: 295 },
+      { name: "Concrete Broken（水泥的破碎）", duration: 351 }, { name: "Marrow（骨髓）", duration: 252 }, { name: "Orbit（轨道）", duration: 312 } ] },
     ],
   "木马乐队": [
     { name: "木马", type: "专辑", date: "1999-12-01", rating: 8.2, songs: [
@@ -1049,35 +1049,35 @@ window.BAND_DISCOGRAPHY = {
        { name: "我比你OK", duration: 0 }, { name: "游击队之歌", duration: 0 }, { name: "顽主", duration: 0 },
        { name: "TA", duration: 0 }, { name: "Call the Police", duration: 0 }, { name: "摇滚的琴人", duration: 0 },
        { name: "永远的乌托邦", duration: 0 } ] },
-      { name: "Wires", type: "专辑", date: "2028-03-25", songs: [
-      { name: "Wires", duration: 179 }, { name: "Broken", duration: 208 }, { name: "Midnight", duration: 195 },
-      { name: "Marrow", duration: 193 }, { name: "Carousel Undertow", duration: 179 }, { name: "Whisper", duration: 209 },
-      { name: "Rust", duration: 202 } ] },
-    { name: "Overcast", type: "专辑", date: "2031-10-08", songs: [
-      { name: "Overcast", duration: 291 }, { name: "Undertow", duration: 148 }, { name: "Ember", duration: 206 },
-      { name: "Gravel", duration: 202 }, { name: "Vapor", duration: 200 }, { name: "Ashes", duration: 191 },
-      { name: "Neon", duration: 174 } ] },
-    { name: "Silver Concrete", type: "专辑", date: "2034-11-04", songs: [
-      { name: "Silver Concrete", duration: 208 }, { name: "Echo", duration: 199 }, { name: "Concrete Paperplane", duration: 157 },
-      { name: "Faded", duration: 194 }, { name: "Broken Tide", duration: 174 }, { name: "Meridian", duration: 116 },
-      { name: "Satellite", duration: 173 }, { name: "Lantern", duration: 174 }, { name: "Canvas", duration: 159 },
-      { name: "Bloom", duration: 195 } ] },
-    { name: "Golden", type: "专辑", date: "2038-02-09", songs: [
-      { name: "Golden", duration: 298 }, { name: "Ashes Silver", duration: 142 }, { name: "Trail Rain", duration: 326 },
-      { name: "Carousel", duration: 186 }, { name: "Velvet Golden", duration: 198 }, { name: "Concrete", duration: 183 },
-      { name: "Drift", duration: 200 }, { name: "Daybreak", duration: 174 }, { name: "Spark", duration: 203 } ] },
-    { name: "Tide", type: "专辑", date: "2042-02-27", songs: [
-      { name: "Tide", duration: 211 }, { name: "Tide Ashes", duration: 162 }, { name: "Ember Satellite", duration: 173 },
-      { name: "Smoke", duration: 188 }, { name: "Sundown", duration: 212 }, { name: "Silver", duration: 175 },
-      { name: "Iron", duration: 221 }, { name: "Anchor Rust", duration: 177 } ] },
-    { name: "Midnight Gravel", type: "专辑", date: "2045-10-17", songs: [
-      { name: "Midnight Gravel", duration: 111 }, { name: "Daylight", duration: 201 }, { name: "Hollow", duration: 177 },
-      { name: "Static Broken", duration: 112 }, { name: "Quiet Daylight", duration: 195 }, { name: "Rain", duration: 157 },
-      { name: "Motel", duration: 206 }, { name: "Harbor", duration: 199 } ] },
-    { name: "Quiet", type: "专辑", date: "2049-06-11", songs: [
-      { name: "Quiet", duration: 188 }, { name: "Concrete Marrow", duration: 200 }, { name: "Neon Meridian", duration: 196 },
-      { name: "Hollow Nightfall", duration: 204 }, { name: "Faded Highway", duration: 166 }, { name: "Orbit", duration: 228 },
-      { name: "Motel Midnight", duration: 204 }, { name: "Trail", duration: 193 } ] },
+      { name: "Wires（电线）", type: "专辑", date: "2028-03-25", songs: [
+      { name: "Wires（电线）", duration: 179 }, { name: "Broken（破碎）", duration: 208 }, { name: "Midnight（午夜）", duration: 195 },
+      { name: "Marrow（骨髓）", duration: 193 }, { name: "Carousel Undertow（旋转木马的暗流）", duration: 179 }, { name: "Whisper（低语）", duration: 209 },
+      { name: "Rust（锈迹）", duration: 202 } ] },
+    { name: "Overcast（阴云）", type: "专辑", date: "2031-10-08", songs: [
+      { name: "Overcast（阴云）", duration: 291 }, { name: "Undertow（暗流）", duration: 148 }, { name: "Ember（余烬）", duration: 206 },
+      { name: "Gravel（砾石）", duration: 202 }, { name: "Vapor（雾霭）", duration: 200 }, { name: "Ashes（灰烬）", duration: 191 },
+      { name: "Neon（霓虹）", duration: 174 } ] },
+    { name: "Silver Concrete（银色的水泥）", type: "专辑", date: "2034-11-04", songs: [
+      { name: "Silver Concrete（银色的水泥）", duration: 208 }, { name: "Echo（回声）", duration: 199 }, { name: "Concrete Paperplane（水泥的纸飞机）", duration: 157 },
+      { name: "Faded（褪色）", duration: 194 }, { name: "Broken Tide（破碎的潮汐）", duration: 174 }, { name: "Meridian（子午线）", duration: 116 },
+      { name: "Satellite（卫星）", duration: 173 }, { name: "Lantern（灯笼）", duration: 174 }, { name: "Canvas（画布）", duration: 159 },
+      { name: "Bloom（绽放）", duration: 195 } ] },
+    { name: "Golden（金色）", type: "专辑", date: "2038-02-09", songs: [
+      { name: "Golden（金色）", duration: 298 }, { name: "Ashes Silver（灰烬的银色）", duration: 142 }, { name: "Trail Rain（足迹的雨）", duration: 326 },
+      { name: "Carousel（旋转木马）", duration: 186 }, { name: "Velvet Golden（天鹅绒的金色）", duration: 198 }, { name: "Concrete（水泥）", duration: 183 },
+      { name: "Drift（漂流）", duration: 200 }, { name: "Daybreak（黎明）", duration: 174 }, { name: "Spark（火花）", duration: 203 } ] },
+    { name: "Tide（潮汐）", type: "专辑", date: "2042-02-27", songs: [
+      { name: "Tide（潮汐）", duration: 211 }, { name: "Tide Ashes（潮汐的灰烬）", duration: 162 }, { name: "Ember Satellite（余烬的卫星）", duration: 173 },
+      { name: "Smoke（烟雾）", duration: 188 }, { name: "Sundown（日落）", duration: 212 }, { name: "Silver（银色）", duration: 175 },
+      { name: "Iron（铁）", duration: 221 }, { name: "Anchor Rust（锚的锈迹）", duration: 177 } ] },
+    { name: "Midnight Gravel（午夜的砾石）", type: "专辑", date: "2045-10-17", songs: [
+      { name: "Midnight Gravel（午夜的砾石）", duration: 111 }, { name: "Daylight（日光）", duration: 201 }, { name: "Hollow（空洞）", duration: 177 },
+      { name: "Static Broken（静电的破碎）", duration: 112 }, { name: "Quiet Daylight（寂静的日光）", duration: 195 }, { name: "Rain（雨）", duration: 157 },
+      { name: "Motel（汽车旅馆）", duration: 206 }, { name: "Harbor（港湾）", duration: 199 } ] },
+    { name: "Quiet（寂静）", type: "专辑", date: "2049-06-11", songs: [
+      { name: "Quiet（寂静）", duration: 188 }, { name: "Concrete Marrow（水泥的骨髓）", duration: 200 }, { name: "Neon Meridian（霓虹的子午线）", duration: 196 },
+      { name: "Hollow Nightfall（空洞的夜幕）", duration: 204 }, { name: "Faded Highway（褪色的公路）", duration: 166 }, { name: "Orbit（轨道）", duration: 228 },
+      { name: "Motel Midnight（汽车旅馆的午夜）", duration: 204 }, { name: "Trail（足迹）", duration: 193 } ] },
     ],
   "达达乐队": [
     { name: "天使", type: "专辑", date: "2001-01-01", rating: 8.0, songs: [
@@ -1133,7 +1133,7 @@ window.BAND_DISCOGRAPHY = {
     { name: "双重生命", type: "专辑", date: "2001-11-11", rating: 7.9, songs: [
        { name: "模糊", duration: 359 }, { name: "超音速列车", duration: 272 }, { name: "年轻人", duration: 286 },
        { name: "Love Me,Girl", duration: 241 }, { name: "基因", duration: 186 }, { name: "北欧洲", duration: 351 },
-       { name: "透明", duration: 272 }, { name: "Big Bang", duration: 214 }, { name: "十四层", duration: 274 },
+       { name: "透明（透明）", duration: 272 }, { name: "Big Bang", duration: 214 }, { name: "十四层", duration: 274 },
        { name: "双重生命", duration: 314 } ] },
     { name: "来自VC的礼物", type: "专辑", date: "2005-01-01", songs: [
        { name: "C调哀歌", duration: 269 }, { name: "优雅", duration: 247 }, { name: "Kiss Me", duration: 259 },
@@ -1743,39 +1743,39 @@ window.BAND_DISCOGRAPHY = {
        { name: "COPY SHOP", duration: 361 }, { name: "VAMPIRE LOVERS", duration: 327 },
        { name: "FROZEN SONG", duration: 315 }, { name: "TURN BLACK", duration: 323 },
        { name: "FROM THE FUTURE", duration: 368 }, { name: "THE LOOP SIN", duration: 483 } ] },
-      { name: "Paperplane", type: "EP", date: "2027-01-12", songs: [
-      { name: "Paperplane", duration: 344 }, { name: "Carousel Sundown", duration: 322 }, { name: "Satellite", duration: 293 } ] },
-    { name: "Drift", type: "专辑", date: "2029-07-13", songs: [
-      { name: "Drift", duration: 294 }, { name: "Meridian Silence", duration: 268 }, { name: "Faded", duration: 331 },
-      { name: "Bloom", duration: 293 }, { name: "Overcast Smoke", duration: 213 }, { name: "Anchor Daylight", duration: 318 },
-      { name: "Vapor", duration: 302 }, { name: "Harbor Highway", duration: 383 }, { name: "Quiet Undertow", duration: 356 },
-      { name: "Anchor Mirrors", duration: 445 }, { name: "Iron", duration: 218 } ] },
-    { name: "Tide", type: "专辑", date: "2032-01-02", songs: [
-      { name: "Tide", duration: 272 }, { name: "Ember", duration: 330 }, { name: "Wires Lantern", duration: 309 },
-      { name: "Echo Wires", duration: 324 }, { name: "Orbit Anchor", duration: 333 }, { name: "Marrow", duration: 302 },
-      { name: "Concrete Hollow", duration: 296 }, { name: "Gravel", duration: 313 }, { name: "Quiet Sundown", duration: 318 } ] },
-    { name: "Quiet", type: "专辑", date: "2034-10-26", songs: [
-      { name: "Quiet", duration: 359 }, { name: "Spark", duration: 344 }, { name: "Daybreak Mirrors", duration: 308 },
-      { name: "Concrete", duration: 350 }, { name: "Sundown Neon", duration: 332 }, { name: "Rust", duration: 208 },
-      { name: "Concrete Golden", duration: 316 } ] },
-    { name: "Glimmer Anchor", type: "EP", date: "2037-03-25", songs: [
-      { name: "Glimmer Anchor", duration: 353 }, { name: "Canvas Static", duration: 256 }, { name: "Carousel", duration: 301 },
-      { name: "Meridian", duration: 342 }, { name: "Golden", duration: 324 }, { name: "Broken", duration: 346 } ] },
-    { name: "Rain Iron", type: "EP", date: "2039-09-29", songs: [
-      { name: "Rain Iron", duration: 314 }, { name: "Overcast", duration: 343 }, { name: "Silver", duration: 316 },
-      { name: "Glimmer", duration: 345 }, { name: "Anchor", duration: 340 } ] },
-    { name: "Motel", type: "EP", date: "2042-05-30", songs: [
-      { name: "Motel", duration: 337 }, { name: "Concrete Rust", duration: 352 }, { name: "Daybreak", duration: 427 },
-      { name: "Canvas", duration: 341 }, { name: "Lantern", duration: 345 }, { name: "Midnight", duration: 333 } ] },
-    { name: "Silence", type: "专辑", date: "2044-12-20", songs: [
-      { name: "Silence", duration: 308 }, { name: "Wires", duration: 331 }, { name: "Mirrors", duration: 337 },
-      { name: "Undertow", duration: 370 }, { name: "Velvet Rain", duration: 213 }, { name: "Anchor Concrete", duration: 272 },
-      { name: "Motel Canvas", duration: 479 }, { name: "Shallow Harbor", duration: 260 }, { name: "Neon", duration: 195 } ] },
-    { name: "Velvet", type: "EP", date: "2047-04-14", songs: [
-      { name: "Velvet", duration: 317 }, { name: "Silver Broken", duration: 284 }, { name: "Harbor Trail", duration: 191 },
-      { name: "Sundown", duration: 302 } ] },
-    { name: "Highway", type: "EP", date: "2049-07-10", songs: [
-      { name: "Highway", duration: 292 }, { name: "Signal Daybreak", duration: 311 }, { name: "Quiet Glimmer", duration: 313 } ] },
+      { name: "Paperplane（纸飞机）", type: "EP", date: "2027-01-12", songs: [
+      { name: "Paperplane（纸飞机）", duration: 344 }, { name: "Carousel Sundown（旋转木马的日落）", duration: 322 }, { name: "Satellite（卫星）", duration: 293 } ] },
+    { name: "Drift（漂流）", type: "专辑", date: "2029-07-13", songs: [
+      { name: "Drift（漂流）", duration: 294 }, { name: "Meridian Silence（子午线的沉寂）", duration: 268 }, { name: "Faded（褪色）", duration: 331 },
+      { name: "Bloom（绽放）", duration: 293 }, { name: "Overcast Smoke（阴云的烟雾）", duration: 213 }, { name: "Anchor Daylight（锚的日光）", duration: 318 },
+      { name: "Vapor（雾霭）", duration: 302 }, { name: "Harbor Highway（港湾的公路）", duration: 383 }, { name: "Quiet Undertow（寂静的暗流）", duration: 356 },
+      { name: "Anchor Mirrors（锚的镜子）", duration: 445 }, { name: "Iron（铁）", duration: 218 } ] },
+    { name: "Tide（潮汐）", type: "专辑", date: "2032-01-02", songs: [
+      { name: "Tide（潮汐）", duration: 272 }, { name: "Ember（余烬）", duration: 330 }, { name: "Wires Lantern（电线的灯笼）", duration: 309 },
+      { name: "Echo Wires（回声的电线）", duration: 324 }, { name: "Orbit Anchor（轨道的锚）", duration: 333 }, { name: "Marrow（骨髓）", duration: 302 },
+      { name: "Concrete Hollow（水泥的空洞）", duration: 296 }, { name: "Gravel（砾石）", duration: 313 }, { name: "Quiet Sundown（寂静的日落）", duration: 318 } ] },
+    { name: "Quiet（寂静）", type: "专辑", date: "2034-10-26", songs: [
+      { name: "Quiet（寂静）", duration: 359 }, { name: "Spark（火花）", duration: 344 }, { name: "Daybreak Mirrors（黎明的镜子）", duration: 308 },
+      { name: "Concrete（水泥）", duration: 350 }, { name: "Sundown Neon（日落的霓虹）", duration: 332 }, { name: "Rust（锈迹）", duration: 208 },
+      { name: "Concrete Golden（水泥的金色）", duration: 316 } ] },
+    { name: "Glimmer Anchor（微光的锚）", type: "EP", date: "2037-03-25", songs: [
+      { name: "Glimmer Anchor（微光的锚）", duration: 353 }, { name: "Canvas Static（画布的静电）", duration: 256 }, { name: "Carousel（旋转木马）", duration: 301 },
+      { name: "Meridian（子午线）", duration: 342 }, { name: "Golden（金色）", duration: 324 }, { name: "Broken（破碎）", duration: 346 } ] },
+    { name: "Rain Iron（雨的铁）", type: "EP", date: "2039-09-29", songs: [
+      { name: "Rain Iron（雨的铁）", duration: 314 }, { name: "Overcast（阴云）", duration: 343 }, { name: "Silver（银色）", duration: 316 },
+      { name: "Glimmer（微光）", duration: 345 }, { name: "Anchor（锚）", duration: 340 } ] },
+    { name: "Motel（汽车旅馆）", type: "EP", date: "2042-05-30", songs: [
+      { name: "Motel（汽车旅馆）", duration: 337 }, { name: "Concrete Rust（水泥的锈迹）", duration: 352 }, { name: "Daybreak（黎明）", duration: 427 },
+      { name: "Canvas（画布）", duration: 341 }, { name: "Lantern（灯笼）", duration: 345 }, { name: "Midnight（午夜）", duration: 333 } ] },
+    { name: "Silence（沉寂）", type: "专辑", date: "2044-12-20", songs: [
+      { name: "Silence（沉寂）", duration: 308 }, { name: "Wires（电线）", duration: 331 }, { name: "Mirrors（镜子）", duration: 337 },
+      { name: "Undertow（暗流）", duration: 370 }, { name: "Velvet Rain（天鹅绒的雨）", duration: 213 }, { name: "Anchor Concrete（锚的水泥）", duration: 272 },
+      { name: "Motel Canvas（汽车旅馆的画布）", duration: 479 }, { name: "Shallow Harbor（浅滩的港湾）", duration: 260 }, { name: "Neon（霓虹）", duration: 195 } ] },
+    { name: "Velvet（天鹅绒）", type: "EP", date: "2047-04-14", songs: [
+      { name: "Velvet（天鹅绒）", duration: 317 }, { name: "Silver Broken（银色的破碎）", duration: 284 }, { name: "Harbor Trail（港湾的足迹）", duration: 191 },
+      { name: "Sundown（日落）", duration: 302 } ] },
+    { name: "Highway（公路）", type: "EP", date: "2049-07-10", songs: [
+      { name: "Highway（公路）", duration: 292 }, { name: "Signal Daybreak（信号的黎明）", duration: 311 }, { name: "Quiet Glimmer（寂静的微光）", duration: 313 } ] },
     ],
   "大波浪": [
     { name: "THE BIG WAVE", type: "专辑", date: "2016-09-01", rating: 7.8, songs: [
@@ -1800,57 +1800,57 @@ window.BAND_DISCOGRAPHY = {
        { name: "药石罔效", duration: 204 }, { name: "我们在一起颤抖", duration: 232 }, { name: "愿与他重修旧好", duration: 225 },
        { name: "再见！马克西姆", duration: 267 }, { name: "无法忘记她", duration: 222 }, { name: "欲言又止", duration: 231 },
        { name: "踽踽独行", duration: 270 } ] },
-      { name: "Echo", type: "专辑", date: "2026-12-07", songs: [
-      { name: "Echo", duration: 171 }, { name: "Highway Drift", duration: 275 }, { name: "Tide", duration: 250 },
-      { name: "Wires Static", duration: 306 }, { name: "Static", duration: 251 }, { name: "Carousel", duration: 281 },
-      { name: "Echo Sundown", duration: 309 }, { name: "Rain", duration: 313 }, { name: "Motel", duration: 267 },
-      { name: "Glimmer", duration: 278 }, { name: "Signal", duration: 241 } ] },
-    { name: "Daybreak", type: "专辑", date: "2029-01-19", songs: [
-      { name: "Daybreak", duration: 300 }, { name: "Vapor", duration: 283 }, { name: "Hollow Silence", duration: 241 },
-      { name: "Hollow", duration: 237 }, { name: "Neon Golden", duration: 254 }, { name: "Hollow Wires", duration: 267 },
-      { name: "Harbor Satellite", duration: 278 }, { name: "Concrete", duration: 291 }, { name: "Nightfall", duration: 264 } ] },
-    { name: "Meridian", type: "专辑", date: "2030-12-29", songs: [
-      { name: "Meridian", duration: 236 }, { name: "Whisper Golden", duration: 245 }, { name: "Paperplane", duration: 272 },
-      { name: "Harbor", duration: 266 }, { name: "Velvet Anchor", duration: 243 }, { name: "Quiet Mirrors", duration: 251 },
-      { name: "Orbit", duration: 245 }, { name: "Sundown", duration: 276 } ] },
-    { name: "Quiet Overcast", type: "专辑", date: "2033-02-07", songs: [
-      { name: "Quiet Overcast", duration: 223 }, { name: "Gravel Mirrors", duration: 275 }, { name: "Bloom Orbit", duration: 263 },
-      { name: "Midnight", duration: 465 }, { name: "Silence Faded", duration: 239 }, { name: "Faded", duration: 243 },
-      { name: "Bloom", duration: 164 } ] },
-    { name: "Rust", type: "专辑", date: "2035-03-08", songs: [
-      { name: "Rust", duration: 292 }, { name: "Golden Motel", duration: 152 }, { name: "Anchor Neon", duration: 277 },
-      { name: "Smoke Whisper", duration: 267 }, { name: "Broken", duration: 278 }, { name: "Iron Vapor", duration: 287 },
-      { name: "Ashes Daylight", duration: 210 }, { name: "Lantern", duration: 242 }, { name: "Ashes Nightfall", duration: 284 } ] },
-    { name: "Overcast", type: "专辑", date: "2037-05-13", songs: [
-      { name: "Overcast", duration: 253 }, { name: "Meridian Paperplane", duration: 284 }, { name: "Ember Motel", duration: 241 },
-      { name: "Highway", duration: 237 }, { name: "Ember", duration: 253 }, { name: "Motel Signal", duration: 233 },
-      { name: "Silver", duration: 273 }, { name: "Rain Spark", duration: 243 } ] },
-    { name: "Echo Silver", type: "专辑", date: "2039-10-13", songs: [
-      { name: "Echo Silver", duration: 276 }, { name: "Rain Nightfall", duration: 437 }, { name: "Midnight Marrow", duration: 248 },
-      { name: "Bloom Carousel", duration: 253 }, { name: "Spark", duration: 239 }, { name: "Anchor", duration: 310 },
-      { name: "Undertow", duration: 417 } ] },
-    { name: "Rust Gravel", type: "专辑", date: "2041-07-17", songs: [
-      { name: "Rust Gravel", duration: 274 }, { name: "Mirrors", duration: 254 }, { name: "Golden", duration: 258 },
-      { name: "Marrow", duration: 222 }, { name: "Sundown Silence", duration: 260 }, { name: "Daybreak Velvet", duration: 181 },
-      { name: "Vapor Shallow", duration: 262 }, { name: "Iron", duration: 240 } ] },
-    { name: "Iron Quiet", type: "专辑", date: "2043-07-22", songs: [
-      { name: "Iron Quiet", duration: 250 }, { name: "Paperplane Velvet", duration: 262 }, { name: "Nightfall Vapor", duration: 277 },
-      { name: "Daylight Mirrors", duration: 207 }, { name: "Shallow", duration: 344 }, { name: "Gravel Shallow", duration: 252 },
-      { name: "Wires", duration: 143 }, { name: "Marrow Anchor", duration: 268 } ] },
-    { name: "Neon", type: "专辑", date: "2045-12-05", songs: [
-      { name: "Neon", duration: 300 }, { name: "Bloom Wires", duration: 284 }, { name: "Smoke", duration: 247 },
-      { name: "Gravel Echo", duration: 266 }, { name: "Meridian Daylight", duration: 264 }, { name: "Whisper", duration: 352 },
-      { name: "Lantern Neon", duration: 424 }, { name: "Anchor Signal", duration: 269 }, { name: "Gravel", duration: 261 },
-      { name: "Quiet", duration: 281 }, { name: "Neon Silver", duration: 276 } ] },
-    { name: "Echo Broken", type: "专辑", date: "2047-10-05", songs: [
-      { name: "Echo Broken", duration: 234 }, { name: "Ashes", duration: 245 }, { name: "Tide Trail", duration: 389 },
-      { name: "Signal Concrete", duration: 271 }, { name: "Daylight", duration: 343 }, { name: "Static Whisper", duration: 285 },
-      { name: "Satellite", duration: 255 }, { name: "Broken Ember", duration: 235 } ] },
-    { name: "Drift", type: "专辑", date: "2050-03-17", songs: [
-      { name: "Drift", duration: 148 }, { name: "Wires Rust", duration: 283 }, { name: "Velvet", duration: 264 },
-      { name: "Marrow Vapor", duration: 253 }, { name: "Harbor Faded", duration: 251 }, { name: "Velvet Canvas", duration: 236 },
-      { name: "Iron Orbit", duration: 258 }, { name: "Concrete Static", duration: 238 }, { name: "Static Hollow", duration: 282 },
-      { name: "Nightfall Marrow", duration: 256 } ] },
+      { name: "Echo（回声）", type: "专辑", date: "2026-12-07", songs: [
+      { name: "Echo（回声）", duration: 171 }, { name: "Highway Drift（公路的漂流）", duration: 275 }, { name: "Tide（潮汐）", duration: 250 },
+      { name: "Wires Static（电线的静电）", duration: 306 }, { name: "Static（静电）", duration: 251 }, { name: "Carousel（旋转木马）", duration: 281 },
+      { name: "Echo Sundown（回声的日落）", duration: 309 }, { name: "Rain（雨）", duration: 313 }, { name: "Motel（汽车旅馆）", duration: 267 },
+      { name: "Glimmer（微光）", duration: 278 }, { name: "Signal（信号）", duration: 241 } ] },
+    { name: "Daybreak（黎明）", type: "专辑", date: "2029-01-19", songs: [
+      { name: "Daybreak（黎明）", duration: 300 }, { name: "Vapor（雾霭）", duration: 283 }, { name: "Hollow Silence（空洞的沉寂）", duration: 241 },
+      { name: "Hollow（空洞）", duration: 237 }, { name: "Neon Golden（霓虹的金色）", duration: 254 }, { name: "Hollow Wires（空洞的电线）", duration: 267 },
+      { name: "Harbor Satellite（港湾的卫星）", duration: 278 }, { name: "Concrete（水泥）", duration: 291 }, { name: "Nightfall（夜幕）", duration: 264 } ] },
+    { name: "Meridian（子午线）", type: "专辑", date: "2030-12-29", songs: [
+      { name: "Meridian（子午线）", duration: 236 }, { name: "Whisper Golden（低语的金色）", duration: 245 }, { name: "Paperplane（纸飞机）", duration: 272 },
+      { name: "Harbor（港湾）", duration: 266 }, { name: "Velvet Anchor（天鹅绒的锚）", duration: 243 }, { name: "Quiet Mirrors（寂静的镜子）", duration: 251 },
+      { name: "Orbit（轨道）", duration: 245 }, { name: "Sundown（日落）", duration: 276 } ] },
+    { name: "Quiet Overcast（寂静的阴云）", type: "专辑", date: "2033-02-07", songs: [
+      { name: "Quiet Overcast（寂静的阴云）", duration: 223 }, { name: "Gravel Mirrors（砾石的镜子）", duration: 275 }, { name: "Bloom Orbit（绽放的轨道）", duration: 263 },
+      { name: "Midnight（午夜）", duration: 465 }, { name: "Silence Faded（沉寂的褪色）", duration: 239 }, { name: "Faded（褪色）", duration: 243 },
+      { name: "Bloom（绽放）", duration: 164 } ] },
+    { name: "Rust（锈迹）", type: "专辑", date: "2035-03-08", songs: [
+      { name: "Rust（锈迹）", duration: 292 }, { name: "Golden Motel（金色的汽车旅馆）", duration: 152 }, { name: "Anchor Neon（锚的霓虹）", duration: 277 },
+      { name: "Smoke Whisper（烟雾的低语）", duration: 267 }, { name: "Broken（破碎）", duration: 278 }, { name: "Iron Vapor（铁的雾霭）", duration: 287 },
+      { name: "Ashes Daylight（灰烬的日光）", duration: 210 }, { name: "Lantern（灯笼）", duration: 242 }, { name: "Ashes Nightfall（灰烬的夜幕）", duration: 284 } ] },
+    { name: "Overcast（阴云）", type: "专辑", date: "2037-05-13", songs: [
+      { name: "Overcast（阴云）", duration: 253 }, { name: "Meridian Paperplane（子午线的纸飞机）", duration: 284 }, { name: "Ember Motel（余烬的汽车旅馆）", duration: 241 },
+      { name: "Highway（公路）", duration: 237 }, { name: "Ember（余烬）", duration: 253 }, { name: "Motel Signal（汽车旅馆的信号）", duration: 233 },
+      { name: "Silver（银色）", duration: 273 }, { name: "Rain Spark（雨的火花）", duration: 243 } ] },
+    { name: "Echo Silver（回声的银色）", type: "专辑", date: "2039-10-13", songs: [
+      { name: "Echo Silver（回声的银色）", duration: 276 }, { name: "Rain Nightfall（雨的夜幕）", duration: 437 }, { name: "Midnight Marrow（午夜的骨髓）", duration: 248 },
+      { name: "Bloom Carousel（绽放的旋转木马）", duration: 253 }, { name: "Spark（火花）", duration: 239 }, { name: "Anchor（锚）", duration: 310 },
+      { name: "Undertow（暗流）", duration: 417 } ] },
+    { name: "Rust Gravel（锈迹的砾石）", type: "专辑", date: "2041-07-17", songs: [
+      { name: "Rust Gravel（锈迹的砾石）", duration: 274 }, { name: "Mirrors（镜子）", duration: 254 }, { name: "Golden（金色）", duration: 258 },
+      { name: "Marrow（骨髓）", duration: 222 }, { name: "Sundown Silence（日落的沉寂）", duration: 260 }, { name: "Daybreak Velvet（黎明的天鹅绒）", duration: 181 },
+      { name: "Vapor Shallow（雾霭的浅滩）", duration: 262 }, { name: "Iron（铁）", duration: 240 } ] },
+    { name: "Iron Quiet（铁的寂静）", type: "专辑", date: "2043-07-22", songs: [
+      { name: "Iron Quiet（铁的寂静）", duration: 250 }, { name: "Paperplane Velvet（纸飞机的天鹅绒）", duration: 262 }, { name: "Nightfall Vapor（夜幕的雾霭）", duration: 277 },
+      { name: "Daylight Mirrors（日光的镜子）", duration: 207 }, { name: "Shallow（浅滩）", duration: 344 }, { name: "Gravel Shallow（砾石的浅滩）", duration: 252 },
+      { name: "Wires（电线）", duration: 143 }, { name: "Marrow Anchor（骨髓的锚）", duration: 268 } ] },
+    { name: "Neon（霓虹）", type: "专辑", date: "2045-12-05", songs: [
+      { name: "Neon（霓虹）", duration: 300 }, { name: "Bloom Wires（绽放的电线）", duration: 284 }, { name: "Smoke（烟雾）", duration: 247 },
+      { name: "Gravel Echo（砾石的回声）", duration: 266 }, { name: "Meridian Daylight（子午线的日光）", duration: 264 }, { name: "Whisper（低语）", duration: 352 },
+      { name: "Lantern Neon（灯笼的霓虹）", duration: 424 }, { name: "Anchor Signal（锚的信号）", duration: 269 }, { name: "Gravel（砾石）", duration: 261 },
+      { name: "Quiet（寂静）", duration: 281 }, { name: "Neon Silver（霓虹的银色）", duration: 276 } ] },
+    { name: "Echo Broken（回声的破碎）", type: "专辑", date: "2047-10-05", songs: [
+      { name: "Echo Broken（回声的破碎）", duration: 234 }, { name: "Ashes（灰烬）", duration: 245 }, { name: "Tide Trail（潮汐的足迹）", duration: 389 },
+      { name: "Signal Concrete（信号的水泥）", duration: 271 }, { name: "Daylight（日光）", duration: 343 }, { name: "Static Whisper（静电的低语）", duration: 285 },
+      { name: "Satellite（卫星）", duration: 255 }, { name: "Broken Ember（破碎的余烬）", duration: 235 } ] },
+    { name: "Drift（漂流）", type: "专辑", date: "2050-03-17", songs: [
+      { name: "Drift（漂流）", duration: 148 }, { name: "Wires Rust（电线的锈迹）", duration: 283 }, { name: "Velvet（天鹅绒）", duration: 264 },
+      { name: "Marrow Vapor（骨髓的雾霭）", duration: 253 }, { name: "Harbor Faded（港湾的褪色）", duration: 251 }, { name: "Velvet Canvas（天鹅绒的画布）", duration: 236 },
+      { name: "Iron Orbit（铁的轨道）", duration: 258 }, { name: "Concrete Static（水泥的静电）", duration: 238 }, { name: "Static Hollow（静电的空洞）", duration: 282 },
+      { name: "Nightfall Marrow（夜幕的骨髓）", duration: 256 } ] },
     ],
   "房东的猫": [
     { name: "房东的猫", type: "专辑", date: "2017-01-26", rating: 7.8, songs: [
@@ -2230,42 +2230,42 @@ window.BAND_DISCOGRAPHY = {
        { name: "Teahouse", duration: 230 }, { name: "Overlove (Rehab)", duration: 230 },
        { name: "Hyperfocus", duration: 200 }, { name: "Midnight with Paul", duration: 230 },
        { name: "Candlelight (feat. OHHYUK)", duration: 250 } ] },
-      { name: "Signal Echo", type: "专辑", date: "2027-06-15", songs: [
-      { name: "Signal Echo", duration: 226 }, { name: "Wires", duration: 129 }, { name: "Signal Marrow", duration: 202 },
-      { name: "Ashes", duration: 337 }, { name: "Orbit", duration: 255 }, { name: "Vapor", duration: 171 },
-      { name: "Drift", duration: 228 }, { name: "Undertow", duration: 230 } ] },
-    { name: "Midnight", type: "专辑", date: "2030-01-10", songs: [
-      { name: "Midnight", duration: 233 }, { name: "Satellite Concrete", duration: 198 }, { name: "Vapor Paperplane", duration: 226 },
-      { name: "Harbor", duration: 236 }, { name: "Echo", duration: 231 }, { name: "Smoke Faded", duration: 211 },
-      { name: "Neon", duration: 126 }, { name: "Concrete", duration: 213 }, { name: "Smoke Paperplane", duration: 408 } ] },
-    { name: "Trail", type: "EP", date: "2032-10-25", songs: [
-      { name: "Trail", duration: 198 }, { name: "Broken", duration: 232 }, { name: "Tide Silver", duration: 227 } ] },
-    { name: "Satellite", type: "专辑", date: "2035-10-29", songs: [
-      { name: "Satellite", duration: 219 }, { name: "Overcast", duration: 224 }, { name: "Ember Golden", duration: 222 },
-      { name: "Satellite Midnight", duration: 220 }, { name: "Mirrors", duration: 231 }, { name: "Carousel", duration: 215 },
-      { name: "Smoke", duration: 224 }, { name: "Drift Static", duration: 220 }, { name: "Nightfall Anchor", duration: 220 },
-      { name: "Static", duration: 340 } ] },
-    { name: "Silver Carousel", type: "专辑", date: "2038-05-20", songs: [
-      { name: "Silver Carousel", duration: 209 }, { name: "Meridian", duration: 215 }, { name: "Whisper", duration: 221 },
-      { name: "Golden", duration: 244 }, { name: "Static Canvas", duration: 228 }, { name: "Drift Undertow", duration: 211 },
-      { name: "Quiet", duration: 254 } ] },
-    { name: "Nightfall", type: "专辑", date: "2041-04-12", songs: [
-      { name: "Nightfall", duration: 234 }, { name: "Lantern", duration: 196 }, { name: "Silver", duration: 236 },
-      { name: "Bloom Whisper", duration: 200 }, { name: "Rain Ember", duration: 231 }, { name: "Glimmer Marrow", duration: 197 },
-      { name: "Gravel", duration: 199 }, { name: "Motel", duration: 210 }, { name: "Motel Silence", duration: 395 },
-      { name: "Silence", duration: 229 } ] },
-    { name: "Faded", type: "专辑", date: "2043-11-24", songs: [
-      { name: "Faded", duration: 225 }, { name: "Highway", duration: 230 }, { name: "Sundown", duration: 248 },
-      { name: "Bloom", duration: 202 }, { name: "Hollow", duration: 224 }, { name: "Silence Paperplane", duration: 232 },
-      { name: "Shallow", duration: 342 }, { name: "Marrow", duration: 225 }, { name: "Signal", duration: 216 } ] },
-    { name: "Neon Quiet", type: "专辑", date: "2046-10-18", songs: [
-      { name: "Neon Quiet", duration: 293 }, { name: "Tide", duration: 229 }, { name: "Marrow Nightfall", duration: 234 },
-      { name: "Canvas", duration: 236 }, { name: "Iron Ashes", duration: 163 }, { name: "Ember", duration: 216 },
-      { name: "Glimmer Sundown", duration: 197 }, { name: "Marrow Iron", duration: 214 } ] },
-    { name: "Rain Golden", type: "专辑", date: "2049-12-08", songs: [
-      { name: "Rain Golden", duration: 297 }, { name: "Anchor", duration: 176 }, { name: "Motel Anchor", duration: 262 },
-      { name: "Iron", duration: 220 }, { name: "Lantern Ember", duration: 212 }, { name: "Broken Signal", duration: 341 },
-      { name: "Faded Highway", duration: 205 } ] },
+      { name: "Signal Echo（信号的回声）", type: "专辑", date: "2027-06-15", songs: [
+      { name: "Signal Echo（信号的回声）", duration: 226 }, { name: "Wires（电线）", duration: 129 }, { name: "Signal Marrow（信号的骨髓）", duration: 202 },
+      { name: "Ashes（灰烬）", duration: 337 }, { name: "Orbit（轨道）", duration: 255 }, { name: "Vapor（雾霭）", duration: 171 },
+      { name: "Drift（漂流）", duration: 228 }, { name: "Undertow（暗流）", duration: 230 } ] },
+    { name: "Midnight（午夜）", type: "专辑", date: "2030-01-10", songs: [
+      { name: "Midnight（午夜）", duration: 233 }, { name: "Satellite Concrete（卫星的水泥）", duration: 198 }, { name: "Vapor Paperplane（雾霭的纸飞机）", duration: 226 },
+      { name: "Harbor（港湾）", duration: 236 }, { name: "Echo（回声）", duration: 231 }, { name: "Smoke Faded（烟雾的褪色）", duration: 211 },
+      { name: "Neon（霓虹）", duration: 126 }, { name: "Concrete（水泥）", duration: 213 }, { name: "Smoke Paperplane（烟雾的纸飞机）", duration: 408 } ] },
+    { name: "Trail（足迹）", type: "EP", date: "2032-10-25", songs: [
+      { name: "Trail（足迹）", duration: 198 }, { name: "Broken（破碎）", duration: 232 }, { name: "Tide Silver（潮汐的银色）", duration: 227 } ] },
+    { name: "Satellite（卫星）", type: "专辑", date: "2035-10-29", songs: [
+      { name: "Satellite（卫星）", duration: 219 }, { name: "Overcast（阴云）", duration: 224 }, { name: "Ember Golden（余烬的金色）", duration: 222 },
+      { name: "Satellite Midnight（卫星的午夜）", duration: 220 }, { name: "Mirrors（镜子）", duration: 231 }, { name: "Carousel（旋转木马）", duration: 215 },
+      { name: "Smoke（烟雾）", duration: 224 }, { name: "Drift Static（漂流的静电）", duration: 220 }, { name: "Nightfall Anchor（夜幕的锚）", duration: 220 },
+      { name: "Static（静电）", duration: 340 } ] },
+    { name: "Silver Carousel（银色的旋转木马）", type: "专辑", date: "2038-05-20", songs: [
+      { name: "Silver Carousel（银色的旋转木马）", duration: 209 }, { name: "Meridian（子午线）", duration: 215 }, { name: "Whisper（低语）", duration: 221 },
+      { name: "Golden（金色）", duration: 244 }, { name: "Static Canvas（静电的画布）", duration: 228 }, { name: "Drift Undertow（漂流的暗流）", duration: 211 },
+      { name: "Quiet（寂静）", duration: 254 } ] },
+    { name: "Nightfall（夜幕）", type: "专辑", date: "2041-04-12", songs: [
+      { name: "Nightfall（夜幕）", duration: 234 }, { name: "Lantern（灯笼）", duration: 196 }, { name: "Silver（银色）", duration: 236 },
+      { name: "Bloom Whisper（绽放的低语）", duration: 200 }, { name: "Rain Ember（雨的余烬）", duration: 231 }, { name: "Glimmer Marrow（微光的骨髓）", duration: 197 },
+      { name: "Gravel（砾石）", duration: 199 }, { name: "Motel（汽车旅馆）", duration: 210 }, { name: "Motel Silence（汽车旅馆的沉寂）", duration: 395 },
+      { name: "Silence（沉寂）", duration: 229 } ] },
+    { name: "Faded（褪色）", type: "专辑", date: "2043-11-24", songs: [
+      { name: "Faded（褪色）", duration: 225 }, { name: "Highway（公路）", duration: 230 }, { name: "Sundown（日落）", duration: 248 },
+      { name: "Bloom（绽放）", duration: 202 }, { name: "Hollow（空洞）", duration: 224 }, { name: "Silence Paperplane（沉寂的纸飞机）", duration: 232 },
+      { name: "Shallow（浅滩）", duration: 342 }, { name: "Marrow（骨髓）", duration: 225 }, { name: "Signal（信号）", duration: 216 } ] },
+    { name: "Neon Quiet（霓虹的寂静）", type: "专辑", date: "2046-10-18", songs: [
+      { name: "Neon Quiet（霓虹的寂静）", duration: 293 }, { name: "Tide（潮汐）", duration: 229 }, { name: "Marrow Nightfall（骨髓的夜幕）", duration: 234 },
+      { name: "Canvas（画布）", duration: 236 }, { name: "Iron Ashes（铁的灰烬）", duration: 163 }, { name: "Ember（余烬）", duration: 216 },
+      { name: "Glimmer Sundown（微光的日落）", duration: 197 }, { name: "Marrow Iron（骨髓的铁）", duration: 214 } ] },
+    { name: "Rain Golden（雨的金色）", type: "专辑", date: "2049-12-08", songs: [
+      { name: "Rain Golden（雨的金色）", duration: 297 }, { name: "Anchor（锚）", duration: 176 }, { name: "Motel Anchor（汽车旅馆的锚）", duration: 262 },
+      { name: "Iron（铁）", duration: 220 }, { name: "Lantern Ember（灯笼的余烬）", duration: 212 }, { name: "Broken Signal（破碎的信号）", duration: 341 },
+      { name: "Faded Highway（褪色的公路）", duration: 205 } ] },
     ],
   "声音碎片": [
     { name: "世界是噪音的花园", type: "专辑", date: "2002-01-01", songs: [
@@ -2340,33 +2340,33 @@ window.BAND_DISCOGRAPHY = {
     { name: "光の中へ（走向光中）", type: "单曲", date: "2024-06-09", songs: [ { name: "光の中へ（走向光中）", duration: 240 } ] },
     { name: "月並みに輝け（平凡地闪耀）", type: "单曲", date: "2024-06-09", songs: [ { name: "月並みに輝け（平凡地闪耀）", duration: 220 } ] },
     { name: "僕と三原色（我和三原色）", type: "单曲", date: "2024-06-09", songs: [ { name: "僕と三原色（我和三原色）", duration: 210 } ] },
-      { name: "海辺", type: "单曲", date: "2026-11-15", songs: [
-      { name: "海辺", duration: 237 } ] },
-    { name: "月の涙", type: "单曲", date: "2029-04-06", songs: [
-      { name: "月の涙", duration: 211 } ] },
-    { name: "微笑の遠い", type: "单曲", date: "2031-05-06", songs: [
-      { name: "微笑の遠い", duration: 270 } ] },
-    { name: "青空の声", type: "单曲", date: "2033-01-13", songs: [
-      { name: "青空の声", duration: 218 } ] },
-    { name: "冬晴れ", type: "单曲", date: "2035-03-06", songs: [
-      { name: "冬晴れ", duration: 236 } ] },
-    { name: "風鈴", type: "单曲", date: "2037-04-12", songs: [
-      { name: "風鈴", duration: 245 } ] },
-    { name: "透明", type: "单曲", date: "2039-04-25", songs: [
-      { name: "透明", duration: 241 } ] },
-    { name: "風鈴の青空", type: "专辑", date: "2041-10-20", songs: [
-      { name: "風鈴の青空", duration: 179 }, { name: "夜明けの夕焼け", duration: 231 }, { name: "月光の波", duration: 307 },
-      { name: "春風の風鈴", duration: 151 }, { name: "微笑の夜", duration: 226 }, { name: "優しいの雨", duration: 197 },
-      { name: "朝焼けの想い", duration: 244 }, { name: "夕焼け", duration: 244 }, { name: "帰り道の夕焼け", duration: 227 },
-      { name: "時の透明", duration: 205 } ] },
-    { name: "恋の街", type: "单曲", date: "2043-06-30", songs: [
-      { name: "恋の街", duration: 183 } ] },
-    { name: "屋上", type: "单曲", date: "2045-09-25", songs: [
-      { name: "屋上", duration: 224 } ] },
-    { name: "潮騒の時", type: "单曲", date: "2047-12-31", songs: [
-      { name: "潮騒の時", duration: 213 } ] },
-    { name: "雲の放課後", type: "单曲", date: "2050-02-20", songs: [
-      { name: "雲の放課後", duration: 221 } ] },
+      { name: "海辺（海边）", type: "单曲", date: "2026-11-15", songs: [
+      { name: "海辺（海边）", duration: 237 } ] },
+    { name: "月の涙（月之泪）", type: "单曲", date: "2029-04-06", songs: [
+      { name: "月の涙（月之泪）", duration: 211 } ] },
+    { name: "微笑の遠い（遥远的微笑）", type: "单曲", date: "2031-05-06", songs: [
+      { name: "微笑の遠い（遥远的微笑）", duration: 270 } ] },
+    { name: "青空の声（青空之声）", type: "单曲", date: "2033-01-13", songs: [
+      { name: "青空の声（青空之声）", duration: 218 } ] },
+    { name: "冬晴れ（冬日晴空）", type: "单曲", date: "2035-03-06", songs: [
+      { name: "冬晴れ（冬日晴空）", duration: 236 } ] },
+    { name: "風鈴（风铃）", type: "单曲", date: "2037-04-12", songs: [
+      { name: "風鈴（风铃）", duration: 245 } ] },
+    { name: "透明（透明）", type: "单曲", date: "2039-04-25", songs: [
+      { name: "透明（透明）", duration: 241 } ] },
+    { name: "風鈴の青空（风铃之青空）", type: "专辑", date: "2041-10-20", songs: [
+      { name: "風鈴の青空（风铃之青空）", duration: 179 }, { name: "夜明けの夕焼け（黎明之晚霞）", duration: 231 }, { name: "月光の波（月光之波）", duration: 307 },
+      { name: "春風の風鈴（春风之风铃）", duration: 151 }, { name: "微笑の夜（微笑之夜）", duration: 226 }, { name: "優しいの雨（温柔雨）", duration: 197 },
+      { name: "朝焼けの想い（朝霞之思念）", duration: 244 }, { name: "夕焼け（晚霞）", duration: 244 }, { name: "帰り道の夕焼け（归途之晚霞）", duration: 227 },
+      { name: "時の透明（透明的时光）", duration: 205 } ] },
+    { name: "恋の街（恋之街）", type: "单曲", date: "2043-06-30", songs: [
+      { name: "恋の街（恋之街）", duration: 183 } ] },
+    { name: "屋上（天台）", type: "单曲", date: "2045-09-25", songs: [
+      { name: "屋上（天台）", duration: 224 } ] },
+    { name: "潮騒の時（潮鸣之时光）", type: "单曲", date: "2047-12-31", songs: [
+      { name: "潮騒の時（潮鸣之时光）", duration: 213 } ] },
+    { name: "雲の放課後（云之放学后）", type: "单曲", date: "2050-02-20", songs: [
+      { name: "雲の放課後（云之放学后）", duration: 221 } ] },
     ],
   "放課後ティータイム": [
     { name: "放課後ティータイムII（放学后茶会II）", type: "专辑", date: "2010-10-27", songs: [
@@ -2382,35 +2382,35 @@ window.BAND_DISCOGRAPHY = {
     { name: "Utauyo!! MIRACLE", type: "单曲", date: "2010-08-04", songs: [ { name: "Utauyo!! MIRACLE", duration: 250 } ] },
     { name: "No, Thank You!", type: "单曲", date: "2010-08-04", songs: [ { name: "No, Thank You!", duration: 244 } ] },
     { name: "天使にふれたよ!（遇见了天使）", type: "单曲", date: "2010-09-08", songs: [ { name: "天使にふれたよ!（遇见了天使）", duration: 240 } ] },
-      { name: "優しい", type: "单曲", date: "2027-02-09", songs: [
-      { name: "優しい", duration: 216 } ] },
-    { name: "青空", type: "单曲", date: "2029-03-27", songs: [
-      { name: "青空", duration: 194 } ] },
-    { name: "桜の星屑", type: "专辑", date: "2030-12-18", songs: [
-      { name: "桜の星屑", duration: 150 }, { name: "月光", duration: 259 }, { name: "雪の夜明け", duration: 232 },
-      { name: "白いの月", duration: 197 }, { name: "潮騒", duration: 255 }, { name: "自転車", duration: 213 },
-      { name: "虹の記憶", duration: 259 }, { name: "恋の帰り道", duration: 256 }, { name: "放課後", duration: 231 } ] },
-    { name: "波音の波", type: "单曲", date: "2033-02-07", songs: [
-      { name: "波音の波", duration: 135 } ] },
-    { name: "海辺", type: "单曲", date: "2035-06-13", songs: [
-      { name: "海辺", duration: 189 } ] },
-    { name: "風鈴の影", type: "单曲", date: "2037-04-27", songs: [
-      { name: "風鈴の影", duration: 191 } ] },
-    { name: "花の青い", type: "单曲", date: "2039-07-14", songs: [
-      { name: "花の青い", duration: 369 } ] },
-    { name: "風の桜", type: "单曲", date: "2041-05-29", songs: [
-      { name: "風の桜", duration: 245 } ] },
-    { name: "月光の屋上", type: "单曲", date: "2043-11-14", songs: [
-      { name: "月光の屋上", duration: 202 } ] },
-    { name: "帰り道の雨音", type: "单曲", date: "2045-12-15", songs: [
-      { name: "帰り道の雨音", duration: 244 } ] },
-    { name: "夕焼けの心", type: "专辑", date: "2047-11-30", songs: [
-      { name: "夕焼けの心", duration: 226 }, { name: "静か", duration: 221 }, { name: "小さなの朝", duration: 221 },
-      { name: "花の街", duration: 230 }, { name: "陽だまり", duration: 146 }, { name: "窓の夕焼け", duration: 194 },
-      { name: "夜明けの雨", duration: 250 }, { name: "白い", duration: 142 }, { name: "秋風の冬晴れ", duration: 226 },
-      { name: "雨音の雪", duration: 219 } ] },
-    { name: "朝焼けの空", type: "单曲", date: "2050-02-02", songs: [
-      { name: "朝焼けの空", duration: 422 } ] },
+      { name: "優しい（温柔）", type: "单曲", date: "2027-02-09", songs: [
+      { name: "優しい（温柔）", duration: 216 } ] },
+    { name: "青空（青空）", type: "单曲", date: "2029-03-27", songs: [
+      { name: "青空（青空）", duration: 194 } ] },
+    { name: "桜の星屑（樱花之星屑）", type: "专辑", date: "2030-12-18", songs: [
+      { name: "桜の星屑（樱花之星屑）", duration: 150 }, { name: "月光（月光）", duration: 259 }, { name: "雪の夜明け（雪之黎明）", duration: 232 },
+      { name: "白いの月（纯白的月）", duration: 197 }, { name: "潮騒（潮鸣）", duration: 255 }, { name: "自転車（单车）", duration: 213 },
+      { name: "虹の記憶（彩虹之记忆）", duration: 259 }, { name: "恋の帰り道（恋之归途）", duration: 256 }, { name: "放課後（放学后）", duration: 231 } ] },
+    { name: "波音の波（潮声之波）", type: "单曲", date: "2033-02-07", songs: [
+      { name: "波音の波（潮声之波）", duration: 135 } ] },
+    { name: "海辺（海边）", type: "单曲", date: "2035-06-13", songs: [
+      { name: "海辺（海边）", duration: 189 } ] },
+    { name: "風鈴の影（风铃之影）", type: "单曲", date: "2037-04-27", songs: [
+      { name: "風鈴の影（风铃之影）", duration: 191 } ] },
+    { name: "花の青い（湛蓝的花）", type: "单曲", date: "2039-07-14", songs: [
+      { name: "花の青い（湛蓝的花）", duration: 369 } ] },
+    { name: "風の桜（风之樱花）", type: "单曲", date: "2041-05-29", songs: [
+      { name: "風の桜（风之樱花）", duration: 245 } ] },
+    { name: "月光の屋上（月光之天台）", type: "单曲", date: "2043-11-14", songs: [
+      { name: "月光の屋上（月光之天台）", duration: 202 } ] },
+    { name: "帰り道の雨音（归途之雨声）", type: "单曲", date: "2045-12-15", songs: [
+      { name: "帰り道の雨音（归途之雨声）", duration: 244 } ] },
+    { name: "夕焼けの心（晚霞之心）", type: "专辑", date: "2047-11-30", songs: [
+      { name: "夕焼けの心（晚霞之心）", duration: 226 }, { name: "静か（静谧）", duration: 221 }, { name: "小さなの朝（微小的晨）", duration: 221 },
+      { name: "花の街（花之街）", duration: 230 }, { name: "陽だまり（暖阳）", duration: 146 }, { name: "窓の夕焼け（窗之晚霞）", duration: 194 },
+      { name: "夜明けの雨（黎明之雨）", duration: 250 }, { name: "白い（纯白的）", duration: 142 }, { name: "秋風の冬晴れ（秋风之冬日晴空）", duration: 226 },
+      { name: "雨音の雪（雨声之雪）", duration: 219 } ] },
+    { name: "朝焼けの空（朝霞之天空）", type: "单曲", date: "2050-02-02", songs: [
+      { name: "朝焼けの空（朝霞之天空）", duration: 422 } ] },
     ],
   "MyGO（CRYCHIC）": [
     { name: "迷跡波（迷迹波）", type: "专辑", date: "2024-04-24", songs: [
@@ -2426,33 +2426,33 @@ window.BAND_DISCOGRAPHY = {
     { name: "名無声（名无声）", type: "单曲", date: "2023-08-16", songs: [ { name: "名無声（名无声）", duration: 235 } ] },
     { name: "潜在表明（潜在表明）", type: "单曲", date: "2023-11-15", songs: [ { name: "潜在表明（潜在表明）", duration: 220 } ] },
     { name: "壱雫空（一雫空）", type: "单曲", date: "2024-02-14", songs: [ { name: "壱雫空（一雫空）", duration: 228 } ] },
-      { name: "雲の時", type: "单曲", date: "2027-02-23", songs: [
-      { name: "雲の時", duration: 218 } ] },
-    { name: "微笑の声", type: "单曲", date: "2029-04-23", songs: [
-      { name: "微笑の声", duration: 186 } ] },
-    { name: "想い", type: "单曲", date: "2031-06-01", songs: [
-      { name: "想い", duration: 227 } ] },
-    { name: "青空の夕焼け", type: "单曲", date: "2033-05-12", songs: [
-      { name: "青空の夕焼け", duration: 208 } ] },
-    { name: "自転車の心", type: "单曲", date: "2035-06-06", songs: [
-      { name: "自転車の心", duration: 223 } ] },
-    { name: "風鈴", type: "单曲", date: "2037-04-26", songs: [
-      { name: "風鈴", duration: 252 } ] },
-    { name: "夕焼けの透明", type: "专辑", date: "2039-08-18", songs: [
-      { name: "夕焼けの透明", duration: 210 }, { name: "眩しい", duration: 209 }, { name: "放課後の海", duration: 254 },
-      { name: "夏祭りの星", duration: 230 }, { name: "白い", duration: 195 }, { name: "冬晴れ", duration: 238 },
-      { name: "帰り道", duration: 226 }, { name: "静か", duration: 197 }, { name: "向日葵の心", duration: 243 },
-      { name: "月光の記憶", duration: 223 } ] },
-    { name: "星屑", type: "单曲", date: "2041-08-13", songs: [
-      { name: "星屑", duration: 219 } ] },
-    { name: "真夏", type: "单曲", date: "2043-11-06", songs: [
-      { name: "真夏", duration: 212 } ] },
-    { name: "朝焼け", type: "单曲", date: "2045-11-20", songs: [
-      { name: "朝焼け", duration: 233 } ] },
-    { name: "帰り道の波", type: "单曲", date: "2048-01-10", songs: [
-      { name: "帰り道の波", duration: 250 } ] },
-    { name: "窓の波", type: "单曲", date: "2049-10-06", songs: [
-      { name: "窓の波", duration: 247 } ] },
+      { name: "雲の時（云之时光）", type: "单曲", date: "2027-02-23", songs: [
+      { name: "雲の時（云之时光）", duration: 218 } ] },
+    { name: "微笑の声（微笑之声）", type: "单曲", date: "2029-04-23", songs: [
+      { name: "微笑の声（微笑之声）", duration: 186 } ] },
+    { name: "想い（思念）", type: "单曲", date: "2031-06-01", songs: [
+      { name: "想い（思念）", duration: 227 } ] },
+    { name: "青空の夕焼け（青空之晚霞）", type: "单曲", date: "2033-05-12", songs: [
+      { name: "青空の夕焼け（青空之晚霞）", duration: 208 } ] },
+    { name: "自転車の心（单车之心）", type: "单曲", date: "2035-06-06", songs: [
+      { name: "自転車の心（单车之心）", duration: 223 } ] },
+    { name: "風鈴（风铃）", type: "单曲", date: "2037-04-26", songs: [
+      { name: "風鈴（风铃）", duration: 252 } ] },
+    { name: "夕焼けの透明（透明的晚霞）", type: "专辑", date: "2039-08-18", songs: [
+      { name: "夕焼けの透明（透明的晚霞）", duration: 210 }, { name: "眩しい（耀眼）", duration: 209 }, { name: "放課後の海（放学后之海）", duration: 254 },
+      { name: "夏祭りの星（夏日祭之星）", duration: 230 }, { name: "白い（纯白的）", duration: 195 }, { name: "冬晴れ（冬日晴空）", duration: 238 },
+      { name: "帰り道（归途）", duration: 226 }, { name: "静か（静谧）", duration: 197 }, { name: "向日葵の心（向日葵之心）", duration: 243 },
+      { name: "月光の記憶（月光之记忆）", duration: 223 } ] },
+    { name: "星屑（星屑）", type: "单曲", date: "2041-08-13", songs: [
+      { name: "星屑（星屑）", duration: 219 } ] },
+    { name: "真夏（盛夏）", type: "单曲", date: "2043-11-06", songs: [
+      { name: "真夏（盛夏）", duration: 212 } ] },
+    { name: "朝焼け（朝霞）", type: "单曲", date: "2045-11-20", songs: [
+      { name: "朝焼け（朝霞）", duration: 233 } ] },
+    { name: "帰り道の波（归途之波）", type: "单曲", date: "2048-01-10", songs: [
+      { name: "帰り道の波（归途之波）", duration: 250 } ] },
+    { name: "窓の波（窗之波）", type: "单曲", date: "2049-10-06", songs: [
+      { name: "窓の波（窗之波）", duration: 247 } ] },
     ],
   "ギヴン": [
     { name: "gift", type: "专辑", date: "2020-08-26", songs: [
@@ -2463,36 +2463,36 @@ window.BAND_DISCOGRAPHY = {
     { name: "まるつけ（句号）", type: "单曲", date: "2019-12-25", songs: [ { name: "まるつけ（句号）", duration: 234 } ] },
     { name: "夜が明ける（天亮了）", type: "单曲", date: "2020-08-26", songs: [ { name: "夜が明ける（天亮了）", duration: 281 } ] },
     { name: "うらがわの存在（背面的存在）", type: "单曲", date: "2021-12-01", songs: [ { name: "うらがわの存在（背面的存在）", duration: 250 } ] },
-      { name: "雨の星", type: "单曲", date: "2027-03-22", songs: [
-      { name: "雨の星", duration: 335 } ] },
-    { name: "朝焼けの月", type: "单曲", date: "2029-05-18", songs: [
-      { name: "朝焼けの月", duration: 256 } ] },
-    { name: "透明の声", type: "单曲", date: "2031-02-26", songs: [
-      { name: "透明の声", duration: 258 } ] },
-    { name: "帰り道", type: "单曲", date: "2033-04-17", songs: [
-      { name: "帰り道", duration: 203 } ] },
-    { name: "海辺", type: "单曲", date: "2035-04-04", songs: [
-      { name: "海辺", duration: 341 } ] },
-    { name: "雨音の桜", type: "专辑", date: "2037-04-24", songs: [
-      { name: "雨音の桜", duration: 253 }, { name: "波音の秋風", duration: 220 }, { name: "放課後", duration: 240 },
-      { name: "光の星屑", duration: 218 }, { name: "朝焼け", duration: 194 }, { name: "声の微笑", duration: 216 },
-      { name: "真夏の花", duration: 248 } ] },
-    { name: "月光", type: "单曲", date: "2039-08-01", songs: [
-      { name: "月光", duration: 244 } ] },
-    { name: "夏祭り", type: "单曲", date: "2041-08-18", songs: [
-      { name: "夏祭り", duration: 215 } ] },
-    { name: "遠いの夕焼け", type: "单曲", date: "2043-08-26", songs: [
-      { name: "遠いの夕焼け", duration: 246 } ] },
-    { name: "涙の静か", type: "专辑", date: "2045-12-28", songs: [
-      { name: "涙の静か", duration: 244 }, { name: "窓の風鈴", duration: 237 }, { name: "星の透明", duration: 322 },
-      { name: "風の放課後", duration: 201 }, { name: "波の光", duration: 250 }, { name: "夜の夜明け", duration: 213 },
-      { name: "風鈴の夢", duration: 433 }, { name: "自転車", duration: 215 }, { name: "冬晴れの恋", duration: 248 } ] },
-    { name: "遠いの自転車", type: "单曲", date: "2047-08-29", songs: [
-      { name: "遠いの自転車", duration: 260 } ] },
-    { name: "記憶", type: "专辑", date: "2050-02-19", songs: [
-      { name: "記憶", duration: 224 }, { name: "海の屋上", duration: 254 }, { name: "静か", duration: 261 },
-      { name: "海の向日葵", duration: 246 }, { name: "波の微笑", duration: 253 }, { name: "白い", duration: 218 },
-      { name: "自転車の星空", duration: 253 }, { name: "陽だまり", duration: 233 }, { name: "波音の恋", duration: 234 } ] },
+      { name: "雨の星（雨之星）", type: "单曲", date: "2027-03-22", songs: [
+      { name: "雨の星（雨之星）", duration: 335 } ] },
+    { name: "朝焼けの月（朝霞之月）", type: "单曲", date: "2029-05-18", songs: [
+      { name: "朝焼けの月（朝霞之月）", duration: 256 } ] },
+    { name: "透明の声（透明声）", type: "单曲", date: "2031-02-26", songs: [
+      { name: "透明の声（透明声）", duration: 258 } ] },
+    { name: "帰り道（归途）", type: "单曲", date: "2033-04-17", songs: [
+      { name: "帰り道（归途）", duration: 203 } ] },
+    { name: "海辺（海边）", type: "单曲", date: "2035-04-04", songs: [
+      { name: "海辺（海边）", duration: 341 } ] },
+    { name: "雨音の桜（雨声之樱花）", type: "专辑", date: "2037-04-24", songs: [
+      { name: "雨音の桜（雨声之樱花）", duration: 253 }, { name: "波音の秋風（潮声之秋风）", duration: 220 }, { name: "放課後（放学后）", duration: 240 },
+      { name: "光の星屑（光之星屑）", duration: 218 }, { name: "朝焼け（朝霞）", duration: 194 }, { name: "声の微笑（声之微笑）", duration: 216 },
+      { name: "真夏の花（盛夏之花）", duration: 248 } ] },
+    { name: "月光（月光）", type: "单曲", date: "2039-08-01", songs: [
+      { name: "月光（月光）", duration: 244 } ] },
+    { name: "夏祭り（夏日祭）", type: "单曲", date: "2041-08-18", songs: [
+      { name: "夏祭り（夏日祭）", duration: 215 } ] },
+    { name: "遠いの夕焼け（遥远晚霞）", type: "单曲", date: "2043-08-26", songs: [
+      { name: "遠いの夕焼け（遥远晚霞）", duration: 246 } ] },
+    { name: "涙の静か（静谧的泪）", type: "专辑", date: "2045-12-28", songs: [
+      { name: "涙の静か（静谧的泪）", duration: 244 }, { name: "窓の風鈴（窗之风铃）", duration: 237 }, { name: "星の透明（透明的星）", duration: 322 },
+      { name: "風の放課後（风之放学后）", duration: 201 }, { name: "波の光（波之光）", duration: 250 }, { name: "夜の夜明け（夜之黎明）", duration: 213 },
+      { name: "風鈴の夢（风铃之梦）", duration: 433 }, { name: "自転車（单车）", duration: 215 }, { name: "冬晴れの恋（冬日晴空之恋）", duration: 248 } ] },
+    { name: "遠いの自転車（遥远单车）", type: "单曲", date: "2047-08-29", songs: [
+      { name: "遠いの自転車（遥远单车）", duration: 260 } ] },
+    { name: "記憶（记忆）", type: "专辑", date: "2050-02-19", songs: [
+      { name: "記憶（记忆）", duration: 224 }, { name: "海の屋上（海之天台）", duration: 254 }, { name: "静か（静谧）", duration: 261 },
+      { name: "海の向日葵（海之向日葵）", duration: 246 }, { name: "波の微笑（波之微笑）", duration: 253 }, { name: "白い（纯白的）", duration: 218 },
+      { name: "自転車の星空（单车之星空）", duration: 253 }, { name: "陽だまり（暖阳）", duration: 233 }, { name: "波音の恋（潮声之恋）", duration: 234 } ] },
     ],
   "トゲナシトゲアリ": [
     { name: "棘アリ（有刺）", type: "专辑", date: "2024-04-24", songs: [
@@ -2525,38 +2525,38 @@ window.BAND_DISCOGRAPHY = {
     { name: "全部をさらして生きてやる（豁出一切活下去）", type: "EP", date: "2025-12-17", songs: [
        { name: "もう何もいらない未来（什么都不再需要的未来）", duration: 226 }, { name: "命をくれよ（把命给我）", duration: 222 },
        { name: "arrow", duration: 218 }, { name: "薊の薔薇（薊之蔷薇）", duration: 228 } ] },
-      { name: "朝焼け", type: "专辑", date: "2027-06-07", songs: [
-      { name: "朝焼け", duration: 226 }, { name: "冬晴れ", duration: 234 }, { name: "夏祭り", duration: 228 },
-      { name: "陽だまり", duration: 208 }, { name: "風鈴の潮騒", duration: 207 }, { name: "春風", duration: 413 },
-      { name: "青い", duration: 183 }, { name: "記憶", duration: 250 } ] },
-    { name: "時の春風", type: "单曲", date: "2029-04-08", songs: [
-      { name: "時の春風", duration: 200 } ] },
-    { name: "雨の陽だまり", type: "单曲", date: "2031-09-27", songs: [
-      { name: "雨の陽だまり", duration: 208 } ] },
-    { name: "屋上", type: "单曲", date: "2033-08-19", songs: [
-      { name: "屋上", duration: 175 } ] },
-    { name: "自転車", type: "单曲", date: "2035-06-12", songs: [
-      { name: "自転車", duration: 222 } ] },
-    { name: "声の海", type: "专辑", date: "2037-08-27", songs: [
-      { name: "声の海", duration: 226 }, { name: "街の星屑", duration: 231 }, { name: "星空", duration: 235 },
-      { name: "約束", duration: 229 }, { name: "想い", duration: 232 }, { name: "約束の青い", duration: 215 },
-      { name: "月光", duration: 200 }, { name: "桜の白い", duration: 220 } ] },
-    { name: "陽だまりの陽だまり", type: "专辑", date: "2039-07-09", songs: [
-      { name: "陽だまりの陽だまり", duration: 214 }, { name: "小さなの心", duration: 216 }, { name: "桜の冬晴れ", duration: 212 },
-      { name: "静かの海", duration: 247 }, { name: "春風の屋上", duration: 151 }, { name: "朝の雨", duration: 290 },
-      { name: "静かの春風", duration: 203 }, { name: "風の風", duration: 202 }, { name: "窓の影", duration: 225 },
-      { name: "月の心", duration: 228 } ] },
-    { name: "時の涙", type: "单曲", date: "2041-11-18", songs: [
-      { name: "時の涙", duration: 203 } ] },
-    { name: "時の星", type: "单曲", date: "2043-09-09", songs: [
-      { name: "時の星", duration: 121 } ] },
-    { name: "白いの記憶", type: "单曲", date: "2045-11-24", songs: [
-      { name: "白いの記憶", duration: 240 } ] },
-    { name: "星屑の夜明け", type: "EP", date: "2047-10-12", songs: [
-      { name: "星屑の夜明け", duration: 122 }, { name: "小さな", duration: 228 }, { name: "雨音", duration: 175 },
-      { name: "波音", duration: 220 }, { name: "時の雪", duration: 212 } ] },
-    { name: "優しい", type: "单曲", date: "2049-12-01", songs: [
-      { name: "優しい", duration: 228 } ] },
+      { name: "朝焼け（朝霞）", type: "专辑", date: "2027-06-07", songs: [
+      { name: "朝焼け（朝霞）", duration: 226 }, { name: "冬晴れ（冬日晴空）", duration: 234 }, { name: "夏祭り（夏日祭）", duration: 228 },
+      { name: "陽だまり（暖阳）", duration: 208 }, { name: "風鈴の潮騒（风铃之潮鸣）", duration: 207 }, { name: "春風（春风）", duration: 413 },
+      { name: "青い（湛蓝）", duration: 183 }, { name: "記憶（记忆）", duration: 250 } ] },
+    { name: "時の春風（时光之春风）", type: "单曲", date: "2029-04-08", songs: [
+      { name: "時の春風（时光之春风）", duration: 200 } ] },
+    { name: "雨の陽だまり（雨之暖阳）", type: "单曲", date: "2031-09-27", songs: [
+      { name: "雨の陽だまり（雨之暖阳）", duration: 208 } ] },
+    { name: "屋上（天台）", type: "单曲", date: "2033-08-19", songs: [
+      { name: "屋上（天台）", duration: 175 } ] },
+    { name: "自転車（单车）", type: "单曲", date: "2035-06-12", songs: [
+      { name: "自転車（单车）", duration: 222 } ] },
+    { name: "声の海（声之海）", type: "专辑", date: "2037-08-27", songs: [
+      { name: "声の海（声之海）", duration: 226 }, { name: "街の星屑（街之星屑）", duration: 231 }, { name: "星空（星空）", duration: 235 },
+      { name: "約束（约定）", duration: 229 }, { name: "想い（思念）", duration: 232 }, { name: "約束の青い（湛蓝的约定）", duration: 215 },
+      { name: "月光（月光）", duration: 200 }, { name: "桜の白い（纯白的的樱花）", duration: 220 } ] },
+    { name: "陽だまりの陽だまり（暖阳之暖阳）", type: "专辑", date: "2039-07-09", songs: [
+      { name: "陽だまりの陽だまり（暖阳之暖阳）", duration: 214 }, { name: "小さなの心（微小的心）", duration: 216 }, { name: "桜の冬晴れ（樱花之冬日晴空）", duration: 212 },
+      { name: "静かの海（静谧海）", duration: 247 }, { name: "春風の屋上（春风之天台）", duration: 151 }, { name: "朝の雨（晨之雨）", duration: 290 },
+      { name: "静かの春風（静谧春风）", duration: 203 }, { name: "風の風（风之风）", duration: 202 }, { name: "窓の影（窗之影）", duration: 225 },
+      { name: "月の心（月之心）", duration: 228 } ] },
+    { name: "時の涙（时光之泪）", type: "单曲", date: "2041-11-18", songs: [
+      { name: "時の涙（时光之泪）", duration: 203 } ] },
+    { name: "時の星（时光之星）", type: "单曲", date: "2043-09-09", songs: [
+      { name: "時の星（时光之星）", duration: 121 } ] },
+    { name: "白いの記憶（纯白的记忆）", type: "单曲", date: "2045-11-24", songs: [
+      { name: "白いの記憶（纯白的记忆）", duration: 240 } ] },
+    { name: "星屑の夜明け（星屑之黎明）", type: "EP", date: "2047-10-12", songs: [
+      { name: "星屑の夜明け（星屑之黎明）", duration: 122 }, { name: "小さな（微小的）", duration: 228 }, { name: "雨音（雨声）", duration: 175 },
+      { name: "波音（潮声）", duration: 220 }, { name: "時の雪（时光之雪）", duration: 212 } ] },
+    { name: "優しい（温柔）", type: "单曲", date: "2049-12-01", songs: [
+      { name: "優しい（温柔）", duration: 228 } ] },
     ],
   "Black Stones": [
     { name: "BLAST", type: "专辑", date: "2006-06-21", songs: [
@@ -2564,149 +2564,149 @@ window.BAND_DISCOGRAPHY = {
        { name: "Zero", duration: 210 }, { name: "Lucy", duration: 225 }, { name: "Shadow of the Sun", duration: 250 } ] },
     { name: "Rose", type: "单曲", date: "2006-01-01", songs: [ { name: "Rose", duration: 240 } ] },
     { name: "黒い涙（黑色的泪）", type: "单曲", date: "2006-03-22", songs: [ { name: "黒い涙（黑色的泪）", duration: 265 } ] },
-      { name: "Iron", type: "单曲", date: "2027-01-18", songs: [
-      { name: "Iron", duration: 223 } ] },
-    { name: "Daylight Paperplane", type: "单曲", date: "2028-12-27", songs: [
-      { name: "Daylight Paperplane", duration: 254 } ] },
-    { name: "Anchor Orbit", type: "专辑", date: "2031-02-14", songs: [
-      { name: "Anchor Orbit", duration: 247 }, { name: "Smoke", duration: 242 }, { name: "Harbor", duration: 264 },
-      { name: "Marrow Hollow", duration: 263 }, { name: "Wires", duration: 258 }, { name: "Paperplane", duration: 202 },
-      { name: "Silence Harbor", duration: 262 }, { name: "Tide Motel", duration: 277 }, { name: "Broken", duration: 231 },
-      { name: "Shallow", duration: 200 } ] },
-    { name: "Daybreak", type: "专辑", date: "2033-07-07", songs: [
-      { name: "Daybreak", duration: 259 }, { name: "Neon", duration: 226 }, { name: "Vapor", duration: 221 },
-      { name: "Undertow", duration: 215 }, { name: "Whisper", duration: 241 }, { name: "Vapor Marrow", duration: 245 },
-      { name: "Ashes", duration: 165 }, { name: "Overcast Hollow", duration: 262 }, { name: "Overcast", duration: 248 },
-      { name: "Silence", duration: 235 } ] },
-    { name: "Drift", type: "单曲", date: "2035-04-26", songs: [
-      { name: "Drift", duration: 226 } ] },
-    { name: "Faded", type: "单曲", date: "2037-07-09", songs: [
-      { name: "Faded", duration: 200 } ] },
-    { name: "Ember", type: "专辑", date: "2039-07-23", songs: [
-      { name: "Ember", duration: 327 }, { name: "Signal", duration: 258 }, { name: "Lantern", duration: 219 },
-      { name: "Static", duration: 219 }, { name: "Rust", duration: 209 }, { name: "Iron Whisper", duration: 251 },
-      { name: "Rain", duration: 200 }, { name: "Sundown", duration: 221 }, { name: "Carousel", duration: 263 },
-      { name: "Trail", duration: 247 } ] },
-    { name: "Rain Canvas", type: "单曲", date: "2041-07-12", songs: [
-      { name: "Rain Canvas", duration: 220 } ] },
-    { name: "Neon Quiet", type: "单曲", date: "2043-10-11", songs: [
-      { name: "Neon Quiet", duration: 382 } ] },
-    { name: "Mirrors", type: "专辑", date: "2045-12-28", songs: [
-      { name: "Mirrors", duration: 263 }, { name: "Broken Faded", duration: 246 }, { name: "Highway", duration: 246 },
-      { name: "Tide Concrete", duration: 205 }, { name: "Rain Anchor", duration: 225 }, { name: "Golden", duration: 333 },
-      { name: "Golden Wires", duration: 147 } ] },
-    { name: "Quiet", type: "专辑", date: "2047-10-22", songs: [
-      { name: "Quiet", duration: 401 }, { name: "Glimmer Spark", duration: 232 }, { name: "Glimmer", duration: 260 },
-      { name: "Paperplane Nightfall", duration: 242 }, { name: "Mirrors Whisper", duration: 226 }, { name: "Neon Velvet", duration: 201 },
-      { name: "Trail Silence", duration: 253 } ] },
-    { name: "Vapor Harbor", type: "专辑", date: "2049-12-18", songs: [
-      { name: "Vapor Harbor", duration: 241 }, { name: "Silver", duration: 245 }, { name: "Harbor Golden", duration: 237 },
-      { name: "Satellite Signal", duration: 222 }, { name: "Gravel Broken", duration: 135 }, { name: "Whisper Smoke", duration: 220 },
-      { name: "Marrow Mirrors", duration: 165 }, { name: "Orbit Harbor", duration: 357 }, { name: "Bloom Undertow", duration: 241 },
-      { name: "Golden Meridian", duration: 198 } ] },
+      { name: "Iron（铁）", type: "单曲", date: "2027-01-18", songs: [
+      { name: "Iron（铁）", duration: 223 } ] },
+    { name: "Daylight Paperplane（日光的纸飞机）", type: "单曲", date: "2028-12-27", songs: [
+      { name: "Daylight Paperplane（日光的纸飞机）", duration: 254 } ] },
+    { name: "Anchor Orbit（锚的轨道）", type: "专辑", date: "2031-02-14", songs: [
+      { name: "Anchor Orbit（锚的轨道）", duration: 247 }, { name: "Smoke（烟雾）", duration: 242 }, { name: "Harbor（港湾）", duration: 264 },
+      { name: "Marrow Hollow（骨髓的空洞）", duration: 263 }, { name: "Wires（电线）", duration: 258 }, { name: "Paperplane（纸飞机）", duration: 202 },
+      { name: "Silence Harbor（沉寂的港湾）", duration: 262 }, { name: "Tide Motel（潮汐的汽车旅馆）", duration: 277 }, { name: "Broken（破碎）", duration: 231 },
+      { name: "Shallow（浅滩）", duration: 200 } ] },
+    { name: "Daybreak（黎明）", type: "专辑", date: "2033-07-07", songs: [
+      { name: "Daybreak（黎明）", duration: 259 }, { name: "Neon（霓虹）", duration: 226 }, { name: "Vapor（雾霭）", duration: 221 },
+      { name: "Undertow（暗流）", duration: 215 }, { name: "Whisper（低语）", duration: 241 }, { name: "Vapor Marrow（雾霭的骨髓）", duration: 245 },
+      { name: "Ashes（灰烬）", duration: 165 }, { name: "Overcast Hollow（阴云的空洞）", duration: 262 }, { name: "Overcast（阴云）", duration: 248 },
+      { name: "Silence（沉寂）", duration: 235 } ] },
+    { name: "Drift（漂流）", type: "单曲", date: "2035-04-26", songs: [
+      { name: "Drift（漂流）", duration: 226 } ] },
+    { name: "Faded（褪色）", type: "单曲", date: "2037-07-09", songs: [
+      { name: "Faded（褪色）", duration: 200 } ] },
+    { name: "Ember（余烬）", type: "专辑", date: "2039-07-23", songs: [
+      { name: "Ember（余烬）", duration: 327 }, { name: "Signal（信号）", duration: 258 }, { name: "Lantern（灯笼）", duration: 219 },
+      { name: "Static（静电）", duration: 219 }, { name: "Rust（锈迹）", duration: 209 }, { name: "Iron Whisper（铁的低语）", duration: 251 },
+      { name: "Rain（雨）", duration: 200 }, { name: "Sundown（日落）", duration: 221 }, { name: "Carousel（旋转木马）", duration: 263 },
+      { name: "Trail（足迹）", duration: 247 } ] },
+    { name: "Rain Canvas（雨的画布）", type: "单曲", date: "2041-07-12", songs: [
+      { name: "Rain Canvas（雨的画布）", duration: 220 } ] },
+    { name: "Neon Quiet（霓虹的寂静）", type: "单曲", date: "2043-10-11", songs: [
+      { name: "Neon Quiet（霓虹的寂静）", duration: 382 } ] },
+    { name: "Mirrors（镜子）", type: "专辑", date: "2045-12-28", songs: [
+      { name: "Mirrors（镜子）", duration: 263 }, { name: "Broken Faded（破碎的褪色）", duration: 246 }, { name: "Highway（公路）", duration: 246 },
+      { name: "Tide Concrete（潮汐的水泥）", duration: 205 }, { name: "Rain Anchor（雨的锚）", duration: 225 }, { name: "Golden（金色）", duration: 333 },
+      { name: "Golden Wires（金色的电线）", duration: 147 } ] },
+    { name: "Quiet（寂静）", type: "专辑", date: "2047-10-22", songs: [
+      { name: "Quiet（寂静）", duration: 401 }, { name: "Glimmer Spark（微光的火花）", duration: 232 }, { name: "Glimmer（微光）", duration: 260 },
+      { name: "Paperplane Nightfall（纸飞机的夜幕）", duration: 242 }, { name: "Mirrors Whisper（镜子的低语）", duration: 226 }, { name: "Neon Velvet（霓虹的天鹅绒）", duration: 201 },
+      { name: "Trail Silence（足迹的沉寂）", duration: 253 } ] },
+    { name: "Vapor Harbor（雾霭的港湾）", type: "专辑", date: "2049-12-18", songs: [
+      { name: "Vapor Harbor（雾霭的港湾）", duration: 241 }, { name: "Silver（银色）", duration: 245 }, { name: "Harbor Golden（港湾的金色）", duration: 237 },
+      { name: "Satellite Signal（卫星的信号）", duration: 222 }, { name: "Gravel Broken（砾石的破碎）", duration: 135 }, { name: "Whisper Smoke（低语的烟雾）", duration: 220 },
+      { name: "Marrow Mirrors（骨髓的镜子）", duration: 165 }, { name: "Orbit Harbor（轨道的港湾）", duration: 357 }, { name: "Bloom Undertow（绽放的暗流）", duration: 241 },
+      { name: "Golden Meridian（金色的子午线）", duration: 198 } ] },
     ],
   "Trapnest": [
     { name: "Trapnest", type: "专辑", date: "2005-11-16", songs: [
        { name: "Glamorous Sky", duration: 258 }, { name: "Trust", duration: 235 },
        { name: "Wish", duration: 240 }, { name: "Starless Night", duration: 250 }, { name: "Let's Dance", duration: 220 } ] },
     { name: "Glamorous Sky", type: "单曲", date: "2005-09-07", songs: [ { name: "Glamorous Sky", duration: 258 } ] },
-      { name: "Smoke", type: "专辑", date: "2027-02-20", songs: [
-      { name: "Smoke", duration: 247 }, { name: "Glimmer", duration: 210 }, { name: "Nightfall", duration: 250 },
-      { name: "Gravel Static", duration: 245 }, { name: "Static", duration: 238 }, { name: "Vapor", duration: 141 },
-      { name: "Drift", duration: 245 }, { name: "Iron", duration: 168 }, { name: "Orbit", duration: 229 } ] },
-    { name: "Faded", type: "单曲", date: "2028-12-23", songs: [
-      { name: "Faded", duration: 192 } ] },
-    { name: "Concrete", type: "专辑", date: "2031-05-31", songs: [
-      { name: "Concrete", duration: 239 }, { name: "Neon", duration: 246 }, { name: "Silver", duration: 266 },
-      { name: "Golden", duration: 254 }, { name: "Wires", duration: 224 }, { name: "Meridian", duration: 191 },
-      { name: "Ashes", duration: 195 }, { name: "Spark Concrete", duration: 214 }, { name: "Echo Motel", duration: 266 },
-      { name: "Daybreak Overcast", duration: 276 }, { name: "Paperplane Rust", duration: 457 } ] },
-    { name: "Broken", type: "专辑", date: "2033-04-21", songs: [
-      { name: "Broken", duration: 213 }, { name: "Shallow", duration: 252 }, { name: "Rust Midnight", duration: 236 },
-      { name: "Ember Motel", duration: 264 }, { name: "Rain", duration: 237 }, { name: "Satellite", duration: 246 },
-      { name: "Echo", duration: 234 }, { name: "Motel", duration: 236 }, { name: "Trail", duration: 240 } ] },
-    { name: "Mirrors", type: "专辑", date: "2035-03-09", songs: [
-      { name: "Mirrors", duration: 251 }, { name: "Marrow", duration: 395 }, { name: "Sundown", duration: 222 },
-      { name: "Iron Midnight", duration: 251 }, { name: "Hollow", duration: 288 }, { name: "Carousel Daylight", duration: 258 },
-      { name: "Anchor", duration: 222 } ] },
-    { name: "Canvas Harbor", type: "专辑", date: "2037-05-25", songs: [
-      { name: "Canvas Harbor", duration: 255 }, { name: "Whisper", duration: 223 }, { name: "Ember", duration: 280 },
-      { name: "Mirrors Carousel", duration: 255 }, { name: "Faded Drift", duration: 291 }, { name: "Signal", duration: 239 },
-      { name: "Paperplane Gravel", duration: 260 }, { name: "Rust", duration: 226 }, { name: "Carousel", duration: 281 } ] },
-    { name: "Concrete Signal", type: "专辑", date: "2039-05-19", songs: [
-      { name: "Concrete Signal", duration: 224 }, { name: "Canvas Orbit", duration: 237 }, { name: "Harbor Faded", duration: 178 },
-      { name: "Iron Daybreak", duration: 227 }, { name: "Anchor Daylight", duration: 232 }, { name: "Highway", duration: 262 },
-      { name: "Lantern", duration: 248 } ] },
-    { name: "Daybreak Smoke", type: "专辑", date: "2041-09-29", songs: [
-      { name: "Daybreak Smoke", duration: 283 }, { name: "Mirrors Satellite", duration: 249 }, { name: "Echo Satellite", duration: 219 },
-      { name: "Quiet", duration: 197 }, { name: "Motel Neon", duration: 265 }, { name: "Neon Mirrors", duration: 240 },
-      { name: "Velvet Harbor", duration: 247 }, { name: "Undertow", duration: 248 }, { name: "Vapor Sundown", duration: 231 },
-      { name: "Harbor", duration: 251 }, { name: "Spark Paperplane", duration: 245 } ] },
-    { name: "Paperplane Ashes", type: "单曲", date: "2043-08-11", songs: [
-      { name: "Paperplane Ashes", duration: 233 } ] },
-    { name: "Nightfall Shallow", type: "专辑", date: "2045-11-28", songs: [
-      { name: "Nightfall Shallow", duration: 215 }, { name: "Midnight", duration: 241 }, { name: "Quiet Concrete", duration: 231 },
-      { name: "Velvet Static", duration: 203 }, { name: "Paperplane", duration: 169 }, { name: "Overcast", duration: 161 },
-      { name: "Ashes Silver", duration: 281 }, { name: "Paperplane Concrete", duration: 264 }, { name: "Nightfall Ashes", duration: 232 } ] },
-    { name: "Silence Velvet", type: "专辑", date: "2047-08-26", songs: [
-      { name: "Silence Velvet", duration: 229 }, { name: "Paperplane Harbor", duration: 232 }, { name: "Carousel Ember", duration: 249 },
-      { name: "Daybreak Ember", duration: 216 }, { name: "Static Tide", duration: 279 }, { name: "Satellite Concrete", duration: 225 },
-      { name: "Canvas", duration: 254 }, { name: "Mirrors Broken", duration: 274 } ] },
-    { name: "Static Whisper", type: "专辑", date: "2049-12-15", songs: [
-      { name: "Static Whisper", duration: 257 }, { name: "Tide Mirrors", duration: 154 }, { name: "Silence", duration: 260 },
-      { name: "Marrow Midnight", duration: 203 }, { name: "Daybreak Satellite", duration: 405 }, { name: "Concrete Gravel", duration: 264 },
-      { name: "Tide", duration: 254 }, { name: "Tide Daylight", duration: 264 }, { name: "Rain Sundown", duration: 232 },
-      { name: "Whisper Golden", duration: 288 } ] },
+      { name: "Smoke（烟雾）", type: "专辑", date: "2027-02-20", songs: [
+      { name: "Smoke（烟雾）", duration: 247 }, { name: "Glimmer（微光）", duration: 210 }, { name: "Nightfall（夜幕）", duration: 250 },
+      { name: "Gravel Static（砾石的静电）", duration: 245 }, { name: "Static（静电）", duration: 238 }, { name: "Vapor（雾霭）", duration: 141 },
+      { name: "Drift（漂流）", duration: 245 }, { name: "Iron（铁）", duration: 168 }, { name: "Orbit（轨道）", duration: 229 } ] },
+    { name: "Faded（褪色）", type: "单曲", date: "2028-12-23", songs: [
+      { name: "Faded（褪色）", duration: 192 } ] },
+    { name: "Concrete（水泥）", type: "专辑", date: "2031-05-31", songs: [
+      { name: "Concrete（水泥）", duration: 239 }, { name: "Neon（霓虹）", duration: 246 }, { name: "Silver（银色）", duration: 266 },
+      { name: "Golden（金色）", duration: 254 }, { name: "Wires（电线）", duration: 224 }, { name: "Meridian（子午线）", duration: 191 },
+      { name: "Ashes（灰烬）", duration: 195 }, { name: "Spark Concrete（火花的水泥）", duration: 214 }, { name: "Echo Motel（回声的汽车旅馆）", duration: 266 },
+      { name: "Daybreak Overcast（黎明的阴云）", duration: 276 }, { name: "Paperplane Rust（纸飞机的锈迹）", duration: 457 } ] },
+    { name: "Broken（破碎）", type: "专辑", date: "2033-04-21", songs: [
+      { name: "Broken（破碎）", duration: 213 }, { name: "Shallow（浅滩）", duration: 252 }, { name: "Rust Midnight（锈迹的午夜）", duration: 236 },
+      { name: "Ember Motel（余烬的汽车旅馆）", duration: 264 }, { name: "Rain（雨）", duration: 237 }, { name: "Satellite（卫星）", duration: 246 },
+      { name: "Echo（回声）", duration: 234 }, { name: "Motel（汽车旅馆）", duration: 236 }, { name: "Trail（足迹）", duration: 240 } ] },
+    { name: "Mirrors（镜子）", type: "专辑", date: "2035-03-09", songs: [
+      { name: "Mirrors（镜子）", duration: 251 }, { name: "Marrow（骨髓）", duration: 395 }, { name: "Sundown（日落）", duration: 222 },
+      { name: "Iron Midnight（铁的午夜）", duration: 251 }, { name: "Hollow（空洞）", duration: 288 }, { name: "Carousel Daylight（旋转木马的日光）", duration: 258 },
+      { name: "Anchor（锚）", duration: 222 } ] },
+    { name: "Canvas Harbor（画布的港湾）", type: "专辑", date: "2037-05-25", songs: [
+      { name: "Canvas Harbor（画布的港湾）", duration: 255 }, { name: "Whisper（低语）", duration: 223 }, { name: "Ember（余烬）", duration: 280 },
+      { name: "Mirrors Carousel（镜子的旋转木马）", duration: 255 }, { name: "Faded Drift（褪色的漂流）", duration: 291 }, { name: "Signal（信号）", duration: 239 },
+      { name: "Paperplane Gravel（纸飞机的砾石）", duration: 260 }, { name: "Rust（锈迹）", duration: 226 }, { name: "Carousel（旋转木马）", duration: 281 } ] },
+    { name: "Concrete Signal（水泥的信号）", type: "专辑", date: "2039-05-19", songs: [
+      { name: "Concrete Signal（水泥的信号）", duration: 224 }, { name: "Canvas Orbit（画布的轨道）", duration: 237 }, { name: "Harbor Faded（港湾的褪色）", duration: 178 },
+      { name: "Iron Daybreak（铁的黎明）", duration: 227 }, { name: "Anchor Daylight（锚的日光）", duration: 232 }, { name: "Highway（公路）", duration: 262 },
+      { name: "Lantern（灯笼）", duration: 248 } ] },
+    { name: "Daybreak Smoke（黎明的烟雾）", type: "专辑", date: "2041-09-29", songs: [
+      { name: "Daybreak Smoke（黎明的烟雾）", duration: 283 }, { name: "Mirrors Satellite（镜子的卫星）", duration: 249 }, { name: "Echo Satellite（回声的卫星）", duration: 219 },
+      { name: "Quiet（寂静）", duration: 197 }, { name: "Motel Neon（汽车旅馆的霓虹）", duration: 265 }, { name: "Neon Mirrors（霓虹的镜子）", duration: 240 },
+      { name: "Velvet Harbor（天鹅绒的港湾）", duration: 247 }, { name: "Undertow（暗流）", duration: 248 }, { name: "Vapor Sundown（雾霭的日落）", duration: 231 },
+      { name: "Harbor（港湾）", duration: 251 }, { name: "Spark Paperplane（火花的纸飞机）", duration: 245 } ] },
+    { name: "Paperplane Ashes（纸飞机的灰烬）", type: "单曲", date: "2043-08-11", songs: [
+      { name: "Paperplane Ashes（纸飞机的灰烬）", duration: 233 } ] },
+    { name: "Nightfall Shallow（夜幕的浅滩）", type: "专辑", date: "2045-11-28", songs: [
+      { name: "Nightfall Shallow（夜幕的浅滩）", duration: 215 }, { name: "Midnight（午夜）", duration: 241 }, { name: "Quiet Concrete（寂静的水泥）", duration: 231 },
+      { name: "Velvet Static（天鹅绒的静电）", duration: 203 }, { name: "Paperplane（纸飞机）", duration: 169 }, { name: "Overcast（阴云）", duration: 161 },
+      { name: "Ashes Silver（灰烬的银色）", duration: 281 }, { name: "Paperplane Concrete（纸飞机的水泥）", duration: 264 }, { name: "Nightfall Ashes（夜幕的灰烬）", duration: 232 } ] },
+    { name: "Silence Velvet（沉寂的天鹅绒）", type: "专辑", date: "2047-08-26", songs: [
+      { name: "Silence Velvet（沉寂的天鹅绒）", duration: 229 }, { name: "Paperplane Harbor（纸飞机的港湾）", duration: 232 }, { name: "Carousel Ember（旋转木马的余烬）", duration: 249 },
+      { name: "Daybreak Ember（黎明的余烬）", duration: 216 }, { name: "Static Tide（静电的潮汐）", duration: 279 }, { name: "Satellite Concrete（卫星的水泥）", duration: 225 },
+      { name: "Canvas（画布）", duration: 254 }, { name: "Mirrors Broken（镜子的破碎）", duration: 274 } ] },
+    { name: "Static Whisper（静电的低语）", type: "专辑", date: "2049-12-15", songs: [
+      { name: "Static Whisper（静电的低语）", duration: 257 }, { name: "Tide Mirrors（潮汐的镜子）", duration: 154 }, { name: "Silence（沉寂）", duration: 260 },
+      { name: "Marrow Midnight（骨髓的午夜）", duration: 203 }, { name: "Daybreak Satellite（黎明的卫星）", duration: 405 }, { name: "Concrete Gravel（水泥的砾石）", duration: 264 },
+      { name: "Tide（潮汐）", duration: 254 }, { name: "Tide Daylight（潮汐的日光）", duration: 264 }, { name: "Rain Sundown（雨的日落）", duration: 232 },
+      { name: "Whisper Golden（低语的金色）", duration: 288 } ] },
     ],
   "Plasmagica": [
     { name: "Plasmagica", type: "专辑", date: "2015-08-26", songs: [
        { name: "Seabreeze", duration: 230 }, { name: "Music Start!（音乐开始！）", duration: 220 },
        { name: "愛を教えて（教会我爱）", duration: 215 } ] },
     { name: "Seabreeze", type: "单曲", date: "2015-04-22", songs: [ { name: "Seabreeze", duration: 230 } ] },
-      { name: "Nightfall Silence", type: "专辑", date: "2027-04-03", songs: [
-      { name: "Nightfall Silence", duration: 244 }, { name: "Tide", duration: 203 }, { name: "Carousel", duration: 225 },
-      { name: "Glimmer", duration: 228 }, { name: "Motel Echo", duration: 224 }, { name: "Quiet Midnight", duration: 142 },
-      { name: "Motel", duration: 206 }, { name: "Sundown", duration: 219 }, { name: "Harbor", duration: 208 },
-      { name: "Overcast Silver", duration: 221 } ] },
-    { name: "Neon", type: "单曲", date: "2028-11-24", songs: [
-      { name: "Neon", duration: 267 } ] },
-    { name: "Golden", type: "专辑", date: "2031-01-04", songs: [
-      { name: "Golden", duration: 367 }, { name: "Paperplane", duration: 152 }, { name: "Anchor", duration: 190 },
-      { name: "Vapor", duration: 248 }, { name: "Velvet", duration: 234 }, { name: "Whisper", duration: 214 },
-      { name: "Mirrors Nightfall", duration: 261 }, { name: "Static", duration: 215 }, { name: "Silence Neon", duration: 256 },
-      { name: "Motel Quiet", duration: 240 } ] },
-    { name: "Meridian", type: "单曲", date: "2033-04-12", songs: [
-      { name: "Meridian", duration: 219 } ] },
-    { name: "Signal", type: "专辑", date: "2035-08-14", songs: [
-      { name: "Signal", duration: 348 }, { name: "Lantern Daybreak", duration: 233 }, { name: "Nightfall", duration: 222 },
-      { name: "Whisper Orbit", duration: 233 }, { name: "Mirrors", duration: 212 }, { name: "Concrete", duration: 361 },
-      { name: "Bloom", duration: 209 }, { name: "Faded", duration: 147 } ] },
-    { name: "Canvas Ashes", type: "专辑", date: "2037-04-16", songs: [
-      { name: "Canvas Ashes", duration: 234 }, { name: "Lantern", duration: 231 }, { name: "Highway Overcast", duration: 225 },
-      { name: "Iron Motel", duration: 376 }, { name: "Trail Lantern", duration: 181 }, { name: "Quiet", duration: 203 },
-      { name: "Whisper Concrete", duration: 162 }, { name: "Smoke Rain", duration: 398 }, { name: "Shallow", duration: 234 } ] },
-    { name: "Motel Neon", type: "专辑", date: "2039-06-22", songs: [
-      { name: "Motel Neon", duration: 155 }, { name: "Daylight", duration: 210 }, { name: "Highway", duration: 258 },
-      { name: "Overcast", duration: 234 }, { name: "Daybreak", duration: 240 }, { name: "Signal Silence", duration: 219 },
-      { name: "Drift Carousel", duration: 216 }, { name: "Midnight", duration: 192 }, { name: "Gravel Ember", duration: 242 } ] },
-    { name: "Canvas Lantern", type: "单曲", date: "2041-07-26", songs: [
-      { name: "Canvas Lantern", duration: 207 } ] },
-    { name: "Silver", type: "单曲", date: "2043-11-16", songs: [
-      { name: "Silver", duration: 326 } ] },
-    { name: "Harbor Ashes", type: "专辑", date: "2045-11-01", songs: [
-      { name: "Harbor Ashes", duration: 201 }, { name: "Concrete Signal", duration: 208 }, { name: "Smoke Ember", duration: 224 },
-      { name: "Ashes", duration: 214 }, { name: "Hollow Spark", duration: 162 }, { name: "Undertow", duration: 231 },
-      { name: "Daylight Daybreak", duration: 205 }, { name: "Broken", duration: 229 }, { name: "Rust", duration: 223 },
-      { name: "Meridian Drift", duration: 240 }, { name: "Rain Canvas", duration: 181 } ] },
-    { name: "Trail", type: "专辑", date: "2047-12-10", songs: [
-      { name: "Trail", duration: 264 }, { name: "Wires Undertow", duration: 408 }, { name: "Signal Neon", duration: 179 },
-      { name: "Iron Sundown", duration: 242 }, { name: "Overcast Marrow", duration: 224 }, { name: "Iron", duration: 239 },
-      { name: "Silence Glimmer", duration: 234 }, { name: "Hollow Drift", duration: 216 } ] },
-    { name: "Velvet Anchor", type: "专辑", date: "2050-02-05", songs: [
-      { name: "Velvet Anchor", duration: 204 }, { name: "Glimmer Anchor", duration: 206 }, { name: "Ember", duration: 257 },
-      { name: "Smoke", duration: 238 }, { name: "Gravel", duration: 254 }, { name: "Hollow", duration: 220 },
-      { name: "Orbit", duration: 243 }, { name: "Wires", duration: 213 }, { name: "Rain Highway", duration: 123 },
-      { name: "Iron Neon", duration: 244 }, { name: "Meridian Motel", duration: 219 } ] },
+      { name: "Nightfall Silence（夜幕的沉寂）", type: "专辑", date: "2027-04-03", songs: [
+      { name: "Nightfall Silence（夜幕的沉寂）", duration: 244 }, { name: "Tide（潮汐）", duration: 203 }, { name: "Carousel（旋转木马）", duration: 225 },
+      { name: "Glimmer（微光）", duration: 228 }, { name: "Motel Echo（汽车旅馆的回声）", duration: 224 }, { name: "Quiet Midnight（寂静的午夜）", duration: 142 },
+      { name: "Motel（汽车旅馆）", duration: 206 }, { name: "Sundown（日落）", duration: 219 }, { name: "Harbor（港湾）", duration: 208 },
+      { name: "Overcast Silver（阴云的银色）", duration: 221 } ] },
+    { name: "Neon（霓虹）", type: "单曲", date: "2028-11-24", songs: [
+      { name: "Neon（霓虹）", duration: 267 } ] },
+    { name: "Golden（金色）", type: "专辑", date: "2031-01-04", songs: [
+      { name: "Golden（金色）", duration: 367 }, { name: "Paperplane（纸飞机）", duration: 152 }, { name: "Anchor（锚）", duration: 190 },
+      { name: "Vapor（雾霭）", duration: 248 }, { name: "Velvet（天鹅绒）", duration: 234 }, { name: "Whisper（低语）", duration: 214 },
+      { name: "Mirrors Nightfall（镜子的夜幕）", duration: 261 }, { name: "Static（静电）", duration: 215 }, { name: "Silence Neon（沉寂的霓虹）", duration: 256 },
+      { name: "Motel Quiet（汽车旅馆的寂静）", duration: 240 } ] },
+    { name: "Meridian（子午线）", type: "单曲", date: "2033-04-12", songs: [
+      { name: "Meridian（子午线）", duration: 219 } ] },
+    { name: "Signal（信号）", type: "专辑", date: "2035-08-14", songs: [
+      { name: "Signal（信号）", duration: 348 }, { name: "Lantern Daybreak（灯笼的黎明）", duration: 233 }, { name: "Nightfall（夜幕）", duration: 222 },
+      { name: "Whisper Orbit（低语的轨道）", duration: 233 }, { name: "Mirrors（镜子）", duration: 212 }, { name: "Concrete（水泥）", duration: 361 },
+      { name: "Bloom（绽放）", duration: 209 }, { name: "Faded（褪色）", duration: 147 } ] },
+    { name: "Canvas Ashes（画布的灰烬）", type: "专辑", date: "2037-04-16", songs: [
+      { name: "Canvas Ashes（画布的灰烬）", duration: 234 }, { name: "Lantern（灯笼）", duration: 231 }, { name: "Highway Overcast（公路的阴云）", duration: 225 },
+      { name: "Iron Motel（铁的汽车旅馆）", duration: 376 }, { name: "Trail Lantern（足迹的灯笼）", duration: 181 }, { name: "Quiet（寂静）", duration: 203 },
+      { name: "Whisper Concrete（低语的水泥）", duration: 162 }, { name: "Smoke Rain（烟雾的雨）", duration: 398 }, { name: "Shallow（浅滩）", duration: 234 } ] },
+    { name: "Motel Neon（汽车旅馆的霓虹）", type: "专辑", date: "2039-06-22", songs: [
+      { name: "Motel Neon（汽车旅馆的霓虹）", duration: 155 }, { name: "Daylight（日光）", duration: 210 }, { name: "Highway（公路）", duration: 258 },
+      { name: "Overcast（阴云）", duration: 234 }, { name: "Daybreak（黎明）", duration: 240 }, { name: "Signal Silence（信号的沉寂）", duration: 219 },
+      { name: "Drift Carousel（漂流的旋转木马）", duration: 216 }, { name: "Midnight（午夜）", duration: 192 }, { name: "Gravel Ember（砾石的余烬）", duration: 242 } ] },
+    { name: "Canvas Lantern（画布的灯笼）", type: "单曲", date: "2041-07-26", songs: [
+      { name: "Canvas Lantern（画布的灯笼）", duration: 207 } ] },
+    { name: "Silver（银色）", type: "单曲", date: "2043-11-16", songs: [
+      { name: "Silver（银色）", duration: 326 } ] },
+    { name: "Harbor Ashes（港湾的灰烬）", type: "专辑", date: "2045-11-01", songs: [
+      { name: "Harbor Ashes（港湾的灰烬）", duration: 201 }, { name: "Concrete Signal（水泥的信号）", duration: 208 }, { name: "Smoke Ember（烟雾的余烬）", duration: 224 },
+      { name: "Ashes（灰烬）", duration: 214 }, { name: "Hollow Spark（空洞的火花）", duration: 162 }, { name: "Undertow（暗流）", duration: 231 },
+      { name: "Daylight Daybreak（日光的黎明）", duration: 205 }, { name: "Broken（破碎）", duration: 229 }, { name: "Rust（锈迹）", duration: 223 },
+      { name: "Meridian Drift（子午线的漂流）", duration: 240 }, { name: "Rain Canvas（雨的画布）", duration: 181 } ] },
+    { name: "Trail（足迹）", type: "专辑", date: "2047-12-10", songs: [
+      { name: "Trail（足迹）", duration: 264 }, { name: "Wires Undertow（电线的暗流）", duration: 408 }, { name: "Signal Neon（信号的霓虹）", duration: 179 },
+      { name: "Iron Sundown（铁的日落）", duration: 242 }, { name: "Overcast Marrow（阴云的骨髓）", duration: 224 }, { name: "Iron（铁）", duration: 239 },
+      { name: "Silence Glimmer（沉寂的微光）", duration: 234 }, { name: "Hollow Drift（空洞的漂流）", duration: 216 } ] },
+    { name: "Velvet Anchor（天鹅绒的锚）", type: "专辑", date: "2050-02-05", songs: [
+      { name: "Velvet Anchor（天鹅绒的锚）", duration: 204 }, { name: "Glimmer Anchor（微光的锚）", duration: 206 }, { name: "Ember（余烬）", duration: 257 },
+      { name: "Smoke（烟雾）", duration: 238 }, { name: "Gravel（砾石）", duration: 254 }, { name: "Hollow（空洞）", duration: 220 },
+      { name: "Orbit（轨道）", duration: 243 }, { name: "Wires（电线）", duration: 213 }, { name: "Rain Highway（雨的公路）", duration: 123 },
+      { name: "Iron Neon（铁的霓虹）", duration: 244 }, { name: "Meridian Motel（子午线的汽车旅馆）", duration: 219 } ] },
     ],
   "Poppin'Party": [
     { name: "Poppin'on!", type: "专辑", date: "2019-01-30", songs: [
@@ -2723,39 +2723,39 @@ window.BAND_DISCOGRAPHY = {
     { name: "Time Lapse", type: "单曲", date: "2018-01-17", songs: [ { name: "Time Lapse", duration: 245 } ] },
     { name: "二重の虹（双重彩虹）", type: "单曲", date: "2018-04-18", songs: [ { name: "二重の虹（双重彩虹）", duration: 236 } ] },
     { name: "キズナミュージック♪（羁绊音乐♪）", type: "单曲", date: "2019-05-15", songs: [ { name: "キズナミュージック♪（羁绊音乐♪）", duration: 240 } ] },
-      { name: "風鈴の青い", type: "单曲", date: "2026-12-05", songs: [
-      { name: "風鈴の青い", duration: 231 } ] },
-    { name: "雨音", type: "单曲", date: "2029-04-21", songs: [
-      { name: "雨音", duration: 218 } ] },
-    { name: "雲の微笑", type: "单曲", date: "2031-03-26", songs: [
-      { name: "雲の微笑", duration: 234 } ] },
-    { name: "潮騒の小さな", type: "单曲", date: "2033-06-12", songs: [
-      { name: "潮騒の小さな", duration: 243 } ] },
-    { name: "小さなの月光", type: "单曲", date: "2035-06-21", songs: [
-      { name: "小さなの月光", duration: 234 } ] },
-    { name: "星屑の波音", type: "单曲", date: "2037-04-09", songs: [
-      { name: "星屑の波音", duration: 256 } ] },
-    { name: "放課後", type: "单曲", date: "2039-09-17", songs: [
-      { name: "放課後", duration: 225 } ] },
-    { name: "小さなの花", type: "专辑", date: "2041-05-17", songs: [
-      { name: "小さなの花", duration: 144 }, { name: "小さな", duration: 442 }, { name: "窓の虹", duration: 214 },
-      { name: "恋の声", duration: 270 }, { name: "時の涙", duration: 265 }, { name: "波の陽だまり", duration: 198 },
-      { name: "春風", duration: 227 }, { name: "心の潮騒", duration: 250 }, { name: "陽だまり", duration: 172 } ] },
-    { name: "星空の自転車", type: "专辑", date: "2043-08-18", songs: [
-      { name: "星空の自転車", duration: 215 }, { name: "青いの光", duration: 214 }, { name: "透明", duration: 223 },
-      { name: "約束", duration: 210 }, { name: "屋上", duration: 185 }, { name: "星空", duration: 228 },
-      { name: "自転車", duration: 215 }, { name: "声の小さな", duration: 233 }, { name: "星屑", duration: 278 },
-      { name: "遠いの潮騒", duration: 315 } ] },
-    { name: "影の星", type: "单曲", date: "2045-08-22", songs: [
-      { name: "影の星", duration: 254 } ] },
-    { name: "海の自転車", type: "专辑", date: "2047-08-26", songs: [
-      { name: "海の自転車", duration: 227 }, { name: "虹の風", duration: 232 }, { name: "優しい", duration: 241 },
-      { name: "窓の陽だまり", duration: 134 }, { name: "雨音の白い", duration: 225 }, { name: "春風の恋", duration: 202 },
-      { name: "潮騒の遠い", duration: 254 } ] },
-    { name: "優しいの夢", type: "专辑", date: "2049-11-09", songs: [
-      { name: "優しいの夢", duration: 224 }, { name: "陽だまりの静か", duration: 135 }, { name: "朝焼け", duration: 175 },
-      { name: "帰り道", duration: 175 }, { name: "夕焼け", duration: 218 }, { name: "風の影", duration: 231 },
-      { name: "夜明け", duration: 217 }, { name: "白いの優しい", duration: 255 } ] },
+      { name: "風鈴の青い（湛蓝的风铃）", type: "单曲", date: "2026-12-05", songs: [
+      { name: "風鈴の青い（湛蓝的风铃）", duration: 231 } ] },
+    { name: "雨音（雨声）", type: "单曲", date: "2029-04-21", songs: [
+      { name: "雨音（雨声）", duration: 218 } ] },
+    { name: "雲の微笑（云之微笑）", type: "单曲", date: "2031-03-26", songs: [
+      { name: "雲の微笑（云之微笑）", duration: 234 } ] },
+    { name: "潮騒の小さな（微小的的潮鸣）", type: "单曲", date: "2033-06-12", songs: [
+      { name: "潮騒の小さな（微小的的潮鸣）", duration: 243 } ] },
+    { name: "小さなの月光（微小的月光）", type: "单曲", date: "2035-06-21", songs: [
+      { name: "小さなの月光（微小的月光）", duration: 234 } ] },
+    { name: "星屑の波音（星屑之潮声）", type: "单曲", date: "2037-04-09", songs: [
+      { name: "星屑の波音（星屑之潮声）", duration: 256 } ] },
+    { name: "放課後（放学后）", type: "单曲", date: "2039-09-17", songs: [
+      { name: "放課後（放学后）", duration: 225 } ] },
+    { name: "小さなの花（微小的花）", type: "专辑", date: "2041-05-17", songs: [
+      { name: "小さなの花（微小的花）", duration: 144 }, { name: "小さな（微小的）", duration: 442 }, { name: "窓の虹（窗之彩虹）", duration: 214 },
+      { name: "恋の声（恋之声）", duration: 270 }, { name: "時の涙（时光之泪）", duration: 265 }, { name: "波の陽だまり（波之暖阳）", duration: 198 },
+      { name: "春風（春风）", duration: 227 }, { name: "心の潮騒（心之潮鸣）", duration: 250 }, { name: "陽だまり（暖阳）", duration: 172 } ] },
+    { name: "星空の自転車（星空之单车）", type: "专辑", date: "2043-08-18", songs: [
+      { name: "星空の自転車（星空之单车）", duration: 215 }, { name: "青いの光（湛蓝光）", duration: 214 }, { name: "透明（透明）", duration: 223 },
+      { name: "約束（约定）", duration: 210 }, { name: "屋上（天台）", duration: 185 }, { name: "星空（星空）", duration: 228 },
+      { name: "自転車（单车）", duration: 215 }, { name: "声の小さな（微小的的声）", duration: 233 }, { name: "星屑（星屑）", duration: 278 },
+      { name: "遠いの潮騒（遥远潮鸣）", duration: 315 } ] },
+    { name: "影の星（影之星）", type: "单曲", date: "2045-08-22", songs: [
+      { name: "影の星（影之星）", duration: 254 } ] },
+    { name: "海の自転車（海之单车）", type: "专辑", date: "2047-08-26", songs: [
+      { name: "海の自転車（海之单车）", duration: 227 }, { name: "虹の風（彩虹之风）", duration: 232 }, { name: "優しい（温柔）", duration: 241 },
+      { name: "窓の陽だまり（窗之暖阳）", duration: 134 }, { name: "雨音の白い（纯白的的雨声）", duration: 225 }, { name: "春風の恋（春风之恋）", duration: 202 },
+      { name: "潮騒の遠い（遥远的潮鸣）", duration: 254 } ] },
+    { name: "優しいの夢（温柔梦）", type: "专辑", date: "2049-11-09", songs: [
+      { name: "優しいの夢（温柔梦）", duration: 224 }, { name: "陽だまりの静か（静谧的暖阳）", duration: 135 }, { name: "朝焼け（朝霞）", duration: 175 },
+      { name: "帰り道（归途）", duration: 175 }, { name: "夕焼け（晚霞）", duration: 218 }, { name: "風の影（风之影）", duration: 231 },
+      { name: "夜明け（黎明）", duration: 217 }, { name: "白いの優しい（纯白的温柔）", duration: 255 } ] },
     ],
   "Roselia": [
     { name: "Anfang", type: "专辑", date: "2019-04-24", songs: [
@@ -2773,36 +2773,36 @@ window.BAND_DISCOGRAPHY = {
     { name: "Brave Jewel", type: "单曲", date: "2018-12-12", songs: [ { name: "Brave Jewel", duration: 240 } ] },
     { name: "FIRE BIRD", type: "单曲", date: "2019-03-20", songs: [ { name: "FIRE BIRD", duration: 255 } ] },
     { name: "LOUDER", type: "单曲", date: "2018-08-22", songs: [ { name: "LOUDER", duration: 235 } ] },
-      { name: "Rust", type: "单曲", date: "2027-01-10", songs: [
-      { name: "Rust", duration: 188 } ] },
-    { name: "Vapor", type: "单曲", date: "2029-02-20", songs: [
-      { name: "Vapor", duration: 248 } ] },
-    { name: "Bloom Tide", type: "单曲", date: "2031-06-01", songs: [
-      { name: "Bloom Tide", duration: 232 } ] },
-    { name: "Sundown", type: "专辑", date: "2033-02-26", songs: [
-      { name: "Sundown", duration: 263 }, { name: "Echo", duration: 258 }, { name: "Bloom", duration: 224 },
-      { name: "Ashes Ember", duration: 273 }, { name: "Hollow", duration: 226 }, { name: "Motel Spark", duration: 262 },
-      { name: "Overcast", duration: 190 }, { name: "Nightfall", duration: 211 } ] },
-    { name: "Highway", type: "专辑", date: "2035-03-17", songs: [
-      { name: "Highway", duration: 198 }, { name: "Bloom Concrete", duration: 246 }, { name: "Ember Trail", duration: 173 },
-      { name: "Undertow", duration: 239 }, { name: "Lantern", duration: 245 }, { name: "Mirrors", duration: 338 },
-      { name: "Paperplane", duration: 241 }, { name: "Lantern Static", duration: 177 }, { name: "Static Undertow", duration: 248 } ] },
-    { name: "Glimmer", type: "单曲", date: "2037-09-10", songs: [
-      { name: "Glimmer", duration: 253 } ] },
-    { name: "Velvet", type: "单曲", date: "2039-07-14", songs: [
-      { name: "Velvet", duration: 235 } ] },
-    { name: "Daybreak", type: "专辑", date: "2041-05-31", songs: [
-      { name: "Daybreak", duration: 217 }, { name: "Neon Carousel", duration: 261 }, { name: "Neon Concrete", duration: 166 },
-      { name: "Silence", duration: 250 }, { name: "Rain", duration: 271 }, { name: "Quiet", duration: 286 },
-      { name: "Satellite", duration: 198 }, { name: "Signal", duration: 227 }, { name: "Shallow", duration: 231 } ] },
-    { name: "Concrete", type: "单曲", date: "2043-11-30", songs: [
-      { name: "Concrete", duration: 201 } ] },
-    { name: "Signal Undertow", type: "单曲", date: "2045-09-22", songs: [
-      { name: "Signal Undertow", duration: 259 } ] },
-    { name: "Spark", type: "单曲", date: "2047-12-07", songs: [
-      { name: "Spark", duration: 262 } ] },
-    { name: "Faded Motel", type: "单曲", date: "2050-02-14", songs: [
-      { name: "Faded Motel", duration: 233 } ] },
+      { name: "Rust（锈迹）", type: "单曲", date: "2027-01-10", songs: [
+      { name: "Rust（锈迹）", duration: 188 } ] },
+    { name: "Vapor（雾霭）", type: "单曲", date: "2029-02-20", songs: [
+      { name: "Vapor（雾霭）", duration: 248 } ] },
+    { name: "Bloom Tide（绽放的潮汐）", type: "单曲", date: "2031-06-01", songs: [
+      { name: "Bloom Tide（绽放的潮汐）", duration: 232 } ] },
+    { name: "Sundown（日落）", type: "专辑", date: "2033-02-26", songs: [
+      { name: "Sundown（日落）", duration: 263 }, { name: "Echo（回声）", duration: 258 }, { name: "Bloom（绽放）", duration: 224 },
+      { name: "Ashes Ember（灰烬的余烬）", duration: 273 }, { name: "Hollow（空洞）", duration: 226 }, { name: "Motel Spark（汽车旅馆的火花）", duration: 262 },
+      { name: "Overcast（阴云）", duration: 190 }, { name: "Nightfall（夜幕）", duration: 211 } ] },
+    { name: "Highway（公路）", type: "专辑", date: "2035-03-17", songs: [
+      { name: "Highway（公路）", duration: 198 }, { name: "Bloom Concrete（绽放的水泥）", duration: 246 }, { name: "Ember Trail（余烬的足迹）", duration: 173 },
+      { name: "Undertow（暗流）", duration: 239 }, { name: "Lantern（灯笼）", duration: 245 }, { name: "Mirrors（镜子）", duration: 338 },
+      { name: "Paperplane（纸飞机）", duration: 241 }, { name: "Lantern Static（灯笼的静电）", duration: 177 }, { name: "Static Undertow（静电的暗流）", duration: 248 } ] },
+    { name: "Glimmer（微光）", type: "单曲", date: "2037-09-10", songs: [
+      { name: "Glimmer（微光）", duration: 253 } ] },
+    { name: "Velvet（天鹅绒）", type: "单曲", date: "2039-07-14", songs: [
+      { name: "Velvet（天鹅绒）", duration: 235 } ] },
+    { name: "Daybreak（黎明）", type: "专辑", date: "2041-05-31", songs: [
+      { name: "Daybreak（黎明）", duration: 217 }, { name: "Neon Carousel（霓虹的旋转木马）", duration: 261 }, { name: "Neon Concrete（霓虹的水泥）", duration: 166 },
+      { name: "Silence（沉寂）", duration: 250 }, { name: "Rain（雨）", duration: 271 }, { name: "Quiet（寂静）", duration: 286 },
+      { name: "Satellite（卫星）", duration: 198 }, { name: "Signal（信号）", duration: 227 }, { name: "Shallow（浅滩）", duration: 231 } ] },
+    { name: "Concrete（水泥）", type: "单曲", date: "2043-11-30", songs: [
+      { name: "Concrete（水泥）", duration: 201 } ] },
+    { name: "Signal Undertow（信号的暗流）", type: "单曲", date: "2045-09-22", songs: [
+      { name: "Signal Undertow（信号的暗流）", duration: 259 } ] },
+    { name: "Spark（火花）", type: "单曲", date: "2047-12-07", songs: [
+      { name: "Spark（火花）", duration: 262 } ] },
+    { name: "Faded Motel（褪色的汽车旅馆）", type: "单曲", date: "2050-02-14", songs: [
+      { name: "Faded Motel（褪色的汽车旅馆）", duration: 233 } ] },
     ],
   "Afterglow": [
     { name: "ONE OF US", type: "专辑", date: "2019-09-18", songs: [
@@ -2817,32 +2817,32 @@ window.BAND_DISCOGRAPHY = {
     { name: "COMIC PANIC!!!", type: "单曲", date: "2018-06-20", songs: [ { name: "COMIC PANIC!!!", duration: 210 } ] },
     { name: "Sasanqua", type: "单曲", date: "2018-10-10", songs: [ { name: "Sasanqua", duration: 235 } ] },
     { name: "Jamboree!", type: "单曲", date: "2019-02-13", songs: [ { name: "Jamboree!", duration: 218 } ] },
-      { name: "Sundown Concrete", type: "单曲", date: "2027-01-27", songs: [
-      { name: "Sundown Concrete", duration: 239 } ] },
-    { name: "Glimmer", type: "单曲", date: "2028-11-22", songs: [
-      { name: "Glimmer", duration: 202 } ] },
-    { name: "Spark Silence", type: "单曲", date: "2031-03-16", songs: [
-      { name: "Spark Silence", duration: 224 } ] },
-    { name: "Anchor", type: "单曲", date: "2033-01-24", songs: [
-      { name: "Anchor", duration: 232 } ] },
-    { name: "Concrete", type: "单曲", date: "2035-03-02", songs: [
-      { name: "Concrete", duration: 236 } ] },
-    { name: "Trail", type: "单曲", date: "2037-06-08", songs: [
-      { name: "Trail", duration: 238 } ] },
-    { name: "Neon", type: "单曲", date: "2039-09-15", songs: [
-      { name: "Neon", duration: 181 } ] },
-    { name: "Velvet", type: "单曲", date: "2041-06-13", songs: [
-      { name: "Velvet", duration: 226 } ] },
-    { name: "Vapor Quiet", type: "单曲", date: "2043-07-29", songs: [
-      { name: "Vapor Quiet", duration: 239 } ] },
-    { name: "Faded", type: "单曲", date: "2045-07-30", songs: [
-      { name: "Faded", duration: 241 } ] },
-    { name: "Hollow Faded", type: "单曲", date: "2047-12-22", songs: [
-      { name: "Hollow Faded", duration: 224 } ] },
-    { name: "Spark", type: "专辑", date: "2050-03-16", songs: [
-      { name: "Spark", duration: 240 }, { name: "Signal Quiet", duration: 338 }, { name: "Tide", duration: 220 },
-      { name: "Daybreak Glimmer", duration: 241 }, { name: "Sundown", duration: 225 }, { name: "Whisper", duration: 211 },
-      { name: "Quiet", duration: 216 }, { name: "Mirrors", duration: 240 }, { name: "Paperplane", duration: 226 } ] },
+      { name: "Sundown Concrete（日落的水泥）", type: "单曲", date: "2027-01-27", songs: [
+      { name: "Sundown Concrete（日落的水泥）", duration: 239 } ] },
+    { name: "Glimmer（微光）", type: "单曲", date: "2028-11-22", songs: [
+      { name: "Glimmer（微光）", duration: 202 } ] },
+    { name: "Spark Silence（火花的沉寂）", type: "单曲", date: "2031-03-16", songs: [
+      { name: "Spark Silence（火花的沉寂）", duration: 224 } ] },
+    { name: "Anchor（锚）", type: "单曲", date: "2033-01-24", songs: [
+      { name: "Anchor（锚）", duration: 232 } ] },
+    { name: "Concrete（水泥）", type: "单曲", date: "2035-03-02", songs: [
+      { name: "Concrete（水泥）", duration: 236 } ] },
+    { name: "Trail（足迹）", type: "单曲", date: "2037-06-08", songs: [
+      { name: "Trail（足迹）", duration: 238 } ] },
+    { name: "Neon（霓虹）", type: "单曲", date: "2039-09-15", songs: [
+      { name: "Neon（霓虹）", duration: 181 } ] },
+    { name: "Velvet（天鹅绒）", type: "单曲", date: "2041-06-13", songs: [
+      { name: "Velvet（天鹅绒）", duration: 226 } ] },
+    { name: "Vapor Quiet（雾霭的寂静）", type: "单曲", date: "2043-07-29", songs: [
+      { name: "Vapor Quiet（雾霭的寂静）", duration: 239 } ] },
+    { name: "Faded（褪色）", type: "单曲", date: "2045-07-30", songs: [
+      { name: "Faded（褪色）", duration: 241 } ] },
+    { name: "Hollow Faded（空洞的褪色）", type: "单曲", date: "2047-12-22", songs: [
+      { name: "Hollow Faded（空洞的褪色）", duration: 224 } ] },
+    { name: "Spark（火花）", type: "专辑", date: "2050-03-16", songs: [
+      { name: "Spark（火花）", duration: 240 }, { name: "Signal Quiet（信号的寂静）", duration: 338 }, { name: "Tide（潮汐）", duration: 220 },
+      { name: "Daybreak Glimmer（黎明的微光）", duration: 241 }, { name: "Sundown（日落）", duration: 225 }, { name: "Whisper（低语）", duration: 211 },
+      { name: "Quiet（寂静）", duration: 216 }, { name: "Mirrors（镜子）", duration: 240 }, { name: "Paperplane（纸飞机）", duration: 226 } ] },
     ],
   "Pastel*Palettes": [
     { name: "TITLE IDOL", type: "专辑", date: "2018-09-19", songs: [
@@ -2855,34 +2855,34 @@ window.BAND_DISCOGRAPHY = {
     { name: "はなまる♡デイズ（花丸♡Days）", type: "单曲", date: "2017-11-15", songs: [ { name: "はなまる♡デイズ（花丸♡Days）", duration: 218 } ] },
     { name: "天下トーイツA to Z☆（天下统一A to Z☆）", type: "单曲", date: "2018-02-14", songs: [ { name: "天下トーイツA to Z☆（天下统一A to Z☆）", duration: 222 } ] },
     { name: "Wonderland Girl", type: "单曲", date: "2018-06-20", songs: [ { name: "Wonderland Girl", duration: 216 } ] },
-      { name: "影の白い", type: "单曲", date: "2026-10-20", songs: [
-      { name: "影の白い", duration: 214 } ] },
-    { name: "夏祭りの波音", type: "专辑", date: "2029-01-06", songs: [
-      { name: "夏祭りの波音", duration: 197 }, { name: "屋上", duration: 174 }, { name: "小さな", duration: 209 },
-      { name: "光の雨", duration: 388 }, { name: "秋風", duration: 216 }, { name: "星屑", duration: 207 },
-      { name: "静か", duration: 185 }, { name: "放課後の想い", duration: 346 } ] },
-    { name: "向日葵", type: "单曲", date: "2031-01-08", songs: [
-      { name: "向日葵", duration: 208 } ] },
-    { name: "小さなの想い", type: "单曲", date: "2033-06-04", songs: [
-      { name: "小さなの想い", duration: 220 } ] },
-    { name: "涙の空", type: "单曲", date: "2035-06-26", songs: [
-      { name: "涙の空", duration: 235 } ] },
-    { name: "風鈴の陽だまり", type: "单曲", date: "2037-08-12", songs: [
-      { name: "風鈴の陽だまり", duration: 127 } ] },
-    { name: "春風", type: "单曲", date: "2039-05-01", songs: [
-      { name: "春風", duration: 340 } ] },
-    { name: "記憶", type: "单曲", date: "2041-10-31", songs: [
-      { name: "記憶", duration: 232 } ] },
-    { name: "波音の微笑", type: "专辑", date: "2043-09-05", songs: [
-      { name: "波音の微笑", duration: 219 }, { name: "真夏", duration: 229 }, { name: "潮騒の青い", duration: 203 },
-      { name: "青いの遠い", duration: 206 }, { name: "潮騒", duration: 219 }, { name: "春風の海辺", duration: 209 },
-      { name: "雪の青い", duration: 227 }, { name: "海辺", duration: 195 } ] },
-    { name: "透明", type: "单曲", date: "2045-10-09", songs: [
-      { name: "透明", duration: 218 } ] },
-    { name: "約束の帰り道", type: "单曲", date: "2047-10-01", songs: [
-      { name: "約束の帰り道", duration: 200 } ] },
-    { name: "月光", type: "单曲", date: "2049-12-11", songs: [
-      { name: "月光", duration: 127 } ] },
+      { name: "影の白い（纯白的的影）", type: "单曲", date: "2026-10-20", songs: [
+      { name: "影の白い（纯白的的影）", duration: 214 } ] },
+    { name: "夏祭りの波音（夏日祭之潮声）", type: "专辑", date: "2029-01-06", songs: [
+      { name: "夏祭りの波音（夏日祭之潮声）", duration: 197 }, { name: "屋上（天台）", duration: 174 }, { name: "小さな（微小的）", duration: 209 },
+      { name: "光の雨（光之雨）", duration: 388 }, { name: "秋風（秋风）", duration: 216 }, { name: "星屑（星屑）", duration: 207 },
+      { name: "静か（静谧）", duration: 185 }, { name: "放課後の想い（放学后之思念）", duration: 346 } ] },
+    { name: "向日葵（向日葵）", type: "单曲", date: "2031-01-08", songs: [
+      { name: "向日葵（向日葵）", duration: 208 } ] },
+    { name: "小さなの想い（微小的思念）", type: "单曲", date: "2033-06-04", songs: [
+      { name: "小さなの想い（微小的思念）", duration: 220 } ] },
+    { name: "涙の空（泪之天空）", type: "单曲", date: "2035-06-26", songs: [
+      { name: "涙の空（泪之天空）", duration: 235 } ] },
+    { name: "風鈴の陽だまり（风铃之暖阳）", type: "单曲", date: "2037-08-12", songs: [
+      { name: "風鈴の陽だまり（风铃之暖阳）", duration: 127 } ] },
+    { name: "春風（春风）", type: "单曲", date: "2039-05-01", songs: [
+      { name: "春風（春风）", duration: 340 } ] },
+    { name: "記憶（记忆）", type: "单曲", date: "2041-10-31", songs: [
+      { name: "記憶（记忆）", duration: 232 } ] },
+    { name: "波音の微笑（潮声之微笑）", type: "专辑", date: "2043-09-05", songs: [
+      { name: "波音の微笑（潮声之微笑）", duration: 219 }, { name: "真夏（盛夏）", duration: 229 }, { name: "潮騒の青い（湛蓝的潮鸣）", duration: 203 },
+      { name: "青いの遠い（湛蓝遥远）", duration: 206 }, { name: "潮騒（潮鸣）", duration: 219 }, { name: "春風の海辺（春风之海边）", duration: 209 },
+      { name: "雪の青い（湛蓝的雪）", duration: 227 }, { name: "海辺（海边）", duration: 195 } ] },
+    { name: "透明（透明）", type: "单曲", date: "2045-10-09", songs: [
+      { name: "透明（透明）", duration: 218 } ] },
+    { name: "約束の帰り道（约定之归途）", type: "单曲", date: "2047-10-01", songs: [
+      { name: "約束の帰り道（约定之归途）", duration: 200 } ] },
+    { name: "月光（月光）", type: "单曲", date: "2049-12-11", songs: [
+      { name: "月光（月光）", duration: 127 } ] },
     ],
   "Hello, Happy World!": [
     { name: "えがおのオーケストラっ!（笑容管弦乐！）", type: "单曲", date: "2017-05-17", songs: [ { name: "えがおのオーケストラっ!（笑容管弦乐！）", duration: 225 } ] },
@@ -2891,30 +2891,30 @@ window.BAND_DISCOGRAPHY = {
     { name: "せかいのっびのびトラベル（世界的悠闲旅行）", type: "单曲", date: "2018-02-14", songs: [ { name: "せかいのっびのびトラベル（世界的悠闲旅行）", duration: 225 } ] },
     { name: "キラキラ☆Festa Day!", type: "单曲", date: "2018-06-20", songs: [ { name: "キラキラ☆Festa Day!", duration: 218 } ] },
     { name: "わちゃ・もちゃ・ぺったん行進曲（Wacha Mocha Pettan 进行曲）", type: "单曲", date: "2018-10-10", songs: [ { name: "わちゃ・もちゃ・ぺったん行進曲（Wacha Mocha Pettan 进行曲）", duration: 212 } ] },
-      { name: "放課後の波音", type: "单曲", date: "2026-10-22", songs: [
-      { name: "放課後の波音", duration: 211 } ] },
-    { name: "遠いの向日葵", type: "单曲", date: "2029-03-19", songs: [
-      { name: "遠いの向日葵", duration: 354 } ] },
-    { name: "想いの夕焼け", type: "单曲", date: "2031-02-09", songs: [
-      { name: "想いの夕焼け", duration: 213 } ] },
-    { name: "眩しい", type: "单曲", date: "2033-02-10", songs: [
-      { name: "眩しい", duration: 245 } ] },
-    { name: "朝焼け", type: "单曲", date: "2035-07-25", songs: [
-      { name: "朝焼け", duration: 241 } ] },
-    { name: "潮騒", type: "单曲", date: "2037-03-28", songs: [
-      { name: "潮騒", duration: 195 } ] },
-    { name: "帰り道の桜", type: "单曲", date: "2039-08-26", songs: [
-      { name: "帰り道の桜", duration: 208 } ] },
-    { name: "海の屋上", type: "单曲", date: "2041-07-02", songs: [
-      { name: "海の屋上", duration: 241 } ] },
-    { name: "青いの夢", type: "单曲", date: "2043-06-15", songs: [
-      { name: "青いの夢", duration: 237 } ] },
-    { name: "記憶", type: "单曲", date: "2045-11-24", songs: [
-      { name: "記憶", duration: 300 } ] },
-    { name: "想いの波音", type: "单曲", date: "2048-01-24", songs: [
-      { name: "想いの波音", duration: 233 } ] },
-    { name: "青い", type: "单曲", date: "2049-12-25", songs: [
-      { name: "青い", duration: 240 } ] },
+      { name: "放課後の波音（放学后之潮声）", type: "单曲", date: "2026-10-22", songs: [
+      { name: "放課後の波音（放学后之潮声）", duration: 211 } ] },
+    { name: "遠いの向日葵（遥远向日葵）", type: "单曲", date: "2029-03-19", songs: [
+      { name: "遠いの向日葵（遥远向日葵）", duration: 354 } ] },
+    { name: "想いの夕焼け（思念之晚霞）", type: "单曲", date: "2031-02-09", songs: [
+      { name: "想いの夕焼け（思念之晚霞）", duration: 213 } ] },
+    { name: "眩しい（耀眼）", type: "单曲", date: "2033-02-10", songs: [
+      { name: "眩しい（耀眼）", duration: 245 } ] },
+    { name: "朝焼け（朝霞）", type: "单曲", date: "2035-07-25", songs: [
+      { name: "朝焼け（朝霞）", duration: 241 } ] },
+    { name: "潮騒（潮鸣）", type: "单曲", date: "2037-03-28", songs: [
+      { name: "潮騒（潮鸣）", duration: 195 } ] },
+    { name: "帰り道の桜（归途之樱花）", type: "单曲", date: "2039-08-26", songs: [
+      { name: "帰り道の桜（归途之樱花）", duration: 208 } ] },
+    { name: "海の屋上（海之天台）", type: "单曲", date: "2041-07-02", songs: [
+      { name: "海の屋上（海之天台）", duration: 241 } ] },
+    { name: "青いの夢（湛蓝梦）", type: "单曲", date: "2043-06-15", songs: [
+      { name: "青いの夢（湛蓝梦）", duration: 237 } ] },
+    { name: "記憶（记忆）", type: "单曲", date: "2045-11-24", songs: [
+      { name: "記憶（记忆）", duration: 300 } ] },
+    { name: "想いの波音（思念之潮声）", type: "单曲", date: "2048-01-24", songs: [
+      { name: "想いの波音（思念之潮声）", duration: 233 } ] },
+    { name: "青い（湛蓝）", type: "单曲", date: "2049-12-25", songs: [
+      { name: "青い（湛蓝）", duration: 240 } ] },
     ],
   "Morfonica": [
     { name: "Daylight -デイライト-（Daylight）", type: "单曲", date: "2020-05-27", songs: [ { name: "Daylight -デイライト-（Daylight）", duration: 240 } ] },
@@ -2923,30 +2923,30 @@ window.BAND_DISCOGRAPHY = {
     { name: "はれるや（晴れるや）", type: "单曲", date: "2021-04-28", songs: [ { name: "はれるや（晴れるや）", duration: 228 } ] },
     { name: "The Circle Of...", type: "单曲", date: "2021-08-25", songs: [ { name: "The Circle Of...", duration: 242 } ] },
     { name: "Ever Sky Blue", type: "单曲", date: "2022-01-26", songs: [ { name: "Ever Sky Blue", duration: 238 } ] },
-      { name: "優しいの風", type: "单曲", date: "2027-01-04", songs: [
-      { name: "優しいの風", duration: 379 } ] },
-    { name: "約束の陽だまり", type: "单曲", date: "2029-04-04", songs: [
-      { name: "約束の陽だまり", duration: 229 } ] },
-    { name: "秋風の桜", type: "单曲", date: "2031-02-11", songs: [
-      { name: "秋風の桜", duration: 236 } ] },
-    { name: "屋上", type: "单曲", date: "2033-04-28", songs: [
-      { name: "屋上", duration: 249 } ] },
-    { name: "波音の星空", type: "单曲", date: "2035-03-05", songs: [
-      { name: "波音の星空", duration: 237 } ] },
-    { name: "真夏", type: "单曲", date: "2037-05-19", songs: [
-      { name: "真夏", duration: 237 } ] },
-    { name: "春風", type: "单曲", date: "2039-05-28", songs: [
-      { name: "春風", duration: 255 } ] },
-    { name: "優しいの心", type: "单曲", date: "2041-06-08", songs: [
-      { name: "優しいの心", duration: 229 } ] },
-    { name: "遠いの朝", type: "单曲", date: "2043-09-20", songs: [
-      { name: "遠いの朝", duration: 246 } ] },
-    { name: "海辺の風鈴", type: "单曲", date: "2045-07-31", songs: [
-      { name: "海辺の風鈴", duration: 239 } ] },
-    { name: "雲の朝焼け", type: "单曲", date: "2047-09-11", songs: [
-      { name: "雲の朝焼け", duration: 286 } ] },
-    { name: "白いの陽だまり", type: "单曲", date: "2050-01-12", songs: [
-      { name: "白いの陽だまり", duration: 214 } ] },
+      { name: "優しいの風（温柔风）", type: "单曲", date: "2027-01-04", songs: [
+      { name: "優しいの風（温柔风）", duration: 379 } ] },
+    { name: "約束の陽だまり（约定之暖阳）", type: "单曲", date: "2029-04-04", songs: [
+      { name: "約束の陽だまり（约定之暖阳）", duration: 229 } ] },
+    { name: "秋風の桜（秋风之樱花）", type: "单曲", date: "2031-02-11", songs: [
+      { name: "秋風の桜（秋风之樱花）", duration: 236 } ] },
+    { name: "屋上（天台）", type: "单曲", date: "2033-04-28", songs: [
+      { name: "屋上（天台）", duration: 249 } ] },
+    { name: "波音の星空（潮声之星空）", type: "单曲", date: "2035-03-05", songs: [
+      { name: "波音の星空（潮声之星空）", duration: 237 } ] },
+    { name: "真夏（盛夏）", type: "单曲", date: "2037-05-19", songs: [
+      { name: "真夏（盛夏）", duration: 237 } ] },
+    { name: "春風（春风）", type: "单曲", date: "2039-05-28", songs: [
+      { name: "春風（春风）", duration: 255 } ] },
+    { name: "優しいの心（温柔心）", type: "单曲", date: "2041-06-08", songs: [
+      { name: "優しいの心（温柔心）", duration: 229 } ] },
+    { name: "遠いの朝（遥远晨）", type: "单曲", date: "2043-09-20", songs: [
+      { name: "遠いの朝（遥远晨）", duration: 246 } ] },
+    { name: "海辺の風鈴（海边之风铃）", type: "单曲", date: "2045-07-31", songs: [
+      { name: "海辺の風鈴（海边之风铃）", duration: 239 } ] },
+    { name: "雲の朝焼け（云之朝霞）", type: "单曲", date: "2047-09-11", songs: [
+      { name: "雲の朝焼け（云之朝霞）", duration: 286 } ] },
+    { name: "白いの陽だまり（纯白的暖阳）", type: "单曲", date: "2050-01-12", songs: [
+      { name: "白いの陽だまり（纯白的暖阳）", duration: 214 } ] },
     ],
   "RAISE A SUILEN": [
     { name: "ERA", type: "专辑", date: "2020-03-18", songs: [
@@ -2960,39 +2960,39 @@ window.BAND_DISCOGRAPHY = {
     { name: "HELL! or HELL?", type: "单曲", date: "2019-09-18", songs: [ { name: "HELL! or HELL?", duration: 245 } ] },
     { name: "R.I.O.T", type: "单曲", date: "2020-01-22", songs: [ { name: "R.I.O.T", duration: 232 } ] },
     { name: "Sacred world", type: "单曲", date: "2020-10-21", songs: [ { name: "Sacred world", duration: 236 } ] },
-      { name: "Canvas", type: "专辑", date: "2027-01-30", songs: [
-      { name: "Canvas", duration: 250 }, { name: "Harbor Velvet", duration: 145 }, { name: "Neon", duration: 212 },
-      { name: "Hollow Iron", duration: 252 }, { name: "Broken", duration: 256 }, { name: "Silver Orbit", duration: 324 },
-      { name: "Daylight", duration: 396 }, { name: "Golden", duration: 185 } ] },
-    { name: "Ember", type: "专辑", date: "2029-01-04", songs: [
-      { name: "Ember", duration: 242 }, { name: "Undertow", duration: 229 }, { name: "Trail Drift", duration: 151 },
-      { name: "Meridian", duration: 225 }, { name: "Sundown", duration: 225 }, { name: "Tide", duration: 190 },
-      { name: "Highway", duration: 222 }, { name: "Rain", duration: 276 }, { name: "Mirrors", duration: 227 } ] },
-    { name: "Orbit", type: "单曲", date: "2031-01-27", songs: [
-      { name: "Orbit", duration: 246 } ] },
-    { name: "Concrete Vapor", type: "专辑", date: "2033-01-24", songs: [
-      { name: "Concrete Vapor", duration: 231 }, { name: "Vapor Lantern", duration: 188 }, { name: "Whisper", duration: 243 },
-      { name: "Bloom", duration: 190 }, { name: "Bloom Wires", duration: 223 }, { name: "Trail", duration: 240 },
-      { name: "Silence", duration: 253 }, { name: "Carousel Signal", duration: 226 }, { name: "Satellite", duration: 276 },
-      { name: "Nightfall", duration: 245 } ] },
-    { name: "Daybreak Motel", type: "单曲", date: "2035-06-26", songs: [
-      { name: "Daybreak Motel", duration: 255 } ] },
-    { name: "Motel", type: "单曲", date: "2037-09-14", songs: [
-      { name: "Motel", duration: 220 } ] },
-    { name: "Gravel", type: "单曲", date: "2039-10-05", songs: [
-      { name: "Gravel", duration: 192 } ] },
-    { name: "Spark", type: "单曲", date: "2041-05-13", songs: [
-      { name: "Spark", duration: 241 } ] },
-    { name: "Quiet", type: "单曲", date: "2043-09-18", songs: [
-      { name: "Quiet", duration: 219 } ] },
-    { name: "Shallow", type: "单曲", date: "2045-11-04", songs: [
-      { name: "Shallow", duration: 213 } ] },
-    { name: "Marrow", type: "单曲", date: "2048-01-12", songs: [
-      { name: "Marrow", duration: 247 } ] },
-    { name: "Meridian Faded", type: "专辑", date: "2050-01-19", songs: [
-      { name: "Meridian Faded", duration: 239 }, { name: "Ashes", duration: 177 }, { name: "Rust Ashes", duration: 234 },
-      { name: "Paperplane", duration: 279 }, { name: "Signal", duration: 337 }, { name: "Canvas Gravel", duration: 147 },
-      { name: "Glimmer", duration: 439 }, { name: "Glimmer Faded", duration: 235 } ] },
+      { name: "Canvas（画布）", type: "专辑", date: "2027-01-30", songs: [
+      { name: "Canvas（画布）", duration: 250 }, { name: "Harbor Velvet（港湾的天鹅绒）", duration: 145 }, { name: "Neon（霓虹）", duration: 212 },
+      { name: "Hollow Iron（空洞的铁）", duration: 252 }, { name: "Broken（破碎）", duration: 256 }, { name: "Silver Orbit（银色的轨道）", duration: 324 },
+      { name: "Daylight（日光）", duration: 396 }, { name: "Golden（金色）", duration: 185 } ] },
+    { name: "Ember（余烬）", type: "专辑", date: "2029-01-04", songs: [
+      { name: "Ember（余烬）", duration: 242 }, { name: "Undertow（暗流）", duration: 229 }, { name: "Trail Drift（足迹的漂流）", duration: 151 },
+      { name: "Meridian（子午线）", duration: 225 }, { name: "Sundown（日落）", duration: 225 }, { name: "Tide（潮汐）", duration: 190 },
+      { name: "Highway（公路）", duration: 222 }, { name: "Rain（雨）", duration: 276 }, { name: "Mirrors（镜子）", duration: 227 } ] },
+    { name: "Orbit（轨道）", type: "单曲", date: "2031-01-27", songs: [
+      { name: "Orbit（轨道）", duration: 246 } ] },
+    { name: "Concrete Vapor（水泥的雾霭）", type: "专辑", date: "2033-01-24", songs: [
+      { name: "Concrete Vapor（水泥的雾霭）", duration: 231 }, { name: "Vapor Lantern（雾霭的灯笼）", duration: 188 }, { name: "Whisper（低语）", duration: 243 },
+      { name: "Bloom（绽放）", duration: 190 }, { name: "Bloom Wires（绽放的电线）", duration: 223 }, { name: "Trail（足迹）", duration: 240 },
+      { name: "Silence（沉寂）", duration: 253 }, { name: "Carousel Signal（旋转木马的信号）", duration: 226 }, { name: "Satellite（卫星）", duration: 276 },
+      { name: "Nightfall（夜幕）", duration: 245 } ] },
+    { name: "Daybreak Motel（黎明的汽车旅馆）", type: "单曲", date: "2035-06-26", songs: [
+      { name: "Daybreak Motel（黎明的汽车旅馆）", duration: 255 } ] },
+    { name: "Motel（汽车旅馆）", type: "单曲", date: "2037-09-14", songs: [
+      { name: "Motel（汽车旅馆）", duration: 220 } ] },
+    { name: "Gravel（砾石）", type: "单曲", date: "2039-10-05", songs: [
+      { name: "Gravel（砾石）", duration: 192 } ] },
+    { name: "Spark（火花）", type: "单曲", date: "2041-05-13", songs: [
+      { name: "Spark（火花）", duration: 241 } ] },
+    { name: "Quiet（寂静）", type: "单曲", date: "2043-09-18", songs: [
+      { name: "Quiet（寂静）", duration: 219 } ] },
+    { name: "Shallow（浅滩）", type: "单曲", date: "2045-11-04", songs: [
+      { name: "Shallow（浅滩）", duration: 213 } ] },
+    { name: "Marrow（骨髓）", type: "单曲", date: "2048-01-12", songs: [
+      { name: "Marrow（骨髓）", duration: 247 } ] },
+    { name: "Meridian Faded（子午线的褪色）", type: "专辑", date: "2050-01-19", songs: [
+      { name: "Meridian Faded（子午线的褪色）", duration: 239 }, { name: "Ashes（灰烬）", duration: 177 }, { name: "Rust Ashes（锈迹的灰烬）", duration: 234 },
+      { name: "Paperplane（纸飞机）", duration: 279 }, { name: "Signal（信号）", duration: 337 }, { name: "Canvas Gravel（画布的砾石）", duration: 147 },
+      { name: "Glimmer（微光）", duration: 439 }, { name: "Glimmer Faded（微光的褪色）", duration: 235 } ] },
     ],
   "Ave Mujica": [
     { name: "KiLLKiSS", type: "专辑", date: "2025-01-15", songs: [
@@ -3008,33 +3008,33 @@ window.BAND_DISCOGRAPHY = {
     { name: "Angles", type: "单曲", date: "2024-01-24", songs: [ { name: "Angles", duration: 235 } ] },
     { name: "Ave Mujica", type: "单曲", date: "2024-04-24", songs: [ { name: "Ave Mujica", duration: 240 } ] },
     { name: "堕天（堕天）", type: "单曲", date: "2024-08-21", songs: [ { name: "堕天（堕天）", duration: 250 } ] },
-      { name: "風鈴", type: "单曲", date: "2027-03-31", songs: [
-      { name: "風鈴", duration: 263 } ] },
-    { name: "冬晴れの海", type: "单曲", date: "2028-12-01", songs: [
-      { name: "冬晴れの海", duration: 245 } ] },
-    { name: "遠い", type: "单曲", date: "2030-12-16", songs: [
-      { name: "遠い", duration: 223 } ] },
-    { name: "朝の春風", type: "单曲", date: "2033-06-28", songs: [
-      { name: "朝の春風", duration: 247 } ] },
-    { name: "透明の真夏", type: "单曲", date: "2035-05-06", songs: [
-      { name: "透明の真夏", duration: 261 } ] },
-    { name: "白い", type: "单曲", date: "2037-04-21", songs: [
-      { name: "白い", duration: 238 } ] },
-    { name: "青いの眩しい", type: "单曲", date: "2039-09-30", songs: [
-      { name: "青いの眩しい", duration: 240 } ] },
-    { name: "真夏の波音", type: "单曲", date: "2041-09-26", songs: [
-      { name: "真夏の波音", duration: 261 } ] },
-    { name: "記憶の星屑", type: "单曲", date: "2043-08-02", songs: [
-      { name: "記憶の星屑", duration: 245 } ] },
-    { name: "静かの星屑", type: "单曲", date: "2046-01-09", songs: [
-      { name: "静かの星屑", duration: 243 } ] },
-    { name: "朝焼け", type: "单曲", date: "2048-01-28", songs: [
-      { name: "朝焼け", duration: 232 } ] },
-    { name: "時の陽だまり", type: "专辑", date: "2049-10-14", songs: [
-      { name: "時の陽だまり", duration: 205 }, { name: "月の向日葵", duration: 280 }, { name: "優しいの向日葵", duration: 247 },
-      { name: "向日葵の夜", duration: 222 }, { name: "夕焼け", duration: 260 }, { name: "青いの夢", duration: 254 },
-      { name: "潮騒", duration: 271 }, { name: "青い", duration: 232 }, { name: "自転車", duration: 221 },
-      { name: "光の春風", duration: 264 }, { name: "記憶", duration: 151 } ] },
+      { name: "風鈴（风铃）", type: "单曲", date: "2027-03-31", songs: [
+      { name: "風鈴（风铃）", duration: 263 } ] },
+    { name: "冬晴れの海（冬日晴空之海）", type: "单曲", date: "2028-12-01", songs: [
+      { name: "冬晴れの海（冬日晴空之海）", duration: 245 } ] },
+    { name: "遠い（遥远）", type: "单曲", date: "2030-12-16", songs: [
+      { name: "遠い（遥远）", duration: 223 } ] },
+    { name: "朝の春風（晨之春风）", type: "单曲", date: "2033-06-28", songs: [
+      { name: "朝の春風（晨之春风）", duration: 247 } ] },
+    { name: "透明の真夏（透明盛夏）", type: "单曲", date: "2035-05-06", songs: [
+      { name: "透明の真夏（透明盛夏）", duration: 261 } ] },
+    { name: "白い（纯白的）", type: "单曲", date: "2037-04-21", songs: [
+      { name: "白い（纯白的）", duration: 238 } ] },
+    { name: "青いの眩しい（湛蓝耀眼）", type: "单曲", date: "2039-09-30", songs: [
+      { name: "青いの眩しい（湛蓝耀眼）", duration: 240 } ] },
+    { name: "真夏の波音（盛夏之潮声）", type: "单曲", date: "2041-09-26", songs: [
+      { name: "真夏の波音（盛夏之潮声）", duration: 261 } ] },
+    { name: "記憶の星屑（记忆之星屑）", type: "单曲", date: "2043-08-02", songs: [
+      { name: "記憶の星屑（记忆之星屑）", duration: 245 } ] },
+    { name: "静かの星屑（静谧星屑）", type: "单曲", date: "2046-01-09", songs: [
+      { name: "静かの星屑（静谧星屑）", duration: 243 } ] },
+    { name: "朝焼け（朝霞）", type: "单曲", date: "2048-01-28", songs: [
+      { name: "朝焼け（朝霞）", duration: 232 } ] },
+    { name: "時の陽だまり（时光之暖阳）", type: "专辑", date: "2049-10-14", songs: [
+      { name: "時の陽だまり（时光之暖阳）", duration: 205 }, { name: "月の向日葵（月之向日葵）", duration: 280 }, { name: "優しいの向日葵（温柔向日葵）", duration: 247 },
+      { name: "向日葵の夜（向日葵之夜）", duration: 222 }, { name: "夕焼け（晚霞）", duration: 260 }, { name: "青いの夢（湛蓝梦）", duration: 254 },
+      { name: "潮騒（潮鸣）", duration: 271 }, { name: "青い（湛蓝）", duration: 232 }, { name: "自転車（单车）", duration: 221 },
+      { name: "光の春風（光之春风）", duration: 264 }, { name: "記憶（记忆）", duration: 151 } ] },
     ],
   "回春丹": [
     { name: "耳鬼出风", type: "专辑", date: "2021-10-22", songs: [

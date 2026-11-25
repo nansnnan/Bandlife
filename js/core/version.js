@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.79",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "为 2026—2050 年的 917 首日文、英文曲目补上中文括注，采用更文艺的译法（如「月の涙（月之泪）」「Nightfall Silence（夜幕的沉寂）」）。",
+      "日语「の」结构的语序按中文习惯处理，形容词后置时译为「遥远的微笑」而非「微笑之遥远」。",
+    ],
+  },
+  {
     version: "1.2.78",
     date: "2026-11-26",
     size: "小更新",
