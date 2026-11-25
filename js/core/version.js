@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.83",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "竞争对手详情页的专辑与曲目评分改为与「评分网站」完全相同的口径（多平台加权均分），不再使用内部的 quality 除以 10。",
+      "修复快进时间后竞争对手新作品积压不发的问题，改为一次性补发全部已到期作品，确保 2026 年后的作品正常显示。",
+    ],
+  },
+  {
     version: "1.2.82",
     date: "2026-11-26",
     size: "小更新",

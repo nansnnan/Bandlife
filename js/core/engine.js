@@ -219,12 +219,13 @@ function tickWeekly() {
       addEvent(`${r.name}（${r.style}）正式成立并进入乐坛。`);
     }
     if (!r.active) continue;
-    if (r.catalog && r.releaseIndex < r.catalog.length) {
+    // 发布所有已到期的作品（快进时可能积压多张，需一次补发完）
+    let guard = 0;
+    while (r.catalog && r.releaseIndex < r.catalog.length && guard++ < 200) {
       const track = r.catalog[r.releaseIndex];
-      if (dateStrToDay(track.date) <= Game.dayIndex) {
-        rivalRelease(r);
-        r.lastReleaseDay = Game.dayIndex;
-      }
+      if (dateStrToDay(track.date) > Game.dayIndex) break;
+      rivalRelease(r);
+      r.lastReleaseDay = Game.dayIndex;
     }
   }
   applyWeeklyNewsEffects();

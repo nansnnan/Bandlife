@@ -734,7 +734,11 @@ function renderRivalDetail(name) {
   if (!r) { renderRivals(); return; }
   const formed = rivalFormedDate(r);
   const rels = (r.releases || []).slice().sort((a, b) => (b.dayIndex || 0) - (a.dayIndex || 0));
-  const score = (x) => (x.avgScore != null ? x.avgScore.toFixed(1) : (x.quality != null ? (x.quality / 10).toFixed(1) : "-"));
+  // 与「评分网站」一致：走同一套多平台评分，取其加权均分
+  const score = (x) => {
+    if (x.avgScore == null) { try { generateRatings(x); } catch (e) { /* 忽略 */ } }
+    return x.avgScore != null ? x.avgScore.toFixed(1) : "-";
+  };
 
   // 按专辑名分组：同名 album 的条目属于同一张专辑
   const albumMap = new Map();
