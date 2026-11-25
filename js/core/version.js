@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.82",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "为 2026 年之前的 325 个英文、日文曲名补齐中文括注（如 Take Care（保重）、PIGS IN THE RIVER（河中猪群））。",
+      "至此全部 3387 首日文与英文曲目均带中文括注。",
+    ],
+  },
+  {
     version: "1.2.81",
     date: "2026-11-26",
     size: "小更新",
