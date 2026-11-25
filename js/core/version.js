@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.77",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "为全部 60 支乐队补充 2026—2050 年的新作品，共新增 564 张作品、3504 首曲目，确保游戏后期持续有新作问世。",
+      "新作品依据各队原有风格、命名习惯、曲目时长与发行周期生成，评分沿用运行时随机机制。",
+    ],
+  },
+  {
     version: "1.2.76",
     date: "2026-11-25",
     size: "小更新",

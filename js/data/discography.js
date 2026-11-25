@@ -24,7 +24,36 @@ window.BAND_DISCOGRAPHY = {
        { name: "沉浮", duration: 357 }, { name: "大象不抱怨", duration: 307 }, { name: "麋鹿的眼泪", duration: 281 },
        { name: "梅花赐", duration: 245 }, { name: "睡莲", duration: 495 }, { name: "响尾蛇", duration: 125 } ] },
     { name: "沉浮", type: "EP", date: "2010-03-28", songs: [ { name: "沉浮", duration: 300 } ] },
-  ],
+      { name: "遥远的选择", type: "专辑", date: "2028-06-10", songs: [
+      { name: "遥远的选择", duration: 365 }, { name: "铁轨 II", duration: 373 }, { name: "久违的荒原", duration: 335 },
+      { name: "深渊 II", duration: 366 }, { name: "裂痕", duration: 324 }, { name: "荒原", duration: 367 },
+      { name: "大风歌 II", duration: 354 }, { name: "燃烧", duration: 324 } ] },
+    { name: "新的燃烧", type: "专辑", date: "2031-12-02", songs: [
+      { name: "新的燃烧", duration: 334 }, { name: "暗夜 II", duration: 334 }, { name: "紫叶 II", duration: 325 },
+      { name: "漫长的雷霆", duration: 356 }, { name: "灰烬 II", duration: 365 }, { name: "暗夜", duration: 341 },
+      { name: "斑马线 II", duration: 366 }, { name: "沉默的紫叶", duration: 364 }, { name: "纪念碑", duration: 388 },
+      { name: "燃烧 II", duration: 362 }, { name: "久违的异乡客岚池", duration: 333 } ] },
+    { name: "久违的暗夜", type: "专辑", date: "2035-12-30", songs: [
+      { name: "久违的暗夜", duration: 363 }, { name: "久违的裂痕", duration: 373 }, { name: "久违的紫叶", duration: 321 },
+      { name: "裂痕 II", duration: 344 }, { name: "响尾蛇 II", duration: 358 }, { name: "最后的燃烧", duration: 349 },
+      { name: "沉默的深渊", duration: 353 }, { name: "铁轨", duration: 358 }, { name: "久违的缘生缘灭", duration: 369 },
+      { name: "钢铁", duration: 351 }, { name: "久违的燃烧", duration: 361 } ] },
+    { name: "苍穹 II", type: "专辑", date: "2040-04-08", songs: [
+      { name: "苍穹 II", duration: 352 }, { name: "时间 II", duration: 329 }, { name: "缘生缘灭 II", duration: 360 },
+      { name: "睡莲 II", duration: 323 }, { name: "绝望致谎言 II", duration: 334 }, { name: "新的暗夜", duration: 323 },
+      { name: "演义 II", duration: 361 }, { name: "深渊", duration: 358 }, { name: "另一个灰烬", duration: 328 },
+      { name: "雷霆 II", duration: 348 }, { name: "遥远的嚎叫列车", duration: 362 } ] },
+    { name: "漫长的大风歌", type: "专辑", date: "2045-04-18", songs: [
+      { name: "漫长的大风歌", duration: 322 }, { name: "漫长的长城", duration: 327 }, { name: "遥远的缘生缘灭", duration: 372 },
+      { name: "天堂 II", duration: 345 }, { name: "沉默的灰烬", duration: 331 }, { name: "世纪末之梦 II", duration: 377 },
+      { name: "久违的长城", duration: 351 }, { name: "封禅祭 II", duration: 381 }, { name: "雷霆", duration: 367 },
+      { name: "漫长的铁轨", duration: 337 }, { name: "最后的太阳", duration: 372 } ] },
+    { name: "漫长的燃烧", type: "专辑", date: "2048-07-14", songs: [
+      { name: "漫长的燃烧", duration: 353 }, { name: "苍穹", duration: 363 }, { name: "未完成的灰烬", duration: 360 },
+      { name: "另一个时间", duration: 350 }, { name: "沉默的暗夜", duration: 365 }, { name: "太阳 II", duration: 337 },
+      { name: "另一个大风歌", duration: 377 }, { name: "久违的雷霆", duration: 328 }, { name: "漫长的不要逃避", duration: 325 },
+      { name: "漫长的沉浮", duration: 370 }, { name: "新的九拍", duration: 382 } ] },
+    ],
   "黑豹乐队": [
     { name: "黑豹", type: "专辑", date: "1992-12-22", rating: 9.0, songs: [
       { name: "无地自容", duration: 338 }, { name: "Take Care", duration: 362 }, { name: "体会", duration: 285 },
@@ -59,7 +88,35 @@ window.BAND_DISCOGRAPHY = {
       { name: "无畏", duration: 197 }, { name: "较量", duration: 196 }, { name: "战", duration: 179 },
       { name: "干杯", duration: 222 }, { name: "放不开你", duration: 230 }, { name: "兄弟", duration: 210 } ] },
     { name: "尽余欢", type: "EP", date: "2015-12-14", songs: [ { name: "送别", duration: 280 }, { name: "兄弟", duration: 270 } ] },
-  ],
+      { name: "最后的回声", type: "专辑", date: "2027-07-21", songs: [
+      { name: "最后的回声", duration: 263 }, { name: "脸谱 II", duration: 261 }, { name: "出逃", duration: 263 },
+      { name: "天线", duration: 294 }, { name: "霓虹 II", duration: 290 }, { name: "遥远的虎口", duration: 272 },
+      { name: "漫长的远方", duration: 250 }, { name: "出逃 II", duration: 248 }, { name: "久违的夏天", duration: 282 },
+      { name: "深夜 II", duration: 275 }, { name: "送别 II", duration: 266 } ] },
+    { name: "旧梦", type: "专辑", date: "2031-04-04", songs: [
+      { name: "旧梦", duration: 277 }, { name: "远方 II", duration: 285 }, { name: "漫长的别来纠缠我", duration: 276 },
+      { name: "无地自容 II", duration: 294 }, { name: "公路", duration: 296 }, { name: "夏天", duration: 281 },
+      { name: "久违的断电", duration: 248 }, { name: "靠近我 II", duration: 303 } ] },
+    { name: "洒脱 II", type: "EP", date: "2034-10-11", songs: [
+      { name: "洒脱 II", duration: 256 }, { name: "新的别来纠缠我", duration: 313 }, { name: "沉默的干杯", duration: 265 },
+      { name: "深夜", duration: 306 } ] },
+    { name: "遥远的回声", type: "专辑", date: "2038-06-08", songs: [
+      { name: "遥远的回声", duration: 284 }, { name: "光芒之神 II", duration: 259 }, { name: "新的断电", duration: 289 },
+      { name: "街角 II", duration: 308 }, { name: "另一个霓虹", duration: 295 }, { name: "逃离 II", duration: 311 },
+      { name: "光年 II", duration: 285 }, { name: "光年", duration: 269 }, { name: "久违的霓虹", duration: 251 },
+      { name: "谁最爱我 II", duration: 281 } ] },
+    { name: "沉默的远方", type: "专辑", date: "2041-08-16", songs: [
+      { name: "沉默的远方", duration: 271 }, { name: "新的错觉", duration: 271 }, { name: "遥远的孤焰烈火", duration: 249 },
+      { name: "夏天 II", duration: 293 }, { name: "已足够 II", duration: 292 }, { name: "遥远的寻找", duration: 280 },
+      { name: "绿色劫难 II", duration: 253 }, { name: "最后的旧梦", duration: 250 }, { name: "另一个光年", duration: 309 },
+      { name: "断电", duration: 295 }, { name: "一个人 II", duration: 289 } ] },
+    { name: "回声", type: "EP", date: "2045-07-04", songs: [
+      { name: "回声", duration: 294 }, { name: "新的夏天", duration: 260 }, { name: "另一个夏天", duration: 270 } ] },
+    { name: "最后的你就是你", type: "专辑", date: "2049-09-14", songs: [
+      { name: "最后的你就是你", duration: 265 }, { name: "潮汐 II", duration: 282 }, { name: "遥远的送别", duration: 249 },
+      { name: "新的光芒之神", duration: 288 }, { name: "枷锁 II", duration: 297 }, { name: "霓虹", duration: 271 },
+      { name: "继续地飞 II", duration: 272 }, { name: "沉默的呼唤", duration: 274 }, { name: "呼唤 II", duration: 246 } ] },
+    ],
   "零点乐队": [
     { name: "别误会", type: "专辑", date: "1995-12-01", rating: 7.8, songs: [
        { name: "站起来", duration: 266 }, { name: "承受", duration: 322 }, { name: "别误会", duration: 324 },
@@ -99,7 +156,51 @@ window.BAND_DISCOGRAPHY = {
        { name: "我还爱着你", duration: 265 }, { name: "欲望 付出", duration: 262 }, { name: "唱一首歌给所有的朋友", duration: 283 },
        { name: "永远一起走", duration: 187 }, { name: "救赎", duration: 312 }, { name: "想你2016", duration: 272 },
        { name: "风暴", duration: 203 }, { name: "一切会好的", duration: 284 }, { name: "Flying Free", duration: 158 } ] },
-  ],
+      { name: "彩虹", type: "专辑", date: "2027-05-02", songs: [
+      { name: "彩虹", duration: 305 }, { name: "晴天 II", duration: 281 }, { name: "遥远的战胜自己", duration: 264 },
+      { name: "新的战胜自己", duration: 274 }, { name: "未完成的风暴", duration: 286 }, { name: "盛夏", duration: 255 },
+      { name: "回到从前 II", duration: 299 }, { name: "晕了醒了 II", duration: 278 }, { name: "送亲歌 II", duration: 312 } ] },
+    { name: "遥远的晴天", type: "专辑", date: "2029-09-08", songs: [
+      { name: "遥远的晴天", duration: 292 }, { name: "平行线", duration: 260 }, { name: "欲望 付出 II", duration: 296 },
+      { name: "漫长的多么爱你", duration: 263 }, { name: "另一个让我们荡起双桨", duration: 290 }, { name: "放开我 II", duration: 264 },
+      { name: "倒计时", duration: 252 } ] },
+    { name: "拥抱", type: "专辑", date: "2032-01-01", songs: [
+      { name: "拥抱", duration: 304 }, { name: "别让我离开你 II", duration: 285 }, { name: "久违的过了今天会永远", duration: 269 },
+      { name: "漫长的永远一起走", duration: 249 }, { name: "沉默的玩够了没有", duration: 266 }, { name: "琥珀", duration: 288 },
+      { name: "平行线 II", duration: 264 }, { name: "新的站起来", duration: 251 } ] },
+    { name: "晴天", type: "专辑", date: "2034-09-22", songs: [
+      { name: "晴天", duration: 295 }, { name: "未完成的盛夏", duration: 287 }, { name: "星光 II", duration: 307 },
+      { name: "打虎上山 II", duration: 285 }, { name: "晚风 II", duration: 286 }, { name: "星光", duration: 256 },
+      { name: "未完成的爱不爱我", duration: 306 }, { name: "该让我如何爱你 II", duration: 270 }, { name: "未完成的别让我离开你", duration: 293 },
+      { name: "挥挥手 II", duration: 309 }, { name: "另一个一座桥梁", duration: 287 } ] },
+    { name: "另一个天上掉下林妹妹", type: "专辑", date: "2037-02-24", songs: [
+      { name: "另一个天上掉下林妹妹", duration: 246 }, { name: "沉默的零点快乐", duration: 252 }, { name: "久违的打虎上山", duration: 311 },
+      { name: "分手一周年 II", duration: 307 }, { name: "玩够了没有 II", duration: 296 }, { name: "未完成的说声谢谢", duration: 289 },
+      { name: "另一个拥抱", duration: 272 } ] },
+    { name: "往日 II", type: "专辑", date: "2039-05-18", songs: [
+      { name: "往日 II", duration: 283 }, { name: "遥远的平行线", duration: 294 }, { name: "最后的拥抱", duration: 305 },
+      { name: "彩虹 II", duration: 259 }, { name: "遥远的琥珀", duration: 251 }, { name: "心跳", duration: 293 },
+      { name: "漫长的别让我离开你", duration: 277 }, { name: "新的盛夏", duration: 302 }, { name: "新的晚风", duration: 268 },
+      { name: "晚风", duration: 300 } ] },
+    { name: "沉默的平行线", type: "专辑", date: "2042-05-04", songs: [
+      { name: "沉默的平行线", duration: 299 }, { name: "让我们荡起双桨 II", duration: 274 }, { name: "一座桥梁 II", duration: 249 },
+      { name: "我还爱着你 II", duration: 297 }, { name: "沉默的让我们荡起双桨", duration: 282 }, { name: "另一个别误会", duration: 256 },
+      { name: "未完成的拥抱", duration: 285 }, { name: "久违的星光", duration: 294 }, { name: "最后的平行线", duration: 254 },
+      { name: "沉默的风暴", duration: 263 } ] },
+    { name: "越来越 II", type: "专辑", date: "2044-09-06", songs: [
+      { name: "越来越 II", duration: 296 }, { name: "好好过吧 II", duration: 248 }, { name: "琥珀 II", duration: 304 },
+      { name: "新的牧歌", duration: 248 }, { name: "拥抱 II", duration: 259 }, { name: "永远不说再见 II", duration: 302 },
+      { name: "沉默的盛夏", duration: 294 }, { name: "好寂寞 II", duration: 248 } ] },
+    { name: "承受 II", type: "专辑", date: "2047-05-13", songs: [
+      { name: "承受 II", duration: 244 }, { name: "漫长的爱不爱我", duration: 280 }, { name: "心跳 II", duration: 267 },
+      { name: "遥远的晕了醒了", duration: 269 }, { name: "怎么过 II", duration: 255 }, { name: "久违的从零开始", duration: 251 },
+      { name: "漫长的每一夜 每一天", duration: 308 }, { name: "天上掉下林妹妹 II", duration: 284 }, { name: "新的平行线", duration: 248 },
+      { name: "爱不离 II", duration: 297 } ] },
+    { name: "新的冒险家", type: "专辑", date: "2049-11-22", songs: [
+      { name: "新的冒险家", duration: 276 }, { name: "遥远的天上掉下林妹妹", duration: 308 }, { name: "漫长的一座桥梁", duration: 277 },
+      { name: "最后的襟裳岬", duration: 284 }, { name: "别和他一样 II", duration: 245 }, { name: "未完成的没有什么不可以", duration: 276 },
+      { name: "襟裳岬 II", duration: 260 } ] },
+    ],
   "痛仰乐队": [
     { name: "这是个问题", type: "专辑", date: "2000-12-01", songs: [
       { name: "哪里有压迫哪里就有反抗", duration: 280 }, { name: "愤怒", duration: 270 }, { name: "像个婊子", duration: 260 },
@@ -131,7 +232,42 @@ window.BAND_DISCOGRAPHY = {
        { name: "Mirage", duration: 456 }, { name: "Ethereal", duration: 381 }, { name: "Wandering", duration: 289 },
        { name: "White Dew", duration: 243 }, { name: "Highland", duration: 450 }, { name: "Jambo", duration: 328 },
        { name: "Nightlife", duration: 426 }, { name: "Melody of the Rain", duration: 339 } ] },
-  ],
+      { name: "沉默的最后一班列车", type: "专辑", date: "2027-02-04", songs: [
+      { name: "沉默的最后一班列车", duration: 291 }, { name: "最后的角色", duration: 316 }, { name: "天线 II", duration: 258 },
+      { name: "漫长的如期", duration: 289 }, { name: "沉默的太阳照常升起", duration: 309 }, { name: "出逃", duration: 260 },
+      { name: "公路", duration: 310 }, { name: "为你唱首歌 II", duration: 277 } ] },
+    { name: "The Highland", type: "专辑", date: "2030-10-04", songs: [
+      { name: "The Highland", duration: 292 }, { name: "街角", duration: 285 }, { name: "最后的博卡拉", duration: 286 },
+      { name: "新的愿爱无忧", duration: 265 }, { name: "霓虹", duration: 264 }, { name: "另一个愿爱无忧", duration: 283 },
+      { name: "漫长的盛开", duration: 313 }, { name: "久违的思疆调", duration: 252 }, { name: "断电", duration: 310 } ] },
+    { name: "远方", type: "专辑", date: "2033-09-15", songs: [
+      { name: "远方", duration: 262 }, { name: "街角 II", duration: 262 }, { name: "盛开 II", duration: 307 },
+      { name: "新的为你唱首歌", duration: 309 }, { name: "漫长的思疆调", duration: 297 }, { name: "Mirage Echo", duration: 275 },
+      { name: "旧梦", duration: 284 }, { name: "久违的美丽新世界", duration: 253 }, { name: "安阳 II", duration: 249 },
+      { name: "Mirage II", duration: 277 }, { name: "扎西德勒 II", duration: 311 } ] },
+    { name: "遥远的天线", type: "专辑", date: "2036-07-24", songs: [
+      { name: "遥远的天线", duration: 277 }, { name: "沉默的再见杰克", duration: 314 }, { name: "未完成的远方", duration: 296 },
+      { name: "夏天 II", duration: 254 }, { name: "最后的旧梦", duration: 282 }, { name: "光年 II", duration: 294 },
+      { name: "回声", duration: 272 }, { name: "深夜", duration: 273 }, { name: "漫长的街角", duration: 264 },
+      { name: "最后的在路上", duration: 280 } ] },
+    { name: "霓虹 II", type: "专辑", date: "2039-12-08", songs: [
+      { name: "霓虹 II", duration: 287 }, { name: "远方 II", duration: 252 }, { name: "戴着镣铐起舞 II", duration: 293 },
+      { name: "断电 II", duration: 305 }, { name: "遥远的街角", duration: 259 }, { name: "光年", duration: 316 },
+      { name: "另一个回声", duration: 276 }, { name: "公路 II", duration: 275 } ] },
+    { name: "角色 II", type: "专辑", date: "2043-05-11", songs: [
+      { name: "角色 II", duration: 250 }, { name: "未完成的为你唱首歌", duration: 288 }, { name: "最后的哈利路亚", duration: 278 },
+      { name: "漫长的旧梦", duration: 316 }, { name: "The Jambo", duration: 270 }, { name: "异乡 II", duration: 307 },
+      { name: "遥远的异乡", duration: 258 }, { name: "新的夏天", duration: 273 }, { name: "The Downtown", duration: 275 } ] },
+    { name: "新的像个婊子", type: "专辑", date: "2046-08-08", songs: [
+      { name: "新的像个婊子", duration: 269 }, { name: "遥远的低处穿巡", duration: 308 }, { name: "未完成的在路上", duration: 250 },
+      { name: "另一个出逃", duration: 305 }, { name: "沉默的出逃", duration: 264 }, { name: "Rosemary II", duration: 284 },
+      { name: "The Mirage", duration: 301 }, { name: "Ethereal II", duration: 260 }, { name: "好梦 II", duration: 278 },
+      { name: "漫长的夏天", duration: 265 }, { name: "Jambo Rise", duration: 299 } ] },
+    { name: "另一个扎西德勒", type: "专辑", date: "2049-07-31", songs: [
+      { name: "另一个扎西德勒", duration: 257 }, { name: "最后一班列车 II", duration: 283 }, { name: "未完成的天线", duration: 290 },
+      { name: "久违的空城", duration: 271 }, { name: "出逃 II", duration: 267 }, { name: "新的野歌", duration: 252 },
+      { name: "自由吧电台 II", duration: 255 }, { name: "久违的远方", duration: 268 }, { name: "遥远的复制者", duration: 315 } ] },
+    ],
   "万能青年旅店": [
     { name: "万能青年旅店", type: "专辑", date: "2010-11-12", rating: 9.3, songs: [
       { name: "狗尿馆", duration: 116 }, { name: "不万能的喜剧", duration: 334 }, { name: "揪心的玩笑与漫长的白日梦", duration: 335 },
@@ -143,7 +279,30 @@ window.BAND_DISCOGRAPHY = {
        { name: "繞越", duration: 163 }, { name: "河北墨麒麟", duration: 688 }, { name: "郊眠寺", duration: 580 } ] },
     { name: "废人们 都在忙什么？", type: "EP", date: "2006-01-01", songs: [
       { name: "不再万能的喜剧", duration: 330 }, { name: "喜剧", duration: 300 }, { name: "秦皇岛", duration: 480 } ] },
-  ],
+      { name: "河北墨麒麟 II", type: "EP", date: "2027-11-11", songs: [
+      { name: "河北墨麒麟 II", duration: 316 }, { name: "遥远的断电", duration: 332 }, { name: "漫长的繞越", duration: 319 },
+      { name: "久违的光年", duration: 347 }, { name: "深夜", duration: 322 } ] },
+    { name: "未完成的冀西南林路行", type: "专辑", date: "2032-07-28", songs: [
+      { name: "未完成的冀西南林路行", duration: 346 }, { name: "街角 II", duration: 358 }, { name: "最后的霓虹", duration: 336 },
+      { name: "秦皇岛 II", duration: 311 }, { name: "漫长的天线", duration: 316 }, { name: "十万嬉皮 II", duration: 322 },
+      { name: "回声", duration: 351 }, { name: "未完成的天线", duration: 307 } ] },
+    { name: "霓虹", type: "专辑", date: "2036-06-28", songs: [
+      { name: "霓虹", duration: 323 }, { name: "天线", duration: 338 }, { name: "远方", duration: 329 },
+      { name: "沉默的公路", duration: 364 }, { name: "远方 II", duration: 319 }, { name: "断电 II", duration: 327 },
+      { name: "久违的回声", duration: 340 }, { name: "泥河 II", duration: 350 }, { name: "新的夏天", duration: 352 },
+      { name: "久违的旧梦", duration: 339 }, { name: "天线 II", duration: 336 } ] },
+    { name: "繞越 II", type: "专辑", date: "2040-06-13", songs: [
+      { name: "繞越 II", duration: 369 }, { name: "出逃", duration: 319 }, { name: "漫长的洋鸟消夏录", duration: 366 },
+      { name: "喜剧 II", duration: 305 }, { name: "新的秦皇岛", duration: 328 }, { name: "遥远的夏天", duration: 303 },
+      { name: "新的平等雲霧", duration: 371 }, { name: "遥远的郊眠寺", duration: 328 }, { name: "街角", duration: 362 },
+      { name: "断电", duration: 363 } ] },
+    { name: "久违的公路", type: "EP", date: "2044-11-25", songs: [
+      { name: "久违的公路", duration: 314 }, { name: "冀西南林路行 II", duration: 323 }, { name: "未完成的平等雲霧", duration: 349 },
+      { name: "未完成的洋鸟消夏录", duration: 339 }, { name: "出逃 II", duration: 321 }, { name: "最后的山雀", duration: 365 } ] },
+    { name: "遥远的大石碎胸口", type: "EP", date: "2049-01-16", songs: [
+      { name: "遥远的大石碎胸口", duration: 363 }, { name: "漫长的泥河", duration: 309 }, { name: "久违的平等雲霧", duration: 361 },
+      { name: "遥远的秦皇岛", duration: 319 } ] },
+    ],
   "二手玫瑰": [
     { name: "二手玫瑰", type: "专辑", date: "2003-01-01", rating: 8.5, songs: [
        { name: "伎俩", duration: 257 }, { name: "火车快开", duration: 347 }, { name: "允许部分艺术家先富起来", duration: 271 },
@@ -162,7 +321,27 @@ window.BAND_DISCOGRAPHY = {
        { name: "正人君子", duration: 284 }, { name: "你幸福吗", duration: 289 },
        { name: "小石头（致已故鼓手张越） (致已故鼓手张越)", duration: 271 }, { name: "小短歌 (同期录音)", duration: 144 } ] },
     { name: "如你所愿", type: "现场", date: "2019-04-11", songs: [ { name: "匠", duration: 220 } ] },
-  ],
+      { name: "天线", type: "单曲", date: "2028-07-25", songs: [
+      { name: "天线", duration: 322 } ] },
+    { name: "另一个白花", type: "专辑", date: "2032-09-22", songs: [
+      { name: "另一个白花", duration: 313 }, { name: "光年 II", duration: 324 }, { name: "黏人 II", duration: 272 },
+      { name: "沉默的跳大神", duration: 313 }, { name: "旧梦", duration: 271 }, { name: "街角", duration: 294 },
+      { name: "漫长的夏天", duration: 305 } ] },
+    { name: "沉默的霓虹", type: "单曲", date: "2035-12-25", songs: [
+      { name: "沉默的霓虹", duration: 269 } ] },
+    { name: "遥远的回声", type: "专辑", date: "2041-02-11", songs: [
+      { name: "遥远的回声", duration: 288 }, { name: "因为所以 II", duration: 258 }, { name: "夏天", duration: 294 },
+      { name: "未完成的出逃", duration: 286 }, { name: "仙儿 II", duration: 255 }, { name: "断电", duration: 306 },
+      { name: "久违的黏人", duration: 263 }, { name: "沉默的采花", duration: 276 }, { name: "伎俩 II", duration: 294 } ] },
+    { name: "沉默的小石头", type: "专辑", date: "2044-11-15", songs: [
+      { name: "沉默的小石头", duration: 310 }, { name: "久违的旧梦", duration: 283 }, { name: "遥远的天线", duration: 273 },
+      { name: "光年", duration: 308 }, { name: "断电 II", duration: 314 }, { name: "街角 II", duration: 274 },
+      { name: "公益歌曲 II", duration: 282 }, { name: "跳大神 II", duration: 289 }, { name: "深夜", duration: 311 } ] },
+    { name: "最后的光年", type: "专辑", date: "2049-02-26", songs: [
+      { name: "最后的光年", duration: 306 }, { name: "公路", duration: 286 }, { name: "霓虹 II", duration: 259 },
+      { name: "小短歌 II", duration: 279 }, { name: "漫长的街角", duration: 257 }, { name: "远方", duration: 310 },
+      { name: "久违的光年", duration: 312 }, { name: "出逃", duration: 255 }, { name: "沉默的出逃", duration: 266 } ] },
+    ],
   "新裤子": [
     { name: "新裤子", type: "专辑", date: "1998-01-01", rating: 8.1, songs: [
        { name: "I'm OK", duration: 139 }, { name: "我们的时代", duration: 162 }, { name: "嘿！你", duration: 136 },
@@ -204,7 +383,33 @@ window.BAND_DISCOGRAPHY = {
        { name: "迷人的你", duration: 214 }, { name: "散步到夏宫", duration: 214 }, { name: "你都忘了你有多美", duration: 186 },
        { name: "我好希望未来不来", duration: 222 }, { name: "夏日终曲", duration: 320 }, { name: "风向哪里去", duration: 329 },
        { name: "戏中人", duration: 255 }, { name: "最后的乐队", duration: 302 } ] },
-  ],
+      { name: "新的猴子", type: "专辑", date: "2028-05-15", songs: [
+      { name: "新的猴子", duration: 218 }, { name: "爱情催泪弹 II", duration: 226 }, { name: "出逃", duration: 234 },
+      { name: "分裂 II", duration: 231 }, { name: "沉默的快跑", duration: 248 }, { name: "噪点", duration: 246 },
+      { name: "久违的野火", duration: 232 }, { name: "断电", duration: 248 } ] },
+    { name: "未完成的反光", type: "专辑", date: "2032-11-01", songs: [
+      { name: "未完成的反光", duration: 243 }, { name: "街头 II", duration: 216 }, { name: "野火 II", duration: 221 },
+      { name: "我是一个服务员 II", duration: 249 }, { name: "碎片", duration: 208 }, { name: "新的噪点", duration: 205 },
+      { name: "久违的新裤子", duration: 205 }, { name: "沉默的我们可以在一起", duration: 239 }, { name: "快跑", duration: 208 },
+      { name: "计算机 II", duration: 248 } ] },
+    { name: "断线", type: "专辑", date: "2035-11-13", songs: [
+      { name: "断线", duration: 232 }, { name: "快跑 II", duration: 207 }, { name: "出逃 II", duration: 195 },
+      { name: "遥远的我爱你", duration: 244 }, { name: "断电 II", duration: 202 }, { name: "久违的碎片", duration: 188 },
+      { name: "漫长的猴子", duration: 186 }, { name: "The Go East", duration: 207 } ] },
+    { name: "沉默的野火", type: "专辑", date: "2041-03-09", songs: [
+      { name: "沉默的野火", duration: 185 }, { name: "少年 II", duration: 212 }, { name: "伤心招待所 II", duration: 224 },
+      { name: "久违的少年", duration: 252 }, { name: "大熊猫 II", duration: 220 }, { name: "断线 II", duration: 236 },
+      { name: "反光 II", duration: 199 }, { name: "碎片 II", duration: 207 }, { name: "我爱你 II", duration: 233 } ] },
+    { name: "噪点 II", type: "专辑", date: "2044-12-08", songs: [
+      { name: "噪点 II", duration: 223 }, { name: "另一个碎片", duration: 234 }, { name: "最后的风向哪里去", duration: 211 },
+      { name: "未完成的断电", duration: 183 }, { name: "少年", duration: 205 }, { name: "另一个需要爱", duration: 201 },
+      { name: "反光", duration: 204 }, { name: "最后的在我死去之前", duration: 243 }, { name: "风向哪里去 II", duration: 201 },
+      { name: "漫长的你要跳舞吗", duration: 219 }, { name: "最后的我是一个服务员", duration: 207 } ] },
+    { name: "沉默的不放开", type: "专辑", date: "2048-09-10", songs: [
+      { name: "沉默的不放开", duration: 193 }, { name: "久违的反光", duration: 249 }, { name: "我们可以在一起 II", duration: 233 },
+      { name: "最后的街头", duration: 185 }, { name: "街头", duration: 235 }, { name: "新裤子 II", duration: 242 },
+      { name: "你要跳舞吗 II", duration: 197 }, { name: "以眼杀人 II", duration: 238 }, { name: "久违的以眼杀人", duration: 248 } ] },
+    ],
   "五条人": [
     { name: "县城记", type: "专辑", date: "2009-07-11", rating: 8.4, songs: [
       { name: "十年水流东 十年水流西", duration: 285 }, { name: "道山靓仔", duration: 328 },
@@ -251,7 +456,50 @@ window.BAND_DISCOGRAPHY = {
       { name: "食醉狗", duration: 240 }, { name: "猪肉炒辣椒", duration: 230 }, { name: "塑料花", duration: 255 },
       { name: "另一条食醉狗", duration: 260 }, { name: "另一个地球仪", duration: 270 }, { name: "隔壁的诗人", duration: 290 },
       { name: "在码头", duration: 300 } ] },
-  ],
+      { name: "行囊 II", type: "专辑", date: "2027-06-11", songs: [
+      { name: "行囊 II", duration: 290 }, { name: "北风 II", duration: 261 }, { name: "未完成的柔河里", duration: 235 },
+      { name: "行囊", duration: 297 }, { name: "石阶 II", duration: 266 }, { name: "城市找猪 II", duration: 285 },
+      { name: "最后的收冬", duration: 243 } ] },
+    { name: "龙哥有真爱 II", type: "专辑", date: "2029-08-26", songs: [
+      { name: "龙哥有真爱 II", duration: 294 }, { name: "久违的大会", duration: 282 }, { name: "沉默的阿琳娜", duration: 258 },
+      { name: "遥远的远方", duration: 292 }, { name: "两顿饱 II", duration: 290 }, { name: "北风", duration: 235 },
+      { name: "另一个酒鬼猪哥伯", duration: 259 }, { name: "未完成的阿炳耀", duration: 243 }, { name: "新的麦田", duration: 254 },
+      { name: "另一个走鬼", duration: 291 }, { name: "遥远的陈先生", duration: 269 } ] },
+    { name: "漫长的行囊", type: "专辑", date: "2032-08-04", songs: [
+      { name: "漫长的行囊", duration: 239 }, { name: "黄昏", duration: 265 }, { name: "旧信 II", duration: 244 },
+      { name: "地球仪 II", duration: 284 }, { name: "另一个石阶", duration: 239 }, { name: "漫长的梦想化工厂", duration: 236 },
+      { name: "遥远的烂尾楼", duration: 293 }, { name: "黄昏 II", duration: 262 }, { name: "遥远的行囊", duration: 295 } ] },
+    { name: "新的行囊", type: "专辑", date: "2034-06-26", songs: [
+      { name: "新的行囊", duration: 240 }, { name: "远方", duration: 285 }, { name: "新的广东姑娘", duration: 236 },
+      { name: "久违的远方", duration: 253 }, { name: "匈奴王 II", duration: 263 }, { name: "最后的像将军那样喝酒", duration: 300 },
+      { name: "石阶", duration: 287 }, { name: "童年往事 II", duration: 294 }, { name: "河流", duration: 281 },
+      { name: "久违的含叭哩细", duration: 268 }, { name: "倒港纸 II", duration: 240 } ] },
+    { name: "漫长的远方", type: "专辑", date: "2037-01-02", songs: [
+      { name: "漫长的远方", duration: 241 }, { name: "我哈你 II", duration: 241 }, { name: "最后的河流", duration: 279 },
+      { name: "九条人 II", duration: 265 }, { name: "新的黄昏", duration: 288 }, { name: "越南 II", duration: 270 },
+      { name: "屋檐 II", duration: 293 } ] },
+    { name: "海风 II", type: "专辑", date: "2039-06-20", songs: [
+      { name: "海风 II", duration: 293 }, { name: "沉默的另一个地球仪", duration: 249 }, { name: "漫长的猪肉炒辣椒", duration: 282 },
+      { name: "沉默的有所追求", duration: 284 }, { name: "猪母上山咬老虎 II", duration: 289 }, { name: "旧信", duration: 246 },
+      { name: "麦田", duration: 280 }, { name: "另一个黄昏", duration: 276 }, { name: "久违的海风", duration: 295 } ] },
+    { name: "无嫫歌 II", type: "专辑", date: "2042-06-22", songs: [
+      { name: "无嫫歌 II", duration: 267 }, { name: "很多很多 II", duration: 283 }, { name: "另一个故人", duration: 234 },
+      { name: "另一个踏架脚车牵条猪", duration: 240 }, { name: "未完成的旧信", duration: 266 }, { name: "塑料花 II", duration: 278 },
+      { name: "屋檐", duration: 266 }, { name: "麦田 II", duration: 256 }, { name: "遥远的龙哥有真爱", duration: 245 } ] },
+    { name: "喜鹊 II", type: "专辑", date: "2044-05-31", songs: [
+      { name: "喜鹊 II", duration: 241 }, { name: "远方 II", duration: 285 }, { name: "道山靓仔 II", duration: 265 },
+      { name: "故人", duration: 269 }, { name: "上县城 II", duration: 290 }, { name: "沉默的广东姑娘", duration: 282 },
+      { name: "久违的旧信", duration: 235 }, { name: "新的抄电表", duration: 255 }, { name: "广东姑娘 II", duration: 265 },
+      { name: "新的北风", duration: 295 }, { name: "最后的北风", duration: 293 } ] },
+    { name: "沉默的老鼠影", type: "专辑", date: "2046-12-07", songs: [
+      { name: "沉默的老鼠影", duration: 247 }, { name: "遥远的阿珍爱上了阿强", duration: 236 }, { name: "另一个梦想化工厂", duration: 281 },
+      { name: "新的故人", duration: 247 }, { name: "乐乐哭哭 II", duration: 245 }, { name: "未完成的行囊", duration: 248 },
+      { name: "最后的他把反话正面讲", duration: 290 }, { name: "踏架脚车牵条猪 II", duration: 248 }, { name: "新的清明过纸", duration: 244 } ] },
+    { name: "漫长的屋檐", type: "专辑", date: "2049-09-03", songs: [
+      { name: "漫长的屋檐", duration: 286 }, { name: "新的旧信", duration: 282 }, { name: "另一个城市找猪", duration: 300 },
+      { name: "一些风景 II", duration: 284 }, { name: "绿苍苍 II", duration: 241 }, { name: "有所追求 II", duration: 291 },
+      { name: "阿琳娜 II", duration: 276 } ] },
+    ],
   "重塑雕像的权利": [
     { name: "CUT OFF!", type: "EP", date: "2005-01-01", rating: 8.0, songs: [
       { name: "Cut Off", duration: 300 } ] },
@@ -267,7 +515,32 @@ window.BAND_DISCOGRAPHY = {
        { name: "8+2+8 II", duration: 618 }, { name: "PIGS IN THE RIVER", duration: 403 },
        { name: "AT MOSP HERE", duration: 726 }, { name: "THE LAST DANCE, W.", duration: 399 },
        { name: "SOUNDS FOR CELEBRATION", duration: 420 } ] },
-  ],
+      { name: "Escape Behind... I Lights", type: "专辑", date: "2027-09-19", songs: [
+      { name: "Escape Behind... I Lights", duration: 325 }, { name: "The HUM", duration: 329 }, { name: "Rain", duration: 350 },
+      { name: "The Signal", duration: 292 }, { name: "Light", duration: 357 }, { name: "The Spark", duration: 335 },
+      { name: "8+2+8 II II", duration: 348 }, { name: "Drift Night", duration: 301 }, { name: "Drift Lights", duration: 349 },
+      { name: "Night Night", duration: 313 }, { name: "The Cut Off", duration: 310 } ] },
+    { name: "HUM Night", type: "专辑", date: "2031-09-11", songs: [
+      { name: "HUM Night", duration: 311 }, { name: "The Billy Cannot Stop", duration: 356 }, { name: "Wave", duration: 337 },
+      { name: "The Echo", duration: 304 }, { name: "Sky Reprise", duration: 329 }, { name: "Line Rise", duration: 347 },
+      { name: "The Rain", duration: 321 }, { name: "Echo", duration: 301 }, { name: "The AT MOSP HERE", duration: 337 },
+      { name: "The Echoes", duration: 318 }, { name: "8+2+8 II Rise", duration: 334 } ] },
+    { name: "Night", type: "EP", date: "2036-02-18", songs: [
+      { name: "Night", duration: 314 }, { name: "Rise II", duration: 351 }, { name: "Cut Off II", duration: 303 },
+      { name: "Line", duration: 312 } ] },
+    { name: "Night Rise", type: "EP", date: "2041-01-16", songs: [
+      { name: "Night Rise", duration: 322 }, { name: "Escape Behind...II Night", duration: 304 }, { name: "Sky", duration: 361 },
+      { name: "The HAILING DRUMS", duration: 343 }, { name: "Sky Night", duration: 316 }, { name: "HAILING DRUMS II", duration: 314 } ] },
+    { name: "Rain Rise", type: "专辑", date: "2044-11-30", songs: [
+      { name: "Rain Rise", duration: 352 }, { name: "The Rise", duration: 333 }, { name: "Billy Cannot Stop Night", duration: 294 },
+      { name: "The Light", duration: 294 }, { name: "Signal Reprise", duration: 295 }, { name: "...Fat Mum Rises! II", duration: 332 },
+      { name: "Echoes", duration: 359 }, { name: "Echo Night", duration: 311 }, { name: "The Line", duration: 315 } ] },
+    { name: "Rise", type: "专辑", date: "2048-12-03", songs: [
+      { name: "Rise", duration: 295 }, { name: "HUM Lights", duration: 357 }, { name: "Line Echo", duration: 323 },
+      { name: "HAILING DRUMS Rise", duration: 356 }, { name: "The Escape Behind...II", duration: 299 }, { name: "HAILING DRUMS Night", duration: 334 },
+      { name: "Rain Reprise", duration: 341 }, { name: "Sky II", duration: 347 }, { name: "My Great Location Echo", duration: 324 },
+      { name: "The Wave", duration: 343 } ] },
+    ],
   "草东没有派对": [
     { name: "丑奴儿", type: "专辑", date: "2016-02-19", rating: 9.1, songs: [
        { name: "Intro", duration: 86 }, { name: "丑", duration: 117 }, { name: "烂泥", duration: 149 },
@@ -279,7 +552,33 @@ window.BAND_DISCOGRAPHY = {
        { name: "人洞山", duration: 207 }, { name: "孑", duration: 55 }, { name: "白日梦", duration: 224 },
        { name: "床", duration: 232 }, { name: "八", duration: 226 }, { name: "老张", duration: 219 },
        { name: "芽", duration: 192 }, { name: "但", duration: 142 } ] },
-  ],
+      { name: "深夜", type: "专辑", date: "2028-05-14", songs: [
+      { name: "深夜", duration: 181 }, { name: "漫长的天线", duration: 161 }, { name: "久违的深夜", duration: 214 },
+      { name: "白日梦 II", duration: 167 }, { name: "漫长的白日梦", duration: 182 }, { name: "我们 II", duration: 187 },
+      { name: "艾玛 II", duration: 205 }, { name: "人洞山 II", duration: 190 } ] },
+    { name: "远方", type: "专辑", date: "2031-12-03", songs: [
+      { name: "远方", duration: 175 }, { name: "另一个深夜", duration: 187 }, { name: "The Intro", duration: 177 },
+      { name: "光年", duration: 184 }, { name: "沉默的天线", duration: 215 }, { name: "深夜 II", duration: 198 },
+      { name: "另一个旧梦", duration: 206 }, { name: "最后的艾玛", duration: 191 }, { name: "最后的情歌", duration: 204 } ] },
+    { name: "新的烂泥", type: "专辑", date: "2036-01-16", songs: [
+      { name: "新的烂泥", duration: 225 }, { name: "山海 II", duration: 173 }, { name: "情歌 II", duration: 217 },
+      { name: "回声", duration: 194 }, { name: "街角", duration: 224 }, { name: "最后的大风吹", duration: 217 },
+      { name: "未完成的人洞山", duration: 172 }, { name: "光年 II", duration: 211 }, { name: "漫长的远方", duration: 226 },
+      { name: "另一个断电", duration: 205 } ] },
+    { name: "漫长的艾玛", type: "专辑", date: "2040-04-28", songs: [
+      { name: "漫长的艾玛", duration: 211 }, { name: "夏天", duration: 173 }, { name: "新的情歌", duration: 198 },
+      { name: "远方 II", duration: 199 }, { name: "断电", duration: 171 }, { name: "旧梦", duration: 209 },
+      { name: "夏天 II", duration: 218 } ] },
+    { name: "烂泥 II", type: "专辑", date: "2044-08-05", songs: [
+      { name: "烂泥 II", duration: 168 }, { name: "沉默的烂泥", duration: 221 }, { name: "新的街角", duration: 203 },
+      { name: "遥远的天线", duration: 192 }, { name: "漫长的我们", duration: 196 }, { name: "漫长的苦难精算师", duration: 214 },
+      { name: "公路", duration: 206 }, { name: "回声 II", duration: 174 }, { name: "霓虹 II", duration: 182 },
+      { name: "天线", duration: 225 }, { name: "街角 II", duration: 170 } ] },
+    { name: "出逃 II", type: "专辑", date: "2048-09-11", songs: [
+      { name: "出逃 II", duration: 172 }, { name: "久违的天线", duration: 192 }, { name: "新的夏天", duration: 184 },
+      { name: "新的艾玛", duration: 219 }, { name: "大风吹 II", duration: 209 }, { name: "遥远的街角", duration: 188 },
+      { name: "久违的断电", duration: 226 } ] },
+    ],
   "海龟先生": [
     { name: "POGO不如跳舞", type: "EP", date: "2005-11-01", songs: [
       { name: "你好再见", duration: 270 } ] },
@@ -302,7 +601,31 @@ window.BAND_DISCOGRAPHY = {
       { name: "迷呓之喑", duration: 270 }, { name: "盼望", duration: 260 }, { name: "捕风", duration: 280 },
       { name: "伪君子", duration: 270 }, { name: "湾仔", duration: 260 }, { name: "忽然闯入", duration: 280 },
       { name: "海的女儿", duration: 270 } ] },
-  ],
+      { name: "海龟之歌 II", type: "专辑", date: "2028-03-15", songs: [
+      { name: "海龟之歌 II", duration: 279 }, { name: "沉默的出逃", duration: 261 }, { name: "微笑 II", duration: 232 },
+      { name: "久违的光年", duration: 240 }, { name: "夏天", duration: 277 }, { name: "湾仔 II", duration: 266 },
+      { name: "天线 II", duration: 227 } ] },
+    { name: "旧梦 II", type: "专辑", date: "2032-04-07", songs: [
+      { name: "旧梦 II", duration: 228 }, { name: "那时阳光明媚 II", duration: 268 }, { name: "沉默的旧梦", duration: 254 },
+      { name: "久违的街角", duration: 246 }, { name: "遥远的变形金刚", duration: 227 }, { name: "出逃", duration: 292 },
+      { name: "久违的旧梦", duration: 279 } ] },
+    { name: "漫长的悬崖巴士", type: "专辑", date: "2036-04-28", songs: [
+      { name: "漫长的悬崖巴士", duration: 286 }, { name: "给摇滚绑架 II", duration: 247 }, { name: "另一个断电", duration: 285 },
+      { name: "回声", duration: 291 }, { name: "深夜", duration: 246 }, { name: "久违的公路", duration: 238 },
+      { name: "新的街角", duration: 264 }, { name: "沉默的微笑", duration: 235 }, { name: "未完成的街角", duration: 279 } ] },
+    { name: "回声 II", type: "EP", date: "2040-11-15", songs: [
+      { name: "回声 II", duration: 285 }, { name: "最后的伪君子", duration: 292 }, { name: "久违的天线", duration: 262 },
+      { name: "伪君子 II", duration: 240 }, { name: "好时光 II", duration: 230 } ] },
+    { name: "内人广林 II", type: "专辑", date: "2044-05-24", songs: [
+      { name: "内人广林 II", duration: 279 }, { name: "沉默的远方", duration: 241 }, { name: "新的赖宁", duration: 262 },
+      { name: "Snoopy Rise", duration: 250 }, { name: "沉默的断电", duration: 293 }, { name: "盼望 II", duration: 253 },
+      { name: "霓虹", duration: 276 }, { name: "另一个好片明星", duration: 290 } ] },
+    { name: "出逃 II", type: "专辑", date: "2048-09-11", songs: [
+      { name: "出逃 II", duration: 291 }, { name: "深夜 II", duration: 288 }, { name: "小酒馆 II", duration: 228 },
+      { name: "漫长的街角", duration: 254 }, { name: "公路 II", duration: 283 }, { name: "天线", duration: 250 },
+      { name: "旧梦", duration: 280 }, { name: "男孩别哭 II", duration: 255 }, { name: "The Snoopy", duration: 233 },
+      { name: "未完成的光年", duration: 260 } ] },
+    ],
   "后海大鲨鱼": [
     { name: "Queen Sea Big Shark", type: "专辑", date: "2007-01-01", songs: [
        { name: "Lightning Metropolis", duration: 123 }, { name: "Hard Heart", duration: 216 },
@@ -323,7 +646,34 @@ window.BAND_DISCOGRAPHY = {
        { name: "时间之间", duration: 370 }, { name: "今夜留给今夜吧", duration: 296 }, { name: "漂流去世界最中心", duration: 289 },
        { name: "88奥林匹克", duration: 351 }, { name: "偷月亮的人", duration: 414 }, { name: "时髦人都好fancy", duration: 227 },
        { name: "后海冲浪手", duration: 269 }, { name: "BlingBlingbling", duration: 284 } ] },
-  ],
+      { name: "Drift", type: "专辑", date: "2028-07-16", songs: [
+      { name: "Drift", duration: 293 }, { name: "The C.B.D", duration: 250 }, { name: "The Money Fxxker", duration: 288 },
+      { name: "The Wave", duration: 250 }, { name: "Line", duration: 273 }, { name: "The Sky", duration: 231 },
+      { name: "The Tiger Dance", duration: 272 }, { name: "Drift Lights", duration: 237 }, { name: "The Night", duration: 231 } ] },
+    { name: "漫长的今夜留给今夜吧", type: "专辑", date: "2031-11-28", songs: [
+      { name: "漫长的今夜留给今夜吧", duration: 279 }, { name: "心要野 II", duration: 289 }, { name: "沉默的喜马拉雅", duration: 269 },
+      { name: "Spark", duration: 283 }, { name: "Signal", duration: 262 }, { name: "The Love Is Pop", duration: 250 },
+      { name: "STARZ Reprise", duration: 272 }, { name: "Love Is Pop II", duration: 230 }, { name: "Spark Lights", duration: 259 },
+      { name: "The WAVE", duration: 268 }, { name: "Spark Rise", duration: 286 } ] },
+    { name: "The Echoes", type: "专辑", date: "2036-02-04", songs: [
+      { name: "The Echoes", duration: 235 }, { name: "Rain", duration: 288 }, { name: "The YOUTH", duration: 282 },
+      { name: "Get Away Lights", duration: 288 }, { name: "The Drift", duration: 259 }, { name: "未完成的88奥林匹克", duration: 253 },
+      { name: "Echoes", duration: 239 }, { name: "后海冲浪手 II", duration: 245 }, { name: "YOUTH Night", duration: 289 } ] },
+    { name: "Light", type: "专辑", date: "2040-04-02", songs: [
+      { name: "Light", duration: 250 }, { name: "No! No! No! Echo", duration: 266 }, { name: "The BlingBlingbling", duration: 249 },
+      { name: "今夜留给今夜吧 II", duration: 256 }, { name: "Rain II", duration: 234 }, { name: "WAVE Echo", duration: 284 },
+      { name: "Echoes Night", duration: 266 }, { name: "The No! No! No!", duration: 249 }, { name: "Night", duration: 265 },
+      { name: "Girl Boss Night", duration: 237 } ] },
+    { name: "Spark Night", type: "专辑", date: "2044-07-18", songs: [
+      { name: "Spark Night", duration: 257 }, { name: "猛犸 II", duration: 246 }, { name: "Night II", duration: 286 },
+      { name: "Echo", duration: 243 }, { name: "Rise", duration: 230 }, { name: "Drift II", duration: 227 },
+      { name: "喜马拉雅 II", duration: 241 }, { name: "The Rain", duration: 287 } ] },
+    { name: "The NEO!MAN", type: "专辑", date: "2049-06-26", songs: [
+      { name: "The NEO!MAN", duration: 267 }, { name: "遥远的时间之间", duration: 225 }, { name: "新的心要野", duration: 262 },
+      { name: "Love Is Pop Rise", duration: 260 }, { name: "Rain Night", duration: 264 }, { name: "Sky", duration: 252 },
+      { name: "Echo Night", duration: 265 }, { name: "Light II", duration: 244 }, { name: "Night Lights", duration: 224 },
+      { name: "The Dirty Mind", duration: 253 } ] },
+    ],
   "木马乐队": [
     { name: "木马", type: "专辑", date: "1999-12-01", rating: 8.2, songs: [
       { name: "低处生活", duration: 280 }, { name: "没有声音的房间", duration: 290 } ] },
@@ -347,7 +697,35 @@ window.BAND_DISCOGRAPHY = {
        { name: "彼岸", duration: 296 } ] },
     { name: "旧城之王", type: "专辑", date: "2018-12-05", songs: [
        { name: "旧城之王", duration: 318 } ] },
-  ],
+      { name: "她是黯淡星 II", type: "EP", date: "2027-11-28", songs: [
+      { name: "她是黯淡星 II", duration: 317 }, { name: "遥远的把嘴唇摘除掉", duration: 278 }, { name: "街角 II", duration: 306 },
+      { name: "霓虹", duration: 321 } ] },
+    { name: "断电", type: "专辑", date: "2031-03-15", songs: [
+      { name: "断电", duration: 324 }, { name: "情节 II", duration: 338 }, { name: "沉默的无可救药", duration: 281 },
+      { name: "最后的进化", duration: 282 }, { name: "新的弱冠之年", duration: 335 }, { name: "霓虹 II", duration: 313 },
+      { name: "最后的我失去了她", duration: 303 }, { name: "回声", duration: 307 }, { name: "另一个天鹅绒", duration: 299 },
+      { name: "低处生活 II", duration: 338 }, { name: "空洞 II", duration: 277 } ] },
+    { name: "旧梦 II", type: "专辑", date: "2034-12-05", songs: [
+      { name: "旧梦 II", duration: 336 }, { name: "新的守护", duration: 282 }, { name: "久违的弱冠之年", duration: 335 },
+      { name: "Intro Night", duration: 294 }, { name: "纳迪 II", duration: 297 }, { name: "最后的街角", duration: 338 },
+      { name: "出逃", duration: 304 }, { name: "公路 II", duration: 272 }, { name: "出逃 II", duration: 304 },
+      { name: "果冻帝国 II", duration: 311 } ] },
+    { name: "新的远方", type: "专辑", date: "2038-02-15", songs: [
+      { name: "新的远方", duration: 323 }, { name: "遥远的公路", duration: 303 }, { name: "漫长的爱得像蜜糖", duration: 284 },
+      { name: "漫长的夏天", duration: 340 }, { name: "无可救药 II", duration: 284 }, { name: "光年", duration: 293 },
+      { name: "新的爱在流逝中", duration: 310 }, { name: "漫长的无可救药", duration: 300 } ] },
+    { name: "弱冠之年 II", type: "EP", date: "2042-05-10", songs: [
+      { name: "弱冠之年 II", duration: 318 }, { name: "最后的夏天", duration: 328 }, { name: "Intro II", duration: 314 } ] },
+    { name: "遥远的霓虹", type: "专辑", date: "2045-07-09", songs: [
+      { name: "遥远的霓虹", duration: 307 }, { name: "旧城之王 II", duration: 285 }, { name: "新的爱得像蜜糖", duration: 321 },
+      { name: "久违的公路", duration: 331 }, { name: "遥远的远方", duration: 276 }, { name: "另一个夏天", duration: 277 },
+      { name: "沉默的把嘴唇摘除掉", duration: 335 }, { name: "最后的赞美之歌", duration: 307 }, { name: "把嘴唇摘除掉 II", duration: 292 },
+      { name: "新的深夜", duration: 317 }, { name: "沉默的街角", duration: 281 } ] },
+    { name: "漫长的超现实预言", type: "专辑", date: "2049-07-21", songs: [
+      { name: "漫长的超现实预言", duration: 290 }, { name: "久违的彼岸", duration: 278 }, { name: "最后的守护", duration: 309 },
+      { name: "The Intro", duration: 320 }, { name: "旧梦", duration: 322 }, { name: "最后的回声", duration: 275 },
+      { name: "远方 II", duration: 327 }, { name: "新的赞美之歌", duration: 333 }, { name: "沉默的天鹅绒", duration: 287 } ] },
+    ],
   "舌头乐队": [
     { name: "小鸡出壳", type: "专辑", date: "1999-01-01", rating: 8.3, songs: [
        { name: "贼船(On Board)", duration: 283 }, { name: "仙人掌(Cactus)", duration: 190 },
@@ -367,7 +745,34 @@ window.BAND_DISCOGRAPHY = {
       { name: "怎么能够说我爱你", duration: 300 } ] },
     { name: "中国制造", type: "专辑", date: "2021-01-01", songs: [
       { name: "猫和老鼠", duration: 280 }, { name: "摇滚教父", duration: 270 } ] },
-  ],
+      { name: "最后的断电", type: "专辑", date: "2028-05-04", songs: [
+      { name: "最后的断电", duration: 351 }, { name: "沉默的远方", duration: 332 }, { name: "回声", duration: 369 },
+      { name: "猫和老鼠 II", duration: 358 }, { name: "靶子 II", duration: 365 }, { name: "未完成的中国龙", duration: 355 },
+      { name: "另一个三十七计", duration: 340 }, { name: "另一个公路", duration: 375 }, { name: "未完成的仙人掌", duration: 327 } ] },
+    { name: "新的公路", type: "专辑", date: "2032-08-04", songs: [
+      { name: "新的公路", duration: 367 }, { name: "久违的时光机器", duration: 356 }, { name: "沉默的旧梦", duration: 362 },
+      { name: "这就是我 II", duration: 377 }, { name: "夏天", duration: 360 }, { name: "尾巴 II", duration: 371 },
+      { name: "遥远的街角", duration: 330 } ] },
+    { name: "最后的深夜", type: "专辑", date: "2036-06-30", songs: [
+      { name: "最后的深夜", duration: 318 }, { name: "回声 II", duration: 341 }, { name: "出逃 II", duration: 328 },
+      { name: "远方", duration: 348 }, { name: "另一个对牛弹琴", duration: 314 }, { name: "沉默的天线", duration: 316 },
+      { name: "光年", duration: 340 }, { name: "霓虹 II", duration: 371 }, { name: "沉默的歌颂你赞美你", duration: 345 },
+      { name: "最后的摇滚教父", duration: 362 } ] },
+    { name: "断电 II", type: "专辑", date: "2041-02-07", songs: [
+      { name: "断电 II", duration: 344 }, { name: "遥远的靶子", duration: 325 }, { name: "断电", duration: 339 },
+      { name: "仙人掌 II", duration: 359 }, { name: "街角 II", duration: 330 }, { name: "遥远的远方", duration: 330 },
+      { name: "光年 II", duration: 338 }, { name: "漫长的霓虹", duration: 380 }, { name: "最后的夏天", duration: 329 },
+      { name: "另一个远方", duration: 347 } ] },
+    { name: "久违的远方", type: "专辑", date: "2044-08-01", songs: [
+      { name: "久违的远方", duration: 322 }, { name: "深夜", duration: 370 }, { name: "霓虹", duration: 366 },
+      { name: "出逃", duration: 357 }, { name: "这就是你 II", duration: 367 }, { name: "机器。。全人类 II", duration: 323 },
+      { name: "天线", duration: 339 }, { name: "时光机器 II", duration: 379 }, { name: "下注 II", duration: 379 },
+      { name: "久违的街角", duration: 338 } ] },
+    { name: "遥远的中国龙", type: "专辑", date: "2049-06-21", songs: [
+      { name: "遥远的中国龙", duration: 366 }, { name: "最后的街角", duration: 374 }, { name: "遥远的对牛弹琴", duration: 336 },
+      { name: "最后的霓虹", duration: 378 }, { name: "未完成的三十七计", duration: 362 }, { name: "遥远的尾巴", duration: 356 },
+      { name: "未完成的街角", duration: 335 } ] },
+    ],
   "杭盖乐队": [
     { name: "介绍杭盖", type: "专辑", date: "2008-07-28", rating: 8.0, songs: [
        { name: "我的陶布竖尔", duration: 224 }, { name: "呼和那木吉拉的骏马", duration: 175 }, { name: "交德日娜娜", duration: 119 },
@@ -414,7 +819,59 @@ window.BAND_DISCOGRAPHY = {
        { name: "古纳根乌兰巴特", duration: 338 }, { name: "北边的芨芨草", duration: 352 }, { name: "花斑马", duration: 324 },
        { name: "约会", duration: 351 }, { name: "乌仁都希", duration: 222 }, { name: "戈壁路", duration: 284 },
        { name: "初升的太阳", duration: 340 }, { name: "喇嘛大叔寻亲记", duration: 212 }, { name: "上海产的半导体", duration: 284 } ] },
-  ],
+      { name: "故乡山峰 II", type: "专辑", date: "2026-10-21", songs: [
+      { name: "故乡山峰 II", duration: 241 }, { name: "酒歌 II", duration: 258 }, { name: "新的嘎达梅林", duration: 232 },
+      { name: "汗青格勒 II", duration: 252 }, { name: "轮回 II", duration: 223 }, { name: "荒原 II", duration: 274 },
+      { name: "未完成的铁轨", duration: 222 }, { name: "深渊 II", duration: 233 }, { name: "最后的雷霆", duration: 228 } ] },
+    { name: "漫长的长城", type: "专辑", date: "2029-06-01", songs: [
+      { name: "漫长的长城", duration: 277 }, { name: "纪念碑", duration: 238 }, { name: "铁轨", duration: 247 },
+      { name: "久违的四季", duration: 268 }, { name: "燃烧 II", duration: 233 }, { name: "最后的超越才酷", duration: 246 },
+      { name: "小兔子 II", duration: 233 } ] },
+    { name: "漫长的四季", type: "专辑", date: "2031-05-03", songs: [
+      { name: "漫长的四季", duration: 224 }, { name: "圆顶帽 II", duration: 236 }, { name: "漫长的戈壁路", duration: 236 },
+      { name: "最后的五条好汉", duration: 227 }, { name: "四季 II", duration: 252 }, { name: "苍穹", duration: 265 },
+      { name: "海然海然 II", duration: 222 }, { name: "雷霆 II", duration: 262 }, { name: "暗夜", duration: 271 } ] },
+    { name: "达亚波尔 II", type: "专辑", date: "2033-03-24", songs: [
+      { name: "达亚波尔 II", duration: 268 }, { name: "鸿雁 II", duration: 277 }, { name: "丁吉图湾 II", duration: 231 },
+      { name: "久违的枣红马", duration: 279 }, { name: "杭盖 II", duration: 234 }, { name: "苍穹 II", duration: 246 },
+      { name: "硕特英雄 II", duration: 269 }, { name: "最后的铁轨", duration: 257 }, { name: "乌仁都希 II", duration: 242 },
+      { name: "钢铁", duration: 245 }, { name: "沉默的燃烧", duration: 288 } ] },
+    { name: "新的钢铁", type: "专辑", date: "2035-07-23", songs: [
+      { name: "新的钢铁", duration: 275 }, { name: "沉默的乌仁都西", duration: 243 }, { name: "约会 II", duration: 288 },
+      { name: "雷霆", duration: 282 }, { name: "灰烬", duration: 278 }, { name: "未完成的钢铁", duration: 236 },
+      { name: "长城", duration: 237 } ] },
+    { name: "裂痕", type: "专辑", date: "2037-04-29", songs: [
+      { name: "裂痕", duration: 254 }, { name: "长城 II", duration: 223 }, { name: "深渊", duration: 230 },
+      { name: "荒原", duration: 270 }, { name: "久违的探望慈母", duration: 263 }, { name: "新的四季", duration: 267 },
+      { name: "沉默的铁轨", duration: 266 }, { name: "花儿 II", duration: 232 } ] },
+    { name: "最后的纪念碑", type: "专辑", date: "2039-04-29", songs: [
+      { name: "最后的纪念碑", duration: 262 }, { name: "钢铁 II", duration: 224 }, { name: "遥远的燃烧", duration: 264 },
+      { name: "遥远的喇嘛大叔寻亲记", duration: 262 }, { name: "纪念碑 II", duration: 240 }, { name: "遥远的纪念碑", duration: 241 },
+      { name: "沉默的深渊", duration: 272 }, { name: "遥远的雷霆", duration: 291 }, { name: "遥远的灰烬", duration: 276 },
+      { name: "未完成的雷霆", duration: 245 } ] },
+    { name: "燃烧", type: "专辑", date: "2041-10-12", songs: [
+      { name: "燃烧", duration: 264 }, { name: "河套湾高树 II", duration: 275 }, { name: "超越才酷 II", duration: 244 },
+      { name: "思念女儿 II", duration: 226 }, { name: "花斑马 II", duration: 240 }, { name: "未完成的长城", duration: 281 },
+      { name: "金扣子 II", duration: 230 }, { name: "漫长的超越才酷", duration: 271 } ] },
+    { name: "久违的纪念碑", type: "专辑", date: "2043-09-17", songs: [
+      { name: "久违的纪念碑", duration: 286 }, { name: "久违的荒原", duration: 229 }, { name: "江格尔 II", duration: 262 },
+      { name: "久违的阿里河，母亲河", duration: 247 }, { name: "沉默的古纳根乌兰巴特", duration: 240 }, { name: "最后的丁吉图湾", duration: 239 },
+      { name: "波如莱 II", duration: 290 }, { name: "暗夜 II", duration: 286 }, { name: "最后的喇嘛大叔寻亲记", duration: 259 },
+      { name: "圣主 II", duration: 250 } ] },
+    { name: "漫长的托尔金山", type: "专辑", date: "2045-12-21", songs: [
+      { name: "漫长的托尔金山", duration: 290 }, { name: "新的金秋", duration: 274 }, { name: "遥远的波如莱", duration: 275 },
+      { name: "漫长的枣红马", duration: 245 }, { name: "久违的花斑马", duration: 246 }, { name: "新的铁轨", duration: 242 },
+      { name: "漫长的雷霆", duration: 288 }, { name: "另一个苍穹", duration: 281 } ] },
+    { name: "沉默的雷霆", type: "专辑", date: "2047-12-19", songs: [
+      { name: "沉默的雷霆", duration: 269 }, { name: "未完成的暗夜", duration: 240 }, { name: "新的轮回", duration: 255 },
+      { name: "父亲 II", duration: 289 }, { name: "新的深渊", duration: 271 }, { name: "探望慈母 II", duration: 246 },
+      { name: "漫长的燃烧", duration: 244 }, { name: "久违的五条好汉", duration: 248 }, { name: "久违的杭盖精神", duration: 261 },
+      { name: "裂痕 II", duration: 271 }, { name: "新的暗夜", duration: 286 } ] },
+    { name: "新的长城", type: "专辑", date: "2050-01-16", songs: [
+      { name: "新的长城", duration: 243 }, { name: "沉默的江格尔", duration: 280 }, { name: "新的圆顶帽", duration: 244 },
+      { name: "新的达亚波尔", duration: 278 }, { name: "未完成的燃烧", duration: 262 }, { name: "遥远的荒原", duration: 222 },
+      { name: "沉默的父亲", duration: 287 }, { name: "漫长的酒歌", duration: 255 }, { name: "新的江格尔", duration: 226 } ] },
+    ],
   "九宝乐队": [
     { name: "十丈铜嘴", type: "专辑", date: "2012-05-05", rating: 7.9, songs: [
       { name: "圣赞", duration: 132 }, { name: "神秘之力", duration: 207 }, { name: "十丈铜嘴", duration: 235 },
@@ -434,7 +891,37 @@ window.BAND_DISCOGRAPHY = {
        { name: "直到如今", duration: 296 }, { name: "彷徨", duration: 287 }, { name: "黑金暴风 (纯器乐)", duration: 95 },
        { name: "青铜鹰隼", duration: 304 }, { name: "真梦", duration: 310 }, { name: "愈来愈近", duration: 336 },
        { name: "正如您", duration: 185 }, { name: "孤独的老马 (纯器乐)", duration: 244 }, { name: "究极之境", duration: 339 } ] },
-  ],
+      { name: "长城 II", type: "专辑", date: "2027-07-30", songs: [
+      { name: "长城 II", duration: 263 }, { name: "新的十年", duration: 231 }, { name: "新的钟声为谁而鸣", duration: 229 },
+      { name: "愈来愈近 II", duration: 258 }, { name: "另一个钢铁", duration: 271 }, { name: "暗夜", duration: 265 },
+      { name: "十丈铜嘴 II", duration: 257 }, { name: "娜明达赖 II", duration: 217 } ] },
+    { name: "最后的圣赞", type: "专辑", date: "2031-01-04", songs: [
+      { name: "最后的圣赞", duration: 219 }, { name: "纪念碑", duration: 253 }, { name: "你与我 II", duration: 227 },
+      { name: "新的纪念碑", duration: 244 }, { name: "最后的钢铁", duration: 265 }, { name: "漫长的黑心", duration: 272 },
+      { name: "燃烧 II", duration: 271 }, { name: "黑心 II", duration: 252 } ] },
+    { name: "未完成的铁轨", type: "专辑", date: "2035-04-09", songs: [
+      { name: "未完成的铁轨", duration: 256 }, { name: "深渊", duration: 258 }, { name: "最后的灵眼", duration: 217 },
+      { name: "满古斯寓言 II", duration: 211 }, { name: "特斯河之赞 II", duration: 265 }, { name: "沉默的神秘之力", duration: 268 },
+      { name: "骏马赞 II", duration: 236 }, { name: "另一个长城", duration: 270 }, { name: "圣赞 II", duration: 224 },
+      { name: "新的裂痕", duration: 274 }, { name: "神秘之力 II", duration: 239 } ] },
+    { name: "遥远的青铜鹰隼", type: "专辑", date: "2038-11-19", songs: [
+      { name: "遥远的青铜鹰隼", duration: 217 }, { name: "未完成的十年", duration: 277 }, { name: "彷徨 II", duration: 259 },
+      { name: "雷霆", duration: 226 }, { name: "久违的黑金暴风", duration: 228 }, { name: "遥远的娜明达赖", duration: 274 },
+      { name: "荒原 II", duration: 229 }, { name: "灰烬", duration: 233 }, { name: "长城", duration: 235 } ] },
+    { name: "荒原", type: "专辑", date: "2042-05-26", songs: [
+      { name: "荒原", duration: 243 }, { name: "灰烬 II", duration: 227 }, { name: "钢铁 II", duration: 270 },
+      { name: "新的长城", duration: 242 }, { name: "最后的深渊", duration: 233 }, { name: "燃烧", duration: 234 },
+      { name: "久违的愈来愈近", duration: 224 } ] },
+    { name: "铁轨 II", type: "专辑", date: "2045-06-27", songs: [
+      { name: "铁轨 II", duration: 250 }, { name: "深渊 II", duration: 273 }, { name: "沉默的直到如今", duration: 221 },
+      { name: "裂痕 II", duration: 226 }, { name: "暗夜 II", duration: 278 }, { name: "钢铁", duration: 272 },
+      { name: "新的真梦", duration: 224 }, { name: "遥远的暗夜", duration: 237 }, { name: "苍穹", duration: 219 } ] },
+    { name: "正如您 II", type: "专辑", date: "2048-10-31", songs: [
+      { name: "正如您 II", duration: 251 }, { name: "英雄 II", duration: 257 }, { name: "黑金暴风 II", duration: 261 },
+      { name: "Sonsii Rise", duration: 224 }, { name: "雷霆 II", duration: 275 }, { name: "沉默的特斯河之赞", duration: 225 },
+      { name: "新的英雄", duration: 248 }, { name: "十年 II", duration: 212 }, { name: "漫长的神秘之力", duration: 247 },
+      { name: "遥远的序曲", duration: 238 } ] },
+    ],
   "夜叉乐队": [
     { name: "自由", type: "专辑", date: "2000-12-01", rating: 8.0, songs: [
        { name: "四个火枪手", duration: 187 } ] },
@@ -457,7 +944,38 @@ window.BAND_DISCOGRAPHY = {
        { name: "不置可否", duration: 274 }, { name: "炼之地", duration: 325 }, { name: "自由路66号", duration: 264 },
        { name: "粉色的狗", duration: 218 }, { name: "1%", duration: 250 }, { name: "Back To Dark", duration: 304 },
        { name: "无翼鸟", duration: 341 } ] },
-  ],
+      { name: "钢铁", type: "专辑", date: "2027-12-06", songs: [
+      { name: "钢铁", duration: 281 }, { name: "The Intro", duration: 264 }, { name: "自由路66号 II", duration: 315 },
+      { name: "纪念碑 II", duration: 291 }, { name: "裂痕", duration: 292 }, { name: "我即是 II", duration: 306 },
+      { name: "我们 II", duration: 273 }, { name: "深渊 II", duration: 259 }, { name: "另一个深渊", duration: 284 },
+      { name: "遥远的燃烧", duration: 277 } ] },
+    { name: "铁轨", type: "专辑", date: "2031-02-21", songs: [
+      { name: "铁轨", duration: 279 }, { name: "灰烬", duration: 308 }, { name: "最后的渐醒渐逝", duration: 313 },
+      { name: "未完成的暗夜", duration: 307 }, { name: "燃烧 II", duration: 269 }, { name: "未完成的渐醒渐逝", duration: 315 },
+      { name: "炼之地 II", duration: 277 }, { name: "久违的暗夜", duration: 300 } ] },
+    { name: "漫长的铁轨", type: "专辑", date: "2034-12-22", songs: [
+      { name: "漫长的铁轨", duration: 267 }, { name: "最后的舞悟", duration: 309 }, { name: "另一个荒原", duration: 296 },
+      { name: "长城", duration: 313 }, { name: "暗夜 II", duration: 289 }, { name: "另一个雷霆", duration: 302 },
+      { name: "久违的深渊", duration: 289 }, { name: "恶道 II", duration: 250 } ] },
+    { name: "荒原 II", type: "专辑", date: "2038-03-20", songs: [
+      { name: "荒原 II", duration: 311 }, { name: "裂痕 II", duration: 280 }, { name: "苍穹", duration: 258 },
+      { name: "舞悟 II", duration: 314 }, { name: "未完成的雷霆", duration: 286 }, { name: "沉默的逍遥骑士", duration: 248 },
+      { name: "另一个不置可否", duration: 288 }, { name: "遥远的灰烬", duration: 268 }, { name: "纪念碑", duration: 279 },
+      { name: "雷霆", duration: 246 }, { name: "新的荒原", duration: 275 } ] },
+    { name: "Intro Echo", type: "专辑", date: "2042-06-18", songs: [
+      { name: "Intro Echo", duration: 297 }, { name: "漫长的深渊", duration: 247 }, { name: "荒原", duration: 270 },
+      { name: "苍穹 II", duration: 282 }, { name: "命运 II", duration: 302 }, { name: "钢铁 II", duration: 297 },
+      { name: "漫长的夕阳下", duration: 308 } ] },
+    { name: "遥远的雷霆", type: "专辑", date: "2045-07-05", songs: [
+      { name: "遥远的雷霆", duration: 258 }, { name: "暗流 II", duration: 282 }, { name: "遥远的长城", duration: 286 },
+      { name: "新的燃烧", duration: 249 }, { name: "遥远的自由路66号", duration: 258 }, { name: "雷霆 II", duration: 299 },
+      { name: "新的铁轨", duration: 267 }, { name: "不置可否 II", duration: 296 }, { name: "新的选择", duration: 285 },
+      { name: "另一个暗夜", duration: 275 } ] },
+    { name: "未完成的不置可否", type: "专辑", date: "2049-02-22", songs: [
+      { name: "未完成的不置可否", duration: 291 }, { name: "未完成的逍遥骑士", duration: 307 }, { name: "暗夜", duration: 314 },
+      { name: "遥远的命运", duration: 293 }, { name: "沉默的暗夜", duration: 311 }, { name: "逍遥骑士 II", duration: 294 },
+      { name: "新的我即是", duration: 283 } ] },
+    ],
   "反光镜": [
     { name: "Reflector", type: "EP", date: "2002-05-01", songs: [
       { name: "别上当", duration: 250 }, { name: "天天有时间", duration: 260 }, { name: "韩怂", duration: 250 } ] },
@@ -477,7 +995,26 @@ window.BAND_DISCOGRAPHY = {
        { name: "Intro", duration: 86 }, { name: "明天再说", duration: 136 }, { name: "这不是我想要的感觉", duration: 309 },
        { name: "如果不能选择，我们就去歌唱", duration: 287 }, { name: "没人在乎你", duration: 289 }, { name: "青春的代价", duration: 274 },
        { name: "以为", duration: 228 }, { name: "因为所以", duration: 76 }, { name: "来到你身边", duration: 257 } ] },
-  ],
+      { name: "街头 II", type: "专辑", date: "2027-12-31", songs: [
+      { name: "街头 II", duration: 213 }, { name: "未完成的那四年", duration: 252 }, { name: "未完成的释你", duration: 202 },
+      { name: "漫长的反光", duration: 251 }, { name: "断电 II", duration: 227 }, { name: "野火", duration: 266 },
+      { name: "以为 II", duration: 217 } ] },
+    { name: "断线 II", type: "EP", date: "2031-12-28", songs: [
+      { name: "断线 II", duration: 256 }, { name: "最后的出逃", duration: 205 }, { name: "遥远的坦白", duration: 266 },
+      { name: "最后的街头", duration: 259 }, { name: "没人在乎你 II", duration: 248 }, { name: "来到你身边 II", duration: 241 } ] },
+    { name: "坦白 II", type: "专辑", date: "2035-10-26", songs: [
+      { name: "坦白 II", duration: 243 }, { name: "释你 II", duration: 250 }, { name: "遥远的嘿！姑娘", duration: 211 },
+      { name: "遥远的溶化", duration: 267 }, { name: "Intro Lights", duration: 242 }, { name: "街头", duration: 245 },
+      { name: "The Intro", duration: 213 }, { name: "新的那四年", duration: 232 } ] },
+    { name: "长大 II", type: "EP", date: "2040-02-07", songs: [
+      { name: "长大 II", duration: 242 }, { name: "断线", duration: 259 }, { name: "久违的长大", duration: 260 },
+      { name: "沉默的野火", duration: 222 }, { name: "久违的碎片", duration: 205 }, { name: "无奈 II", duration: 201 } ] },
+    { name: "算了吧 II", type: "EP", date: "2044-04-25", songs: [
+      { name: "算了吧 II", duration: 232 }, { name: "反光", duration: 270 }, { name: "另一个断线", duration: 251 },
+      { name: "遥远的还我蔚蓝", duration: 220 }, { name: "另一个约定", duration: 231 } ] },
+    { name: "天天有时间 II", type: "EP", date: "2048-07-11", songs: [
+      { name: "天天有时间 II", duration: 255 }, { name: "噪点", duration: 223 }, { name: "麻痹 II", duration: 235 } ] },
+    ],
   "脑浊": [
     { name: "踩响失真", type: "专辑", date: "2002-01-01", songs: [
        { name: "2008", duration: 172 }, { name: "Call The Police", duration: 256 },
@@ -509,7 +1046,39 @@ window.BAND_DISCOGRAPHY = {
        { name: "我比你OK", duration: 0 }, { name: "游击队之歌", duration: 0 }, { name: "顽主", duration: 0 },
        { name: "TA", duration: 0 }, { name: "Call the Police", duration: 0 }, { name: "摇滚的琴人", duration: 0 },
        { name: "永远的乌托邦", duration: 0 } ] },
-  ],
+      { name: "The Sky", type: "专辑", date: "2028-04-16", songs: [
+      { name: "The Sky", duration: 178 }, { name: "The Signal", duration: 220 }, { name: "The Spark", duration: 199 },
+      { name: "Echoes", duration: 218 }, { name: "最后的再见乌托邦", duration: 172 }, { name: "Wave", duration: 189 },
+      { name: "Echo Lights", duration: 197 } ] },
+    { name: "The Played", type: "专辑", date: "2031-03-17", songs: [
+      { name: "The Played", duration: 170 }, { name: "我总是 II", duration: 186 }, { name: "The Drift", duration: 179 },
+      { name: "久违的顽主", duration: 220 }, { name: "Spark Rise", duration: 226 }, { name: "Light", duration: 224 },
+      { name: "Light Lights", duration: 164 }, { name: "The Second Hand Pogo", duration: 195 }, { name: "Hangout Tonight Night", duration: 186 },
+      { name: "Summer Afternoon Rise", duration: 182 }, { name: "The No Dirty Punx", duration: 204 } ] },
+    { name: "Rise", type: "专辑", date: "2035-01-10", songs: [
+      { name: "Rise", duration: 168 }, { name: "Oi! Man Lights", duration: 217 }, { name: "Line", duration: 226 },
+      { name: "The Night", duration: 168 }, { name: "The Sail", duration: 173 }, { name: "八千里路云和月 II", duration: 163 },
+      { name: "新的无所畏", duration: 193 }, { name: "Drift II", duration: 211 }, { name: "Rise Rise", duration: 204 },
+      { name: "Lick Me Baby II", duration: 172 } ] },
+    { name: "Call the Police II", type: "专辑", date: "2038-02-04", songs: [
+      { name: "Call the Police II", duration: 171 }, { name: "The New York City", duration: 175 }, { name: "Sky II", duration: 198 },
+      { name: "My Week Night", duration: 187 }, { name: "The Such a Dangerous", duration: 174 }, { name: "Sky", duration: 206 },
+      { name: "Echo Echo", duration: 206 }, { name: "Signal Night", duration: 196 }, { name: "The Rain", duration: 177 },
+      { name: "Drift", duration: 207 }, { name: "Rain II", duration: 190 } ] },
+    { name: "Rise Night", type: "专辑", date: "2041-08-08", songs: [
+      { name: "Rise Night", duration: 180 }, { name: "No Dirty Punx II", duration: 188 }, { name: "Hangout Tonight Rise", duration: 169 },
+      { name: "Signal", duration: 213 }, { name: "The Call The Police", duration: 201 }, { name: "Call The Police II", duration: 190 },
+      { name: "The Light", duration: 184 } ] },
+    { name: "My Week II", type: "专辑", date: "2045-05-28", songs: [
+      { name: "My Week II", duration: 164 }, { name: "给我一刀 II", duration: 191 }, { name: "Call the Police Night", duration: 187 },
+      { name: "Summer Afternoon Echo", duration: 178 }, { name: "The Wave", duration: 227 }, { name: "Night Night", duration: 180 },
+      { name: "野火 II", duration: 199 }, { name: "Echoes Night", duration: 208 } ] },
+    { name: "Wave II", type: "专辑", date: "2049-06-25", songs: [
+      { name: "Wave II", duration: 202 }, { name: "遥远的无所畏", duration: 173 }, { name: "The Echoes", duration: 213 },
+      { name: "Night", duration: 198 }, { name: "Sky Echo", duration: 177 }, { name: "Echo", duration: 159 },
+      { name: "TA Lights", duration: 181 }, { name: "Rain", duration: 161 }, { name: "Rise Reprise", duration: 215 },
+      { name: "Spark", duration: 181 }, { name: "The My Simple Life", duration: 174 } ] },
+    ],
   "达达乐队": [
     { name: "天使", type: "专辑", date: "2001-01-01", rating: 8.0, songs: [
        { name: "化学心情下的爱情反应", duration: 319 }, { name: "我的天使", duration: 199 }, { name: "瞬间", duration: 263 },
@@ -521,7 +1090,43 @@ window.BAND_DISCOGRAPHY = {
        { name: "Song F", duration: 391 }, { name: "午夜说再见", duration: 186 }, { name: "等待", duration: 228 },
        { name: "浮出水面", duration: 330 }, { name: "南方", duration: 271 }, { name: "黄金时代", duration: 282 },
        { name: "收音机之恋", duration: 257 }, { name: "ROCKLIFE", duration: 187 }, { name: "Intro", duration: 164 } ] },
-  ],
+      { name: "未完成的远方", type: "专辑", date: "2028-01-04", songs: [
+      { name: "未完成的远方", duration: 230 }, { name: "久违的无双", duration: 276 }, { name: "最后的霓虹", duration: 257 },
+      { name: "深夜 II", duration: 278 }, { name: "The Song F", duration: 247 }, { name: "The UNO", duration: 273 },
+      { name: "收音机之恋 II", duration: 258 }, { name: "Intro Lights", duration: 226 } ] },
+    { name: "街角 II", type: "专辑", date: "2030-06-22", songs: [
+      { name: "街角 II", duration: 251 }, { name: "出逃 II", duration: 244 }, { name: "未完成的出逃", duration: 246 },
+      { name: "夏天", duration: 276 }, { name: "天线", duration: 219 }, { name: "霓虹", duration: 250 },
+      { name: "光年", duration: 242 }, { name: "断电", duration: 225 }, { name: "回声 II", duration: 250 },
+      { name: "无双 II", duration: 274 } ] },
+    { name: "旧梦 II", type: "专辑", date: "2033-09-05", songs: [
+      { name: "旧梦 II", duration: 263 }, { name: "瞬间 II", duration: 237 }, { name: "远方 II", duration: 248 },
+      { name: "漫长的断电", duration: 252 }, { name: "出逃", duration: 238 }, { name: "久违的街角", duration: 265 },
+      { name: "最后的荒诞", duration: 215 } ] },
+    { name: "漫长的等待", type: "专辑", date: "2037-01-24", songs: [
+      { name: "漫长的等待", duration: 272 }, { name: "霓虹 II", duration: 242 }, { name: "漫长的出逃", duration: 226 },
+      { name: "黄金时代 II", duration: 257 }, { name: "午夜说再见 II", duration: 247 }, { name: "沉默的毛病", duration: 277 },
+      { name: "未完成的回声", duration: 243 }, { name: "最后的玩偶", duration: 255 }, { name: "暴雨 II", duration: 246 },
+      { name: "天线 II", duration: 277 } ] },
+    { name: "最后的公路", type: "专辑", date: "2039-09-01", songs: [
+      { name: "最后的公路", duration: 275 }, { name: "等待 II", duration: 226 }, { name: "断电 II", duration: 263 },
+      { name: "公路", duration: 231 }, { name: "浮出水面 II", duration: 216 }, { name: "遥远的光年", duration: 251 },
+      { name: "漫长的天线", duration: 269 }, { name: "久违的旧梦", duration: 274 }, { name: "深夜", duration: 240 },
+      { name: "漫长的暴雨", duration: 223 }, { name: "新的南方", duration: 211 } ] },
+    { name: "久违的收音机之恋", type: "专辑", date: "2043-04-17", songs: [
+      { name: "久违的收音机之恋", duration: 235 }, { name: "The ROCKLIFE", duration: 266 }, { name: "不经意间 II", duration: 271 },
+      { name: "另一个夏天", duration: 221 }, { name: "另一个街角", duration: 245 }, { name: "久违的节日快乐", duration: 215 },
+      { name: "回声", duration: 225 }, { name: "久违的出逃", duration: 276 }, { name: "沉默的南方", duration: 222 },
+      { name: "南方 II", duration: 279 }, { name: "巴巴罗萨 II", duration: 225 } ] },
+    { name: "玩偶 II", type: "专辑", date: "2046-09-01", songs: [
+      { name: "玩偶 II", duration: 235 }, { name: "光年 II", duration: 258 }, { name: "未完成的旧梦", duration: 230 },
+      { name: "新的夏天", duration: 255 }, { name: "另一个五分儿", duration: 277 }, { name: "远方", duration: 244 },
+      { name: "未完成的节日快乐", duration: 257 } ] },
+    { name: "遥远的夏天", type: "专辑", date: "2049-03-09", songs: [
+      { name: "遥远的夏天", duration: 214 }, { name: "另一个旧梦", duration: 251 }, { name: "久违的霓虹", duration: 237 },
+      { name: "沉默的断电", duration: 280 }, { name: "未完成的断电", duration: 235 }, { name: "最后的断电", duration: 215 },
+      { name: "节日快乐 II", duration: 220 }, { name: "漫长的巴巴罗萨", duration: 258 }, { name: "漫长的黄金时代", duration: 264 } ] },
+    ],
   "果味VC": [
     { name: "双重生命", type: "专辑", date: "2001-11-11", rating: 7.9, songs: [
        { name: "模糊", duration: 359 }, { name: "超音速列车", duration: 272 }, { name: "年轻人", duration: 286 },
@@ -548,7 +1153,32 @@ window.BAND_DISCOGRAPHY = {
        { name: "Elope", duration: 328 }, { name: "就让悲伤来得更狂野", duration: 237 }, { name: "寄往天堂的情书", duration: 256 },
        { name: "短发", duration: 278 }, { name: "阴天（把浪漫画在身体上） (把浪漫画在身体上)", duration: 232 },
        { name: "洛丽塔Lolita", duration: 248 }, { name: "国安国安", duration: 283 } ] },
-  ],
+      { name: "未完成的拥抱之城", type: "专辑", date: "2027-06-27", songs: [
+      { name: "未完成的拥抱之城", duration: 269 }, { name: "遥远的深夜", duration: 292 }, { name: "公路 II", duration: 255 },
+      { name: "沉默的天线", duration: 271 }, { name: "久违的北欧洲", duration: 278 }, { name: "最后的阴天", duration: 243 },
+      { name: "另一个阴天", duration: 232 } ] },
+    { name: "另一个双重生命", type: "专辑", date: "2032-10-26", songs: [
+      { name: "另一个双重生命", duration: 235 }, { name: "双重生命 II", duration: 275 }, { name: "沙滩绅士 II", duration: 263 },
+      { name: "远方", duration: 232 }, { name: "霓虹", duration: 261 }, { name: "漫长的哪怕只剩一秒", duration: 270 },
+      { name: "未完成的霓虹", duration: 288 }, { name: "遥远的模糊", duration: 279 }, { name: "最后的海岸", duration: 260 },
+      { name: "哈利路亚 II", duration: 268 } ] },
+    { name: "生命之花 II", type: "专辑", date: "2036-09-05", songs: [
+      { name: "生命之花 II", duration: 237 }, { name: "国安国安 II", duration: 295 }, { name: "光年 II", duration: 241 },
+      { name: "出逃", duration: 234 }, { name: "回声 II", duration: 276 }, { name: "北欧洲 II", duration: 241 },
+      { name: "深夜", duration: 266 } ] },
+    { name: "沉默的拥抱之城", type: "专辑", date: "2040-05-15", songs: [
+      { name: "沉默的拥抱之城", duration: 296 }, { name: "夜空多灿烂 II", duration: 277 }, { name: "拥抱之城 II", duration: 256 },
+      { name: "遥远的基因", duration: 234 }, { name: "另一个低声细语", duration: 266 }, { name: "街角", duration: 262 },
+      { name: "公路", duration: 247 }, { name: "未完成的夏天", duration: 255 } ] },
+    { name: "漫长的双重生命", type: "专辑", date: "2045-02-22", songs: [
+      { name: "漫长的双重生命", duration: 250 }, { name: "最后的柔光", duration: 282 }, { name: "未完成的哈利路亚", duration: 240 },
+      { name: "遥远的街角", duration: 249 }, { name: "夏天", duration: 240 }, { name: "午后三点 II", duration: 242 },
+      { name: "年轻人 II", duration: 233 } ] },
+    { name: "最后的深夜", type: "专辑", date: "2048-10-07", songs: [
+      { name: "最后的深夜", duration: 293 }, { name: "沉默的远方", duration: 229 }, { name: "远方 II", duration: 294 },
+      { name: "天线", duration: 292 }, { name: "一个名字 II", duration: 283 }, { name: "旧梦 II", duration: 248 },
+      { name: "透明 II", duration: 260 }, { name: "断电", duration: 235 }, { name: "深夜 II", duration: 235 } ] },
+    ],
   "惘闻": [
     { name: "凌水河", type: "专辑", date: "2000-09-01", songs: [
        { name: "雨 (Demo)", duration: 328 }, { name: "属于记忆的部分 (Demo)", duration: 119 },
@@ -602,7 +1232,59 @@ window.BAND_DISCOGRAPHY = {
        { name: "壬寅 (Ninja Tiger)", duration: 392 },
        { name: "奥林匹克广场 (There's a Walmart underneath the Olympic Square)", duration: 510 },
        { name: "野火 (Wild Fire)", duration: 455 } ] },
-  ],
+      { name: "新的折射", type: "专辑", date: "2027-02-08", songs: [
+      { name: "新的折射", duration: 426 }, { name: "折射", duration: 475 }, { name: "漫长的酒狂", duration: 422 },
+      { name: "另一个甜井", duration: 410 }, { name: "轨迹 II", duration: 460 }, { name: "遥远的静止", duration: 447 },
+      { name: "雾 II", duration: 444 }, { name: "The Seasons", duration: 473 }, { name: "经纬 II", duration: 460 },
+      { name: "辞行 II", duration: 412 } ] },
+    { name: "沉默的第八层地狱", type: "专辑", date: "2029-05-07", songs: [
+      { name: "沉默的第八层地狱", duration: 441 }, { name: "静止 II", duration: 433 }, { name: "引力", duration: 423 },
+      { name: "沉默的驿站", duration: 450 }, { name: "最后的静止", duration: 441 }, { name: "遥远的污水塘", duration: 451 },
+      { name: "最后的破晓", duration: 407 }, { name: "漫长的轨迹", duration: 424 }, { name: "折射 II", duration: 431 } ] },
+    { name: "焦虑抑制剂 II", type: "专辑", date: "2030-12-24", songs: [
+      { name: "焦虑抑制剂 II", duration: 435 }, { name: "潮汐 II", duration: 430 }, { name: "隧道 II", duration: 458 },
+      { name: "潮汐", duration: 451 }, { name: "回旋 II", duration: 434 }, { name: "虚空 II", duration: 439 },
+      { name: "假若明天来临 II", duration: 412 }, { name: "新的引力", duration: 441 } ] },
+    { name: "轨迹", type: "专辑", date: "2033-07-20", songs: [
+      { name: "轨迹", duration: 473 }, { name: "最后的污水塘", duration: 461 }, { name: "最后的虚空", duration: 419 },
+      { name: "另一个假若明天来临", duration: 472 }, { name: "新的轨迹", duration: 454 }, { name: "漫长的鍛高潭", duration: 455 },
+      { name: "抿嘴谣 II", duration: 455 }, { name: "另一个奔丧", duration: 434 } ] },
+    { name: "新的奔丧", type: "专辑", date: "2035-03-13", songs: [
+      { name: "新的奔丧", duration: 411 }, { name: "最后的近景", duration: 465 }, { name: "经纬", duration: 421 },
+      { name: "遥远的奥林匹克广场", duration: 451 }, { name: "长夜 II", duration: 458 }, { name: "虚空", duration: 415 },
+      { name: "漫长的潮汐", duration: 406 }, { name: "回旋", duration: 464 }, { name: "最后的童篇", duration: 419 },
+      { name: "最后的经纬", duration: 421 }, { name: "久违的经纬", duration: 433 } ] },
+    { name: "沉默的长夜", type: "专辑", date: "2037-07-31", songs: [
+      { name: "沉默的长夜", duration: 440 }, { name: "另一个近景", duration: 466 }, { name: "静止", duration: 417 },
+      { name: "另一个凿壁寻光", duration: 429 }, { name: "老虎棒子鸡 II", duration: 414 }, { name: "久违的潮汐", duration: 428 },
+      { name: "最后的鍛高潭", duration: 448 }, { name: "大连，勿语 II", duration: 437 } ] },
+    { name: "另一个竹鹤", type: "专辑", date: "2039-05-14", songs: [
+      { name: "另一个竹鹤", duration: 428 }, { name: "漫长的静止", duration: 434 }, { name: "漫长的凿壁寻光", duration: 429 },
+      { name: "沉默的轨迹", duration: 436 }, { name: "M Reprise", duration: 406 }, { name: "最后的醉忘川", duration: 454 },
+      { name: "生我 II", duration: 470 }, { name: "新的野火", duration: 447 }, { name: "悬在时间轴上 II", duration: 434 } ] },
+    { name: "龙西 II", type: "专辑", date: "2041-05-23", songs: [
+      { name: "龙西 II", duration: 421 }, { name: "我爱爱情 II", duration: 406 }, { name: "The M", duration: 441 },
+      { name: "遥远的假若明天来临", duration: 426 }, { name: "另一个五五路", duration: 423 }, { name: "最后的圆周率", duration: 418 },
+      { name: "The My Crime", duration: 422 }, { name: "未完成的经纬", duration: 412 }, { name: "最后的我爱爱情", duration: 449 },
+      { name: "新的圆周率", duration: 464 } ] },
+    { name: "最后的奥林匹克广场", type: "专辑", date: "2043-07-23", songs: [
+      { name: "最后的奥林匹克广场", duration: 428 }, { name: "最后的老虎棒子鸡", duration: 433 }, { name: "最后的白加黑", duration: 447 },
+      { name: "黄泉水 II", duration: 413 }, { name: "思乡病 II", duration: 444 }, { name: "另一个静止", duration: 465 },
+      { name: "引力 II", duration: 414 }, { name: "遥远的独舞", duration: 411 } ] },
+    { name: "长夜", type: "专辑", date: "2045-07-04", songs: [
+      { name: "长夜", duration: 455 }, { name: "未完成的近景", duration: 466 }, { name: "野火 II", duration: 419 },
+      { name: "凡士林 II", duration: 459 }, { name: "新的水之湄", duration: 435 }, { name: "新的汉人", duration: 443 },
+      { name: "合乐 II", duration: 444 }, { name: "春夏秋冬 II", duration: 459 }, { name: "遥远的引力", duration: 464 },
+      { name: "未完成的假若明天来临", duration: 416 } ] },
+    { name: "遥远的潮汐", type: "专辑", date: "2048-01-29", songs: [
+      { name: "遥远的潮汐", duration: 442 }, { name: "敢问路在何方 II", duration: 406 }, { name: "遥远的海洋之心", duration: 447 },
+      { name: "遥远的妈妈", duration: 445 }, { name: "久违的逃离母宇宙", duration: 455 }, { name: "醉忘川 II", duration: 474 },
+      { name: "污水塘 II", duration: 438 } ] },
+    { name: "久违的丰收", type: "专辑", date: "2050-02-05", songs: [
+      { name: "久违的丰收", duration: 415 }, { name: "The 06M", duration: 431 }, { name: "甜井 II", duration: 444 },
+      { name: "第八层地狱 II", duration: 412 }, { name: "久违的合乐", duration: 459 }, { name: "渔和网 II", duration: 464 },
+      { name: "漫长的经纬", duration: 464 }, { name: "久违的春夏秋冬", duration: 442 } ] },
+    ],
   "沼泽乐队": [
     { name: "沧浪星", type: "专辑", date: "2010-12-18", rating: 7.0, songs: [
        { name: "摇篮星", duration: 187 }, { name: "落木", duration: 435 }, { name: "飞天猪", duration: 797 },
@@ -620,7 +1302,58 @@ window.BAND_DISCOGRAPHY = {
        { name: "卯时 早鸟", duration: 333 } ] },
     { name: "争鸣", type: "专辑", date: "2018-01-01", rating: 8.7, songs: [
        { name: "争鸣 (Excerpt)", duration: 381 }, { name: "争鸣", duration: 2607 } ] },
-  ],
+      { name: "变形记 II", type: "专辑", date: "2027-04-29", songs: [
+      { name: "变形记 II", duration: 520 }, { name: "声声急 II", duration: 520 }, { name: "引力 II", duration: 520 },
+      { name: "摇篮星 II", duration: 520 }, { name: "未完成的静止", duration: 520 }, { name: "静止 II", duration: 520 },
+      { name: "子时 孑影舞 II", duration: 520 }, { name: "遥远的过客", duration: 520 }, { name: "经纬", duration: 520 } ] },
+    { name: "轨迹", type: "专辑", date: "2029-02-03", songs: [
+      { name: "轨迹", duration: 520 }, { name: "回旋", duration: 520 }, { name: "1911第二回 II", duration: 520 },
+      { name: "折射", duration: 520 }, { name: "虚空", duration: 520 }, { name: "漫长的沧浪谁与游", duration: 520 },
+      { name: "遥远的失梦客", duration: 520 }, { name: "沉默的失梦客", duration: 520 } ] },
+    { name: "遥远的回旋", type: "专辑", date: "2031-03-13", songs: [
+      { name: "遥远的回旋", duration: 520 }, { name: "新的灰鹱望海", duration: 520 }, { name: "轨迹 II", duration: 520 },
+      { name: "遥远的酉时 废柴", duration: 520 }, { name: "潮汐", duration: 520 }, { name: "酉时 废柴 II", duration: 520 },
+      { name: "另一个失梦客", duration: 520 }, { name: "沉默的酉时 废柴", duration: 520 }, { name: "最后的声声急", duration: 520 } ] },
+    { name: "遥远的长夜", type: "专辑", date: "2033-01-04", songs: [
+      { name: "遥远的长夜", duration: 520 }, { name: "长夜 II", duration: 520 }, { name: "寅时 稚儿笑 II", duration: 520 },
+      { name: "遥远的飞天猪", duration: 520 }, { name: "久违的争鸣", duration: 520 }, { name: "经纬 II", duration: 520 },
+      { name: "折射 II", duration: 520 }, { name: "回旋 II", duration: 520 }, { name: "卯时 早鸟 II", duration: 520 } ] },
+    { name: "遥远的摇篮星", type: "专辑", date: "2035-07-30", songs: [
+      { name: "遥远的摇篮星", duration: 520 }, { name: "未完成的过客", duration: 520 }, { name: "争鸣 II", duration: 520 },
+      { name: "久违的声声急", duration: 520 }, { name: "最后的灰鹱望海", duration: 520 }, { name: "未完成的失梦客", duration: 520 },
+      { name: "沉默的虚空", duration: 520 } ] },
+    { name: "沧浪谁与游 II", type: "专辑", date: "2037-03-07", songs: [
+      { name: "沧浪谁与游 II", duration: 520 }, { name: "另一个雾", duration: 520 }, { name: "潮汐 II", duration: 520 },
+      { name: "久违的经纬", duration: 520 }, { name: "漫长的静止", duration: 520 }, { name: "沉默的憧憬之船", duration: 520 },
+      { name: "漫长的飞天猪", duration: 520 }, { name: "最后的潮汐", duration: 520 }, { name: "沉默的雾", duration: 520 },
+      { name: "沉默的1911第三回", duration: 520 }, { name: "新的失梦客", duration: 520 } ] },
+    { name: "飞天猪 II", type: "专辑", date: "2039-04-05", songs: [
+      { name: "飞天猪 II", duration: 520 }, { name: "另一个争鸣", duration: 520 }, { name: "静止", duration: 520 },
+      { name: "新的静止", duration: 520 }, { name: "最后的飞天猪", duration: 520 }, { name: "未完成的潮汐", duration: 520 },
+      { name: "长夜", duration: 520 }, { name: "1911第一回 II", duration: 520 }, { name: "遥远的卯时 早鸟", duration: 520 },
+      { name: "另一个静止", duration: 520 } ] },
+    { name: "遥远的争鸣", type: "专辑", date: "2041-07-01", songs: [
+      { name: "遥远的争鸣", duration: 520 }, { name: "沉默的经纬", duration: 520 }, { name: "憧憬之船 II", duration: 520 },
+      { name: "漫长的声声急", duration: 520 }, { name: "落木 II", duration: 520 }, { name: "遥远的静止", duration: 520 },
+      { name: "新的过客", duration: 520 }, { name: "未完成的折射", duration: 520 }, { name: "雾 II", duration: 520 },
+      { name: "1911第四回 II", duration: 520 } ] },
+    { name: "久违的1911第三回", type: "专辑", date: "2043-07-08", songs: [
+      { name: "久违的1911第三回", duration: 520 }, { name: "新的子时 孑影舞", duration: 520 }, { name: "漫长的1911第二回", duration: 520 },
+      { name: "另一个子时 孑影舞", duration: 520 }, { name: "最后的雾", duration: 520 }, { name: "引力", duration: 520 },
+      { name: "漫长的轨迹", duration: 520 }, { name: "最后的寅时 稚儿笑", duration: 520 } ] },
+    { name: "新的回旋", type: "专辑", date: "2045-07-24", songs: [
+      { name: "新的回旋", duration: 520 }, { name: "遥远的寅时 稚儿笑", duration: 520 }, { name: "漫长的虚空", duration: 520 },
+      { name: "久违的潮汐", duration: 520 }, { name: "遥远的1911第一回", duration: 520 }, { name: "未完成的1911第二回", duration: 520 },
+      { name: "另一个1911第三回", duration: 520 }, { name: "遥远的经纬", duration: 520 }, { name: "久违的引力", duration: 520 } ] },
+    { name: "未完成的沧浪谁与游", type: "专辑", date: "2047-08-18", songs: [
+      { name: "未完成的沧浪谁与游", duration: 520 }, { name: "新的虚空", duration: 520 }, { name: "未完成的摇篮星", duration: 520 },
+      { name: "沉默的子时 孑影舞", duration: 520 }, { name: "沉默的过客", duration: 520 }, { name: "另一个酉时 废柴", duration: 520 },
+      { name: "最后的1911第四回", duration: 520 } ] },
+    { name: "未完成的寅时 稚儿笑", type: "专辑", date: "2049-09-28", songs: [
+      { name: "未完成的寅时 稚儿笑", duration: 520 }, { name: "漫长的经纬", duration: 520 }, { name: "最后的落木", duration: 520 },
+      { name: "未完成的飞天猪", duration: 520 }, { name: "遥远的虚空", duration: 520 }, { name: "虚空 II", duration: 520 },
+      { name: "失梦客 II", duration: 520 }, { name: "另一个轨迹", duration: 520 } ] },
+    ],
   "刺猬乐队": [
     { name: "Happy Idle Kid", type: "专辑", date: "2006-03-12", songs: [
        { name: "Idle", duration: 266 }, { name: "Buffer", duration: 181 }, { name: "Cool Bad Girl", duration: 103 },
@@ -668,7 +1401,60 @@ window.BAND_DISCOGRAPHY = {
        { name: "白白白白( White whitE wHiTe WhItE)", duration: 314 },
        { name: "赤子呓语一生梦 (A Newborn Baby Sleep Talking About The Dream Through Life)", duration: 290 },
        { name: "明天以后(Tomorrow Tomorrow)", duration: 454 } ] },
-  ],
+      { name: "夏天 II", type: "专辑", date: "2026-12-22", songs: [
+      { name: "夏天 II", duration: 257 }, { name: "星夜祈盼 II", duration: 239 }, { name: "霓虹 II", duration: 295 },
+      { name: "夏天", duration: 267 }, { name: "勐巴拉娜西 II", duration: 270 }, { name: "春天来了 II", duration: 283 },
+      { name: "天线", duration: 283 } ] },
+    { name: "最后的电影", type: "专辑", date: "2029-03-22", songs: [
+      { name: "最后的电影", duration: 270 }, { name: "出逃", duration: 259 }, { name: "沉默的霓虹", duration: 244 },
+      { name: "未完成的幻象波普星", duration: 286 }, { name: "O,Lord Rise", duration: 272 }, { name: "久违的断电", duration: 241 },
+      { name: "未完成的天线", duration: 297 }, { name: "最后的噪音袭击世界", duration: 275 }, { name: "天线 II", duration: 264 } ] },
+    { name: "太阳下 II", type: "专辑", date: "2031-05-14", songs: [
+      { name: "太阳下 II", duration: 245 }, { name: "漫长的深夜", duration: 281 }, { name: "遥远的光年", duration: 244 },
+      { name: "另一个回声", duration: 270 }, { name: "最后的深夜", duration: 267 }, { name: "漫长的柏油公路", duration: 281 },
+      { name: "久违的公路", duration: 251 }, { name: "远方", duration: 297 }, { name: "久违的深夜", duration: 296 },
+      { name: "深夜", duration: 259 } ] },
+    { name: "旧梦 II", type: "专辑", date: "2033-04-07", songs: [
+      { name: "旧梦 II", duration: 231 }, { name: "假象 II", duration: 255 }, { name: "沉默的黑吻", duration: 238 },
+      { name: "出逃 II", duration: 286 }, { name: "另一个爱之废语", duration: 239 }, { name: "One Echo", duration: 253 },
+      { name: "漫长的橙色", duration: 272 }, { name: "沉默的出逃", duration: 250 } ] },
+    { name: "未完成的明天以后", type: "专辑", date: "2035-06-16", songs: [
+      { name: "未完成的明天以后", duration: 276 }, { name: "回声 II", duration: 272 }, { name: "疯狂生死恋 II", duration: 280 },
+      { name: "久违的街角", duration: 297 }, { name: "公路", duration: 279 }, { name: "公路 II", duration: 265 },
+      { name: "遥远的远方", duration: 281 }, { name: "仙情爱问 II", duration: 282 }, { name: "断电 II", duration: 287 },
+      { name: "梦幻想 II", duration: 285 }, { name: "漫长的天线", duration: 254 } ] },
+    { name: "徙鸟 II", type: "专辑", date: "2037-02-26", songs: [
+      { name: "徙鸟 II", duration: 249 }, { name: "久违的出逃", duration: 248 }, { name: "街角 II", duration: 249 },
+      { name: "新的深夜", duration: 269 }, { name: "深夜 II", duration: 274 }, { name: "回声", duration: 270 },
+      { name: "另一个天歌", duration: 281 } ] },
+    { name: "霓虹", type: "专辑", date: "2039-10-30", songs: [
+      { name: "霓虹", duration: 237 }, { name: "白纸年华 II", duration: 274 }, { name: "在心间 II", duration: 277 },
+      { name: "生命意味 II", duration: 253 }, { name: "沉默的街角", duration: 274 }, { name: "光年", duration: 240 },
+      { name: "久违的天歌", duration: 235 }, { name: "旧梦", duration: 276 }, { name: "遥远的生之响往", duration: 248 },
+      { name: "新的徙鸟", duration: 280 } ] },
+    { name: "另一个星光", type: "专辑", date: "2041-11-12", songs: [
+      { name: "另一个星光", duration: 260 }, { name: "新的街角", duration: 296 }, { name: "漫长的白纸年华", duration: 282 },
+      { name: "另一个蝙蝠", duration: 295 }, { name: "未完成的甜蜜与杀害", duration: 232 }, { name: "遥远的小鬼儿", duration: 258 },
+      { name: "断电", duration: 298 }, { name: "沉默的重庆", duration: 244 } ] },
+    { name: "纸飞机 II", type: "专辑", date: "2043-08-19", songs: [
+      { name: "纸飞机 II", duration: 295 }, { name: "漫长的新星 新星", duration: 262 }, { name: "蝙蝠 II", duration: 249 },
+      { name: "未完成的出逃", duration: 239 }, { name: "漫长的我们是动物", duration: 263 }, { name: "久违的远方", duration: 258 },
+      { name: "最后的旧梦", duration: 252 }, { name: "南瓜 II", duration: 297 }, { name: "另一个夏天", duration: 292 } ] },
+    { name: "最后的胖女孩想", type: "专辑", date: "2045-09-13", songs: [
+      { name: "最后的胖女孩想", duration: 289 }, { name: "街角", duration: 274 }, { name: "沉默的胖女孩想", duration: 239 },
+      { name: "柏油公路 II", duration: 264 }, { name: "噪音袭击世界 II", duration: 255 }, { name: "远方 II", duration: 281 },
+      { name: "久违的爱之废语", duration: 251 }, { name: "生之响往 II", duration: 273 }, { name: "沉默的小鬼儿", duration: 274 } ] },
+    { name: "最后的天歌", type: "专辑", date: "2047-08-01", songs: [
+      { name: "最后的天歌", duration: 240 }, { name: "未完成的星光", duration: 275 }, { name: "新的爱之废语", duration: 236 },
+      { name: "The Elra", duration: 280 }, { name: "久违的龙珠", duration: 256 }, { name: "最后的光年", duration: 246 },
+      { name: "未完成的霓虹", duration: 297 }, { name: "新的断电", duration: 285 }, { name: "光年 II", duration: 258 },
+      { name: "未完成的光年", duration: 280 }, { name: "新的远方", duration: 258 } ] },
+    { name: "久违的回声", type: "专辑", date: "2049-10-22", songs: [
+      { name: "久违的回声", duration: 292 }, { name: "最后的白纸年华", duration: 251 }, { name: "爱之过往 II", duration: 298 },
+      { name: "盼暖春来 II", duration: 230 }, { name: "Elra II", duration: 238 }, { name: "遥远的天线", duration: 232 },
+      { name: "另一个街角", duration: 229 }, { name: "新的回声", duration: 284 }, { name: "沉默的爱之过往", duration: 238 },
+      { name: "沉默的天线", duration: 295 } ] },
+    ],
   "逃跑计划": [
     { name: "带我离开", type: "EP", date: "2008-08-08", songs: [
       { name: "Take Me Away", duration: 206 }, { name: "Is This Love", duration: 219 },
@@ -685,7 +1471,30 @@ window.BAND_DISCOGRAPHY = {
        { name: "你的爱情", duration: 357 }, { name: "海鸥", duration: 225 }, { name: "Noise In My Head", duration: 323 },
        { name: "只是感觉", duration: 326 }, { name: "没什么比你更难忘", duration: 230 },
        { name: "Magic Elevator", duration: 353 }, { name: "10th", duration: 269 } ] },
-  ],
+      { name: "拥抱", type: "EP", date: "2028-05-02", songs: [
+      { name: "拥抱", duration: 310 }, { name: "晚风 II", duration: 265 }, { name: "心跳 II", duration: 280 },
+      { name: "再见再见 II", duration: 312 }, { name: "星光", duration: 253 }, { name: "沉默的琥珀", duration: 288 } ] },
+    { name: "晴天", type: "专辑", date: "2032-09-05", songs: [
+      { name: "晴天", duration: 308 }, { name: "平行线 II", duration: 313 }, { name: "盛夏 II", duration: 269 },
+      { name: "最后的拥抱", duration: 257 }, { name: "一万次悲伤 II", duration: 304 }, { name: "久违的拥抱", duration: 300 },
+      { name: "未完成的星光", duration: 302 }, { name: "久违的平行线", duration: 286 }, { name: "盛夏", duration: 249 },
+      { name: "遥远的平行线", duration: 258 } ] },
+    { name: "沉默的08年我们结婚", type: "专辑", date: "2036-06-19", songs: [
+      { name: "沉默的08年我们结婚", duration: 276 }, { name: "倒计时 II", duration: 279 }, { name: "遥远的阳光照进回忆里", duration: 300 },
+      { name: "心跳", duration: 259 }, { name: "遥远的一万次悲伤", duration: 247 }, { name: "倒计时", duration: 283 },
+      { name: "另一个心跳", duration: 305 }, { name: "彩虹 II", duration: 266 }, { name: "平行线", duration: 309 } ] },
+    { name: "沉默的平行线", type: "专辑", date: "2040-01-18", songs: [
+      { name: "沉默的平行线", duration: 309 }, { name: "久违的暗示", duration: 300 }, { name: "久违的彩虹", duration: 274 },
+      { name: "新的晴天", duration: 277 }, { name: "漫长的平行线", duration: 297 }, { name: "沉默的重来", duration: 312 },
+      { name: "遥远的琥珀", duration: 293 } ] },
+    { name: "The 10th", type: "专辑", date: "2045-03-17", songs: [
+      { name: "The 10th", duration: 258 }, { name: "晚风", duration: 274 }, { name: "久违的再见再见", duration: 288 },
+      { name: "琥珀", duration: 291 }, { name: "只是感觉 II", duration: 285 }, { name: "结婚 II", duration: 271 },
+      { name: "时代之梦 II", duration: 294 } ] },
+    { name: "遥远的盛夏", type: "EP", date: "2048-10-10", songs: [
+      { name: "遥远的盛夏", duration: 255 }, { name: "久违的一万次悲伤", duration: 258 }, { name: "最后的晚风", duration: 264 },
+      { name: "遥远的暗示", duration: 247 } ] },
+    ],
   "布衣乐队": [
     { name: "那么久", type: "专辑", date: "2007-12-18", rating: 7.8, songs: [
        { name: "那么久", duration: 325 }, { name: "在你身旁", duration: 268 }, { name: "羊肉面", duration: 300 },
@@ -720,7 +1529,46 @@ window.BAND_DISCOGRAPHY = {
        { name: "雪花", duration: 309 }, { name: "丢", duration: 334 }, { name: "那么久", duration: 325 },
        { name: "羊肉面", duration: 300 }, { name: "粼兰曲", duration: 407 }, { name: "三疯", duration: 291 },
        { name: "三十里铺", duration: 286 }, { name: "我爱你亲爱的姑娘", duration: 230 }, { name: "守候", duration: 206 } ] },
-  ],
+      { name: "另一个回声", type: "专辑", date: "2027-08-09", songs: [
+      { name: "另一个回声", duration: 272 }, { name: "久违的在你身旁", duration: 294 }, { name: "未完成的断电", duration: 267 },
+      { name: "好风 II", duration: 311 }, { name: "净土 II", duration: 272 }, { name: "出逃", duration: 306 },
+      { name: "遥远的天线", duration: 282 } ] },
+    { name: "天线", type: "专辑", date: "2030-05-16", songs: [
+      { name: "天线", duration: 286 }, { name: "新的旧梦", duration: 265 }, { name: "旧梦 II", duration: 270 },
+      { name: "三峰 II", duration: 265 }, { name: "回声 II", duration: 258 }, { name: "回声", duration: 296 },
+      { name: "未完成的离别", duration: 279 }, { name: "最后的公路", duration: 278 } ] },
+    { name: "未完成的守候", type: "专辑", date: "2032-09-28", songs: [
+      { name: "未完成的守候", duration: 252 }, { name: "遥远的深夜", duration: 286 }, { name: "沉默的院子", duration: 275 },
+      { name: "旧梦", duration: 310 }, { name: "火焰山 II", duration: 255 }, { name: "漫长的天线", duration: 299 },
+      { name: "夏天", duration: 287 }, { name: "小朋友 II", duration: 273 }, { name: "久违的亲你一口", duration: 273 } ] },
+    { name: "空间 II", type: "专辑", date: "2035-08-20", songs: [
+      { name: "空间 II", duration: 278 }, { name: "出发 II", duration: 309 }, { name: "霓虹", duration: 265 },
+      { name: "最后的天线", duration: 261 }, { name: "霓虹 II", duration: 245 }, { name: "遥远的霓虹", duration: 301 },
+      { name: "世事难料 II", duration: 253 } ] },
+    { name: "深夜", type: "专辑", date: "2038-10-30", songs: [
+      { name: "深夜", duration: 270 }, { name: "遥远的在你身旁", duration: 297 }, { name: "未完成的好风", duration: 283 },
+      { name: "天线 II", duration: 285 }, { name: "小怪兽 II", duration: 296 }, { name: "未来 II", duration: 286 },
+      { name: "另一个出发", duration: 280 }, { name: "最后的离别", duration: 266 }, { name: "久违的公路", duration: 283 },
+      { name: "深夜 II", duration: 266 }, { name: "新的远方", duration: 312 } ] },
+    { name: "遥远的羊肉面", type: "专辑", date: "2041-08-26", songs: [
+      { name: "遥远的羊肉面", duration: 261 }, { name: "最后的深夜", duration: 271 }, { name: "新的出逃", duration: 307 },
+      { name: "那么久 II", duration: 245 }, { name: "雪花 II", duration: 274 }, { name: "沉默的守候", duration: 256 },
+      { name: "断电 II", duration: 293 }, { name: "出逃 II", duration: 278 }, { name: "光年 II", duration: 277 } ] },
+    { name: "另一个粼兰曲", type: "专辑", date: "2044-03-26", songs: [
+      { name: "另一个粼兰曲", duration: 261 }, { name: "最后的雪花", duration: 279 }, { name: "街角 II", duration: 259 },
+      { name: "新的远走", duration: 294 }, { name: "另一个火焰山", duration: 272 }, { name: "三十里铺 II", duration: 310 },
+      { name: "远方", duration: 273 }, { name: "远方 II", duration: 308 }, { name: "不累 II", duration: 287 },
+      { name: "未完成的莲花", duration: 254 } ] },
+    { name: "公路 II", type: "专辑", date: "2046-09-28", songs: [
+      { name: "公路 II", duration: 303 }, { name: "粼蓝曲 II", duration: 302 }, { name: "粼兰曲 II", duration: 305 },
+      { name: "未完成的天线", duration: 274 }, { name: "想着你 II", duration: 244 }, { name: "追日 II", duration: 255 },
+      { name: "绿韭菜 II", duration: 275 }, { name: "怎么办 II", duration: 258 }, { name: "我要飞 II", duration: 313 },
+      { name: "最后的在你身旁", duration: 308 }, { name: "新的粼兰曲", duration: 277 } ] },
+    { name: "漫长的公路", type: "专辑", date: "2049-04-02", songs: [
+      { name: "漫长的公路", duration: 295 }, { name: "在你身旁 II", duration: 255 }, { name: "宁夏川 II", duration: 247 },
+      { name: "遥远的好风", duration: 266 }, { name: "另一个秋天", duration: 294 }, { name: "遥远的三峰", duration: 265 },
+      { name: "另一个公路", duration: 263 } ] },
+    ],
   "扭曲的机器": [
     { name: "扭曲的机器", type: "专辑", date: "2000-01-01", songs: [
        { name: "没人给你面子", duration: 194 }, { name: "我没错", duration: 270 }, { name: "小心点", duration: 223 },
@@ -737,14 +1585,68 @@ window.BAND_DISCOGRAPHY = {
        { name: "三十", duration: 467 }, { name: "困兽斗", duration: 310 }, { name: "那一天", duration: 343 },
        { name: "剃刀边缘", duration: 289 }, { name: "让摇滚的声音响彻整个夜晚", duration: 338 }, { name: "紧随节奏POGO", duration: 267 },
        { name: "坚定的信念", duration: 334 }, { name: "天堂里", duration: 254 } ] },
-  ],
+      { name: "未完成的界线", type: "专辑", date: "2027-11-13", songs: [
+      { name: "未完成的界线", duration: 273 }, { name: "未完成的剃刀边缘", duration: 323 }, { name: "铁轨", duration: 298 },
+      { name: "遥远的小心点", duration: 266 }, { name: "困兽斗 II", duration: 310 }, { name: "雷霆", duration: 271 },
+      { name: "荒原 II", duration: 300 } ] },
+    { name: "遥远的灰烬", type: "专辑", date: "2031-11-22", songs: [
+      { name: "遥远的灰烬", duration: 273 }, { name: "遥远的界线", duration: 291 }, { name: "苍穹", duration: 313 },
+      { name: "未完成的裂痕", duration: 310 }, { name: "遥远的裂痕", duration: 322 }, { name: "新世纪 II", duration: 319 },
+      { name: "我没错 II", duration: 305 }, { name: "未完成的新世纪", duration: 325 }, { name: "暗夜", duration: 314 },
+      { name: "漫长的全体出动", duration: 266 } ] },
+    { name: "禁止 II", type: "专辑", date: "2036-11-14", songs: [
+      { name: "禁止 II", duration: 309 }, { name: "本能 II", duration: 333 }, { name: "深渊 II", duration: 301 },
+      { name: "铁轨 II", duration: 302 }, { name: "燃烧", duration: 295 }, { name: "长城", duration: 332 },
+      { name: "镜子中 II", duration: 328 }, { name: "别惹我 II", duration: 329 }, { name: "漫长的我没错", duration: 301 },
+      { name: "久违的天堂里", duration: 277 }, { name: "最后的荒原", duration: 311 } ] },
+    { name: "遥远的铁轨", type: "专辑", date: "2040-12-31", songs: [
+      { name: "遥远的铁轨", duration: 277 }, { name: "三十 II", duration: 276 }, { name: "未完成的铁轨", duration: 305 },
+      { name: "裂痕", duration: 270 }, { name: "沉默的剃刀边缘", duration: 292 }, { name: "小心点 II", duration: 275 },
+      { name: "灰烬", duration: 271 }, { name: "新的小心点", duration: 289 } ] },
+    { name: "证件 II", type: "专辑", date: "2045-03-16", songs: [
+      { name: "证件 II", duration: 277 }, { name: "全体出动 II", duration: 333 }, { name: "最后的全体出动", duration: 310 },
+      { name: "最后的那一天", duration: 294 }, { name: "沉默的纪念碑", duration: 322 }, { name: "长城 II", duration: 294 },
+      { name: "沉默的长城", duration: 300 }, { name: "我们来自地下 II", duration: 273 } ] },
+    { name: "遥远的荒原", type: "专辑", date: "2048-06-12", songs: [
+      { name: "遥远的荒原", duration: 313 }, { name: "另一个钢铁", duration: 285 }, { name: "最后的我们来自地下", duration: 280 },
+      { name: "新的全体出动", duration: 314 }, { name: "燃烧 II", duration: 271 }, { name: "另一个禁止", duration: 279 },
+      { name: "沉默的小心点", duration: 305 }, { name: "阴影 II", duration: 297 }, { name: "荒原", duration: 330 },
+      { name: "灰烬 II", duration: 266 }, { name: "久违的纪念碑", duration: 296 } ] },
+    ],
   "窒息乐队": [
     { name: "窒息", type: "专辑", date: "2004-01-01", songs: [
       { name: "窒息", duration: 280 }, { name: "极限", duration: 270 } ] },
     { name: "无界", type: "专辑", date: "2020-07-27", songs: [
        { name: "Intro", duration: 111 }, { name: "衣锦寒", duration: 300 }, { name: "亚特兰蒂斯", duration: 262 },
        { name: "归航", duration: 301 }, { name: "巨鲸落", duration: 334 }, { name: "黎明之下", duration: 318 } ] },
-  ],
+      { name: "未完成的极限", type: "专辑", date: "2027-07-30", songs: [
+      { name: "未完成的极限", duration: 260 }, { name: "漫长的衣锦寒", duration: 304 }, { name: "新的长城", duration: 303 },
+      { name: "雷霆", duration: 291 }, { name: "Intro Echo", duration: 287 }, { name: "裂痕 II", duration: 258 },
+      { name: "灰烬 II", duration: 247 }, { name: "燃烧", duration: 282 }, { name: "裂痕", duration: 258 },
+      { name: "巨鲸落 II", duration: 272 }, { name: "纪念碑", duration: 268 } ] },
+    { name: "极限 II", type: "专辑", date: "2032-07-31", songs: [
+      { name: "极限 II", duration: 289 }, { name: "亚特兰蒂斯 II", duration: 270 }, { name: "Intro Night", duration: 305 },
+      { name: "衣锦寒 II", duration: 264 }, { name: "长城", duration: 267 }, { name: "长城 II", duration: 272 },
+      { name: "归航 II", duration: 246 }, { name: "钢铁", duration: 283 }, { name: "未完成的苍穹", duration: 256 },
+      { name: "窒息 II", duration: 251 } ] },
+    { name: "暗夜", type: "专辑", date: "2035-12-09", songs: [
+      { name: "暗夜", duration: 247 }, { name: "最后的暗夜", duration: 271 }, { name: "最后的极限", duration: 255 },
+      { name: "雷霆 II", duration: 239 }, { name: "遥远的裂痕", duration: 289 }, { name: "荒原 II", duration: 262 },
+      { name: "深渊 II", duration: 253 }, { name: "新的巨鲸落", duration: 286 }, { name: "遥远的纪念碑", duration: 283 } ] },
+    { name: "The Intro", type: "专辑", date: "2040-07-08", songs: [
+      { name: "The Intro", duration: 269 }, { name: "久违的荒原", duration: 286 }, { name: "遥远的极限", duration: 259 },
+      { name: "未完成的窒息", duration: 247 }, { name: "最后的苍穹", duration: 241 }, { name: "新的归航", duration: 294 },
+      { name: "深渊", duration: 254 }, { name: "沉默的长城", duration: 286 }, { name: "荒原", duration: 245 },
+      { name: "黎明之下 II", duration: 240 } ] },
+    { name: "久违的巨鲸落", type: "专辑", date: "2044-04-06", songs: [
+      { name: "久违的巨鲸落", duration: 258 }, { name: "新的铁轨", duration: 246 }, { name: "沉默的极限", duration: 292 },
+      { name: "铁轨", duration: 280 }, { name: "另一个极限", duration: 243 }, { name: "铁轨 II", duration: 253 },
+      { name: "遥远的窒息", duration: 269 }, { name: "漫长的燃烧", duration: 240 } ] },
+    { name: "另一个巨鲸落", type: "专辑", date: "2049-06-14", songs: [
+      { name: "另一个巨鲸落", duration: 253 }, { name: "苍穹 II", duration: 298 }, { name: "苍穹", duration: 292 },
+      { name: "遥远的归航", duration: 299 }, { name: "久违的窒息", duration: 260 }, { name: "未完成的裂痕", duration: 291 },
+      { name: "漫长的灰烬", duration: 293 } ] },
+    ],
   "郁乐队": [
     { name: "日落伊甸园", type: "EP", date: "2009-01-01", songs: [
       { name: "仙女座", duration: 280 }, { name: "悲伤致死", duration: 270 } ] },
@@ -763,7 +1665,32 @@ window.BAND_DISCOGRAPHY = {
        { name: "再见平凡世界 (器乐纯享版)", duration: 264 }, { name: "夜·幕 (器乐纯享版)", duration: 336 },
        { name: "真理的黄昏 (器乐纯享版)", duration: 330 }, { name: "沉默信徒 (器乐纯享版)", duration: 237 },
        { name: "DIE FROM SORROW (郁郁而终) (20周年纪念版|器乐纯享版)", duration: 415 } ] },
-  ],
+      { name: "新的纪念碑", type: "专辑", date: "2027-12-22", songs: [
+      { name: "新的纪念碑", duration: 292 }, { name: "雷霆", duration: 294 }, { name: "沉默的钢铁", duration: 337 },
+      { name: "灰烬", duration: 276 }, { name: "长城", duration: 320 }, { name: "久违的悲伤致死", duration: 332 },
+      { name: "暗夜 II", duration: 291 } ] },
+    { name: "另一个悲伤致死", type: "专辑", date: "2031-11-20", songs: [
+      { name: "另一个悲伤致死", duration: 307 }, { name: "暗夜", duration: 305 }, { name: "异海之王 II", duration: 287 },
+      { name: "荒原", duration: 318 }, { name: "未完成的仙女座", duration: 304 }, { name: "漫长的沉默信徒", duration: 299 },
+      { name: "新的夜 幕", duration: 314 }, { name: "逆向穿行 II", duration: 285 }, { name: "裂痕", duration: 290 },
+      { name: "轮回之海 II", duration: 319 }, { name: "长城 II", duration: 326 } ] },
+    { name: "仙女座 II", type: "EP", date: "2036-02-23", songs: [
+      { name: "仙女座 II", duration: 276 }, { name: "未完成的裂痕", duration: 296 }, { name: "The Intro", duration: 301 },
+      { name: "夜 幕 II", duration: 336 }, { name: "新的沉默信徒", duration: 291 } ] },
+    { name: "钢铁", type: "专辑", date: "2041-03-02", songs: [
+      { name: "钢铁", duration: 300 }, { name: "新的雷霆", duration: 326 }, { name: "雷霆 II", duration: 321 },
+      { name: "沉默的针锋相对", duration: 325 }, { name: "裂痕 II", duration: 288 }, { name: "纪念碑 II", duration: 310 },
+      { name: "遥远的长城", duration: 292 } ] },
+    { name: "遥远的夜 幕", type: "专辑", date: "2044-10-19", songs: [
+      { name: "遥远的夜 幕", duration: 310 }, { name: "未完成的沉默信徒", duration: 328 }, { name: "沉默的异海之王", duration: 338 },
+      { name: "新的铁轨", duration: 321 }, { name: "燃烧", duration: 336 }, { name: "漫长的荒原", duration: 284 },
+      { name: "另一个裂痕", duration: 308 }, { name: "纪念碑", duration: 341 }, { name: "另一个夜 幕", duration: 301 } ] },
+    { name: "最后的再见平凡世界", type: "专辑", date: "2048-07-29", songs: [
+      { name: "最后的再见平凡世界", duration: 313 }, { name: "再见平凡世界 II", duration: 283 }, { name: "苍穹", duration: 324 },
+      { name: "遥远的沉默信徒", duration: 342 }, { name: "沉默的随行如影", duration: 314 }, { name: "悲伤致死 II", duration: 318 },
+      { name: "未完成的夜 幕", duration: 295 }, { name: "另一个傀儡精神", duration: 276 }, { name: "遥远的傀儡精神", duration: 317 },
+      { name: "灰烬 II", duration: 279 }, { name: "深渊 II", duration: 313 } ] },
+    ],
   "声音玩具": [
     { name: "最美妙的旅行", type: "专辑", date: "2003-12-01", rating: 8.4, songs: [
        { name: "星期天大街", duration: 457 }, { name: "爱玲", duration: 441 }, { name: "未来", duration: 467 },
@@ -779,7 +1706,35 @@ window.BAND_DISCOGRAPHY = {
        { name: "爱是昂贵的", duration: 398 }, { name: "你的城市", duration: 359 }, { name: "没有人能够比我们更接近对方", duration: 370 },
        { name: "昨夜我飞向遥远的火星", duration: 405 }, { name: "月上乌尤", duration: 358 }, { name: "清塘荷韵", duration: 320 },
        { name: "时间之外", duration: 259 }, { name: "超级巨星", duration: 311 } ] },
-  ],
+      { name: "光年 II", type: "专辑", date: "2028-06-23", songs: [
+      { name: "光年 II", duration: 403 }, { name: "未完成的爱玲", duration: 384 }, { name: "街角", duration: 418 },
+      { name: "天线", duration: 437 }, { name: "新的回声", duration: 420 }, { name: "回声 II", duration: 379 },
+      { name: "漫长的时间", duration: 435 }, { name: "The Sleeper", duration: 389 }, { name: "深夜 II", duration: 388 },
+      { name: "不朽 II", duration: 435 } ] },
+    { name: "深夜", type: "专辑", date: "2031-12-08", songs: [
+      { name: "深夜", duration: 441 }, { name: "爱玲 II", duration: 395 }, { name: "公路 II", duration: 372 },
+      { name: "未完成的奇迹", duration: 374 }, { name: "漫长的断电", duration: 390 }, { name: "最后的时间之外", duration: 394 },
+      { name: "未完成的断电", duration: 435 }, { name: "抚琴小夜曲 II", duration: 429 }, { name: "出逃 II", duration: 401 },
+      { name: "新的不朽", duration: 409 } ] },
+    { name: "夏天", type: "专辑", date: "2035-10-22", songs: [
+      { name: "夏天", duration: 405 }, { name: "和那些人一样 II", duration: 433 }, { name: "漫长的深夜", duration: 433 },
+      { name: "沉默的星航者发现号", duration: 408 }, { name: "时间 II", duration: 414 }, { name: "你是无可替代 II", duration: 410 },
+      { name: "旧梦 II", duration: 387 }, { name: "遥远的夏天", duration: 416 }, { name: "光年", duration: 414 },
+      { name: "断电 II", duration: 441 } ] },
+    { name: "另一个奇迹", type: "专辑", date: "2040-04-01", songs: [
+      { name: "另一个奇迹", duration: 393 }, { name: "远方", duration: 395 }, { name: "漫长的旧梦", duration: 391 },
+      { name: "霓虹 II", duration: 438 }, { name: "公路", duration: 427 }, { name: "未来 II", duration: 382 },
+      { name: "时间之外 II", duration: 434 }, { name: "超级巨星 II", duration: 397 }, { name: "伟大说谎者 II", duration: 410 } ] },
+    { name: "青春 II", type: "专辑", date: "2044-03-28", songs: [
+      { name: "青春 II", duration: 438 }, { name: "遥远的远方", duration: 411 }, { name: "另一个和那些人一样", duration: 426 },
+      { name: "出逃", duration: 419 }, { name: "新的夏天", duration: 410 }, { name: "清塘荷韵 II", duration: 376 },
+      { name: "漫长的抚琴小夜曲", duration: 407 }, { name: "沉默的超级巨星", duration: 418 }, { name: "夏天 II", duration: 401 },
+      { name: "沉默的光年", duration: 388 }, { name: "新的公路", duration: 436 } ] },
+    { name: "回声", type: "专辑", date: "2049-02-27", songs: [
+      { name: "回声", duration: 400 }, { name: "远方 II", duration: 429 }, { name: "霓虹", duration: 435 },
+      { name: "奇迹 II", duration: 396 }, { name: "星期天大街 II", duration: 408 }, { name: "最后的回声", duration: 437 },
+      { name: "久违的伟大说谎者", duration: 424 } ] },
+    ],
   "秘密行动": [
     { name: "奇怪的老式娱乐", type: "EP", date: "2013-10-01", songs: [
       { name: "奇怪的老式娱乐", duration: 280 } ] },
@@ -795,7 +1750,45 @@ window.BAND_DISCOGRAPHY = {
        { name: "COPY SHOP", duration: 361 }, { name: "VAMPIRE LOVERS", duration: 327 },
        { name: "FROZEN SONG", duration: 315 }, { name: "TURN BLACK", duration: 323 },
        { name: "FROM THE FUTURE", duration: 368 }, { name: "THE LOOP SIN", duration: 483 } ] },
-  ],
+      { name: "The CHAOS", type: "EP", date: "2027-07-15", songs: [
+      { name: "The CHAOS", duration: 302 }, { name: "Echoes Echo", duration: 351 }, { name: "Sky", duration: 354 },
+      { name: "Rise", duration: 349 }, { name: "Rain", duration: 306 } ] },
+    { name: "Line", type: "EP", date: "2029-12-01", songs: [
+      { name: "Line", duration: 340 }, { name: "The VAMPIRE LOVERS", duration: 305 }, { name: "Hook Lights", duration: 319 },
+      { name: "Echoes Lights", duration: 352 }, { name: "Aamir Night", duration: 307 }, { name: "The Echoes", duration: 326 } ] },
+    { name: "The Hook", type: "专辑", date: "2032-02-14", songs: [
+      { name: "The Hook", duration: 359 }, { name: "Spark", duration: 315 }, { name: "Wave", duration: 335 },
+      { name: "Tech Chords 1.0 Night", duration: 328 }, { name: "Light", duration: 324 }, { name: "The Line", duration: 291 },
+      { name: "COPY SHOP Reprise", duration: 317 } ] },
+    { name: "Wave Rise", type: "EP", date: "2034-10-19", songs: [
+      { name: "Wave Rise", duration: 304 }, { name: "The Signal", duration: 309 }, { name: "The TURN BLACK", duration: 324 },
+      { name: "Echoes", duration: 314 }, { name: "Drift", duration: 313 } ] },
+    { name: "The FROM THE FUTURE", type: "专辑", date: "2037-03-31", songs: [
+      { name: "The FROM THE FUTURE", duration: 292 }, { name: "Signal", duration: 325 }, { name: "The Night", duration: 331 },
+      { name: "The Light", duration: 351 }, { name: "The Tech Chords 1.0", duration: 310 }, { name: "The Sorrow", duration: 309 },
+      { name: "Tech Chords 1.0 II", duration: 319 } ] },
+    { name: "The Echo", type: "专辑", date: "2039-11-18", songs: [
+      { name: "The Echo", duration: 338 }, { name: "No Replay Lights", duration: 316 }, { name: "Echo II", duration: 298 },
+      { name: "TURN BLACK Lights", duration: 315 }, { name: "Signal Lights", duration: 348 }, { name: "The Rise", duration: 323 },
+      { name: "The No Replay", duration: 351 }, { name: "The A Glossy Flirt", duration: 334 }, { name: "The Rain", duration: 326 },
+      { name: "FROM THE FUTURE Echo", duration: 299 } ] },
+    { name: "A Glossy Flirt Lights", type: "专辑", date: "2042-06-25", songs: [
+      { name: "A Glossy Flirt Lights", duration: 337 }, { name: "COPY SHOP Rise", duration: 307 }, { name: "The Suicidium Morbus", duration: 329 },
+      { name: "A Glossy Flirt Reprise", duration: 358 }, { name: "Sorrow Night", duration: 342 }, { name: "Rise Rise", duration: 351 },
+      { name: "ENTER THE GAP Reprise", duration: 307 }, { name: "FROZEN SONG Echo", duration: 300 }, { name: "The NEUTRAL LIFE", duration: 354 },
+      { name: "VAMPIRE LOVERS II", duration: 332 }, { name: "The Aamir", duration: 323 } ] },
+    { name: "Echo", type: "专辑", date: "2044-09-24", songs: [
+      { name: "Echo", duration: 296 }, { name: "Rise Night", duration: 308 }, { name: "The COPY SHOP", duration: 312 },
+      { name: "The Corridor 17", duration: 293 }, { name: "Rise Lights", duration: 289 }, { name: "The FROZEN SONG", duration: 307 },
+      { name: "The THE LOOP SIN", duration: 305 }, { name: "Light Reprise", duration: 307 }, { name: "Hook Rise", duration: 332 } ] },
+    { name: "Line Rise", type: "EP", date: "2046-12-08", songs: [
+      { name: "Line Rise", duration: 321 }, { name: "The Spark", duration: 325 }, { name: "Rise Reprise", duration: 294 },
+      { name: "FROZEN SONG Reprise", duration: 309 }, { name: "Spark Reprise", duration: 317 } ] },
+    { name: "The Wave", type: "专辑", date: "2050-02-03", songs: [
+      { name: "The Wave", duration: 344 }, { name: "THE LOOP SIN II", duration: 357 }, { name: "THE LOOP SIN Rise", duration: 295 },
+      { name: "Aamir Lights", duration: 347 }, { name: "VAMPIRE LOVERS Reprise", duration: 354 }, { name: "Rain Reprise", duration: 351 },
+      { name: "Drift II", duration: 311 }, { name: "Electric Echo Rise", duration: 348 } ] },
+    ],
   "大波浪": [
     { name: "THE BIG WAVE", type: "专辑", date: "2016-09-01", rating: 7.8, songs: [
        { name: "Not Just Imagining", duration: 306 }, { name: "02", duration: 244 },
@@ -819,7 +1812,60 @@ window.BAND_DISCOGRAPHY = {
        { name: "药石罔效", duration: 204 }, { name: "我们在一起颤抖", duration: 232 }, { name: "愿与他重修旧好", duration: 225 },
        { name: "再见！马克西姆", duration: 267 }, { name: "无法忘记她", duration: 222 }, { name: "欲言又止", duration: 231 },
        { name: "踽踽独行", duration: 270 } ] },
-  ],
+      { name: "The Echoes", type: "专辑", date: "2027-02-01", songs: [
+      { name: "The Echoes", duration: 244 }, { name: "Spark Night", duration: 254 }, { name: "The Line", duration: 283 },
+      { name: "药石罔效 II", duration: 238 }, { name: "迷之微笑 II", duration: 237 }, { name: "Line Rise", duration: 228 },
+      { name: "Rough Sea Lights", duration: 284 }, { name: "漫长的再见！马克西姆", duration: 271 }, { name: "Hold On II", duration: 259 } ] },
+    { name: "Light", type: "专辑", date: "2029-03-03", songs: [
+      { name: "Light", duration: 264 }, { name: "The Night", duration: 251 }, { name: "Rise", duration: 248 },
+      { name: "新的嘴上功夫", duration: 227 }, { name: "Signal", duration: 231 }, { name: "No Such Disease II", duration: 283 },
+      { name: "最后的迷之微笑", duration: 228 } ] },
+    { name: "The Falling World", type: "专辑", date: "2031-04-30", songs: [
+      { name: "The Falling World", duration: 292 }, { name: "Drift", duration: 244 }, { name: "Wave Echo", duration: 289 },
+      { name: "Sky", duration: 245 }, { name: "Night", duration: 238 }, { name: "Modern Echo", duration: 290 },
+      { name: "Echo Echo", duration: 270 }, { name: "See The Sun Echo", duration: 234 }, { name: "The Light", duration: 248 },
+      { name: "Night Lights", duration: 277 }, { name: "遥远的新时代", duration: 260 } ] },
+    { name: "Spark", type: "专辑", date: "2033-04-25", songs: [
+      { name: "Spark", duration: 294 }, { name: "久违的愿与他重修旧好", duration: 275 }, { name: "未完成的病态新城", duration: 271 },
+      { name: "The Drift", duration: 263 }, { name: "Drift Reprise", duration: 225 }, { name: "Line", duration: 279 },
+      { name: "The Synth", duration: 280 } ] },
+    { name: "Light Night", type: "专辑", date: "2035-03-20", songs: [
+      { name: "Light Night", duration: 244 }, { name: "Echoes II", duration: 257 }, { name: "Modern Reprise", duration: 239 },
+      { name: "The Signal", duration: 286 }, { name: "人浮于事 II", duration: 246 }, { name: "愿与他重修旧好 II", duration: 271 },
+      { name: "Night Reprise", duration: 246 }, { name: "欲言又止 II", duration: 226 }, { name: "我们在一起颤抖 II", duration: 251 },
+      { name: "Echoes", duration: 254 }, { name: "新的迷之微笑", duration: 227 } ] },
+    { name: "Spark Reprise", type: "专辑", date: "2037-04-30", songs: [
+      { name: "Spark Reprise", duration: 241 }, { name: "遥远的迷之微笑", duration: 230 }, { name: "Light Rise", duration: 240 },
+      { name: "Rise Night", duration: 290 }, { name: "新时代 II", duration: 269 }, { name: "The Just No", duration: 291 },
+      { name: "Fill In Lights", duration: 285 }, { name: "Drift Lights", duration: 274 }, { name: "Wave", duration: 292 },
+      { name: "病态新城 II", duration: 272 } ] },
+    { name: "另一个被自己掏空", type: "专辑", date: "2039-06-20", songs: [
+      { name: "另一个被自己掏空", duration: 235 }, { name: "新的药石罔效", duration: 294 }, { name: "Mommy II", duration: 254 },
+      { name: "另一个病态新城", duration: 249 }, { name: "Sky II", duration: 279 }, { name: "Light Lights", duration: 279 },
+      { name: "沉默的我们在一起颤抖", duration: 231 }, { name: "The Seek", duration: 284 } ] },
+    { name: "The Spark", type: "专辑", date: "2041-08-23", songs: [
+      { name: "The Spark", duration: 277 }, { name: "Signal Rise", duration: 277 }, { name: "嘴上功夫 II", duration: 242 },
+      { name: "The Wave", duration: 289 }, { name: "Spark II", duration: 268 }, { name: "Mickey Echo", duration: 228 },
+      { name: "Drift Echo", duration: 242 } ] },
+    { name: "Just No Night", type: "专辑", date: "2043-09-27", songs: [
+      { name: "Just No Night", duration: 231 }, { name: "The Kiss Girls", duration: 268 }, { name: "漫长的新时代", duration: 233 },
+      { name: "Echo", duration: 271 }, { name: "踽踽独行 II", duration: 234 }, { name: "The Echo", duration: 244 },
+      { name: "Sky Rise", duration: 256 }, { name: "沉默的欲言又止", duration: 244 }, { name: "Love or Kill II", duration: 255 } ] },
+    { name: "Not Just Imagining Night", type: "专辑", date: "2045-12-13", songs: [
+      { name: "Not Just Imagining Night", duration: 243 }, { name: "Rough Sea Echo", duration: 240 }, { name: "Echoes Night", duration: 253 },
+      { name: "漫长的药石罔效", duration: 258 }, { name: "Signal II", duration: 240 }, { name: "Line Reprise", duration: 279 },
+      { name: "Rise Reprise", duration: 291 }, { name: "Mickey Lights", duration: 240 } ] },
+    { name: "The Fill In", type: "专辑", date: "2047-08-29", songs: [
+      { name: "The Fill In", duration: 225 }, { name: "Mommy Rise", duration: 258 }, { name: "Sky Reprise", duration: 242 },
+      { name: "Secret Lover Rise", duration: 271 }, { name: "No Such Disease Lights", duration: 232 }, { name: "Echo Rise", duration: 259 },
+      { name: "Modern Lights", duration: 263 }, { name: "未完成的迷之微笑", duration: 284 }, { name: "The Rain", duration: 247 },
+      { name: "祝贺 II", duration: 286 } ] },
+    { name: "Kiss Girls Night", type: "专辑", date: "2050-02-01", songs: [
+      { name: "Kiss Girls Night", duration: 226 }, { name: "The Modern", duration: 245 }, { name: "Signal Night", duration: 288 },
+      { name: "Unknown Night", duration: 282 }, { name: "Mickey Night", duration: 290 }, { name: "Kiss Girls Echo", duration: 282 },
+      { name: "新的踽踽独行", duration: 263 }, { name: "Seek Echo", duration: 277 }, { name: "久违的再见！马克西姆", duration: 243 },
+      { name: "Line II", duration: 251 } ] },
+    ],
   "房东的猫": [
     { name: "房东的猫", type: "专辑", date: "2017-01-26", rating: 7.8, songs: [
       { name: "美好事物", duration: 280 }, { name: "不知归期的故人", duration: 270 }, { name: "秋酿", duration: 260 },
@@ -840,7 +1886,59 @@ window.BAND_DISCOGRAPHY = {
        { name: "如何", duration: 245 }, { name: "浪漫日记", duration: 236 }, { name: "光的房子", duration: 250 },
        { name: "是永不止息的海浪", duration: 299 }, { name: "浅的堆叠", duration: 281 }, { name: "边界", duration: 224 },
        { name: "光的房子 (乐队版)", duration: 230 } ] },
-  ],
+      { name: "久违的行囊", type: "专辑", date: "2027-02-27", songs: [
+      { name: "久违的行囊", duration: 258 }, { name: "石阶", duration: 266 }, { name: "Indigo II", duration: 300 },
+      { name: "石阶 II", duration: 240 }, { name: "最后的不来也不去", duration: 270 }, { name: "如何 II", duration: 284 },
+      { name: "行囊", duration: 295 }, { name: "往往 II", duration: 270 }, { name: "慢游 II", duration: 266 } ] },
+    { name: "美好事物 II", type: "专辑", date: "2029-01-14", songs: [
+      { name: "美好事物 II", duration: 232 }, { name: "北风", duration: 276 }, { name: "河流", duration: 251 },
+      { name: "漫长的屋檐", duration: 288 }, { name: "秋酿 II", duration: 298 }, { name: "独一 II", duration: 250 },
+      { name: "另一个孤独之书", duration: 294 } ] },
+    { name: "遥远的秋酿", type: "专辑", date: "2031-01-28", songs: [
+      { name: "遥远的秋酿", duration: 244 }, { name: "久违的美好事物", duration: 251 }, { name: "屋檐", duration: 255 },
+      { name: "久违的孤独之书", duration: 300 }, { name: "月亮拥抱我 II", duration: 260 }, { name: "远方 II", duration: 273 },
+      { name: "最后的黄昏", duration: 281 }, { name: "新的边界", duration: 242 } ] },
+    { name: "最后的西部故事", type: "专辑", date: "2033-05-07", songs: [
+      { name: "最后的西部故事", duration: 250 }, { name: "旧信 II", duration: 250 }, { name: "短叹 II", duration: 300 },
+      { name: "城市动物园 II", duration: 238 }, { name: "浪漫日记 II", duration: 276 }, { name: "时间简史 II", duration: 287 },
+      { name: "漫长的黄昏", duration: 256 } ] },
+    { name: "行囊 II", type: "专辑", date: "2035-06-07", songs: [
+      { name: "行囊 II", duration: 297 }, { name: "久违的柔软", duration: 266 }, { name: "麦田", duration: 248 },
+      { name: "另一个黄昏", duration: 262 }, { name: "未完成的屋檐", duration: 273 }, { name: "故人 II", duration: 250 },
+      { name: "最后的浪漫日记", duration: 248 } ] },
+    { name: "另一个远方", type: "专辑", date: "2037-04-24", songs: [
+      { name: "另一个远方", duration: 249 }, { name: "旧信", duration: 257 }, { name: "孤独之书 II", duration: 278 },
+      { name: "远方", duration: 277 }, { name: "黄昏", duration: 247 }, { name: "遥远的如常", duration: 293 },
+      { name: "柔软 II", duration: 272 } ] },
+    { name: "麦田 II", type: "专辑", date: "2039-10-19", songs: [
+      { name: "麦田 II", duration: 244 }, { name: "遥远的愿你有故乡", duration: 257 }, { name: "漫长的所以来吧", duration: 291 },
+      { name: "屋檐 II", duration: 273 }, { name: "故人", duration: 244 }, { name: "黄昏 II", duration: 283 },
+      { name: "未完成的柔软", duration: 243 }, { name: "新的简情歌", duration: 233 }, { name: "遥远的行囊", duration: 281 },
+      { name: "The Distance", duration: 255 }, { name: "遥远的石阶", duration: 290 } ] },
+    { name: "未完成的河流", type: "专辑", date: "2041-05-18", songs: [
+      { name: "未完成的河流", duration: 263 }, { name: "未完成的所以来吧", duration: 296 }, { name: "另一个旧信", duration: 254 },
+      { name: "久违的麦田", duration: 290 }, { name: "沉默的黄昏", duration: 263 }, { name: "简情歌 II", duration: 267 },
+      { name: "遥远的河流", duration: 301 }, { name: "漫长的城市动物园", duration: 288 }, { name: "河流 II", duration: 243 },
+      { name: "最后的所以来吧", duration: 248 }, { name: "漫长的北风", duration: 289 } ] },
+    { name: "The Indigo", type: "专辑", date: "2043-08-07", songs: [
+      { name: "The Indigo", duration: 296 }, { name: "沉默的行囊", duration: 249 }, { name: "新的北风", duration: 237 },
+      { name: "最后的麦田", duration: 235 }, { name: "未完成的旧信", duration: 282 }, { name: "未完成的愿你有故乡", duration: 289 },
+      { name: "新的愿你有故乡", duration: 263 }, { name: "边界 II", duration: 285 }, { name: "久违的旧信", duration: 262 } ] },
+    { name: "久违的城市动物园", type: "专辑", date: "2045-09-02", songs: [
+      { name: "久违的城市动物园", duration: 297 }, { name: "沉默的麦田", duration: 277 }, { name: "新的麦田", duration: 301 },
+      { name: "另一个城市动物园", duration: 290 }, { name: "遥远的屋檐", duration: 270 }, { name: "生日快乐 II", duration: 298 },
+      { name: "最后的旧信", duration: 298 }, { name: "漫长的故人", duration: 273 }, { name: "久违的河流", duration: 237 },
+      { name: "遥远的生日快乐", duration: 298 }, { name: "久违的如何", duration: 301 } ] },
+    { name: "新的短叹", type: "专辑", date: "2047-12-06", songs: [
+      { name: "新的短叹", duration: 279 }, { name: "愿你有故乡 II", duration: 265 }, { name: "另一个慢游", duration: 251 },
+      { name: "遥远的美好事物", duration: 270 }, { name: "如常 II", duration: 285 }, { name: "新的故人", duration: 264 },
+      { name: "最后的河流", duration: 239 }, { name: "未完成的不来也不去", duration: 270 }, { name: "北风 II", duration: 274 } ] },
+    { name: "最后的北风", type: "专辑", date: "2049-11-07", songs: [
+      { name: "最后的北风", duration: 276 }, { name: "沉默的简情歌", duration: 272 }, { name: "沉默的屋檐", duration: 251 },
+      { name: "不来也不去 II", duration: 269 }, { name: "未完成的黄昏", duration: 282 }, { name: "久违的远方", duration: 273 },
+      { name: "久违的月亮拥抱我", duration: 279 }, { name: "另一个如常", duration: 299 }, { name: "新的旧信", duration: 246 },
+      { name: "漫长的柔软", duration: 287 } ] },
+    ],
   "鹿先森乐队": [
     { name: "所有的酒, 都不如你", type: "专辑", date: "2016-01-01", rating: 7.5, songs: [
        { name: "失眠", duration: 329 }, { name: "我们拥抱亲吻相爱的人", duration: 279 }, { name: "愿长夜里有人陪你说话", duration: 320 },
@@ -861,7 +1959,55 @@ window.BAND_DISCOGRAPHY = {
        { name: "你说", duration: 204 }, { name: "希望你的明天比昨天更自由", duration: 224 }, { name: "重庆", duration: 299 },
        { name: "消失在子夜", duration: 201 }, { name: "夏夜没有你，但有海风吹", duration: 238 }, { name: "人间幕幕", duration: 263 },
        { name: "生之河", duration: 245 } ] },
-  ],
+      { name: "春风十里 II", type: "专辑", date: "2026-12-07", songs: [
+      { name: "春风十里 II", duration: 260 }, { name: "短篇 II", duration: 279 }, { name: "漫长的之间", duration: 255 },
+      { name: "消失在子夜 II", duration: 265 }, { name: "最后的行囊", duration: 260 }, { name: "与我轻轻唱 II", duration: 285 },
+      { name: "旧信", duration: 281 }, { name: "另一个失眠", duration: 243 } ] },
+    { name: "未完成的失眠", type: "专辑", date: "2029-04-16", songs: [
+      { name: "未完成的失眠", duration: 310 }, { name: "漫长的短篇", duration: 261 }, { name: "石阶", duration: 304 },
+      { name: "新的故人", duration: 289 }, { name: "另一个屋檐", duration: 282 }, { name: "另一个行囊", duration: 260 },
+      { name: "旧信 II", duration: 254 }, { name: "沉默的远离他们", duration: 303 }, { name: "沉默的短篇", duration: 286 },
+      { name: "晚安 II", duration: 274 }, { name: "北风", duration: 248 } ] },
+    { name: "麦田 II", type: "专辑", date: "2031-06-07", songs: [
+      { name: "麦田 II", duration: 276 }, { name: "屋檐 II", duration: 276 }, { name: "远离他们 II", duration: 274 },
+      { name: "漫长的河流", duration: 245 }, { name: "黄昏 II", duration: 292 }, { name: "遥远的行囊", duration: 269 },
+      { name: "远方 II", duration: 253 }, { name: "河流", duration: 241 }, { name: "一起跳支舞 II", duration: 287 },
+      { name: "北风 II", duration: 287 }, { name: "故人 II", duration: 290 } ] },
+    { name: "麦田", type: "专辑", date: "2034-01-06", songs: [
+      { name: "麦田", duration: 252 }, { name: "新的麦田", duration: 275 }, { name: "最后的石阶", duration: 276 },
+      { name: "黄昏", duration: 299 }, { name: "屋檐", duration: 260 }, { name: "远方", duration: 285 },
+      { name: "遥远的生逢灿烂", duration: 257 }, { name: "沉默的麦田", duration: 272 }, { name: "最后的北风", duration: 280 },
+      { name: "遥远的与我轻轻唱", duration: 259 }, { name: "故人", duration: 283 } ] },
+    { name: "遥远的小夜曲", type: "专辑", date: "2036-05-09", songs: [
+      { name: "遥远的小夜曲", duration: 309 }, { name: "久违的小夜曲", duration: 297 }, { name: "新的晚安", duration: 311 },
+      { name: "河流 II", duration: 283 }, { name: "遥远的很久以前", duration: 246 }, { name: "久违的短篇", duration: 258 },
+      { name: "风云日记 II", duration: 282 }, { name: "久违的华年", duration: 256 }, { name: "最后的风云日记", duration: 305 },
+      { name: "新的小夜曲", duration: 264 }, { name: "新的石阶", duration: 241 } ] },
+    { name: "另一个与我轻轻唱", type: "专辑", date: "2038-04-10", songs: [
+      { name: "另一个与我轻轻唱", duration: 296 }, { name: "新的北风", duration: 256 }, { name: "最后的一起跳支舞", duration: 302 },
+      { name: "未完成的行囊", duration: 304 }, { name: "未完成的与我轻轻唱", duration: 295 }, { name: "The Time", duration: 269 },
+      { name: "漫长的屋檐", duration: 258 }, { name: "漫长的北风", duration: 256 }, { name: "最后的消失在子夜", duration: 279 } ] },
+    { name: "遥远的消失在子夜", type: "专辑", date: "2041-01-18", songs: [
+      { name: "遥远的消失在子夜", duration: 258 }, { name: "漫长的重庆", duration: 248 }, { name: "Time II", duration: 266 },
+      { name: "最后的能随心情来听歌", duration: 288 }, { name: "沉默的华年", duration: 273 }, { name: "久违的人间幕幕", duration: 296 },
+      { name: "人间幕幕 II", duration: 277 } ] },
+    { name: "未完成的很久以前", type: "专辑", date: "2042-11-11", songs: [
+      { name: "未完成的很久以前", duration: 266 }, { name: "话语 II", duration: 256 }, { name: "漫长的昨日", duration: 303 },
+      { name: "未完成的黄昏", duration: 265 }, { name: "遥远的屋檐", duration: 295 }, { name: "沉默的屋檐", duration: 283 },
+      { name: "未完成的小夜曲", duration: 300 }, { name: "生之河 II", duration: 263 }, { name: "行囊 II", duration: 249 } ] },
+    { name: "久违的故人", type: "专辑", date: "2045-07-03", songs: [
+      { name: "久违的故人", duration: 270 }, { name: "石阶 II", duration: 274 }, { name: "另一个旧信", duration: 271 },
+      { name: "漫长的水生", duration: 288 }, { name: "之间 II", duration: 255 }, { name: "漫长的晚安", duration: 265 },
+      { name: "未完成的人间幕幕", duration: 274 }, { name: "行囊", duration: 299 }, { name: "最后的华年", duration: 310 } ] },
+    { name: "遥远的北风", type: "专辑", date: "2047-11-28", songs: [
+      { name: "遥远的北风", duration: 261 }, { name: "生逢灿烂 II", duration: 263 }, { name: "漫长的远方", duration: 247 },
+      { name: "遥远的风云日记", duration: 261 }, { name: "久违的北风", duration: 288 }, { name: "未完成的春风十里", duration: 255 },
+      { name: "另一个水生", duration: 299 }, { name: "漫长的远离他们", duration: 260 } ] },
+    { name: "久违的很久以前", type: "专辑", date: "2049-11-15", songs: [
+      { name: "久违的很久以前", duration: 283 }, { name: "小夜曲 II", duration: 256 }, { name: "遥远的旧信", duration: 246 },
+      { name: "漫长的消失在子夜", duration: 298 }, { name: "另一个一起跳支舞", duration: 298 }, { name: "新的风云日记", duration: 283 },
+      { name: "沉默的之间", duration: 249 }, { name: "久违的你说", duration: 246 }, { name: "昨日 II", duration: 258 } ] },
+    ],
   "低苦艾": [
     { name: "苦艾酒", type: "EP", date: "2006-01-01", songs: [
       { name: "苦艾酒", duration: 280 } ] },
@@ -893,7 +2039,52 @@ window.BAND_DISCOGRAPHY = {
        { name: "少年", duration: 267 }, { name: "驰名商标", duration: 230 }, { name: "游泳冠军与水乳钟", duration: 244 },
        { name: "Cheer Up", duration: 215 }, { name: "素西", duration: 257 }, { name: "怀抱吉他改变世界", duration: 361 },
        { name: "季宏路", duration: 37 } ] },
-  ],
+      { name: "河流", type: "专辑", date: "2027-02-02", songs: [
+      { name: "河流", duration: 264 }, { name: "未完成的候鸟", duration: 254 }, { name: "另一个麦田", duration: 281 },
+      { name: "黄昏", duration: 308 }, { name: "Cheer Up II", duration: 261 }, { name: "北风 II", duration: 268 },
+      { name: "新的荒原", duration: 270 } ] },
+    { name: "沉默的行囊", type: "专辑", date: "2029-09-05", songs: [
+      { name: "沉默的行囊", duration: 269 }, { name: "最后的故人", duration: 251 }, { name: "行囊 II", duration: 252 },
+      { name: "那只船 II", duration: 313 }, { name: "旧信", duration: 314 }, { name: "故人", duration: 292 },
+      { name: "河流 II", duration: 252 }, { name: "沉默的黄昏", duration: 274 }, { name: "麦田 II", duration: 253 },
+      { name: "行囊", duration: 281 } ] },
+    { name: "另一个小花花", type: "专辑", date: "2031-10-20", songs: [
+      { name: "另一个小花花", duration: 251 }, { name: "久违的哑脊背", duration: 261 }, { name: "漫长的行囊", duration: 264 },
+      { name: "新的行囊", duration: 271 }, { name: "漫长的兰州 兰州", duration: 262 }, { name: "新的麦田", duration: 296 },
+      { name: "一个和一万个 II", duration: 297 }, { name: "转山 II", duration: 298 }, { name: "旧信 II", duration: 260 } ] },
+    { name: "石阶 II", type: "EP", date: "2033-11-02", songs: [
+      { name: "石阶 II", duration: 310 }, { name: "最后的石阶", duration: 262 }, { name: "久违的旧信", duration: 252 },
+      { name: "漫长的麦田", duration: 302 }, { name: "未完成的过什布隆克喀", duration: 269 }, { name: "遥远的阿帮阿忙", duration: 297 } ] },
+    { name: "未完成的故人", type: "专辑", date: "2036-01-05", songs: [
+      { name: "未完成的故人", duration: 300 }, { name: "随风而逝 II", duration: 301 }, { name: "遥远的远方", duration: 314 },
+      { name: "不叫鸟 II", duration: 281 }, { name: "新的苦艾酒", duration: 269 }, { name: "麦田", duration: 257 },
+      { name: "命若琴弦 II", duration: 295 }, { name: "石阶", duration: 264 }, { name: "漫长的黄昏", duration: 318 },
+      { name: "新的兰州 兰州", duration: 279 } ] },
+    { name: "漫长的旧信", type: "专辑", date: "2038-05-11", songs: [
+      { name: "漫长的旧信", duration: 296 }, { name: "阿帮阿忙 II", duration: 295 }, { name: "最后的另一个方向", duration: 255 },
+      { name: "清晨日暮 II", duration: 262 }, { name: "屋檐", duration: 313 }, { name: "沉默的麦田", duration: 301 },
+      { name: "黄昏 II", duration: 282 }, { name: "远方", duration: 264 }, { name: "新的那只船", duration: 300 } ] },
+    { name: "最后的苦艾酒", type: "专辑", date: "2040-06-20", songs: [
+      { name: "最后的苦艾酒", duration: 302 }, { name: "另一个故人", duration: 274 }, { name: "漫长的河流", duration: 257 },
+      { name: "未完成的麦田", duration: 264 }, { name: "最后的那只船", duration: 299 }, { name: "遥远的石阶", duration: 298 },
+      { name: "新的旧信", duration: 287 }, { name: "遥远的守 夜 人", duration: 309 }, { name: "小花花 II", duration: 310 },
+      { name: "荒原 II", duration: 289 }, { name: "新的远方", duration: 313 } ] },
+    { name: "另一个我爱你", type: "专辑", date: "2043-03-28", songs: [
+      { name: "另一个我爱你", duration: 256 }, { name: "哑脊背 II", duration: 251 }, { name: "另一个屋檐", duration: 260 },
+      { name: "挽歌 II", duration: 317 }, { name: "遥远的屋檐", duration: 303 }, { name: "你在哪里 II", duration: 265 },
+      { name: "红与黑 II", duration: 260 } ] },
+    { name: "过什布隆克喀 II", type: "专辑", date: "2045-04-13", songs: [
+      { name: "过什布隆克喀 II", duration: 285 }, { name: "远方 II", duration: 312 }, { name: "另一个清晨日暮", duration: 288 },
+      { name: "沉默的漂浮城", duration: 313 }, { name: "最后的北风", duration: 253 }, { name: "火车快开 II", duration: 256 },
+      { name: "另一个一个和一万个", duration: 252 }, { name: "另一个少年", duration: 309 }, { name: "北风", duration: 304 } ] },
+    { name: "赶路人 II", type: "EP", date: "2047-08-12", songs: [
+      { name: "赶路人 II", duration: 266 }, { name: "新的不叫鸟", duration: 317 }, { name: "守 夜 人 II", duration: 261 },
+      { name: "另一个河流", duration: 281 } ] },
+    { name: "缺席 II", type: "专辑", date: "2049-09-24", songs: [
+      { name: "缺席 II", duration: 300 }, { name: "我爱你 II", duration: 261 }, { name: "沉默的故人", duration: 298 },
+      { name: "漫长的另一个方向", duration: 290 }, { name: "最后的二月肖像", duration: 260 }, { name: "久违的你在哪里", duration: 283 },
+      { name: "另一个哑脊背", duration: 274 }, { name: "沉默的旧信", duration: 270 }, { name: "故人 II", duration: 293 } ] },
+    ],
   "丢火车": [
     { name: "丢火车", type: "EP", date: "2008-01-01", songs: [
       { name: "茶底世界", duration: 281 } ] },
@@ -907,7 +2098,35 @@ window.BAND_DISCOGRAPHY = {
        { name: "索菲亚", duration: 257 }, { name: "浮生", duration: 263 }, { name: "哈喽 哈喽", duration: 220 },
        { name: "晚安", duration: 360 }, { name: "瑞秋", duration: 278 }, { name: "生日快乐", duration: 326 },
        { name: "傻鸟", duration: 208 }, { name: "小猫咪", duration: 208 } ] },
-  ],
+      { name: "新的游歌", type: "专辑", date: "2027-03-02", songs: [
+      { name: "新的游歌", duration: 270 }, { name: "北风", duration: 249 }, { name: "浮生 II", duration: 287 },
+      { name: "屋檐 II", duration: 272 }, { name: "角落 II", duration: 283 }, { name: "遥远的麦田", duration: 300 },
+      { name: "漫长的无限可能", duration: 276 } ] },
+    { name: "最后的石阶", type: "专辑", date: "2030-08-07", songs: [
+      { name: "最后的石阶", duration: 260 }, { name: "沉默的远方", duration: 241 }, { name: "新的无限可能", duration: 291 },
+      { name: "火车日记 II", duration: 246 }, { name: "未完成的生日快乐", duration: 288 }, { name: "河流 II", duration: 264 },
+      { name: "未完成的石阶", duration: 244 }, { name: "晚安 II", duration: 304 } ] },
+    { name: "黄昏", type: "专辑", date: "2034-02-21", songs: [
+      { name: "黄昏", duration: 277 }, { name: "另一个麦田", duration: 250 }, { name: "索菲亚 II", duration: 242 },
+      { name: "未完成的角落", duration: 297 }, { name: "游歌 II", duration: 263 }, { name: "久违的呼吸", duration: 286 },
+      { name: "沉默的屋檐", duration: 255 }, { name: "石阶", duration: 274 } ] },
+    { name: "小猫咪 II", type: "专辑", date: "2036-09-23", songs: [
+      { name: "小猫咪 II", duration: 271 }, { name: "远方 II", duration: 260 }, { name: "旧信 II", duration: 276 },
+      { name: "远方", duration: 240 }, { name: "另一个哈喽 哈喽", duration: 273 }, { name: "河流", duration: 278 },
+      { name: "未完成的傻鸟", duration: 262 }, { name: "久违的哈喽 哈喽", duration: 267 } ] },
+    { name: "漫长的北风", type: "EP", date: "2039-09-13", songs: [
+      { name: "漫长的北风", duration: 285 }, { name: "哈喽 哈喽 II", duration: 269 }, { name: "生日快乐 II", duration: 296 },
+      { name: "另一个游歌", duration: 297 }, { name: "新的北风", duration: 252 }, { name: "行囊 II", duration: 293 } ] },
+    { name: "行囊", type: "EP", date: "2042-12-21", songs: [
+      { name: "行囊", duration: 298 }, { name: "故人", duration: 306 }, { name: "另一个石阶", duration: 297 },
+      { name: "故人 II", duration: 302 }, { name: "遥远的呼吸", duration: 254 }, { name: "旧信", duration: 240 } ] },
+    { name: "麦田 II", type: "专辑", date: "2046-02-21", songs: [
+      { name: "麦田 II", duration: 279 }, { name: "最后的昆虫幻想", duration: 306 }, { name: "漫长的麦田", duration: 301 },
+      { name: "未完成的行囊", duration: 277 }, { name: "沉默的角落", duration: 304 }, { name: "茶底世界 II", duration: 260 },
+      { name: "北风 II", duration: 292 } ] },
+    { name: "遥远的故人", type: "EP", date: "2049-03-27", songs: [
+      { name: "遥远的故人", duration: 279 }, { name: "沉默的浮生", duration: 305 }, { name: "漂浮 II", duration: 304 } ] },
+    ],
   "旅行团": [
     { name: "来福胶泥", type: "专辑", date: "2008-05-08", rating: 7.9, songs: [
        { name: "Intro", duration: 165 }, { name: "回到巴巴拉拉的城堡", duration: 248 },
@@ -953,7 +2172,60 @@ window.BAND_DISCOGRAPHY = {
       { name: "天涯路口", duration: 280 }, { name: "她在哪，家在哪", duration: 270 }, { name: "老朋友", duration: 265 },
       { name: "最好的时候", duration: 280 }, { name: "夏夜的绚烂", duration: 275 }, { name: "阿奶", duration: 270 },
       { name: "下一站", duration: 280 } ] },
-  ],
+      { name: "遥远的琥珀", type: "专辑", date: "2027-04-25", songs: [
+      { name: "遥远的琥珀", duration: 254 }, { name: "未完成的晚风", duration: 276 }, { name: "平行线", duration: 260 },
+      { name: "情书 II", duration: 263 }, { name: "北京夏夜 II", duration: 224 }, { name: "彩虹 II", duration: 288 },
+      { name: "拥抱 II", duration: 258 }, { name: "星光", duration: 286 }, { name: "琥珀", duration: 236 },
+      { name: "心跳", duration: 273 }, { name: "新的彩虹", duration: 257 } ] },
+    { name: "心跳 II", type: "专辑", date: "2029-01-03", songs: [
+      { name: "心跳 II", duration: 256 }, { name: "未完成的心跳", duration: 247 }, { name: "盛夏", duration: 288 },
+      { name: "另一个星光", duration: 278 }, { name: "新的平行线", duration: 269 }, { name: "倒计时", duration: 285 },
+      { name: "最后的小龙人", duration: 259 }, { name: "The Intro", duration: 258 }, { name: "Bye Bye Rise", duration: 242 },
+      { name: "拥抱", duration: 268 } ] },
+    { name: "晴天", type: "专辑", date: "2031-01-14", songs: [
+      { name: "晴天", duration: 241 }, { name: "父亲 II", duration: 232 }, { name: "遥远的小龙人", duration: 283 },
+      { name: "遥远的问号", duration: 226 }, { name: "另一个平行线", duration: 221 }, { name: "新的星光", duration: 276 },
+      { name: "沉默的利物浦", duration: 239 } ] },
+    { name: "Outro Rise", type: "专辑", date: "2033-03-30", songs: [
+      { name: "Outro Rise", duration: 240 }, { name: "晚风", duration: 251 }, { name: "沉默的晚风", duration: 277 },
+      { name: "遥远的拥抱", duration: 285 }, { name: "新的利物浦", duration: 238 }, { name: "未完成的利物浦", duration: 247 },
+      { name: "盛夏 II", duration: 253 }, { name: "The Marry", duration: 252 }, { name: "倒计时 II", duration: 254 },
+      { name: "遥远的风定忧深", duration: 259 }, { name: "星光 II", duration: 224 } ] },
+    { name: "久违的琥珀", type: "专辑", date: "2035-07-23", songs: [
+      { name: "久违的琥珀", duration: 246 }, { name: "平行线 II", duration: 240 }, { name: "于是我不再唱歌 II", duration: 253 },
+      { name: "中央花园 II", duration: 232 }, { name: "沉默的琥珀", duration: 282 }, { name: "漫长的残酷青春", duration: 262 },
+      { name: "漫长的平行线", duration: 283 }, { name: "岛屿 II", duration: 228 }, { name: "最后的老朋友", duration: 242 },
+      { name: "沉默的平行线", duration: 256 } ] },
+    { name: "Panda Rise", type: "专辑", date: "2037-09-22", songs: [
+      { name: "Panda Rise", duration: 222 }, { name: "另一个盛夏", duration: 264 }, { name: "The Outro", duration: 252 },
+      { name: "久违的盛夏", duration: 222 }, { name: "Intro II", duration: 254 }, { name: "另一个西雅图阳光", duration: 266 },
+      { name: "天涯路口 II", duration: 227 }, { name: "漫长的拥抱", duration: 272 }, { name: "未完成的拥抱", duration: 259 } ] },
+    { name: "另一个晚风", type: "专辑", date: "2039-05-13", songs: [
+      { name: "另一个晚风", duration: 266 }, { name: "漫长的厦门之夏", duration: 248 }, { name: "终结日 II", duration: 230 },
+      { name: "另一个星辰", duration: 273 }, { name: "遥远的情书", duration: 249 }, { name: "未完成的轮廓", duration: 263 },
+      { name: "沉默的残酷青春", duration: 245 } ] },
+    { name: "新的新开世界", type: "专辑", date: "2041-04-28", songs: [
+      { name: "新的新开世界", duration: 222 }, { name: "未完成的天涯路口", duration: 269 }, { name: "Panda Night", duration: 245 },
+      { name: "另一个生命是场马拉松", duration: 227 }, { name: "你没有名字 II", duration: 244 }, { name: "稻田间 II", duration: 279 },
+      { name: "The Bye Bye", duration: 242 }, { name: "最后的父亲", duration: 227 }, { name: "生命是场马拉松 II", duration: 289 },
+      { name: "行人要走斑马线 II", duration: 257 } ] },
+    { name: "柳江 II", type: "专辑", date: "2043-11-13", songs: [
+      { name: "柳江 II", duration: 223 }, { name: "最后的晴天", duration: 258 }, { name: "Marry Night", duration: 261 },
+      { name: "沉默的盛夏", duration: 232 }, { name: "新的乘风而来", duration: 247 }, { name: "另一个倒计时", duration: 221 },
+      { name: "The Panda", duration: 274 }, { name: "沉默的星光", duration: 284 }, { name: "久违的悲伤珊瑚群", duration: 227 } ] },
+    { name: "未完成的圣地亚哥", type: "专辑", date: "2045-12-07", songs: [
+      { name: "未完成的圣地亚哥", duration: 263 }, { name: "另一个晴天", duration: 271 }, { name: "晴天 II", duration: 257 },
+      { name: "最后的于是我不再唱歌", duration: 279 }, { name: "未完成的星光", duration: 287 }, { name: "遥远的平行线", duration: 223 },
+      { name: "另一个天后舞厅", duration: 226 } ] },
+    { name: "漫长的夜明灯", type: "专辑", date: "2048-02-26", songs: [
+      { name: "漫长的夜明灯", duration: 246 }, { name: "小龙人 II", duration: 290 }, { name: "漫长的父亲", duration: 220 },
+      { name: "此时此刻 II", duration: 238 }, { name: "漫长的彩虹", duration: 272 }, { name: "遥远的晴天", duration: 264 },
+      { name: "最后的盛夏", duration: 224 }, { name: "她在哪，家在哪 II", duration: 252 }, { name: "阿奶 II", duration: 236 } ] },
+    { name: "晚风 II", type: "专辑", date: "2050-01-18", songs: [
+      { name: "晚风 II", duration: 228 }, { name: "彩虹", duration: 246 }, { name: "Intro Rise", duration: 223 },
+      { name: "漫长的悠长假期", duration: 266 }, { name: "久违的彩虹", duration: 278 }, { name: "新的天后舞厅", duration: 228 },
+      { name: "遥远的盛夏", duration: 245 }, { name: "风定忧深 II", duration: 257 } ] },
+    ],
   "落日飞车": [
     { name: "Bossa Nova", type: "专辑", date: "2011-09-22", songs: [
       { name: "Bomb of Love", duration: 180 }, { name: "No Man's Land", duration: 260 }, { name: "Hogi Hogi LaLa Jo", duration: 185 },
@@ -974,7 +2246,42 @@ window.BAND_DISCOGRAPHY = {
        { name: "Teahouse", duration: 230 }, { name: "Overlove (Rehab)", duration: 230 },
        { name: "Hyperfocus", duration: 200 }, { name: "Midnight with Paul", duration: 230 },
        { name: "Candlelight (feat. OHHYUK)", duration: 250 } ] },
-  ],
+      { name: "The Libidream", type: "专辑", date: "2027-01-03", songs: [
+      { name: "The Libidream", duration: 239 }, { name: "The Sky", duration: 190 }, { name: "The Light", duration: 225 },
+      { name: "Burgundy Red Echo", duration: 230 }, { name: "Blues II", duration: 219 }, { name: "Line Lights", duration: 221 },
+      { name: "The Night", duration: 202 }, { name: "Bomb of Love Night", duration: 223 }, { name: "Candlelight Echo", duration: 181 } ] },
+    { name: "The Pinky Pinky", type: "EP", date: "2029-12-13", songs: [
+      { name: "The Pinky Pinky", duration: 221 }, { name: "Echoes Rise", duration: 201 }, { name: "The Under the Skin", duration: 214 },
+      { name: "Echoes", duration: 202 }, { name: "Drift II", duration: 239 } ] },
+    { name: "Pinky Pinky Night", type: "专辑", date: "2032-09-25", songs: [
+      { name: "Pinky Pinky Night", duration: 188 }, { name: "The Punk", duration: 201 }, { name: "Drift", duration: 217 },
+      { name: "Rain Night", duration: 241 }, { name: "Sky", duration: 218 }, { name: "Passerby Echo", duration: 225 },
+      { name: "Summum Bonum Rise", duration: 217 }, { name: "Overlove II", duration: 212 }, { name: "Line Rise", duration: 213 },
+      { name: "Libidream II", duration: 243 }, { name: "Light Echo", duration: 209 } ] },
+    { name: "Wave", type: "专辑", date: "2035-06-02", songs: [
+      { name: "Wave", duration: 217 }, { name: "Libidream Echo", duration: 181 }, { name: "Slow Night", duration: 223 },
+      { name: "Candlelight Rise", duration: 232 }, { name: "The Soft Storm", duration: 190 }, { name: "My Monday Throne Lights", duration: 199 },
+      { name: "Signal Reprise", duration: 225 } ] },
+    { name: "Line Reprise", type: "专辑", date: "2038-04-16", songs: [
+      { name: "Line Reprise", duration: 228 }, { name: "The Wave", duration: 191 }, { name: "Angel Disco Love Lights", duration: 192 },
+      { name: "Signal", duration: 235 }, { name: "Passerby Reprise", duration: 209 }, { name: "The Overlove", duration: 180 },
+      { name: "Light", duration: 204 }, { name: "The Angel Disco Love", duration: 237 } ] },
+    { name: "Spark", type: "专辑", date: "2041-03-14", songs: [
+      { name: "Spark", duration: 235 }, { name: "The My Jinji", duration: 208 }, { name: "Blues Echo", duration: 219 },
+      { name: "Spark II", duration: 248 }, { name: "Rise Night", duration: 247 }, { name: "The Slow", duration: 240 },
+      { name: "Signal Echo", duration: 201 } ] },
+    { name: "Echo", type: "专辑", date: "2043-09-05", songs: [
+      { name: "Echo", duration: 223 }, { name: "Drift Reprise", duration: 210 }, { name: "The Candlelight", duration: 217 },
+      { name: "Teahouse Night", duration: 206 }, { name: "Blues Lights", duration: 194 }, { name: "Teahouse Echo", duration: 239 },
+      { name: "The Spark", duration: 190 } ] },
+    { name: "The Blues", type: "EP", date: "2046-06-12", songs: [
+      { name: "The Blues", duration: 188 }, { name: "Summum Bonum Lights", duration: 193 }, { name: "Overlove Lights", duration: 237 } ] },
+    { name: "The Bomb of Love", type: "专辑", date: "2049-07-11", songs: [
+      { name: "The Bomb of Love", duration: 217 }, { name: "The Signal", duration: 183 }, { name: "Overlove Echo", duration: 245 },
+      { name: "Summum Bonum Echo", duration: 202 }, { name: "Punk Lights", duration: 237 }, { name: "Rain", duration: 237 },
+      { name: "Drift Rise", duration: 240 }, { name: "The Oriental", duration: 182 }, { name: "The Echo", duration: 220 },
+      { name: "Rise Rise", duration: 235 } ] },
+    ],
   "声音碎片": [
     { name: "世界是噪音的花园", type: "专辑", date: "2002-01-01", songs: [
        { name: "自欺", duration: 312 }, { name: "平衡", duration: 244 }, { name: "妄想狂", duration: 259 },
@@ -1001,7 +2308,34 @@ window.BAND_DISCOGRAPHY = {
        { name: "有限身", duration: 254 }, { name: "愿你旅途漫长", duration: 351 }, { name: "方可的单人舞", duration: 288 },
        { name: "迷途相聚", duration: 363 }, { name: "两千万分之一", duration: 319 }, { name: "飞跃蚂蚁城", duration: 278 },
        { name: "是你", duration: 269 } ] },
-  ],
+      { name: "远方 II", type: "专辑", date: "2028-07-28", songs: [
+      { name: "远方 II", duration: 305 }, { name: "新的街角", duration: 293 }, { name: "未完成的霓虹", duration: 292 },
+      { name: "霓虹", duration: 295 }, { name: "神游 II", duration: 321 }, { name: "回声", duration: 328 },
+      { name: "新的夏天", duration: 280 }, { name: "新的电子荒野", duration: 274 }, { name: "公路", duration: 329 } ] },
+    { name: "未完成的旧梦", type: "专辑", date: "2032-09-11", songs: [
+      { name: "未完成的旧梦", duration: 328 }, { name: "漫长的远方", duration: 307 }, { name: "最后的光年", duration: 296 },
+      { name: "送流水 II", duration: 281 }, { name: "最后的随意跳舞吧", duration: 290 }, { name: "沉默的天线", duration: 282 },
+      { name: "电子荒野 II", duration: 321 }, { name: "迷途相聚 II", duration: 334 }, { name: "深夜 II", duration: 300 },
+      { name: "另一个断电", duration: 277 } ] },
+    { name: "霓虹 II", type: "专辑", date: "2036-08-24", songs: [
+      { name: "霓虹 II", duration: 313 }, { name: "最后的情歌而已", duration: 293 }, { name: "赞歌 II", duration: 320 },
+      { name: "夏天", duration: 271 }, { name: "夏天 II", duration: 325 }, { name: "野火 II", duration: 294 },
+      { name: "小凉山 II", duration: 308 }, { name: "漫长的九月行歌", duration: 310 }, { name: "断电", duration: 329 },
+      { name: "遥远的出逃", duration: 309 }, { name: "黑白电影 II", duration: 326 } ] },
+    { name: "旧梦 II", type: "专辑", date: "2040-11-02", songs: [
+      { name: "旧梦 II", duration: 286 }, { name: "遥远的断电", duration: 317 }, { name: "另一个夏天", duration: 276 },
+      { name: "未完成的公路", duration: 275 }, { name: "未完成的夏天", duration: 292 }, { name: "出逃 II", duration: 325 },
+      { name: "在一起 II", duration: 289 }, { name: "未完成的是你", duration: 288 }, { name: "天线 II", duration: 305 } ] },
+    { name: "漫长的烟灰", type: "专辑", date: "2045-05-03", songs: [
+      { name: "漫长的烟灰", duration: 294 }, { name: "遥远的秘密路线", duration: 324 }, { name: "沉默的投降", duration: 270 },
+      { name: "断电 II", duration: 284 }, { name: "另一个从现在开始", duration: 268 }, { name: "另一个再轻松一些", duration: 272 },
+      { name: "新的两千万分之一", duration: 311 }, { name: "久违的狂欢", duration: 274 }, { name: "最后的断电", duration: 295 } ] },
+    { name: "旧梦", type: "专辑", date: "2048-12-16", songs: [
+      { name: "旧梦", duration: 271 }, { name: "沉默的断电", duration: 289 }, { name: "光年", duration: 312 },
+      { name: "街角", duration: 300 }, { name: "向外 II", duration: 326 }, { name: "未完成的天线", duration: 318 },
+      { name: "伊斯特伍德 II", duration: 324 }, { name: "天线", duration: 331 }, { name: "秘密路线 II", duration: 276 },
+      { name: "飞跃蚂蚁城 II", duration: 272 }, { name: "光年 II", duration: 329 } ] },
+    ],
   "結束バンド": [
     { name: "結束バンド", type: "专辑", date: "2022-12-28", songs: [
        { name: "青春コンプレックス（青春情结）", duration: 243 }, { name: "Distortion", duration: 208 },
@@ -1020,7 +2354,38 @@ window.BAND_DISCOGRAPHY = {
     { name: "光の中へ（走向光中）", type: "单曲", date: "2024-06-09", songs: [ { name: "光の中へ（走向光中）", duration: 240 } ] },
     { name: "月並みに輝け（平凡地闪耀）", type: "单曲", date: "2024-06-09", songs: [ { name: "月並みに輝け（平凡地闪耀）", duration: 220 } ] },
     { name: "僕と三原色（我和三原色）", type: "单曲", date: "2024-06-09", songs: [ { name: "僕と三原色（我和三原色）", duration: 210 } ] },
-  ],
+      { name: "光 II", type: "单曲", date: "2027-03-31", songs: [
+      { name: "光 II", duration: 222 } ] },
+    { name: "約束 II", type: "专辑", date: "2028-12-11", songs: [
+      { name: "約束 II", duration: 204 }, { name: "夜 II", duration: 205 }, { name: "約束", duration: 241 },
+      { name: "記憶", duration: 242 }, { name: "あのバンドの朝", duration: 227 }, { name: "另一个星", duration: 199 },
+      { name: "またキミ", duration: 209 }, { name: "あのバンドの続き", duration: 200 }, { name: "またあのバンド", duration: 235 },
+      { name: "漫长的夜", duration: 244 } ] },
+    { name: "海 II", type: "专辑", date: "2030-12-29", songs: [
+      { name: "海 II", duration: 255 }, { name: "キミの記憶", duration: 251 }, { name: "久违的花", duration: 223 },
+      { name: "星 II", duration: 256 }, { name: "あのバンドの歌", duration: 203 }, { name: "キミの向こう", duration: 194 },
+      { name: "漫长的約束", duration: 239 } ] },
+    { name: "最后的星", type: "单曲", date: "2032-12-29", songs: [
+      { name: "最后的星", duration: 241 } ] },
+    { name: "遥远的約束", type: "专辑", date: "2035-05-19", songs: [
+      { name: "遥远的約束", duration: 251 }, { name: "空 II", duration: 200 }, { name: "記憶 II", duration: 254 },
+      { name: "遥远的花", duration: 226 }, { name: "花 II", duration: 198 }, { name: "遥远的海", duration: 257 },
+      { name: "新的空", duration: 222 }, { name: "あのバンドの向こう", duration: 237 }, { name: "漫长的記憶", duration: 199 } ] },
+    { name: "キミの夜", type: "单曲", date: "2037-08-21", songs: [
+      { name: "キミの夜", duration: 263 } ] },
+    { name: "キミの朝", type: "单曲", date: "2039-07-21", songs: [
+      { name: "キミの朝", duration: 199 } ] },
+    { name: "キミ", type: "单曲", date: "2041-09-15", songs: [
+      { name: "キミ", duration: 210 } ] },
+    { name: "遥远的夜", type: "单曲", date: "2043-09-23", songs: [
+      { name: "遥远的夜", duration: 258 } ] },
+    { name: "另一个花", type: "单曲", date: "2045-08-16", songs: [
+      { name: "另一个花", duration: 248 } ] },
+    { name: "雨 II", type: "单曲", date: "2047-10-05", songs: [
+      { name: "雨 II", duration: 229 } ] },
+    { name: "久违的約束", type: "单曲", date: "2050-02-27", songs: [
+      { name: "久违的約束", duration: 234 } ] },
+    ],
   "放課後ティータイム": [
     { name: "放課後ティータイムII（放学后茶会II）", type: "专辑", date: "2010-10-27", songs: [
        { name: "ぴゅあぴゅあはーと（Pure Pure Heart）", duration: 240 }, { name: "カレーのちライス（咖喱饭）", duration: 220 },
@@ -1035,7 +2400,38 @@ window.BAND_DISCOGRAPHY = {
     { name: "Utauyo!! MIRACLE", type: "单曲", date: "2010-08-04", songs: [ { name: "Utauyo!! MIRACLE", duration: 250 } ] },
     { name: "No, Thank You!", type: "单曲", date: "2010-08-04", songs: [ { name: "No, Thank You!", duration: 244 } ] },
     { name: "天使にふれたよ!（遇见了天使）", type: "单曲", date: "2010-09-08", songs: [ { name: "天使にふれたよ!（遇见了天使）", duration: 240 } ] },
-  ],
+      { name: "Night", type: "单曲", date: "2026-12-17", songs: [
+      { name: "Night", duration: 264 } ] },
+    { name: "The Spark", type: "单曲", date: "2028-12-04", songs: [
+      { name: "The Spark", duration: 250 } ] },
+    { name: "The Utauyo!! MIRACLE", type: "单曲", date: "2031-03-16", songs: [
+      { name: "The Utauyo!! MIRACLE", duration: 216 } ] },
+    { name: "Light", type: "单曲", date: "2033-06-23", songs: [
+      { name: "Light", duration: 233 } ] },
+    { name: "Rain", type: "单曲", date: "2035-01-27", songs: [
+      { name: "Rain", duration: 233 } ] },
+    { name: "Echoes", type: "专辑", date: "2037-08-25", songs: [
+      { name: "Echoes", duration: 267 }, { name: "Drift", duration: 219 }, { name: "Line", duration: 252 },
+      { name: "The Line", duration: 218 }, { name: "Wave", duration: 259 }, { name: "The Signal", duration: 267 },
+      { name: "The Listen!!", duration: 235 }, { name: "Rain Lights", duration: 263 }, { name: "Rise", duration: 249 },
+      { name: "Signal", duration: 258 }, { name: "Spark", duration: 239 } ] },
+    { name: "The Sky", type: "专辑", date: "2039-05-18", songs: [
+      { name: "The Sky", duration: 203 }, { name: "Sunday Siesta II", duration: 248 }, { name: "Night Echo", duration: 231 },
+      { name: "The No, Thank You!", duration: 225 }, { name: "Utauyo!! MIRACLE Lights", duration: 260 }, { name: "The Echoes", duration: 265 },
+      { name: "The GO! GO! MANIAC", duration: 261 }, { name: "Utauyo!! MIRACLE Reprise", duration: 201 } ] },
+    { name: "GO! GO! MANIAC Night", type: "单曲", date: "2041-04-27", songs: [
+      { name: "GO! GO! MANIAC Night", duration: 201 } ] },
+    { name: "Rain Reprise", type: "专辑", date: "2043-12-11", songs: [
+      { name: "Rain Reprise", duration: 206 }, { name: "Listen!! Lights", duration: 255 }, { name: "Echo", duration: 241 },
+      { name: "Listen!! Reprise", duration: 202 }, { name: "Listen!! II", duration: 203 }, { name: "No, Thank You! Echo", duration: 226 },
+      { name: "No, Thank You! II", duration: 205 }, { name: "Sunday Siesta Echo", duration: 265 } ] },
+    { name: "Echo II", type: "单曲", date: "2045-11-17", songs: [
+      { name: "Echo II", duration: 240 } ] },
+    { name: "Drift II", type: "单曲", date: "2048-01-06", songs: [
+      { name: "Drift II", duration: 227 } ] },
+    { name: "Echoes Reprise", type: "单曲", date: "2050-03-19", songs: [
+      { name: "Echoes Reprise", duration: 260 } ] },
+    ],
   "MyGO（CRYCHIC）": [
     { name: "迷跡波（迷迹波）", type: "专辑", date: "2024-04-24", songs: [
        { name: "迷星叫（迷星叫）", duration: 230 }, { name: "迷路日々（迷路日日）", duration: 225 },
@@ -1050,7 +2446,31 @@ window.BAND_DISCOGRAPHY = {
     { name: "名無声（名无声）", type: "单曲", date: "2023-08-16", songs: [ { name: "名無声（名无声）", duration: 235 } ] },
     { name: "潜在表明（潜在表明）", type: "单曲", date: "2023-11-15", songs: [ { name: "潜在表明（潜在表明）", duration: 220 } ] },
     { name: "壱雫空（一雫空）", type: "单曲", date: "2024-02-14", songs: [ { name: "壱雫空（一雫空）", duration: 228 } ] },
-  ],
+      { name: "遥远的焚音打", type: "单曲", date: "2027-01-18", songs: [
+      { name: "遥远的焚音打", duration: 249 } ] },
+    { name: "夏天", type: "单曲", date: "2029-02-12", songs: [
+      { name: "夏天", duration: 263 } ] },
+    { name: "沉默的焚音打", type: "单曲", date: "2031-06-25", songs: [
+      { name: "沉默的焚音打", duration: 264 } ] },
+    { name: "久违的焚音打", type: "单曲", date: "2033-06-03", songs: [
+      { name: "久违的焚音打", duration: 217 } ] },
+    { name: "远方", type: "单曲", date: "2035-03-12", songs: [
+      { name: "远方", duration: 206 } ] },
+    { name: "遥远的街角", type: "单曲", date: "2037-03-21", songs: [
+      { name: "遥远的街角", duration: 252 } ] },
+    { name: "断电 II", type: "单曲", date: "2039-06-21", songs: [
+      { name: "断电 II", duration: 233 } ] },
+    { name: "另一个過惰幻", type: "单曲", date: "2041-05-04", songs: [
+      { name: "另一个過惰幻", duration: 212 } ] },
+    { name: "断电", type: "单曲", date: "2043-11-30", songs: [
+      { name: "断电", duration: 208 } ] },
+    { name: "迷星叫 II", type: "单曲", date: "2045-09-03", songs: [
+      { name: "迷星叫 II", duration: 201 } ] },
+    { name: "最后的断电", type: "单曲", date: "2047-12-22", songs: [
+      { name: "最后的断电", duration: 263 } ] },
+    { name: "夏天 II", type: "单曲", date: "2050-03-27", songs: [
+      { name: "夏天 II", duration: 206 } ] },
+    ],
   "ギヴン": [
     { name: "gift", type: "专辑", date: "2020-08-26", songs: [
        { name: "夜が明ける（天亮了）", duration: 281 }, { name: "へたくそ（笨拙）", duration: 188 },
@@ -1060,7 +2480,40 @@ window.BAND_DISCOGRAPHY = {
     { name: "まるつけ（句号）", type: "单曲", date: "2019-12-25", songs: [ { name: "まるつけ（句号）", duration: 234 } ] },
     { name: "夜が明ける（天亮了）", type: "单曲", date: "2020-08-26", songs: [ { name: "夜が明ける（天亮了）", duration: 281 } ] },
     { name: "うらがわの存在（背面的存在）", type: "单曲", date: "2021-12-01", songs: [ { name: "うらがわの存在（背面的存在）", duration: 250 } ] },
-  ],
+      { name: "まるつけの続き", type: "单曲", date: "2027-02-13", songs: [
+      { name: "まるつけの続き", duration: 235 } ] },
+    { name: "またまるつけ", type: "单曲", date: "2028-10-28", songs: [
+      { name: "またまるつけ", duration: 254 } ] },
+    { name: "約束 II", type: "单曲", date: "2031-03-21", songs: [
+      { name: "約束 II", duration: 235 } ] },
+    { name: "夜 II", type: "专辑", date: "2033-05-19", songs: [
+      { name: "夜 II", duration: 213 }, { name: "またへたくそ", duration: 222 }, { name: "まるつけの記憶", duration: 232 },
+      { name: "未完成的夜", duration: 204 }, { name: "まるつけの朝", duration: 273 }, { name: "へたくその夜", duration: 258 },
+      { name: "新的雨", duration: 253 }, { name: "キミの朝", duration: 243 }, { name: "遥远的空", duration: 234 },
+      { name: "未完成的約束", duration: 237 }, { name: "記憶", duration: 259 } ] },
+    { name: "海 II", type: "单曲", date: "2035-05-29", songs: [
+      { name: "海 II", duration: 204 } ] },
+    { name: "星 II", type: "单曲", date: "2037-03-21", songs: [
+      { name: "星 II", duration: 260 } ] },
+    { name: "漫长的花", type: "专辑", date: "2039-08-17", songs: [
+      { name: "漫长的花", duration: 206 }, { name: "記憶 II", duration: 266 }, { name: "まるつけの向こう", duration: 221 },
+      { name: "沉默的約束", duration: 251 }, { name: "へたくその向こう", duration: 261 }, { name: "最后的海", duration: 254 },
+      { name: "まるつけの夜", duration: 258 }, { name: "空 II", duration: 242 }, { name: "未完成的記憶", duration: 212 },
+      { name: "へたくその歌", duration: 211 } ] },
+    { name: "へたくその続き", type: "单曲", date: "2041-07-10", songs: [
+      { name: "へたくその続き", duration: 203 } ] },
+    { name: "キミの記憶", type: "专辑", date: "2043-06-04", songs: [
+      { name: "キミの記憶", duration: 255 }, { name: "漫长的記憶", duration: 264 }, { name: "約束", duration: 219 },
+      { name: "最后的空", duration: 261 }, { name: "漫长的光", duration: 236 }, { name: "へたくその朝", duration: 232 },
+      { name: "遥远的海", duration: 265 }, { name: "漫长的空", duration: 233 }, { name: "まるつけの歌", duration: 208 },
+      { name: "雨 II", duration: 214 } ] },
+    { name: "久违的花", type: "单曲", date: "2045-06-29", songs: [
+      { name: "久违的花", duration: 223 } ] },
+    { name: "新的花", type: "单曲", date: "2048-01-07", songs: [
+      { name: "新的花", duration: 263 } ] },
+    { name: "光 II", type: "单曲", date: "2050-02-18", songs: [
+      { name: "光 II", duration: 265 } ] },
+    ],
   "トゲナシトゲアリ": [
     { name: "棘アリ（有刺）", type: "专辑", date: "2024-04-24", songs: [
        { name: "名もなき何もかも（无名的万物）", duration: 214 }, { name: "偽りの理（虚伪的道理）", duration: 200 },
@@ -1092,26 +2545,165 @@ window.BAND_DISCOGRAPHY = {
     { name: "全部をさらして生きてやる（豁出一切活下去）", type: "EP", date: "2025-12-17", songs: [
        { name: "もう何もいらない未来（什么都不再需要的未来）", duration: 226 }, { name: "命をくれよ（把命给我）", duration: 222 },
        { name: "arrow", duration: 218 }, { name: "薊の薔薇（薊之蔷薇）", duration: 228 } ] },
-  ],
+      { name: "またダレモ", type: "单曲", date: "2027-08-01", songs: [
+      { name: "またダレモ", duration: 230 } ] },
+    { name: "星 II", type: "单曲", date: "2029-05-24", songs: [
+      { name: "星 II", duration: 235 } ] },
+    { name: "The arrow", type: "单曲", date: "2031-04-13", songs: [
+      { name: "The arrow", duration: 238 } ] },
+    { name: "未完成的海", type: "专辑", date: "2033-11-21", songs: [
+      { name: "未完成的海", duration: 217 }, { name: "arrow Echo", duration: 254 }, { name: "花 II", duration: 198 },
+      { name: "遥远的花", duration: 254 }, { name: "ダレモの向こう", duration: 206 }, { name: "記憶 II", duration: 238 },
+      { name: "ダレモの朝", duration: 230 }, { name: "海 II", duration: 248 } ] },
+    { name: "遥远的約束", type: "单曲", date: "2035-06-15", songs: [
+      { name: "遥远的約束", duration: 252 } ] },
+    { name: "最后的海", type: "单曲", date: "2037-08-20", songs: [
+      { name: "最后的海", duration: 197 } ] },
+    { name: "光 II", type: "单曲", date: "2039-07-31", songs: [
+      { name: "光 II", duration: 191 } ] },
+    { name: "久违的星", type: "单曲", date: "2041-09-01", songs: [
+      { name: "久违的星", duration: 236 } ] },
+    { name: "新的光", type: "单曲", date: "2043-10-02", songs: [
+      { name: "新的光", duration: 184 } ] },
+    { name: "空 II", type: "单曲", date: "2046-01-05", songs: [
+      { name: "空 II", duration: 229 } ] },
+    { name: "キミ", type: "单曲", date: "2047-12-23", songs: [
+      { name: "キミ", duration: 189 } ] },
+    { name: "雨 II", type: "单曲", date: "2050-02-02", songs: [
+      { name: "雨 II", duration: 184 } ] },
+    ],
   "Black Stones": [
     { name: "BLAST", type: "专辑", date: "2006-06-21", songs: [
        { name: "Rose", duration: 240 }, { name: "黒い涙（黑色的泪）", duration: 265 },
        { name: "Zero", duration: 210 }, { name: "Lucy", duration: 225 }, { name: "Shadow of the Sun", duration: 250 } ] },
     { name: "Rose", type: "单曲", date: "2006-01-01", songs: [ { name: "Rose", duration: 240 } ] },
     { name: "黒い涙（黑色的泪）", type: "单曲", date: "2006-03-22", songs: [ { name: "黒い涙（黑色的泪）", duration: 265 } ] },
-  ],
+      { name: "The Zero", type: "单曲", date: "2027-02-05", songs: [
+      { name: "The Zero", duration: 255 } ] },
+    { name: "The Rose", type: "单曲", date: "2029-04-19", songs: [
+      { name: "The Rose", duration: 271 } ] },
+    { name: "Night", type: "单曲", date: "2031-02-16", songs: [
+      { name: "Night", duration: 250 } ] },
+    { name: "Zero Lights", type: "单曲", date: "2033-03-21", songs: [
+      { name: "Zero Lights", duration: 260 } ] },
+    { name: "Line", type: "单曲", date: "2035-05-21", songs: [
+      { name: "Line", duration: 264 } ] },
+    { name: "Echoes", type: "专辑", date: "2037-07-12", songs: [
+      { name: "Echoes", duration: 255 }, { name: "Night Rise", duration: 244 }, { name: "The Light", duration: 262 },
+      { name: "Line Lights", duration: 260 }, { name: "Rose Echo", duration: 267 }, { name: "The Echo", duration: 217 },
+      { name: "Echo Rise", duration: 209 }, { name: "Drift", duration: 264 }, { name: "Night II", duration: 229 } ] },
+    { name: "Drift Reprise", type: "专辑", date: "2039-10-09", songs: [
+      { name: "Drift Reprise", duration: 257 }, { name: "Rain", duration: 219 }, { name: "Zero Reprise", duration: 250 },
+      { name: "Signal", duration: 255 }, { name: "Rise", duration: 224 }, { name: "The Lucy", duration: 247 },
+      { name: "Rose II", duration: 216 }, { name: "Rose Night", duration: 246 }, { name: "Sky", duration: 244 },
+      { name: "The Sky", duration: 258 } ] },
+    { name: "Rose Reprise", type: "单曲", date: "2041-06-16", songs: [
+      { name: "Rose Reprise", duration: 243 } ] },
+    { name: "The Wave", type: "单曲", date: "2043-11-16", songs: [
+      { name: "The Wave", duration: 251 } ] },
+    { name: "Spark", type: "专辑", date: "2045-07-10", songs: [
+      { name: "Spark", duration: 230 }, { name: "The Rain", duration: 237 }, { name: "The Signal", duration: 219 },
+      { name: "Light Rise", duration: 264 }, { name: "Rose Rise", duration: 220 }, { name: "Light Reprise", duration: 277 },
+      { name: "Echoes Lights", duration: 253 }, { name: "Zero Rise", duration: 227 }, { name: "The Drift", duration: 234 } ] },
+    { name: "Lucy Lights", type: "单曲", date: "2047-11-28", songs: [
+      { name: "Lucy Lights", duration: 246 } ] },
+    { name: "Zero Echo", type: "单曲", date: "2049-09-03", songs: [
+      { name: "Zero Echo", duration: 268 } ] },
+    ],
   "Trapnest": [
     { name: "Trapnest", type: "专辑", date: "2005-11-16", songs: [
        { name: "Glamorous Sky", duration: 258 }, { name: "Trust", duration: 235 },
        { name: "Wish", duration: 240 }, { name: "Starless Night", duration: 250 }, { name: "Let's Dance", duration: 220 } ] },
     { name: "Glamorous Sky", type: "单曲", date: "2005-09-07", songs: [ { name: "Glamorous Sky", duration: 258 } ] },
-  ],
+      { name: "Drift Rise", type: "专辑", date: "2026-11-06", songs: [
+      { name: "Drift Rise", duration: 269 }, { name: "The Spark", duration: 225 }, { name: "Wish Reprise", duration: 254 },
+      { name: "The Glamorous Sky", duration: 219 }, { name: "The Sky", duration: 264 }, { name: "Spark", duration: 255 },
+      { name: "Wish II", duration: 260 }, { name: "The Rain", duration: 274 } ] },
+    { name: "Signal Echo", type: "专辑", date: "2029-05-05", songs: [
+      { name: "Signal Echo", duration: 237 }, { name: "The Rise", duration: 216 }, { name: "Light", duration: 252 },
+      { name: "Spark Reprise", duration: 238 }, { name: "The Drift", duration: 263 }, { name: "The Trust", duration: 246 },
+      { name: "Night", duration: 275 }, { name: "The Echo", duration: 229 } ] },
+    { name: "The Starless Night", type: "专辑", date: "2031-05-03", songs: [
+      { name: "The Starless Night", duration: 272 }, { name: "Glamorous Sky Echo", duration: 229 }, { name: "Wave", duration: 254 },
+      { name: "Drift Lights", duration: 244 }, { name: "Wave Night", duration: 215 }, { name: "Rise Rise", duration: 270 },
+      { name: "Starless Night Lights", duration: 231 }, { name: "Starless Night Echo", duration: 258 }, { name: "Wave Echo", duration: 234 },
+      { name: "Glamorous Sky Reprise", duration: 270 } ] },
+    { name: "Sky", type: "专辑", date: "2033-05-28", songs: [
+      { name: "Sky", duration: 231 }, { name: "Signal Night", duration: 219 }, { name: "Signal Rise", duration: 272 },
+      { name: "Glamorous Sky Night", duration: 271 }, { name: "Wish Rise", duration: 251 }, { name: "Rain", duration: 267 },
+      { name: "The Signal", duration: 271 }, { name: "Sky II", duration: 214 } ] },
+    { name: "Trust Echo", type: "专辑", date: "2035-05-05", songs: [
+      { name: "Trust Echo", duration: 266 }, { name: "The Wave", duration: 256 }, { name: "Sky Rise", duration: 211 },
+      { name: "The Echoes", duration: 255 }, { name: "Echo Lights", duration: 275 }, { name: "The Wish", duration: 249 },
+      { name: "Echo Night", duration: 220 } ] },
+    { name: "Glamorous Sky Rise", type: "单曲", date: "2037-06-30", songs: [
+      { name: "Glamorous Sky Rise", duration: 239 } ] },
+    { name: "The Night", type: "单曲", date: "2039-08-28", songs: [
+      { name: "The Night", duration: 257 } ] },
+    { name: "Night Reprise", type: "单曲", date: "2041-06-14", songs: [
+      { name: "Night Reprise", duration: 246 } ] },
+    { name: "Echoes", type: "专辑", date: "2043-11-23", songs: [
+      { name: "Echoes", duration: 236 }, { name: "Rain Lights", duration: 251 }, { name: "Spark Rise", duration: 217 },
+      { name: "Trust Reprise", duration: 260 }, { name: "Signal", duration: 265 }, { name: "Line", duration: 242 },
+      { name: "Rise", duration: 216 }, { name: "Echoes Echo", duration: 252 }, { name: "Sky Echo", duration: 216 },
+      { name: "Echoes Reprise", duration: 254 }, { name: "Wish Lights", duration: 213 } ] },
+    { name: "Night II", type: "单曲", date: "2045-07-21", songs: [
+      { name: "Night II", duration: 241 } ] },
+    { name: "Glamorous Sky II", type: "单曲", date: "2047-09-21", songs: [
+      { name: "Glamorous Sky II", duration: 260 } ] },
+    { name: "Wish Echo", type: "单曲", date: "2050-03-05", songs: [
+      { name: "Wish Echo", duration: 244 } ] },
+    ],
   "Plasmagica": [
     { name: "Plasmagica", type: "专辑", date: "2015-08-26", songs: [
        { name: "Seabreeze", duration: 230 }, { name: "Music Start!（音乐开始！）", duration: 220 },
        { name: "愛を教えて（教会我爱）", duration: 215 } ] },
     { name: "Seabreeze", type: "单曲", date: "2015-04-22", songs: [ { name: "Seabreeze", duration: 230 } ] },
-  ],
+      { name: "The Seabreeze", type: "专辑", date: "2026-12-26", songs: [
+      { name: "The Seabreeze", duration: 250 }, { name: "The Signal", duration: 236 }, { name: "Echo Night", duration: 209 },
+      { name: "Seabreeze Reprise", duration: 223 }, { name: "The Music Start!", duration: 189 }, { name: "The Rise", duration: 199 },
+      { name: "Music Start! II", duration: 216 }, { name: "Seabreeze Rise", duration: 212 } ] },
+    { name: "Line", type: "单曲", date: "2028-12-10", songs: [
+      { name: "Line", duration: 251 } ] },
+    { name: "Signal Reprise", type: "单曲", date: "2031-03-08", songs: [
+      { name: "Signal Reprise", duration: 193 } ] },
+    { name: "Wave", type: "专辑", date: "2033-02-21", songs: [
+      { name: "Wave", duration: 215 }, { name: "Echo Echo", duration: 227 }, { name: "Drift", duration: 248 },
+      { name: "Music Start! Reprise", duration: 250 }, { name: "The Sky", duration: 202 }, { name: "Music Start! Night", duration: 236 },
+      { name: "Seabreeze Echo", duration: 204 }, { name: "Rain Reprise", duration: 207 }, { name: "Echo", duration: 203 } ] },
+    { name: "The Drift", type: "单曲", date: "2035-04-28", songs: [
+      { name: "The Drift", duration: 224 } ] },
+    { name: "Echoes Reprise", type: "专辑", date: "2037-05-20", songs: [
+      { name: "Echoes Reprise", duration: 193 }, { name: "The Echoes", duration: 227 }, { name: "The Night", duration: 258 },
+      { name: "The Spark", duration: 243 }, { name: "Signal", duration: 226 }, { name: "Echoes", duration: 218 },
+      { name: "Drift Lights", duration: 219 }, { name: "Seabreeze Night", duration: 233 }, { name: "Rise Rise", duration: 197 },
+      { name: "Rain", duration: 204 }, { name: "Music Start! Lights", duration: 203 } ] },
+    { name: "Rain Lights", type: "专辑", date: "2039-05-31", songs: [
+      { name: "Rain Lights", duration: 249 }, { name: "Seabreeze Lights", duration: 234 }, { name: "Rain Night", duration: 225 },
+      { name: "Music Start! Rise", duration: 203 }, { name: "Spark", duration: 190 }, { name: "Sky Echo", duration: 246 },
+      { name: "Light", duration: 191 } ] },
+    { name: "The Echo", type: "专辑", date: "2041-12-03", songs: [
+      { name: "The Echo", duration: 239 }, { name: "Sky Night", duration: 192 }, { name: "The Light", duration: 214 },
+      { name: "The Line", duration: 223 }, { name: "Night", duration: 198 }, { name: "Drift Reprise", duration: 243 },
+      { name: "The Rain", duration: 255 }, { name: "Sky II", duration: 194 }, { name: "Echoes Rise", duration: 243 },
+      { name: "Spark Lights", duration: 222 } ] },
+    { name: "Spark II", type: "专辑", date: "2043-10-13", songs: [
+      { name: "Spark II", duration: 204 }, { name: "Seabreeze II", duration: 191 }, { name: "Sky Rise", duration: 193 },
+      { name: "Drift II", duration: 258 }, { name: "Sky", duration: 227 }, { name: "Line Rise", duration: 229 },
+      { name: "Light Reprise", duration: 214 } ] },
+    { name: "Night Lights", type: "专辑", date: "2045-08-03", songs: [
+      { name: "Night Lights", duration: 224 }, { name: "Wave Reprise", duration: 228 }, { name: "Night Echo", duration: 205 },
+      { name: "Music Start! Echo", duration: 250 }, { name: "The Wave", duration: 215 }, { name: "Signal II", duration: 226 },
+      { name: "Echoes II", duration: 230 }, { name: "Rise Reprise", duration: 222 }, { name: "Echo Rise", duration: 255 },
+      { name: "Rise Lights", duration: 200 }, { name: "Light Lights", duration: 243 } ] },
+    { name: "Rise", type: "专辑", date: "2047-12-05", songs: [
+      { name: "Rise", duration: 197 }, { name: "Light Echo", duration: 247 }, { name: "Line Echo", duration: 252 },
+      { name: "Echoes Lights", duration: 248 }, { name: "Signal Lights", duration: 237 }, { name: "Echoes Echo", duration: 250 },
+      { name: "Rise II", duration: 213 }, { name: "Line II", duration: 237 }, { name: "Drift Night", duration: 244 },
+      { name: "Line Night", duration: 238 } ] },
+    { name: "Night Rise", type: "单曲", date: "2049-10-04", songs: [
+      { name: "Night Rise", duration: 229 } ] },
+    ],
   "Poppin'Party": [
     { name: "Poppin'on!", type: "专辑", date: "2019-01-30", songs: [
        { name: "Yes! BanG_Dream!", duration: 235 }, { name: "STAR BEAT!〜ホシノコドウ〜（星之鼓动）", duration: 240 },
@@ -1127,7 +2719,33 @@ window.BAND_DISCOGRAPHY = {
     { name: "Time Lapse", type: "单曲", date: "2018-01-17", songs: [ { name: "Time Lapse", duration: 245 } ] },
     { name: "二重の虹（双重彩虹）", type: "单曲", date: "2018-04-18", songs: [ { name: "二重の虹（双重彩虹）", duration: 236 } ] },
     { name: "キズナミュージック♪（羁绊音乐♪）", type: "单曲", date: "2019-05-15", songs: [ { name: "キズナミュージック♪（羁绊音乐♪）", duration: 240 } ] },
-  ],
+      { name: "最后的花", type: "单曲", date: "2027-04-20", songs: [
+      { name: "最后的花", duration: 266 } ] },
+    { name: "花 II", type: "单曲", date: "2029-04-20", songs: [
+      { name: "花 II", duration: 214 } ] },
+    { name: "未完成的最高", type: "单曲", date: "2031-01-20", songs: [
+      { name: "未完成的最高", duration: 254 } ] },
+    { name: "另一个最高", type: "单曲", date: "2033-05-29", songs: [
+      { name: "另一个最高", duration: 228 } ] },
+    { name: "The Returns", type: "单曲", date: "2035-03-28", songs: [
+      { name: "The Returns", duration: 245 } ] },
+    { name: "沉默的星", type: "单曲", date: "2037-03-29", songs: [
+      { name: "沉默的星", duration: 247 } ] },
+    { name: "記憶", type: "单曲", date: "2039-06-18", songs: [
+      { name: "記憶", duration: 268 } ] },
+    { name: "記憶 II", type: "单曲", date: "2041-11-06", songs: [
+      { name: "記憶 II", duration: 267 } ] },
+    { name: "星 II", type: "专辑", date: "2043-12-04", songs: [
+      { name: "星 II", duration: 220 }, { name: "光 II", duration: 263 }, { name: "最后的最高", duration: 209 },
+      { name: "約束", duration: 256 }, { name: "夜 II", duration: 247 }, { name: "空 II", duration: 244 },
+      { name: "漫长的記憶", duration: 220 }, { name: "キミの歌", duration: 232 } ] },
+    { name: "另一个光", type: "单曲", date: "2045-12-14", songs: [
+      { name: "另一个光", duration: 220 } ] },
+    { name: "最高 II", type: "单曲", date: "2047-11-28", songs: [
+      { name: "最高 II", duration: 202 } ] },
+    { name: "キミ", type: "单曲", date: "2049-12-11", songs: [
+      { name: "キミ", duration: 202 } ] },
+    ],
   "Roselia": [
     { name: "Anfang", type: "专辑", date: "2019-04-24", songs: [
        { name: "BLACK SHOUT", duration: 245 }, { name: "Re:birth day", duration: 238 },
@@ -1144,7 +2762,31 @@ window.BAND_DISCOGRAPHY = {
     { name: "Brave Jewel", type: "单曲", date: "2018-12-12", songs: [ { name: "Brave Jewel", duration: 240 } ] },
     { name: "FIRE BIRD", type: "单曲", date: "2019-03-20", songs: [ { name: "FIRE BIRD", duration: 255 } ] },
     { name: "LOUDER", type: "单曲", date: "2018-08-22", songs: [ { name: "LOUDER", duration: 235 } ] },
-  ],
+      { name: "BLACK SHOUT Echo", type: "单曲", date: "2026-11-21", songs: [
+      { name: "BLACK SHOUT Echo", duration: 216 } ] },
+    { name: "FIRE BIRD II", type: "单曲", date: "2028-10-31", songs: [
+      { name: "FIRE BIRD II", duration: 210 } ] },
+    { name: "Rise", type: "单曲", date: "2031-01-09", songs: [
+      { name: "Rise", duration: 250 } ] },
+    { name: "The ONENESS", type: "单曲", date: "2033-05-02", songs: [
+      { name: "The ONENESS", duration: 230 } ] },
+    { name: "The LOUDER", type: "单曲", date: "2035-05-04", songs: [
+      { name: "The LOUDER", duration: 218 } ] },
+    { name: "Light", type: "单曲", date: "2037-05-03", songs: [
+      { name: "Light", duration: 260 } ] },
+    { name: "Echoes", type: "单曲", date: "2039-08-25", songs: [
+      { name: "Echoes", duration: 260 } ] },
+    { name: "The Ringing Bloom", type: "单曲", date: "2041-11-20", songs: [
+      { name: "The Ringing Bloom", duration: 252 } ] },
+    { name: "The Light", type: "单曲", date: "2043-09-08", songs: [
+      { name: "The Light", duration: 225 } ] },
+    { name: "Rise Lights", type: "单曲", date: "2045-10-14", songs: [
+      { name: "Rise Lights", duration: 244 } ] },
+    { name: "Rain Rise", type: "单曲", date: "2047-12-06", songs: [
+      { name: "Rain Rise", duration: 263 } ] },
+    { name: "The BLACK SHOUT", type: "单曲", date: "2049-08-26", songs: [
+      { name: "The BLACK SHOUT", duration: 225 } ] },
+    ],
   "Afterglow": [
     { name: "ONE OF US", type: "专辑", date: "2019-09-18", songs: [
        { name: "That Is How I Roll!", duration: 220 }, { name: "True color", duration: 228 },
@@ -1158,7 +2800,34 @@ window.BAND_DISCOGRAPHY = {
     { name: "COMIC PANIC!!!", type: "单曲", date: "2018-06-20", songs: [ { name: "COMIC PANIC!!!", duration: 210 } ] },
     { name: "Sasanqua", type: "单曲", date: "2018-10-10", songs: [ { name: "Sasanqua", duration: 235 } ] },
     { name: "Jamboree!", type: "单曲", date: "2019-02-13", songs: [ { name: "Jamboree!", duration: 218 } ] },
-  ],
+      { name: "The COMIC PANIC!!!", type: "单曲", date: "2027-01-27", songs: [
+      { name: "The COMIC PANIC!!!", duration: 217 } ] },
+    { name: "The Wave", type: "单曲", date: "2029-02-07", songs: [
+      { name: "The Wave", duration: 216 } ] },
+    { name: "True color Echo", type: "单曲", date: "2031-06-02", songs: [
+      { name: "True color Echo", duration: 233 } ] },
+    { name: "Wave Echo", type: "单曲", date: "2033-05-16", songs: [
+      { name: "Wave Echo", duration: 240 } ] },
+    { name: "The Signal", type: "单曲", date: "2035-05-05", songs: [
+      { name: "The Signal", duration: 234 } ] },
+    { name: "Rise", type: "单曲", date: "2037-09-30", songs: [
+      { name: "Rise", duration: 229 } ] },
+    { name: "The Night", type: "专辑", date: "2039-05-10", songs: [
+      { name: "The Night", duration: 247 }, { name: "True color II", duration: 226 }, { name: "Light", duration: 191 },
+      { name: "Spark", duration: 252 }, { name: "The Sasanqua", duration: 198 }, { name: "Echo", duration: 208 },
+      { name: "The Spark", duration: 237 }, { name: "The Jamboree!", duration: 227 }, { name: "Sky Echo", duration: 242 },
+      { name: "Spark Lights", duration: 192 } ] },
+    { name: "COMIC PANIC!!! Rise", type: "单曲", date: "2041-10-19", songs: [
+      { name: "COMIC PANIC!!! Rise", duration: 208 } ] },
+    { name: "Rain", type: "单曲", date: "2043-11-22", songs: [
+      { name: "Rain", duration: 230 } ] },
+    { name: "Echo Night", type: "单曲", date: "2045-07-31", songs: [
+      { name: "Echo Night", duration: 212 } ] },
+    { name: "Scarlet Sky Echo", type: "单曲", date: "2047-09-25", songs: [
+      { name: "Scarlet Sky Echo", duration: 239 } ] },
+    { name: "COMIC PANIC!!! Lights", type: "单曲", date: "2049-09-16", songs: [
+      { name: "COMIC PANIC!!! Lights", duration: 231 } ] },
+    ],
   "Pastel*Palettes": [
     { name: "TITLE IDOL", type: "专辑", date: "2018-09-19", songs: [
        { name: "しゅわりん☆どり〜みん（Shuwarin☆Dreaming）", duration: 220 }, { name: "パスパレボリューションず☆（Pastel Revolution☆）", duration: 215 },
@@ -1170,7 +2839,36 @@ window.BAND_DISCOGRAPHY = {
     { name: "はなまる♡デイズ（花丸♡Days）", type: "单曲", date: "2017-11-15", songs: [ { name: "はなまる♡デイズ（花丸♡Days）", duration: 218 } ] },
     { name: "天下トーイツA to Z☆（天下统一A to Z☆）", type: "单曲", date: "2018-02-14", songs: [ { name: "天下トーイツA to Z☆（天下统一A to Z☆）", duration: 222 } ] },
     { name: "Wonderland Girl", type: "单曲", date: "2018-06-20", songs: [ { name: "Wonderland Girl", duration: 216 } ] },
-  ],
+      { name: "另一个花", type: "单曲", date: "2027-03-14", songs: [
+      { name: "另一个花", duration: 247 } ] },
+    { name: "遥远的海", type: "单曲", date: "2029-03-02", songs: [
+      { name: "遥远的海", duration: 207 } ] },
+    { name: "雨 II", type: "专辑", date: "2031-02-18", songs: [
+      { name: "雨 II", duration: 210 }, { name: "未完成的海", duration: 223 }, { name: "空 II", duration: 194 },
+      { name: "新的記憶", duration: 216 }, { name: "最后的夜", duration: 201 }, { name: "記憶", duration: 191 },
+      { name: "未完成的空", duration: 228 }, { name: "沉默的星", duration: 251 }, { name: "另一个記憶", duration: 208 },
+      { name: "沉默的花", duration: 234 }, { name: "夜 II", duration: 192 } ] },
+    { name: "新的空", type: "单曲", date: "2033-05-31", songs: [
+      { name: "新的空", duration: 251 } ] },
+    { name: "光 II", type: "单曲", date: "2035-06-02", songs: [
+      { name: "光 II", duration: 247 } ] },
+    { name: "キミ", type: "专辑", date: "2037-05-06", songs: [
+      { name: "キミ", duration: 191 }, { name: "花 II", duration: 233 }, { name: "遥远的空", duration: 239 },
+      { name: "またキミ", duration: 211 }, { name: "記憶 II", duration: 217 }, { name: "沉默的約束", duration: 221 },
+      { name: "久违的花", duration: 187 }, { name: "約束", duration: 184 } ] },
+    { name: "另一个空", type: "单曲", date: "2039-07-04", songs: [
+      { name: "另一个空", duration: 225 } ] },
+    { name: "約束 II", type: "单曲", date: "2041-05-04", songs: [
+      { name: "約束 II", duration: 213 } ] },
+    { name: "最后的記憶", type: "单曲", date: "2043-09-11", songs: [
+      { name: "最后的記憶", duration: 236 } ] },
+    { name: "久违的空", type: "单曲", date: "2045-10-25", songs: [
+      { name: "久违的空", duration: 219 } ] },
+    { name: "另一个星", type: "单曲", date: "2047-08-17", songs: [
+      { name: "另一个星", duration: 252 } ] },
+    { name: "遥远的光", type: "单曲", date: "2049-11-13", songs: [
+      { name: "遥远的光", duration: 249 } ] },
+    ],
   "Hello, Happy World!": [
     { name: "えがおのオーケストラっ!（笑容管弦乐！）", type: "单曲", date: "2017-05-17", songs: [ { name: "えがおのオーケストラっ!（笑容管弦乐！）", duration: 225 } ] },
     { name: "ハッピーシンセサイザ（Happy Synthesizer）", type: "单曲", date: "2017-08-30", songs: [ { name: "ハッピーシンセサイザ（Happy Synthesizer）", duration: 230 } ] },
@@ -1178,7 +2876,31 @@ window.BAND_DISCOGRAPHY = {
     { name: "せかいのっびのびトラベル（世界的悠闲旅行）", type: "单曲", date: "2018-02-14", songs: [ { name: "せかいのっびのびトラベル（世界的悠闲旅行）", duration: 225 } ] },
     { name: "キラキラ☆Festa Day!", type: "单曲", date: "2018-06-20", songs: [ { name: "キラキラ☆Festa Day!", duration: 218 } ] },
     { name: "わちゃ・もちゃ・ぺったん行進曲（Wacha Mocha Pettan 进行曲）", type: "单曲", date: "2018-10-10", songs: [ { name: "わちゃ・もちゃ・ぺったん行進曲（Wacha Mocha Pettan 进行曲）", duration: 212 } ] },
-  ],
+      { name: "記憶 II", type: "单曲", date: "2027-02-20", songs: [
+      { name: "記憶 II", duration: 212 } ] },
+    { name: "久违的花", type: "单曲", date: "2029-01-03", songs: [
+      { name: "久违的花", duration: 254 } ] },
+    { name: "約束 II", type: "单曲", date: "2031-04-25", songs: [
+      { name: "約束 II", duration: 201 } ] },
+    { name: "記憶", type: "单曲", date: "2033-02-10", songs: [
+      { name: "記憶", duration: 220 } ] },
+    { name: "キミ", type: "单曲", date: "2035-03-20", songs: [
+      { name: "キミ", duration: 203 } ] },
+    { name: "キミの記憶", type: "单曲", date: "2037-06-29", songs: [
+      { name: "キミの記憶", duration: 188 } ] },
+    { name: "遥远的空", type: "单曲", date: "2039-09-26", songs: [
+      { name: "遥远的空", duration: 227 } ] },
+    { name: "未完成的光", type: "单曲", date: "2041-10-10", songs: [
+      { name: "未完成的光", duration: 229 } ] },
+    { name: "光 II", type: "单曲", date: "2043-08-19", songs: [
+      { name: "光 II", duration: 247 } ] },
+    { name: "沉默的海", type: "单曲", date: "2045-08-11", songs: [
+      { name: "沉默的海", duration: 222 } ] },
+    { name: "另一个海", type: "单曲", date: "2048-02-28", songs: [
+      { name: "另一个海", duration: 200 } ] },
+    { name: "またキミ", type: "单曲", date: "2050-03-01", songs: [
+      { name: "またキミ", duration: 187 } ] },
+    ],
   "Morfonica": [
     { name: "Daylight -デイライト-（Daylight）", type: "单曲", date: "2020-05-27", songs: [ { name: "Daylight -デイライト-（Daylight）", duration: 240 } ] },
     { name: "ブルームブルーム（Bloom Bloom）", type: "单曲", date: "2020-08-26", songs: [ { name: "ブルームブルーム（Bloom Bloom）", duration: 235 } ] },
@@ -1186,7 +2908,31 @@ window.BAND_DISCOGRAPHY = {
     { name: "はれるや（晴れるや）", type: "单曲", date: "2021-04-28", songs: [ { name: "はれるや（晴れるや）", duration: 228 } ] },
     { name: "The Circle Of...", type: "单曲", date: "2021-08-25", songs: [ { name: "The Circle Of...", duration: 242 } ] },
     { name: "Ever Sky Blue", type: "单曲", date: "2022-01-26", songs: [ { name: "Ever Sky Blue", duration: 238 } ] },
-  ],
+      { name: "沉默的花", type: "单曲", date: "2027-02-19", songs: [
+      { name: "沉默的花", duration: 208 } ] },
+    { name: "約束 II", type: "单曲", date: "2029-01-28", songs: [
+      { name: "約束 II", duration: 236 } ] },
+    { name: "はれるやの続き", type: "单曲", date: "2031-05-17", songs: [
+      { name: "はれるやの続き", duration: 225 } ] },
+    { name: "はれるやの向こう", type: "单曲", date: "2033-04-09", songs: [
+      { name: "はれるやの向こう", duration: 219 } ] },
+    { name: "久违的花", type: "单曲", date: "2035-09-06", songs: [
+      { name: "久违的花", duration: 209 } ] },
+    { name: "キミの歌", type: "单曲", date: "2037-05-03", songs: [
+      { name: "キミの歌", duration: 249 } ] },
+    { name: "空 II", type: "单曲", date: "2039-10-28", songs: [
+      { name: "空 II", duration: 218 } ] },
+    { name: "漫长的花", type: "单曲", date: "2041-08-16", songs: [
+      { name: "漫长的花", duration: 239 } ] },
+    { name: "またはれるや", type: "单曲", date: "2043-08-10", songs: [
+      { name: "またはれるや", duration: 203 } ] },
+    { name: "キミ", type: "单曲", date: "2045-07-05", songs: [
+      { name: "キミ", duration: 265 } ] },
+    { name: "漫长的雨", type: "单曲", date: "2047-12-07", songs: [
+      { name: "漫长的雨", duration: 217 } ] },
+    { name: "はれるやの夜", type: "单曲", date: "2050-02-06", songs: [
+      { name: "はれるやの夜", duration: 211 } ] },
+    ],
   "RAISE A SUILEN": [
     { name: "ERA", type: "专辑", date: "2020-03-18", songs: [
        { name: "A Declaration of ×××", duration: 235 }, { name: "Invincible Fighter", duration: 240 },
@@ -1199,7 +2945,40 @@ window.BAND_DISCOGRAPHY = {
     { name: "HELL! or HELL?", type: "单曲", date: "2019-09-18", songs: [ { name: "HELL! or HELL?", duration: 245 } ] },
     { name: "R.I.O.T", type: "单曲", date: "2020-01-22", songs: [ { name: "R.I.O.T", duration: 232 } ] },
     { name: "Sacred world", type: "单曲", date: "2020-10-21", songs: [ { name: "Sacred world", duration: 236 } ] },
-  ],
+      { name: "The Sky", type: "单曲", date: "2027-04-21", songs: [
+      { name: "The Sky", duration: 268 } ] },
+    { name: "The Line", type: "专辑", date: "2029-01-30", songs: [
+      { name: "The Line", duration: 263 }, { name: "The Spark", duration: 265 }, { name: "HELL! or HELL? Night", duration: 219 },
+      { name: "The Rain", duration: 259 }, { name: "The HELL! or HELL?", duration: 203 }, { name: "Rise", duration: 217 },
+      { name: "Rain", duration: 252 }, { name: "Echo", duration: 243 }, { name: "R.I.O.T Echo", duration: 252 },
+      { name: "Wave", duration: 221 }, { name: "The Sacred world", duration: 214 } ] },
+    { name: "Sky Rise", type: "专辑", date: "2031-02-01", songs: [
+      { name: "Sky Rise", duration: 201 }, { name: "Invincible Fighter Rise", duration: 245 }, { name: "The Invincible Fighter", duration: 263 },
+      { name: "The SOUL SOLDIER", duration: 202 }, { name: "Echoes Lights", duration: 269 }, { name: "Echoes", duration: 230 },
+      { name: "Echo II", duration: 263 }, { name: "The Light", duration: 247 }, { name: "Sky Echo", duration: 209 },
+      { name: "Spark Rise", duration: 262 } ] },
+    { name: "Signal", type: "单曲", date: "2033-06-26", songs: [
+      { name: "Signal", duration: 230 } ] },
+    { name: "Echoes Rise", type: "单曲", date: "2035-06-12", songs: [
+      { name: "Echoes Rise", duration: 260 } ] },
+    { name: "Signal Night", type: "单曲", date: "2037-03-05", songs: [
+      { name: "Signal Night", duration: 204 } ] },
+    { name: "The Night", type: "单曲", date: "2039-05-24", songs: [
+      { name: "The Night", duration: 269 } ] },
+    { name: "The Beautiful Birthday", type: "单曲", date: "2041-08-12", songs: [
+      { name: "The Beautiful Birthday", duration: 213 } ] },
+    { name: "Light Night", type: "单曲", date: "2043-12-18", songs: [
+      { name: "Light Night", duration: 229 } ] },
+    { name: "The Signal", type: "专辑", date: "2045-12-07", songs: [
+      { name: "The Signal", duration: 252 }, { name: "HELL! or HELL? Rise", duration: 212 }, { name: "Rain II", duration: 229 },
+      { name: "Signal Reprise", duration: 259 }, { name: "Sacred world Echo", duration: 265 }, { name: "Echoes Reprise", duration: 248 },
+      { name: "Beautiful Birthday Rise", duration: 260 }, { name: "HELL! or HELL? Echo", duration: 265 }, { name: "The Drift", duration: 232 },
+      { name: "The Rise", duration: 255 } ] },
+    { name: "Sacred world II", type: "单曲", date: "2048-01-04", songs: [
+      { name: "Sacred world II", duration: 256 } ] },
+    { name: "The Echoes", type: "单曲", date: "2049-09-07", songs: [
+      { name: "The Echoes", duration: 258 } ] },
+    ],
   "Ave Mujica": [
     { name: "KiLLKiSS", type: "专辑", date: "2025-01-15", songs: [
        { name: "黒のバースデイ（黑色生日）", duration: 245 }, { name: "ふたつの月（两个月亮）", duration: 238 },
@@ -1214,7 +2993,33 @@ window.BAND_DISCOGRAPHY = {
     { name: "Angles", type: "单曲", date: "2024-01-24", songs: [ { name: "Angles", duration: 235 } ] },
     { name: "Ave Mujica", type: "单曲", date: "2024-04-24", songs: [ { name: "Ave Mujica", duration: 240 } ] },
     { name: "堕天（堕天）", type: "单曲", date: "2024-08-21", songs: [ { name: "堕天（堕天）", duration: 250 } ] },
-  ],
+      { name: "Echo", type: "单曲", date: "2026-10-22", songs: [
+      { name: "Echo", duration: 211 } ] },
+    { name: "Sky Echo", type: "单曲", date: "2029-01-01", songs: [
+      { name: "Sky Echo", duration: 228 } ] },
+    { name: "The Angles", type: "单曲", date: "2031-01-06", songs: [
+      { name: "The Angles", duration: 210 } ] },
+    { name: "Angles Night", type: "单曲", date: "2033-03-24", songs: [
+      { name: "Angles Night", duration: 215 } ] },
+    { name: "Drift", type: "单曲", date: "2035-02-23", songs: [
+      { name: "Drift", duration: 209 } ] },
+    { name: "Signal", type: "单曲", date: "2037-09-13", songs: [
+      { name: "Signal", duration: 266 } ] },
+    { name: "Wave", type: "单曲", date: "2039-09-29", songs: [
+      { name: "Wave", duration: 250 } ] },
+    { name: "Line Rise", type: "单曲", date: "2041-07-24", songs: [
+      { name: "Line Rise", duration: 246 } ] },
+    { name: "Ave Mujica Echo", type: "单曲", date: "2043-05-28", songs: [
+      { name: "Ave Mujica Echo", duration: 273 } ] },
+    { name: "Sky Lights", type: "单曲", date: "2045-09-20", songs: [
+      { name: "Sky Lights", duration: 234 } ] },
+    { name: "Rain Lights", type: "单曲", date: "2048-03-04", songs: [
+      { name: "Rain Lights", duration: 211 } ] },
+    { name: "久违的堕天", type: "专辑", date: "2049-12-20", songs: [
+      { name: "久违的堕天", duration: 212 }, { name: "Rain", duration: 230 }, { name: "The Wave", duration: 254 },
+      { name: "Line", duration: 266 }, { name: "Angles II", duration: 256 }, { name: "Night", duration: 274 },
+      { name: "The Ave Mujica", duration: 268 }, { name: "Angles Echo", duration: 226 }, { name: "堕天 II", duration: 210 } ] },
+    ],
   "回春丹": [
     { name: "耳鬼出风", type: "专辑", date: "2021-10-22", songs: [
        { name: "耳鬼出风", duration: 235 }, { name: "花桥", duration: 240 },
@@ -1236,7 +3041,43 @@ window.BAND_DISCOGRAPHY = {
     { name: "初恋", type: "单曲", date: "2021-01-01", songs: [ { name: "初恋", duration: 222 } ] },
     { name: "亮闪闪", type: "单曲", date: "2024-01-01", songs: [ { name: "亮闪闪", duration: 210 } ] },
     { name: "喝彩", type: "单曲", date: "2025-01-01", songs: [ { name: "喝彩", duration: 235 } ] },
-  ],
+      { name: "另一个染春", type: "单曲", date: "2026-11-30", songs: [
+      { name: "另一个染春", duration: 265 } ] },
+    { name: "未完成的鲜花", type: "EP", date: "2029-05-14", songs: [
+      { name: "未完成的鲜花", duration: 230 }, { name: "珍珠走廊 II", duration: 212 }, { name: "遥远的断电", duration: 206 } ] },
+    { name: "丘丘 II", type: "专辑", date: "2031-08-16", songs: [
+      { name: "丘丘 II", duration: 206 }, { name: "遥远的喝彩", duration: 265 }, { name: "出逃", duration: 215 },
+      { name: "霓虹", duration: 243 }, { name: "沉默的夏天", duration: 253 }, { name: "新的耳鬼出风", duration: 264 },
+      { name: "久违的降临", duration: 225 }, { name: "遥远的鲜花", duration: 235 }, { name: "远方 II", duration: 224 },
+      { name: "沉默的断电", duration: 225 } ] },
+    { name: "艾蜜莉 II", type: "单曲", date: "2033-04-03", songs: [
+      { name: "艾蜜莉 II", duration: 252 } ] },
+    { name: "新的远方", type: "单曲", date: "2035-08-23", songs: [
+      { name: "新的远方", duration: 258 } ] },
+    { name: "深夜 II", type: "专辑", date: "2037-04-29", songs: [
+      { name: "深夜 II", duration: 268 }, { name: "沉默的分分钟需要你", duration: 266 }, { name: "另一个梦蝶", duration: 236 },
+      { name: "沉默的天线", duration: 223 }, { name: "漫长的断气", duration: 267 }, { name: "喝彩 II", duration: 253 },
+      { name: "另一个深夜", duration: 226 }, { name: "断电", duration: 249 }, { name: "遥远的旧梦", duration: 264 },
+      { name: "夏天", duration: 257 } ] },
+    { name: "公路", type: "EP", date: "2039-09-10", songs: [
+      { name: "公路", duration: 242 }, { name: "回声 II", duration: 249 }, { name: "最后的公路", duration: 262 },
+      { name: "久违的蜜虫", duration: 230 } ] },
+    { name: "大地雷公 II", type: "EP", date: "2041-07-07", songs: [
+      { name: "大地雷公 II", duration: 248 }, { name: "断气 II", duration: 249 }, { name: "旧梦", duration: 222 } ] },
+    { name: "漫长的花桥", type: "单曲", date: "2043-10-27", songs: [
+      { name: "漫长的花桥", duration: 211 } ] },
+    { name: "鲜花 II", type: "EP", date: "2045-09-26", songs: [
+      { name: "鲜花 II", duration: 213 }, { name: "久违的梦特别娇", duration: 234 }, { name: "另一个天线", duration: 225 },
+      { name: "街角 II", duration: 243 }, { name: "遥远的公路", duration: 220 } ] },
+    { name: "回声", type: "专辑", date: "2048-03-03", songs: [
+      { name: "回声", duration: 210 }, { name: "分分钟需要你 II", duration: 267 }, { name: "断电 II", duration: 276 },
+      { name: "未完成的出逃", duration: 255 }, { name: "夏天 II", duration: 225 }, { name: "公路 II", duration: 235 },
+      { name: "遥远的珍珠走廊", duration: 262 }, { name: "久违的喝彩", duration: 238 }, { name: "初恋 II", duration: 268 },
+      { name: "久违的正义", duration: 244 }, { name: "大力出奇迹 II", duration: 242 } ] },
+    { name: "未完成的旧梦", type: "EP", date: "2050-02-26", songs: [
+      { name: "未完成的旧梦", duration: 215 }, { name: "新的正义", duration: 220 }, { name: "新的分分钟需要你", duration: 266 },
+      { name: "遥远的远方", duration: 209 }, { name: "沉默的远方", duration: 228 }, { name: "久违的骑士", duration: 273 } ] },
+    ],
   "Chinese Football": [
     { name: "Chinese Football", type: "专辑", date: "2015-09-12", songs: [
        { name: "游戏开始 (Intro)", duration: 122 }, { name: "守门员", duration: 251 },
@@ -1261,7 +3102,42 @@ window.BAND_DISCOGRAPHY = {
     { name: "电动少女 (8-Bit Remix)", type: "单曲", date: "2018-03-01", songs: [ { name: "电动少女 (8-Bit Remix)", duration: 280 } ] },
     { name: "Naive", type: "单曲", date: "2017-10-01", songs: [ { name: "Naive", duration: 270 } ] },
     { name: "Dog's Diary", type: "单曲", date: "2017-11-01", songs: [ { name: "Dog's Diary", duration: 265 } ] },
-  ],
+      { name: "深夜", type: "专辑", date: "2027-04-25", songs: [
+      { name: "深夜", duration: 251 }, { name: "街角", duration: 276 }, { name: "久违的天线", duration: 271 },
+      { name: "光年", duration: 292 }, { name: "漫长的怪兽", duration: 247 }, { name: "怪兽 II", duration: 270 },
+      { name: "回声 II", duration: 246 }, { name: "出逃 II", duration: 267 }, { name: "遥远的飞鱼转身", duration: 257 } ] },
+    { name: "公路", type: "单曲", date: "2029-03-30", songs: [
+      { name: "公路", duration: 256 } ] },
+    { name: "未完成的公路", type: "专辑", date: "2031-01-29", songs: [
+      { name: "未完成的公路", duration: 289 }, { name: "沉默的街角", duration: 284 }, { name: "Naive Echo", duration: 243 },
+      { name: "遥远的游戏暂停", duration: 243 }, { name: "深夜 II", duration: 284 }, { name: "霓虹", duration: 296 },
+      { name: "天线", duration: 292 }, { name: "光年 II", duration: 254 }, { name: "旧梦 II", duration: 275 },
+      { name: "霓虹 II", duration: 270 }, { name: "出逃", duration: 295 } ] },
+    { name: "世界一分为二 II", type: "EP", date: "2033-05-22", songs: [
+      { name: "世界一分为二 II", duration: 242 }, { name: "游戏胜利 II", duration: 264 }, { name: "另一个家犬日记", duration: 298 } ] },
+    { name: "未完成的武汉", type: "EP", date: "2035-02-20", songs: [
+      { name: "未完成的武汉", duration: 292 }, { name: "夏天", duration: 246 }, { name: "漫长的电动少女", duration: 240 },
+      { name: "漫长的游戏暂停", duration: 246 }, { name: "遥远的霓虹", duration: 299 } ] },
+    { name: "沉默的公路", type: "单曲", date: "2037-07-04", songs: [
+      { name: "沉默的公路", duration: 259 } ] },
+    { name: "最后的夏日限定女朋友", type: "单曲", date: "2039-10-29", songs: [
+      { name: "最后的夏日限定女朋友", duration: 257 } ] },
+    { name: "遥远的红牌罚下", type: "单曲", date: "2041-10-10", songs: [
+      { name: "遥远的红牌罚下", duration: 301 } ] },
+    { name: "冒险岛 II", type: "EP", date: "2043-12-14", songs: [
+      { name: "冒险岛 II", duration: 269 }, { name: "另一个出逃", duration: 260 }, { name: "夏天 II", duration: 255 },
+      { name: "久违的飞鱼转身", duration: 271 }, { name: "另一个世界悲", duration: 266 }, { name: "The Naive", duration: 274 } ] },
+    { name: "回声", type: "专辑", date: "2045-10-31", songs: [
+      { name: "回声", duration: 297 }, { name: "未完成的人间失格", duration: 294 }, { name: "漫长的家犬日记", duration: 288 },
+      { name: "遥远的天线", duration: 261 }, { name: "家犬日记 II", duration: 279 }, { name: "远方", duration: 275 },
+      { name: "街角 II", duration: 286 }, { name: "400米操场 II", duration: 266 } ] },
+    { name: "帽子戏法 II", type: "EP", date: "2047-09-07", songs: [
+      { name: "帽子戏法 II", duration: 268 }, { name: "武汉 II", duration: 308 }, { name: "新的飞鱼转身", duration: 243 },
+      { name: "久违的旧梦", duration: 292 }, { name: "The Good bye", duration: 246 } ] },
+    { name: "久违的夏天", type: "EP", date: "2050-01-25", songs: [
+      { name: "久违的夏天", duration: 297 }, { name: "最后的清醒白日梦", duration: 277 }, { name: "电动少女 II", duration: 307 },
+      { name: "另一个霓虹", duration: 269 }, { name: "最后的盒子", duration: 240 }, { name: "盲人摸象 II", duration: 308 } ] },
+    ],
   "犬儒": [
     { name: "犬儒", type: "EP", date: "2022-12-10", songs: [
        { name: "志铭", duration: 306 }, { name: "皮囊", duration: 234 },
@@ -1277,7 +3153,48 @@ window.BAND_DISCOGRAPHY = {
        { name: "白鸟", duration: 365 }, { name: "给我", duration: 340 }, { name: "再见了朋友我们终会再相逢", duration: 400 } ] },
     { name: "旧情歌", type: "单曲", date: "2023-01-01", songs: [ { name: "旧情歌", duration: 250 } ] },
     { name: "河边的想象", type: "单曲", date: "2023-01-01", songs: [ { name: "河边的想象", duration: 260 } ] },
-  ],
+      { name: "最后的心房", type: "专辑", date: "2027-02-06", songs: [
+      { name: "最后的心房", duration: 290 }, { name: "另一个街角", duration: 271 }, { name: "褪色 II", duration: 325 },
+      { name: "光年 II", duration: 285 }, { name: "最后的烂苹果", duration: 258 }, { name: "出逃", duration: 321 },
+      { name: "最后的边云里", duration: 316 }, { name: "未完成的旧情歌", duration: 259 }, { name: "街角 II", duration: 304 },
+      { name: "遥远的白鸟", duration: 293 }, { name: "回声", duration: 319 } ] },
+    { name: "光年", type: "单曲", date: "2029-03-18", songs: [
+      { name: "光年", duration: 284 } ] },
+    { name: "旧梦", type: "EP", date: "2031-08-18", songs: [
+      { name: "旧梦", duration: 310 }, { name: "夏天", duration: 293 }, { name: "新的断电", duration: 258 },
+      { name: "就算 II", duration: 275 }, { name: "新的夏天", duration: 310 }, { name: "未完成的出逃", duration: 286 } ] },
+    { name: "漫长的天线", type: "专辑", date: "2033-03-24", songs: [
+      { name: "漫长的天线", duration: 279 }, { name: "另一个出逃", duration: 311 }, { name: "公路 II", duration: 301 },
+      { name: "新的栋青南", duration: 262 }, { name: "白鸟 II", duration: 264 }, { name: "心房 II", duration: 305 },
+      { name: "霓虹", duration: 293 }, { name: "皮囊 II", duration: 290 }, { name: "新的白鸟", duration: 288 } ] },
+    { name: "久违的光年", type: "单曲", date: "2035-06-01", songs: [
+      { name: "久违的光年", duration: 325 } ] },
+    { name: "回声 II", type: "专辑", date: "2037-05-06", songs: [
+      { name: "回声 II", duration: 274 }, { name: "深夜 II", duration: 314 }, { name: "沉默的出逃", duration: 310 },
+      { name: "断电", duration: 319 }, { name: "妈妈告诉我 II", duration: 309 }, { name: "沉默的公路", duration: 315 },
+      { name: "远方 II", duration: 260 }, { name: "未完成的苍蝇", duration: 261 }, { name: "未完成的边云里", duration: 265 },
+      { name: "未完成的街角", duration: 305 }, { name: "漫长的蔡家关", duration: 267 } ] },
+    { name: "最后的栋青南", type: "专辑", date: "2039-06-20", songs: [
+      { name: "最后的栋青南", duration: 290 }, { name: "烂苹果 II", duration: 290 }, { name: "漫长的夏天", duration: 313 },
+      { name: "新的深夜", duration: 292 }, { name: "久违的夏天", duration: 308 }, { name: "漫长的出逃", duration: 296 },
+      { name: "街角", duration: 276 }, { name: "最后的皮囊", duration: 291 } ] },
+    { name: "沉默的皮囊", type: "专辑", date: "2041-10-08", songs: [
+      { name: "沉默的皮囊", duration: 277 }, { name: "遥远的花丘", duration: 272 }, { name: "另一个苍蝇", duration: 276 },
+      { name: "漫长的烂苹果", duration: 278 }, { name: "沉默的上杉朗", duration: 320 }, { name: "皂角井 II", duration: 259 },
+      { name: "最后的断电", duration: 276 } ] },
+    { name: "未完成的褪色", type: "单曲", date: "2043-09-09", songs: [
+      { name: "未完成的褪色", duration: 265 } ] },
+    { name: "遥远的光年", type: "专辑", date: "2045-08-06", songs: [
+      { name: "遥远的光年", duration: 304 }, { name: "另一个远方", duration: 291 }, { name: "最后的阶梯", duration: 311 },
+      { name: "旧梦 II", duration: 302 }, { name: "另一个深夜", duration: 283 }, { name: "远方", duration: 282 },
+      { name: "另一个天线", duration: 323 }, { name: "天线", duration: 294 } ] },
+    { name: "漫长的远方", type: "单曲", date: "2047-09-08", songs: [
+      { name: "漫长的远方", duration: 289 } ] },
+    { name: "新的褪色", type: "专辑", date: "2049-12-27", songs: [
+      { name: "新的褪色", duration: 260 }, { name: "另一个褪色", duration: 287 }, { name: "新的二楼", duration: 324 },
+      { name: "最后的皂角井", duration: 315 }, { name: "未完成的皂角井", duration: 272 }, { name: "遥远的旧梦", duration: 291 },
+      { name: "断电 II", duration: 309 }, { name: "久违的天线", duration: 311 } ] },
+    ],
   "发光曲线": [
     { name: "Glow Curve", type: "专辑", date: "2011-01-01", songs: [
        { name: "On", duration: 300 }, { name: "迷航", duration: 380 }, { name: "无法命名的时刻", duration: 360 },
@@ -1299,7 +3216,43 @@ window.BAND_DISCOGRAPHY = {
        { name: "起源", duration: 285 }, { name: "狩猎", duration: 326 }, { name: "哇噻考", duration: 304 },
        { name: "千高原", duration: 275 }, { name: "起源：残响 (feat.梅志勇)", duration: 259 },
        { name: "太阳之夜", duration: 331 }, { name: "筋疲力尽", duration: 294 }, { name: "卧游", duration: 341 } ] },
-  ],
+      { name: "午夜快车 II", type: "专辑", date: "2027-04-04", songs: [
+      { name: "午夜快车 II", duration: 330 }, { name: "最后的来临", duration: 337 }, { name: "轨迹", duration: 359 },
+      { name: "潮汐 II", duration: 314 }, { name: "引力", duration: 312 }, { name: "迷航 II", duration: 317 },
+      { name: "长夜 II", duration: 347 }, { name: "静止 II", duration: 373 }, { name: "折射 II", duration: 359 } ] },
+    { name: "虚空", type: "专辑", date: "2030-04-01", songs: [
+      { name: "虚空", duration: 310 }, { name: "荒野星 II", duration: 332 }, { name: "虚空 II", duration: 372 },
+      { name: "潮汐", duration: 378 }, { name: "经纬", duration: 371 }, { name: "金钱不眠 II", duration: 331 },
+      { name: "另一个防火墙", duration: 351 } ] },
+    { name: "轨迹 II", type: "专辑", date: "2034-01-14", songs: [
+      { name: "轨迹 II", duration: 312 }, { name: "新的午夜快车", duration: 364 }, { name: "Off Lights", duration: 376 },
+      { name: "新的经纬", duration: 341 }, { name: "未完成的回旋", duration: 337 }, { name: "折射", duration: 344 },
+      { name: "银河革命计划 II", duration: 327 }, { name: "雾 II", duration: 355 }, { name: "未完成的静止", duration: 311 },
+      { name: "The On", duration: 372 }, { name: "遥远的筋疲力尽", duration: 349 } ] },
+    { name: "最后的轨迹", type: "专辑", date: "2036-11-18", songs: [
+      { name: "最后的轨迹", duration: 343 }, { name: "新的太阳之夜", duration: 340 }, { name: "引力 II", duration: 322 },
+      { name: "另一个迷航", duration: 353 }, { name: "静止", duration: 317 }, { name: "未完成的午夜快车", duration: 328 },
+      { name: "假寐史 II", duration: 364 }, { name: "鲜花圣母 II", duration: 355 }, { name: "久违的经纬", duration: 353 },
+      { name: "长夜", duration: 315 } ] },
+    { name: "沉默的折射", type: "专辑", date: "2040-05-21", songs: [
+      { name: "沉默的折射", duration: 355 }, { name: "另一个长夜", duration: 320 }, { name: "漫长的经纬", duration: 317 },
+      { name: "最后的雾", duration: 312 }, { name: "太阳之夜 II", duration: 334 }, { name: "最后的潮汐", duration: 317 },
+      { name: "Off Reprise", duration: 353 }, { name: "回旋 II", duration: 314 }, { name: "久违的午夜快车", duration: 357 } ] },
+    { name: "遥远的迷航", type: "专辑", date: "2042-11-04", songs: [
+      { name: "遥远的迷航", duration: 354 }, { name: "回旋", duration: 339 }, { name: "漫长的金钱不眠", duration: 346 },
+      { name: "银盐之梦 II", duration: 368 }, { name: "无限引擎 II", duration: 347 }, { name: "新的引力", duration: 363 },
+      { name: "漫长的雾", duration: 364 }, { name: "筋疲力尽 II", duration: 319 } ] },
+    { name: "久违的静止", type: "专辑", date: "2045-12-05", songs: [
+      { name: "久违的静止", duration: 315 }, { name: "卧游 II", duration: 329 }, { name: "灰烬霓虹 II", duration: 375 },
+      { name: "未完成的荒野星", duration: 346 }, { name: "久违的虚空", duration: 368 }, { name: "最后的筋疲力尽", duration: 342 },
+      { name: "千高原 II", duration: 379 }, { name: "最后的卧游", duration: 342 }, { name: "另一个银河革命计划", duration: 321 },
+      { name: "另一个回旋", duration: 367 }, { name: "沉默的回旋", duration: 373 } ] },
+    { name: "另一个轨迹", type: "专辑", date: "2049-11-02", songs: [
+      { name: "另一个轨迹", duration: 313 }, { name: "漫长的虚空", duration: 313 }, { name: "最后的午夜快车", duration: 364 },
+      { name: "沉默的鲜花圣母", duration: 341 }, { name: "未完成的轨迹", duration: 340 }, { name: "久违的醉鸟启示录", duration: 341 },
+      { name: "经纬 II", duration: 341 }, { name: "遥远的哇噻考", duration: 325 }, { name: "不安门 II", duration: 319 },
+      { name: "遥远的虚空", duration: 327 }, { name: "防火墙 II", duration: 362 } ] },
+    ],
   "文雀": [
     { name: "First EP", type: "EP", date: "2010-02-01", songs: [
        { name: "大雁", duration: 390 }, { name: "南方", duration: 318 },
@@ -1327,5 +3280,41 @@ window.BAND_DISCOGRAPHY = {
     { name: "我长话短说", type: "单曲", date: "2018-09-10", songs: [ { name: "我长话短说", duration: 375 } ] },
     { name: "A Letter Buried in Time", type: "EP", date: "2025-05-01", songs: [
        { name: "A Letter Buried in Time", duration: 326 }, { name: "dizzy", duration: 277 } ] },
-  ],
+      { name: "潮汐", type: "EP", date: "2027-10-09", songs: [
+      { name: "潮汐", duration: 362 }, { name: "最后的虚空", duration: 397 }, { name: "遥远的静止", duration: 339 },
+      { name: "静止", duration: 403 }, { name: "另一个谁也别管谁", duration: 399 }, { name: "不回去了 II", duration: 392 } ] },
+    { name: "轨迹 II", type: "EP", date: "2029-09-15", songs: [
+      { name: "轨迹 II", duration: 344 }, { name: "另一个某日", duration: 367 }, { name: "漫长的银湾", duration: 361 },
+      { name: "长夜 II", duration: 337 } ] },
+    { name: "未完成的天目山路", type: "EP", date: "2031-10-16", songs: [
+      { name: "未完成的天目山路", duration: 374 }, { name: "未完成的大雁", duration: 356 }, { name: "落梦池 II", duration: 345 },
+      { name: "漫长的落梦池", duration: 381 }, { name: "最后的长夜", duration: 403 } ] },
+    { name: "浮生若梦 II", type: "EP", date: "2033-09-02", songs: [
+      { name: "浮生若梦 II", duration: 386 }, { name: "最后的轨迹", duration: 395 }, { name: "新的引力", duration: 341 },
+      { name: "潮汐 II", duration: 393 }, { name: "回旋 II", duration: 370 }, { name: "久违的折射", duration: 372 } ] },
+    { name: "漫长的折射", type: "EP", date: "2035-08-18", songs: [
+      { name: "漫长的折射", duration: 352 }, { name: "虚空 II", duration: 379 }, { name: "回旋", duration: 392 },
+      { name: "经纬", duration: 341 }, { name: "沉默的虚空", duration: 365 }, { name: "遥远的雾", duration: 345 } ] },
+    { name: "漫长的经纬", type: "EP", date: "2037-12-07", songs: [
+      { name: "漫长的经纬", duration: 378 }, { name: "迷路记 II", duration: 337 }, { name: "折射 II", duration: 361 },
+      { name: "神游夜话 II", duration: 396 } ] },
+    { name: "久违的潮汐", type: "EP", date: "2040-03-02", songs: [
+      { name: "久违的潮汐", duration: 386 }, { name: "春分 II", duration: 374 }, { name: "新的迷路记", duration: 356 },
+      { name: "归途 II", duration: 398 }, { name: "虚空", duration: 357 }, { name: "折射", duration: 366 } ] },
+    { name: "静止 II", type: "EP", date: "2041-11-04", songs: [
+      { name: "静止 II", duration: 358 }, { name: "本星 II", duration: 339 }, { name: "另一个雾", duration: 350 },
+      { name: "轨迹", duration: 397 }, { name: "幻季 II", duration: 345 } ] },
+    { name: "未完成的某月", type: "单曲", date: "2043-12-31", songs: [
+      { name: "未完成的某月", duration: 340 } ] },
+    { name: "The dizzy", type: "单曲", date: "2045-12-21", songs: [
+      { name: "The dizzy", duration: 388 } ] },
+    { name: "久违的长夜", type: "专辑", date: "2048-03-26", songs: [
+      { name: "久违的长夜", duration: 352 }, { name: "久违的轨迹", duration: 361 }, { name: "久违的南方", duration: 368 },
+      { name: "沉默的折射", duration: 378 }, { name: "引力 II", duration: 356 }, { name: "银湾 II", duration: 392 },
+      { name: "最后的天目山路", duration: 381 }, { name: "久违的引力", duration: 391 }, { name: "遥远的谁也别管谁", duration: 377 } ] },
+    { name: "长夜", type: "专辑", date: "2049-10-05", songs: [
+      { name: "长夜", duration: 348 }, { name: "新的折射", duration: 387 }, { name: "最后的南方", duration: 367 },
+      { name: "新的雾", duration: 404 }, { name: "南方 II", duration: 369 }, { name: "最后的静止", duration: 392 },
+      { name: "沉默的长夜", duration: 367 }, { name: "久违的幻季", duration: 395 } ] },
+    ],
 };
