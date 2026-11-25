@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.75",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "修正日本动漫乐队名称：放学后茶会改为「放課後ティータイム」、BLAST（Black Stones）改为「Black Stones」、Given 改为「ギヴン」、MyGO!!!!! 改为「MyGO（CRYCHIC）」。",
+      "同步更新对应乐队作品数据，确保专辑与单曲不丢失。",
+    ],
+  },
+  {
     version: "1.2.74",
     date: "2026-11-25",
     size: "小更新",

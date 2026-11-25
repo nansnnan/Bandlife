@@ -1021,7 +1021,7 @@ window.BAND_DISCOGRAPHY = {
     { name: "月並みに輝け（平凡地闪耀）", type: "单曲", date: "2024-06-09", songs: [ { name: "月並みに輝け（平凡地闪耀）", duration: 220 } ] },
     { name: "僕と三原色（我和三原色）", type: "单曲", date: "2024-06-09", songs: [ { name: "僕と三原色（我和三原色）", duration: 210 } ] },
   ],
-  "放学后茶会": [
+  "放課後ティータイム": [
     { name: "放課後ティータイムII（放学后茶会II）", type: "专辑", date: "2010-10-27", songs: [
        { name: "ぴゅあぴゅあはーと（Pure Pure Heart）", duration: 240 }, { name: "カレーのちライス（咖喱饭）", duration: 220 },
        { name: "わたしの恋はホッチキス（我的爱是订书机）", duration: 230 }, { name: "ふでペン 〜ボールペン〜（毛笔～圆珠笔～）", duration: 225 },
@@ -1036,7 +1036,7 @@ window.BAND_DISCOGRAPHY = {
     { name: "No, Thank You!", type: "单曲", date: "2010-08-04", songs: [ { name: "No, Thank You!", duration: 244 } ] },
     { name: "天使にふれたよ!（遇见了天使）", type: "单曲", date: "2010-09-08", songs: [ { name: "天使にふれたよ!（遇见了天使）", duration: 240 } ] },
   ],
-  "MyGO!!!!!": [
+  "MyGO（CRYCHIC）": [
     { name: "迷跡波（迷迹波）", type: "专辑", date: "2024-04-24", songs: [
        { name: "迷星叫（迷星叫）", duration: 230 }, { name: "迷路日々（迷路日日）", duration: 225 },
        { name: "音一会（音一会）", duration: 240 }, { name: "名無声（名无声）", duration: 235 },
@@ -1051,7 +1051,7 @@ window.BAND_DISCOGRAPHY = {
     { name: "潜在表明（潜在表明）", type: "单曲", date: "2023-11-15", songs: [ { name: "潜在表明（潜在表明）", duration: 220 } ] },
     { name: "壱雫空（一雫空）", type: "单曲", date: "2024-02-14", songs: [ { name: "壱雫空（一雫空）", duration: 228 } ] },
   ],
-  "Given": [
+  "ギヴン": [
     { name: "gift", type: "专辑", date: "2020-08-26", songs: [
        { name: "夜が明ける（天亮了）", duration: 281 }, { name: "へたくそ（笨拙）", duration: 188 },
        { name: "ステージから君に捧ぐ（从舞台献给你）", duration: 258 }, { name: "冬のはなし（冬天的故事）", duration: 208 },
@@ -1093,7 +1093,7 @@ window.BAND_DISCOGRAPHY = {
        { name: "もう何もいらない未来（什么都不再需要的未来）", duration: 226 }, { name: "命をくれよ（把命给我）", duration: 222 },
        { name: "arrow", duration: 218 }, { name: "薊の薔薇（薊之蔷薇）", duration: 228 } ] },
   ],
-  "BLAST（Black Stones）": [
+  "Black Stones": [
     { name: "BLAST", type: "专辑", date: "2006-06-21", songs: [
        { name: "Rose", duration: 240 }, { name: "黒い涙（黑色的泪）", duration: 265 },
        { name: "Zero", duration: 210 }, { name: "Lucy", duration: 225 }, { name: "Shadow of the Sun", duration: 250 } ] },
