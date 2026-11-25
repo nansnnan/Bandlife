@@ -2354,35 +2354,98 @@ window.BAND_DISCOGRAPHY = {
     { name: "光の中へ（走向光中）", type: "单曲", date: "2024-06-09", songs: [ { name: "光の中へ（走向光中）", duration: 240 } ] },
     { name: "月並みに輝け（平凡地闪耀）", type: "单曲", date: "2024-06-09", songs: [ { name: "月並みに輝け（平凡地闪耀）", duration: 220 } ] },
     { name: "僕と三原色（我和三原色）", type: "单曲", date: "2024-06-09", songs: [ { name: "僕と三原色（我和三原色）", duration: 210 } ] },
-      { name: "泉の時", type: "单曲", date: "2026-11-06", songs: [
-      { name: "泉の時（泉之时光）", duration: 243 } ] },
-    { name: "海辺の影", type: "单曲", date: "2029-01-06", songs: [
-      { name: "海辺の影（海边之影）", duration: 239 } ] },
-    { name: "泉の木漏れ日", type: "专辑", date: "2031-04-21", songs: [
-      { name: "泉の木漏れ日（泉之林间光斑）", duration: 379 }, { name: "星屑（星屑）", duration: 188 }, { name: "約束（约定）", duration: 254 },
-      { name: "銀河（银河）", duration: 216 }, { name: "流れ星（流星）", duration: 220 }, { name: "朝霧（晨雾）", duration: 207 },
-      { name: "窓の木霊（窗之树魂）", duration: 178 }, { name: "帰り道（归途）", duration: 380 }, { name: "残響（残响）", duration: 230 },
-      { name: "屋上（天台）", duration: 182 }, { name: "夜の雨（夜之雨）", duration: 234 } ] },
-    { name: "放課後の朝霧", type: "单曲", date: "2033-06-09", songs: [
-      { name: "放課後の朝霧（放学后之晨雾）", duration: 181 } ] },
-    { name: "青空の星空", type: "专辑", date: "2035-04-11", songs: [
-      { name: "青空の星空（青空之星空）", duration: 241 }, { name: "冬休みの根（寒假之根）", duration: 232 }, { name: "木漏れ日（林间光斑）", duration: 225 },
-      { name: "遠い（遥远）", duration: 225 }, { name: "満月（满月）", duration: 213 }, { name: "夜の夜明け（夜之黎明）", duration: 249 },
-      { name: "枝の朧月（枝之胧月）", duration: 218 }, { name: "海の夏休み（海之暑假）", duration: 271 }, { name: "給食の調べ（午餐之曲调）", duration: 219 } ] },
-    { name: "朝焼けの花火", type: "单曲", date: "2037-06-26", songs: [
-      { name: "朝焼けの花火（朝霞之花火）", duration: 235 } ] },
-    { name: "小さなの月光", type: "单曲", date: "2039-08-24", songs: [
-      { name: "小さなの月光（微小的月光）", duration: 205 } ] },
-    { name: "夕暮れの枝", type: "单曲", date: "2041-05-17", songs: [
-      { name: "夕暮れの枝（黄昏之枝）", duration: 215 } ] },
-    { name: "部活", type: "单曲", date: "2043-07-31", songs: [
-      { name: "部活（社团）", duration: 179 } ] },
-    { name: "眩しい", type: "单曲", date: "2045-08-31", songs: [
-      { name: "眩しい（耀眼）", duration: 141 } ] },
-    { name: "海の修学旅行", type: "单曲", date: "2047-11-01", songs: [
-      { name: "海の修学旅行（海之修学旅行）", duration: 213 } ] },
-    { name: "優しい", type: "单曲", date: "2050-01-15", songs: [
-      { name: "優しい（温柔）", duration: 203 } ] },
+      { name: "朝霧", type: "专辑", date: "2026-05-23", songs: [
+      { name: "朝霧（晨雾）", duration: 238 }, { name: "青空の星空（青空之星空）", duration: 341 }, { name: "冬休みの根（寒假之根）", duration: 223 },
+      { name: "木漏れ日（林间光斑）", duration: 231 }, { name: "遠い（遥远）", duration: 224 }, { name: "満月（满月）", duration: 209 },
+      { name: "夜の夜明け（夜之黎明）", duration: 233 }, { name: "枝の朧月（枝之胧月）", duration: 208 } ] },
+    { name: "海の夏休み", type: "EP", date: "2027-07-18", songs: [
+      { name: "海の夏休み（海之暑假）", duration: 208 }, { name: "給食の調べ（午餐之曲调）", duration: 262 }, { name: "朝焼けの花火（朝霞之花火）", duration: 226 } ] },
+    { name: "小さなの月光", type: "EP", date: "2028-06-30", songs: [
+      { name: "小さなの月光（微小的月光）", duration: 211 }, { name: "夕暮れの枝（黄昏之枝）", duration: 185 }, { name: "部活（社团）", duration: 231 },
+      { name: "眩しい（耀眼）", duration: 211 }, { name: "海の修学旅行（海之修学旅行）", duration: 239 }, { name: "優しい（温柔）", duration: 208 } ] },
+    { name: "畳の岬", type: "专辑", date: "2029-04-27", songs: [
+      { name: "畳の岬（榻榻米之海角）", duration: 198 }, { name: "土の冬晴れ（土之冬日晴空）", duration: 203 }, { name: "三日月（新月）", duration: 274 },
+      { name: "言葉の障子（言语之障子）", duration: 253 }, { name: "黒板（黑板）", duration: 334 }, { name: "川の文化祭（河之文化祭）", duration: 245 },
+      { name: "記憶の砂（记忆之沙）", duration: 237 }, { name: "浴衣（浴衣）", duration: 129 }, { name: "陽だまり（暖阳）", duration: 227 } ] },
+    { name: "夜風", type: "单曲", date: "2030-05-04", songs: [
+      { name: "夜風（夜风）", duration: 278 } ] },
+    { name: "旋律", type: "EP", date: "2031-05-03", songs: [
+      { name: "旋律（旋律）", duration: 145 }, { name: "木霊の窓（树魂之窗）", duration: 228 }, { name: "制服（制服）", duration: 194 } ] },
+    { name: "流れ星", type: "专辑", date: "2032-04-16", songs: [
+      { name: "流れ星（流星）", duration: 230 }, { name: "若葉（新叶）", duration: 218 }, { name: "季節の黄昏（季节之黄昏）", duration: 270 },
+      { name: "星空の夏休み（星空之暑假）", duration: 225 }, { name: "月光（月光）", duration: 230 }, { name: "白い（纯白的）", duration: 224 },
+      { name: "落ち葉の体育祭（落叶之体育祭）", duration: 244 }, { name: "暁の根（拂晓之根）", duration: 221 } ] },
+    { name: "満月の波", type: "专辑", date: "2033-02-25", songs: [
+      { name: "満月の波（满月之波）", duration: 187 }, { name: "文化祭（文化祭）", duration: 250 }, { name: "残照（残照）", duration: 256 },
+      { name: "小さなの青空（微小的青空）", duration: 241 }, { name: "星屑（星屑）", duration: 229 }, { name: "残照の若葉（残照之新叶）", duration: 219 },
+      { name: "記憶の桜（记忆之樱花）", duration: 209 }, { name: "心音の満月（心跳之满月）", duration: 209 }, { name: "朝焼け（朝霞）", duration: 225 } ] },
+    { name: "青空の岸", type: "EP", date: "2034-02-13", songs: [
+      { name: "青空の岸（青空之岸）", duration: 191 }, { name: "渓の蝉（溪之蝉）", duration: 233 }, { name: "残響の雪（残响之雪）", duration: 196 },
+      { name: "恋の窓（恋之窗）", duration: 233 } ] },
+    { name: "青空の流星", type: "单曲", date: "2035-03-18", songs: [
+      { name: "青空の流星（青空之流星）", duration: 214 } ] },
+    { name: "記憶", type: "单曲", date: "2035-12-31", songs: [
+      { name: "記憶（记忆）", duration: 251 } ] },
+    { name: "畳の霞", type: "专辑", date: "2036-12-25", songs: [
+      { name: "畳の霞（榻榻米之霞）", duration: 274 }, { name: "卒業（毕业）", duration: 206 }, { name: "秋風（秋风）", duration: 220 },
+      { name: "響き（回响）", duration: 210 }, { name: "春風（春风）", duration: 245 }, { name: "夏休み（暑假）", duration: 234 },
+      { name: "夜の朝焼け（夜之朝霞）", duration: 216 }, { name: "残照の葉（残照之叶）", duration: 203 }, { name: "風の青空（风之青空）", duration: 242 },
+      { name: "雨音（雨声）", duration: 372 }, { name: "星雲（星云）", duration: 216 } ] },
+    { name: "恋の蕾", type: "EP", date: "2038-02-03", songs: [
+      { name: "恋の蕾（恋之花苞）", duration: 225 }, { name: "自転車（单车）", duration: 228 }, { name: "小さな（微小的）", duration: 238 },
+      { name: "夜風の優しい（温柔的夜风）", duration: 238 }, { name: "帰り道（归途）", duration: 150 } ] },
+    { name: "若葉の向日葵", type: "专辑", date: "2038-11-25", songs: [
+      { name: "若葉の向日葵（新叶之向日葵）", duration: 250 }, { name: "春休み（春假）", duration: 180 }, { name: "蝉の木霊（蝉之树魂）", duration: 413 },
+      { name: "給食（午餐）", duration: 227 }, { name: "朧月（胧月）", duration: 271 }, { name: "青い（湛蓝）", duration: 266 },
+      { name: "水面（水面）", duration: 191 }, { name: "遠いの調べ（遥远曲调）", duration: 209 }, { name: "言葉（言语）", duration: 206 },
+      { name: "浜の流星（海滨之流星）", duration: 207 } ] },
+    { name: "放課後", type: "专辑", date: "2039-10-29", songs: [
+      { name: "放課後（放学后）", duration: 216 }, { name: "残響の凪（残响之风平浪静）", duration: 173 }, { name: "時の秋風（时光之秋风）", duration: 225 },
+      { name: "木霊（树魂）", duration: 190 }, { name: "光の桜（光之樱花）", duration: 220 }, { name: "銀河（银河）", duration: 218 },
+      { name: "時の月光（时光之月光）", duration: 223 } ] },
+    { name: "灯りの夜明け", type: "EP", date: "2040-12-17", songs: [
+      { name: "灯りの夜明け（灯火之黎明）", duration: 228 }, { name: "修学旅行（修学旅行）", duration: 252 }, { name: "静かの岩（静谧岩石）", duration: 172 } ] },
+    { name: "放課後の銀河", type: "单曲", date: "2041-10-05", songs: [
+      { name: "放課後の銀河（放学后之银河）", duration: 230 } ] },
+    { name: "蕾の給食", type: "专辑", date: "2042-10-11", songs: [
+      { name: "蕾の給食（花苞之午餐）", duration: 205 }, { name: "縁側の畳（檐廊之榻榻米）", duration: 223 }, { name: "木漏れ日の響き（林间光斑之回响）", duration: 200 },
+      { name: "海辺（海边）", duration: 228 }, { name: "波音（潮声）", duration: 227 }, { name: "紅葉（红叶）", duration: 215 },
+      { name: "土の滝（土之瀑布）", duration: 230 } ] },
+    { name: "流れ星の朝", type: "专辑", date: "2043-11-16", songs: [
+      { name: "流れ星の朝（流星之晨）", duration: 232 }, { name: "銀河の岬（银河之海角）", duration: 252 }, { name: "雲の歌（云之歌）", duration: 231 },
+      { name: "黄昏の浜（黄昏之海滨）", duration: 218 }, { name: "遠いの灯り（遥远灯火）", duration: 127 }, { name: "若葉の優しい（温柔的新叶）", duration: 208 },
+      { name: "枝の灯り（枝之灯火）", duration: 251 }, { name: "冬休み（寒假）", duration: 245 }, { name: "暁の調べ（拂晓之曲调）", duration: 187 },
+      { name: "季節（季节）", duration: 242 }, { name: "朧月の岸（胧月之岸）", duration: 251 } ] },
+    { name: "流星の海", type: "EP", date: "2044-09-17", songs: [
+      { name: "流星の海（流星之海）", duration: 244 }, { name: "縁側（檐廊）", duration: 243 }, { name: "浴衣の夜（浴衣之夜）", duration: 179 } ] },
+    { name: "透明の海辺", type: "专辑", date: "2045-10-02", songs: [
+      { name: "透明の海辺（透明海边）", duration: 353 }, { name: "小さなの星屑（微小的星屑）", duration: 228 }, { name: "風の暁（风之拂晓）", duration: 220 },
+      { name: "虹の追憶（彩虹之追忆）", duration: 212 }, { name: "向日葵（向日葵）", duration: 212 }, { name: "調べ（曲调）", duration: 228 },
+      { name: "放課後の季節（放学后之季节）", duration: 213 }, { name: "岬の遠い（遥远的海角）", duration: 225 }, { name: "障子（障子）", duration: 227 },
+      { name: "雪化粧（银装素裹）", duration: 185 }, { name: "凪の涙（风平浪静之泪）", duration: 229 } ] },
+    { name: "調べの月", type: "专辑", date: "2046-10-14", songs: [
+      { name: "調べの月（曲调之月）", duration: 231 }, { name: "真夏（盛夏）", duration: 126 }, { name: "冬晴れ（冬日晴空）", duration: 194 },
+      { name: "星空（星空）", duration: 228 }, { name: "青空（青空）", duration: 231 }, { name: "影の春休み（影之春假）", duration: 184 },
+      { name: "花火の恋（花火之恋）", duration: 192 }, { name: "夕霧（暮霭）", duration: 189 }, { name: "自転車の眩しい（耀眼的单车）", duration: 233 },
+      { name: "遠いの冬休み（遥远寒假）", duration: 307 }, { name: "障子の朝（障子之晨）", duration: 182 } ] },
+    { name: "落ち葉", type: "专辑", date: "2047-08-05", songs: [
+      { name: "落ち葉（落叶）", duration: 236 }, { name: "潮騒（潮鸣）", duration: 216 }, { name: "冬晴れの波音（冬日晴空之潮声）", duration: 250 },
+      { name: "葉の浴衣（叶之浴衣）", duration: 233 }, { name: "制服の音色（制服之音色）", duration: 150 }, { name: "約束の制服（约定之制服）", duration: 226 },
+      { name: "心音（心跳）", duration: 245 }, { name: "夜明け（黎明）", duration: 219 }, { name: "卒業の春休み（毕业之春假）", duration: 206 } ] },
+    { name: "木漏れ日の湖", type: "专辑", date: "2048-08-29", songs: [
+      { name: "木漏れ日の湖（林间光斑之湖）", duration: 151 }, { name: "体育祭の島（体育祭之岛）", duration: 223 }, { name: "青いの響き（湛蓝回响）", duration: 194 },
+      { name: "給食の文化祭（午餐之文化祭）", duration: 237 }, { name: "風鈴（风铃）", duration: 251 }, { name: "光景（光景）", duration: 244 },
+      { name: "約束の音色（约定之音色）", duration: 176 }, { name: "想い（思念）", duration: 248 }, { name: "氷の涙（冰之泪）", duration: 302 } ] },
+    { name: "落ち葉の木霊", type: "专辑", date: "2049-07-12", songs: [
+      { name: "落ち葉の木霊（落叶之树魂）", duration: 213 }, { name: "街の光景（街之光景）", duration: 183 }, { name: "岸の蛍（岸之萤火虫）", duration: 222 },
+      { name: "枝の追憶（枝之追忆）", duration: 219 }, { name: "涙の泉（泪之泉）", duration: 263 }, { name: "窓の青空（窗之青空）", duration: 331 },
+      { name: "雪の月光（雪之月光）", duration: 139 }, { name: "畳の波音（榻榻米之潮声）", duration: 207 }, { name: "冬晴れの星雲（冬日晴空之星云）", duration: 252 },
+      { name: "約束の優しい（温柔的约定）", duration: 249 }, { name: "暁の春風（拂晓之春风）", duration: 253 } ] },
+    { name: "雪の若葉", type: "专辑", date: "2050-05-25", songs: [
+      { name: "雪の若葉（雪之新叶）", duration: 316 }, { name: "桜の朝焼け（樱花之朝霞）", duration: 272 }, { name: "満月の星雲（满月之星云）", duration: 174 },
+      { name: "氷の部活（冰之社团）", duration: 188 }, { name: "石の光（石之光）", duration: 239 }, { name: "歌の冬休み（歌之寒假）", duration: 235 },
+      { name: "流れ星の海（流星之海）", duration: 182 }, { name: "卒業の岩（毕业之岩石）", duration: 278 }, { name: "夕暮れ（黄昏）", duration: 206 },
+      { name: "島の縁側（岛之檐廊）", duration: 261 }, { name: "黒板の花（黑板之花）", duration: 222 } ] },
     ],
   "放課後ティータイム": [
     { name: "放課後ティータイムII（放学后茶会II）", type: "专辑", date: "2010-10-27", songs: [
@@ -2398,30 +2461,86 @@ window.BAND_DISCOGRAPHY = {
     { name: "Utauyo!! MIRACLE", type: "单曲", date: "2010-08-04", songs: [ { name: "Utauyo!! MIRACLE", duration: 250 } ] },
     { name: "No, Thank You!", type: "单曲", date: "2010-08-04", songs: [ { name: "No, Thank You!", duration: 244 } ] },
     { name: "天使にふれたよ!（遇见了天使）", type: "单曲", date: "2010-09-08", songs: [ { name: "天使にふれたよ!（遇见了天使）", duration: 240 } ] },
-      { name: "残照", type: "单曲", date: "2026-10-27", songs: [
-      { name: "残照（残照）", duration: 218 } ] },
-    { name: "小さなの青空", type: "单曲", date: "2029-02-12", songs: [
-      { name: "小さなの青空（微小的青空）", duration: 173 } ] },
-    { name: "残照の若葉", type: "单曲", date: "2031-05-10", songs: [
-      { name: "残照の若葉（残照之新叶）", duration: 249 } ] },
-    { name: "記憶の桜", type: "单曲", date: "2033-04-16", songs: [
-      { name: "記憶の桜（记忆之樱花）", duration: 258 } ] },
-    { name: "心音の満月", type: "单曲", date: "2035-04-19", songs: [
-      { name: "心音の満月（心跳之满月）", duration: 212 } ] },
-    { name: "朝焼け", type: "单曲", date: "2037-05-01", songs: [
-      { name: "朝焼け（朝霞）", duration: 218 } ] },
-    { name: "若葉", type: "单曲", date: "2039-08-28", songs: [
-      { name: "若葉（新叶）", duration: 223 } ] },
-    { name: "青空の岸", type: "单曲", date: "2041-06-03", songs: [
-      { name: "青空の岸（青空之岸）", duration: 335 } ] },
-    { name: "渓の蝉", type: "单曲", date: "2043-12-06", songs: [
-      { name: "渓の蝉（溪之蝉）", duration: 225 } ] },
-    { name: "残響の雪", type: "单曲", date: "2045-12-03", songs: [
-      { name: "残響の雪（残响之雪）", duration: 227 } ] },
-    { name: "恋の窓", type: "单曲", date: "2048-01-29", songs: [
-      { name: "恋の窓（恋之窗）", duration: 254 } ] },
-    { name: "青空の流星", type: "单曲", date: "2049-10-25", songs: [
-      { name: "青空の流星（青空之流星）", duration: 229 } ] },
+      { name: "窓の教室", type: "单曲", date: "2026-07-05", songs: [
+      { name: "窓の教室（窗之教室）", duration: 238 } ] },
+    { name: "水面の心音", type: "专辑", date: "2027-07-01", songs: [
+      { name: "水面の心音（水面之心跳）", duration: 239 }, { name: "旋律の歌（旋律之歌）", duration: 215 }, { name: "約束（约定）", duration: 332 },
+      { name: "放課後の真夏（放学后之盛夏）", duration: 233 }, { name: "時の川（时光之河）", duration: 222 }, { name: "星の朝霧（星之晨雾）", duration: 202 },
+      { name: "季節の灯り（季节之灯火）", duration: 310 }, { name: "海辺の響き（海边之回响）", duration: 220 }, { name: "川の朝焼け（河之朝霞）", duration: 259 },
+      { name: "夏祭り（夏日祭）", duration: 238 }, { name: "静か（静谧）", duration: 197 } ] },
+    { name: "夜風の夜明け", type: "单曲", date: "2028-04-15", songs: [
+      { name: "夜風の夜明け（夜风之黎明）", duration: 198 } ] },
+    { name: "追憶", type: "专辑", date: "2029-05-22", songs: [
+      { name: "追憶（追忆）", duration: 257 }, { name: "花の夜明け（花之黎明）", duration: 197 }, { name: "縁側の夕霧（檐廊之暮霭）", duration: 246 },
+      { name: "体育祭（体育祭）", duration: 225 }, { name: "月の波音（月之潮声）", duration: 251 }, { name: "朧月の屋上（胧月之天台）", duration: 233 },
+      { name: "屋上の雨（天台之雨）", duration: 256 }, { name: "星空の流星（星空之流星）", duration: 228 }, { name: "夜明けの木霊（黎明之树魂）", duration: 220 },
+      { name: "窓の調べ（窗之曲调）", duration: 209 } ] },
+    { name: "夜明けの潮騒", type: "EP", date: "2030-05-18", songs: [
+      { name: "夜明けの潮騒（黎明之潮鸣）", duration: 222 }, { name: "月光の調べ（月光之曲调）", duration: 256 }, { name: "葉の真夏（叶之盛夏）", duration: 238 },
+      { name: "残響（残响）", duration: 243 }, { name: "木漏れ日の川（林间光斑之河）", duration: 217 } ] },
+    { name: "星雲の縁側", type: "专辑", date: "2031-04-04", songs: [
+      { name: "星雲の縁側（星云之檐廊）", duration: 256 }, { name: "空の秋風（天空之秋风）", duration: 235 }, { name: "夕焼け（晚霞）", duration: 142 },
+      { name: "月の滝（月之瀑布）", duration: 252 }, { name: "夜明けの夜風（黎明之夜风）", duration: 215 }, { name: "木漏れ日の花（林间光斑之花）", duration: 231 },
+      { name: "波音の紅葉（潮声之红叶）", duration: 195 }, { name: "黄昏の夕霧（黄昏之暮霭）", duration: 242 }, { name: "雨音の夜明け（雨声之黎明）", duration: 239 } ] },
+    { name: "川の星", type: "专辑", date: "2032-04-07", songs: [
+      { name: "川の星（河之星）", duration: 345 }, { name: "約束の夏休み（约定之暑假）", duration: 228 }, { name: "潮騒の星空（潮鸣之星空）", duration: 256 },
+      { name: "浴衣の涙（浴衣之泪）", duration: 225 }, { name: "春休みの冬晴れ（春假之冬日晴空）", duration: 238 }, { name: "光の雲（光之云）", duration: 177 },
+      { name: "屋上の岬（天台之海角）", duration: 254 }, { name: "帰り道の夕焼け（归途之晚霞）", duration: 317 }, { name: "優しいの雲（温柔云）", duration: 283 },
+      { name: "冬晴れの氷（冬日晴空之冰）", duration: 239 } ] },
+    { name: "風の風鈴", type: "单曲", date: "2033-03-23", songs: [
+      { name: "風の風鈴（风之风铃）", duration: 257 } ] },
+    { name: "岸の実", type: "专辑", date: "2034-02-03", songs: [
+      { name: "岸の実（岸之果实）", duration: 327 }, { name: "灯り（灯火）", duration: 220 }, { name: "滝の銀河（瀑布之银河）", duration: 238 },
+      { name: "霞の教室（霞之教室）", duration: 220 }, { name: "海辺の放課後（海边之放学后）", duration: 248 }, { name: "風鈴の夏祭り（风铃之夏日祭）", duration: 268 },
+      { name: "月の青空（月之青空）", duration: 331 }, { name: "水面の花（水面之花）", duration: 197 }, { name: "紅葉の水面（红叶之水面）", duration: 251 } ] },
+    { name: "花の紅葉", type: "EP", date: "2035-03-20", songs: [
+      { name: "花の紅葉（花之红叶）", duration: 279 }, { name: "光の空（光之天空）", duration: 241 }, { name: "黒板の空（黑板之天空）", duration: 214 },
+      { name: "屋上（天台）", duration: 319 }, { name: "文化祭の眩しい（耀眼的文化祭）", duration: 172 }, { name: "遠いの風（遥远风）", duration: 267 } ] },
+    { name: "修学旅行の心音", type: "单曲", date: "2036-01-16", songs: [
+      { name: "修学旅行の心音（修学旅行之心跳）", duration: 220 } ] },
+    { name: "若葉の約束", type: "专辑", date: "2036-12-15", songs: [
+      { name: "若葉の約束（新叶之约定）", duration: 245 }, { name: "雨音の夜（雨声之夜）", duration: 228 }, { name: "文化祭の霞（文化祭之霞）", duration: 239 },
+      { name: "想いの銀河（思念之银河）", duration: 251 }, { name: "暁の湖（拂晓之湖）", duration: 243 }, { name: "霧の朝（雾之晨）", duration: 214 },
+      { name: "遠いの湖（遥远湖）", duration: 263 }, { name: "月光の霧（月光之雾）", duration: 222 } ] },
+    { name: "小さなの黄昏", type: "单曲", date: "2038-01-11", songs: [
+      { name: "小さなの黄昏（微小的黄昏）", duration: 256 } ] },
+    { name: "流星の夕暮れ", type: "单曲", date: "2039-01-16", songs: [
+      { name: "流星の夕暮れ（流星之黄昏）", duration: 267 } ] },
+    { name: "蝉の陽だまり", type: "EP", date: "2039-11-25", songs: [
+      { name: "蝉の陽だまり（蝉之暖阳）", duration: 218 }, { name: "若葉の夕暮れ（新叶之黄昏）", duration: 257 }, { name: "空の水面（天空之水面）", duration: 254 } ] },
+    { name: "言葉の月光", type: "EP", date: "2040-10-18", songs: [
+      { name: "言葉の月光（言语之月光）", duration: 213 }, { name: "夕霧の春休み（暮霭之春假）", duration: 245 }, { name: "畳の光景（榻榻米之光景）", duration: 284 },
+      { name: "黒板の遠い（遥远的黑板）", duration: 234 }, { name: "詩の砂（诗之沙）", duration: 278 }, { name: "想いの月（思念之月）", duration: 245 } ] },
+    { name: "星屑の恋", type: "单曲", date: "2041-10-12", songs: [
+      { name: "星屑の恋（星屑之恋）", duration: 241 } ] },
+    { name: "渓の記憶", type: "专辑", date: "2042-10-07", songs: [
+      { name: "渓の記憶（溪之记忆）", duration: 381 }, { name: "根の雨（根之雨）", duration: 247 }, { name: "残照の朝（残照之晨）", duration: 282 },
+      { name: "雨の青い（湛蓝的雨）", duration: 155 }, { name: "霧の星雲（雾之星云）", duration: 225 }, { name: "風の波（风之波）", duration: 226 },
+      { name: "影の朧月（影之胧月）", duration: 220 }, { name: "朧月の夏祭り（胧月之夏日祭）", duration: 274 }, { name: "眩しいの海（耀眼海）", duration: 246 },
+      { name: "音色（音色）", duration: 252 } ] },
+    { name: "影の朝", type: "EP", date: "2043-09-16", songs: [
+      { name: "影の朝（影之晨）", duration: 228 }, { name: "音色の優しい（温柔的音色）", duration: 252 }, { name: "朧月の優しい（温柔的胧月）", duration: 242 },
+      { name: "朝焼けの旋律（朝霞之旋律）", duration: 244 } ] },
+    { name: "秋風の雪化粧", type: "EP", date: "2044-09-15", songs: [
+      { name: "秋風の雪化粧（秋风之银装素裹）", duration: 253 }, { name: "文化祭の満月（文化祭之满月）", duration: 234 }, { name: "小さなの残照（微小的残照）", duration: 242 },
+      { name: "音色の波（音色之波）", duration: 274 } ] },
+    { name: "響きの若葉", type: "单曲", date: "2045-08-12", songs: [
+      { name: "響きの若葉（回响之新叶）", duration: 188 } ] },
+    { name: "星空の歌", type: "单曲", date: "2046-09-14", songs: [
+      { name: "星空の歌（星空之歌）", duration: 236 } ] },
+    { name: "夕焼けの旋律", type: "EP", date: "2047-09-30", songs: [
+      { name: "夕焼けの旋律（晚霞之旋律）", duration: 246 }, { name: "紅葉の眩しい（耀眼的红叶）", duration: 284 }, { name: "流星の星（流星之星）", duration: 196 },
+      { name: "根の静か（静谧的根）", duration: 209 }, { name: "微笑の実（微笑之果实）", duration: 223 } ] },
+    { name: "黄昏の夜風", type: "专辑", date: "2048-08-17", songs: [
+      { name: "黄昏の夜風（黄昏之夜风）", duration: 397 }, { name: "季節の泉（季节之泉）", duration: 269 }, { name: "星雲の葉（星云之叶）", duration: 241 },
+      { name: "夕霧の夕暮れ（暮霭之黄昏）", duration: 222 }, { name: "渓の部活（溪之社团）", duration: 238 }, { name: "追憶の涙（追忆之泪）", duration: 233 },
+      { name: "追憶の恋（追忆之恋）", duration: 185 }, { name: "声の唄（声之歌谣）", duration: 220 } ] },
+    { name: "蛍の潮騒", type: "EP", date: "2049-07-03", songs: [
+      { name: "蛍の潮騒（萤火虫之潮鸣）", duration: 241 }, { name: "霜の根（霜之根）", duration: 131 }, { name: "唄の水面（歌谣之水面）", duration: 184 } ] },
+    { name: "灯りの制服", type: "专辑", date: "2050-06-21", songs: [
+      { name: "灯りの制服（灯火之制服）", duration: 162 }, { name: "月の響き（月之回响）", duration: 239 }, { name: "灯りの旋律（灯火之旋律）", duration: 247 },
+      { name: "唄の波（歌谣之波）", duration: 216 }, { name: "蛍の放課後（萤火虫之放学后）", duration: 224 }, { name: "月光の朝（月光之晨）", duration: 204 },
+      { name: "浴衣の島（浴衣之岛）", duration: 260 }, { name: "浴衣の三日月（浴衣之新月）", duration: 247 } ] },
     ],
   "MyGO（CRYCHIC）": [
     { name: "迷跡波（迷迹波）", type: "专辑", date: "2024-04-24", songs: [
@@ -2437,36 +2556,90 @@ window.BAND_DISCOGRAPHY = {
     { name: "名無声（名无声）", type: "单曲", date: "2023-08-16", songs: [ { name: "名無声（名无声）", duration: 235 } ] },
     { name: "潜在表明（潜在表明）", type: "单曲", date: "2023-11-15", songs: [ { name: "潜在表明（潜在表明）", duration: 220 } ] },
     { name: "壱雫空（一雫空）", type: "单曲", date: "2024-02-14", songs: [ { name: "壱雫空（一雫空）", duration: 228 } ] },
-      { name: "小さな", type: "单曲", date: "2027-04-01", songs: [
-      { name: "小さな（微小的）", duration: 197 } ] },
-    { name: "夜風の優しい", type: "专辑", date: "2029-04-01", songs: [
-      { name: "夜風の優しい（温柔的夜风）", duration: 326 }, { name: "若葉の向日葵（新叶之向日葵）", duration: 275 }, { name: "春休み（春假）", duration: 185 },
-      { name: "蝉の木霊（蝉之树魂）", duration: 228 }, { name: "給食（午餐）", duration: 244 }, { name: "朧月（胧月）", duration: 220 },
-      { name: "雨音（雨声）", duration: 236 }, { name: "青い（湛蓝）", duration: 210 } ] },
-    { name: "水面", type: "专辑", date: "2031-02-02", songs: [
-      { name: "水面（水面）", duration: 204 }, { name: "遠いの調べ（遥远曲调）", duration: 217 }, { name: "黒板（黑板）", duration: 254 },
-      { name: "言葉（言语）", duration: 209 }, { name: "浜の流星（海滨之流星）", duration: 239 }, { name: "放課後（放学后）", duration: 255 },
-      { name: "残響の凪（残响之风平浪静）", duration: 229 }, { name: "時の秋風（时光之秋风）", duration: 220 }, { name: "木霊（树魂）", duration: 220 } ] },
-    { name: "光の桜", type: "单曲", date: "2033-06-14", songs: [
-      { name: "光の桜（光之樱花）", duration: 219 } ] },
-    { name: "時の月光", type: "单曲", date: "2035-03-02", songs: [
-      { name: "時の月光（时光之月光）", duration: 278 } ] },
-    { name: "灯りの夜明け", type: "单曲", date: "2037-05-08", songs: [
-      { name: "灯りの夜明け（灯火之黎明）", duration: 193 } ] },
-    { name: "修学旅行", type: "单曲", date: "2039-04-26", songs: [
-      { name: "修学旅行（修学旅行）", duration: 227 } ] },
-    { name: "静かの岩", type: "单曲", date: "2041-05-21", songs: [
-      { name: "静かの岩（静谧岩石）", duration: 224 } ] },
-    { name: "放課後の銀河", type: "单曲", date: "2043-08-02", songs: [
-      { name: "放課後の銀河（放学后之银河）", duration: 241 } ] },
-    { name: "蕾の給食", type: "单曲", date: "2045-07-23", songs: [
-      { name: "蕾の給食（花苞之午餐）", duration: 208 } ] },
-    { name: "三日月", type: "单曲", date: "2048-01-22", songs: [
-      { name: "三日月（新月）", duration: 215 } ] },
-    { name: "縁側の畳", type: "专辑", date: "2050-01-22", songs: [
-      { name: "縁側の畳（檐廊之榻榻米）", duration: 223 }, { name: "木漏れ日の響き（林间光斑之回响）", duration: 252 }, { name: "海辺（海边）", duration: 231 },
-      { name: "波音（潮声）", duration: 233 }, { name: "紅葉（红叶）", duration: 246 }, { name: "土の滝（土之瀑布）", duration: 216 },
-      { name: "流れ星の朝（流星之晨）", duration: 272 }, { name: "銀河の岬（银河之海角）", duration: 172 } ] },
+      { name: "影の渓", type: "专辑", date: "2026-07-02", songs: [
+      { name: "影の渓（影之溪）", duration: 251 }, { name: "落ち葉の屋上（落叶之天台）", duration: 252 }, { name: "実の夜風（果实之夜风）", duration: 248 },
+      { name: "浜の縁側（海滨之檐廊）", duration: 214 }, { name: "時の季節（时光之季节）", duration: 189 }, { name: "季節の旋律（季节之旋律）", duration: 212 },
+      { name: "朝焼けの風鈴（朝霞之风铃）", duration: 253 }, { name: "青空の波（青空之波）", duration: 230 }, { name: "文化祭の声（文化祭之声）", duration: 214 },
+      { name: "夜の銀河（夜之银河）", duration: 251 } ] },
+    { name: "光の詩", type: "EP", date: "2027-06-05", songs: [
+      { name: "光の詩（光之诗）", duration: 226 }, { name: "光の夕焼け（光之晚霞）", duration: 374 }, { name: "微笑の暁（微笑之拂晓）", duration: 224 },
+      { name: "実の岩（果实之岩石）", duration: 223 } ] },
+    { name: "春風の記憶", type: "单曲", date: "2028-05-29", songs: [
+      { name: "春風の記憶（春风之记忆）", duration: 151 } ] },
+    { name: "春風の朝焼け", type: "专辑", date: "2029-03-31", songs: [
+      { name: "春風の朝焼け（春风之朝霞）", duration: 211 }, { name: "窓の残響（窗之残响）", duration: 242 }, { name: "三日月の氷（新月之冰）", duration: 242 },
+      { name: "音色の残照（音色之残照）", duration: 245 }, { name: "制服の春風（制服之春风）", duration: 168 }, { name: "三日月の滝（新月之瀑布）", duration: 345 },
+      { name: "夏休みの体育祭（暑假之体育祭）", duration: 189 } ] },
+    { name: "陽だまりの枝", type: "单曲", date: "2030-04-09", songs: [
+      { name: "陽だまりの枝（暖阳之枝）", duration: 217 } ] },
+    { name: "秋風の三日月", type: "EP", date: "2031-04-18", songs: [
+      { name: "秋風の三日月（秋风之新月）", duration: 153 }, { name: "星の石（星之石）", duration: 213 }, { name: "季節の唄（季节之歌谣）", duration: 182 } ] },
+    { name: "冬晴れの青空", type: "EP", date: "2032-05-10", songs: [
+      { name: "冬晴れの青空（冬日晴空之青空）", duration: 148 }, { name: "街の屋上（街之天台）", duration: 230 }, { name: "海の畳（海之榻榻米）", duration: 154 },
+      { name: "街の夜（街之夜）", duration: 225 } ] },
+    { name: "夏休みの光", type: "单曲", date: "2033-03-24", songs: [
+      { name: "夏休みの光（暑假之光）", duration: 221 } ] },
+    { name: "夜風の朧月", type: "专辑", date: "2034-04-12", songs: [
+      { name: "夜風の朧月（夜风之胧月）", duration: 208 }, { name: "部活の暁（社团之拂晓）", duration: 223 }, { name: "波音の言葉（潮声之言语）", duration: 274 },
+      { name: "若葉の街（新叶之街）", duration: 241 }, { name: "優しいの冬休み（温柔寒假）", duration: 211 }, { name: "微笑の星（微笑之星）", duration: 216 },
+      { name: "海辺の微笑（海边之微笑）", duration: 269 }, { name: "小さなの銀河（微小的银河）", duration: 253 }, { name: "恋の縁側（恋之檐廊）", duration: 342 },
+      { name: "渓の三日月（溪之新月）", duration: 250 } ] },
+    { name: "夏祭りの石", type: "EP", date: "2035-03-15", songs: [
+      { name: "夏祭りの石（夏日祭之石）", duration: 229 }, { name: "霜の岸（霜之岸）", duration: 176 }, { name: "三日月の満月（新月之满月）", duration: 159 },
+      { name: "石の朝（石之晨）", duration: 253 }, { name: "木漏れ日の星（林间光斑之星）", duration: 258 }, { name: "桜の季節（樱花之季节）", duration: 218 } ] },
+    { name: "街の月", type: "专辑", date: "2036-01-03", songs: [
+      { name: "街の月（街之月）", duration: 213 }, { name: "月光の実（月光之果实）", duration: 210 }, { name: "声の黄昏（声之黄昏）", duration: 211 },
+      { name: "静かの蕾（静谧花苞）", duration: 301 }, { name: "流れ星の小さな（微小的的流星）", duration: 251 }, { name: "畳の冬晴れ（榻榻米之冬日晴空）", duration: 230 },
+      { name: "雲の氷（云之冰）", duration: 251 }, { name: "水面の記憶（水面之记忆）", duration: 208 } ] },
+    { name: "窓の夏祭り", type: "专辑", date: "2037-01-16", songs: [
+      { name: "窓の夏祭り（窗之夏日祭）", duration: 237 }, { name: "凪の虹（风平浪静之彩虹）", duration: 243 }, { name: "小さなの静か（微小的静谧）", duration: 230 },
+      { name: "小さなの実（微小的果实）", duration: 307 }, { name: "夕暮れの真夏（黄昏之盛夏）", duration: 239 }, { name: "夜の調べ（夜之曲调）", duration: 216 },
+      { name: "島の凪（岛之风平浪静）", duration: 230 }, { name: "季節の桜（季节之樱花）", duration: 228 }, { name: "根の真夏（根之盛夏）", duration: 214 },
+      { name: "秋風の春休み（秋风之春假）", duration: 240 } ] },
+    { name: "制服の透明", type: "EP", date: "2038-01-29", songs: [
+      { name: "制服の透明（透明的制服）", duration: 406 }, { name: "流れ星の言葉（流星之言语）", duration: 243 }, { name: "夜風の黒板（夜风之黑板）", duration: 211 },
+      { name: "音色の冬休み（音色之寒假）", duration: 237 } ] },
+    { name: "秋風の微笑", type: "专辑", date: "2038-12-04", songs: [
+      { name: "秋風の微笑（秋风之微笑）", duration: 209 }, { name: "眩しいの体育祭（耀眼体育祭）", duration: 164 }, { name: "朝霧の月（晨雾之月）", duration: 186 },
+      { name: "調べの星雲（曲调之星云）", duration: 245 }, { name: "枝の向日葵（枝之向日葵）", duration: 263 }, { name: "文化祭の時（文化祭之时光）", duration: 241 },
+      { name: "音色の雪化粧（音色之银装素裹）", duration: 242 } ] },
+    { name: "心の時", type: "专辑", date: "2039-12-15", songs: [
+      { name: "心の時（心之时光）", duration: 228 }, { name: "卒業の満月（毕业之满月）", duration: 247 }, { name: "調べの冬休み（曲调之寒假）", duration: 216 },
+      { name: "春休みの雪化粧（春假之银装素裹）", duration: 226 }, { name: "時の朧月（时光之胧月）", duration: 246 }, { name: "岸の石（岸之石）", duration: 353 },
+      { name: "追憶の島（追忆之岛）", duration: 225 } ] },
+    { name: "雪の給食", type: "EP", date: "2040-10-25", songs: [
+      { name: "雪の給食（雪之午餐）", duration: 228 }, { name: "追憶の星空（追忆之星空）", duration: 219 }, { name: "夜の雨（夜之雨）", duration: 147 },
+      { name: "岩の島（岩石之岛）", duration: 215 }, { name: "潮騒の水面（潮鸣之水面）", duration: 409 } ] },
+    { name: "木漏れ日の潮騒", type: "EP", date: "2041-12-03", songs: [
+      { name: "木漏れ日の潮騒（林间光斑之潮鸣）", duration: 159 }, { name: "夏祭りの雪化粧（夏日祭之银装素裹）", duration: 223 }, { name: "月光の縁側（月光之檐廊）", duration: 231 } ] },
+    { name: "砂の制服", type: "EP", date: "2042-10-17", songs: [
+      { name: "砂の制服（沙之制服）", duration: 231 }, { name: "岩の微笑（岩石之微笑）", duration: 175 }, { name: "風の雨（风之雨）", duration: 205 },
+      { name: "暁の修学旅行（拂晓之修学旅行）", duration: 222 }, { name: "月の雲（月之云）", duration: 250 } ] },
+    { name: "黒板の海辺", type: "EP", date: "2043-10-15", songs: [
+      { name: "黒板の海辺（黑板之海边）", duration: 195 }, { name: "岬の風（海角之风）", duration: 198 }, { name: "潮騒の陽だまり（潮鸣之暖阳）", duration: 245 },
+      { name: "卒業の調べ（毕业之曲调）", duration: 211 } ] },
+    { name: "黄昏の卒業", type: "专辑", date: "2044-11-11", songs: [
+      { name: "黄昏の卒業（黄昏之毕业）", duration: 213 }, { name: "潮騒の静か（静谧的潮鸣）", duration: 217 }, { name: "海の優しい（温柔的海）", duration: 240 },
+      { name: "夕焼けの放課後（晚霞之放学后）", duration: 236 }, { name: "雲の岩（云之岩石）", duration: 238 }, { name: "雪の夢（雪之梦）", duration: 235 },
+      { name: "海の時（海之时光）", duration: 144 }, { name: "青空の霜（青空之霜）", duration: 161 }, { name: "星屑の落ち葉（星屑之落叶）", duration: 198 } ] },
+    { name: "青いの微笑", type: "EP", date: "2045-09-11", songs: [
+      { name: "青いの微笑（湛蓝微笑）", duration: 248 }, { name: "詩の春風（诗之春风）", duration: 243 }, { name: "木漏れ日の部活（林间光斑之社团）", duration: 217 } ] },
+    { name: "空の帰り道", type: "EP", date: "2046-09-12", songs: [
+      { name: "空の帰り道（天空之归途）", duration: 227 }, { name: "静かの浴衣（静谧浴衣）", duration: 249 }, { name: "青いの浜（湛蓝海滨）", duration: 232 },
+      { name: "声の雲（声之云）", duration: 398 }, { name: "虹の氷（彩虹之冰）", duration: 258 } ] },
+    { name: "畳の土", type: "单曲", date: "2047-08-21", songs: [
+      { name: "畳の土（榻榻米之土）", duration: 243 } ] },
+    { name: "教室の放課後", type: "EP", date: "2048-09-02", songs: [
+      { name: "教室の放課後（教室之放学后）", duration: 181 }, { name: "真夏の岩（盛夏之岩石）", duration: 209 }, { name: "残響の教室（残响之教室）", duration: 248 } ] },
+    { name: "静かの卒業", type: "专辑", date: "2049-07-22", songs: [
+      { name: "静かの卒業（静谧毕业）", duration: 172 }, { name: "涙の波音（泪之潮声）", duration: 253 }, { name: "蕾の夜（花苞之夜）", duration: 146 },
+      { name: "虹の三日月（彩虹之新月）", duration: 224 }, { name: "落ち葉の星屑（落叶之星屑）", duration: 241 }, { name: "畳の真夏（榻榻米之盛夏）", duration: 213 },
+      { name: "朝の陽だまり（晨之暖阳）", duration: 246 }, { name: "月光の砂（月光之沙）", duration: 243 }, { name: "蛍の障子（萤火虫之障子）", duration: 232 },
+      { name: "雪の夕霧（雪之暮霭）", duration: 213 } ] },
+    { name: "凪の心", type: "专辑", date: "2050-08-16", songs: [
+      { name: "凪の心（风平浪静之心）", duration: 240 }, { name: "静かの帰り道（静谧归途）", duration: 198 }, { name: "島の星空（岛之星空）", duration: 213 },
+      { name: "島の夕焼け（岛之晚霞）", duration: 181 }, { name: "桜の浴衣（樱花之浴衣）", duration: 240 }, { name: "旋律の岬（旋律之海角）", duration: 226 },
+      { name: "夏休みの星（暑假之星）", duration: 213 }, { name: "夜の蕾（夜之花苞）", duration: 217 }, { name: "体育祭の蛍（体育祭之萤火虫）", duration: 245 } ] },
     ],
   "ギヴン": [
     { name: "gift", type: "专辑", date: "2020-08-26", songs: [
@@ -2477,41 +2650,88 @@ window.BAND_DISCOGRAPHY = {
     { name: "まるつけ（句号）", type: "单曲", date: "2019-12-25", songs: [ { name: "まるつけ（句号）", duration: 234 } ] },
     { name: "夜が明ける（天亮了）", type: "单曲", date: "2020-08-26", songs: [ { name: "夜が明ける（天亮了）", duration: 281 } ] },
     { name: "うらがわの存在（背面的存在）", type: "单曲", date: "2021-12-01", songs: [ { name: "うらがわの存在（背面的存在）", duration: 250 } ] },
-      { name: "月光の縁側", type: "单曲", date: "2027-03-04", songs: [
-      { name: "月光の縁側（月光之檐廊）", duration: 231 } ] },
-    { name: "砂の制服", type: "专辑", date: "2029-03-15", songs: [
-      { name: "砂の制服（沙之制服）", duration: 227 }, { name: "岩の微笑（岩石之微笑）", duration: 218 }, { name: "風の雨（风之雨）", duration: 260 },
-      { name: "暁の修学旅行（拂晓之修学旅行）", duration: 216 }, { name: "月の雲（月之云）", duration: 409 }, { name: "黒板の海辺（黑板之海边）", duration: 251 },
-      { name: "岬の風（海角之风）", duration: 229 }, { name: "潮騒の陽だまり（潮鸣之暖阳）", duration: 431 }, { name: "卒業の調べ（毕业之曲调）", duration: 216 },
-      { name: "黄昏の卒業（黄昏之毕业）", duration: 226 } ] },
-    { name: "朧月の優しい", type: "单曲", date: "2030-12-30", songs: [
-      { name: "朧月の優しい（温柔的胧月）", duration: 201 } ] },
-    { name: "潮騒の静か", type: "单曲", date: "2033-04-03", songs: [
-      { name: "潮騒の静か（静谧的潮鸣）", duration: 212 } ] },
-    { name: "音色", type: "单曲", date: "2035-05-21", songs: [
-      { name: "音色（音色）", duration: 256 } ] },
-    { name: "海の優しい", type: "单曲", date: "2037-05-01", songs: [
-      { name: "海の優しい（温柔的海）", duration: 155 } ] },
-    { name: "夕焼けの放課後", type: "专辑", date: "2039-07-14", songs: [
-      { name: "夕焼けの放課後（晚霞之放学后）", duration: 147 }, { name: "雲の岩（云之岩石）", duration: 240 }, { name: "雪の夢（雪之梦）", duration: 192 },
-      { name: "海の時（海之时光）", duration: 220 }, { name: "青空の霜（青空之霜）", duration: 288 }, { name: "星屑の落ち葉（星屑之落叶）", duration: 429 },
-      { name: "青いの微笑（湛蓝微笑）", duration: 237 }, { name: "詩の春風（诗之春风）", duration: 251 } ] },
-    { name: "木漏れ日の部活", type: "单曲", date: "2041-05-14", songs: [
-      { name: "木漏れ日の部活（林间光斑之社团）", duration: 240 } ] },
-    { name: "空の帰り道", type: "单曲", date: "2043-11-21", songs: [
-      { name: "空の帰り道（天空之归途）", duration: 249 } ] },
-    { name: "静かの浴衣", type: "专辑", date: "2045-12-22", songs: [
-      { name: "静かの浴衣（静谧浴衣）", duration: 241 }, { name: "青いの浜（湛蓝海滨）", duration: 167 }, { name: "自転車（单车）", duration: 248 },
-      { name: "声の雲（声之云）", duration: 250 }, { name: "夏休み（暑假）", duration: 248 }, { name: "虹の氷（彩虹之冰）", duration: 231 },
-      { name: "夕焼け（晚霞）", duration: 171 }, { name: "畳の土（榻榻米之土）", duration: 217 }, { name: "教室の放課後（教室之放学后）", duration: 389 },
-      { name: "真夏の岩（盛夏之岩石）", duration: 187 } ] },
-    { name: "残響の教室", type: "单曲", date: "2048-01-09", songs: [
-      { name: "残響の教室（残响之教室）", duration: 134 } ] },
-    { name: "静かの卒業", type: "专辑", date: "2050-01-12", songs: [
-      { name: "静かの卒業（静谧毕业）", duration: 245 }, { name: "涙の波音（泪之潮声）", duration: 244 }, { name: "蕾の夜（花苞之夜）", duration: 229 },
-      { name: "虹の三日月（彩虹之新月）", duration: 386 }, { name: "畳の岬（榻榻米之海角）", duration: 218 }, { name: "落ち葉の星屑（落叶之星屑）", duration: 240 },
-      { name: "畳の真夏（榻榻米之盛夏）", duration: 359 }, { name: "朝の陽だまり（晨之暖阳）", duration: 261 }, { name: "月光の砂（月光之沙）", duration: 223 },
-      { name: "蛍の障子（萤火虫之障子）", duration: 220 }, { name: "雪の夕霧（雪之暮霭）", duration: 257 } ] },
+      { name: "影の夜", type: "专辑", date: "2026-06-27", songs: [
+      { name: "影の夜（影之夜）", duration: 194 }, { name: "追憶の修学旅行（追忆之修学旅行）", duration: 249 }, { name: "川の夏休み（河之暑假）", duration: 202 },
+      { name: "岬の黒板（海角之黑板）", duration: 150 }, { name: "星雲の追憶（星云之追忆）", duration: 252 }, { name: "霜の想い（霜之思念）", duration: 239 },
+      { name: "砂の透明（透明的沙）", duration: 182 }, { name: "滝の記憶（瀑布之记忆）", duration: 224 }, { name: "花の文化祭（花之文化祭）", duration: 231 } ] },
+    { name: "青いの凪", type: "单曲", date: "2027-07-19", songs: [
+      { name: "青いの凪（湛蓝风平浪静）", duration: 241 } ] },
+    { name: "灯りの残響", type: "单曲", date: "2028-05-27", songs: [
+      { name: "灯りの残響（灯火之残响）", duration: 268 } ] },
+    { name: "夏祭りの水面", type: "单曲", date: "2029-06-13", songs: [
+      { name: "夏祭りの水面（夏日祭之水面）", duration: 162 } ] },
+    { name: "氷の枝", type: "EP", date: "2030-06-06", songs: [
+      { name: "氷の枝（冰之枝）", duration: 282 }, { name: "夕霧の夏祭り（暮霭之夏日祭）", duration: 251 }, { name: "水面の黒板（水面之黑板）", duration: 252 },
+      { name: "三日月の唄（新月之歌谣）", duration: 232 } ] },
+    { name: "言葉の岬", type: "专辑", date: "2031-04-17", songs: [
+      { name: "言葉の岬（言语之海角）", duration: 235 }, { name: "岬の海（海角之海）", duration: 219 }, { name: "微笑の雨（微笑之雨）", duration: 227 },
+      { name: "光景の星（光景之星）", duration: 149 }, { name: "流星の泉（流星之泉）", duration: 230 }, { name: "根の畳（根之榻榻米）", duration: 226 },
+      { name: "制服の文化祭（制服之文化祭）", duration: 247 }, { name: "桜の冬晴れ（樱花之冬日晴空）", duration: 238 }, { name: "雪化粧の岩（银装素裹之岩石）", duration: 179 },
+      { name: "声の部活（声之社团）", duration: 232 }, { name: "夕霧の滝（暮霭之瀑布）", duration: 138 } ] },
+    { name: "約束の冬休み", type: "EP", date: "2032-03-03", songs: [
+      { name: "約束の冬休み（约定之寒假）", duration: 236 }, { name: "霞の自転車（霞之单车）", duration: 139 }, { name: "泉の雪化粧（泉之银装素裹）", duration: 278 },
+      { name: "紅葉の泉（红叶之泉）", duration: 256 }, { name: "紅葉の春風（红叶之春风）", duration: 251 }, { name: "想いの夏祭り（思念之夏日祭）", duration: 283 } ] },
+    { name: "若葉の影", type: "专辑", date: "2033-04-11", songs: [
+      { name: "若葉の影（新叶之影）", duration: 231 }, { name: "空の蝉（天空之蝉）", duration: 242 }, { name: "渓の実（溪之果实）", duration: 216 },
+      { name: "夏休みの島（暑假之岛）", duration: 372 }, { name: "教室の月（教室之月）", duration: 375 }, { name: "星空の風鈴（星空之风铃）", duration: 244 },
+      { name: "声の浴衣（声之浴衣）", duration: 239 } ] },
+    { name: "星雲の静か", type: "专辑", date: "2034-03-14", songs: [
+      { name: "星雲の静か（静谧的星云）", duration: 213 }, { name: "若葉の岩（新叶之岩石）", duration: 246 }, { name: "声の青い（湛蓝的声）", duration: 444 },
+      { name: "放課後の朧月（放学后之胧月）", duration: 193 }, { name: "砂の根（沙之根）", duration: 258 }, { name: "雨の制服（雨之制服）", duration: 214 },
+      { name: "満月の根（满月之根）", duration: 192 }, { name: "夏休みの心（暑假之心）", duration: 226 } ] },
+    { name: "島の霧", type: "EP", date: "2035-03-20", songs: [
+      { name: "島の霧（岛之雾）", duration: 248 }, { name: "風の追憶（风之追忆）", duration: 257 }, { name: "霜の記憶（霜之记忆）", duration: 259 },
+      { name: "朝の若葉（晨之新叶）", duration: 257 }, { name: "時の歌（时光之歌）", duration: 189 } ] },
+    { name: "朝焼けの心", type: "专辑", date: "2036-03-09", songs: [
+      { name: "朝焼けの心（朝霞之心）", duration: 426 }, { name: "土の凪（土之风平浪静）", duration: 253 }, { name: "湖の夕焼け（湖之晚霞）", duration: 274 },
+      { name: "月光の滝（月光之瀑布）", duration: 238 }, { name: "蛍の街（萤火虫之街）", duration: 248 }, { name: "季節の静か（静谧的季节）", duration: 219 },
+      { name: "川の真夏（河之盛夏）", duration: 260 }, { name: "冬休みの窓（寒假之窗）", duration: 216 }, { name: "霞の旋律（霞之旋律）", duration: 228 } ] },
+    { name: "帰り道の街", type: "EP", date: "2037-02-19", songs: [
+      { name: "帰り道の街（归途之街）", duration: 235 }, { name: "朝焼けの土（朝霞之土）", duration: 197 }, { name: "夜の霧（夜之雾）", duration: 243 } ] },
+    { name: "春風の屋上", type: "单曲", date: "2037-12-04", songs: [
+      { name: "春風の屋上（春风之天台）", duration: 232 } ] },
+    { name: "約束の星屑", type: "专辑", date: "2039-01-08", songs: [
+      { name: "約束の星屑（约定之星屑）", duration: 261 }, { name: "春風の夕焼け（春风之晚霞）", duration: 223 }, { name: "浜の夜風（海滨之夜风）", duration: 250 },
+      { name: "静かの雲（静谧云）", duration: 238 }, { name: "雨の滝（雨之瀑布）", duration: 246 }, { name: "黄昏の恋（黄昏之恋）", duration: 227 },
+      { name: "春風の虹（春风之彩虹）", duration: 245 }, { name: "夏休みの涙（暑假之泪）", duration: 199 }, { name: "風鈴の木漏れ日（风铃之林间光斑）", duration: 253 } ] },
+    { name: "静かの岬", type: "专辑", date: "2040-01-10", songs: [
+      { name: "静かの岬（静谧海角）", duration: 238 }, { name: "制服の岬（制服之海角）", duration: 237 }, { name: "浜の岩（海滨之岩石）", duration: 237 },
+      { name: "時の文化祭（时光之文化祭）", duration: 244 }, { name: "夏休みの渓（暑假之溪）", duration: 280 }, { name: "海の夕霧（海之暮霭）", duration: 230 },
+      { name: "霧の調べ（雾之曲调）", duration: 225 }, { name: "雨音の実（雨声之果实）", duration: 338 } ] },
+    { name: "光の若葉", type: "EP", date: "2040-10-24", songs: [
+      { name: "光の若葉（光之新叶）", duration: 395 }, { name: "冬晴れの島（冬日晴空之岛）", duration: 248 }, { name: "渓の制服（溪之制服）", duration: 406 },
+      { name: "岬の残響（海角之残响）", duration: 222 }, { name: "残響の波（残响之波）", duration: 284 } ] },
+    { name: "白いの心音", type: "EP", date: "2041-11-15", songs: [
+      { name: "白いの心音（纯白的心跳）", duration: 243 }, { name: "朧月の実（胧月之果实）", duration: 198 }, { name: "自転車の紅葉（单车之红叶）", duration: 250 },
+      { name: "夜の渓（夜之溪）", duration: 214 }, { name: "詩の心音（诗之心跳）", duration: 226 } ] },
+    { name: "砂の木霊", type: "专辑", date: "2042-11-11", songs: [
+      { name: "砂の木霊（沙之树魂）", duration: 232 }, { name: "朝霧の川（晨雾之河）", duration: 221 }, { name: "風鈴の雪（风铃之雪）", duration: 248 },
+      { name: "潮騒の氷（潮鸣之冰）", duration: 239 }, { name: "湖の季節（湖之季节）", duration: 196 }, { name: "言葉の春休み（言语之春假）", duration: 247 },
+      { name: "月の真夏（月之盛夏）", duration: 190 } ] },
+    { name: "土の花火", type: "EP", date: "2043-11-10", songs: [
+      { name: "土の花火（土之花火）", duration: 442 }, { name: "音色の紅葉（音色之红叶）", duration: 246 }, { name: "夕霧の陽だまり（暮霭之暖阳）", duration: 228 } ] },
+    { name: "冬晴れの蛍", type: "EP", date: "2044-10-22", songs: [
+      { name: "冬晴れの蛍（冬日晴空之萤火虫）", duration: 246 }, { name: "冬晴れの言葉（冬日晴空之言语）", duration: 255 }, { name: "満月の追憶（满月之追忆）", duration: 279 },
+      { name: "流れ星の石（流星之石）", duration: 192 }, { name: "放課後の暁（放学后之拂晓）", duration: 235 } ] },
+    { name: "木漏れ日の黄昏", type: "专辑", date: "2045-09-02", songs: [
+      { name: "木漏れ日の黄昏（林间光斑之黄昏）", duration: 261 }, { name: "夏祭りの障子（夏日祭之障子）", duration: 219 }, { name: "花火の音色（花火之音色）", duration: 231 },
+      { name: "夕焼けの朝（晚霞之晨）", duration: 261 }, { name: "夜風の冬休み（夜风之寒假）", duration: 236 }, { name: "陽だまりの静か（静谧的暖阳）", duration: 424 },
+      { name: "湖の霧（湖之雾）", duration: 447 }, { name: "雪の蝉（雪之蝉）", duration: 243 }, { name: "優しいの星空（温柔星空）", duration: 256 } ] },
+    { name: "夜風の窓", type: "EP", date: "2046-08-25", songs: [
+      { name: "夜風の窓（夜风之窗）", duration: 231 }, { name: "体育祭の修学旅行（体育祭之修学旅行）", duration: 218 }, { name: "真夏の夏休み（盛夏之暑假）", duration: 249 } ] },
+    { name: "卒業の眩しい", type: "EP", date: "2047-10-02", songs: [
+      { name: "卒業の眩しい（耀眼的毕业）", duration: 238 }, { name: "岩の自転車（岩石之单车）", duration: 360 }, { name: "記憶の暁（记忆之拂晓）", duration: 261 },
+      { name: "優しいの霞（温柔霞）", duration: 248 }, { name: "土の夜（土之夜）", duration: 349 }, { name: "声の朧月（声之胧月）", duration: 189 } ] },
+    { name: "海辺の満月", type: "专辑", date: "2048-07-16", songs: [
+      { name: "海辺の満月（海边之满月）", duration: 258 }, { name: "若葉の帰り道（新叶之归途）", duration: 217 }, { name: "銀河の給食（银河之午餐）", duration: 230 },
+      { name: "帰り道の朝焼け（归途之朝霞）", duration: 220 }, { name: "海の朝焼け（海之朝霞）", duration: 177 }, { name: "響きの朧月（回响之胧月）", duration: 135 },
+      { name: "月光の教室（月光之教室）", duration: 227 } ] },
+    { name: "霜の桜", type: "专辑", date: "2049-07-27", songs: [
+      { name: "霜の桜（霜之樱花）", duration: 197 }, { name: "冬晴れの記憶（冬日晴空之记忆）", duration: 256 }, { name: "潮騒の流星（潮鸣之流星）", duration: 240 },
+      { name: "実の星屑（果实之星屑）", duration: 248 }, { name: "夢の霧（梦之雾）", duration: 256 }, { name: "紅葉の黒板（红叶之黑板）", duration: 249 },
+      { name: "桜の黄昏（樱花之黄昏）", duration: 182 } ] },
+    { name: "光景の青空", type: "单曲", date: "2050-06-29", songs: [
+      { name: "光景の青空（光景之青空）", duration: 253 } ] },
     ],
   "トゲナシトゲアリ": [
     { name: "棘アリ（有刺）", type: "专辑", date: "2024-04-24", songs: [
@@ -2544,35 +2764,94 @@ window.BAND_DISCOGRAPHY = {
     { name: "全部をさらして生きてやる（豁出一切活下去）", type: "EP", date: "2025-12-17", songs: [
        { name: "もう何もいらない未来（什么都不再需要的未来）", duration: 226 }, { name: "命をくれよ（把命给我）", duration: 222 },
        { name: "arrow", duration: 218 }, { name: "薊の薔薇（薊之蔷薇）", duration: 228 } ] },
-      { name: "青空の波音", type: "单曲", date: "2027-05-25", songs: [
-      { name: "青空の波音（青空之潮声）", duration: 229 } ] },
-    { name: "冬休み", type: "单曲", date: "2029-06-03", songs: [
-      { name: "冬休み（寒假）", duration: 254 } ] },
-    { name: "葉の縁側", type: "EP", date: "2031-09-08", songs: [
-      { name: "葉の縁側（叶之檐廊）", duration: 196 }, { name: "涙の青空（泪之青空）", duration: 406 }, { name: "光の水面（光之水面）", duration: 199 },
-      { name: "若葉の流れ星（新叶之流星）", duration: 212 }, { name: "土の石（土之石）", duration: 187 } ] },
-    { name: "夜の雨音", type: "单曲", date: "2033-06-24", songs: [
-      { name: "夜の雨音（夜之雨声）", duration: 210 } ] },
-    { name: "波の季節", type: "单曲", date: "2035-10-29", songs: [
-      { name: "波の季節（波之季节）", duration: 155 } ] },
-    { name: "体育祭の制服", type: "单曲", date: "2037-12-04", songs: [
-      { name: "体育祭の制服（体育祭之制服）", duration: 178 } ] },
-    { name: "氷の春休み", type: "单曲", date: "2039-12-01", songs: [
-      { name: "氷の春休み（冰之春假）", duration: 229 } ] },
-    { name: "花の雲", type: "单曲", date: "2041-12-14", songs: [
-      { name: "花の雲（花之云）", duration: 201 } ] },
-    { name: "夢の根", type: "单曲", date: "2044-01-20", songs: [
-      { name: "夢の根（梦之根）", duration: 246 } ] },
-    { name: "文化祭の縁側", type: "专辑", date: "2045-10-03", songs: [
-      { name: "文化祭の縁側（文化祭之檐廊）", duration: 227 }, { name: "透明の泉（透明泉）", duration: 233 }, { name: "川の光景（河之光景）", duration: 228 },
-      { name: "屋上の想い（天台之思念）", duration: 199 }, { name: "潮騒の約束（潮鸣之约定）", duration: 216 }, { name: "三日月の水面（新月之水面）", duration: 226 },
-      { name: "夕霧の霜（暮霭之霜）", duration: 206 }, { name: "蛍の虹（萤火虫之彩虹）", duration: 180 }, { name: "恋の真夏（恋之盛夏）", duration: 230 },
-      { name: "夕暮れの朝（黄昏之晨）", duration: 202 } ] },
-    { name: "静かの星雲", type: "单曲", date: "2047-09-06", songs: [
-      { name: "静かの星雲（静谧星云）", duration: 365 } ] },
-    { name: "静かの土", type: "EP", date: "2049-11-14", songs: [
-      { name: "静かの土（静谧土）", duration: 220 }, { name: "若葉の根（新叶之根）", duration: 239 }, { name: "波音の石（潮声之石）", duration: 125 },
-      { name: "砂の風（沙之风）", duration: 182 } ] },
+      { name: "暁の葉", type: "专辑", date: "2026-12-25", songs: [
+      { name: "暁の葉（拂晓之叶）", duration: 240 }, { name: "霜の渓（霜之溪）", duration: 209 }, { name: "浴衣の響き（浴衣之回响）", duration: 181 },
+      { name: "風の岬（风之海角）", duration: 238 }, { name: "岬の真夏（海角之盛夏）", duration: 164 }, { name: "霞の夕暮れ（霞之黄昏）", duration: 314 },
+      { name: "縁側の凪（檐廊之风平浪静）", duration: 238 }, { name: "調べの静か（静谧的曲调）", duration: 207 }, { name: "約束の夜（约定之夜）", duration: 237 } ] },
+    { name: "蝉の季節", type: "EP", date: "2027-12-11", songs: [
+      { name: "蝉の季節（蝉之季节）", duration: 148 }, { name: "空の真夏（天空之盛夏）", duration: 173 }, { name: "朝霧の夜明け（晨雾之黎明）", duration: 216 },
+      { name: "体育祭の冬晴れ（体育祭之冬日晴空）", duration: 205 } ] },
+    { name: "氷の砂", type: "EP", date: "2028-09-11", songs: [
+      { name: "氷の砂（冰之沙）", duration: 122 }, { name: "冬休みの縁側（寒假之檐廊）", duration: 233 }, { name: "空の朝焼け（天空之朝霞）", duration: 218 },
+      { name: "給食の障子（午餐之障子）", duration: 221 }, { name: "歌の帰り道（歌之归途）", duration: 227 }, { name: "街の部活（街之社团）", duration: 218 } ] },
+    { name: "砂の街", type: "EP", date: "2029-09-17", songs: [
+      { name: "砂の街（沙之街）", duration: 217 }, { name: "残響の灯り（残响之灯火）", duration: 212 }, { name: "静かの文化祭（静谧文化祭）", duration: 143 },
+      { name: "霧の朝霧（雾之晨雾）", duration: 195 } ] },
+    { name: "川の夜", type: "EP", date: "2030-08-24", songs: [
+      { name: "川の夜（河之夜）", duration: 258 }, { name: "湖の霜（湖之霜）", duration: 233 }, { name: "灯りの木霊（灯火之树魂）", duration: 216 },
+      { name: "紅葉の小さな（微小的的红叶）", duration: 180 } ] },
+    { name: "教室の星屑", type: "EP", date: "2031-08-30", songs: [
+      { name: "教室の星屑（教室之星屑）", duration: 243 }, { name: "満月の真夏（满月之盛夏）", duration: 232 }, { name: "暁の雪（拂晓之雪）", duration: 138 },
+      { name: "卒業の夏休み（毕业之暑假）", duration: 248 } ] },
+    { name: "虹の雨音", type: "专辑", date: "2032-08-29", songs: [
+      { name: "虹の雨音（彩虹之雨声）", duration: 224 }, { name: "教室の朧月（教室之胧月）", duration: 222 }, { name: "木漏れ日の花火（林间光斑之花火）", duration: 151 },
+      { name: "霞の夜（霞之夜）", duration: 202 }, { name: "障子の教室（障子之教室）", duration: 217 }, { name: "冬晴れの花（冬日晴空之花）", duration: 183 },
+      { name: "心の光景（心之光景）", duration: 239 }, { name: "放課後の流れ星（放学后之流星）", duration: 255 }, { name: "心の雨音（心之雨声）", duration: 239 },
+      { name: "滝の向日葵（瀑布之向日葵）", duration: 203 } ] },
+    { name: "根の花火", type: "专辑", date: "2033-06-14", songs: [
+      { name: "根の花火（根之花火）", duration: 203 }, { name: "窓の夜風（窗之夜风）", duration: 300 }, { name: "夕焼けの桜（晚霞之樱花）", duration: 249 },
+      { name: "風の霞（风之霞）", duration: 151 }, { name: "葉の秋風（叶之秋风）", duration: 203 }, { name: "若葉の文化祭（新叶之文化祭）", duration: 206 },
+      { name: "想いの遠い（遥远的思念）", duration: 226 }, { name: "落ち葉の凪（落叶之风平浪静）", duration: 207 }, { name: "季節の蝉（季节之蝉）", duration: 266 },
+      { name: "空の渓（天空之溪）", duration: 238 } ] },
+    { name: "雲の春休み", type: "专辑", date: "2034-07-02", songs: [
+      { name: "雲の春休み（云之春假）", duration: 230 }, { name: "夕霧の落ち葉（暮霭之落叶）", duration: 233 }, { name: "岬の霜（海角之霜）", duration: 219 },
+      { name: "蕾の紅葉（花苞之红叶）", duration: 239 }, { name: "砂の夜（沙之夜）", duration: 224 }, { name: "虹の街（彩虹之街）", duration: 288 },
+      { name: "浴衣の夏祭り（浴衣之夏日祭）", duration: 231 }, { name: "季節の岬（季节之海角）", duration: 238 }, { name: "春休みの朝焼け（春假之朝霞）", duration: 212 } ] },
+    { name: "朧月の氷", type: "单曲", date: "2035-06-18", songs: [
+      { name: "朧月の氷（胧月之冰）", duration: 201 } ] },
+    { name: "渓の朝", type: "EP", date: "2036-05-15", songs: [
+      { name: "渓の朝（溪之晨）", duration: 238 }, { name: "陽だまりの月（暖阳之月）", duration: 208 }, { name: "青いの岸（湛蓝岸）", duration: 207 } ] },
+    { name: "虹の蝉", type: "专辑", date: "2037-04-05", songs: [
+      { name: "虹の蝉（彩虹之蝉）", duration: 233 }, { name: "雨音の石（雨声之石）", duration: 245 }, { name: "川の月（河之月）", duration: 191 },
+      { name: "響きの夕焼け（回响之晚霞）", duration: 233 }, { name: "星雲の微笑（星云之微笑）", duration: 205 }, { name: "響きの満月（回响之满月）", duration: 203 },
+      { name: "障子の風（障子之风）", duration: 232 }, { name: "記憶の秋風（记忆之秋风）", duration: 216 }, { name: "雨の唄（雨之歌谣）", duration: 205 },
+      { name: "木漏れ日の声（林间光斑之声）", duration: 213 } ] },
+    { name: "潮騒の浜", type: "EP", date: "2038-05-07", songs: [
+      { name: "潮騒の浜（潮鸣之海滨）", duration: 172 }, { name: "夢の言葉（梦之言语）", duration: 218 }, { name: "雪の流星（雪之流星）", duration: 155 },
+      { name: "微笑の光（微笑之光）", duration: 140 }, { name: "氷の落ち葉（冰之落叶）", duration: 217 }, { name: "夜明けの若葉（黎明之新叶）", duration: 207 } ] },
+    { name: "若葉の風", type: "专辑", date: "2039-03-18", songs: [
+      { name: "若葉の風（新叶之风）", duration: 209 }, { name: "体育祭の虹（体育祭之彩虹）", duration: 199 }, { name: "木漏れ日の夕暮れ（林间光斑之黄昏）", duration: 181 },
+      { name: "木漏れ日の岸（林间光斑之岸）", duration: 204 }, { name: "響きの影（回响之影）", duration: 176 }, { name: "雲の自転車（云之单车）", duration: 220 },
+      { name: "流れ星の木霊（流星之树魂）", duration: 136 }, { name: "土の雪（土之雪）", duration: 201 } ] },
+    { name: "夜風の眩しい", type: "单曲", date: "2040-01-22", songs: [
+      { name: "夜風の眩しい（耀眼的夜风）", duration: 140 } ] },
+    { name: "帰り道の優しい", type: "专辑", date: "2040-12-29", songs: [
+      { name: "帰り道の優しい（温柔的归途）", duration: 216 }, { name: "眩しいの星（耀眼星）", duration: 121 }, { name: "秋風の灯り（秋风之灯火）", duration: 317 },
+      { name: "星の満月（星之满月）", duration: 217 }, { name: "影の若葉（影之新叶）", duration: 225 }, { name: "追憶の声（追忆之声）", duration: 240 },
+      { name: "光の音色（光之音色）", duration: 217 } ] },
+    { name: "想いの花", type: "单曲", date: "2042-02-14", songs: [
+      { name: "想いの花（思念之花）", duration: 238 } ] },
+    { name: "空の追憶", type: "专辑", date: "2043-01-17", songs: [
+      { name: "空の追憶（天空之追忆）", duration: 217 }, { name: "文化祭の音色（文化祭之音色）", duration: 223 }, { name: "陽だまりの教室（暖阳之教室）", duration: 227 },
+      { name: "帰り道の波音（归途之潮声）", duration: 346 }, { name: "空の眩しい（耀眼的天空）", duration: 188 }, { name: "砂の畳（沙之榻榻米）", duration: 209 },
+      { name: "唄の静か（静谧的歌谣）", duration: 209 }, { name: "凪の風鈴（风平浪静之风铃）", duration: 128 }, { name: "体育祭の夏祭り（体育祭之夏日祭）", duration: 373 },
+      { name: "石の時（石之时光）", duration: 250 }, { name: "砂の湖（沙之湖）", duration: 253 } ] },
+    { name: "滝の光景", type: "EP", date: "2043-11-14", songs: [
+      { name: "滝の光景（瀑布之光景）", duration: 245 }, { name: "遠いの凪（遥远风平浪静）", duration: 227 }, { name: "花の追憶（花之追忆）", duration: 232 } ] },
+    { name: "霜の残照", type: "专辑", date: "2044-12-19", songs: [
+      { name: "霜の残照（霜之残照）", duration: 207 }, { name: "心音の縁側（心跳之檐廊）", duration: 241 }, { name: "星屑の空（星屑之天空）", duration: 206 },
+      { name: "夢の夕暮れ（梦之黄昏）", duration: 234 }, { name: "銀河の雨音（银河之雨声）", duration: 202 }, { name: "春休みの霜（春假之霜）", duration: 353 },
+      { name: "唄の黄昏（歌谣之黄昏）", duration: 244 }, { name: "部活の透明（透明的社团）", duration: 247 }, { name: "波音の光景（潮声之光景）", duration: 206 },
+      { name: "浜の歌（海滨之歌）", duration: 286 }, { name: "流星の冬休み（流星之寒假）", duration: 199 } ] },
+    { name: "渓の湖", type: "专辑", date: "2045-11-02", songs: [
+      { name: "渓の湖（溪之湖）", duration: 212 }, { name: "夜明けの枝（黎明之枝）", duration: 237 }, { name: "虹の朝霧（彩虹之晨雾）", duration: 238 },
+      { name: "夕焼けの雪（晚霞之雪）", duration: 206 }, { name: "給食の葉（午餐之叶）", duration: 208 }, { name: "紅葉の修学旅行（红叶之修学旅行）", duration: 212 },
+      { name: "海の蕾（海之花苞）", duration: 266 }, { name: "夏休みの放課後（暑假之放学后）", duration: 256 }, { name: "時の木漏れ日（时光之林间光斑）", duration: 216 },
+      { name: "花火の風（花火之风）", duration: 223 } ] },
+    { name: "若葉の響き", type: "专辑", date: "2046-09-01", songs: [
+      { name: "若葉の響き（新叶之回响）", duration: 197 }, { name: "枝の花火（枝之花火）", duration: 224 }, { name: "水面の霞（水面之霞）", duration: 238 },
+      { name: "蕾の根（花苞之根）", duration: 198 }, { name: "花火の修学旅行（花火之修学旅行）", duration: 240 }, { name: "夜風の根（夜风之根）", duration: 198 },
+      { name: "調べの青い（湛蓝的曲调）", duration: 219 }, { name: "朝の残照（晨之残照）", duration: 214 } ] },
+    { name: "雨音の雲", type: "EP", date: "2047-08-16", songs: [
+      { name: "雨音の雲（雨声之云）", duration: 128 }, { name: "卒業の残響（毕业之残响）", duration: 240 }, { name: "空の時（天空之时光）", duration: 212 },
+      { name: "葉の春休み（叶之春假）", duration: 232 }, { name: "朝の黄昏（晨之黄昏）", duration: 185 }, { name: "星空の小さな（微小的的星空）", duration: 231 } ] },
+    { name: "季節の朝", type: "单曲", date: "2048-08-24", songs: [
+      { name: "季節の朝（季节之晨）", duration: 244 } ] },
+    { name: "星の制服", type: "单曲", date: "2049-08-27", songs: [
+      { name: "星の制服（星之制服）", duration: 211 } ] },
+    { name: "夢の制服", type: "EP", date: "2050-08-03", songs: [
+      { name: "夢の制服（梦之制服）", duration: 136 }, { name: "時の滝（时光之瀑布）", duration: 232 }, { name: "光景の川（光景之河）", duration: 198 },
+      { name: "満月の朝焼け（满月之朝霞）", duration: 236 } ] },
     ],
   "Black Stones": [
     { name: "BLAST", type: "专辑", date: "2006-06-21", songs: [
@@ -2580,126 +2859,290 @@ window.BAND_DISCOGRAPHY = {
        { name: "Zero", duration: 210 }, { name: "Lucy", duration: 225 }, { name: "Shadow of the Sun", duration: 250 } ] },
     { name: "Rose", type: "单曲", date: "2006-01-01", songs: [ { name: "Rose", duration: 240 } ] },
     { name: "黒い涙（黑色的泪）", type: "单曲", date: "2006-03-22", songs: [ { name: "黒い涙（黑色的泪）", duration: 265 } ] },
-      { name: "Lantern Crystal", type: "专辑", date: "2026-11-18", songs: [
-      { name: "Lantern Crystal（灯笼的水晶）", duration: 233 }, { name: "Fleet Glass（舰队的玻璃）", duration: 196 }, { name: "Mist Gravel（薄雾的砾石）", duration: 229 },
-      { name: "Overcast Orbit（阴云的轨道）", duration: 191 }, { name: "Cinder Glow（炭烬的辉光）", duration: 245 }, { name: "Flame Dust（火焰的尘埃）", duration: 251 },
-      { name: "Bloom Neon（绽放的霓虹）", duration: 190 } ] },
-    { name: "Fog Loam", type: "单曲", date: "2029-04-16", songs: [
-      { name: "Fog Loam（雾的沃土）", duration: 221 } ] },
-    { name: "Garden Carousel", type: "单曲", date: "2031-01-01", songs: [
-      { name: "Garden Carousel（花园的旋转木马）", duration: 218 } ] },
-    { name: "Void Marrow", type: "单曲", date: "2033-07-12", songs: [
-      { name: "Void Marrow（虚空的骨髓）", duration: 261 } ] },
-    { name: "Whisper Halo", type: "单曲", date: "2035-06-16", songs: [
-      { name: "Whisper Halo（低语的光晕）", duration: 402 } ] },
-    { name: "Wish Silence", type: "专辑", date: "2037-05-18", songs: [
-      { name: "Wish Silence（愿望的沉寂）", duration: 247 }, { name: "Journey Silk（旅程的丝绸）", duration: 221 }, { name: "Journey Thunder（旅程的雷）", duration: 263 },
-      { name: "Nest Amber（巢的琥珀）", duration: 270 }, { name: "Anchor Moon（锚的月亮）", duration: 207 }, { name: "Spark Sundown（火花的日落）", duration: 237 },
-      { name: "Haze Shell（轻雾的贝壳）", duration: 243 } ] },
-    { name: "Coral Storm", type: "单曲", date: "2039-04-18", songs: [
-      { name: "Coral Storm（珊瑚的风暴）", duration: 219 } ] },
-    { name: "Sand Fable", type: "单曲", date: "2041-10-17", songs: [
-      { name: "Sand Fable（沙的寓言）", duration: 256 } ] },
-    { name: "Road Heart", type: "单曲", date: "2043-11-21", songs: [
-      { name: "Road Heart（道路的心）", duration: 231 } ] },
-    { name: "Meadow Veil", type: "单曲", date: "2045-11-02", songs: [
-      { name: "Meadow Veil（草地的帷幕）", duration: 234 } ] },
-    { name: "Forest Pine", type: "单曲", date: "2047-10-08", songs: [
-      { name: "Forest Pine（森林的松）", duration: 282 } ] },
-    { name: "Silence Glimmer", type: "单曲", date: "2049-11-11", songs: [
-      { name: "Silence Glimmer（沉寂的微光）", duration: 249 } ] },
+      { name: "Wires Silver", type: "单曲", date: "2026-05-15", songs: [
+      { name: "Wires Silver（电线的银色）", duration: 222 } ] },
+    { name: "Harbor Kite", type: "单曲", date: "2027-06-15", songs: [
+      { name: "Harbor Kite（港湾的风筝）", duration: 240 } ] },
+    { name: "Ice Twilight", type: "专辑", date: "2028-04-28", songs: [
+      { name: "Ice Twilight（冰的暮色）", duration: 414 }, { name: "Garden Lantern（花园的灯笼）", duration: 290 }, { name: "Breeze Anchor（微风的锚）", duration: 241 },
+      { name: "Ashes Pond（灰烬的池塘）", duration: 438 }, { name: "Halo Field（光晕的原野）", duration: 261 }, { name: "Cloud Winter（云的冬天）", duration: 190 },
+      { name: "Static Dawn（静电的黎明）", duration: 264 }, { name: "Song Garden（歌的花园）", duration: 249 }, { name: "Bloom Dawn（绽放的黎明）", duration: 259 },
+      { name: "Tide Mist（潮汐的薄雾）", duration: 191 }, { name: "Motion Gravel（律动的砾石）", duration: 233 } ] },
+    { name: "Veil Petal", type: "EP", date: "2029-04-13", songs: [
+      { name: "Veil Petal（帷幕的花瓣）", duration: 240 }, { name: "Asphalt Stone（柏油的石头）", duration: 291 }, { name: "Harbor Dust（港湾的尘埃）", duration: 266 },
+      { name: "Amber Petal（琥珀的花瓣）", duration: 253 }, { name: "Roof Harbor（屋顶的港湾）", duration: 195 } ] },
+    { name: "Lantern Wish", type: "专辑", date: "2030-04-05", songs: [
+      { name: "Lantern Wish（灯笼的愿望）", duration: 178 }, { name: "Meridian Thunder（子午线的雷）", duration: 293 }, { name: "Meridian Garden（子午线的花园）", duration: 238 },
+      { name: "Daylight Ice（日光的冰）", duration: 247 }, { name: "Silver Harbor（银色的港湾）", duration: 223 }, { name: "Neon Song（霓虹的歌）", duration: 236 },
+      { name: "Static Cliff（静电的断崖）", duration: 288 }, { name: "Cloud Broken（云的破碎）", duration: 261 }, { name: "Midnight Nightfall（午夜的夜幕）", duration: 245 },
+      { name: "Ice Blanket（冰的绒毯）", duration: 142 } ] },
+    { name: "Field Flame", type: "专辑", date: "2031-03-09", songs: [
+      { name: "Field Flame（原野的火焰）", duration: 259 }, { name: "Motion Song（律动的歌）", duration: 243 }, { name: "Whisper Tree（低语的树）", duration: 224 },
+      { name: "Slope Dusk（斜坡的薄暮）", duration: 264 }, { name: "Crystal Silk（水晶的丝绸）", duration: 184 }, { name: "Golden Rust（金色的锈迹）", duration: 440 },
+      { name: "Velvet Pulse（天鹅绒的脉冲）", duration: 239 }, { name: "Satellite Static（卫星的静电）", duration: 241 } ] },
+    { name: "Moss Cloud", type: "专辑", date: "2032-05-14", songs: [
+      { name: "Moss Cloud（青苔的云）", duration: 197 }, { name: "Wave Quiet（波浪的寂静）", duration: 233 }, { name: "Satellite Fog（卫星的雾）", duration: 235 },
+      { name: "Quiet Thunder（寂静的雷）", duration: 227 }, { name: "Stream Void（溪流的虚空）", duration: 177 }, { name: "Diamond Hill（钻石的山丘）", duration: 233 },
+      { name: "Hill Spark（山丘的火花）", duration: 207 }, { name: "Marrow Amber（骨髓的琥珀）", duration: 265 }, { name: "Hill Frost（山丘的霜）", duration: 254 },
+      { name: "Signal Sea（信号的海）", duration: 234 } ] },
+    { name: "Breeze Shadow", type: "专辑", date: "2033-04-08", songs: [
+      { name: "Breeze Shadow（微风的影子）", duration: 248 }, { name: "Shell Lake（贝壳的湖）", duration: 220 }, { name: "Garden Broken（花园的破碎）", duration: 227 },
+      { name: "Wood Twilight（树林的暮色）", duration: 225 }, { name: "Field Storm（原野的风暴）", duration: 138 }, { name: "Fable Path（寓言的小径）", duration: 325 },
+      { name: "Blossom Rain（花开的雨）", duration: 240 }, { name: "Ocean Sea（海洋的海）", duration: 236 }, { name: "Velvet Window（天鹅绒的窗）", duration: 246 },
+      { name: "Pulse Snow（脉冲的雪）", duration: 238 }, { name: "Wind Petal（风的花瓣）", duration: 255 } ] },
+    { name: "Circle Rust", type: "EP", date: "2034-03-12", songs: [
+      { name: "Circle Rust（圆圈的锈迹）", duration: 239 }, { name: "Iron Frost（铁的霜）", duration: 239 }, { name: "Trail Snow（足迹的雪）", duration: 230 },
+      { name: "Echo Nest（回声的巢）", duration: 181 }, { name: "Star River（星的河流）", duration: 293 }, { name: "Breeze Nest（微风的巢）", duration: 257 } ] },
+    { name: "Meridian Diamond", type: "EP", date: "2035-03-21", songs: [
+      { name: "Meridian Diamond（子午线的钻石）", duration: 265 }, { name: "Slope Smoke（斜坡的烟雾）", duration: 138 }, { name: "Beacon Spark（灯塔的火花）", duration: 247 },
+      { name: "Garden Quartz（花园的石英）", duration: 264 }, { name: "Thunder Compass（雷的罗盘）", duration: 222 }, { name: "Forest Veil（森林的帷幕）", duration: 241 } ] },
+    { name: "Quiet Sand", type: "EP", date: "2035-12-25", songs: [
+      { name: "Quiet Sand（寂静的沙）", duration: 244 }, { name: "Undertow Ivory（暗流的象牙）", duration: 285 }, { name: "Fleet Lake（舰队的湖）", duration: 225 },
+      { name: "Pine Beacon（松的灯塔）", duration: 215 }, { name: "Highway Silk（公路的丝绸）", duration: 193 }, { name: "Amber Summer（琥珀的夏天）", duration: 237 } ] },
+    { name: "Ballet Kite", type: "专辑", date: "2036-12-10", songs: [
+      { name: "Ballet Kite（芭蕾的风筝）", duration: 228 }, { name: "Feather Ember（羽毛的余烬）", duration: 244 }, { name: "Crescent Song（新月的歌）", duration: 258 },
+      { name: "Storm Vine（风暴的藤蔓）", duration: 247 }, { name: "Path Signal（小径的信号）", duration: 134 }, { name: "Quartz Snow（石英的雪）", duration: 233 },
+      { name: "Harbor Haze（港湾的轻雾）", duration: 162 }, { name: "Ocean Daylight（海洋的日光）", duration: 219 } ] },
+    { name: "Road Wires", type: "专辑", date: "2038-02-19", songs: [
+      { name: "Road Wires（道路的电线）", duration: 249 }, { name: "Road Broken（道路的破碎）", duration: 284 }, { name: "Vapor Signal（雾霭的信号）", duration: 224 },
+      { name: "Crystal Window（水晶的窗）", duration: 254 }, { name: "Tide Faded（潮汐的褪色）", duration: 266 }, { name: "Leaf Storm（叶的风暴）", duration: 220 },
+      { name: "Paperplane Tower（纸飞机的塔）", duration: 274 }, { name: "Crystal Highway（水晶的公路）", duration: 245 }, { name: "Coral Quiet（珊瑚的寂静）", duration: 144 },
+      { name: "Pond Marrow（池塘的骨髓）", duration: 200 } ] },
+    { name: "Lake Dust", type: "EP", date: "2039-01-07", songs: [
+      { name: "Lake Dust（湖的尘埃）", duration: 231 }, { name: "Shadow Canvas（影子的画布）", duration: 241 }, { name: "Undertow Cinder（暗流的炭烬）", duration: 226 },
+      { name: "Winter Star（冬天的星）", duration: 193 }, { name: "Glass Mirrors（玻璃的镜子）", duration: 220 }, { name: "Winter Nightfall（冬天的夜幕）", duration: 224 } ] },
+    { name: "Tree Window", type: "EP", date: "2040-01-02", songs: [
+      { name: "Tree Window（树的窗）", duration: 249 }, { name: "Pine Dust（松的尘埃）", duration: 280 }, { name: "Static Flame（静电的火焰）", duration: 332 },
+      { name: "Forest Motion（森林的律动）", duration: 248 }, { name: "Summer Concrete（夏天的水泥）", duration: 227 }, { name: "Bloom Harbor（绽放的港湾）", duration: 198 } ] },
+    { name: "Ocean Road", type: "EP", date: "2040-10-14", songs: [
+      { name: "Ocean Road（海洋的道路）", duration: 219 }, { name: "Pine Stone（松的石头）", duration: 171 }, { name: "Winter Ashes（冬天的灰烬）", duration: 230 },
+      { name: "Overcast Paperplane（阴云的纸飞机）", duration: 250 } ] },
+    { name: "Faded Quartz", type: "专辑", date: "2041-09-29", songs: [
+      { name: "Faded Quartz（褪色的石英）", duration: 222 }, { name: "Drift Garden（漂流的花园）", duration: 251 }, { name: "Star Thaw（星的融雪）", duration: 256 },
+      { name: "Hollow Satellite（空洞的卫星）", duration: 335 }, { name: "Neon Twilight（霓虹的暮色）", duration: 368 }, { name: "Daybreak Fable（黎明的寓言）", duration: 224 },
+      { name: "Snow Pulse（雪的脉冲）", duration: 240 } ] },
+    { name: "Compass Glass", type: "EP", date: "2042-10-17", songs: [
+      { name: "Compass Glass（罗盘的玻璃）", duration: 179 }, { name: "Moss Velvet（青苔的天鹅绒）", duration: 247 }, { name: "Bloom Ashes（绽放的灰烬）", duration: 240 } ] },
+    { name: "Hill Silence", type: "单曲", date: "2043-10-06", songs: [
+      { name: "Hill Silence（山丘的沉寂）", duration: 260 } ] },
+    { name: "Ocean Frost", type: "EP", date: "2044-09-29", songs: [
+      { name: "Ocean Frost（海洋的霜）", duration: 224 }, { name: "Echo Glass（回声的玻璃）", duration: 253 }, { name: "Beacon Canvas（灯塔的画布）", duration: 248 },
+      { name: "Daybreak Pulse（黎明的脉冲）", duration: 258 } ] },
+    { name: "Fleet Bloom", type: "EP", date: "2045-10-08", songs: [
+      { name: "Fleet Bloom（舰队的绽放）", duration: 228 }, { name: "Frost Wind（霜的风）", duration: 154 }, { name: "Compass Flood（罗盘的洪流）", duration: 221 },
+      { name: "Feather Pebble（羽毛的卵石）", duration: 221 } ] },
+    { name: "Asphalt Neon", type: "EP", date: "2046-07-30", songs: [
+      { name: "Asphalt Neon（柏油的霓虹）", duration: 144 }, { name: "Shore Blossom（岸边的花开）", duration: 264 }, { name: "River Iron（河流的铁）", duration: 217 },
+      { name: "Glimmer Journey（微光的旅程）", duration: 259 }, { name: "Cloud Fable（云的寓言）", duration: 140 } ] },
+    { name: "Cloud Desert", type: "EP", date: "2047-09-13", songs: [
+      { name: "Cloud Desert（云的荒原）", duration: 136 }, { name: "Meadow Crystal（草地的水晶）", duration: 223 }, { name: "Ocean Smoke（海洋的烟雾）", duration: 232 } ] },
+    { name: "Asphalt Carousel", type: "EP", date: "2048-08-29", songs: [
+      { name: "Asphalt Carousel（柏油的旋转木马）", duration: 244 }, { name: "Flame Wind（火焰的风）", duration: 262 }, { name: "Sky Cinder（天空的炭烬）", duration: 237 } ] },
+    { name: "Glass Nest", type: "EP", date: "2049-06-16", songs: [
+      { name: "Glass Nest（玻璃的巢）", duration: 251 }, { name: "Void Garden（虚空的花园）", duration: 262 }, { name: "Kite Steam（风筝的蒸汽）", duration: 222 } ] },
+    { name: "Carousel Sea", type: "专辑", date: "2050-05-28", songs: [
+      { name: "Carousel Sea（旋转木马的海）", duration: 265 }, { name: "Asphalt Nightfall（柏油的夜幕）", duration: 264 }, { name: "Shore Sea（岸边的海）", duration: 249 },
+      { name: "Paperplane Heart（纸飞机的心）", duration: 280 }, { name: "Pine Meadow（松的草地）", duration: 202 }, { name: "Leaf Roof（叶的屋顶）", duration: 233 },
+      { name: "Ballet Petal（芭蕾的花瓣）", duration: 254 } ] },
     ],
   "Trapnest": [
     { name: "Trapnest", type: "专辑", date: "2005-11-16", songs: [
        { name: "Glamorous Sky", duration: 258 }, { name: "Trust", duration: 235 },
        { name: "Wish", duration: 240 }, { name: "Starless Night", duration: 250 }, { name: "Let's Dance", duration: 220 } ] },
     { name: "Glamorous Sky", type: "单曲", date: "2005-09-07", songs: [ { name: "Glamorous Sky", duration: 258 } ] },
-      { name: "Field Moss", type: "单曲", date: "2026-10-13", songs: [
-      { name: "Field Moss（原野的青苔）", duration: 224 } ] },
-    { name: "Forest Desert", type: "单曲", date: "2029-02-06", songs: [
-      { name: "Forest Desert（森林的荒原）", duration: 398 } ] },
-    { name: "Quartz Spark", type: "单曲", date: "2031-03-22", songs: [
-      { name: "Quartz Spark（石英的火花）", duration: 230 } ] },
-    { name: "Fleet Marrow", type: "专辑", date: "2033-05-06", songs: [
-      { name: "Fleet Marrow（舰队的骨髓）", duration: 257 }, { name: "Circle Ice（圆圈的冰）", duration: 260 }, { name: "Pond Static（池塘的静电）", duration: 410 },
-      { name: "Snow Ivory（雪的象牙）", duration: 140 }, { name: "Pebble Lantern（卵石的灯笼）", duration: 265 }, { name: "Drift Dust（漂流的尘埃）", duration: 286 },
-      { name: "Heart Summer（心的夏天）", duration: 191 } ] },
-    { name: "Feather Wave", type: "专辑", date: "2035-04-18", songs: [
-      { name: "Feather Wave（羽毛的波浪）", duration: 292 }, { name: "Breeze Motel（微风的汽车旅馆）", duration: 250 }, { name: "Hollow Steam（空洞的蒸汽）", duration: 241 },
-      { name: "Ember Amber（余烬的琥珀）", duration: 238 }, { name: "Ridge Sea（山脊的海）", duration: 265 }, { name: "Breeze Meridian（微风的子午线）", duration: 251 },
-      { name: "Paperplane Stone（纸飞机的石头）", duration: 241 }, { name: "Cliff Amber（断崖的琥珀）", duration: 237 }, { name: "Summer Mist（夏天的薄雾）", duration: 244 },
-      { name: "Tree Signal（树的信号）", duration: 199 }, { name: "Fog Cloud（雾的云）", duration: 138 } ] },
-    { name: "Shell Paperplane", type: "单曲", date: "2037-04-18", songs: [
-      { name: "Shell Paperplane（贝壳的纸飞机）", duration: 248 } ] },
-    { name: "Fleet Grain", type: "专辑", date: "2039-08-30", songs: [
-      { name: "Fleet Grain（舰队的颗粒）", duration: 246 }, { name: "Field Window（原野的窗）", duration: 230 }, { name: "Gravel Static（砾石的静电）", duration: 221 },
-      { name: "Marrow Dust（骨髓的尘埃）", duration: 259 }, { name: "Glass Plain（玻璃的平原）", duration: 190 }, { name: "Gravel Hollow（砾石的空洞）", duration: 244 },
-      { name: "Loam Vapor（沃土的雾霭）", duration: 169 }, { name: "Sun Paperplane（太阳的纸飞机）", duration: 194 }, { name: "River Crystal（河流的水晶）", duration: 245 },
-      { name: "Glass Thaw（玻璃的融雪）", duration: 252 } ] },
-    { name: "Undertow Field", type: "专辑", date: "2041-08-30", songs: [
-      { name: "Undertow Field（暗流的原野）", duration: 262 }, { name: "Winter Blanket（冬天的绒毯）", duration: 169 }, { name: "Petal Gravel（花瓣的砾石）", duration: 243 },
-      { name: "Undertow Tide（暗流的潮汐）", duration: 231 }, { name: "Silver Stone（银色的石头）", duration: 222 }, { name: "Shadow Summer（影子的夏天）", duration: 259 },
-      { name: "Nightfall Shallow（夜幕的浅滩）", duration: 173 }, { name: "Moon Slope（月亮的斜坡）", duration: 224 }, { name: "Sun Faded（太阳的褪色）", duration: 140 },
-      { name: "Salt Rust（盐的锈迹）", duration: 237 } ] },
-    { name: "Smoke Field", type: "单曲", date: "2043-09-02", songs: [
-      { name: "Smoke Field（烟雾的原野）", duration: 335 } ] },
-    { name: "Ballet Ridge", type: "单曲", date: "2045-10-01", songs: [
-      { name: "Ballet Ridge（芭蕾的山脊）", duration: 293 } ] },
-    { name: "Carousel Storm", type: "专辑", date: "2048-01-17", songs: [
-      { name: "Carousel Storm（旋转木马的风暴）", duration: 221 }, { name: "Quiet Petal（寂静的花瓣）", duration: 210 }, { name: "Silver Wish（银色的愿望）", duration: 228 },
-      { name: "Desert Ashes（荒原的灰烬）", duration: 257 }, { name: "Leaf Fog（叶的雾）", duration: 267 }, { name: "Pebble Silence（卵石的沉寂）", duration: 253 },
-      { name: "Silver Ridge（银色的山脊）", duration: 191 } ] },
-    { name: "Thunder Crystal", type: "专辑", date: "2049-10-15", songs: [
-      { name: "Thunder Crystal（雷的水晶）", duration: 165 }, { name: "Hollow Void（空洞的虚空）", duration: 226 }, { name: "Pebble Sun（卵石的太阳）", duration: 262 },
-      { name: "Shallow Haze（浅滩的轻雾）", duration: 241 }, { name: "Circle Wind（圆圈的风）", duration: 262 }, { name: "Broken Ballet（破碎的芭蕾）", duration: 179 },
-      { name: "Storm Wish（风暴的愿望）", duration: 230 }, { name: "Veil Flood（帷幕的洪流）", duration: 232 }, { name: "Satellite Halo（卫星的光晕）", duration: 138 },
-      { name: "Vine Steam（藤蔓的蒸汽）", duration: 252 }, { name: "Shallow Blanket（浅滩的绒毯）", duration: 161 } ] },
+      { name: "Steam Concrete", type: "专辑", date: "2026-06-22", songs: [
+      { name: "Steam Concrete（蒸汽的水泥）", duration: 262 }, { name: "Spark Glass（火花的玻璃）", duration: 247 }, { name: "Wood Ember（树林的余烬）", duration: 257 },
+      { name: "Fleet Veil（舰队的帷幕）", duration: 198 }, { name: "Spark Motel（火花的汽车旅馆）", duration: 248 }, { name: "Fleet Breeze（舰队的微风）", duration: 188 },
+      { name: "Nest Blanket（巢的绒毯）", duration: 265 }, { name: "Spark Journey（火花的旅程）", duration: 139 }, { name: "Beacon Twilight（灯塔的暮色）", duration: 331 } ] },
+    { name: "Blanket Ballet", type: "专辑", date: "2027-05-05", songs: [
+      { name: "Blanket Ballet（绒毯的芭蕾）", duration: 252 }, { name: "Bloom Sand（绽放的沙）", duration: 249 }, { name: "Pebble Ivory（卵石的象牙）", duration: 140 },
+      { name: "Whisper Carousel（低语的旋转木马）", duration: 233 }, { name: "Mirrors Grain（镜子的颗粒）", duration: 271 }, { name: "Glass Fog（玻璃的雾）", duration: 246 },
+      { name: "Ballet Broken（芭蕾的破碎）", duration: 152 }, { name: "Garden Canvas（花园的画布）", duration: 258 }, { name: "Garden Roof（花园的屋顶）", duration: 278 },
+      { name: "Circle Amber（圆圈的琥珀）", duration: 219 } ] },
+    { name: "Window Stone", type: "单曲", date: "2028-06-16", songs: [
+      { name: "Window Stone（窗的石头）", duration: 387 } ] },
+    { name: "Static Daylight", type: "专辑", date: "2029-04-26", songs: [
+      { name: "Static Daylight（静电的日光）", duration: 237 }, { name: "Quiet Velvet（寂静的天鹅绒）", duration: 176 }, { name: "Snow River（雪的河流）", duration: 328 },
+      { name: "Cliff Signal（断崖的信号）", duration: 225 }, { name: "Loam Smoke（沃土的烟雾）", duration: 405 }, { name: "Snow Overcast（雪的阴云）", duration: 252 },
+      { name: "River Asphalt（河流的柏油）", duration: 255 } ] },
+    { name: "Moss Cinder", type: "专辑", date: "2030-05-15", songs: [
+      { name: "Moss Cinder（青苔的炭烬）", duration: 251 }, { name: "Shadow Sky（影子的天空）", duration: 235 }, { name: "Pulse Rain（脉冲的雨）", duration: 222 },
+      { name: "Signal Canvas（信号的画布）", duration: 228 }, { name: "Quartz Forest（石英的森林）", duration: 251 }, { name: "Asphalt Ember（柏油的余烬）", duration: 219 },
+      { name: "Motel Marrow（汽车旅馆的骨髓）", duration: 189 }, { name: "Tree Whisper（树的低语）", duration: 220 }, { name: "Plain Road（平原的道路）", duration: 231 },
+      { name: "Roof Frost（屋顶的霜）", duration: 238 } ] },
+    { name: "Concrete Path", type: "单曲", date: "2031-05-14", songs: [
+      { name: "Concrete Path（水泥的小径）", duration: 191 } ] },
+    { name: "Fog Velvet", type: "专辑", date: "2032-04-11", songs: [
+      { name: "Fog Velvet（雾的天鹅绒）", duration: 263 }, { name: "Paperplane Glow（纸飞机的辉光）", duration: 135 }, { name: "Hollow Window（空洞的窗）", duration: 238 },
+      { name: "Ashes Void（灰烬的虚空）", duration: 135 }, { name: "Kite Bloom（风筝的绽放）", duration: 264 }, { name: "Nest Quartz（巢的石英）", duration: 260 },
+      { name: "Pine Trail（松的足迹）", duration: 243 } ] },
+    { name: "Roof Tide", type: "专辑", date: "2033-03-17", songs: [
+      { name: "Roof Tide（屋顶的潮汐）", duration: 264 }, { name: "Meadow Amber（草地的琥珀）", duration: 230 }, { name: "Tree Stream（树的溪流）", duration: 229 },
+      { name: "Flame Song（火焰的歌）", duration: 226 }, { name: "Twilight Overcast（暮色的阴云）", duration: 263 }, { name: "Sea Fleet（海的舰队）", duration: 166 },
+      { name: "Anchor Ridge（锚的山脊）", duration: 247 }, { name: "Ashes Quartz（灰烬的石英）", duration: 447 }, { name: "Cinder Shadow（炭烬的影子）", duration: 134 },
+      { name: "Roof Beacon（屋顶的灯塔）", duration: 254 }, { name: "Wires Frost（电线的霜）", duration: 218 } ] },
+    { name: "Ridge Crystal", type: "专辑", date: "2034-01-24", songs: [
+      { name: "Ridge Crystal（山脊的水晶）", duration: 267 }, { name: "Leaf Ashes（叶的灰烬）", duration: 224 }, { name: "Moss Vapor（青苔的雾霭）", duration: 217 },
+      { name: "Satellite Path（卫星的小径）", duration: 364 }, { name: "Loam Ashes（沃土的灰烬）", duration: 345 }, { name: "Wires Sun（电线的太阳）", duration: 237 },
+      { name: "Window Nightfall（窗的夜幕）", duration: 174 }, { name: "Pond Moss（池塘的青苔）", duration: 261 } ] },
+    { name: "Shell Meridian", type: "专辑", date: "2035-02-07", songs: [
+      { name: "Shell Meridian（贝壳的子午线）", duration: 230 }, { name: "Crystal Garden（水晶的花园）", duration: 248 }, { name: "Overcast Concrete（阴云的水泥）", duration: 430 },
+      { name: "Stream Flame（溪流的火焰）", duration: 230 }, { name: "Harbor Static（港湾的静电）", duration: 351 }, { name: "Flame Meadow（火焰的草地）", duration: 213 },
+      { name: "Heart Winter（心的冬天）", duration: 243 }, { name: "Canvas Pond（画布的池塘）", duration: 252 } ] },
+    { name: "Lake Winter", type: "专辑", date: "2036-01-18", songs: [
+      { name: "Lake Winter（湖的冬天）", duration: 176 }, { name: "Canvas Halo（画布的光晕）", duration: 232 }, { name: "Vapor Moon（雾霭的月亮）", duration: 251 },
+      { name: "Stone Diamond（石头的钻石）", duration: 206 }, { name: "Shadow Field（影子的原野）", duration: 430 }, { name: "Static Valley（静电的山谷）", duration: 438 },
+      { name: "Anchor Iron（锚的铁）", duration: 231 }, { name: "Midnight Cloud（午夜的云）", duration: 220 }, { name: "Ivory Faded（象牙的褪色）", duration: 258 },
+      { name: "Blanket Garden（绒毯的花园）", duration: 266 }, { name: "Salt Cliff（盐的断崖）", duration: 267 } ] },
+    { name: "Fleet Wood", type: "EP", date: "2037-01-20", songs: [
+      { name: "Fleet Wood（舰队的树林）", duration: 135 }, { name: "Ocean Whisper（海洋的低语）", duration: 246 }, { name: "Lake Overcast（湖的阴云）", duration: 253 },
+      { name: "Bloom Amber（绽放的琥珀）", duration: 438 } ] },
+    { name: "Rain Ember", type: "EP", date: "2037-12-17", songs: [
+      { name: "Rain Ember（雨的余烬）", duration: 267 }, { name: "Snow Loam（雪的沃土）", duration: 266 }, { name: "Tide Motel（潮汐的汽车旅馆）", duration: 296 },
+      { name: "Hollow Cliff（空洞的断崖）", duration: 266 }, { name: "Beacon Loam（灯塔的沃土）", duration: 227 } ] },
+    { name: "Shallow Ocean", type: "专辑", date: "2039-01-17", songs: [
+      { name: "Shallow Ocean（浅滩的海洋）", duration: 161 }, { name: "Breeze Storm（微风的风暴）", duration: 255 }, { name: "Silver Frost（银色的霜）", duration: 245 },
+      { name: "Pond Crystal（池塘的水晶）", duration: 220 }, { name: "Haze River（轻雾的河流）", duration: 232 }, { name: "Plain Motion（平原的律动）", duration: 249 },
+      { name: "Crystal Dawn（水晶的黎明）", duration: 190 }, { name: "Thaw Cloud（融雪的云）", duration: 251 } ] },
+    { name: "Diamond Echo", type: "专辑", date: "2039-12-26", songs: [
+      { name: "Diamond Echo（钻石的回声）", duration: 278 }, { name: "Desert Motel（荒原的汽车旅馆）", duration: 244 }, { name: "Twilight Ocean（暮色的海洋）", duration: 290 },
+      { name: "Journey Fable（旅程的寓言）", duration: 267 }, { name: "Coral Signal（珊瑚的信号）", duration: 228 }, { name: "Asphalt Soil（柏油的土壤）", duration: 220 },
+      { name: "Daybreak Cloud（黎明的云）", duration: 292 }, { name: "Silk Pebble（丝绸的卵石）", duration: 286 }, { name: "Salt Ashes（盐的灰烬）", duration: 224 },
+      { name: "Stone Mirrors（石头的镜子）", duration: 454 }, { name: "Breeze Vine（微风的藤蔓）", duration: 267 } ] },
+    { name: "Golden Paperplane", type: "专辑", date: "2040-10-14", songs: [
+      { name: "Golden Paperplane（金色的纸飞机）", duration: 206 }, { name: "Shell Hill（贝壳的山丘）", duration: 262 }, { name: "Shell Desert（贝壳的荒原）", duration: 280 },
+      { name: "Salt Golden（盐的金色）", duration: 242 }, { name: "Beacon Daybreak（灯塔的黎明）", duration: 228 }, { name: "Winter Song（冬天的歌）", duration: 259 },
+      { name: "Feather Spark（羽毛的火花）", duration: 291 }, { name: "Pebble Cliff（卵石的断崖）", duration: 317 }, { name: "Summer Ocean（夏天的海洋）", duration: 241 },
+      { name: "Feather Ice（羽毛的冰）", duration: 226 }, { name: "Fog Valley（雾的山谷）", duration: 237 } ] },
+    { name: "Wood Shell", type: "专辑", date: "2041-10-14", songs: [
+      { name: "Wood Shell（树林的贝壳）", duration: 428 }, { name: "Canvas Daybreak（画布的黎明）", duration: 263 }, { name: "Golden Pine（金色的松）", duration: 247 },
+      { name: "Roof Asphalt（屋顶的柏油）", duration: 227 }, { name: "Fleet Kite（舰队的风筝）", duration: 245 }, { name: "Rain Diamond（雨的钻石）", duration: 206 },
+      { name: "Bloom Velvet（绽放的天鹅绒）", duration: 205 }, { name: "Satellite Flood（卫星的洪流）", duration: 262 }, { name: "Field Petal（原野的花瓣）", duration: 244 },
+      { name: "Orbit Marrow（轨道的骨髓）", duration: 221 }, { name: "Smoke Moon（烟雾的月亮）", duration: 247 } ] },
+    { name: "Breeze Grain", type: "EP", date: "2042-11-16", songs: [
+      { name: "Breeze Grain（微风的颗粒）", duration: 272 }, { name: "Pond Sky（池塘的天空）", duration: 220 }, { name: "Halo Mist（光晕的薄雾）", duration: 267 },
+      { name: "Static Kite（静电的风筝）", duration: 363 } ] },
+    { name: "Breeze Signal", type: "专辑", date: "2043-11-14", songs: [
+      { name: "Breeze Signal（微风的信号）", duration: 433 }, { name: "Shallow Field（浅滩的原野）", duration: 211 }, { name: "Wave Halo（波浪的光晕）", duration: 222 },
+      { name: "Window Circle（窗的圆圈）", duration: 257 }, { name: "Veil Nightfall（帷幕的夜幕）", duration: 204 }, { name: "Faded Trail（褪色的足迹）", duration: 249 },
+      { name: "Leaf Daybreak（叶的黎明）", duration: 268 }, { name: "Tower Star（塔的星）", duration: 243 }, { name: "Shadow Spark（影子的火花）", duration: 273 } ] },
+    { name: "Blossom Blanket", type: "单曲", date: "2044-10-17", songs: [
+      { name: "Blossom Blanket（花开的绒毯）", duration: 234 } ] },
+    { name: "Nightfall Garden", type: "EP", date: "2045-08-21", songs: [
+      { name: "Nightfall Garden（夜幕的花园）", duration: 222 }, { name: "Breeze Haze（微风的轻雾）", duration: 262 }, { name: "Sun Mirrors（太阳的镜子）", duration: 254 } ] },
+    { name: "Rust Crystal", type: "EP", date: "2046-10-06", songs: [
+      { name: "Rust Crystal（锈迹的水晶）", duration: 256 }, { name: "Velvet Fog（天鹅绒的雾）", duration: 249 }, { name: "Pine Stream（松的溪流）", duration: 257 },
+      { name: "Midnight Shallow（午夜的浅滩）", duration: 194 } ] },
+    { name: "Star Glass", type: "专辑", date: "2047-07-14", songs: [
+      { name: "Star Glass（星的玻璃）", duration: 260 }, { name: "Harbor Iron（港湾的铁）", duration: 228 }, { name: "Leaf Shore（叶的岸边）", duration: 159 },
+      { name: "Bloom Wind（绽放的风）", duration: 246 }, { name: "Iron Wave（铁的波浪）", duration: 250 }, { name: "Moon Echo（月亮的回声）", duration: 425 },
+      { name: "Ocean Tower（海洋的塔）", duration: 149 }, { name: "Song Velvet（歌的天鹅绒）", duration: 233 } ] },
+    { name: "Dawn Ice", type: "专辑", date: "2048-09-17", songs: [
+      { name: "Dawn Ice（黎明的冰）", duration: 220 }, { name: "Cinder Ocean（炭烬的海洋）", duration: 227 }, { name: "Daylight Breeze（日光的微风）", duration: 247 },
+      { name: "Wish Glow（愿望的辉光）", duration: 225 }, { name: "Diamond Undertow（钻石的暗流）", duration: 183 }, { name: "Forest Diamond（森林的钻石）", duration: 255 },
+      { name: "Wind Satellite（风的卫星）", duration: 366 }, { name: "Paperplane Concrete（纸飞机的水泥）", duration: 225 } ] },
+    { name: "Ivory Meridian", type: "专辑", date: "2049-07-22", songs: [
+      { name: "Ivory Meridian（象牙的子午线）", duration: 257 }, { name: "Window Ice（窗的冰）", duration: 211 }, { name: "Wish Paperplane（愿望的纸飞机）", duration: 424 },
+      { name: "Lake Satellite（湖的卫星）", duration: 231 }, { name: "Fog Garden（雾的花园）", duration: 292 }, { name: "Shore Canvas（岸边的画布）", duration: 251 },
+      { name: "Sun Sky（太阳的天空）", duration: 365 }, { name: "Gravel Harbor（砾石的港湾）", duration: 238 }, { name: "Daylight Road（日光的道路）", duration: 221 } ] },
+    { name: "Sea Fable", type: "专辑", date: "2050-07-12", songs: [
+      { name: "Sea Fable（海的寓言）", duration: 260 }, { name: "Orbit Vapor（轨道的雾霭）", duration: 193 }, { name: "Ashes Soil（灰烬的土壤）", duration: 160 },
+      { name: "Quiet Tree（寂静的树）", duration: 190 }, { name: "Moon Dust（月亮的尘埃）", duration: 283 }, { name: "Drift Wish（漂流的愿望）", duration: 254 },
+      { name: "Tower Undertow（塔的暗流）", duration: 211 }, { name: "Marrow Steam（骨髓的蒸汽）", duration: 235 }, { name: "Velvet Leaf（天鹅绒的叶）", duration: 360 },
+      { name: "Smoke River（烟雾的河流）", duration: 240 } ] },
     ],
   "Plasmagica": [
     { name: "Plasmagica", type: "专辑", date: "2015-08-26", songs: [
        { name: "Seabreeze", duration: 230 }, { name: "Music Start!（音乐开始！）", duration: 220 },
        { name: "愛を教えて（教会我爱）", duration: 215 } ] },
     { name: "Seabreeze", type: "单曲", date: "2015-04-22", songs: [ { name: "Seabreeze", duration: 230 } ] },
-      { name: "Overcast Coral", type: "单曲", date: "2026-12-08", songs: [
-      { name: "Overcast Coral（阴云的珊瑚）", duration: 260 } ] },
-    { name: "Stone Circle", type: "专辑", date: "2028-12-22", songs: [
-      { name: "Stone Circle（石头的圆圈）", duration: 223 }, { name: "Shell Bloom（贝壳的绽放）", duration: 244 }, { name: "Stream Grain（溪流的颗粒）", duration: 140 },
-      { name: "Wood Hill（树林的山丘）", duration: 216 }, { name: "Harbor Glow（港湾的辉光）", duration: 243 }, { name: "Lake Wish（湖的愿望）", duration: 233 },
-      { name: "Drift Paperplane（漂流的纸飞机）", duration: 135 }, { name: "Wish Moss（愿望的青苔）", duration: 230 }, { name: "Dawn Flood（黎明的洪流）", duration: 241 },
-      { name: "Breeze Slope（微风的斜坡）", duration: 217 }, { name: "Daybreak Tree（黎明的树）", duration: 383 } ] },
-    { name: "Blanket Meadow", type: "专辑", date: "2031-04-18", songs: [
-      { name: "Blanket Meadow（绒毯的草地）", duration: 204 }, { name: "Roof Kite（屋顶的风筝）", duration: 202 }, { name: "Daybreak Wave（黎明的波浪）", duration: 179 },
-      { name: "Anchor Quiet（锚的寂静）", duration: 380 }, { name: "Blanket Static（绒毯的静电）", duration: 377 }, { name: "Carousel Sand（旋转木马的沙）", duration: 266 },
-      { name: "Halo Concrete（光晕的水泥）", duration: 397 }, { name: "Marrow Stream（骨髓的溪流）", duration: 217 }, { name: "Forest Moon（森林的月亮）", duration: 208 },
-      { name: "Echo Undertow（回声的暗流）", duration: 411 } ] },
-    { name: "Quartz Anchor", type: "单曲", date: "2033-06-29", songs: [
-      { name: "Quartz Anchor（石英的锚）", duration: 224 } ] },
-    { name: "Tower Orbit", type: "单曲", date: "2035-06-17", songs: [
-      { name: "Tower Orbit（塔的轨道）", duration: 359 } ] },
-    { name: "Wave Haze", type: "专辑", date: "2037-08-18", songs: [
-      { name: "Wave Haze（波浪的轻雾）", duration: 166 }, { name: "Pond Shallow（池塘的浅滩）", duration: 233 }, { name: "Compass Journey（罗盘的旅程）", duration: 395 },
-      { name: "Silence Silver（沉寂的银色）", duration: 235 }, { name: "Dust Circle（尘埃的圆圈）", duration: 234 }, { name: "Soil Lake（土壤的湖）", duration: 227 },
-      { name: "Hollow Fleet（空洞的舰队）", duration: 258 }, { name: "Dust Highway（尘埃的公路）", duration: 219 }, { name: "Soil Orbit（土壤的轨道）", duration: 230 },
-      { name: "Window Daylight（窗的日光）", duration: 223 }, { name: "Plain Pine（平原的松）", duration: 217 } ] },
-    { name: "Silence Rust", type: "单曲", date: "2039-08-04", songs: [
-      { name: "Silence Rust（沉寂的锈迹）", duration: 215 } ] },
-    { name: "Petal Forest", type: "专辑", date: "2041-10-16", songs: [
-      { name: "Petal Forest（花瓣的森林）", duration: 241 }, { name: "Sand Carousel（沙的旋转木马）", duration: 231 }, { name: "Lake Motel（湖的汽车旅馆）", duration: 211 },
-      { name: "Moon Petal（月亮的花瓣）", duration: 339 }, { name: "Fog Shore（雾的岸边）", duration: 333 }, { name: "Breeze Sundown（微风的日落）", duration: 412 },
-      { name: "Hill Leaf（山丘的叶）", duration: 220 }, { name: "Loam Void（沃土的虚空）", duration: 202 }, { name: "Ridge Fable（山脊的寓言）", duration: 226 },
-      { name: "Motel Winter（汽车旅馆的冬天）", duration: 263 }, { name: "Nest Stone（巢的石头）", duration: 242 } ] },
-    { name: "Flood Star", type: "专辑", date: "2043-12-09", songs: [
-      { name: "Flood Star（洪流的星）", duration: 208 }, { name: "Heart Diamond（心的钻石）", duration: 227 }, { name: "Hollow Asphalt（空洞的柏油）", duration: 234 },
-      { name: "Beacon Ridge（灯塔的山脊）", duration: 218 }, { name: "Slope Journey（斜坡的旅程）", duration: 228 }, { name: "Velvet Ice（天鹅绒的冰）", duration: 205 },
-      { name: "Trail Static（足迹的静电）", duration: 216 }, { name: "Path Marrow（小径的骨髓）", duration: 197 }, { name: "Twilight Concrete（暮色的水泥）", duration: 177 } ] },
-    { name: "Motel Hill", type: "专辑", date: "2045-11-04", songs: [
-      { name: "Motel Hill（汽车旅馆的山丘）", duration: 229 }, { name: "Glow Snow（辉光的雪）", duration: 261 }, { name: "Sun Moss（太阳的青苔）", duration: 245 },
-      { name: "Feather Compass（羽毛的罗盘）", duration: 127 }, { name: "Desert Road（荒原的道路）", duration: 220 }, { name: "Ballet Canvas（芭蕾的画布）", duration: 225 },
-      { name: "Static Daybreak（静电的黎明）", duration: 212 }, { name: "Daylight Cinder（日光的炭烬）", duration: 248 } ] },
-    { name: "Blossom Moss", type: "单曲", date: "2047-10-15", songs: [
-      { name: "Blossom Moss（花开的青苔）", duration: 265 } ] },
-    { name: "Concrete Path", type: "单曲", date: "2049-11-18", songs: [
-      { name: "Concrete Path（水泥的小径）", duration: 214 } ] },
+      { name: "Ivory Trail", type: "专辑", date: "2026-06-20", songs: [
+      { name: "Ivory Trail（象牙的足迹）", duration: 211 }, { name: "Wish Spark（愿望的火花）", duration: 225 }, { name: "Meadow Circle（草地的圆圈）", duration: 208 },
+      { name: "Cinder Lake（炭烬的湖）", duration: 425 }, { name: "Ballet Feather（芭蕾的羽毛）", duration: 378 }, { name: "Thaw Pulse（融雪的脉冲）", duration: 310 },
+      { name: "Glass Flood（玻璃的洪流）", duration: 244 }, { name: "Garden Dusk（花园的薄暮）", duration: 239 }, { name: "Circle Motion（圆圈的律动）", duration: 211 } ] },
+    { name: "Salt Marrow", type: "专辑", date: "2027-07-09", songs: [
+      { name: "Salt Marrow（盐的骨髓）", duration: 302 }, { name: "Glimmer Heart（微光的心）", duration: 209 }, { name: "Snow Iron（雪的铁）", duration: 206 },
+      { name: "Plain Concrete（平原的水泥）", duration: 215 }, { name: "Vapor Ice（雾霭的冰）", duration: 242 }, { name: "Motel Silver（汽车旅馆的银色）", duration: 218 },
+      { name: "Crescent Canvas（新月的画布）", duration: 217 }, { name: "Path Undertow（小径的暗流）", duration: 244 }, { name: "Rust Pulse（锈迹的脉冲）", duration: 148 },
+      { name: "Window Dust（窗的尘埃）", duration: 233 }, { name: "Desert Wires（荒原的电线）", duration: 230 } ] },
+    { name: "Midnight Slope", type: "专辑", date: "2028-04-14", songs: [
+      { name: "Midnight Slope（午夜的斜坡）", duration: 227 }, { name: "Compass Desert（罗盘的荒原）", duration: 218 }, { name: "Anchor Dust（锚的尘埃）", duration: 240 },
+      { name: "Drift Fable（漂流的寓言）", duration: 219 }, { name: "Petal Ember（花瓣的余烬）", duration: 179 }, { name: "Ivory Motel（象牙的汽车旅馆）", duration: 220 },
+      { name: "Sundown Midnight（日落的午夜）", duration: 204 }, { name: "Fable Soil（寓言的土壤）", duration: 204 } ] },
+    { name: "Cloud Ocean", type: "单曲", date: "2029-04-18", songs: [
+      { name: "Cloud Ocean（云的海洋）", duration: 229 } ] },
+    { name: "Rust Silk", type: "专辑", date: "2030-04-15", songs: [
+      { name: "Rust Silk（锈迹的丝绸）", duration: 214 }, { name: "Sun Mist（太阳的薄雾）", duration: 264 }, { name: "Lantern Overcast（灯笼的阴云）", duration: 214 },
+      { name: "Silk Song（丝绸的歌）", duration: 235 }, { name: "Stream Meridian（溪流的子午线）", duration: 238 }, { name: "Blossom Ivory（花开的象牙）", duration: 143 },
+      { name: "Orbit Dust（轨道的尘埃）", duration: 272 } ] },
+    { name: "Star Flame", type: "专辑", date: "2031-05-16", songs: [
+      { name: "Star Flame（星的火焰）", duration: 242 }, { name: "Haze Halo（轻雾的光晕）", duration: 266 }, { name: "Blossom Ocean（花开的海洋）", duration: 385 },
+      { name: "Quiet Fog（寂静的雾）", duration: 200 }, { name: "Tower Cinder（塔的炭烬）", duration: 230 }, { name: "Echo Void（回声的虚空）", duration: 172 },
+      { name: "Haze Satellite（轻雾的卫星）", duration: 157 }, { name: "Motion Lake（律动的湖）", duration: 217 }, { name: "Kite Storm（风筝的风暴）", duration: 273 },
+      { name: "Lake Glass（湖的玻璃）", duration: 267 }, { name: "Diamond Rust（钻石的锈迹）", duration: 125 } ] },
+    { name: "Pond Mirrors", type: "专辑", date: "2032-05-09", songs: [
+      { name: "Pond Mirrors（池塘的镜子）", duration: 142 }, { name: "Garden Signal（花园的信号）", duration: 209 }, { name: "Asphalt Mirrors（柏油的镜子）", duration: 209 },
+      { name: "Vapor Midnight（雾霭的午夜）", duration: 228 }, { name: "Nightfall Sky（夜幕的天空）", duration: 228 }, { name: "Salt Quartz（盐的石英）", duration: 216 },
+      { name: "Petal Silence（花瓣的沉寂）", duration: 237 }, { name: "Shell Signal（贝壳的信号）", duration: 180 } ] },
+    { name: "Asphalt Nest", type: "EP", date: "2033-03-10", songs: [
+      { name: "Asphalt Nest（柏油的巢）", duration: 217 }, { name: "Rust Anchor（锈迹的锚）", duration: 400 }, { name: "Crescent Sundown（新月的日落）", duration: 168 },
+      { name: "Ballet Flame（芭蕾的火焰）", duration: 208 }, { name: "Coral Feather（珊瑚的羽毛）", duration: 209 }, { name: "Glass Moon（玻璃的月亮）", duration: 309 } ] },
+    { name: "Motion Flood", type: "专辑", date: "2034-04-04", songs: [
+      { name: "Motion Flood（律动的洪流）", duration: 226 }, { name: "Veil Stone（帷幕的石头）", duration: 258 }, { name: "Shell Twilight（贝壳的暮色）", duration: 231 },
+      { name: "Frost Wood（霜的树林）", duration: 228 }, { name: "Marrow Desert（骨髓的荒原）", duration: 197 }, { name: "Wires Lake（电线的湖）", duration: 354 },
+      { name: "Ivory Ashes（象牙的灰烬）", duration: 302 }, { name: "Storm Field（风暴的原野）", duration: 259 } ] },
+    { name: "Shell Tree", type: "专辑", date: "2035-02-04", songs: [
+      { name: "Shell Tree（贝壳的树）", duration: 216 }, { name: "Veil Pine（帷幕的松）", duration: 214 }, { name: "Harbor Path（港湾的小径）", duration: 205 },
+      { name: "Steam Spark（蒸汽的火花）", duration: 203 }, { name: "Quiet Winter（寂静的冬天）", duration: 177 }, { name: "Loam Crystal（沃土的水晶）", duration: 392 },
+      { name: "Beacon Kite（灯塔的风筝）", duration: 239 }, { name: "Nest Ocean（巢的海洋）", duration: 240 } ] },
+    { name: "Nest Carousel", type: "专辑", date: "2036-02-17", songs: [
+      { name: "Nest Carousel（巢的旋转木马）", duration: 202 }, { name: "Thunder Ashes（雷的灰烬）", duration: 186 }, { name: "Storm Petal（风暴的花瓣）", duration: 222 },
+      { name: "Breeze Echo（微风的回声）", duration: 243 }, { name: "Haze Path（轻雾的小径）", duration: 225 }, { name: "Sundown Forest（日落的森林）", duration: 209 },
+      { name: "Amber Motion（琥珀的律动）", duration: 205 }, { name: "Valley Moon（山谷的月亮）", duration: 218 }, { name: "Static Grain（静电的颗粒）", duration: 231 } ] },
+    { name: "Wind Plain", type: "单曲", date: "2037-01-29", songs: [
+      { name: "Wind Plain（风的平原）", duration: 259 } ] },
+    { name: "Satellite Nest", type: "专辑", date: "2037-12-09", songs: [
+      { name: "Satellite Nest（卫星的巢）", duration: 234 }, { name: "Glimmer Glow（微光的辉光）", duration: 144 }, { name: "Song Journey（歌的旅程）", duration: 212 },
+      { name: "Neon Ember（霓虹的余烬）", duration: 136 }, { name: "Silk Sundown（丝绸的日落）", duration: 202 }, { name: "Daybreak Tower（黎明的塔）", duration: 213 },
+      { name: "Shore Gravel（岸边的砾石）", duration: 242 }, { name: "Steam Signal（蒸汽的信号）", duration: 224 }, { name: "Desert Marrow（荒原的骨髓）", duration: 129 },
+      { name: "Quiet Glass（寂静的玻璃）", duration: 214 } ] },
+    { name: "Paperplane Cliff", type: "单曲", date: "2038-11-30", songs: [
+      { name: "Paperplane Cliff（纸飞机的断崖）", duration: 244 } ] },
+    { name: "Moss Trail", type: "专辑", date: "2039-12-14", songs: [
+      { name: "Moss Trail（青苔的足迹）", duration: 224 }, { name: "Velvet Ridge（天鹅绒的山脊）", duration: 236 }, { name: "Glass Pebble（玻璃的卵石）", duration: 158 },
+      { name: "Salt Motion（盐的律动）", duration: 193 }, { name: "Flame Cliff（火焰的断崖）", duration: 210 }, { name: "Stream Wires（溪流的电线）", duration: 211 },
+      { name: "Whisper Ice（低语的冰）", duration: 192 }, { name: "Star Midnight（星的午夜）", duration: 245 }, { name: "Nest Cinder（巢的炭烬）", duration: 222 } ] },
+    { name: "Salt Heart", type: "单曲", date: "2040-11-19", songs: [
+      { name: "Salt Heart（盐的心）", duration: 233 } ] },
+    { name: "Orbit Tide", type: "EP", date: "2041-10-31", songs: [
+      { name: "Orbit Tide（轨道的潮汐）", duration: 239 }, { name: "Sundown Amber（日落的琥珀）", duration: 218 }, { name: "Thunder Slope（雷的斜坡）", duration: 411 },
+      { name: "Satellite Ice（卫星的冰）", duration: 199 }, { name: "Ember Velvet（余烬的天鹅绒）", duration: 237 }, { name: "Lake Pebble（湖的卵石）", duration: 185 } ] },
+    { name: "Wish Soil", type: "单曲", date: "2042-11-16", songs: [
+      { name: "Wish Soil（愿望的土壤）", duration: 364 } ] },
+    { name: "Crescent Path", type: "单曲", date: "2043-09-13", songs: [
+      { name: "Crescent Path（新月的小径）", duration: 232 } ] },
+    { name: "Shore Snow", type: "EP", date: "2044-10-08", songs: [
+      { name: "Shore Snow（岸边的雪）", duration: 180 }, { name: "Golden Halo（金色的光晕）", duration: 207 }, { name: "Path Broken（小径的破碎）", duration: 234 },
+      { name: "Nightfall Fleet（夜幕的舰队）", duration: 225 }, { name: "Soil Twilight（土壤的暮色）", duration: 143 }, { name: "Anchor Meridian（锚的子午线）", duration: 227 } ] },
+    { name: "Stream Sky", type: "单曲", date: "2045-10-12", songs: [
+      { name: "Stream Sky（溪流的天空）", duration: 213 } ] },
+    { name: "Tide Overcast", type: "EP", date: "2046-09-16", songs: [
+      { name: "Tide Overcast（潮汐的阴云）", duration: 243 }, { name: "Wires Wood（电线的树林）", duration: 223 }, { name: "Beacon Ballet（灯塔的芭蕾）", duration: 212 },
+      { name: "Stone Undertow（石头的暗流）", duration: 357 }, { name: "Void Marrow（虚空的骨髓）", duration: 202 } ] },
+    { name: "Faded Garden", type: "单曲", date: "2047-07-24", songs: [
+      { name: "Faded Garden（褪色的花园）", duration: 293 } ] },
+    { name: "Tower Sand", type: "专辑", date: "2048-06-26", songs: [
+      { name: "Tower Sand（塔的沙）", duration: 241 }, { name: "Shell Shore（贝壳的岸边）", duration: 165 }, { name: "Salt Garden（盐的花园）", duration: 208 },
+      { name: "Compass Wind（罗盘的风）", duration: 191 }, { name: "Stream Blanket（溪流的绒毯）", duration: 240 }, { name: "Tower Echo（塔的回声）", duration: 176 },
+      { name: "Highway Star（公路的星）", duration: 202 } ] },
+    { name: "Sun Lantern", type: "专辑", date: "2049-07-16", songs: [
+      { name: "Sun Lantern（太阳的灯笼）", duration: 226 }, { name: "River Halo（河流的光晕）", duration: 213 }, { name: "Sea Twilight（海的暮色）", duration: 158 },
+      { name: "Salt Blanket（盐的绒毯）", duration: 201 }, { name: "Feather Vapor（羽毛的雾霭）", duration: 212 }, { name: "Midnight Pebble（午夜的卵石）", duration: 422 },
+      { name: "Daylight Crystal（日光的水晶）", duration: 206 }, { name: "Soil Midnight（土壤的午夜）", duration: 239 }, { name: "Snow Pond（雪的池塘）", duration: 242 },
+      { name: "Dawn Shell（黎明的贝壳）", duration: 228 }, { name: "Static Faded（静电的褪色）", duration: 238 } ] },
+    { name: "Summer Fable", type: "EP", date: "2050-06-06", songs: [
+      { name: "Summer Fable（夏天的寓言）", duration: 352 }, { name: "Motion Dawn（律动的黎明）", duration: 219 }, { name: "Thunder Veil（雷的帷幕）", duration: 301 },
+      { name: "Sun Blanket（太阳的绒毯）", duration: 219 } ] },
     ],
   "Poppin'Party": [
     { name: "Poppin'on!", type: "专辑", date: "2019-01-30", songs: [
@@ -2716,40 +3159,99 @@ window.BAND_DISCOGRAPHY = {
     { name: "Time Lapse", type: "单曲", date: "2018-01-17", songs: [ { name: "Time Lapse", duration: 245 } ] },
     { name: "二重の虹（双重彩虹）", type: "单曲", date: "2018-04-18", songs: [ { name: "二重の虹（双重彩虹）", duration: 236 } ] },
     { name: "キズナミュージック♪（羁绊音乐♪）", type: "单曲", date: "2019-05-15", songs: [ { name: "キズナミュージック♪（羁绊音乐♪）", duration: 240 } ] },
-      { name: "小さなの星屑", type: "单曲", date: "2027-02-06", songs: [
-      { name: "小さなの星屑（微小的星屑）", duration: 241 } ] },
-    { name: "風の暁", type: "专辑", date: "2029-04-28", songs: [
-      { name: "風の暁（风之拂晓）", duration: 227 }, { name: "虹の追憶（彩虹之追忆）", duration: 250 }, { name: "向日葵（向日葵）", duration: 214 },
-      { name: "調べ（曲调）", duration: 246 }, { name: "放課後の季節（放学后之季节）", duration: 398 }, { name: "岬の遠い（遥远的海角）", duration: 235 },
-      { name: "障子（障子）", duration: 146 }, { name: "雪化粧（银装素裹）", duration: 247 } ] },
-    { name: "凪の涙", type: "单曲", date: "2031-04-07", songs: [
-      { name: "凪の涙（风平浪静之泪）", duration: 280 } ] },
-    { name: "調べの月", type: "单曲", date: "2033-05-05", songs: [
-      { name: "調べの月（曲调之月）", duration: 247 } ] },
-    { name: "月光", type: "专辑", date: "2035-04-11", songs: [
-      { name: "月光（月光）", duration: 139 }, { name: "真夏（盛夏）", duration: 245 }, { name: "冬晴れ（冬日晴空）", duration: 234 },
-      { name: "星空（星空）", duration: 242 }, { name: "青空（青空）", duration: 248 }, { name: "影の春休み（影之春假）", duration: 286 },
-      { name: "花火の恋（花火之恋）", duration: 175 }, { name: "夕霧（暮霭）", duration: 259 }, { name: "自転車の眩しい（耀眼的单车）", duration: 248 },
-      { name: "遠いの冬休み（遥远寒假）", duration: 250 } ] },
-    { name: "響き", type: "单曲", date: "2037-04-14", songs: [
-      { name: "響き（回响）", duration: 248 } ] },
-    { name: "障子の朝", type: "单曲", date: "2039-07-09", songs: [
-      { name: "障子の朝（障子之晨）", duration: 245 } ] },
-    { name: "落ち葉", type: "单曲", date: "2041-11-04", songs: [
-      { name: "落ち葉（落叶）", duration: 240 } ] },
-    { name: "潮騒", type: "单曲", date: "2043-06-13", songs: [
-      { name: "潮騒（潮鸣）", duration: 215 } ] },
-    { name: "冬晴れの波音", type: "专辑", date: "2046-01-08", songs: [
-      { name: "冬晴れの波音（冬日晴空之潮声）", duration: 323 }, { name: "葉の浴衣（叶之浴衣）", duration: 251 }, { name: "制服の音色（制服之音色）", duration: 229 },
-      { name: "秋風（秋风）", duration: 194 }, { name: "浴衣（浴衣）", duration: 246 }, { name: "縁側（檐廊）", duration: 252 },
-      { name: "文化祭（文化祭）", duration: 252 }, { name: "約束の制服（约定之制服）", duration: 236 } ] },
-    { name: "心音", type: "单曲", date: "2048-01-02", songs: [
-      { name: "心音（心跳）", duration: 251 } ] },
-    { name: "夜明け", type: "专辑", date: "2049-10-19", songs: [
-      { name: "夜明け（黎明）", duration: 257 }, { name: "卒業の春休み（毕业之春假）", duration: 224 }, { name: "木漏れ日の湖（林间光斑之湖）", duration: 225 },
-      { name: "体育祭の島（体育祭之岛）", duration: 260 }, { name: "青いの響き（湛蓝回响）", duration: 226 }, { name: "季節（季节）", duration: 137 },
-      { name: "給食の文化祭（午餐之文化祭）", duration: 223 }, { name: "風鈴（风铃）", duration: 259 }, { name: "光景（光景）", duration: 159 },
-      { name: "約束の音色（约定之音色）", duration: 233 }, { name: "想い（思念）", duration: 268 } ] },
+      { name: "虹の約束", type: "EP", date: "2026-05-21", songs: [
+      { name: "虹の約束（彩虹之约定）", duration: 228 }, { name: "心音の浴衣（心跳之浴衣）", duration: 263 }, { name: "若葉の窓（新叶之窗）", duration: 239 },
+      { name: "雲の文化祭（云之文化祭）", duration: 325 }, { name: "霧の夏休み（雾之暑假）", duration: 213 } ] },
+    { name: "夜風の制服", type: "专辑", date: "2027-06-25", songs: [
+      { name: "夜風の制服（夜风之制服）", duration: 239 }, { name: "波の暁（波之拂晓）", duration: 213 }, { name: "帰り道の残照（归途之残照）", duration: 420 },
+      { name: "星空の夜風（星空之夜风）", duration: 243 }, { name: "波音の雪化粧（潮声之银装素裹）", duration: 243 }, { name: "障子の川（障子之河）", duration: 231 },
+      { name: "帰り道の旋律（归途之旋律）", duration: 191 }, { name: "岸の修学旅行（岸之修学旅行）", duration: 255 }, { name: "空の流星（天空之流星）", duration: 213 },
+      { name: "歌の葉（歌之叶）", duration: 226 }, { name: "黄昏の自転車（黄昏之单车）", duration: 213 } ] },
+    { name: "旋律の卒業", type: "专辑", date: "2028-06-06", songs: [
+      { name: "旋律の卒業（旋律之毕业）", duration: 282 }, { name: "島の落ち葉（岛之落叶）", duration: 244 }, { name: "雨音の畳（雨声之榻榻米）", duration: 250 },
+      { name: "実の虹（果实之彩虹）", duration: 256 }, { name: "残響の真夏（残响之盛夏）", duration: 215 }, { name: "木漏れ日の卒業（林间光斑之毕业）", duration: 253 },
+      { name: "夜の冬休み（夜之寒假）", duration: 241 }, { name: "湖の浜（湖之海滨）", duration: 238 }, { name: "詩の星空（诗之星空）", duration: 228 } ] },
+    { name: "屋上の心", type: "单曲", date: "2029-04-16", songs: [
+      { name: "屋上の心（天台之心）", duration: 249 } ] },
+    { name: "紅葉の若葉", type: "专辑", date: "2030-06-05", songs: [
+      { name: "紅葉の若葉（红叶之新叶）", duration: 220 }, { name: "青いの霜（湛蓝霜）", duration: 249 }, { name: "月の影（月之影）", duration: 249 },
+      { name: "島の蕾（岛之花苞）", duration: 158 }, { name: "岩の透明（透明的岩石）", duration: 187 }, { name: "畳の滝（榻榻米之瀑布）", duration: 232 },
+      { name: "蝉の波（蝉之波）", duration: 262 }, { name: "文化祭の波音（文化祭之潮声）", duration: 238 }, { name: "青空の海辺（青空之海边）", duration: 216 },
+      { name: "木漏れ日の冬休み（林间光斑之寒假）", duration: 218 } ] },
+    { name: "蛍の調べ", type: "专辑", date: "2031-03-13", songs: [
+      { name: "蛍の調べ（萤火虫之曲调）", duration: 240 }, { name: "残響の優しい（温柔的残响）", duration: 267 }, { name: "波の詩（波之诗）", duration: 407 },
+      { name: "夜風の白い（纯白的的夜风）", duration: 280 }, { name: "朝霧の流れ星（晨雾之流星）", duration: 249 }, { name: "冬晴れの夏休み（冬日晴空之暑假）", duration: 215 },
+      { name: "冬休みの島（寒假之岛）", duration: 248 }, { name: "約束の唄（约定之歌谣）", duration: 259 }, { name: "花火の灯り（花火之灯火）", duration: 232 },
+      { name: "縁側の虹（檐廊之彩虹）", duration: 248 } ] },
+    { name: "星屑の実", type: "专辑", date: "2032-03-07", songs: [
+      { name: "星屑の実（星屑之果实）", duration: 231 }, { name: "白いの畳（纯白的榻榻米）", duration: 248 }, { name: "岸の障子（岸之障子）", duration: 216 },
+      { name: "夏休みの白い（纯白的的暑假）", duration: 407 }, { name: "向日葵の浴衣（向日葵之浴衣）", duration: 255 }, { name: "氷の木漏れ日（冰之林间光斑）", duration: 244 },
+      { name: "夢の放課後（梦之放学后）", duration: 214 }, { name: "花の岩（花之岩石）", duration: 239 }, { name: "夕霧の空（暮霭之天空）", duration: 243 },
+      { name: "花の陽だまり（花之暖阳）", duration: 249 }, { name: "波の浴衣（波之浴衣）", duration: 217 } ] },
+    { name: "朧月の満月", type: "专辑", date: "2033-04-02", songs: [
+      { name: "朧月の満月（胧月之满月）", duration: 236 }, { name: "追憶の秋風（追忆之秋风）", duration: 195 }, { name: "影の蝉（影之蝉）", duration: 213 },
+      { name: "水面の土（水面之土）", duration: 216 }, { name: "実の月光（果实之月光）", duration: 249 }, { name: "放課後の帰り道（放学后之归途）", duration: 268 },
+      { name: "蕾の調べ（花苞之曲调）", duration: 244 }, { name: "潮騒の霜（潮鸣之霜）", duration: 195 }, { name: "詩の風（诗之风）", duration: 222 },
+      { name: "静かの夜風（静谧夜风）", duration: 135 } ] },
+    { name: "風鈴の紅葉", type: "EP", date: "2034-04-07", songs: [
+      { name: "風鈴の紅葉（风铃之红叶）", duration: 235 }, { name: "恋の月（恋之月）", duration: 254 }, { name: "歌の渓（歌之溪）", duration: 261 },
+      { name: "陽だまりの木漏れ日（暖阳之林间光斑）", duration: 144 }, { name: "根の夏休み（根之暑假）", duration: 240 } ] },
+    { name: "冬休みの川", type: "单曲", date: "2035-04-01", songs: [
+      { name: "冬休みの川（寒假之河）", duration: 245 } ] },
+    { name: "花の根", type: "单曲", date: "2036-01-21", songs: [
+      { name: "花の根（花之根）", duration: 232 } ] },
+    { name: "島の氷", type: "单曲", date: "2037-01-29", songs: [
+      { name: "島の氷（岛之冰）", duration: 357 } ] },
+    { name: "風の霧", type: "专辑", date: "2038-02-04", songs: [
+      { name: "風の霧（风之雾）", duration: 232 }, { name: "月光の音色（月光之音色）", duration: 240 }, { name: "冬晴れの雨音（冬日晴空之雨声）", duration: 227 },
+      { name: "朧月の海辺（胧月之海边）", duration: 265 }, { name: "星屑の月（星屑之月）", duration: 434 }, { name: "帰り道の月光（归途之月光）", duration: 320 },
+      { name: "制服の障子（制服之障子）", duration: 246 }, { name: "影の風鈴（影之风铃）", duration: 239 }, { name: "花火の残照（花火之残照）", duration: 276 },
+      { name: "旋律の木漏れ日（旋律之林间光斑）", duration: 172 }, { name: "夕霧の心音（暮霭之心跳）", duration: 259 } ] },
+    { name: "枝の虹", type: "专辑", date: "2039-02-01", songs: [
+      { name: "枝の虹（枝之彩虹）", duration: 248 }, { name: "葉の遠い（遥远的叶）", duration: 190 }, { name: "陽だまりの声（暖阳之声）", duration: 400 },
+      { name: "春風の星屑（春风之星屑）", duration: 244 }, { name: "銀河の唄（银河之歌谣）", duration: 236 }, { name: "蛍の旋律（萤火虫之旋律）", duration: 232 },
+      { name: "夢の蕾（梦之花苞）", duration: 246 }, { name: "記憶の障子（记忆之障子）", duration: 186 }, { name: "自転車の卒業（单车之毕业）", duration: 245 } ] },
+    { name: "遠いの歌", type: "专辑", date: "2039-12-19", songs: [
+      { name: "遠いの歌（遥远歌）", duration: 390 }, { name: "自転車の波音（单车之潮声）", duration: 216 }, { name: "声の追憶（声之追忆）", duration: 198 },
+      { name: "岸の砂（岸之沙）", duration: 217 }, { name: "放課後の記憶（放学后之记忆）", duration: 218 }, { name: "縁側の残照（檐廊之残照）", duration: 252 },
+      { name: "放課後の雨音（放学后之雨声）", duration: 235 }, { name: "残照の修学旅行（残照之修学旅行）", duration: 251 } ] },
+    { name: "追憶の凪", type: "单曲", date: "2040-11-11", songs: [
+      { name: "追憶の凪（追忆之风平浪静）", duration: 248 } ] },
+    { name: "調べの春休み", type: "单曲", date: "2041-10-30", songs: [
+      { name: "調べの春休み（曲调之春假）", duration: 254 } ] },
+    { name: "体育祭の岩", type: "专辑", date: "2042-12-09", songs: [
+      { name: "体育祭の岩（体育祭之岩石）", duration: 246 }, { name: "潮騒の残響（潮鸣之残响）", duration: 209 }, { name: "静かの旋律（静谧旋律）", duration: 241 },
+      { name: "星雲の海辺（星云之海边）", duration: 323 }, { name: "潮騒の木漏れ日（潮鸣之林间光斑）", duration: 151 }, { name: "修学旅行の滝（修学旅行之瀑布）", duration: 170 },
+      { name: "波の海（波之海）", duration: 210 }, { name: "波の島（波之岛）", duration: 185 }, { name: "帰り道の凪（归途之风平浪静）", duration: 250 } ] },
+    { name: "霜の夕霧", type: "单曲", date: "2043-11-27", songs: [
+      { name: "霜の夕霧（霜之暮霭）", duration: 228 } ] },
+    { name: "約束の向日葵", type: "专辑", date: "2044-11-01", songs: [
+      { name: "約束の向日葵（约定之向日葵）", duration: 230 }, { name: "若葉の残照（新叶之残照）", duration: 256 }, { name: "星空の残照（星空之残照）", duration: 251 },
+      { name: "修学旅行の夕焼け（修学旅行之晚霞）", duration: 218 }, { name: "銀河の湖（银河之湖）", duration: 240 }, { name: "水面の朝（水面之晨）", duration: 138 },
+      { name: "残照の心音（残照之心跳）", duration: 283 }, { name: "葉の屋上（叶之天台）", duration: 216 } ] },
+    { name: "蛍の唄", type: "专辑", date: "2045-09-25", songs: [
+      { name: "蛍の唄（萤火虫之歌谣）", duration: 188 }, { name: "夜の響き（夜之回响）", duration: 243 }, { name: "放課後の体育祭（放学后之体育祭）", duration: 246 },
+      { name: "泉の夕暮れ（泉之黄昏）", duration: 187 }, { name: "屋上の凪（天台之风平浪静）", duration: 255 }, { name: "修学旅行の灯り（修学旅行之灯火）", duration: 188 },
+      { name: "言葉の星屑（言语之星屑）", duration: 232 }, { name: "残照の恋（残照之恋）", duration: 283 }, { name: "銀河の空（银河之天空）", duration: 241 },
+      { name: "街の給食（街之午餐）", duration: 252 }, { name: "透明の制服（透明制服）", duration: 244 } ] },
+    { name: "遠いの渓", type: "专辑", date: "2046-09-29", songs: [
+      { name: "遠いの渓（遥远溪）", duration: 215 }, { name: "障子の葉（障子之叶）", duration: 270 }, { name: "星屑の優しい（温柔的星屑）", duration: 433 },
+      { name: "冬休みの時（寒假之时光）", duration: 276 }, { name: "土の根（土之根）", duration: 378 }, { name: "黒板の砂（黑板之沙）", duration: 237 },
+      { name: "星の帰り道（星之归途）", duration: 248 }, { name: "卒業の黒板（毕业之黑板）", duration: 222 } ] },
+    { name: "恋の心音", type: "单曲", date: "2047-10-01", songs: [
+      { name: "恋の心音（恋之心跳）", duration: 147 } ] },
+    { name: "想いの春休み", type: "EP", date: "2048-08-10", songs: [
+      { name: "想いの春休み（思念之春假）", duration: 438 }, { name: "朝霧の星雲（晨雾之星云）", duration: 243 }, { name: "黄昏の渓（黄昏之溪）", duration: 257 } ] },
+    { name: "心音の教室", type: "专辑", date: "2049-06-30", songs: [
+      { name: "心音の教室（心跳之教室）", duration: 231 }, { name: "流れ星の桜（流星之樱花）", duration: 326 }, { name: "暁の時（拂晓之时光）", duration: 202 },
+      { name: "雪化粧の風鈴（银装素裹之风铃）", duration: 219 }, { name: "海辺の空（海边之天空）", duration: 245 }, { name: "冬休みの浜（寒假之海滨）", duration: 435 },
+      { name: "根の障子（根之障子）", duration: 220 }, { name: "黄昏の浴衣（黄昏之浴衣）", duration: 274 }, { name: "春休みの心（春假之心）", duration: 244 },
+      { name: "冬休みの陽だまり（寒假之暖阳）", duration: 218 }, { name: "海辺の蝉（海边之蝉）", duration: 214 } ] },
+    { name: "給食の夢", type: "专辑", date: "2050-07-10", songs: [
+      { name: "給食の夢（午餐之梦）", duration: 269 }, { name: "音色の蛍（音色之萤火虫）", duration: 205 }, { name: "星の教室（星之教室）", duration: 195 },
+      { name: "海の調べ（海之曲调）", duration: 232 }, { name: "暁の涙（拂晓之泪）", duration: 214 }, { name: "星雲の放課後（星云之放学后）", duration: 185 },
+      { name: "花の朝（花之晨）", duration: 253 }, { name: "霞の渓（霞之溪）", duration: 246 }, { name: "夜風の街（夜风之街）", duration: 164 },
+      { name: "透明の言葉（透明言语）", duration: 190 } ] },
     ],
   "Roselia": [
     { name: "Anfang", type: "专辑", date: "2019-04-24", songs: [
@@ -2767,30 +3269,93 @@ window.BAND_DISCOGRAPHY = {
     { name: "Brave Jewel", type: "单曲", date: "2018-12-12", songs: [ { name: "Brave Jewel", duration: 240 } ] },
     { name: "FIRE BIRD", type: "单曲", date: "2019-03-20", songs: [ { name: "FIRE BIRD", duration: 255 } ] },
     { name: "LOUDER", type: "单曲", date: "2018-08-22", songs: [ { name: "LOUDER", duration: 235 } ] },
-      { name: "Salt Drift", type: "单曲", date: "2027-04-18", songs: [
-      { name: "Salt Drift（盐的漂流）", duration: 250 } ] },
-    { name: "Flood Static", type: "单曲", date: "2029-03-27", songs: [
-      { name: "Flood Static（洪流的静电）", duration: 136 } ] },
-    { name: "Stone Drift", type: "单曲", date: "2031-05-09", songs: [
-      { name: "Stone Drift（石头的漂流）", duration: 239 } ] },
-    { name: "Rain Flood", type: "单曲", date: "2033-02-23", songs: [
-      { name: "Rain Flood（雨的洪流）", duration: 293 } ] },
-    { name: "Fleet Rust", type: "单曲", date: "2035-08-08", songs: [
-      { name: "Fleet Rust（舰队的锈迹）", duration: 153 } ] },
-    { name: "Star Ice", type: "单曲", date: "2037-08-23", songs: [
-      { name: "Star Ice（星的冰）", duration: 240 } ] },
-    { name: "Crystal Echo", type: "单曲", date: "2039-08-14", songs: [
-      { name: "Crystal Echo（水晶的回声）", duration: 205 } ] },
-    { name: "Glimmer Journey", type: "单曲", date: "2041-07-30", songs: [
-      { name: "Glimmer Journey（微光的旅程）", duration: 243 } ] },
-    { name: "Stone Whisper", type: "单曲", date: "2043-08-22", songs: [
-      { name: "Stone Whisper（石头的低语）", duration: 230 } ] },
-    { name: "Ivory Hollow", type: "单曲", date: "2045-09-27", songs: [
-      { name: "Ivory Hollow（象牙的空洞）", duration: 285 } ] },
-    { name: "Sundown Moss", type: "单曲", date: "2047-12-07", songs: [
-      { name: "Sundown Moss（日落的青苔）", duration: 237 } ] },
-    { name: "Faded Hollow", type: "单曲", date: "2049-12-08", songs: [
-      { name: "Faded Hollow（褪色的空洞）", duration: 242 } ] },
+      { name: "Steam Leaf", type: "专辑", date: "2026-05-22", songs: [
+      { name: "Steam Leaf（蒸汽的叶）", duration: 230 }, { name: "Asphalt Golden（柏油的金色）", duration: 315 }, { name: "Veil Mirrors（帷幕的镜子）", duration: 261 },
+      { name: "Vine Forest（藤蔓的森林）", duration: 244 }, { name: "Shell Silence（贝壳的沉寂）", duration: 262 }, { name: "Static Twilight（静电的暮色）", duration: 233 },
+      { name: "Frost Valley（霜的山谷）", duration: 252 }, { name: "Twilight Sky（暮色的天空）", duration: 248 }, { name: "Mist Thaw（薄雾的融雪）", duration: 236 },
+      { name: "Neon Halo（霓虹的光晕）", duration: 230 } ] },
+    { name: "Signal Lantern", type: "单曲", date: "2027-05-30", songs: [
+      { name: "Signal Lantern（信号的灯笼）", duration: 227 } ] },
+    { name: "Ember Star", type: "单曲", date: "2028-05-30", songs: [
+      { name: "Ember Star（余烬的星）", duration: 253 } ] },
+    { name: "Loam Dusk", type: "EP", date: "2029-03-31", songs: [
+      { name: "Loam Dusk（沃土的薄暮）", duration: 292 }, { name: "Diamond Bloom（钻石的绽放）", duration: 230 }, { name: "Plain Circle（平原的圆圈）", duration: 220 },
+      { name: "Crystal Path（水晶的小径）", duration: 185 } ] },
+    { name: "Rust Path", type: "专辑", date: "2030-04-25", songs: [
+      { name: "Rust Path（锈迹的小径）", duration: 226 }, { name: "Veil Sea（帷幕的海）", duration: 223 }, { name: "Crystal Veil（水晶的帷幕）", duration: 208 },
+      { name: "Nest Twilight（巢的暮色）", duration: 225 }, { name: "Kite Diamond（风筝的钻石）", duration: 243 }, { name: "Rain Amber（雨的琥珀）", duration: 264 },
+      { name: "Anchor Velvet（锚的天鹅绒）", duration: 236 } ] },
+    { name: "Ridge Silence", type: "EP", date: "2031-04-12", songs: [
+      { name: "Ridge Silence（山脊的沉寂）", duration: 217 }, { name: "Broken Wood（破碎的树林）", duration: 210 }, { name: "Gravel Cinder（砾石的炭烬）", duration: 263 },
+      { name: "Trail Velvet（足迹的天鹅绒）", duration: 259 }, { name: "Ocean Nightfall（海洋的夜幕）", duration: 263 }, { name: "Slope Steam（斜坡的蒸汽）", duration: 258 } ] },
+    { name: "Rust Garden", type: "专辑", date: "2032-03-28", songs: [
+      { name: "Rust Garden（锈迹的花园）", duration: 218 }, { name: "Wave Ivory（波浪的象牙）", duration: 410 }, { name: "Glow Spark（辉光的火花）", duration: 256 },
+      { name: "Storm Overcast（风暴的阴云）", duration: 243 }, { name: "Star Mirrors（星的镜子）", duration: 243 }, { name: "Signal Velvet（信号的天鹅绒）", duration: 190 },
+      { name: "Silver Leaf（银色的叶）", duration: 330 }, { name: "Thaw Daybreak（融雪的黎明）", duration: 242 }, { name: "Fleet Pulse（舰队的脉冲）", duration: 157 },
+      { name: "Echo Fable（回声的寓言）", duration: 249 }, { name: "Sundown River（日落的河流）", duration: 263 } ] },
+    { name: "Overcast Heart", type: "专辑", date: "2033-03-19", songs: [
+      { name: "Overcast Heart（阴云的心）", duration: 373 }, { name: "Concrete Quartz（水泥的石英）", duration: 188 }, { name: "Undertow Forest（暗流的森林）", duration: 250 },
+      { name: "Coral Cliff（珊瑚的断崖）", duration: 269 }, { name: "Snow Hollow（雪的空洞）", duration: 231 }, { name: "Slope Nest（斜坡的巢）", duration: 228 },
+      { name: "Iron Daylight（铁的日光）", duration: 219 } ] },
+    { name: "Shore Summer", type: "专辑", date: "2034-02-01", songs: [
+      { name: "Shore Summer（岸边的夏天）", duration: 241 }, { name: "Flame Glow（火焰的辉光）", duration: 144 }, { name: "Ridge Thunder（山脊的雷）", duration: 252 },
+      { name: "Signal Salt（信号的盐）", duration: 251 }, { name: "Mirrors Moss（镜子的青苔）", duration: 209 }, { name: "Cinder Thaw（炭烬的融雪）", duration: 228 },
+      { name: "Highway Valley（公路的山谷）", duration: 264 }, { name: "Star Overcast（星的阴云）", duration: 282 } ] },
+    { name: "Shell Thaw", type: "EP", date: "2035-03-29", songs: [
+      { name: "Shell Thaw（贝壳的融雪）", duration: 215 }, { name: "Smoke Path（烟雾的小径）", duration: 262 }, { name: "Sundown Glow（日落的辉光）", duration: 225 },
+      { name: "Frost Star（霜的星）", duration: 191 }, { name: "Marrow Satellite（骨髓的卫星）", duration: 231 } ] },
+    { name: "Tower Cloud", type: "专辑", date: "2036-01-20", songs: [
+      { name: "Tower Cloud（塔的云）", duration: 208 }, { name: "Pulse Circle（脉冲的圆圈）", duration: 219 }, { name: "Concrete Whisper（水泥的低语）", duration: 217 },
+      { name: "Lantern Ember（灯笼的余烬）", duration: 221 }, { name: "Faded Path（褪色的小径）", duration: 224 }, { name: "Moss Stone（青苔的石头）", duration: 264 },
+      { name: "Garden Kite（花园的风筝）", duration: 217 }, { name: "Silence Static（沉寂的静电）", duration: 253 }, { name: "Undertow Beacon（暗流的灯塔）", duration: 262 },
+      { name: "Tree Flame（树的火焰）", duration: 234 } ] },
+    { name: "Frost Midnight", type: "专辑", date: "2037-02-01", songs: [
+      { name: "Frost Midnight（霜的午夜）", duration: 252 }, { name: "Void Crescent（虚空的新月）", duration: 208 }, { name: "Trail Fleet（足迹的舰队）", duration: 249 },
+      { name: "Lake Lantern（湖的灯笼）", duration: 256 }, { name: "Blanket Field（绒毯的原野）", duration: 147 }, { name: "Trail Anchor（足迹的锚）", duration: 240 },
+      { name: "Lake Paperplane（湖的纸飞机）", duration: 233 }, { name: "Song Salt（歌的盐）", duration: 218 } ] },
+    { name: "Orbit Haze", type: "EP", date: "2038-01-19", songs: [
+      { name: "Orbit Haze（轨道的轻雾）", duration: 286 }, { name: "Meadow Beacon（草地的灯塔）", duration: 249 }, { name: "Soil Carousel（土壤的旋转木马）", duration: 228 } ] },
+    { name: "Glimmer Glass", type: "专辑", date: "2038-12-28", songs: [
+      { name: "Glimmer Glass（微光的玻璃）", duration: 218 }, { name: "Roof Spark（屋顶的火花）", duration: 275 }, { name: "Halo Forest（光晕的森林）", duration: 177 },
+      { name: "Static Anchor（静电的锚）", duration: 220 }, { name: "Vapor Shadow（雾霭的影子）", duration: 247 }, { name: "Fleet Glass（舰队的玻璃）", duration: 227 },
+      { name: "Faded Undertow（褪色的暗流）", duration: 277 }, { name: "Trail Veil（足迹的帷幕）", duration: 230 } ] },
+    { name: "Sea Veil", type: "单曲", date: "2039-11-24", songs: [
+      { name: "Sea Veil（海的帷幕）", duration: 221 } ] },
+    { name: "Circle", type: "EP", date: "2040-10-27", songs: [
+      { name: "Circle（圆圈）", duration: 227 }, { name: "Drift Frost（漂流的霜）", duration: 230 }, { name: "Song Star（歌的星）", duration: 445 },
+      { name: "Void Forest（虚空的森林）", duration: 253 } ] },
+    { name: "Soil Nest", type: "专辑", date: "2041-10-07", songs: [
+      { name: "Soil Nest（土壤的巢）", duration: 138 }, { name: "Fog Signal（雾的信号）", duration: 264 }, { name: "Flame Anchor（火焰的锚）", duration: 454 },
+      { name: "Kite Compass（风筝的罗盘）", duration: 186 }, { name: "Anchor Broken（锚的破碎）", duration: 237 }, { name: "Vine Orbit（藤蔓的轨道）", duration: 235 },
+      { name: "Flame Harbor（火焰的港湾）", duration: 237 }, { name: "Storm Circle（风暴的圆圈）", duration: 149 } ] },
+    { name: "Harbor Pebble", type: "专辑", date: "2042-10-09", songs: [
+      { name: "Harbor Pebble（港湾的卵石）", duration: 223 }, { name: "Flood Ember（洪流的余烬）", duration: 233 }, { name: "Highway Glow（公路的辉光）", duration: 218 },
+      { name: "Steam Ocean（蒸汽的海洋）", duration: 291 }, { name: "Satellite Bloom（卫星的绽放）", duration: 178 }, { name: "Tide Garden（潮汐的花园）", duration: 195 },
+      { name: "Whisper Diamond（低语的钻石）", duration: 247 }, { name: "Snow Lake（雪的湖）", duration: 219 }, { name: "Smoke Storm（烟雾的风暴）", duration: 281 },
+      { name: "Shell Fog（贝壳的雾）", duration: 233 } ] },
+    { name: "Grain Drift", type: "EP", date: "2043-10-11", songs: [
+      { name: "Grain Drift（颗粒的漂流）", duration: 255 }, { name: "Dawn Moss（黎明的青苔）", duration: 285 }, { name: "Ridge Blanket（山脊的绒毯）", duration: 251 },
+      { name: "Blanket Dusk（绒毯的薄暮）", duration: 258 } ] },
+    { name: "Snow Vapor", type: "专辑", date: "2044-08-28", songs: [
+      { name: "Snow Vapor（雪的雾霭）", duration: 349 }, { name: "Haze Smoke（轻雾的烟雾）", duration: 252 }, { name: "Flame Moss（火焰的青苔）", duration: 256 },
+      { name: "Crescent Sun（新月的太阳）", duration: 241 }, { name: "Wood Asphalt（树林的柏油）", duration: 271 }, { name: "Midnight Veil（午夜的帷幕）", duration: 236 },
+      { name: "Shallow Quartz（浅滩的石英）", duration: 251 }, { name: "Diamond Midnight（钻石的午夜）", duration: 255 }, { name: "Dust Crescent（尘埃的新月）", duration: 247 } ] },
+    { name: "Hill Desert", type: "EP", date: "2045-08-25", songs: [
+      { name: "Hill Desert（山丘的荒原）", duration: 286 }, { name: "Storm Compass（风暴的罗盘）", duration: 188 }, { name: "Moon Coral（月亮的珊瑚）", duration: 197 },
+      { name: "Coral Amber（珊瑚的琥珀）", duration: 136 }, { name: "Star Dawn（星的黎明）", duration: 285 }, { name: "Road Lake（道路的湖）", duration: 251 } ] },
+    { name: "Trail Wave", type: "单曲", date: "2046-08-08", songs: [
+      { name: "Trail Wave（足迹的波浪）", duration: 225 } ] },
+    { name: "Trail Halo", type: "专辑", date: "2047-07-17", songs: [
+      { name: "Trail Halo（足迹的光晕）", duration: 224 }, { name: "Shore Leaf（岸边的叶）", duration: 208 }, { name: "Ashes Tower（灰烬的塔）", duration: 214 },
+      { name: "Blanket Lake（绒毯的湖）", duration: 259 }, { name: "Glow Plain（辉光的平原）", duration: 272 }, { name: "Breeze Neon（微风的霓虹）", duration: 257 },
+      { name: "Compass Rain（罗盘的雨）", duration: 226 }, { name: "Dust Broken（尘埃的破碎）", duration: 433 }, { name: "Echo Silence（回声的沉寂）", duration: 253 } ] },
+    { name: "Circle Steam", type: "单曲", date: "2048-09-16", songs: [
+      { name: "Circle Steam（圆圈的蒸汽）", duration: 231 } ] },
+    { name: "Blossom Ashes", type: "单曲", date: "2049-08-22", songs: [
+      { name: "Blossom Ashes（花开的灰烬）", duration: 233 } ] },
+    { name: "Crystal Smoke", type: "EP", date: "2050-08-10", songs: [
+      { name: "Crystal Smoke（水晶的烟雾）", duration: 182 }, { name: "Leaf Circle（叶的圆圈）", duration: 277 }, { name: "Silk Faded（丝绸的褪色）", duration: 267 },
+      { name: "Crystal Signal（水晶的信号）", duration: 220 }, { name: "Song Glow（歌的辉光）", duration: 229 } ] },
     ],
   "Afterglow": [
     { name: "ONE OF US", type: "专辑", date: "2019-09-18", songs: [
@@ -2805,34 +3370,91 @@ window.BAND_DISCOGRAPHY = {
     { name: "COMIC PANIC!!!", type: "单曲", date: "2018-06-20", songs: [ { name: "COMIC PANIC!!!", duration: 210 } ] },
     { name: "Sasanqua", type: "单曲", date: "2018-10-10", songs: [ { name: "Sasanqua", duration: 235 } ] },
     { name: "Jamboree!", type: "单曲", date: "2019-02-13", songs: [ { name: "Jamboree!", duration: 218 } ] },
-      { name: "Glow Flame", type: "单曲", date: "2026-10-20", songs: [
-      { name: "Glow Flame（辉光的火焰）", duration: 261 } ] },
-    { name: "Asphalt Iron", type: "单曲", date: "2029-02-21", songs: [
-      { name: "Asphalt Iron（柏油的铁）", duration: 215 } ] },
-    { name: "Song Ashes", type: "单曲", date: "2031-02-07", songs: [
-      { name: "Song Ashes（歌的灰烬）", duration: 123 } ] },
-    { name: "Pebble Highway", type: "专辑", date: "2033-05-21", songs: [
-      { name: "Pebble Highway（卵石的公路）", duration: 368 }, { name: "Veil Moon（帷幕的月亮）", duration: 234 }, { name: "Ocean Cliff（海洋的断崖）", duration: 225 },
-      { name: "Faded Halo（褪色的光晕）", duration: 208 }, { name: "Garden Leaf（花园的叶）", duration: 219 }, { name: "Circle（圆圈）", duration: 174 },
-      { name: "Tide Bloom（潮汐的绽放）", duration: 227 } ] },
-    { name: "Thaw Paperplane", type: "单曲", date: "2035-08-18", songs: [
-      { name: "Thaw Paperplane（融雪的纸飞机）", duration: 189 } ] },
-    { name: "Ember Void", type: "单曲", date: "2037-08-07", songs: [
-      { name: "Ember Void（余烬的虚空）", duration: 223 } ] },
-    { name: "Storm Shadow", type: "单曲", date: "2039-09-08", songs: [
-      { name: "Storm Shadow（风暴的影子）", duration: 161 } ] },
-    { name: "Ember Glass", type: "单曲", date: "2041-08-21", songs: [
-      { name: "Ember Glass（余烬的玻璃）", duration: 200 } ] },
-    { name: "Highway Stream", type: "单曲", date: "2043-08-09", songs: [
-      { name: "Highway Stream（公路的溪流）", duration: 128 } ] },
-    { name: "Signal Path", type: "单曲", date: "2045-07-29", songs: [
-      { name: "Signal Path（信号的小径）", duration: 209 } ] },
-    { name: "Ballet Orbit", type: "专辑", date: "2047-08-29", songs: [
-      { name: "Ballet Orbit（芭蕾的轨道）", duration: 242 }, { name: "Blossom Glimmer（花开的微光）", duration: 263 }, { name: "Pulse Satellite（脉冲的卫星）", duration: 235 },
-      { name: "Concrete Dusk（水泥的薄暮）", duration: 203 }, { name: "Song Overcast（歌的阴云）", duration: 256 }, { name: "Golden Sky（金色的天空）", duration: 239 },
-      { name: "Highway Sky（公路的天空）", duration: 209 }, { name: "Petal Stream（花瓣的溪流）", duration: 190 }, { name: "Slope Pond（斜坡的池塘）", duration: 219 } ] },
-    { name: "Slope Flame", type: "单曲", date: "2050-02-27", songs: [
-      { name: "Slope Flame（斜坡的火焰）", duration: 227 } ] },
+      { name: "Wood Frost", type: "单曲", date: "2026-07-23", songs: [
+      { name: "Wood Frost（树林的霜）", duration: 178 } ] },
+    { name: "Haze Pebble", type: "EP", date: "2027-06-19", songs: [
+      { name: "Haze Pebble（轻雾的卵石）", duration: 136 }, { name: "Quiet Haze（寂静的轻雾）", duration: 202 }, { name: "Shell Dawn（贝壳的黎明）", duration: 229 },
+      { name: "Wood Coral（树林的珊瑚）", duration: 224 }, { name: "Hollow Undertow（空洞的暗流）", duration: 226 }, { name: "Ocean Iron（海洋的铁）", duration: 224 } ] },
+    { name: "Valley Window", type: "EP", date: "2028-06-25", songs: [
+      { name: "Valley Window（山谷的窗）", duration: 217 }, { name: "Road Ocean（道路的海洋）", duration: 224 }, { name: "Vapor Broken（雾霭的破碎）", duration: 234 },
+      { name: "Glass Loam（玻璃的沃土）", duration: 221 } ] },
+    { name: "Summer Dawn", type: "专辑", date: "2029-06-22", songs: [
+      { name: "Summer Dawn（夏天的黎明）", duration: 311 }, { name: "Halo Lantern（光晕的灯笼）", duration: 233 }, { name: "Wish Smoke（愿望的烟雾）", duration: 192 },
+      { name: "Twilight Pond（暮色的池塘）", duration: 239 }, { name: "Harbor Loam（港湾的沃土）", duration: 185 }, { name: "Star Coral（星的珊瑚）", duration: 147 },
+      { name: "Sand Cloud（沙的云）", duration: 363 }, { name: "Compass Soil（罗盘的土壤）", duration: 217 }, { name: "Veil Signal（帷幕的信号）", duration: 229 },
+      { name: "Silk Fog（丝绸的雾）", duration: 358 } ] },
+    { name: "Wish Silver", type: "专辑", date: "2030-04-01", songs: [
+      { name: "Wish Silver（愿望的银色）", duration: 205 }, { name: "Diamond Wires（钻石的电线）", duration: 135 }, { name: "Tree Anchor（树的锚）", duration: 210 },
+      { name: "Wave Mirrors（波浪的镜子）", duration: 224 }, { name: "Overcast Thunder（阴云的雷）", duration: 149 }, { name: "Iron Tree（铁的树）", duration: 233 },
+      { name: "Plain Silver（平原的银色）", duration: 148 } ] },
+    { name: "Static Velvet", type: "单曲", date: "2031-03-19", songs: [
+      { name: "Static Velvet（静电的天鹅绒）", duration: 160 } ] },
+    { name: "Crescent Marrow", type: "EP", date: "2032-05-07", songs: [
+      { name: "Crescent Marrow（新月的骨髓）", duration: 414 }, { name: "Winter Amber（冬天的琥珀）", duration: 203 }, { name: "Fable Moss（寓言的青苔）", duration: 187 },
+      { name: "Sea Ember（海的余烬）", duration: 224 }, { name: "Valley Summer（山谷的夏天）", duration: 229 } ] },
+    { name: "Summer Silk", type: "专辑", date: "2033-04-11", songs: [
+      { name: "Summer Silk（夏天的丝绸）", duration: 215 }, { name: "Anchor Sundown（锚的日落）", duration: 167 }, { name: "Feather Sea（羽毛的海）", duration: 208 },
+      { name: "Flood Veil（洪流的帷幕）", duration: 218 }, { name: "Plain Frost（平原的霜）", duration: 154 }, { name: "Valley Pond（山谷的池塘）", duration: 195 },
+      { name: "Bloom Flood（绽放的洪流）", duration: 180 }, { name: "Cliff Steam（断崖的蒸汽）", duration: 343 }, { name: "Signal Asphalt（信号的柏油）", duration: 220 } ] },
+    { name: "Gravel Ridge", type: "专辑", date: "2034-01-21", songs: [
+      { name: "Gravel Ridge（砾石的山脊）", duration: 217 }, { name: "Storm Tree（风暴的树）", duration: 201 }, { name: "Motion Amber（律动的琥珀）", duration: 208 },
+      { name: "Static Journey（静电的旅程）", duration: 237 }, { name: "Moss Wind（青苔的风）", duration: 238 }, { name: "Wind Anchor（风的锚）", duration: 206 },
+      { name: "Golden Flood（金色的洪流）", duration: 238 }, { name: "Breeze Smoke（微风的烟雾）", duration: 245 }, { name: "Winter Meridian（冬天的子午线）", duration: 268 },
+      { name: "Fable Stone（寓言的石头）", duration: 219 } ] },
+    { name: "Marrow Garden", type: "专辑", date: "2035-03-22", songs: [
+      { name: "Marrow Garden（骨髓的花园）", duration: 239 }, { name: "Paperplane Wood（纸飞机的树林）", duration: 349 }, { name: "Rust Compass（锈迹的罗盘）", duration: 182 },
+      { name: "Harbor Frost（港湾的霜）", duration: 147 }, { name: "Hill Leaf（山丘的叶）", duration: 202 }, { name: "Forest Loam（森林的沃土）", duration: 392 },
+      { name: "Ice Moss（冰的青苔）", duration: 143 }, { name: "Heart Lake（心的湖）", duration: 237 }, { name: "Mist Vapor（薄雾的雾霭）", duration: 222 },
+      { name: "Paperplane Quiet（纸飞机的寂静）", duration: 240 } ] },
+    { name: "Lantern Loam", type: "EP", date: "2036-01-19", songs: [
+      { name: "Lantern Loam（灯笼的沃土）", duration: 225 }, { name: "Forest Lake（森林的湖）", duration: 355 }, { name: "Soil Crescent（土壤的新月）", duration: 234 },
+      { name: "Coral Soil（珊瑚的土壤）", duration: 411 } ] },
+    { name: "Cloud Flood", type: "专辑", date: "2037-02-06", songs: [
+      { name: "Cloud Flood（云的洪流）", duration: 140 }, { name: "Quiet Silver（寂静的银色）", duration: 232 }, { name: "Ridge Sea（山脊的海）", duration: 232 },
+      { name: "Ember Petal（余烬的花瓣）", duration: 204 }, { name: "Ballet Spark（芭蕾的火花）", duration: 234 }, { name: "Veil Blossom（帷幕的花开）", duration: 232 },
+      { name: "Faded Bloom（褪色的绽放）", duration: 216 }, { name: "Dust Moon（尘埃的月亮）", duration: 221 }, { name: "Sun Coral（太阳的珊瑚）", duration: 233 },
+      { name: "Leaf Overcast（叶的阴云）", duration: 228 }, { name: "Petal Golden（花瓣的金色）", duration: 256 } ] },
+    { name: "Wind Sea", type: "EP", date: "2038-01-30", songs: [
+      { name: "Wind Sea（风的海）", duration: 351 }, { name: "Silk Mirrors（丝绸的镜子）", duration: 183 }, { name: "Plain Cliff（平原的断崖）", duration: 224 },
+      { name: "Cinder Star（炭烬的星）", duration: 221 }, { name: "Breeze Pebble（微风的卵石）", duration: 235 }, { name: "Asphalt Gravel（柏油的砾石）", duration: 204 } ] },
+    { name: "Circle Carousel", type: "EP", date: "2038-12-18", songs: [
+      { name: "Circle Carousel（圆圈的旋转木马）", duration: 222 }, { name: "Iron Feather（铁的羽毛）", duration: 213 }, { name: "Sky Broken（天空的破碎）", duration: 190 },
+      { name: "Star Frost（星的霜）", duration: 212 }, { name: "Flood Smoke（洪流的烟雾）", duration: 238 } ] },
+    { name: "Haze Blanket", type: "EP", date: "2040-01-04", songs: [
+      { name: "Haze Blanket（轻雾的绒毯）", duration: 243 }, { name: "Static Haze（静电的轻雾）", duration: 160 }, { name: "Quiet Shallow（寂静的浅滩）", duration: 218 },
+      { name: "Daylight Concrete（日光的水泥）", duration: 389 }, { name: "Dust Shore（尘埃的岸边）", duration: 201 }, { name: "Path Midnight（小径的午夜）", duration: 202 } ] },
+    { name: "Overcast Pebble", type: "单曲", date: "2040-11-24", songs: [
+      { name: "Overcast Pebble（阴云的卵石）", duration: 208 } ] },
+    { name: "Veil Dust", type: "EP", date: "2041-10-29", songs: [
+      { name: "Veil Dust（帷幕的尘埃）", duration: 208 }, { name: "Wish Window（愿望的窗）", duration: 221 }, { name: "Spark Hollow（火花的空洞）", duration: 216 },
+      { name: "Motion Snow（律动的雪）", duration: 242 }, { name: "Crystal Breeze（水晶的微风）", duration: 209 }, { name: "Pond Static（池塘的静电）", duration: 205 } ] },
+    { name: "Ballet Winter", type: "EP", date: "2042-11-12", songs: [
+      { name: "Ballet Winter（芭蕾的冬天）", duration: 248 }, { name: "Feather Signal（羽毛的信号）", duration: 240 }, { name: "Sand Meridian（沙的子午线）", duration: 203 },
+      { name: "Whisper Dust（低语的尘埃）", duration: 263 }, { name: "Meadow Pebble（草地的卵石）", duration: 232 }, { name: "Tower Desert（塔的荒原）", duration: 213 } ] },
+    { name: "Ivory Stream", type: "单曲", date: "2043-10-14", songs: [
+      { name: "Ivory Stream（象牙的溪流）", duration: 180 } ] },
+    { name: "Silence Grain", type: "专辑", date: "2044-10-29", songs: [
+      { name: "Silence Grain（沉寂的颗粒）", duration: 236 }, { name: "Slope Storm（斜坡的风暴）", duration: 229 }, { name: "Soil Circle（土壤的圆圈）", duration: 270 },
+      { name: "Lake Cloud（湖的云）", duration: 237 }, { name: "Storm Harbor（风暴的港湾）", duration: 242 }, { name: "Velvet Dust（天鹅绒的尘埃）", duration: 234 },
+      { name: "Veil Fleet（帷幕的舰队）", duration: 232 }, { name: "Journey Vine（旅程的藤蔓）", duration: 190 }, { name: "Drift Journey（漂流的旅程）", duration: 211 } ] },
+    { name: "Asphalt Pulse", type: "专辑", date: "2045-10-08", songs: [
+      { name: "Asphalt Pulse（柏油的脉冲）", duration: 167 }, { name: "Fleet Silver（舰队的银色）", duration: 244 }, { name: "Meadow Wish（草地的愿望）", duration: 240 },
+      { name: "Rain Soil（雨的土壤）", duration: 202 }, { name: "Highway Dawn（公路的黎明）", duration: 237 }, { name: "Nest Storm（巢的风暴）", duration: 217 },
+      { name: "Signal Wish（信号的愿望）", duration: 146 }, { name: "Harbor Cinder（港湾的炭烬）", duration: 139 }, { name: "Breeze Snow（微风的雪）", duration: 205 },
+      { name: "Motel Plain（汽车旅馆的平原）", duration: 368 } ] },
+    { name: "Coral Pond", type: "EP", date: "2046-09-01", songs: [
+      { name: "Coral Pond（珊瑚的池塘）", duration: 232 }, { name: "Faded Ember（褪色的余烬）", duration: 229 }, { name: "Stream Overcast（溪流的阴云）", duration: 232 },
+      { name: "Salt Meridian（盐的子午线）", duration: 234 }, { name: "Smoke Drift（烟雾的漂流）", duration: 270 } ] },
+    { name: "Vine Thaw", type: "单曲", date: "2047-08-10", songs: [
+      { name: "Vine Thaw（藤蔓的融雪）", duration: 238 } ] },
+    { name: "Plain Nest", type: "EP", date: "2048-07-15", songs: [
+      { name: "Plain Nest（平原的巢）", duration: 203 }, { name: "Compass Song（罗盘的歌）", duration: 243 }, { name: "Fleet Ocean（舰队的海洋）", duration: 258 },
+      { name: "Wood Star（树林的星）", duration: 202 }, { name: "Orbit Fable（轨道的寓言）", duration: 211 } ] },
+    { name: "Smoke Marrow", type: "单曲", date: "2049-08-26", songs: [
+      { name: "Smoke Marrow（烟雾的骨髓）", duration: 216 } ] },
+    { name: "Coral Vapor", type: "EP", date: "2050-06-06", songs: [
+      { name: "Coral Vapor（珊瑚的雾霭）", duration: 215 }, { name: "Sun Tower（太阳的塔）", duration: 256 }, { name: "Faded Tree（褪色的树）", duration: 144 },
+      { name: "Flame Cloud（火焰的云）", duration: 210 }, { name: "Undertow Flood（暗流的洪流）", duration: 179 } ] },
     ],
   "Pastel*Palettes": [
     { name: "TITLE IDOL", type: "专辑", date: "2018-09-19", songs: [
@@ -2845,35 +3467,110 @@ window.BAND_DISCOGRAPHY = {
     { name: "はなまる♡デイズ（花丸♡Days）", type: "单曲", date: "2017-11-15", songs: [ { name: "はなまる♡デイズ（花丸♡Days）", duration: 218 } ] },
     { name: "天下トーイツA to Z☆（天下统一A to Z☆）", type: "单曲", date: "2018-02-14", songs: [ { name: "天下トーイツA to Z☆（天下统一A to Z☆）", duration: 222 } ] },
     { name: "Wonderland Girl", type: "单曲", date: "2018-06-20", songs: [ { name: "Wonderland Girl", duration: 216 } ] },
-      { name: "想いの湖", type: "专辑", date: "2027-01-14", songs: [
-      { name: "想いの湖（思念之湖）", duration: 233 }, { name: "旋律の歌（旋律之歌）", duration: 211 }, { name: "放課後の真夏（放学后之盛夏）", duration: 203 },
-      { name: "時の川（时光之河）", duration: 238 }, { name: "星の朝霧（星之晨雾）", duration: 302 }, { name: "季節の灯り（季节之灯火）", duration: 227 },
-      { name: "海辺の響き（海边之回响）", duration: 220 }, { name: "川の朝焼け（河之朝霞）", duration: 225 }, { name: "夏祭り（夏日祭）", duration: 203 },
-      { name: "静か（静谧）", duration: 232 }, { name: "夜風の夜明け（夜风之黎明）", duration: 148 } ] },
-    { name: "追憶", type: "单曲", date: "2029-03-12", songs: [
-      { name: "追憶（追忆）", duration: 171 } ] },
-    { name: "花の夜明け", type: "单曲", date: "2031-06-16", songs: [
-      { name: "花の夜明け（花之黎明）", duration: 216 } ] },
-    { name: "縁側の夕霧", type: "单曲", date: "2033-05-02", songs: [
-      { name: "縁側の夕霧（檐廊之暮霭）", duration: 207 } ] },
-    { name: "体育祭", type: "单曲", date: "2035-03-23", songs: [
-      { name: "体育祭（体育祭）", duration: 200 } ] },
-    { name: "月の波音", type: "单曲", date: "2037-05-07", songs: [
-      { name: "月の波音（月之潮声）", duration: 205 } ] },
-    { name: "朧月の屋上", type: "单曲", date: "2039-05-25", songs: [
-      { name: "朧月の屋上（胧月之天台）", duration: 229 } ] },
-    { name: "制服", type: "单曲", date: "2041-05-26", songs: [
-      { name: "制服（制服）", duration: 209 } ] },
-    { name: "屋上の雨", type: "专辑", date: "2043-12-10", songs: [
-      { name: "屋上の雨（天台之雨）", duration: 149 }, { name: "星空の流星（星空之流星）", duration: 224 }, { name: "夜明けの木霊（黎明之树魂）", duration: 221 },
-      { name: "星雲（星云）", duration: 210 }, { name: "窓の調べ（窗之曲调）", duration: 244 }, { name: "春風（春风）", duration: 227 },
-      { name: "夜明けの潮騒（黎明之潮鸣）", duration: 403 }, { name: "月光の調べ（月光之曲调）", duration: 245 }, { name: "葉の真夏（叶之盛夏）", duration: 204 } ] },
-    { name: "木漏れ日の川", type: "单曲", date: "2045-10-26", songs: [
-      { name: "木漏れ日の川（林间光斑之河）", duration: 390 } ] },
-    { name: "星雲の縁側", type: "单曲", date: "2047-12-09", songs: [
-      { name: "星雲の縁側（星云之檐廊）", duration: 234 } ] },
-    { name: "空の秋風", type: "单曲", date: "2050-02-25", songs: [
-      { name: "空の秋風（天空之秋风）", duration: 218 } ] },
+      { name: "桜の春休み", type: "专辑", date: "2026-05-30", songs: [
+      { name: "桜の春休み（樱花之春假）", duration: 198 }, { name: "青空の水面（青空之水面）", duration: 232 }, { name: "黄昏の風鈴（黄昏之风铃）", duration: 222 },
+      { name: "水面の夕霧（水面之暮霭）", duration: 211 }, { name: "星の詩（星之诗）", duration: 312 }, { name: "星屑の葉（星屑之叶）", duration: 261 },
+      { name: "夕暮れの青空（黄昏之青空）", duration: 223 }, { name: "岬の星（海角之星）", duration: 203 }, { name: "石の眩しい（耀眼的石）", duration: 211 },
+      { name: "障子の歌（障子之歌）", duration: 179 }, { name: "卒業の唄（毕业之歌谣）", duration: 227 } ] },
+    { name: "木霊の夕焼け", type: "EP", date: "2027-05-03", songs: [
+      { name: "木霊の夕焼け（树魂之晚霞）", duration: 232 }, { name: "想いの響き（思念之回响）", duration: 226 }, { name: "涙の部活（泪之社团）", duration: 197 },
+      { name: "泉の残照（泉之残照）", duration: 213 }, { name: "虹の波音（彩虹之潮声）", duration: 207 }, { name: "岩の星空（岩石之星空）", duration: 233 } ] },
+    { name: "調べの夜明け", type: "EP", date: "2028-05-31", songs: [
+      { name: "調べの夜明け（曲调之黎明）", duration: 234 }, { name: "潮騒の夜風（潮鸣之夜风）", duration: 239 }, { name: "静かの枝（静谧枝）", duration: 179 },
+      { name: "朝霧の影（晨雾之影）", duration: 222 }, { name: "追憶の制服（追忆之制服）", duration: 186 }, { name: "恋の遠い（遥远的恋）", duration: 250 } ] },
+    { name: "屋上の夏休み", type: "专辑", date: "2029-05-23", songs: [
+      { name: "屋上の夏休み（天台之暑假）", duration: 154 }, { name: "残照の夕暮れ（残照之黄昏）", duration: 220 }, { name: "雪の霧（雪之雾）", duration: 193 },
+      { name: "流れ星の砂（流星之沙）", duration: 204 }, { name: "黄昏の岩（黄昏之岩石）", duration: 226 }, { name: "虹の文化祭（彩虹之文化祭）", duration: 150 },
+      { name: "春休みの唄（春假之歌谣）", duration: 232 }, { name: "声の風（声之风）", duration: 222 }, { name: "体育祭の波音（体育祭之潮声）", duration: 213 },
+      { name: "若葉の湖（新叶之湖）", duration: 258 }, { name: "文化祭の冬晴れ（文化祭之冬日晴空）", duration: 225 } ] },
+    { name: "流れ星の影", type: "专辑", date: "2030-04-08", songs: [
+      { name: "流れ星の影（流星之影）", duration: 227 }, { name: "星屑の岸（星屑之岸）", duration: 228 }, { name: "想いの放課後（思念之放学后）", duration: 253 },
+      { name: "夢の浜（梦之海滨）", duration: 122 }, { name: "残響の月（残响之月）", duration: 209 }, { name: "響きの黄昏（回响之黄昏）", duration: 136 },
+      { name: "月光の制服（月光之制服）", duration: 183 }, { name: "放課後の土（放学后之土）", duration: 201 }, { name: "雪の石（雪之石）", duration: 226 },
+      { name: "冬晴れの自転車（冬日晴空之单车）", duration: 204 } ] },
+    { name: "湖の流れ星", type: "单曲", date: "2031-04-19", songs: [
+      { name: "湖の流れ星（湖之流星）", duration: 228 } ] },
+    { name: "水面の月光", type: "专辑", date: "2032-02-23", songs: [
+      { name: "水面の月光（水面之月光）", duration: 210 }, { name: "影の潮騒（影之潮鸣）", duration: 198 }, { name: "記憶の霞（记忆之霞）", duration: 227 },
+      { name: "島の障子（岛之障子）", duration: 232 }, { name: "滝の時（瀑布之时光）", duration: 229 }, { name: "微笑の月光（微笑之月光）", duration: 239 },
+      { name: "岸の夜（岸之夜）", duration: 130 }, { name: "静かの滝（静谧瀑布）", duration: 236 }, { name: "枝の畳（枝之榻榻米）", duration: 178 },
+      { name: "流れ星の灯り（流星之灯火）", duration: 238 } ] },
+    { name: "春休みの星屑", type: "单曲", date: "2033-04-30", songs: [
+      { name: "春休みの星屑（春假之星屑）", duration: 164 } ] },
+    { name: "葉の三日月", type: "专辑", date: "2034-04-09", songs: [
+      { name: "葉の三日月（叶之新月）", duration: 229 }, { name: "涙の残響（泪之残响）", duration: 380 }, { name: "蕾の蝉（花苞之蝉）", duration: 226 },
+      { name: "若葉の夏祭り（新叶之夏日祭）", duration: 196 }, { name: "文化祭の制服（文化祭之制服）", duration: 140 }, { name: "帰り道の朝霧（归途之晨雾）", duration: 239 },
+      { name: "流星の空（流星之天空）", duration: 225 }, { name: "満月の風鈴（满月之风铃）", duration: 200 }, { name: "凪の屋上（风平浪静之天台）", duration: 134 },
+      { name: "朧月の部活（胧月之社团）", duration: 214 } ] },
+    { name: "教室の雲", type: "专辑", date: "2035-02-21", songs: [
+      { name: "教室の雲（教室之云）", duration: 213 }, { name: "銀河の優しい（温柔的银河）", duration: 198 }, { name: "白いの波音（纯白的潮声）", duration: 218 },
+      { name: "流れ星の優しい（温柔的流星）", duration: 364 }, { name: "夏祭りの泉（夏日祭之泉）", duration: 237 }, { name: "凪の木霊（风平浪静之树魂）", duration: 215 },
+      { name: "追憶の残響（追忆之残响）", duration: 404 }, { name: "心の調べ（心之曲调）", duration: 229 }, { name: "雪の歌（雪之歌）", duration: 206 },
+      { name: "想いの小さな（微小的的思念）", duration: 206 } ] },
+    { name: "教室の霧", type: "专辑", date: "2036-01-15", songs: [
+      { name: "教室の霧（教室之雾）", duration: 202 }, { name: "滝の陽だまり（瀑布之暖阳）", duration: 234 }, { name: "満月の虹（满月之彩虹）", duration: 203 },
+      { name: "暁の虹（拂晓之彩虹）", duration: 151 }, { name: "朝霧の潮騒（晨雾之潮鸣）", duration: 320 }, { name: "黄昏の海辺（黄昏之海边）", duration: 172 },
+      { name: "石の海辺（石之海边）", duration: 220 }, { name: "青いの光景（湛蓝光景）", duration: 215 }, { name: "旋律の土（旋律之土）", duration: 156 },
+      { name: "歌の文化祭（歌之文化祭）", duration: 237 } ] },
+    { name: "波の優しい", type: "专辑", date: "2037-01-07", songs: [
+      { name: "波の優しい（温柔的波）", duration: 220 }, { name: "季節の恋（季节之恋）", duration: 265 }, { name: "優しいの暁（温柔拂晓）", duration: 229 },
+      { name: "朝霧の夏休み（晨雾之暑假）", duration: 169 }, { name: "静かの冬休み（静谧寒假）", duration: 235 }, { name: "海の追憶（海之追忆）", duration: 227 },
+      { name: "陽だまりの島（暖阳之岛）", duration: 235 }, { name: "星屑の青空（星屑之青空）", duration: 224 }, { name: "時の眩しい（耀眼的时光）", duration: 406 },
+      { name: "花の波（花之波）", duration: 217 }, { name: "花火の陽だまり（花火之暖阳）", duration: 230 } ] },
+    { name: "雨の季節", type: "单曲", date: "2038-01-23", songs: [
+      { name: "雨の季節（雨之季节）", duration: 208 } ] },
+    { name: "遠いの雲", type: "专辑", date: "2039-01-16", songs: [
+      { name: "遠いの雲（遥远云）", duration: 170 }, { name: "秋風の川（秋风之河）", duration: 205 }, { name: "湖の枝（湖之枝）", duration: 234 },
+      { name: "氷の心（冰之心）", duration: 213 }, { name: "涙の文化祭（泪之文化祭）", duration: 237 }, { name: "夢の春休み（梦之春假）", duration: 221 },
+      { name: "紅葉の自転車（红叶之单车）", duration: 252 }, { name: "影の畳（影之榻榻米）", duration: 253 }, { name: "縁側の黒板（檐廊之黑板）", duration: 214 } ] },
+    { name: "文化祭の湖", type: "单曲", date: "2039-12-09", songs: [
+      { name: "文化祭の湖（文化祭之湖）", duration: 232 } ] },
+    { name: "蛍の畳", type: "专辑", date: "2040-10-14", songs: [
+      { name: "蛍の畳（萤火虫之榻榻米）", duration: 214 }, { name: "障子の蝉（障子之蝉）", duration: 239 }, { name: "星の月（星之月）", duration: 230 },
+      { name: "夜の風鈴（夜之风铃）", duration: 214 }, { name: "蝉の影（蝉之影）", duration: 227 }, { name: "恋の雨（恋之雨）", duration: 223 },
+      { name: "風の心（风之心）", duration: 199 } ] },
+    { name: "光の蛍", type: "专辑", date: "2041-11-11", songs: [
+      { name: "光の蛍（光之萤火虫）", duration: 207 }, { name: "声の調べ（声之曲调）", duration: 236 }, { name: "秋風の月光（秋风之月光）", duration: 301 },
+      { name: "夜明けの約束（黎明之约定）", duration: 199 }, { name: "風の帰り道（风之归途）", duration: 225 }, { name: "残照の波（残照之波）", duration: 325 },
+      { name: "流れ星の教室（流星之教室）", duration: 394 }, { name: "響きの涙（回响之泪）", duration: 339 }, { name: "星屑の木漏れ日（星屑之林间光斑）", duration: 227 } ] },
+    { name: "恋の雨音", type: "专辑", date: "2042-11-15", songs: [
+      { name: "恋の雨音（恋之雨声）", duration: 237 }, { name: "給食の夏休み（午餐之暑假）", duration: 236 }, { name: "想いの暁（思念之拂晓）", duration: 233 },
+      { name: "雪の唄（雪之歌谣）", duration: 209 }, { name: "冬休みの約束（寒假之约定）", duration: 218 }, { name: "実の時（果实之时光）", duration: 173 },
+      { name: "岩の若葉（岩石之新叶）", duration: 235 }, { name: "白いの島（纯白的岛）", duration: 242 }, { name: "小さなの約束（微小的约定）", duration: 158 } ] },
+    { name: "川の月光", type: "专辑", date: "2043-11-24", songs: [
+      { name: "川の月光（河之月光）", duration: 222 }, { name: "花火の声（花火之声）", duration: 363 }, { name: "秋風の島（秋风之岛）", duration: 219 },
+      { name: "光景の季節（光景之季节）", duration: 210 }, { name: "雲の言葉（云之言语）", duration: 227 }, { name: "朝焼けの体育祭（朝霞之体育祭）", duration: 237 },
+      { name: "影の街（影之街）", duration: 239 }, { name: "湖の冬晴れ（湖之冬日晴空）", duration: 235 } ] },
+    { name: "音色の渓", type: "EP", date: "2044-09-12", songs: [
+      { name: "音色の渓（音色之溪）", duration: 208 }, { name: "風鈴の音色（风铃之音色）", duration: 213 }, { name: "夜明けの浜（黎明之海滨）", duration: 211 },
+      { name: "優しいの修学旅行（温柔修学旅行）", duration: 218 }, { name: "星雲の歌（星云之歌）", duration: 215 } ] },
+    { name: "霧の静か", type: "专辑", date: "2045-10-28", songs: [
+      { name: "霧の静か（静谧的雾）", duration: 122 }, { name: "給食の夜明け（午餐之黎明）", duration: 224 }, { name: "紅葉の時（红叶之时光）", duration: 244 },
+      { name: "縁側の冬休み（檐廊之寒假）", duration: 217 }, { name: "放課後の雪化粧（放学后之银装素裹）", duration: 229 }, { name: "銀河の氷（银河之冰）", duration: 236 },
+      { name: "追憶の桜（追忆之樱花）", duration: 258 }, { name: "岬の想い（海角之思念）", duration: 238 }, { name: "朧月の調べ（胧月之曲调）", duration: 231 },
+      { name: "心音の夕霧（心跳之暮霭）", duration: 211 } ] },
+    { name: "夕焼けの歌", type: "专辑", date: "2046-09-02", songs: [
+      { name: "夕焼けの歌（晚霞之歌）", duration: 234 }, { name: "屋上の木霊（天台之树魂）", duration: 144 }, { name: "黄昏の三日月（黄昏之新月）", duration: 297 },
+      { name: "星雲の流れ星（星云之流星）", duration: 160 }, { name: "氷の光（冰之光）", duration: 223 }, { name: "自転車の星雲（单车之星云）", duration: 186 },
+      { name: "蕾の雲（花苞之云）", duration: 209 } ] },
+    { name: "屋上の空", type: "专辑", date: "2047-07-08", songs: [
+      { name: "屋上の空（天台之天空）", duration: 123 }, { name: "三日月の朧月（新月之胧月）", duration: 202 }, { name: "岸の星（岸之星）", duration: 257 },
+      { name: "朝霧の文化祭（晨雾之文化祭）", duration: 229 }, { name: "声の詩（声之诗）", duration: 226 }, { name: "心音の透明（透明的心跳）", duration: 228 },
+      { name: "波音の旋律（潮声之旋律）", duration: 199 }, { name: "雲の土（云之土）", duration: 211 }, { name: "心の花火（心之花火）", duration: 221 } ] },
+    { name: "制服の放課後", type: "专辑", date: "2048-08-05", songs: [
+      { name: "制服の放課後（制服之放学后）", duration: 214 }, { name: "銀河の時（银河之时光）", duration: 197 }, { name: "黄昏の花火（黄昏之花火）", duration: 197 },
+      { name: "雪の心音（雪之心跳）", duration: 159 }, { name: "蛍の制服（萤火虫之制服）", duration: 200 }, { name: "春休みの浴衣（春假之浴衣）", duration: 213 },
+      { name: "若葉の言葉（新叶之言语）", duration: 196 }, { name: "星屑の夏休み（星屑之暑假）", duration: 189 } ] },
+    { name: "黒板の旋律", type: "专辑", date: "2049-07-10", songs: [
+      { name: "黒板の旋律（黑板之旋律）", duration: 200 }, { name: "追憶の屋上（追忆之天台）", duration: 225 }, { name: "音色の浜（音色之海滨）", duration: 205 },
+      { name: "雪の想い（雪之思念）", duration: 175 }, { name: "春風の優しい（温柔的春风）", duration: 237 }, { name: "波の心（波之心）", duration: 208 },
+      { name: "若葉の星空（新叶之星空）", duration: 218 }, { name: "調べの黒板（曲调之黑板）", duration: 217 }, { name: "蛍の優しい（温柔的萤火虫）", duration: 181 },
+      { name: "雪化粧の花火（银装素裹之花火）", duration: 228 } ] },
+    { name: "雨音の冬晴れ", type: "专辑", date: "2050-05-30", songs: [
+      { name: "雨音の冬晴れ（雨声之冬日晴空）", duration: 289 }, { name: "夜の水面（夜之水面）", duration: 211 }, { name: "透明の三日月（透明新月）", duration: 187 },
+      { name: "夢の夜（梦之夜）", duration: 238 }, { name: "風の根（风之根）", duration: 175 }, { name: "夕霧の歌（暮霭之歌）", duration: 201 },
+      { name: "蕾の影（花苞之影）", duration: 215 }, { name: "自転車の霜（单车之霜）", duration: 210 }, { name: "満月の旋律（满月之旋律）", duration: 218 },
+      { name: "部活の光景（社团之光景）", duration: 198 }, { name: "花の実（花之果实）", duration: 199 } ] },
     ],
   "Hello, Happy World!": [
     { name: "えがおのオーケストラっ!（笑容管弦乐！）", type: "单曲", date: "2017-05-17", songs: [ { name: "えがおのオーケストラっ!（笑容管弦乐！）", duration: 225 } ] },
@@ -2882,30 +3579,105 @@ window.BAND_DISCOGRAPHY = {
     { name: "せかいのっびのびトラベル（世界的悠闲旅行）", type: "单曲", date: "2018-02-14", songs: [ { name: "せかいのっびのびトラベル（世界的悠闲旅行）", duration: 225 } ] },
     { name: "キラキラ☆Festa Day!", type: "单曲", date: "2018-06-20", songs: [ { name: "キラキラ☆Festa Day!", duration: 218 } ] },
     { name: "わちゃ・もちゃ・ぺったん行進曲（Wacha Mocha Pettan 进行曲）", type: "单曲", date: "2018-10-10", songs: [ { name: "わちゃ・もちゃ・ぺったん行進曲（Wacha Mocha Pettan 进行曲）", duration: 212 } ] },
-      { name: "朝霧の雪化粧", type: "单曲", date: "2027-03-15", songs: [
-      { name: "朝霧の雪化粧（晨雾之银装素裹）", duration: 221 } ] },
-    { name: "光の雲", type: "单曲", date: "2028-12-19", songs: [
-      { name: "光の雲（光之云）", duration: 201 } ] },
-    { name: "屋上の岬", type: "单曲", date: "2031-04-04", songs: [
-      { name: "屋上の岬（天台之海角）", duration: 213 } ] },
-    { name: "帰り道の夕焼け", type: "单曲", date: "2033-04-03", songs: [
-      { name: "帰り道の夕焼け（归途之晚霞）", duration: 236 } ] },
-    { name: "旋律", type: "单曲", date: "2035-04-07", songs: [
-      { name: "旋律（旋律）", duration: 210 } ] },
-    { name: "優しいの雲", type: "单曲", date: "2037-07-02", songs: [
-      { name: "優しいの雲（温柔云）", duration: 210 } ] },
-    { name: "夜風", type: "单曲", date: "2039-05-09", songs: [
-      { name: "夜風（夜风）", duration: 238 } ] },
-    { name: "冬晴れの氷", type: "单曲", date: "2041-10-08", songs: [
-      { name: "冬晴れの氷（冬日晴空之冰）", duration: 224 } ] },
-    { name: "風の風鈴", type: "单曲", date: "2043-08-28", songs: [
-      { name: "風の風鈴（风之风铃）", duration: 241 } ] },
-    { name: "岸の実", type: "单曲", date: "2046-01-09", songs: [
-      { name: "岸の実（岸之果实）", duration: 214 } ] },
-    { name: "灯り", type: "单曲", date: "2047-11-02", songs: [
-      { name: "灯り（灯火）", duration: 193 } ] },
-    { name: "滝の銀河", type: "单曲", date: "2050-02-05", songs: [
-      { name: "滝の銀河（瀑布之银河）", duration: 216 } ] },
+      { name: "夏休みの落ち葉", type: "专辑", date: "2026-06-20", songs: [
+      { name: "夏休みの落ち葉（暑假之落叶）", duration: 218 }, { name: "波の調べ（波之曲调）", duration: 240 }, { name: "木漏れ日の街（林间光斑之街）", duration: 269 },
+      { name: "音色の夜（音色之夜）", duration: 330 }, { name: "自転車の朝焼け（单车之朝霞）", duration: 200 }, { name: "小さなの冬晴れ（微小的冬日晴空）", duration: 210 },
+      { name: "優しいの岬（温柔海角）", duration: 206 }, { name: "時の流星（时光之流星）", duration: 255 } ] },
+    { name: "霞の遠い", type: "专辑", date: "2027-06-18", songs: [
+      { name: "霞の遠い（遥远的霞）", duration: 175 }, { name: "光景の雪（光景之雪）", duration: 411 }, { name: "光の土（光之土）", duration: 237 },
+      { name: "黒板の響き（黑板之回响）", duration: 226 }, { name: "実の自転車（果实之单车）", duration: 160 }, { name: "季節の海（季节之海）", duration: 209 },
+      { name: "夕暮れの透明（透明的黄昏）", duration: 202 }, { name: "帰り道の恋（归途之恋）", duration: 202 }, { name: "障子の朝霧（障子之晨雾）", duration: 197 },
+      { name: "星雲の夢（星云之梦）", duration: 221 } ] },
+    { name: "泉の凪", type: "专辑", date: "2028-05-20", songs: [
+      { name: "泉の凪（泉之风平浪静）", duration: 249 }, { name: "蛍の空（萤火虫之天空）", duration: 229 }, { name: "泉の夕霧（泉之暮霭）", duration: 224 },
+      { name: "秋風の紅葉（秋风之红叶）", duration: 201 }, { name: "三日月の泉（新月之泉）", duration: 130 }, { name: "青いの満月（湛蓝满月）", duration: 227 },
+      { name: "残響の落ち葉（残响之落叶）", duration: 218 }, { name: "春休みの青い（湛蓝的春假）", duration: 221 }, { name: "銀河の言葉（银河之言语）", duration: 229 } ] },
+    { name: "氷の青い", type: "专辑", date: "2029-05-23", songs: [
+      { name: "氷の青い（湛蓝的冰）", duration: 222 }, { name: "夜の土（夜之土）", duration: 210 }, { name: "空の朝霧（天空之晨雾）", duration: 206 },
+      { name: "恋の心（恋之心）", duration: 221 }, { name: "小さなの雪（微小的雪）", duration: 210 }, { name: "響きの砂（回响之沙）", duration: 227 },
+      { name: "眩しいの霜（耀眼霜）", duration: 230 }, { name: "旋律の朧月（旋律之胧月）", duration: 186 }, { name: "遠いの縁側（遥远檐廊）", duration: 221 },
+      { name: "木霊の蝉（树魂之蝉）", duration: 164 }, { name: "文化祭の唄（文化祭之歌谣）", duration: 192 } ] },
+    { name: "窓の涙", type: "单曲", date: "2030-03-24", songs: [
+      { name: "窓の涙（窗之泪）", duration: 187 } ] },
+    { name: "朝霧の詩", type: "专辑", date: "2031-03-26", songs: [
+      { name: "朝霧の詩（晨雾之诗）", duration: 222 }, { name: "波の遠い（遥远的波）", duration: 208 }, { name: "白いの朝霧（纯白的晨雾）", duration: 226 },
+      { name: "風鈴の岸（风铃之岸）", duration: 139 }, { name: "恋の土（恋之土）", duration: 199 }, { name: "透明の春休み（透明春假）", duration: 228 },
+      { name: "星空の影（星空之影）", duration: 209 }, { name: "縁側の若葉（檐廊之新叶）", duration: 213 }, { name: "雨の灯り（雨之灯火）", duration: 235 },
+      { name: "風鈴の桜（风铃之樱花）", duration: 224 } ] },
+    { name: "優しいの夜明け", type: "EP", date: "2032-04-19", songs: [
+      { name: "優しいの夜明け（温柔黎明）", duration: 209 }, { name: "土の風鈴（土之风铃）", duration: 263 }, { name: "優しいの島（温柔岛）", duration: 228 },
+      { name: "声の岩（声之岩石）", duration: 227 }, { name: "音色の青い（湛蓝的音色）", duration: 217 }, { name: "花火の花（花火之花）", duration: 234 } ] },
+    { name: "影の霞", type: "专辑", date: "2033-02-12", songs: [
+      { name: "影の霞（影之霞）", duration: 207 }, { name: "夜の給食（夜之午餐）", duration: 140 }, { name: "響きの波音（回响之潮声）", duration: 237 },
+      { name: "土の微笑（土之微笑）", duration: 232 }, { name: "窓の冬晴れ（窗之冬日晴空）", duration: 231 }, { name: "水面の海辺（水面之海边）", duration: 184 },
+      { name: "凪の泉（风平浪静之泉）", duration: 413 }, { name: "春休みの土（春假之土）", duration: 229 }, { name: "雪化粧の木霊（银装素裹之树魂）", duration: 232 },
+      { name: "想いの星空（思念之星空）", duration: 266 }, { name: "制服の海（制服之海）", duration: 125 } ] },
+    { name: "向日葵の遠い", type: "专辑", date: "2034-02-06", songs: [
+      { name: "向日葵の遠い（遥远的向日葵）", duration: 208 }, { name: "夕霧の渓（暮霭之溪）", duration: 221 }, { name: "滝の夏祭り（瀑布之夏日祭）", duration: 203 },
+      { name: "追憶の唄（追忆之歌谣）", duration: 260 }, { name: "眩しいの落ち葉（耀眼落叶）", duration: 313 }, { name: "雪化粧の歌（银装素裹之歌）", duration: 225 },
+      { name: "枝の雲（枝之云）", duration: 209 }, { name: "蝉の涙（蝉之泪）", duration: 246 }, { name: "星屑の枝（星屑之枝）", duration: 155 } ] },
+    { name: "渓の砂", type: "EP", date: "2035-02-07", songs: [
+      { name: "渓の砂（溪之沙）", duration: 222 }, { name: "月光の朝霧（月光之晨雾）", duration: 247 }, { name: "根の光（根之光）", duration: 227 },
+      { name: "言葉の記憶（言语之记忆）", duration: 220 } ] },
+    { name: "落ち葉の約束", type: "单曲", date: "2036-02-18", songs: [
+      { name: "落ち葉の約束（落叶之约定）", duration: 201 } ] },
+    { name: "夏祭りの体育祭", type: "专辑", date: "2037-02-13", songs: [
+      { name: "夏祭りの体育祭（夏日祭之体育祭）", duration: 211 }, { name: "三日月の給食（新月之午餐）", duration: 394 }, { name: "岸の黒板（岸之黑板）", duration: 226 },
+      { name: "修学旅行の秋風（修学旅行之秋风）", duration: 227 }, { name: "遠いの波音（遥远潮声）", duration: 178 }, { name: "夜の詩（夜之诗）", duration: 218 },
+      { name: "青空の落ち葉（青空之落叶）", duration: 229 } ] },
+    { name: "涙の恋", type: "单曲", date: "2037-11-30", songs: [
+      { name: "涙の恋（泪之恋）", duration: 223 } ] },
+    { name: "眩しいの春休み", type: "专辑", date: "2039-01-26", songs: [
+      { name: "眩しいの春休み（耀眼春假）", duration: 223 }, { name: "障子の滝（障子之瀑布）", duration: 179 }, { name: "風の滝（风之瀑布）", duration: 134 },
+      { name: "海辺の眩しい（耀眼的海边）", duration: 202 }, { name: "岸の渓（岸之溪）", duration: 222 }, { name: "渓の石（溪之石）", duration: 253 },
+      { name: "蕾の季節（花苞之季节）", duration: 184 }, { name: "木漏れ日の静か（静谧的林间光斑）", duration: 203 } ] },
+    { name: "石の岬", type: "专辑", date: "2039-11-29", songs: [
+      { name: "石の岬（石之海角）", duration: 166 }, { name: "霧の雪化粧（雾之银装素裹）", duration: 209 }, { name: "旋律の三日月（旋律之新月）", duration: 232 },
+      { name: "心音の霞（心跳之霞）", duration: 228 }, { name: "岩の実（岩石之果实）", duration: 218 }, { name: "月光の部活（月光之社团）", duration: 240 },
+      { name: "唄の灯り（歌谣之灯火）", duration: 221 }, { name: "実の言葉（果实之言语）", duration: 201 }, { name: "記憶の夜（记忆之夜）", duration: 131 },
+      { name: "海辺の月光（海边之月光）", duration: 203 }, { name: "言葉の街（言语之街）", duration: 223 } ] },
+    { name: "星雲の星", type: "专辑", date: "2040-12-05", songs: [
+      { name: "星雲の星（星云之星）", duration: 210 }, { name: "月光の歌（月光之歌）", duration: 122 }, { name: "約束の空（约定之天空）", duration: 206 },
+      { name: "夕霧の灯り（暮霭之灯火）", duration: 235 }, { name: "向日葵の帰り道（向日葵之归途）", duration: 149 }, { name: "雪の土（雪之土）", duration: 231 },
+      { name: "夏祭りの氷（夏日祭之冰）", duration: 205 } ] },
+    { name: "畳の白い", type: "专辑", date: "2041-10-24", songs: [
+      { name: "畳の白い（纯白的的榻榻米）", duration: 204 }, { name: "凪の蛍（风平浪静之萤火虫）", duration: 257 }, { name: "蝉の旋律（蝉之旋律）", duration: 253 },
+      { name: "若葉の黄昏（新叶之黄昏）", duration: 208 }, { name: "風鈴の小さな（微小的的风铃）", duration: 195 }, { name: "黄昏の微笑（黄昏之微笑）", duration: 230 },
+      { name: "岸の卒業（岸之毕业）", duration: 265 }, { name: "暁の木霊（拂晓之树魂）", duration: 210 } ] },
+    { name: "月光の落ち葉", type: "EP", date: "2042-10-09", songs: [
+      { name: "月光の落ち葉（月光之落叶）", duration: 219 }, { name: "残響の朧月（残响之胧月）", duration: 246 }, { name: "夕霧の遠い（遥远的暮霭）", duration: 237 },
+      { name: "木霊の花火（树魂之花火）", duration: 218 }, { name: "滝の夏休み（瀑布之暑假）", duration: 133 }, { name: "枝の岩（枝之岩石）", duration: 210 } ] },
+    { name: "修学旅行の蛍", type: "专辑", date: "2043-11-15", songs: [
+      { name: "修学旅行の蛍（修学旅行之萤火虫）", duration: 218 }, { name: "光景の夕霧（光景之暮霭）", duration: 236 }, { name: "約束の木漏れ日（约定之林间光斑）", duration: 228 },
+      { name: "教室の詩（教室之诗）", duration: 241 }, { name: "波音の心（潮声之心）", duration: 158 }, { name: "体育祭の青い（湛蓝的体育祭）", duration: 218 },
+      { name: "夏祭りの教室（夏日祭之教室）", duration: 187 } ] },
+    { name: "光景の秋風", type: "专辑", date: "2044-11-03", songs: [
+      { name: "光景の秋風（光景之秋风）", duration: 176 }, { name: "屋上の光（天台之光）", duration: 243 }, { name: "花の心音（花之心跳）", duration: 206 },
+      { name: "根の恋（根之恋）", duration: 224 }, { name: "花火の秋風（花火之秋风）", duration: 151 }, { name: "透明の星空（透明星空）", duration: 180 },
+      { name: "記憶の詩（记忆之诗）", duration: 176 }, { name: "教室の恋（教室之恋）", duration: 246 }, { name: "流星の季節（流星之季节）", duration: 183 },
+      { name: "泉の枝（泉之枝）", duration: 235 }, { name: "街の満月（街之满月）", duration: 150 } ] },
+    { name: "心の屋上", type: "专辑", date: "2045-09-22", songs: [
+      { name: "心の屋上（心之天台）", duration: 239 }, { name: "旋律の雲（旋律之云）", duration: 213 }, { name: "海辺の心音（海边之心跳）", duration: 241 },
+      { name: "心の詩（心之诗）", duration: 205 }, { name: "月光の時（月光之时光）", duration: 202 }, { name: "夜明けの氷（黎明之冰）", duration: 171 },
+      { name: "青いの岬（湛蓝海角）", duration: 168 }, { name: "心音の静か（静谧的心跳）", duration: 181 }, { name: "青空の冬休み（青空之寒假）", duration: 269 },
+      { name: "波音の街（潮声之街）", duration: 207 }, { name: "春休みの静か（静谧的春假）", duration: 168 } ] },
+    { name: "灯りの修学旅行", type: "专辑", date: "2046-07-25", songs: [
+      { name: "灯りの修学旅行（灯火之修学旅行）", duration: 137 }, { name: "春休みの畳（春假之榻榻米）", duration: 236 }, { name: "月の向日葵（月之向日葵）", duration: 301 },
+      { name: "湖の土（湖之土）", duration: 210 }, { name: "体育祭の黒板（体育祭之黑板）", duration: 421 }, { name: "給食の雪（午餐之雪）", duration: 148 },
+      { name: "泉の約束（泉之约定）", duration: 240 }, { name: "約束の調べ（约定之曲调）", duration: 229 }, { name: "畳の光（榻榻米之光）", duration: 222 },
+      { name: "卒業の制服（毕业之制服）", duration: 217 } ] },
+    { name: "心の空", type: "单曲", date: "2047-07-16", songs: [
+      { name: "心の空（心之天空）", duration: 200 } ] },
+    { name: "想いの畳", type: "EP", date: "2048-09-17", songs: [
+      { name: "想いの畳（思念之榻榻米）", duration: 240 }, { name: "実の障子（果实之障子）", duration: 224 }, { name: "夢の銀河（梦之银河）", duration: 211 },
+      { name: "星屑の給食（星屑之午餐）", duration: 299 }, { name: "紅葉の優しい（温柔的红叶）", duration: 228 }, { name: "流星の透明（透明的流星）", duration: 174 } ] },
+    { name: "残照の青空", type: "单曲", date: "2049-07-16", songs: [
+      { name: "残照の青空（残照之青空）", duration: 216 } ] },
+    { name: "朝焼けの残照", type: "专辑", date: "2050-06-04", songs: [
+      { name: "朝焼けの残照（朝霞之残照）", duration: 206 }, { name: "文化祭の光景（文化祭之光景）", duration: 148 }, { name: "実の島（果实之岛）", duration: 177 },
+      { name: "朝霧の蛍（晨雾之萤火虫）", duration: 223 }, { name: "三日月の障子（新月之障子）", duration: 243 }, { name: "渓の残照（溪之残照）", duration: 176 },
+      { name: "霧の冬晴れ（雾之冬日晴空）", duration: 225 }, { name: "想いの街（思念之街）", duration: 214 }, { name: "花の影（花之影）", duration: 154 },
+      { name: "向日葵の青空（向日葵之青空）", duration: 251 }, { name: "縁側の放課後（檐廊之放学后）", duration: 186 } ] },
     ],
   "Morfonica": [
     { name: "Daylight -デイライト-（Daylight）", type: "单曲", date: "2020-05-27", songs: [ { name: "Daylight -デイライト-（Daylight）", duration: 240 } ] },
@@ -2914,30 +3686,87 @@ window.BAND_DISCOGRAPHY = {
     { name: "はれるや（晴れるや）", type: "单曲", date: "2021-04-28", songs: [ { name: "はれるや（晴れるや）", duration: 228 } ] },
     { name: "The Circle Of...", type: "单曲", date: "2021-08-25", songs: [ { name: "The Circle Of...", duration: 242 } ] },
     { name: "Ever Sky Blue", type: "单曲", date: "2022-01-26", songs: [ { name: "Ever Sky Blue", duration: 238 } ] },
-      { name: "葉の三日月", type: "单曲", date: "2027-02-14", songs: [
-      { name: "葉の三日月（叶之新月）", duration: 147 } ] },
-    { name: "黒板の空", type: "单曲", date: "2029-03-01", songs: [
-      { name: "黒板の空（黑板之天空）", duration: 192 } ] },
-    { name: "文化祭の眩しい", type: "单曲", date: "2031-04-14", songs: [
-      { name: "文化祭の眩しい（耀眼的文化祭）", duration: 220 } ] },
-    { name: "遠いの風", type: "单曲", date: "2033-03-25", songs: [
-      { name: "遠いの風（遥远风）", duration: 427 } ] },
-    { name: "修学旅行の心音", type: "单曲", date: "2035-03-12", songs: [
-      { name: "修学旅行の心音（修学旅行之心跳）", duration: 243 } ] },
-    { name: "陽だまり", type: "单曲", date: "2037-08-09", songs: [
-      { name: "陽だまり（暖阳）", duration: 225 } ] },
-    { name: "若葉の約束", type: "单曲", date: "2039-04-22", songs: [
-      { name: "若葉の約束（新叶之约定）", duration: 213 } ] },
-    { name: "雨音の夜", type: "单曲", date: "2041-08-03", songs: [
-      { name: "雨音の夜（雨声之夜）", duration: 219 } ] },
-    { name: "文化祭の霞", type: "单曲", date: "2043-12-05", songs: [
-      { name: "文化祭の霞（文化祭之霞）", duration: 210 } ] },
-    { name: "想いの銀河", type: "单曲", date: "2045-11-25", songs: [
-      { name: "想いの銀河（思念之银河）", duration: 180 } ] },
-    { name: "暁の湖", type: "单曲", date: "2047-11-29", songs: [
-      { name: "暁の湖（拂晓之湖）", duration: 392 } ] },
-    { name: "霧の朝", type: "单曲", date: "2050-01-31", songs: [
-      { name: "霧の朝（雾之晨）", duration: 239 } ] },
+      { name: "海辺の白い", type: "EP", date: "2026-07-06", songs: [
+      { name: "海辺の白い（纯白的的海边）", duration: 157 }, { name: "紅葉の蝉（红叶之蝉）", duration: 215 }, { name: "暁の桜（拂晓之樱花）", duration: 215 },
+      { name: "白いの青い（纯白的湛蓝）", duration: 234 }, { name: "残照の波音（残照之潮声）", duration: 258 }, { name: "桜の向日葵（樱花之向日葵）", duration: 277 } ] },
+    { name: "蝉の声", type: "EP", date: "2027-06-05", songs: [
+      { name: "蝉の声（蝉之声）", duration: 236 }, { name: "帰り道の雪化粧（归途之银装素裹）", duration: 247 }, { name: "朝の秋風（晨之秋风）", duration: 178 },
+      { name: "蝉の文化祭（蝉之文化祭）", duration: 222 } ] },
+    { name: "透明の旋律", type: "专辑", date: "2028-06-06", songs: [
+      { name: "透明の旋律（透明旋律）", duration: 253 }, { name: "季節の霧（季节之雾）", duration: 181 }, { name: "恋の自転車（恋之单车）", duration: 217 },
+      { name: "春休みの星（春假之星）", duration: 424 }, { name: "歌の虹（歌之彩虹）", duration: 219 }, { name: "風の光景（风之光景）", duration: 178 },
+      { name: "響きの陽だまり（回响之暖阳）", duration: 253 } ] },
+    { name: "春風の雲", type: "专辑", date: "2029-05-15", songs: [
+      { name: "春風の雲（春风之云）", duration: 173 }, { name: "流れ星の透明（透明的流星）", duration: 258 }, { name: "灯りの木漏れ日（灯火之林间光斑）", duration: 228 },
+      { name: "渓の光景（溪之光景）", duration: 157 }, { name: "砂の文化祭（沙之文化祭）", duration: 148 }, { name: "蕾の氷（花苞之冰）", duration: 272 },
+      { name: "涙の教室（泪之教室）", duration: 247 }, { name: "浴衣の霧（浴衣之雾）", duration: 254 } ] },
+    { name: "夜明けの心", type: "专辑", date: "2030-03-22", songs: [
+      { name: "夜明けの心（黎明之心）", duration: 221 }, { name: "光景の空（光景之天空）", duration: 255 }, { name: "雲の湖（云之湖）", duration: 215 },
+      { name: "枝の水面（枝之水面）", duration: 201 }, { name: "葉の夕霧（叶之暮霭）", duration: 187 }, { name: "向日葵の約束（向日葵之约定）", duration: 324 },
+      { name: "青いの朧月（湛蓝胧月）", duration: 246 }, { name: "記憶の風鈴（记忆之风铃）", duration: 239 }, { name: "青空の実（青空之果实）", duration: 250 },
+      { name: "眩しいの冬休み（耀眼寒假）", duration: 237 }, { name: "放課後の花火（放学后之花火）", duration: 222 } ] },
+    { name: "屋上の影", type: "专辑", date: "2031-03-16", songs: [
+      { name: "屋上の影（天台之影）", duration: 237 }, { name: "心の実（心之果实）", duration: 238 }, { name: "詩の岩（诗之岩石）", duration: 196 },
+      { name: "春休みの追憶（春假之追忆）", duration: 244 }, { name: "川の恋（河之恋）", duration: 236 }, { name: "潮騒の旋律（潮鸣之旋律）", duration: 242 },
+      { name: "蝉の雨音（蝉之雨声）", duration: 254 }, { name: "夏祭りの夜明け（夏日祭之黎明）", duration: 151 }, { name: "畳の凪（榻榻米之风平浪静）", duration: 247 },
+      { name: "葉の潮騒（叶之潮鸣）", duration: 207 }, { name: "枝の葉（枝之叶）", duration: 177 } ] },
+    { name: "星雲の夕焼け", type: "EP", date: "2032-02-27", songs: [
+      { name: "星雲の夕焼け（星云之晚霞）", duration: 229 }, { name: "氷の根（冰之根）", duration: 257 }, { name: "体育祭の帰り道（体育祭之归途）", duration: 214 },
+      { name: "夏祭りの時（夏日祭之时光）", duration: 217 }, { name: "唄の夜（歌谣之夜）", duration: 254 } ] },
+    { name: "朝の冬晴れ", type: "专辑", date: "2033-02-05", songs: [
+      { name: "朝の冬晴れ（晨之冬日晴空）", duration: 217 }, { name: "朧月の給食（胧月之午餐）", duration: 247 }, { name: "銀河の灯り（银河之灯火）", duration: 222 },
+      { name: "調べの追憶（曲调之追忆）", duration: 242 }, { name: "星屑の残照（星屑之残照）", duration: 251 }, { name: "銀河の花火（银河之花火）", duration: 225 },
+      { name: "島の唄（岛之歌谣）", duration: 239 }, { name: "夏休みの向日葵（暑假之向日葵）", duration: 238 } ] },
+    { name: "実の根", type: "单曲", date: "2034-02-04", songs: [
+      { name: "実の根（果实之根）", duration: 252 } ] },
+    { name: "岸の時", type: "EP", date: "2035-01-23", songs: [
+      { name: "岸の時（岸之时光）", duration: 229 }, { name: "雲の蛍（云之萤火虫）", duration: 243 }, { name: "蛍の風鈴（萤火虫之风铃）", duration: 232 },
+      { name: "残照の調べ（残照之曲调）", duration: 160 }, { name: "歌の岬（歌之海角）", duration: 232 }, { name: "夜風の蕾（夜风之花苞）", duration: 249 } ] },
+    { name: "蝉の滝", type: "EP", date: "2036-03-09", songs: [
+      { name: "蝉の滝（蝉之瀑布）", duration: 197 }, { name: "青いの涙（湛蓝泪）", duration: 256 }, { name: "虹の畳（彩虹之榻榻米）", duration: 258 } ] },
+    { name: "夜風の霜", type: "EP", date: "2036-12-27", songs: [
+      { name: "夜風の霜（夜风之霜）", duration: 246 }, { name: "障子の土（障子之土）", duration: 250 }, { name: "眩しいの旋律（耀眼旋律）", duration: 255 } ] },
+    { name: "根の歌", type: "专辑", date: "2038-01-18", songs: [
+      { name: "根の歌（根之歌）", duration: 272 }, { name: "星屑の卒業（星屑之毕业）", duration: 281 }, { name: "調べの岸（曲调之岸）", duration: 427 },
+      { name: "蝉の心音（蝉之心跳）", duration: 227 }, { name: "障子の夜明け（障子之黎明）", duration: 258 }, { name: "光景の木霊（光景之树魂）", duration: 315 },
+      { name: "月光の満月（月光之满月）", duration: 227 }, { name: "落ち葉の満月（落叶之满月）", duration: 259 }, { name: "夢の石（梦之石）", duration: 246 },
+      { name: "想いの満月（思念之满月）", duration: 230 } ] },
+    { name: "遠いの黄昏", type: "EP", date: "2038-11-23", songs: [
+      { name: "遠いの黄昏（遥远黄昏）", duration: 146 }, { name: "枝の黒板（枝之黑板）", duration: 244 }, { name: "渓の黒板（溪之黑板）", duration: 256 },
+      { name: "残響の霞（残响之霞）", duration: 253 }, { name: "海の音色（海之音色）", duration: 230 }, { name: "給食の石（午餐之石）", duration: 225 } ] },
+    { name: "滝の岬", type: "EP", date: "2040-01-09", songs: [
+      { name: "滝の岬（瀑布之海角）", duration: 255 }, { name: "桜の旋律（樱花之旋律）", duration: 227 }, { name: "夜の星（夜之星）", duration: 223 },
+      { name: "氷の春休み（冰之春假）", duration: 433 } ] },
+    { name: "潮騒の自転車", type: "EP", date: "2040-10-20", songs: [
+      { name: "潮騒の自転車（潮鸣之单车）", duration: 278 }, { name: "教室の暁（教室之拂晓）", duration: 200 }, { name: "氷の街（冰之街）", duration: 217 } ] },
+    { name: "声の枝", type: "单曲", date: "2041-11-26", songs: [
+      { name: "声の枝（声之枝）", duration: 224 } ] },
+    { name: "砂の朝焼け", type: "EP", date: "2042-10-17", songs: [
+      { name: "砂の朝焼け（沙之朝霞）", duration: 254 }, { name: "卒業の岸（毕业之岸）", duration: 254 }, { name: "部活の風（社团之风）", duration: 240 } ] },
+    { name: "湖の秋風", type: "专辑", date: "2043-11-01", songs: [
+      { name: "湖の秋風（湖之秋风）", duration: 249 }, { name: "紅葉の調べ（红叶之曲调）", duration: 235 }, { name: "桜の恋（樱花之恋）", duration: 217 },
+      { name: "暁の夕暮れ（拂晓之黄昏）", duration: 248 }, { name: "白いの透明（纯白的透明）", duration: 266 }, { name: "教室の微笑（教室之微笑）", duration: 238 },
+      { name: "夕霧の冬晴れ（暮霭之冬日晴空）", duration: 359 }, { name: "夜風の木漏れ日（夜风之林间光斑）", duration: 220 } ] },
+    { name: "満月の流れ星", type: "EP", date: "2044-10-03", songs: [
+      { name: "満月の流れ星（满月之流星）", duration: 244 }, { name: "言葉の月（言语之月）", duration: 213 }, { name: "心の浴衣（心之浴衣）", duration: 218 },
+      { name: "響きの月（回响之月）", duration: 239 }, { name: "桜の根（樱花之根）", duration: 235 }, { name: "静かの雨（静谧雨）", duration: 248 } ] },
+    { name: "木漏れ日の秋風", type: "单曲", date: "2045-10-11", songs: [
+      { name: "木漏れ日の秋風（林间光斑之秋风）", duration: 190 } ] },
+    { name: "葉の実", type: "EP", date: "2046-07-24", songs: [
+      { name: "葉の実（叶之果实）", duration: 240 }, { name: "渓の桜（溪之樱花）", duration: 229 }, { name: "言葉の残照（言语之残照）", duration: 227 },
+      { name: "夕暮れの微笑（黄昏之微笑）", duration: 186 } ] },
+    { name: "屋上の朧月", type: "EP", date: "2047-09-05", songs: [
+      { name: "屋上の朧月（天台之胧月）", duration: 207 }, { name: "縁側の渓（檐廊之溪）", duration: 230 }, { name: "木霊の障子（树魂之障子）", duration: 399 },
+      { name: "卒業の光（毕业之光）", duration: 234 }, { name: "虹の流星（彩虹之流星）", duration: 246 }, { name: "海の氷（海之冰）", duration: 314 } ] },
+    { name: "春風の潮騒", type: "EP", date: "2048-07-05", songs: [
+      { name: "春風の潮騒（春风之潮鸣）", duration: 209 }, { name: "雨の夕霧（雨之暮霭）", duration: 151 }, { name: "自転車の冬休み（单车之寒假）", duration: 197 },
+      { name: "花火の黄昏（花火之黄昏）", duration: 233 }, { name: "実の白い（纯白的的果实）", duration: 226 }, { name: "霧の追憶（雾之追忆）", duration: 204 } ] },
+    { name: "岬の修学旅行", type: "专辑", date: "2049-08-17", songs: [
+      { name: "岬の修学旅行（海角之修学旅行）", duration: 232 }, { name: "島の秋風（岛之秋风）", duration: 257 }, { name: "体育祭の若葉（体育祭之新叶）", duration: 201 },
+      { name: "暁の雪化粧（拂晓之银装素裹）", duration: 235 }, { name: "若葉の陽だまり（新叶之暖阳）", duration: 148 }, { name: "月光の夕焼け（月光之晚霞）", duration: 225 },
+      { name: "暁の帰り道（拂晓之归途）", duration: 242 }, { name: "落ち葉の岬（落叶之海角）", duration: 232 }, { name: "秋風の根（秋风之根）", duration: 235 } ] },
+    { name: "砂の声", type: "单曲", date: "2050-06-06", songs: [
+      { name: "砂の声（沙之声）", duration: 261 } ] },
     ],
   "RAISE A SUILEN": [
     { name: "ERA", type: "专辑", date: "2020-03-18", songs: [
@@ -2951,34 +3780,92 @@ window.BAND_DISCOGRAPHY = {
     { name: "HELL! or HELL?", type: "单曲", date: "2019-09-18", songs: [ { name: "HELL! or HELL?", duration: 245 } ] },
     { name: "R.I.O.T", type: "单曲", date: "2020-01-22", songs: [ { name: "R.I.O.T", duration: 232 } ] },
     { name: "Sacred world", type: "单曲", date: "2020-10-21", songs: [ { name: "Sacred world", duration: 236 } ] },
-      { name: "Marrow Desert", type: "单曲", date: "2026-12-13", songs: [
-      { name: "Marrow Desert（骨髓的荒原）", duration: 144 } ] },
-    { name: "Stream Wish", type: "单曲", date: "2028-12-03", songs: [
-      { name: "Stream Wish（溪流的愿望）", duration: 391 } ] },
-    { name: "Path Field", type: "单曲", date: "2031-05-29", songs: [
-      { name: "Path Field（小径的原野）", duration: 160 } ] },
-    { name: "Soil Ivory", type: "单曲", date: "2033-01-15", songs: [
-      { name: "Soil Ivory（土壤的象牙）", duration: 198 } ] },
-    { name: "Frost Quiet", type: "专辑", date: "2035-02-17", songs: [
-      { name: "Frost Quiet（霜的寂静）", duration: 258 }, { name: "Salt Winter（盐的冬天）", duration: 213 }, { name: "Lantern Whisper（灯笼的低语）", duration: 279 },
-      { name: "Shadow Mirrors（影子的镜子）", duration: 232 }, { name: "Song River（歌的河流）", duration: 232 }, { name: "Tree Wires（树的电线）", duration: 181 },
-      { name: "Nightfall Flood（夜幕的洪流）", duration: 255 }, { name: "Motion Star（律动的星）", duration: 132 } ] },
-    { name: "Pine Whisper", type: "单曲", date: "2037-05-13", songs: [
-      { name: "Pine Whisper（松的低语）", duration: 274 } ] },
-    { name: "Neon Thaw", type: "单曲", date: "2039-08-10", songs: [
-      { name: "Neon Thaw（霓虹的融雪）", duration: 183 } ] },
-    { name: "Summer Thaw", type: "单曲", date: "2041-05-22", songs: [
-      { name: "Summer Thaw（夏天的融雪）", duration: 213 } ] },
-    { name: "Satellite Drift", type: "单曲", date: "2043-07-03", songs: [
-      { name: "Satellite Drift（卫星的漂流）", duration: 366 } ] },
-    { name: "Journey Summer", type: "专辑", date: "2045-10-04", songs: [
-      { name: "Journey Summer（旅程的夏天）", duration: 232 }, { name: "Valley Paperplane（山谷的纸飞机）", duration: 246 }, { name: "Shallow Anchor（浅滩的锚）", duration: 395 },
-      { name: "Ice Wires（冰的电线）", duration: 258 }, { name: "Halo Mist（光晕的薄雾）", duration: 259 }, { name: "Paperplane Overcast（纸飞机的阴云）", duration: 247 },
-      { name: "Asphalt Void（柏油的虚空）", duration: 279 }, { name: "Glow Summer（辉光的夏天）", duration: 233 } ] },
-    { name: "Veil Motel", type: "单曲", date: "2048-02-16", songs: [
-      { name: "Veil Motel（帷幕的汽车旅馆）", duration: 407 } ] },
-    { name: "Pine Ashes", type: "单曲", date: "2050-03-03", songs: [
-      { name: "Pine Ashes（松的灰烬）", duration: 242 } ] },
+      { name: "Dust Paperplane", type: "专辑", date: "2026-07-04", songs: [
+      { name: "Dust Paperplane（尘埃的纸飞机）", duration: 215 }, { name: "Velvet Twilight（天鹅绒的暮色）", duration: 271 }, { name: "Circle Quiet（圆圈的寂静）", duration: 153 },
+      { name: "Circle Asphalt（圆圈的柏油）", duration: 228 }, { name: "Flame Twilight（火焰的暮色）", duration: 182 }, { name: "Wave Shadow（波浪的影子）", duration: 248 },
+      { name: "Dust Circle（尘埃的圆圈）", duration: 233 } ] },
+    { name: "Plain Meridian", type: "专辑", date: "2027-05-09", songs: [
+      { name: "Plain Meridian（平原的子午线）", duration: 142 }, { name: "Ice Field（冰的原野）", duration: 248 }, { name: "Canvas Amber（画布的琥珀）", duration: 242 },
+      { name: "Star Iron（星的铁）", duration: 228 }, { name: "Haze Glow（轻雾的辉光）", duration: 239 }, { name: "Tree Ridge（树的山脊）", duration: 217 },
+      { name: "Golden Winter（金色的冬天）", duration: 258 }, { name: "Cinder Anchor（炭烬的锚）", duration: 249 }, { name: "Leaf Tree（叶的树）", duration: 213 },
+      { name: "Forest Overcast（森林的阴云）", duration: 239 } ] },
+    { name: "Paperplane Journey", type: "单曲", date: "2028-04-29", songs: [
+      { name: "Paperplane Journey（纸飞机的旅程）", duration: 258 } ] },
+    { name: "Ice Pulse", type: "专辑", date: "2029-06-26", songs: [
+      { name: "Ice Pulse（冰的脉冲）", duration: 283 }, { name: "Smoke Ocean（烟雾的海洋）", duration: 198 }, { name: "Lantern Gravel（灯笼的砾石）", duration: 276 },
+      { name: "Paperplane Marrow（纸飞机的骨髓）", duration: 247 }, { name: "Ember Carousel（余烬的旋转木马）", duration: 219 }, { name: "Ballet Rust（芭蕾的锈迹）", duration: 226 },
+      { name: "Storm Journey（风暴的旅程）", duration: 413 }, { name: "Wood Lantern（树林的灯笼）", duration: 245 } ] },
+    { name: "Field Tree", type: "EP", date: "2030-03-20", songs: [
+      { name: "Field Tree（原野的树）", duration: 253 }, { name: "Ocean Valley（海洋的山谷）", duration: 240 }, { name: "Velvet Drift（天鹅绒的漂流）", duration: 250 },
+      { name: "Tide Tree（潮汐的树）", duration: 230 } ] },
+    { name: "Tower Grain", type: "EP", date: "2031-04-16", songs: [
+      { name: "Tower Grain（塔的颗粒）", duration: 225 }, { name: "Ember Forest（余烬的森林）", duration: 259 }, { name: "Mist Pebble（薄雾的卵石）", duration: 258 },
+      { name: "River Cinder（河流的炭烬）", duration: 444 }, { name: "Highway River（公路的河流）", duration: 213 }, { name: "Plain Dawn（平原的黎明）", duration: 222 } ] },
+    { name: "Ember Motion", type: "专辑", date: "2032-02-18", songs: [
+      { name: "Ember Motion（余烬的律动）", duration: 234 }, { name: "Stone Drift（石头的漂流）", duration: 442 }, { name: "Storm Ashes（风暴的灰烬）", duration: 234 },
+      { name: "Overcast Cliff（阴云的断崖）", duration: 241 }, { name: "Velvet Shore（天鹅绒的岸边）", duration: 226 }, { name: "Veil Fog（帷幕的雾）", duration: 285 },
+      { name: "Iron Paperplane（铁的纸飞机）", duration: 243 }, { name: "Echo Quartz（回声的石英）", duration: 201 }, { name: "Pond Motion（池塘的律动）", duration: 241 } ] },
+    { name: "Bloom Sea", type: "EP", date: "2033-04-02", songs: [
+      { name: "Bloom Sea（绽放的海）", duration: 282 }, { name: "Golden Concrete（金色的水泥）", duration: 258 }, { name: "Sun Nest（太阳的巢）", duration: 251 },
+      { name: "Pebble Beacon（卵石的灯塔）", duration: 210 }, { name: "Hollow Grain（空洞的颗粒）", duration: 243 }, { name: "Vapor Faded（雾霭的褪色）", duration: 239 } ] },
+    { name: "Pulse Stream", type: "单曲", date: "2034-01-22", songs: [
+      { name: "Pulse Stream（脉冲的溪流）", duration: 221 } ] },
+    { name: "Highway Trail", type: "EP", date: "2035-01-26", songs: [
+      { name: "Highway Trail（公路的足迹）", duration: 200 }, { name: "Mist Quartz（薄雾的石英）", duration: 232 }, { name: "Dawn Soil（黎明的土壤）", duration: 214 },
+      { name: "Ivory Journey（象牙的旅程）", duration: 146 }, { name: "Slope Flood（斜坡的洪流）", duration: 221 } ] },
+    { name: "Golden Ashes", type: "EP", date: "2036-02-09", songs: [
+      { name: "Golden Ashes（金色的灰烬）", duration: 131 }, { name: "Glass Fable（玻璃的寓言）", duration: 244 }, { name: "Sundown Storm（日落的风暴）", duration: 229 },
+      { name: "Thaw Tree（融雪的树）", duration: 221 }, { name: "Crescent Snow（新月的雪）", duration: 252 }, { name: "Pond Grain（池塘的颗粒）", duration: 273 } ] },
+    { name: "Song Ocean", type: "专辑", date: "2037-01-12", songs: [
+      { name: "Song Ocean（歌的海洋）", duration: 242 }, { name: "Soil Flood（土壤的洪流）", duration: 272 }, { name: "Trail Slope（足迹的斜坡）", duration: 247 },
+      { name: "Fable Blossom（寓言的花开）", duration: 233 }, { name: "Silver Glass（银色的玻璃）", duration: 175 }, { name: "Daybreak Rain（黎明的雨）", duration: 213 },
+      { name: "Sky Valley（天空的山谷）", duration: 221 }, { name: "Quartz Void（石英的虚空）", duration: 196 }, { name: "Compass Coral（罗盘的珊瑚）", duration: 246 },
+      { name: "Vine Canvas（藤蔓的画布）", duration: 229 } ] },
+    { name: "Dust Amber", type: "单曲", date: "2037-12-30", songs: [
+      { name: "Dust Amber（尘埃的琥珀）", duration: 228 } ] },
+    { name: "Snow Gravel", type: "EP", date: "2039-01-10", songs: [
+      { name: "Snow Gravel（雪的砾石）", duration: 253 }, { name: "Meadow Dawn（草地的黎明）", duration: 248 }, { name: "Grain Mist（颗粒的薄雾）", duration: 215 },
+      { name: "Mirrors Static（镜子的静电）", duration: 241 }, { name: "Winter Tide（冬天的潮汐）", duration: 240 }, { name: "Pulse Journey（脉冲的旅程）", duration: 268 } ] },
+    { name: "Hollow Meadow", type: "EP", date: "2040-01-17", songs: [
+      { name: "Hollow Meadow（空洞的草地）", duration: 239 }, { name: "Wind Ice（风的冰）", duration: 252 }, { name: "Pebble Halo（卵石的光晕）", duration: 221 } ] },
+    { name: "Dusk Winter", type: "EP", date: "2040-11-10", songs: [
+      { name: "Dusk Winter（薄暮的冬天）", duration: 220 }, { name: "Golden Sea（金色的海）", duration: 226 }, { name: "Desert Ashes（荒原的灰烬）", duration: 239 } ] },
+    { name: "Ballet Song", type: "EP", date: "2041-12-09", songs: [
+      { name: "Ballet Song（芭蕾的歌）", duration: 210 }, { name: "Feather Overcast（羽毛的阴云）", duration: 373 }, { name: "Anchor Soil（锚的土壤）", duration: 150 },
+      { name: "Fleet Iron（舰队的铁）", duration: 213 }, { name: "Ballet Trail（芭蕾的足迹）", duration: 253 } ] },
+    { name: "Ballet Beacon", type: "EP", date: "2042-09-26", songs: [
+      { name: "Ballet Beacon（芭蕾的灯塔）", duration: 194 }, { name: "Dust Blanket（尘埃的绒毯）", duration: 202 }, { name: "Shadow Breeze（影子的微风）", duration: 228 },
+      { name: "Field Paperplane（原野的纸飞机）", duration: 231 } ] },
+    { name: "Spark Vine", type: "专辑", date: "2043-11-24", songs: [
+      { name: "Spark Vine（火花的藤蔓）", duration: 258 }, { name: "Slope Orbit（斜坡的轨道）", duration: 235 }, { name: "Wood Mist（树林的薄雾）", duration: 255 },
+      { name: "Blanket Moon（绒毯的月亮）", duration: 219 }, { name: "Neon Roof（霓虹的屋顶）", duration: 236 }, { name: "Whisper River（低语的河流）", duration: 215 },
+      { name: "Cliff Trail（断崖的足迹）", duration: 151 } ] },
+    { name: "Daybreak Lake", type: "EP", date: "2044-08-18", songs: [
+      { name: "Daybreak Lake（黎明的湖）", duration: 141 }, { name: "Glimmer Vine（微光的藤蔓）", duration: 255 }, { name: "Forest Sea（森林的海）", duration: 230 },
+      { name: "Midnight Blanket（午夜的绒毯）", duration: 283 } ] },
+    { name: "Lake Summer", type: "专辑", date: "2045-10-22", songs: [
+      { name: "Lake Summer（湖的夏天）", duration: 249 }, { name: "Kite Road（风筝的道路）", duration: 239 }, { name: "Amber Glimmer（琥珀的微光）", duration: 174 },
+      { name: "Breeze Dawn（微风的黎明）", duration: 250 }, { name: "Pine River（松的河流）", duration: 257 }, { name: "Harbor Whisper（港湾的低语）", duration: 259 },
+      { name: "Soil Crystal（土壤的水晶）", duration: 230 }, { name: "Flame Coral（火焰的珊瑚）", duration: 219 }, { name: "Carousel Harbor（旋转木马的港湾）", duration: 216 } ] },
+    { name: "Shell Glass", type: "专辑", date: "2046-07-30", songs: [
+      { name: "Shell Glass（贝壳的玻璃）", duration: 255 }, { name: "Flame Sand（火焰的沙）", duration: 225 }, { name: "Iron Haze（铁的轻雾）", duration: 243 },
+      { name: "Silk Spark（丝绸的火花）", duration: 249 }, { name: "Quartz Dawn（石英的黎明）", duration: 244 }, { name: "Ivory Plain（象牙的平原）", duration: 195 },
+      { name: "Neon Harbor（霓虹的港湾）", duration: 233 }, { name: "Marrow Silver（骨髓的银色）", duration: 187 }, { name: "Meadow Pond（草地的池塘）", duration: 214 },
+      { name: "Soil Vapor（土壤的雾霭）", duration: 251 } ] },
+    { name: "Cinder Ember", type: "单曲", date: "2047-07-29", songs: [
+      { name: "Cinder Ember（炭烬的余烬）", duration: 251 } ] },
+    { name: "Veil Leaf", type: "专辑", date: "2048-08-28", songs: [
+      { name: "Veil Leaf（帷幕的叶）", duration: 212 }, { name: "Vine Salt（藤蔓的盐）", duration: 192 }, { name: "Wood Overcast（树林的阴云）", duration: 225 },
+      { name: "Whisper Iron（低语的铁）", duration: 316 }, { name: "Grain Motel（颗粒的汽车旅馆）", duration: 259 }, { name: "Soil Neon（土壤的霓虹）", duration: 229 },
+      { name: "Beacon Quartz（灯塔的石英）", duration: 259 }, { name: "Shore Satellite（岸边的卫星）", duration: 228 }, { name: "Circle Anchor（圆圈的锚）", duration: 259 },
+      { name: "Compass Fleet（罗盘的舰队）", duration: 329 } ] },
+    { name: "Neon Compass", type: "专辑", date: "2049-07-19", songs: [
+      { name: "Neon Compass（霓虹的罗盘）", duration: 219 }, { name: "Sea Meridian（海的子午线）", duration: 188 }, { name: "Storm Cloud（风暴的云）", duration: 203 },
+      { name: "Shallow River（浅滩的河流）", duration: 237 }, { name: "Paperplane Bloom（纸飞机的绽放）", duration: 189 }, { name: "Crystal Tree（水晶的树）", duration: 218 },
+      { name: "Meadow Song（草地的歌）", duration: 244 }, { name: "Dusk Ivory（薄暮的象牙）", duration: 218 }, { name: "Thunder Orbit（雷的轨道）", duration: 254 },
+      { name: "Flame Frost（火焰的霜）", duration: 214 }, { name: "Nightfall Hollow（夜幕的空洞）", duration: 255 } ] },
+    { name: "Leaf Steam", type: "单曲", date: "2050-07-18", songs: [
+      { name: "Leaf Steam（叶的蒸汽）", duration: 256 } ] },
     ],
   "Ave Mujica": [
     { name: "KiLLKiSS", type: "专辑", date: "2025-01-15", songs: [
@@ -2994,30 +3881,96 @@ window.BAND_DISCOGRAPHY = {
     { name: "Angles", type: "单曲", date: "2024-01-24", songs: [ { name: "Angles", duration: 235 } ] },
     { name: "Ave Mujica", type: "单曲", date: "2024-04-24", songs: [ { name: "Ave Mujica", duration: 240 } ] },
     { name: "堕天（堕天）", type: "单曲", date: "2024-08-21", songs: [ { name: "堕天（堕天）", duration: 250 } ] },
-      { name: "夕暮れ", type: "单曲", date: "2027-04-18", songs: [
-      { name: "夕暮れ（黄昏）", duration: 259 } ] },
-    { name: "渓の部活", type: "单曲", date: "2029-03-10", songs: [
-      { name: "渓の部活（溪之社团）", duration: 238 } ] },
-    { name: "追憶の涙", type: "单曲", date: "2030-12-28", songs: [
-      { name: "追憶の涙（追忆之泪）", duration: 289 } ] },
-    { name: "追憶の恋", type: "单曲", date: "2033-03-21", songs: [
-      { name: "追憶の恋（追忆之恋）", duration: 212 } ] },
-    { name: "声の唄", type: "单曲", date: "2035-05-16", songs: [
-      { name: "声の唄（声之歌谣）", duration: 224 } ] },
-    { name: "蛍の潮騒", type: "单曲", date: "2037-06-20", songs: [
-      { name: "蛍の潮騒（萤火虫之潮鸣）", duration: 264 } ] },
-    { name: "霜の根", type: "单曲", date: "2039-05-27", songs: [
-      { name: "霜の根（霜之根）", duration: 180 } ] },
-    { name: "唄の水面", type: "单曲", date: "2041-08-13", songs: [
-      { name: "唄の水面（歌谣之水面）", duration: 263 } ] },
-    { name: "灯りの制服", type: "单曲", date: "2043-08-15", songs: [
-      { name: "灯りの制服（灯火之制服）", duration: 222 } ] },
-    { name: "月の響き", type: "单曲", date: "2045-12-27", songs: [
-      { name: "月の響き（月之回响）", duration: 243 } ] },
-    { name: "灯りの旋律", type: "单曲", date: "2047-12-31", songs: [
-      { name: "灯りの旋律（灯火之旋律）", duration: 245 } ] },
-    { name: "唄の波", type: "单曲", date: "2049-09-13", songs: [
-      { name: "唄の波（歌谣之波）", duration: 204 } ] },
+      { name: "波音の優しい", type: "EP", date: "2026-07-07", songs: [
+      { name: "波音の優しい（温柔的潮声）", duration: 189 }, { name: "優しいの微笑（温柔微笑）", duration: 261 }, { name: "泉の岩（泉之岩石）", duration: 210 } ] },
+    { name: "石の蛍", type: "EP", date: "2027-06-28", songs: [
+      { name: "石の蛍（石之萤火虫）", duration: 161 }, { name: "雲の雪（云之雪）", duration: 237 }, { name: "水面の光景（水面之光景）", duration: 229 },
+      { name: "葉の白い（纯白的的叶）", duration: 197 } ] },
+    { name: "葉の春風", type: "单曲", date: "2028-06-20", songs: [
+      { name: "葉の春風（叶之春风）", duration: 240 } ] },
+    { name: "暁の約束", type: "专辑", date: "2029-06-07", songs: [
+      { name: "暁の約束（拂晓之约定）", duration: 196 }, { name: "部活の凪（社团之风平浪静）", duration: 252 }, { name: "影の根（影之根）", duration: 248 },
+      { name: "修学旅行の教室（修学旅行之教室）", duration: 256 }, { name: "雪の冬晴れ（雪之冬日晴空）", duration: 247 }, { name: "月の優しい（温柔的月）", duration: 241 },
+      { name: "三日月の水面（新月之水面）", duration: 209 }, { name: "白いの砂（纯白的沙）", duration: 234 }, { name: "季節の白い（纯白的的季节）", duration: 263 },
+      { name: "優しいの言葉（温柔言语）", duration: 288 }, { name: "夜風の小さな（微小的的夜风）", duration: 148 } ] },
+    { name: "木漏れ日の時", type: "EP", date: "2030-06-01", songs: [
+      { name: "木漏れ日の時（林间光斑之时光）", duration: 450 }, { name: "透明の夏祭り（透明夏日祭）", duration: 250 }, { name: "夜明けの光景（黎明之光景）", duration: 168 },
+      { name: "体育祭の光景（体育祭之光景）", duration: 220 }, { name: "雪化粧の青空（银装素裹之青空）", duration: 253 } ] },
+    { name: "枝の給食", type: "EP", date: "2031-04-06", songs: [
+      { name: "枝の給食（枝之午餐）", duration: 257 }, { name: "雨の石（雨之石）", duration: 233 }, { name: "川の眩しい（耀眼的河）", duration: 262 } ] },
+    { name: "木漏れ日の優しい", type: "单曲", date: "2032-03-06", songs: [
+      { name: "木漏れ日の優しい（温柔的林间光斑）", duration: 190 } ] },
+    { name: "滝の落ち葉", type: "专辑", date: "2033-03-06", songs: [
+      { name: "滝の落ち葉（瀑布之落叶）", duration: 245 }, { name: "根の陽だまり（根之暖阳）", duration: 229 }, { name: "川の涙（河之泪）", duration: 261 },
+      { name: "心音の残響（心跳之残响）", duration: 408 }, { name: "朧月の星（胧月之星）", duration: 137 }, { name: "夏祭りの秋風（夏日祭之秋风）", duration: 205 },
+      { name: "歌の障子（歌之障子）", duration: 255 }, { name: "涙の障子（泪之障子）", duration: 226 }, { name: "蕾の滝（花苞之瀑布）", duration: 238 },
+      { name: "朝の光景（晨之光景）", duration: 247 } ] },
+    { name: "恋の真夏", type: "单曲", date: "2034-02-07", songs: [
+      { name: "恋の真夏（恋之盛夏）", duration: 241 } ] },
+    { name: "夜の縁側", type: "专辑", date: "2035-02-16", songs: [
+      { name: "夜の縁側（夜之檐廊）", duration: 238 }, { name: "蝉の氷（蝉之冰）", duration: 260 }, { name: "夏祭りの岸（夏日祭之岸）", duration: 280 },
+      { name: "涙の潮騒（泪之潮鸣）", duration: 163 }, { name: "実の畳（果实之榻榻米）", duration: 242 }, { name: "花火の月（花火之月）", duration: 424 },
+      { name: "霞の川（霞之河）", duration: 261 }, { name: "屋上の岩（天台之岩石）", duration: 250 }, { name: "夢の障子（梦之障子）", duration: 242 } ] },
+    { name: "窓の蕾", type: "专辑", date: "2036-01-04", songs: [
+      { name: "窓の蕾（窗之花苞）", duration: 152 }, { name: "虹の時（彩虹之时光）", duration: 248 }, { name: "声の涙（声之泪）", duration: 250 },
+      { name: "石の滝（石之瀑布）", duration: 242 }, { name: "微笑の浜（微笑之海滨）", duration: 220 }, { name: "星屑の約束（星屑之约定）", duration: 296 },
+      { name: "実の水面（果实之水面）", duration: 260 }, { name: "風鈴の冬晴れ（风铃之冬日晴空）", duration: 232 }, { name: "岩の月（岩石之月）", duration: 403 },
+      { name: "浴衣の夕焼け（浴衣之晚霞）", duration: 245 }, { name: "土の恋（土之恋）", duration: 261 } ] },
+    { name: "雪化粧の言葉", type: "专辑", date: "2037-01-31", songs: [
+      { name: "雪化粧の言葉（银装素裹之言语）", duration: 240 }, { name: "霧の声（雾之声）", duration: 234 }, { name: "実の朧月（果实之胧月）", duration: 197 },
+      { name: "街の星屑（街之星屑）", duration: 198 }, { name: "文化祭の詩（文化祭之诗）", duration: 221 }, { name: "屋上の葉（天台之叶）", duration: 255 },
+      { name: "青空の給食（青空之午餐）", duration: 237 }, { name: "縁側の朝焼け（檐廊之朝霞）", duration: 224 }, { name: "春風の卒業（春风之毕业）", duration: 252 } ] },
+    { name: "暁の滝", type: "专辑", date: "2038-01-31", songs: [
+      { name: "暁の滝（拂晓之瀑布）", duration: 294 }, { name: "岸の残照（岸之残照）", duration: 231 }, { name: "波の陽だまり（波之暖阳）", duration: 256 },
+      { name: "潮騒の夏祭り（潮鸣之夏日祭）", duration: 238 }, { name: "銀河の青空（银河之青空）", duration: 267 }, { name: "光の陽だまり（光之暖阳）", duration: 294 },
+      { name: "桜の眩しい（耀眼的樱花）", duration: 322 } ] },
+    { name: "花の銀河", type: "EP", date: "2038-12-08", songs: [
+      { name: "花の銀河（花之银河）", duration: 232 }, { name: "声の泉（声之泉）", duration: 280 }, { name: "木漏れ日の障子（林间光斑之障子）", duration: 249 },
+      { name: "霧の旋律（雾之旋律）", duration: 258 } ] },
+    { name: "縁側の流星", type: "EP", date: "2039-11-14", songs: [
+      { name: "縁側の流星（檐廊之流星）", duration: 257 }, { name: "卒業の風鈴（毕业之风铃）", duration: 229 }, { name: "枝の風（枝之风）", duration: 288 },
+      { name: "夕焼けの銀河（晚霞之银河）", duration: 230 }, { name: "文化祭の桜（文化祭之樱花）", duration: 266 }, { name: "灯りの微笑（灯火之微笑）", duration: 256 } ] },
+    { name: "浜の朧月", type: "专辑", date: "2040-10-24", songs: [
+      { name: "浜の朧月（海滨之胧月）", duration: 266 }, { name: "教室の夏祭り（教室之夏日祭）", duration: 239 }, { name: "銀河の渓（银河之溪）", duration: 241 },
+      { name: "言葉の波（言语之波）", duration: 226 }, { name: "木霊の向日葵（树魂之向日葵）", duration: 234 }, { name: "追憶の海辺（追忆之海边）", duration: 280 },
+      { name: "夜風の夏休み（夜风之暑假）", duration: 255 }, { name: "街の縁側（街之檐廊）", duration: 181 }, { name: "声の木霊（声之树魂）", duration: 231 } ] },
+    { name: "教室の卒業", type: "EP", date: "2041-11-23", songs: [
+      { name: "教室の卒業（教室之毕业）", duration: 224 }, { name: "朝の紅葉（晨之红叶）", duration: 215 }, { name: "冬晴れの砂（冬日晴空之沙）", duration: 234 },
+      { name: "岩の小さな（微小的的岩石）", duration: 253 }, { name: "虹の体育祭（彩虹之体育祭）", duration: 253 }, { name: "雨音の夏祭り（雨声之夏日祭）", duration: 252 } ] },
+    { name: "島の流星", type: "单曲", date: "2042-11-29", songs: [
+      { name: "島の流星（岛之流星）", duration: 230 } ] },
+    { name: "雲の涙", type: "专辑", date: "2043-09-21", songs: [
+      { name: "雲の涙（云之泪）", duration: 263 }, { name: "銀河の朝（银河之晨）", duration: 261 }, { name: "石の夕霧（石之暮霭）", duration: 242 },
+      { name: "土の実（土之果实）", duration: 245 }, { name: "湖の岸（湖之岸）", duration: 230 }, { name: "記憶の遠い（遥远的记忆）", duration: 229 },
+      { name: "文化祭の石（文化祭之石）", duration: 193 }, { name: "声の心音（声之心跳）", duration: 277 } ] },
+    { name: "風の砂", type: "专辑", date: "2044-08-22", songs: [
+      { name: "風の砂（风之沙）", duration: 220 }, { name: "雲の月（云之月）", duration: 230 }, { name: "蛍の虹（萤火虫之彩虹）", duration: 143 },
+      { name: "冬休みの向日葵（寒假之向日葵）", duration: 267 }, { name: "銀河の記憶（银河之记忆）", duration: 248 }, { name: "青いの詩（湛蓝诗）", duration: 223 },
+      { name: "冬晴れの流れ星（冬日晴空之流星）", duration: 245 }, { name: "根の秋風（根之秋风）", duration: 254 }, { name: "音色の街（音色之街）", duration: 196 } ] },
+    { name: "夕暮れの障子", type: "EP", date: "2045-09-19", songs: [
+      { name: "夕暮れの障子（黄昏之障子）", duration: 222 }, { name: "残照の流れ星（残照之流星）", duration: 248 }, { name: "言葉の給食（言语之午餐）", duration: 240 } ] },
+    { name: "部活の旋律", type: "EP", date: "2046-10-01", songs: [
+      { name: "部活の旋律（社团之旋律）", duration: 251 }, { name: "土の音色（土之音色）", duration: 231 }, { name: "砂の記憶（沙之记忆）", duration: 227 },
+      { name: "波音の恋（潮声之恋）", duration: 222 }, { name: "石の紅葉（石之红叶）", duration: 290 } ] },
+    { name: "旋律の季節", type: "专辑", date: "2047-09-14", songs: [
+      { name: "旋律の季節（旋律之季节）", duration: 282 }, { name: "若葉の月（新叶之月）", duration: 267 }, { name: "黒板の記憶（黑板之记忆）", duration: 249 },
+      { name: "落ち葉の想い（落叶之思念）", duration: 141 }, { name: "朝の季節（晨之季节）", duration: 222 }, { name: "石の陽だまり（石之暖阳）", duration: 155 },
+      { name: "眩しいの夜（耀眼夜）", duration: 284 }, { name: "波の自転車（波之单车）", duration: 150 }, { name: "蝉の放課後（蝉之放学后）", duration: 153 },
+      { name: "修学旅行の言葉（修学旅行之言语）", duration: 226 } ] },
+    { name: "水面の泉", type: "专辑", date: "2048-07-14", songs: [
+      { name: "水面の泉（水面之泉）", duration: 198 }, { name: "秋風の青い（湛蓝的秋风）", duration: 250 }, { name: "星空の青空（星空之青空）", duration: 179 },
+      { name: "花火の縁側（花火之檐廊）", duration: 231 }, { name: "夜明けの残響（黎明之残响）", duration: 265 }, { name: "黒板の約束（黑板之约定）", duration: 145 },
+      { name: "夜風の桜（夜风之樱花）", duration: 408 }, { name: "海辺の遠い（遥远的海边）", duration: 227 }, { name: "帰り道の島（归途之岛）", duration: 251 } ] },
+    { name: "若葉の声", type: "专辑", date: "2049-08-05", songs: [
+      { name: "若葉の声（新叶之声）", duration: 232 }, { name: "砂の島（沙之岛）", duration: 262 }, { name: "浴衣の泉（浴衣之泉）", duration: 221 },
+      { name: "音色の眩しい（耀眼的音色）", duration: 226 }, { name: "月光の銀河（月光之银河）", duration: 233 }, { name: "小さなの夕焼け（微小的晚霞）", duration: 228 },
+      { name: "若葉の枝（新叶之枝）", duration: 256 }, { name: "小さなの放課後（微小的放学后）", duration: 225 }, { name: "朝の夜風（晨之夜风）", duration: 173 },
+      { name: "心の湖（心之湖）", duration: 260 }, { name: "星雲の実（星云之果实）", duration: 341 } ] },
+    { name: "部活の木漏れ日", type: "专辑", date: "2050-06-08", songs: [
+      { name: "部活の木漏れ日（社团之林间光斑）", duration: 144 }, { name: "屋上の浴衣（天台之浴衣）", duration: 248 }, { name: "霞の白い（纯白的的霞）", duration: 267 },
+      { name: "教室の朝（教室之晨）", duration: 270 }, { name: "記憶の夕焼け（记忆之晚霞）", duration: 201 }, { name: "修学旅行の春休み（修学旅行之春假）", duration: 171 },
+      { name: "灯りの遠い（遥远的灯火）", duration: 431 }, { name: "三日月の土（新月之土）", duration: 264 }, { name: "朧月の蝉（胧月之蝉）", duration: 221 },
+      { name: "砂の星空（沙之星空）", duration: 289 }, { name: "実の流星（果实之流星）", duration: 258 } ] },
     ],
   "回春丹": [
     { name: "耳鬼出风", type: "专辑", date: "2021-10-22", songs: [
@@ -3040,38 +3993,42 @@ window.BAND_DISCOGRAPHY = {
     { name: "初恋", type: "单曲", date: "2021-01-01", songs: [ { name: "初恋", duration: 222 } ] },
     { name: "亮闪闪", type: "单曲", date: "2024-01-01", songs: [ { name: "亮闪闪", duration: 210 } ] },
     { name: "喝彩", type: "单曲", date: "2025-01-01", songs: [ { name: "喝彩", duration: 235 } ] },
-      { name: "久违的边界", type: "EP", date: "2026-12-08", songs: [
-      { name: "久违的边界", duration: 242 }, { name: "骤雨孤岛", duration: 221 }, { name: "暗涌环流", duration: 258 } ] },
-    { name: "星光荒野", type: "EP", date: "2029-03-01", songs: [
-      { name: "星光荒野", duration: 203 }, { name: "斑马线屋顶", duration: 257 }, { name: "沉默的走廊", duration: 247 },
-      { name: "闪电迷途", duration: 245 } ] },
-    { name: "久违的长风", type: "单曲", date: "2031-07-29", songs: [
-      { name: "久违的长风", duration: 246 } ] },
-    { name: "末班车静默", type: "EP", date: "2033-06-17", songs: [
-      { name: "末班车静默", duration: 209 }, { name: "夜航霓虹", duration: 261 }, { name: "深巷铁门", duration: 406 },
-      { name: "遥远的匝道", duration: 222 } ] },
-    { name: "星光汽笛", type: "专辑", date: "2035-06-29", songs: [
-      { name: "星光汽笛", duration: 134 }, { name: "漫长的断层", duration: 235 }, { name: "骤雨霜降", duration: 188 },
-      { name: "铁道影中人", duration: 257 }, { name: "沉默的暴雨", duration: 263 }, { name: "断层屋顶", duration: 233 },
-      { name: "岔路回声壁", duration: 225 }, { name: "沉默的铁道", duration: 258 }, { name: "深夜的空城", duration: 275 },
-      { name: "环流风口", duration: 271 } ] },
-    { name: "久违的屋顶", type: "单曲", date: "2037-06-01", songs: [
-      { name: "久违的屋顶", duration: 232 } ] },
-    { name: "残阳荒原", type: "单曲", date: "2039-09-15", songs: [
-      { name: "残阳荒原", duration: 292 } ] },
-    { name: "遥远的极夜", type: "专辑", date: "2041-06-22", songs: [
-      { name: "遥远的极夜", duration: 445 }, { name: "甲板曦光", duration: 244 }, { name: "无名的暮色", duration: 222 },
-      { name: "漫长的公路", duration: 246 }, { name: "遥远的荒岛", duration: 438 }, { name: "暗涌夜车", duration: 155 },
-      { name: "霜降影中人", duration: 271 } ] },
-    { name: "狂风归途", type: "单曲", date: "2043-12-27", songs: [
-      { name: "狂风归途", duration: 223 } ] },
-    { name: "灯塔深巷", type: "单曲", date: "2045-12-09", songs: [
-      { name: "灯塔深巷", duration: 270 } ] },
-    { name: "荒原灰墙", type: "单曲", date: "2047-09-16", songs: [
-      { name: "荒原灰墙", duration: 232 } ] },
-    { name: "无名的候鸟", type: "EP", date: "2050-01-31", songs: [
-      { name: "无名的候鸟", duration: 230 }, { name: "漫长的停电", duration: 136 }, { name: "黑巷残阳", duration: 239 },
-      { name: "无名的孤岛", duration: 190 }, { name: "光年旧梦", duration: 271 }, { name: "遥远的铁笼", duration: 165 } ] },
+      { name: "漫长的高墙", type: "单曲", date: "2026-12-22", songs: [
+      { name: "漫长的高墙", duration: 190 } ] },
+    { name: "暗涌初晴", type: "EP", date: "2029-05-06", songs: [
+      { name: "暗涌初晴", duration: 237 }, { name: "深巷白墙", duration: 266 }, { name: "逆光裂痕", duration: 151 },
+      { name: "无名的铁门", duration: 261 }, { name: "走廊车窗", duration: 275 }, { name: "疾风走廊", duration: 348 } ] },
+    { name: "公路高架", type: "EP", date: "2031-07-11", songs: [
+      { name: "公路高架", duration: 228 }, { name: "遥远的寒潮", duration: 219 }, { name: "荒岛暗号", duration: 246 },
+      { name: "长风暴雨", duration: 241 } ] },
+    { name: "漫长的风筝", type: "专辑", date: "2033-02-28", songs: [
+      { name: "漫长的风筝", duration: 222 }, { name: "孤岛天台", duration: 262 }, { name: "深夜的废墟", duration: 229 },
+      { name: "久违的天桥", duration: 256 }, { name: "白墙巷子", duration: 216 }, { name: "深夜的杂草", duration: 191 },
+      { name: "深夜的边界", duration: 236 }, { name: "无名的岔路", duration: 259 }, { name: "楼顶夜班", duration: 236 },
+      { name: "沉默的锈迹", duration: 219 }, { name: "旧梦铁道", duration: 203 } ] },
+    { name: "深夜的匝道", type: "EP", date: "2035-04-01", songs: [
+      { name: "深夜的匝道", duration: 230 }, { name: "回声壁暴雨", duration: 249 }, { name: "风筝初晴", duration: 399 },
+      { name: "光年荒径", duration: 257 } ] },
+    { name: "漫长的长风", type: "专辑", date: "2037-06-23", songs: [
+      { name: "漫长的长风", duration: 291 }, { name: "迷途尘埃", duration: 261 }, { name: "夜车信号", duration: 369 },
+      { name: "夜车骤雨", duration: 265 }, { name: "无名的灰墙", duration: 254 }, { name: "断线白墙", duration: 440 },
+      { name: "沉默的荒岛", duration: 260 }, { name: "高墙晨雾", duration: 232 }, { name: "夜雾涂鸦", duration: 234 },
+      { name: "车窗静默", duration: 236 }, { name: "沉默的疾风", duration: 246 } ] },
+    { name: "暴雨暗涌", type: "专辑", date: "2039-09-22", songs: [
+      { name: "暴雨暗涌", duration: 218 }, { name: "街灯晴天", duration: 269 }, { name: "晚钟归途", duration: 202 },
+      { name: "沉默的废楼", duration: 347 }, { name: "曦光逆流", duration: 376 }, { name: "落雪楼顶", duration: 230 },
+      { name: "巷子候鸟", duration: 241 }, { name: "深夜的夜车", duration: 235 } ] },
+    { name: "荒岛电线", type: "单曲", date: "2041-08-23", songs: [
+      { name: "荒岛电线", duration: 229 } ] },
+    { name: "孤岛残响", type: "单曲", date: "2043-09-19", songs: [
+      { name: "孤岛残响", duration: 217 } ] },
+    { name: "归途夜航", type: "EP", date: "2045-10-23", songs: [
+      { name: "归途夜航", duration: 393 }, { name: "暮色疾风", duration: 275 }, { name: "漫长的岔路", duration: 211 },
+      { name: "深巷游园", duration: 191 } ] },
+    { name: "久违的边界", type: "单曲", date: "2047-11-13", songs: [
+      { name: "久违的边界", duration: 252 } ] },
+    { name: "阁楼碎片", type: "单曲", date: "2050-03-07", songs: [
+      { name: "阁楼碎片", duration: 249 } ] },
     ],
   "Chinese Football": [
     { name: "Chinese Football", type: "专辑", date: "2015-09-12", songs: [
@@ -3097,42 +4054,42 @@ window.BAND_DISCOGRAPHY = {
     { name: "电动少女 (8-Bit Remix)", type: "单曲", date: "2018-03-01", songs: [ { name: "电动少女 (8-Bit Remix)", duration: 280 } ] },
     { name: "Naive", type: "单曲", date: "2017-10-01", songs: [ { name: "Naive", duration: 270 } ] },
     { name: "Dog's Diary", type: "单曲", date: "2017-11-01", songs: [ { name: "Dog's Diary", duration: 265 } ] },
-      { name: "屋顶野火", type: "EP", date: "2027-01-31", songs: [
-      { name: "屋顶野火", duration: 271 }, { name: "走廊逆流", duration: 267 }, { name: "街灯走廊", duration: 247 },
-      { name: "沉默的甲板", duration: 256 }, { name: "杂草车窗", duration: 292 } ] },
-    { name: "深夜暗涌", type: "单曲", date: "2029-04-25", songs: [
-      { name: "深夜暗涌", duration: 294 } ] },
-    { name: "倒影空城", type: "专辑", date: "2031-01-21", songs: [
-      { name: "倒影空城", duration: 254 }, { name: "夜潮废楼", duration: 293 }, { name: "回声壁潮间带", duration: 301 },
-      { name: "逆光暮色", duration: 329 }, { name: "久违的雨篷", duration: 270 }, { name: "疾风走廊", duration: 294 },
-      { name: "长夜逆流", duration: 430 }, { name: "回声壁码头", duration: 225 }, { name: "沉默的晚风", duration: 181 },
-      { name: "沙丘边界", duration: 248 } ] },
-    { name: "楼顶夜班", type: "单曲", date: "2033-05-09", songs: [
-      { name: "楼顶夜班", duration: 483 } ] },
-    { name: "残阳路口", type: "单曲", date: "2035-07-25", songs: [
-      { name: "残阳路口", duration: 176 } ] },
-    { name: "晚钟旧梦", type: "专辑", date: "2037-07-25", songs: [
-      { name: "晚钟旧梦", duration: 292 }, { name: "深夜的信号灯", duration: 273 }, { name: "断线沙漏", duration: 295 },
-      { name: "冷月狂风", duration: 277 }, { name: "落雪高墙", duration: 438 }, { name: "静默边界", duration: 289 },
-      { name: "狂风路口", duration: 506 } ] },
-    { name: "深夜的冷月", type: "单曲", date: "2039-05-19", songs: [
-      { name: "深夜的冷月", duration: 173 } ] },
-    { name: "黑巷天光", type: "专辑", date: "2041-06-07", songs: [
-      { name: "黑巷天光", duration: 286 }, { name: "漫长的夜班", duration: 286 }, { name: "晚风游园", duration: 251 },
-      { name: "霓虹倒影", duration: 288 }, { name: "甲板渡轮", duration: 286 }, { name: "黑巷晚风", duration: 266 },
-      { name: "久违的锈迹", duration: 273 }, { name: "铁道断线", duration: 287 }, { name: "遥远的残响", duration: 281 },
-      { name: "台阶狂风", duration: 315 }, { name: "潮汐回声壁", duration: 432 } ] },
-    { name: "路口暗号", type: "单曲", date: "2043-12-14", songs: [
-      { name: "路口暗号", duration: 225 } ] },
-    { name: "街灯残阳", type: "单曲", date: "2046-01-14", songs: [
-      { name: "街灯残阳", duration: 276 } ] },
-    { name: "夜航高架", type: "EP", date: "2047-11-02", songs: [
-      { name: "夜航高架", duration: 272 }, { name: "迷途码头", duration: 290 }, { name: "风铃铁轨", duration: 251 },
-      { name: "惊雷雨夜", duration: 274 }, { name: "长风裂痕", duration: 263 } ] },
-    { name: "车窗碎片", type: "专辑", date: "2049-09-29", songs: [
-      { name: "车窗碎片", duration: 234 }, { name: "风铃铁道", duration: 261 }, { name: "夜车边界", duration: 293 },
-      { name: "无名的沙丘", duration: 299 }, { name: "遥远的天台", duration: 197 }, { name: "夜潮天台", duration: 269 },
-      { name: "台阶曦光", duration: 479 }, { name: "灰墙岔路", duration: 248 }, { name: "骤雨暮光", duration: 248 } ] },
+      { name: "暗巷冷月", type: "专辑", date: "2026-11-30", songs: [
+      { name: "暗巷冷月", duration: 418 }, { name: "天光深夜", duration: 314 }, { name: "深夜的逆流", duration: 240 },
+      { name: "无名的野火", duration: 273 }, { name: "灰烬夜雾", duration: 267 }, { name: "迷途水岸", duration: 265 },
+      { name: "站台白墙", duration: 223 }, { name: "雨夜旧巷", duration: 290 }, { name: "夜航归途", duration: 220 },
+      { name: "晨雾阁楼", duration: 252 } ] },
+    { name: "漫长的铁轨", type: "单曲", date: "2029-01-14", songs: [
+      { name: "漫长的铁轨", duration: 261 } ] },
+    { name: "铁桥孤岛", type: "单曲", date: "2031-01-28", songs: [
+      { name: "铁桥孤岛", duration: 162 } ] },
+    { name: "旧梦深夜", type: "专辑", date: "2033-04-14", songs: [
+      { name: "旧梦深夜", duration: 284 }, { name: "沉默的岔路", duration: 254 }, { name: "碎片高架", duration: 264 },
+      { name: "雨夜暗巷", duration: 163 }, { name: "巷子空城", duration: 298 }, { name: "深巷静默", duration: 227 },
+      { name: "影中人倒影", duration: 255 }, { name: "屋顶潮间带", duration: 269 }, { name: "深夜的归途", duration: 331 },
+      { name: "逆旅疾风", duration: 241 }, { name: "远方停电", duration: 250 } ] },
+    { name: "深夜的落雪", type: "单曲", date: "2035-05-24", songs: [
+      { name: "深夜的落雪", duration: 314 } ] },
+    { name: "深夜的汽笛", type: "单曲", date: "2037-03-16", songs: [
+      { name: "深夜的汽笛", duration: 257 } ] },
+    { name: "荒径长风", type: "专辑", date: "2039-06-12", songs: [
+      { name: "荒径长风", duration: 206 }, { name: "岔路寒潮", duration: 202 }, { name: "断线镜面", duration: 234 },
+      { name: "信号灯电塔", duration: 275 }, { name: "电塔台阶", duration: 297 }, { name: "潮间带夜潮", duration: 278 },
+      { name: "遥远的楼顶", duration: 265 } ] },
+    { name: "沉默的野猫", type: "专辑", date: "2041-08-23", songs: [
+      { name: "沉默的野猫", duration: 297 }, { name: "风铃屋顶", duration: 236 }, { name: "久违的风铃", duration: 247 },
+      { name: "归途霜降", duration: 295 }, { name: "甲板沙丘", duration: 295 }, { name: "渡轮夜潮", duration: 249 },
+      { name: "残阳荒岛", duration: 292 }, { name: "废墟野火", duration: 189 }, { name: "灯塔码头", duration: 266 },
+      { name: "夜潮夜雾", duration: 217 }, { name: "归途站台", duration: 296 } ] },
+    { name: "初晴渡轮", type: "单曲", date: "2043-07-28", songs: [
+      { name: "初晴渡轮", duration: 282 } ] },
+    { name: "沉默的信号", type: "EP", date: "2045-07-13", songs: [
+      { name: "沉默的信号", duration: 275 }, { name: "沉默的阁楼", duration: 295 }, { name: "遥远的匝道", duration: 267 },
+      { name: "归途铁笼", duration: 218 }, { name: "沉默的镜面", duration: 285 }, { name: "旧巷冷月", duration: 248 } ] },
+    { name: "深夜阁楼", type: "单曲", date: "2047-09-06", songs: [
+      { name: "深夜阁楼", duration: 281 } ] },
+    { name: "站台走廊", type: "单曲", date: "2049-11-08", songs: [
+      { name: "站台走廊", duration: 277 } ] },
     ],
   "犬儒": [
     { name: "犬儒", type: "EP", date: "2022-12-10", songs: [
@@ -3149,48 +4106,39 @@ window.BAND_DISCOGRAPHY = {
        { name: "白鸟", duration: 365 }, { name: "给我", duration: 340 }, { name: "再见了朋友我们终会再相逢", duration: 400 } ] },
     { name: "旧情歌", type: "单曲", date: "2023-01-01", songs: [ { name: "旧情歌", duration: 250 } ] },
     { name: "河边的想象", type: "单曲", date: "2023-01-01", songs: [ { name: "河边的想象", duration: 260 } ] },
-      { name: "游园潮间带", type: "专辑", date: "2027-01-20", songs: [
-      { name: "游园潮间带", duration: 279 }, { name: "遥远的霜降", duration: 283 }, { name: "潮声铁门", duration: 251 },
-      { name: "潮声夜潮", duration: 279 }, { name: "潮声环流", duration: 240 }, { name: "末班车路口", duration: 290 },
-      { name: "遥远的涂鸦", duration: 263 }, { name: "静默潮汐", duration: 264 }, { name: "灰烬暗涌", duration: 252 } ] },
-    { name: "隧道霓虹", type: "专辑", date: "2029-06-02", songs: [
-      { name: "隧道霓虹", duration: 314 }, { name: "漫长的巷子", duration: 219 }, { name: "潮汐废楼", duration: 206 },
-      { name: "岔路冷月", duration: 319 }, { name: "汽笛高墙", duration: 278 }, { name: "荒径铁桥", duration: 298 },
-      { name: "无名的镜面", duration: 353 }, { name: "深夜的锈迹", duration: 174 }, { name: "无名的深巷", duration: 268 } ] },
-    { name: "水岸夜雾", type: "EP", date: "2031-03-27", songs: [
-      { name: "水岸夜雾", duration: 276 }, { name: "暴雨铁笼", duration: 296 }, { name: "走廊环流", duration: 279 },
-      { name: "遥远的街灯", duration: 274 } ] },
-    { name: "电线夜潮", type: "单曲", date: "2033-05-08", songs: [
-      { name: "电线夜潮", duration: 303 } ] },
-    { name: "无名的余烬", type: "专辑", date: "2035-06-29", songs: [
-      { name: "无名的余烬", duration: 433 }, { name: "深夜的夜航", duration: 304 }, { name: "无名的霜降", duration: 346 },
-      { name: "台阶极夜", duration: 298 }, { name: "远方高墙", duration: 291 }, { name: "旧巷隧道", duration: 208 },
-      { name: "冷月静默", duration: 283 }, { name: "屋顶潮声", duration: 320 } ] },
-    { name: "久违的曦光", type: "EP", date: "2037-09-10", songs: [
-      { name: "久违的曦光", duration: 548 }, { name: "深夜的暗巷", duration: 290 }, { name: "游园镜面", duration: 242 } ] },
-    { name: "杂草信号", type: "专辑", date: "2039-06-10", songs: [
-      { name: "杂草信号", duration: 321 }, { name: "街角雨夜", duration: 216 }, { name: "屋顶电塔", duration: 276 },
-      { name: "漫长的长风", duration: 445 }, { name: "沉默的末班车", duration: 290 }, { name: "漫长的甲板", duration: 398 },
-      { name: "暗涌天台", duration: 271 }, { name: "铁笼暮光", duration: 306 } ] },
-    { name: "冷月暮光", type: "专辑", date: "2041-10-24", songs: [
-      { name: "冷月暮光", duration: 309 }, { name: "深巷天台", duration: 304 }, { name: "断线夜班", duration: 271 },
-      { name: "雨夜镜面", duration: 283 }, { name: "无名的骤雨", duration: 313 }, { name: "游园铁桥", duration: 299 },
-      { name: "铁道雪线", duration: 280 }, { name: "无名的巷子", duration: 254 }, { name: "深夜的天桥", duration: 291 },
-      { name: "暮色长风", duration: 317 } ] },
-    { name: "霓虹电线", type: "专辑", date: "2043-10-22", songs: [
-      { name: "霓虹电线", duration: 309 }, { name: "曦光霜降", duration: 293 }, { name: "初晴逆光", duration: 337 },
-      { name: "荒野深夜", duration: 238 }, { name: "遥远的旧梦", duration: 308 }, { name: "风口断线", duration: 251 },
-      { name: "车窗影中人", duration: 308 } ] },
-    { name: "长夜暗号", type: "EP", date: "2045-10-11", songs: [
-      { name: "长夜暗号", duration: 282 }, { name: "疾风归途", duration: 301 }, { name: "野火电线", duration: 190 },
-      { name: "无名的街灯", duration: 292 }, { name: "无名的碎片", duration: 301 } ] },
-    { name: "潮间带荒径", type: "专辑", date: "2047-09-28", songs: [
-      { name: "潮间带荒径", duration: 311 }, { name: "深夜的水岸", duration: 278 }, { name: "野火光年", duration: 266 },
-      { name: "狂风沙丘", duration: 281 }, { name: "无名的断线", duration: 528 }, { name: "阁楼暴雨", duration: 321 },
-      { name: "沉默的碎片", duration: 271 }, { name: "渡轮长风", duration: 267 }, { name: "车窗走廊", duration: 272 },
-      { name: "渡轮高墙", duration: 327 }, { name: "灰烬残响", duration: 315 } ] },
-    { name: "远方铁轨", type: "单曲", date: "2049-11-06", songs: [
-      { name: "远方铁轨", duration: 301 } ] },
+      { name: "站台废楼", type: "单曲", date: "2027-02-14", songs: [
+      { name: "站台废楼", duration: 312 } ] },
+    { name: "逆流潮汐", type: "单曲", date: "2029-07-09", songs: [
+      { name: "逆流潮汐", duration: 297 } ] },
+    { name: "水岸静默", type: "专辑", date: "2031-06-03", songs: [
+      { name: "水岸静默", duration: 310 }, { name: "久违的深夜", duration: 240 }, { name: "游园台阶", duration: 287 },
+      { name: "阁楼雨篷", duration: 245 }, { name: "暮色巷子", duration: 309 }, { name: "遥远的逆光", duration: 279 },
+      { name: "信号灯黑巷", duration: 317 }, { name: "野火暮光", duration: 309 }, { name: "惊雷出口", duration: 273 } ] },
+    { name: "无名的环流", type: "单曲", date: "2033-04-17", songs: [
+      { name: "无名的环流", duration: 168 } ] },
+    { name: "遥远的霜降", type: "单曲", date: "2035-09-28", songs: [
+      { name: "遥远的霜降", duration: 230 } ] },
+    { name: "沉默的暴雨", type: "单曲", date: "2037-08-25", songs: [
+      { name: "沉默的暴雨", duration: 303 } ] },
+    { name: "逆旅断层", type: "专辑", date: "2039-10-27", songs: [
+      { name: "逆旅断层", duration: 272 }, { name: "路口远方", duration: 461 }, { name: "深夜的风铃", duration: 295 },
+      { name: "游园天台", duration: 288 }, { name: "铁门晚风", duration: 266 }, { name: "晨雾暴雨", duration: 272 },
+      { name: "沉默的断层", duration: 268 }, { name: "旧城光年", duration: 278 }, { name: "归途荒径", duration: 269 } ] },
+    { name: "闪电夜航", type: "单曲", date: "2041-08-31", songs: [
+      { name: "闪电夜航", duration: 303 } ] },
+    { name: "深夜的阁楼", type: "单曲", date: "2043-08-05", songs: [
+      { name: "深夜的阁楼", duration: 298 } ] },
+    { name: "电线夜潮", type: "专辑", date: "2045-11-02", songs: [
+      { name: "电线夜潮", duration: 305 }, { name: "深夜的夜班", duration: 314 }, { name: "极夜夜班", duration: 265 },
+      { name: "沉默的潮间带", duration: 287 }, { name: "码头长风", duration: 268 }, { name: "沉默的末班车", duration: 315 },
+      { name: "灰墙光年", duration: 222 } ] },
+    { name: "归途岔路", type: "专辑", date: "2047-10-18", songs: [
+      { name: "归途岔路", duration: 231 }, { name: "光年暮光", duration: 280 }, { name: "荒岛闪电", duration: 292 },
+      { name: "旧城匝道", duration: 230 }, { name: "黑巷空城", duration: 230 }, { name: "漫长的车窗", duration: 309 },
+      { name: "游园隧道", duration: 293 }, { name: "漫长的星光", duration: 259 }, { name: "码头白墙", duration: 163 },
+      { name: "风筝逆旅", duration: 274 } ] },
+    { name: "久违的站台", type: "单曲", date: "2049-11-30", songs: [
+      { name: "久违的站台", duration: 285 } ] },
     ],
   "发光曲线": [
     { name: "Glow Curve", type: "专辑", date: "2011-01-01", songs: [
@@ -3213,42 +4161,43 @@ window.BAND_DISCOGRAPHY = {
        { name: "起源", duration: 285 }, { name: "狩猎", duration: 326 }, { name: "哇噻考", duration: 304 },
        { name: "千高原", duration: 275 }, { name: "起源：残响 (feat.梅志勇)", duration: 259 },
        { name: "太阳之夜", duration: 331 }, { name: "筋疲力尽", duration: 294 }, { name: "卧游", duration: 341 } ] },
-      { name: "深夜的虚空", type: "专辑", date: "2027-08-12", songs: [
-      { name: "深夜的虚空", duration: 409 }, { name: "光栅山脉", duration: 360 }, { name: "漫长的漂移", duration: 322 },
-      { name: "悬浮空谷", duration: 321 }, { name: "经纬边缘", duration: 298 }, { name: "碎光水痕", duration: 306 },
-      { name: "沉默的空镜", duration: 371 }, { name: "沉默的极地", duration: 390 }, { name: "银幕回旋", duration: 368 },
-      { name: "倒影透明", duration: 324 } ] },
-    { name: "空镜静默", type: "专辑", date: "2030-10-18", songs: [
-      { name: "空镜静默", duration: 560 }, { name: "深夜的云层", duration: 363 }, { name: "星轨极地", duration: 331 },
-      { name: "漂移银幕", duration: 335 }, { name: "遥远的螺旋", duration: 261 }, { name: "纹理极地", duration: 397 },
-      { name: "极光轨迹", duration: 383 }, { name: "经纬旷野", duration: 316 } ] },
-    { name: "沉默的深海", type: "专辑", date: "2033-10-11", songs: [
-      { name: "沉默的深海", duration: 329 }, { name: "久违的远山", duration: 400 }, { name: "回声光斑", duration: 346 },
-      { name: "漫长的环带", duration: 395 }, { name: "漫长的光斑", duration: 323 }, { name: "沉默的低语", duration: 539 },
-      { name: "沉默的虚空", duration: 295 }, { name: "星际", duration: 313 }, { name: "螺旋虚空", duration: 372 } ] },
-    { name: "潮间带回声", type: "专辑", date: "2037-03-14", songs: [
-      { name: "潮间带回声", duration: 252 }, { name: "极夜星际", duration: 363 }, { name: "遥远的回声", duration: 339 },
-      { name: "光栅波纹", duration: 324 }, { name: "遥远的星尘", duration: 398 }, { name: "久违的深空", duration: 358 },
-      { name: "河床余温", duration: 348 }, { name: "尘埃灰白", duration: 357 }, { name: "纹理深空", duration: 377 } ] },
-    { name: "沉默的晨光", type: "专辑", date: "2040-03-10", songs: [
-      { name: "沉默的晨光", duration: 359 }, { name: "深夜的轨迹", duration: 333 }, { name: "陨石涟漪", duration: 381 },
-      { name: "雾霭环流", duration: 383 }, { name: "回声深空", duration: 240 }, { name: "河床波纹", duration: 520 },
-      { name: "静默断层", duration: 392 }, { name: "倒影虚焦", duration: 387 }, { name: "晨光地平线", duration: 549 },
-      { name: "河床苍穹", duration: 276 }, { name: "星轨水痕", duration: 342 } ] },
-    { name: "无名的月相", type: "专辑", date: "2043-03-30", songs: [
-      { name: "无名的月相", duration: 332 }, { name: "深夜的山脉", duration: 342 }, { name: "沉默的经纬", duration: 361 },
-      { name: "漫长的回旋", duration: 374 }, { name: "星轨折射", duration: 357 }, { name: "光晕静止", duration: 405 },
-      { name: "极光深渊", duration: 204 }, { name: "久违的极地", duration: 371 }, { name: "虚焦薄雾", duration: 362 },
-      { name: "无名的回声", duration: 420 }, { name: "寒潮长夜", duration: 317 } ] },
-    { name: "遥远的冰川", type: "专辑", date: "2046-03-18", songs: [
-      { name: "遥远的冰川", duration: 376 }, { name: "苍穹折线", duration: 320 }, { name: "折返陨石", duration: 356 },
-      { name: "光年折线", duration: 399 }, { name: "断层低频", duration: 215 }, { name: "苍穹静止", duration: 348 },
-      { name: "沉默的潮间带", duration: 365 }, { name: "余温极地", duration: 390 }, { name: "沉默的静水", duration: 367 },
-      { name: "碎光月相", duration: 351 }, { name: "无名的静水", duration: 355 } ] },
-    { name: "无名的空谷", type: "专辑", date: "2049-04-18", songs: [
-      { name: "无名的空谷", duration: 328 }, { name: "回声光年", duration: 420 }, { name: "遥远的雾霭", duration: 351 },
-      { name: "漫长的静止", duration: 190 }, { name: "深夜的静水", duration: 368 }, { name: "光栅地平线", duration: 366 },
-      { name: "漂移缓慢", duration: 412 }, { name: "长夜折返", duration: 260 } ] },
+      { name: "久违的悬浮", type: "专辑", date: "2027-10-30", songs: [
+      { name: "久违的悬浮", duration: 325 }, { name: "低语冰川", duration: 360 }, { name: "回旋星云", duration: 353 },
+      { name: "引力波纹", duration: 375 }, { name: "无名的雾霭", duration: 347 }, { name: "暗流倒影", duration: 377 },
+      { name: "山脉潮汐", duration: 377 } ] },
+    { name: "深夜的透明", type: "专辑", date: "2030-07-29", songs: [
+      { name: "深夜的透明", duration: 360 }, { name: "晨光薄雾", duration: 334 }, { name: "深海静止", duration: 370 },
+      { name: "地平线尘埃", duration: 498 }, { name: "沉默的光晕", duration: 362 }, { name: "久违的陨石", duration: 401 },
+      { name: "深夜的回声", duration: 347 }, { name: "无名的星尘", duration: 309 } ] },
+    { name: "极地折射", type: "专辑", date: "2033-12-12", songs: [
+      { name: "极地折射", duration: 354 }, { name: "遥远的波纹", duration: 311 }, { name: "深夜的沙漏", duration: 331 },
+      { name: "暗流尘埃", duration: 365 }, { name: "久违的虚焦", duration: 414 }, { name: "低语光栅", duration: 407 },
+      { name: "极昼灰白", duration: 328 }, { name: "慢门回声", duration: 329 }, { name: "无名的轨迹", duration: 560 },
+      { name: "折线晨光", duration: 365 }, { name: "水痕潮间带", duration: 376 } ] },
+    { name: "极夜水痕", type: "专辑", date: "2037-01-28", songs: [
+      { name: "极夜水痕", duration: 376 }, { name: "慢门极地", duration: 322 }, { name: "蓝鲸轨迹", duration: 372 },
+      { name: "低语无声", duration: 281 }, { name: "沉默的蓝鲸", duration: 353 }, { name: "漫长的暗流", duration: 290 },
+      { name: "星际潮声", duration: 254 }, { name: "经纬深渊", duration: 340 }, { name: "遥远的退潮", duration: 379 },
+      { name: "无名的光斑", duration: 346 } ] },
+    { name: "静默虚空", type: "专辑", date: "2039-10-17", songs: [
+      { name: "静默虚空", duration: 244 }, { name: "空镜静止", duration: 245 }, { name: "深海水痕", duration: 332 },
+      { name: "引力静默", duration: 406 }, { name: "低频深海", duration: 363 }, { name: "薄雾水痕", duration: 560 },
+      { name: "无名的蓝鲸", duration: 325 }, { name: "光栅雪线", duration: 260 }, { name: "深夜的极地", duration: 316 } ] },
+    { name: "星尘星际", type: "专辑", date: "2043-03-23", songs: [
+      { name: "星尘星际", duration: 330 }, { name: "漫长的蓝鲸", duration: 332 }, { name: "空谷旷野", duration: 382 },
+      { name: "螺旋漂移", duration: 316 }, { name: "深渊折线", duration: 344 }, { name: "遥远的雾霭", duration: 374 },
+      { name: "星际", duration: 482 }, { name: "无名的晨光", duration: 259 }, { name: "久违的静水", duration: 351 },
+      { name: "环带环流", duration: 371 } ] },
+    { name: "蓝鲸极夜", type: "专辑", date: "2046-02-10", songs: [
+      { name: "蓝鲸极夜", duration: 318 }, { name: "无声退潮", duration: 345 }, { name: "深夜的断层", duration: 373 },
+      { name: "沉默的旷野", duration: 362 }, { name: "慢门折线", duration: 322 }, { name: "水痕悬浮", duration: 333 },
+      { name: "折返轨迹", duration: 353 }, { name: "遥远的星轨", duration: 277 }, { name: "碎光星际", duration: 333 },
+      { name: "漫长的星云", duration: 344 } ] },
+    { name: "深空雪线", type: "专辑", date: "2049-03-22", songs: [
+      { name: "深空雪线", duration: 350 }, { name: "潮声缓慢", duration: 338 }, { name: "漫长的静止", duration: 351 },
+      { name: "空镜极光", duration: 342 }, { name: "沉默的暗流", duration: 357 }, { name: "沉默的慢门", duration: 376 },
+      { name: "潮间带深海", duration: 328 }, { name: "光栅引力", duration: 472 }, { name: "沉默的悬浮", duration: 395 },
+      { name: "雪线灰白", duration: 332 } ] },
     ],
   "文雀": [
     { name: "First EP", type: "EP", date: "2010-02-01", songs: [
@@ -3277,39 +4226,47 @@ window.BAND_DISCOGRAPHY = {
     { name: "我长话短说", type: "单曲", date: "2018-09-10", songs: [ { name: "我长话短说", duration: 375 } ] },
     { name: "A Letter Buried in Time", type: "EP", date: "2025-05-01", songs: [
        { name: "A Letter Buried in Time", duration: 326 }, { name: "dizzy", duration: 277 } ] },
-      { name: "遥远星尘", type: "单曲", date: "2027-08-08", songs: [
-      { name: "遥远星尘", duration: 251 } ] },
-    { name: "遥远的慢门", type: "单曲", date: "2029-11-18", songs: [
-      { name: "遥远的慢门", duration: 374 } ] },
-    { name: "尘埃地平线", type: "单曲", date: "2032-01-03", songs: [
-      { name: "尘埃地平线", duration: 314 } ] },
-    { name: "低语悬浮", type: "EP", date: "2033-08-31", songs: [
-      { name: "低语悬浮", duration: 394 }, { name: "空谷回旋", duration: 384 }, { name: "折返银幕", duration: 349 } ] },
-    { name: "深夜的缓慢", type: "单曲", date: "2035-12-11", songs: [
-      { name: "深夜的缓慢", duration: 385 } ] },
-    { name: "冰川环流", type: "EP", date: "2037-12-21", songs: [
-      { name: "冰川环流", duration: 406 }, { name: "极昼极地", duration: 371 }, { name: "轨迹折线", duration: 371 },
-      { name: "水银环带", duration: 402 }, { name: "漫长的晨光", duration: 351 } ] },
-    { name: "无名的山脉", type: "专辑", date: "2039-08-31", songs: [
-      { name: "无名的山脉", duration: 354 }, { name: "长夜折线", duration: 368 }, { name: "远山余温", duration: 344 },
-      { name: "寂静慢门", duration: 337 }, { name: "漂移悬浮", duration: 404 }, { name: "遥远的空谷", duration: 416 },
-      { name: "漫长的倒影", duration: 380 } ] },
-    { name: "久违的暗流", type: "单曲", date: "2041-08-23", songs: [
-      { name: "久违的暗流", duration: 348 } ] },
-    { name: "寂静冰川", type: "专辑", date: "2043-09-05", songs: [
-      { name: "寂静冰川", duration: 355 }, { name: "久违的云层", duration: 283 }, { name: "久违的深海", duration: 402 },
-      { name: "静默寂静", duration: 385 }, { name: "沉默的星云", duration: 349 }, { name: "长夜极夜", duration: 208 },
-      { name: "寒潮纹理", duration: 319 }, { name: "回旋波纹", duration: 352 }, { name: "薄雾低语", duration: 334 },
-      { name: "久违的虚焦", duration: 448 } ] },
-    { name: "深夜的水银", type: "EP", date: "2046-02-02", songs: [
-      { name: "深夜的水银", duration: 339 }, { name: "沉默的寂静", duration: 212 }, { name: "低频回旋", duration: 405 },
-      { name: "薄雾地平线", duration: 560 }, { name: "久违的透明", duration: 400 } ] },
-    { name: "遥远的静止", type: "专辑", date: "2048-01-16", songs: [
-      { name: "遥远的静止", duration: 340 }, { name: "漫长的边缘", duration: 389 }, { name: "深海边缘", duration: 381 },
-      { name: "尘埃雾霭", duration: 243 }, { name: "边缘暮色", duration: 375 }, { name: "沉默的尘埃", duration: 390 },
-      { name: "银幕环带", duration: 541 }, { name: "旷野河床", duration: 294 }, { name: "寂静暮色", duration: 250 },
-      { name: "沉默的暗流", duration: 402 } ] },
-    { name: "无名的遥远", type: "单曲", date: "2050-03-09", songs: [
-      { name: "无名的遥远", duration: 336 } ] },
+      { name: "静默深海", type: "单曲", date: "2027-11-02", songs: [
+      { name: "静默深海", duration: 403 } ] },
+    { name: "久违的螺旋", type: "EP", date: "2029-06-29", songs: [
+      { name: "久违的螺旋", duration: 357 }, { name: "无声陨石", duration: 394 }, { name: "沉默的低语", duration: 406 } ] },
+    { name: "缓慢暗流", type: "专辑", date: "2031-08-30", songs: [
+      { name: "缓慢暗流", duration: 353 }, { name: "尘埃静水", duration: 336 }, { name: "水银光年", duration: 293 },
+      { name: "遥远的遥远", duration: 560 }, { name: "寒潮深海", duration: 264 }, { name: "光晕沙漏", duration: 560 },
+      { name: "深夜的低语", duration: 375 }, { name: "沉默的虚空", duration: 375 }, { name: "无名的低语", duration: 361 },
+      { name: "折射光斑", duration: 350 } ] },
+    { name: "寂静潮声", type: "专辑", date: "2033-11-07", songs: [
+      { name: "寂静潮声", duration: 306 }, { name: "经纬漂移", duration: 366 }, { name: "暮色深渊", duration: 311 },
+      { name: "环流虚空", duration: 356 }, { name: "月相潮声", duration: 258 }, { name: "轨迹光晕", duration: 375 },
+      { name: "悬浮纹理", duration: 281 }, { name: "久违的涟漪", duration: 312 }, { name: "深夜的寒潮", duration: 396 } ] },
+    { name: "极光潮间带", type: "EP", date: "2036-01-21", songs: [
+      { name: "极光潮间带", duration: 560 }, { name: "遥远的虚焦", duration: 339 }, { name: "旷野薄雾", duration: 363 },
+      { name: "久违的余温", duration: 383 }, { name: "沉默的遥远", duration: 400 } ] },
+    { name: "山脉光栅", type: "EP", date: "2037-10-09", songs: [
+      { name: "山脉光栅", duration: 336 }, { name: "静水倒影", duration: 283 }, { name: "遥远的蓝鲸", duration: 408 },
+      { name: "沉默的余温", duration: 397 }, { name: "暗流潮间带", duration: 401 }, { name: "波纹蓝鲸", duration: 347 } ] },
+    { name: "无名的潮声", type: "专辑", date: "2039-08-28", songs: [
+      { name: "无名的潮声", duration: 309 }, { name: "冰川悬浮", duration: 354 }, { name: "深夜的折返", duration: 560 },
+      { name: "山脉雪线", duration: 391 }, { name: "山脉地平线", duration: 404 }, { name: "旷野深渊", duration: 351 },
+      { name: "无名的寂静", duration: 341 }, { name: "沙漏折返", duration: 383 }, { name: "折射纹理", duration: 311 } ] },
+    { name: "极夜缓慢", type: "专辑", date: "2041-12-21", songs: [
+      { name: "极夜缓慢", duration: 336 }, { name: "旷野静默", duration: 379 }, { name: "薄雾折线", duration: 310 },
+      { name: "遥远的陨石", duration: 343 }, { name: "薄雾暮色", duration: 352 }, { name: "星轨螺旋", duration: 400 },
+      { name: "薄雾深渊", duration: 304 }, { name: "无名的光晕", duration: 389 }, { name: "无名的波纹", duration: 376 } ] },
+    { name: "经纬轨迹", type: "专辑", date: "2044-02-27", songs: [
+      { name: "经纬轨迹", duration: 443 }, { name: "深夜的水痕", duration: 391 }, { name: "漫长的薄雾", duration: 346 },
+      { name: "折线碎光", duration: 352 }, { name: "沙漏山脉", duration: 289 }, { name: "薄雾水银", duration: 333 },
+      { name: "星际山脉", duration: 340 }, { name: "漫长的遥远", duration: 434 }, { name: "光年旷野", duration: 397 },
+      { name: "悬浮远山", duration: 362 } ] },
+    { name: "无名的星际", type: "EP", date: "2045-12-13", songs: [
+      { name: "无名的星际", duration: 370 }, { name: "环带漂移", duration: 368 }, { name: "深夜的折射", duration: 284 },
+      { name: "河床低频", duration: 364 } ] },
+    { name: "无名的水银", type: "专辑", date: "2048-03-07", songs: [
+      { name: "无名的水银", duration: 254 }, { name: "沉默的地平线", duration: 337 }, { name: "地平线静水", duration: 336 },
+      { name: "极夜光晕", duration: 359 }, { name: "边缘极夜", duration: 560 }, { name: "星云深渊", duration: 560 },
+      { name: "深夜的纹理", duration: 389 }, { name: "余温退潮", duration: 393 }, { name: "深海尘埃", duration: 531 },
+      { name: "静止倒影", duration: 365 } ] },
+    { name: "光斑薄雾", type: "单曲", date: "2049-11-12", songs: [
+      { name: "光斑薄雾", duration: 431 } ] },
     ],
 };

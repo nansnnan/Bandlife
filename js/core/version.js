@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.81",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "日本动漫乐队出歌频率明显加快：2026—2050 年每队由 6~12 张提升到 26 张，共 416 张作品。",
+      "动漫乐队作品结构以专辑与 EP 为主（约占八成），单曲占比相应降低。",
+    ],
+  },
+  {
     version: "1.2.80",
     date: "2026-11-26",
     size: "小更新",
