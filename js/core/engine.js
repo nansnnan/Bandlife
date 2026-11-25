@@ -99,12 +99,17 @@ function buildRivalCatalog(bandName) {
 
 function initRivals() {
   return window.RIVAL_BANDS.map(b => {
-    const formedDay = Math.max(0, dateToDay(b.formed, 1, 1) - dateToDay(2000, 1, 1));
+    // 成立日期：年份取数据中的 formed，月/日按乐队名确定性随机，避免全部落在 1 月 1 日
+    const fm = 1 + Math.floor(seededUnit("formed-m|" + b.name) * 12);
+    const fdim = daysInMonth(b.formed, fm);
+    const fd = 1 + Math.floor(seededUnit("formed-d|" + b.name) * fdim);
+    const formedDay = dateToDay(b.formed, fm, fd) - dateToDay(2000, 1, 1);
     const catalog = buildRivalCatalog(b.name);
     const rival = {
       ...b,
-      active: b.formed <= 2000,
-      activeDay: formedDay,           // 从第几天开始活跃
+      active: formedDay <= 0,
+      activeDay: formedDay,           // 从第几天开始活跃（可为负，表示开局前已成立）
+      formedDate: { year: b.formed, month: fm, day: fd },
       currentPopularity: b.popularity,
       fans: b.popularity * 10000,
       totalPlays: 0,
@@ -211,7 +216,7 @@ function tickWeekly() {
     // 先更新活跃状态（2000 年后成立的乐队，到达成立年份后激活）
     if (!r.active && Game.dayIndex >= r.activeDay) {
       r.active = true;
-      addEvent(`${r.name}（${r.style}）于本年度正式成立并进入乐坛。`);
+      addEvent(`${r.name}（${r.style}）正式成立并进入乐坛。`);
     }
     if (!r.active) continue;
     if (r.catalog && r.releaseIndex < r.catalog.length) {
@@ -440,10 +445,10 @@ function updateRivalActivity() {
   for (const r of Game.rivals) {
     if (!r.active && Game.dayIndex >= r.activeDay) {
       r.active = true;
-      addEvent(`${r.name}（${r.style}）于本年度正式成立并进入乐坛。`);
+      addEvent(`${r.name}（${r.style}）正式成立并进入乐坛。`);
     }
     if (r.active) {
-      r.currentPopularity = clamp(r.popularity + (Game.dayIndex - r.activeDay) / 365 * 0.3, 0, 10);
+      r.currentPopularity = clamp(r.popularity + Math.max(0, Game.dayIndex - r.activeDay) / 365 * 0.3, 0, 10);
       r.fans = Math.round(r.fans * (1 + randf(0, 0.0003)));
     }
   }

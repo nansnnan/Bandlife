@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.74",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "竞争对手乐队的成立/出道日期改为按乐队名确定性随机分配月日，不再全部落在 1 月 1 日。",
+      "「竞争对手」导航入口移至「发布作品」下方、「音乐播放器」上方。",
+    ],
+  },
+  {
     version: "1.2.73",
     date: "2026-11-25",
     size: "小更新",

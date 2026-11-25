@@ -658,6 +658,10 @@ function submitRelease() {
 
 // ===== 竞争对手视图 =====
 function rivalFormedDate(r) {
+  if (r.formedDate) {
+    const f = r.formedDate;
+    return f.year + "-" + String(f.month).padStart(2, "0") + "-" + String(f.day).padStart(2, "0");
+  }
   const d = dayToDate(r.activeDay || 0);
   return d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
 }
