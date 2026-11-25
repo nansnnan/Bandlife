@@ -18,6 +18,16 @@ function createSong(data) {
     createdDay: Game.dayIndex,
     released: false,
   };
+  if (data.inProgress) {
+    // 创作中：暂不计算质量，完成后由 checkSongProgress 结算
+    song.inProgress = true;
+    song.dueDay = data.dueDay || (Game.dayIndex + 30);
+    song.quality = 0;
+    Game.songs.push(song);
+    addEvent(`《${song.name}》开始创作，预计 ${song.dueDay - Game.dayIndex} 天后完成。`);
+    saveGame();
+    return song;
+  }
   song.quality = calcSongQuality(song);
   Game.songs.push(song);
   addEvent(`新歌《${song.name}》创作完成。`);

@@ -164,6 +164,8 @@ function advanceTime(days) {
     tickDaily();
     if (Game.dayIndex % 7 === 0) tickWeekly();
     if (Game.dayIndex % 30 === 0) tickMonthly();
+    // 创作中的歌曲到期则完成
+    if (typeof checkSongProgress === "function") checkSongProgress();
   }
   updateRivalActivity();
   saveGame();

@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.72",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "修复创作歌曲、发布歌曲页面复选框间距过小导致文字竖排的问题。",
+      "创作歌曲新增 34 种乐器，勾选后对应生成演奏者输入框。",
+      "创作歌曲不再立即消耗时间，改为显示「创作中，预计 XX 天后完成」，到达日期后自动完成并结算质量。",
+    ],
+  },
+  {
     version: "1.2.71",
     date: "2026-11-25",
     size: "小更新",

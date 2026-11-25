@@ -345,7 +345,11 @@ function renderCreateSong() {
   const el = document.querySelector('[data-game-view="create-song"]');
   const b = Game.band;
   const songs = Game.songs.filter(s => !s.released);
-  const INSTR = ["木吉他", "电吉他", "贝斯", "鼓", "键盘", "钢琴", "小提琴", "大提琴", "小号", "萨克斯", "合成器", "和声"];
+  const _INSTR_RAW = ["木吉他", "电吉他", "贝斯", "鼓", "键盘", "钢琴", "小提琴", "大提琴", "小号", "萨克斯", "合成器", "和声",
+    "长笛", "单簧管", "双簧管", "大管", "长号", "圆号", "大号", "手风琴", "口琴", "班卓琴", "尤克里里",
+    "曼陀林", "竖琴", "管风琴", "电子琴", "打击乐", "定音鼓", "铃鼓", "康佳鼓", "架子鼓", "非洲鼓", "二胡",
+    "古筝", "琵琶", "笛子", "箫", "唢呐", "扬琴", "三弦", "马头琴", "笙", "埙", "葫芦丝", "管子"];
+  const INSTR = [...new Set(_INSTR_RAW)];
   el.innerHTML = `
     <div class="section-title">创作歌曲</div>
     <div class="card">
@@ -385,19 +389,31 @@ function renderCreateSong() {
       </div>
       <div class="form-group">
         <label>歌曲编制（选择参与的乐器）</label>
-        <div id="song-instrument-box" style="display:flex;flex-wrap:wrap;gap:12px;">
-          ${INSTR.map(ins => `<label style="display:flex;align-items:center;gap:4px;font-size:13px;cursor:pointer;"><input type="checkbox" class="song-instrument" value="${ins}"> ${ins}</label>`).join("")}
+        <div id="song-instrument-box" class="opt-group">
+          ${INSTR.map(ins => `<label class="opt-item"><input type="checkbox" class="song-instrument" value="${ins}"> ${ins}</label>`).join("")}
         </div>
       </div>
       <div class="form-group">
         <label>自定义歌词</label>
         <textarea id="song-lyrics" rows="6" placeholder="输入歌词（填写完整歌词可提升歌曲质量）" style="width:100%;resize:vertical;"></textarea>
       </div>
-      <button class="btn-primary" data-action="submit-song" style="width:100%;">创作歌曲（消耗 30 天）</button>
+      <button class="btn-primary" data-action="submit-song" style="width:100%;">开始创作</button>
     </div>
 
     <div class="section-title" style="margin-top:20px;">未发布的歌曲（${songs.length}）</div>
-    ${songs.length ? songs.map(s => `
+    ${songs.length ? songs.map(s => s.inProgress ? `
+      <div class="list-item" data-action="preview-song" data-id="${s.id}">
+        <div class="li-left">
+          <div class="li-cover">✍️</div>
+          <div>
+            <div class="li-title">${s.name}</div>
+            <div class="li-sub">歌曲创作中，预计 ${Math.max(0, s.dueDay - Game.dayIndex)} 天后完成</div>
+          </div>
+        </div>
+        <div class="li-right">
+          <span class="badge">创作中</span>
+        </div>
+      </div>` : `
       <div class="list-item" data-action="preview-song" data-id="${s.id}">
         <div class="li-left">
           <div class="li-cover">🎵</div>
@@ -440,6 +456,24 @@ function updateSongPlayers() {
     </div>`).join("");
 }
 
+const SONG_CREATE_DAYS = 30;   // 歌曲创作周期（天）
+
+// 检查创作中的歌曲：到达完成日期则转为已创作
+function checkSongProgress() {
+  let changed = false;
+  for (const s of Game.songs) {
+    if (s.inProgress && Game.dayIndex >= s.dueDay) {
+      s.inProgress = false;
+      delete s.dueDay;
+      s.quality = calcSongQuality(s);
+      addEvent(`新歌《${s.name}》创作完成。`);
+      changed = true;
+    }
+  }
+  if (changed) saveGame();
+  return changed;
+}
+
 function submitSong() {
   const name = document.getElementById("song-name").value.trim();
   if (!name) { alert("请输入歌曲名称"); return; }
@@ -451,6 +485,8 @@ function submitSong() {
   const style = document.getElementById("song-style").value;
   const styleObj = window.MUSIC_STYLES.find(s => s.name === style);
   const song = createSong({
+    inProgress: true,
+    dueDay: Game.dayIndex + SONG_CREATE_DAYS,
     name,
     style,
     styleCategory: styleObj?.category,
@@ -461,7 +497,7 @@ function submitSong() {
     lyrics: document.getElementById("song-lyrics").value,
     instrumentation,
   });
-  advanceTime(30);  // 创作耗时（约 1 个月，符合真实乐队单曲创作周期）
+  // 不立即消耗时间：创作中状态由 checkSongProgress 在到达日期后结算
   renderCreateSong();
   renderTopbar();
 }
@@ -469,7 +505,7 @@ function submitSong() {
 // ===== 发布视图 =====
 function renderRelease() {
   const el = document.querySelector('[data-game-view="release"]');
-  const songs = Game.songs.filter(s => !s.released);
+  const songs = Game.songs.filter(s => !s.released && !s.inProgress);
   if (!window._releaseQueue) window._releaseQueue = [];
   window._releaseQueue = window._releaseQueue.filter(id => songs.some(s => s.id === id));
   el.innerHTML = `
@@ -500,10 +536,10 @@ function renderRelease() {
       </div>
       <div class="form-group" id="release-sale-wrap">
         <label>专辑销售（仅发布「专辑」时生效）</label>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px;">
-          <label style="display:flex;align-items:center;gap:4px;"><input type="radio" name="sale-mode" value="不销售" checked> 不销售</label>
-          <label style="display:flex;align-items:center;gap:4px;"><input type="radio" name="sale-mode" value="数字"> 数字专辑</label>
-          <label style="display:flex;align-items:center;gap:4px;"><input type="radio" name="sale-mode" value="实体"> 实体专辑</label>
+        <div class="opt-group" style="margin-bottom:10px;">
+          <label class="opt-item"><input type="radio" name="sale-mode" value="不销售" checked> 不销售</label>
+          <label class="opt-item"><input type="radio" name="sale-mode" value="数字"> 数字专辑</label>
+          <label class="opt-item"><input type="radio" name="sale-mode" value="实体"> 实体专辑</label>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <label style="flex:1;min-width:120px;">定价（元）
@@ -516,7 +552,7 @@ function renderRelease() {
         <div id="release-sale-hint" style="color:var(--text-faint);font-size:12px;margin-top:6px;"></div>
       </div>
       <div class="form-group">
-        <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox" id="release-promotion" style="width:auto;"> 投入推广（¥30,000，+5% 质量）</label>
+        <div class="opt-group"><label class="opt-item"><input type="checkbox" id="release-promotion"> 投入推广（¥30,000，+5% 质量）</label></div>
       </div>
       <button class="btn-primary" data-action="submit-release" style="width:100%;">发布</button>
     </div>
