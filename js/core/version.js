@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.80",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "重做 2026—2050 年曲目，改为全局统一去重：新增 3479 首全部唯一，跨乐队与同乐队内均无重名。",
+      "扩充各风格意象词库并优先采用乐队自有词汇，命名更贴合各自气质。",
+    ],
+  },
+  {
     version: "1.2.79",
     date: "2026-11-26",
     size: "小更新",
