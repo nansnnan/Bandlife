@@ -142,6 +142,57 @@ function buildCharts() {
   return { singles, albums };
 }
 
+
+// 名称排序：英文按字母、中文按拼音（localeCompare zh），英文优先于中文
+function _sortKey(name) {
+  const n = String(name || "").trim();
+  if (!n) return "~";
+  const c = n[0];
+  if (/[a-zA-Z]/.test(c)) return "A" + n.toLowerCase();
+  if (/[0-9]/.test(c)) return "0" + n;
+  return "Z" + n;
+}
+function _cmpName(a, b) {
+  const ka = _sortKey(a), kb = _sortKey(b);
+  if (ka[0] !== kb[0]) return ka < kb ? -1 : 1;
+  return String(a).localeCompare(String(b), "zh");
+}
+
+// 已发行（当前日期之前）的全部歌曲与专辑，按名称排序
+function buildLibrary() {
+  const today = Game.dayIndex;
+  const songs = [], albums = [];
+  for (const rel of Game.releases) {
+    if ((rel.dayIndex || 0) > today) continue;
+    albums.push({
+      key: "own||" + rel.id, album: rel.name, bandName: rel.bandName || Game.band.name,
+      releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: false,
+      tracks: rel.songs.map((sg, i) => ({ name: sg.name, playId: rel.id, idx: i })),
+    });
+    rel.songs.forEach(sg => {
+      songs.push({ id: sg.id || (rel.id + "_" + sg.name), name: sg.name, bandName: rel.bandName || Game.band.name, album: rel.name, dayIndex: rel.dayIndex });
+    });
+  }
+  for (const r of Game.rivals) {
+    for (const rel of r.releases) {
+      if ((rel.dayIndex || 0) > today) continue;
+      const key = "riv||" + r.name + "||" + (rel.album || rel.name);
+      let a = albums.find(x => x.key === key);
+      if (!a) {
+        a = { key, album: rel.album || rel.name, bandName: r.name, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: true, tracks: [] };
+        albums.push(a);
+      }
+      a.tracks.push({ name: rel.name, playId: rivalRelId(rel), idx: a.tracks.length });
+      songs.push({ id: rivalRelId(rel), name: rel.name, bandName: r.name, album: rel.album || rel.name, dayIndex: rel.dayIndex });
+    }
+  }
+  songs.sort((a, b) => _cmpName(a.name, b.name));
+  albums.sort((a, b) => _cmpName(a.album, b.album));
+  // 专辑内歌曲保持默认（发行）顺序
+  albums.forEach(a => a.tracks.sort((x, y) => x.idx - y.idx));
+  return { songs, albums };
+}
+
 function renderPlayerView() {
   const el = document.querySelector('[data-game-view="player"]');
   const prevScrollEl = el.querySelector('.player-scroll');
@@ -149,16 +200,23 @@ function renderPlayerView() {
   const prevListEl = el.querySelector('.player-track-list');
   const prevListTop = prevListEl ? prevListEl.scrollTop : 0;
   const { singles, albums } = buildCharts();
+  const lib = buildLibrary();
   const tab = window._playerChartTab || "单曲热度";
-  const isAlbums = (tab === "专辑热度" || tab === "专辑销量");
+  const isLibrarySongs = tab === "全部音乐";
+  const isLibraryAlbums = tab === "全部专辑";
+  const isAlbums = (tab === "专辑热度" || tab === "专辑销量" || isLibraryAlbums);
   let list;
-  if (tab === "单曲热度") list = singles.slice().sort((a, b) => b.plays - a.plays);
+  if (isLibrarySongs) list = lib.songs;
+  else if (isLibraryAlbums) list = lib.albums;
+  else if (tab === "单曲热度") list = singles.slice().sort((a, b) => b.plays - a.plays);
   else if (tab === "专辑热度") list = albums.slice().sort((a, b) => b.plays - a.plays);
   else if (tab === "新歌热度") list = singles.filter(s => s.dayIndex >= Game.dayIndex - 30).sort((a, b) => b.plays - a.plays);
   else list = albums.slice().sort((a, b) => b.sales - a.sales);
 
   const myRankItems = [];
-  if (!isAlbums) {
+  const isChartMode = !isLibrarySongs && !isLibraryAlbums;
+  if (!isChartMode) { /* 全部音乐/全部专辑模式下不显示排名对比 */ }
+  else if (!isAlbums) {
     const mySongs = [];
     for (const rel of Game.releases) for (const s of rel.songs) mySongs.push({ id: s.id || (rel.id + "_" + s.name), name: s.name });
     for (const ms of mySongs) {
@@ -179,8 +237,8 @@ function renderPlayerView() {
 
   let rows;
   if (isAlbums) {
-    rows = list.slice(0, 100).map((it, i) => {
-      const val = tab === "专辑销量" ? formatNumber(it.sales) + " 张" : formatNumber(it.plays) + " 播放";
+    rows = (isLibraryAlbums ? list : list.slice(0, 100)).map((it, i) => {
+      const val = isLibraryAlbums ? "" : (tab === "专辑销量" ? formatNumber(it.sales) + " 张" : formatNumber(it.plays) + " 播放");
       const isOpen = expanded.has(it.key);
       const subRows = isOpen ? (it.tracks || []).map((t, ti) => `<div class="chart-item clickable chart-sub-item" data-action="play-track" data-id="${escapeHtml(t.playId)}">
         <span class="chart-rank">${ti + 1}</span>
@@ -197,8 +255,8 @@ function renderPlayerView() {
       </div>${subRows}`;
     }).join("");
   } else {
-    rows = list.slice(0, 100).map((it, i) => {
-      const val = formatNumber(it.plays) + " 播放";
+    rows = (isLibrarySongs ? list : list.slice(0, 100)).map((it, i) => {
+      const val = isLibrarySongs ? "" : formatNumber(it.plays) + " 播放";
       return `<div class="chart-item clickable" data-action="play-track" data-id="${it.id}">
         <span class="chart-rank ${i < 3 ? "top" : ""}">${i + 1}</span>
         <div class="chart-main">
@@ -221,11 +279,11 @@ function renderPlayerView() {
         </div>
       </div>
       <div class="chart-tabs">
-        ${["单曲热度", "专辑热度", "新歌热度", "专辑销量"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${t}榜</button>`).join("")}
+        ${["单曲热度", "专辑热度", "新歌热度", "专辑销量", "全部音乐", "全部专辑"].map(t => `<button class="chart-tab ${t === tab ? "active" : ""}" data-action="player-chart-tab" data-tab="${t}">${/^全部/.test(t) ? t : t + "榜"}</button>`).join("")}
       </div>
     </div>
     <div class="player-scroll">
-      ${renderMyRankDropdown(myRankItems)}
+      ${isChartMode ? renderMyRankDropdown(myRankItems) : ""}
       <div class="player-layout">
         <div class="player-left">
           <div class="player-track-list chart-list">

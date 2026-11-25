@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.70",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "新年贺词排版规则：年初无重要事件时贺词置头条，有重要事件时让位到第二位。",
+      "本周乐坛动态并入「乐坛快讯」，新闻页不再单独显示通知区块。",
+      "播放器新增「全部音乐」「全部专辑」两个列表，按名称首字母排序，仅显示已发行内容。",
+    ],
+  },
+  {
     version: "1.2.69",
     date: "2026-11-24",
     size: "小更新",

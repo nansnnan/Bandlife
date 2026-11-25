@@ -563,11 +563,10 @@ function getSpecialNews(day) {
     })[0];
   // 范围内遇到单日重大事件时，以单日事件为准；否则持续展示范围长讯
   const _rngPri = rangeHit ? (rangeHit.headline === false ? 96 : 115) : 0;
-  // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
-  if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
-    const n = window.NEWS_NEW_YEAR[0];
-    return { title: n.title, body: n.body, social: true, level: "major", _prio: 130 };
-  }
+  // 新年贺词：每年 1 月 1 日。当日无重要事件时置于头条；有重要事件时让位（由调用方排到第二位）
+  const newYearItem = (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length)
+    ? (() => { const n = window.NEWS_NEW_YEAR[0]; return { title: n.title, body: n.body, social: true, level: "major", _prio: 130, _isNewYear: true }; })()
+    : null;
   // 国家重要级长文：按事件表日期（单日事件优先于长周期范围事件）
   const M = (window.MAJOR_EVENTS || []).filter(m => String(m.year) === y).filter(m => {
     const mm = m.date.match(/^(\d+)月(\d+)日/);
@@ -593,6 +592,7 @@ function getSpecialNews(day) {
     return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 108 };
   }
   if (rangeHit) return { title: rangeHit.title, body: rangeHit.body, social: true, level: "major", _prio: _rngPri };
+  if (newYearItem) return newYearItem;
 
   // 国家级节日
   const F = window.FESTIVALS || [];
@@ -617,6 +617,23 @@ function getSpecialNews(day) {
 function getSpecialNewsWeek(startDay) {
   const list = [];
   for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) list.push(s); }
+  // 元旦所在周：无重要事件时贺词即头条；有重要事件时让位到第二版位
+  const _hasMajor = list.some(x => !x._isNewYear && (x._prio || 0) >= 108);
+  if (_hasMajor) {
+    list.forEach(x => { if (x._isNewYear) x._prio = 107; });
+  }
+  if (window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
+    for (let d = 0; d < 7; d++) {
+      const dd = dayToDate(startDay + d);
+      if (dd.month === 1 && dd.day === 1 && !list.some(x => x._isNewYear)) {
+        const ny = getSpecialNews(startDay + d);
+        if (!ny || !ny._isNewYear) {
+          const n = window.NEWS_NEW_YEAR[0];
+          list.push({ title: n.title, body: n.body, social: true, level: "major", _prio: _hasMajor ? 107 : 129, _isNewYear: true });
+        }
+      }
+    }
+  }
   // 同一周多个特殊日：字数多的放头条，字数少的放第二，其余顺延
   // 版位规则：先按事件重要度（_prio）决定名次，同重要度再按字数降序。
   // 长周期事件（如疫情、重大赛事）重要度较低，有其他更重要事件时自动退居第 2 版位，
@@ -719,7 +736,14 @@ function generateNewsIssue(week) {
   }
 
   const metaKw = ["沙盒模式","乐队生涯","资金无限","自由创作","正式成立"];
-  const weekEvents = (Game.events || []).filter(e => e.day >= startDay && e.day < startDay + 7 && !metaKw.some(k => (e.text || "").indexOf(k) >= 0)).reverse().slice(0, 3);
+  // 本周动态并入「乐坛快讯」，不再单独成块
+  const weekEvents = (Game.events || [])
+    .filter(e => e.day >= startDay && e.day < startDay + 7 && !metaKw.some(k => (e.text || "").indexOf(k) >= 0))
+    .reverse().slice(0, 3);
+  weekEvents.forEach(ev => {
+    const txt = String(ev.text || "").trim();
+    if (txt && !items.some(i => i.text === txt)) items.push({ band: true, text: txt });
+  });
   return { issueNo, startDay, date, leads, items, weekEvents };
 }
 

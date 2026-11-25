@@ -298,9 +298,7 @@ function buildNewsIssue(week) {
 function renderNewsIssue(issue) {
   const WK = ["日","一","二","三","四","五","六"];
   const wk = WK[(((issue.startDay + 6) % 7) + 7) % 7];
-  const evHtml = issue.weekEvents && issue.weekEvents.length
-    ? `<div class="news-events">${issue.weekEvents.map(e => `<div class="news-event">· ${escapeHtml(e.text)}</div>`).join("")}</div>`
-    : "";
+
   const leads = issue.leads || [];
   const renderLead = (l, big) => {
     const paras = (l.body || "").split("\n").filter(Boolean).map(p => `<p>${escapeHtml(p)}</p>`).join("");
@@ -335,7 +333,6 @@ function renderNewsIssue(issue) {
       <div class="news-rule"></div>
       ${headHtml}
       ${restHtml}
-      ${evHtml}
       <div class="news-shorts">
         ${shortGroup("社会", socialItems)}
         ${shortGroup("乐坛", bandItems)}
