@@ -522,7 +522,14 @@ const _MAJOR_KEYS = ["神舟五号", "非典", "十六届三中全会", "十六�
   "一号文件", "反分裂国家法", "农业税", "荣辱观", "三峡", "汶川", "奥运", "物权法", "嫦娥一号", "劳动合同法",
   "金融危机", "六十周年", "国庆60周年", "世博会", "玉树", "嫦娥二号", "十七届五中全会", "九十周年", "天宫一号",
   "十七届六中全会", "青藏高原", "蛟龙", "辽宁舰", "十八大", "八项规定", "一带一路", "十八届三中全会", "4G",
+  "建党100周年", "纪念建党", "脱贫攻坚", "冬奥", "冬残奥", "二十大", "北斗", "嫦娥五号", "奋斗者", "天和",
   "太空授课", "互联网大会", "公祭日", "南水北调", "深化改革"];
+function _rngDays(r) {
+  const a = new Date(r[0] + "T00:00:00").getTime();
+  const b = new Date(r[1] + "T00:00:00").getTime();
+  return Math.round((b - a) / 86400000);
+}
+
 function _matchMajorLong(year, m, d) {
   const y = String(year);
   const evName = String(m.event);
@@ -530,7 +537,8 @@ function _matchMajorLong(year, m, d) {
     if (String(x.year) !== y) continue;
     if (x.range) {
       const ds = d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
-      if (ds >= x.range[0] && ds <= x.range[1]) return x;
+      const inRange = ds >= x.range[0] && ds <= x.range[1];
+      if (inRange && x.event === evName) return x;
       continue;
     }
     if (x.event === evName) return x;
@@ -545,31 +553,46 @@ function getSpecialNews(day) {
   const d = dayToDate(day);
   const y = String(d.year);
   const dateStr = d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
-  const rangeHit = (window.NEWS_MAJOR_LONG || [])
-    .filter(x => x.range && dateStr >= x.range[0] && dateStr <= x.range[1])
-    .sort((a, b) => (a.range[1] - a.range[0]) - (b.range[1] - b.range[0]))[0];
+  const _rngAll = (window.NEWS_MAJOR_LONG || [])
+    .filter(x => x.range && dateStr >= x.range[0] && dateStr <= x.range[1]);
+  // 短周期事件优先展示，长周期（如疫情防控）退居其后
+  const rangeHit = _rngAll
+    .sort((a, b) => {
+      const da = _rngDays(a.range), db = _rngDays(b.range);
+      return da - db;
+    })[0];
   // 范围内遇到单日重大事件时，以单日事件为准；否则持续展示范围长讯
-  const _rngPri = rangeHit ? 115 : 0;
+  const _rngPri = rangeHit ? (rangeHit.headline === false ? 96 : 115) : 0;
   // 新年贺词：每年 1 月 1 日（优先，覆盖当日重要级）
   if (d.month === 1 && d.day === 1 && window.NEWS_NEW_YEAR && window.NEWS_NEW_YEAR.length) {
     const n = window.NEWS_NEW_YEAR[0];
     return { title: n.title, body: n.body, social: true, level: "major", _prio: 130 };
   }
-  // 国家重要级长文：按事件表日期（长文优先，避免被同日的其他事件挤占）
+  // 国家重要级长文：按事件表日期（单日事件优先于长周期范围事件）
   const M = (window.MAJOR_EVENTS || []).filter(m => String(m.year) === y).filter(m => {
     const mm = m.date.match(/^(\d+)月(\d+)日/);
     return mm && Number(mm[1]) === d.month && Number(mm[2]) === d.day;
   });
+  // 第一轮：找出与当日事件对应的长文（单日事件优先于范围事件）
+  let dayLong = null, rngLong = null;
   for (const m of M) {
     const ml = _matchMajorLong(d.year, m, d);
-    if (ml && !ml.range) return { title: ml.title, body: ml.body, social: true, level: "major", _prio: 118 };
+    if (!ml) continue;
+    if (!ml.range) { dayLong = ml; break; }
+    if (!rngLong) rngLong = ml;
   }
-  // 范围内无单日长文时，持续展示范围长讯（优先于占位条目）
-  if (rangeHit) return { title: rangeHit.title, body: rangeHit.body, social: true, level: "major", _prio: _rngPri };
+  // 第二轮：当日无长文时，若处于某范围事件区间内，优先展示该范围长文（高于占位条目）
+  const hitLong = dayLong || rngLong || rangeHit;
+  if (hitLong) {
+    const isRng = !!hitLong.range;
+    const prio = dayLong === hitLong ? 118 : (hitLong.headline === false ? 96 : 115);
+    return { title: hitLong.title, body: hitLong.body, social: true, level: "major", _prio: prio };
+  }
   if (M.length) {
     const m = M[0];
     return { title: m.event, body: m.content + "\n\n（本报编辑部）", social: true, level: "major", _prio: 108 };
   }
+  if (rangeHit) return { title: rangeHit.title, body: rangeHit.body, social: true, level: "major", _prio: _rngPri };
 
   // 国家级节日
   const F = window.FESTIVALS || [];
@@ -595,7 +618,10 @@ function getSpecialNewsWeek(startDay) {
   const list = [];
   for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) list.push(s); }
   // 同一周多个特殊日：字数多的放头条，字数少的放第二，其余顺延
-  list.sort((a, b) => (b.body || "").length - (a.body || "").length);
+  // 版位规则：先按事件重要度（_prio）决定名次，同重要度再按字数降序。
+  // 长周期事件（如疫情、重大赛事）重要度较低，有其他更重要事件时自动退居第 2 版位，
+  // 待头条位置空出后自然回到第 1 版位。
+  list.sort((a, b) => (b._prio || 0) - (a._prio || 0) || (b.body || "").length - (a.body || "").length);
   return list;
 }
 
