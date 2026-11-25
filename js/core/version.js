@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.73",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "新增「竞争对手」页面：展示全部竞争对手乐队的名称、成立/出道时间、风格、知名度与粉丝数；未出道乐队灰显并标注预计成立日期。",
+      "点击乐队可进入详情页，按专辑分组展示已发布作品及各曲播放量、评分。",
+    ],
+  },
+  {
     version: "1.2.72",
     date: "2026-11-25",
     size: "小更新",

@@ -208,6 +208,7 @@ function renderGameView(name) {
     "rating": renderRatingView,
     "tour": renderTour,
     "train": renderTrain,
+    "rivals": renderRivals,
   };
   if (map[name]) map[name]();
 }
@@ -653,6 +654,129 @@ function submitRelease() {
   renderTopbar();
 }
 
+
+
+// ===== 竞争对手视图 =====
+function rivalFormedDate(r) {
+  const d = dayToDate(r.activeDay || 0);
+  return d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
+}
+
+function renderRivals() {
+  const el = document.querySelector('[data-game-view="rivals"]');
+  const all = (Game.rivals || []).slice().sort((a, b) => (a.activeDay || 0) - (b.activeDay || 0));
+  const shown = all.filter(r => r.active);
+  const upcoming = all.filter(r => !r.active);
+
+  const card = (r) => {
+    const formed = rivalFormedDate(r);
+    if (!r.active) {
+      return `<div class="rival-card dim">
+        <div class="rival-row">
+          <div class="rival-name">${escapeHtml(r.name)}</div>
+          <span class="badge">未出道</span>
+        </div>
+        <div class="rival-sub">${escapeHtml(r.style)} · ${escapeHtml(r.origin || "")}</div>
+        <div class="rival-meta">预计 ${formed} 成立/出道</div>
+      </div>`;
+    }
+    const pop = Math.round(r.currentPopularity || r.popularity || 0);
+    const fans = Math.round(r.fans || 0);
+    return `<div class="rival-card clickable" data-action="rival-detail" data-name="${escapeHtml(r.name)}">
+      <div class="rival-row">
+        <div class="rival-name">${escapeHtml(r.name)}</div>
+        <span class="badge badge-blue">出道</span>
+      </div>
+      <div class="rival-sub">${escapeHtml(r.style)} · ${escapeHtml(r.origin || "")} · 成立于 ${formed}</div>
+      <div class="rival-meta">
+        <span>知名度 ${pop}</span>
+        <span>粉丝 ${formatNumber(fans)}</span>
+      </div>
+    </div>`;
+  };
+
+  el.innerHTML = `
+    <div class="section-title">🎸 竞争对手</div>
+    <div class="rival-hint">共 ${all.length} 支乐队，其中已出道 ${shown.length} 支，未出道 ${upcoming.length} 支</div>
+    <div class="rival-list">
+      ${shown.map(card).join("")}
+      ${upcoming.map(card).join("")}
+    </div>
+  `;
+}
+
+function renderRivalDetail(name) {
+  const el = document.querySelector('[data-game-view="rivals"]');
+  const r = (Game.rivals || []).find(x => x.name === name);
+  if (!r) { renderRivals(); return; }
+  const formed = rivalFormedDate(r);
+  const rels = (r.releases || []).slice().sort((a, b) => (b.dayIndex || 0) - (a.dayIndex || 0));
+  const score = (x) => (x.avgScore != null ? x.avgScore.toFixed(1) : (x.quality != null ? (x.quality / 10).toFixed(1) : "-"));
+
+  // 按专辑名分组：同名 album 的条目属于同一张专辑
+  const albumMap = new Map();
+  const singles = [];
+  for (const rel of rels) {
+    if (rel.releaseType === "单曲") { singles.push(rel); continue; }
+    const key = rel.album || rel.name;
+    if (!albumMap.has(key)) {
+      albumMap.set(key, { name: key, type: rel.releaseType, dayIndex: rel.dayIndex, tracks: [] });
+    }
+    albumMap.get(key).tracks.push(rel);
+  }
+  const albums = [...albumMap.values()].sort((a, b) => (b.dayIndex || 0) - (a.dayIndex || 0));
+
+  const albHtml = albums.length ? albums.map(a => {
+    const plays = a.tracks.reduce((n, t) => n + (t.plays || 0), 0);
+    const avg = a.tracks.reduce((n, t) => n + (parseFloat(score(t)) || 0), 0) / (a.tracks.length || 1);
+    const rows = a.tracks.map(t => `
+      <div class="rival-track">
+        <span class="rival-track-name">${escapeHtml(t.name)}</span>
+        <span class="rival-track-plays">${formatNumber(t.plays || 0)}</span>
+        <span class="rival-track-score">${score(t)}</span>
+      </div>`).join("");
+    return `<div class="rival-album">
+      <div class="rival-album-head">
+        <div>
+          <div class="rival-item-title">${escapeHtml(a.name)}</div>
+          <div class="rival-item-sub">${escapeHtml(a.type)} · ${a.tracks.length} 首 · ${formatNumber(plays)} 播放</div>
+        </div>
+        <div class="rival-score">${avg.toFixed(1)}</div>
+      </div>
+      <div class="rival-tracks">${rows}</div>
+    </div>`;
+  }).join("") : `<div class="rival-empty">暂无已发布专辑</div>`;
+
+  const sinHtml = singles.length ? singles.map(s => `
+    <div class="rival-item">
+      <div class="rival-item-main">
+        <div class="rival-item-title">${escapeHtml(s.name)}</div>
+        <div class="rival-item-sub">单曲 · ${formatNumber(s.plays || 0)} 播放</div>
+      </div>
+      <div class="rival-score">${score(s)}</div>
+    </div>`).join("") : `<div class="rival-empty">暂无已发布单曲</div>`;
+
+  el.innerHTML = `
+    <div class="rival-detail-head">
+      <button class="btn-time" data-action="rival-back">← 返回列表</button>
+    </div>
+    <div class="card">
+      <div class="card-title">${escapeHtml(r.name)}</div>
+      <div class="rival-detail-meta">
+        <div>风格：${escapeHtml(r.style)}</div>
+        <div>成立：${formed}</div>
+        <div>地区：${escapeHtml(r.origin || "-")}</div>
+        <div>知名度：${Math.round(r.currentPopularity || r.popularity || 0)}</div>
+        <div>粉丝：${formatNumber(Math.round(r.fans || 0))}</div>
+      </div>
+      ${r.desc ? `<div class="rival-desc">${escapeHtml(r.desc)}</div>` : ""}
+    </div>
+    <div class="section-title">已发布专辑（${albums.length}）</div>
+    <div class="rival-items">${albHtml}</div>
+    <div class="section-title">已发布单曲（${singles.length}）</div>
+    <div class="rival-items">${sinHtml}</div>
+  `;
+}
 
 // ===== 训练视图 =====
 function renderTrain() {

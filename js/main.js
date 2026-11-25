@@ -175,6 +175,12 @@ function bindEvents() {
       }
       case "play-track":
         playTrack(target.dataset.id); break;
+      case "rival-detail":
+        window._rivalDetail = target.dataset.name;
+        renderRivalDetail(target.dataset.name); break;
+      case "rival-back":
+        window._rivalDetail = null;
+        renderRivals(); break;
       case "seek": {
         const rect = target.getBoundingClientRect();
         const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));

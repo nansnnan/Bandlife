@@ -840,3 +840,37 @@ select { cursor: pointer; }
   width: 16px; height: 16px; min-width: 16px; padding: 0; margin: 0;
   flex: 0 0 auto; accent-color: var(--accent); cursor: pointer;
 }
+
+/* ===== 竞争对手 ===== */
+.rival-hint { color: var(--text-faint); font-size: 12px; margin-bottom: 10px; }
+.rival-list { display: flex; flex-direction: column; gap: 10px; }
+.rival-card {
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 14px;
+}
+.rival-card.dim { opacity: 0.45; }
+.rival-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.rival-name { font-size: 15px; font-weight: 600; color: var(--text); }
+.rival-sub { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+.rival-meta { display: flex; gap: 14px; font-size: 12px; color: var(--text-faint); margin-top: 6px; }
+.rival-detail-head { margin-bottom: 10px; }
+.rival-detail-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px; color: var(--text-dim); }
+.rival-desc { margin-top: 10px; font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+.rival-items { display: flex; flex-direction: column; gap: 8px; }
+.rival-item {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.rival-item-title { font-size: 14px; color: var(--text); }
+.rival-item-sub { font-size: 12px; color: var(--text-faint); margin-top: 3px; }
+.rival-score { font-size: 15px; font-weight: 600; color: var(--accent); min-width: 44px; text-align: right; }
+.rival-empty { color: var(--text-faint); font-size: 13px; text-align: center; padding: 14px; }
+
+/* 竞争对手详情：专辑分组 */
+.rival-album { background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+.rival-album-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.rival-tracks { margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.rival-track { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; font-size: 12px; color: var(--text-dim); }
+.rival-track-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rival-track-plays { color: var(--text-faint); }
+.rival-track-score { color: var(--accent); min-width: 32px; text-align: right; }
