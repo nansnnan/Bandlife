@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.78",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "重写 2026—2050 年的新作品曲名，改用各风格的意象词汇，去掉「II」「Reprise」等生硬后缀，更贴近现实作品。",
+      "曲目时长改为围绕乐队平均时长浮动并保留明显变化，短曲乐队也会出现长曲，反之亦然。",
+      "修复竞争对手新作品发布后播放量显示为 0 的问题，发布即刻计入首日播放。",
+    ],
+  },
+  {
     version: "1.2.77",
     date: "2026-11-25",
     size: "小更新",

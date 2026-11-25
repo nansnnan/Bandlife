@@ -276,7 +276,13 @@ function rivalRelease(rival) {
     rival.releaseIndex++;
     count++;
   }
-  if (count > 0) addEvent(`${rival.name} 发布${releaseType}《${albumName}》（共 ${count} 首）。`);
+  if (count > 0) {
+    // 发布即刻计入首日播放，避免列表显示为 0
+    for (let i = rival.releases.length - count; i < rival.releases.length; i++) {
+      growRelease(rival.releases[i], 1);
+    }
+    addEvent(`${rival.name} 发布${releaseType}《${albumName}》（共 ${count} 首）。`);
+  }
 }
 
 // ===== 播放量增长模型 =====
