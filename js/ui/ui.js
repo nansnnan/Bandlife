@@ -657,6 +657,25 @@ function submitRelease() {
 
 
 // ===== 竞争对手视图 =====
+// 与玩家「名气」同一算法：起始名次取乐队固有知名度（百分制），
+// 再按每张专辑的平均质量累加 (avgQuality-50)/20，区间 5–100（与玩家 reputation 公式一致）
+function rivalFame(r) {
+  const base = (r.popularity != null ? r.popularity : (r.currentPopularity || 5)) * 10;
+  let rep = Math.max(5, Math.min(100, base));
+  const rels = r.releases || [];
+  const groups = new Map();
+  for (const rel of rels) {
+    const key = rel.album || rel.name;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(rel);
+  }
+  for (const arr of groups.values()) {
+    const avg = arr.reduce((s, x) => s + (x.quality || 50), 0) / arr.length;
+    rep = Math.max(5, Math.min(100, rep + (avg - 50) / 20));
+  }
+  return Math.round(rep);
+}
+
 function rivalFormedDate(r) {
   if (r.formedDate) {
     const f = r.formedDate;
@@ -684,7 +703,7 @@ function renderRivals() {
         <div class="rival-meta">预计 ${formed} 成立/出道</div>
       </div>`;
     }
-    const pop = Math.round(r.currentPopularity || r.popularity || 0);
+    const fame = rivalFame(r);
     const fans = Math.round(r.fans || 0);
     return `<div class="rival-card clickable" data-action="rival-detail" data-name="${escapeHtml(r.name)}">
       <div class="rival-row">
@@ -693,7 +712,7 @@ function renderRivals() {
       </div>
       <div class="rival-sub">${escapeHtml(r.style)} · ${escapeHtml(r.origin || "")} · 成立于 ${formed}</div>
       <div class="rival-meta">
-        <span>知名度 ${pop}</span>
+        <span>名气 ${fame}</span>
         <span>粉丝 ${formatNumber(fans)}</span>
       </div>
     </div>`;
@@ -770,7 +789,7 @@ function renderRivalDetail(name) {
         <div>风格：${escapeHtml(r.style)}</div>
         <div>成立：${formed}</div>
         <div>地区：${escapeHtml(r.origin || "-")}</div>
-        <div>知名度：${Math.round(r.currentPopularity || r.popularity || 0)}</div>
+        <div>名气：${rivalFame(r)}</div>
         <div>粉丝：${formatNumber(Math.round(r.fans || 0))}</div>
       </div>
       ${r.desc ? `<div class="rival-desc">${escapeHtml(r.desc)}</div>` : ""}

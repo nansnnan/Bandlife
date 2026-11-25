@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.76",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "竞争对手页面的「知名度」改为「名气」，算法与玩家页面一致（起始值按乐队固有知名度换算百分制，再按每张专辑平均质量累加），区间 5–100。",
+      "标签与展示格式统一为玩家的「名气 / 粉丝」。",
+    ],
+  },
+  {
     version: "1.2.75",
     date: "2026-11-25",
     size: "小更新",
