@@ -616,7 +616,15 @@ function getSpecialNews(day) {
 
 function getSpecialNewsWeek(startDay) {
   const list = [];
-  for (let d = 0; d < 7; d++) { const s = getSpecialNews(startDay + d); if (s) list.push(s); }
+  const seenTitle = new Set();
+  for (let d = 0; d < 7; d++) {
+    const s = getSpecialNews(startDay + d);
+    if (!s) continue;
+    // 同一篇长讯（如范围事件、跨日事件）在同一周刊内只收录一次
+    if (seenTitle.has(s.title)) continue;
+    seenTitle.add(s.title);
+    list.push(s);
+  }
   // 元旦所在周：无重要事件时贺词即头条；有重要事件时让位到第二版位
   const _hasMajor = list.some(x => !x._isNewYear && (x._prio || 0) >= 108);
   if (_hasMajor) {
@@ -665,7 +673,15 @@ function generateNewsIssue(week) {
   const date = dayToDate(startDay);
   const rnd = (salt) => seededUnit("news|" + week + "|" + salt);
   const pick = (arr, salt) => arr[Math.floor(rnd(salt) * arr.length) % Math.max(1, arr.length)];
-  const albumsOf = (name) => ((window.BAND_DISCOGRAPHY && window.BAND_DISCOGRAPHY[name]) || []).map(x => x.name);
+  // 只取该乐队在当前期号之前已经发行的专辑，避免出现尚未发布的作品
+  const albumsOf = (name) => {
+    const rv = (Game.rivals || []).find(r => r.name === name);
+    if (rv && rv.releases) {
+      return rv.releases.filter(rel => (rel.dayIndex || 0) <= startDay)
+        .map(rel => rel.album || rel.name).filter(Boolean);
+    }
+    return ((window.BAND_DISCOGRAPHY && window.BAND_DISCOGRAPHY[name]) || []).map(x => x.name);
+  };
   let B = (Game.rivals || []).filter(r => r.releases && r.releases.length > 0);
   if (!B.length) B = (window.RIVAL_BANDS || []).filter(b => dateToDay(b.formed || 2000, 1, 1) <= startDay);
   if (!B.length) B = window.RIVAL_BANDS || [];

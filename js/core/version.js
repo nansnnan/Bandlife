@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.71",
+    date: "2026-11-25",
+    size: "小更新",
+    items: [
+      "修复乐坛快讯引用尚未发行专辑的问题，改为只使用当期已发行的专辑名称。",
+      "修复周刊长讯重复：同一条长讯在同一期内只出现一次，长周期事件仅占据头条，其余版位由其他新闻填充。",
+    ],
+  },
+  {
     version: "1.2.70",
     date: "2026-11-25",
     size: "小更新",
