@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.67",
+    date: "2026-11-24",
+    size: "小更新",
+    items: [
+      "国家重要级长文四批共 4 条：WTO 通过中国入世决定、邓小平诞辰100周年、三鹿奶粉事件、利比亚大规模撤侨，累计 103 条。",
+      "长文均为 22~28 段、每段约 110～130 字、全文 2500 字以上。",
+    ],
+  },
+  {
     version: "1.2.66",
     date: "2026-11-24",
     size: "小更新",
