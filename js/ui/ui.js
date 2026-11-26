@@ -719,24 +719,29 @@ function renderAwards() {
   };
 
   let statusHtml = "";
-  if (nom && nom.year === d.year && !res) {
+  if (d.year < 2001) {
     statusHtml = `<div class="award-status">
-      <div class="award-status-title">📌 第 ${nom.year} 届金曲奖 · 提名公布</div>
+      <div class="award-status-title">金曲奖 · 尚未设立</div>
+      <div class="award-status-sub">金曲奖自 2001 年起举办，第一届评选将于 2001 年 11 月启动，12 月 15 日颁奖。</div>
+    </div>`;
+  } else if (nom && nom.year === d.year && !res) {
+    statusHtml = `<div class="award-status">
+      <div class="award-status-title">📌 第 ${awardEdition(nom.year)} 届金曲奖 · 提名公布</div>
       <div class="award-status-sub">提名期进行中，颁奖典礼定于 12 月 15 日举行。</div>
     </div>`;
   } else if (res && res.year === d.year) {
     statusHtml = `<div class="award-status done">
-      <div class="award-status-title">🏆 第 ${res.year} 届金曲奖 · 已揭晓</div>
+      <div class="award-status-title">🏆 第 ${awardEdition(res.year)} 届金曲奖 · 已揭晓</div>
       <div class="award-status-sub">颁奖典礼已于 12 月 15 日举行，金奖以金色标记。</div>
     </div>`;
   } else if (d.month < 11) {
     statusHtml = `<div class="award-status">
-      <div class="award-status-title">第 ${d.year} 届金曲奖 · 尚未开始</div>
+      <div class="award-status-title">第 ${awardEdition(d.year)} 届金曲奖 · 尚未开始</div>
       <div class="award-status-sub">提名将于今年 11 月 1 日公布，12 月 15 日颁奖。</div>
     </div>`;
   } else {
     statusHtml = `<div class="award-status">
-      <div class="award-status-title">第 ${d.year} 届金曲奖 · 等待提名</div>
+      <div class="award-status-title">第 ${awardEdition(d.year)} 届金曲奖 · 等待提名</div>
       <div class="award-status-sub">提名将于 11 月 1 日公布。</div>
     </div>`;
   }
@@ -751,7 +756,7 @@ function renderAwards() {
     ? `<div class="section-title">往届获奖</div>
        <div class="award-history">
          ${history.map(h => `<div class="award-history-year">
-           <div class="award-history-title">第 ${h.year} 届</div>
+           <div class="award-history-title">第 ${awardEdition(h.year)} 届（${h.year} 年）</div>
            <div class="award-history-list">
              ${h.winners.map(w => `<div class="award-history-item"><span class="ah-award">${escapeHtml(w.award)}</span><span class="ah-band">${escapeHtml(displayBandName(w.band))}</span></div>`).join("")}
            </div>
