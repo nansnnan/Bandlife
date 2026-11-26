@@ -162,6 +162,8 @@ function publishVideo(videoId) {
   v.publishDay = Game.dayIndex;
   v.unedited = unedited;
   v.quality = q;
+  v.author = (Game.band ? Game.band.name : "乐队") + "官方";
+  v.duration = v.type === "doc" ? 900 + rand(0, 900) : (v.type === "trailer" ? 60 + rand(0, 60) : 180 + rand(0, 180));
 
   if (unedited) {
     // 直接发布未剪辑视频：大幅减少乐队评价
@@ -183,6 +185,36 @@ const VIDEO_FEED_TYPES = [
   { id: "bandofficial",name: "乐队官方",   related: true },
   { id: "other",       name: "生活区",     related: false },
 ];
+
+// 视频封面配色（确定性色块组合）与 UP 主信息
+const VIDEO_CRITIC_ACCOUNTS = ["乐评人阿修", "声音研究所", "独立音乐观察", "听歌的猫", "音乐区老张", "耳朵的旅行"];
+const VIDEO_CHART_ACCOUNTS = ["音乐周榜", "华语热榜", "独立音乐榜", "新歌速递", "播放量排行榜"];
+
+function videoCoverStyle(id) {
+  const h1 = Math.floor(seededUnit("cv1|" + id) * 360);
+  const h2 = (h1 + 45 + Math.floor(seededUnit("cv2|" + id) * 110)) % 360;
+  const h3 = (h1 + 170 + Math.floor(seededUnit("cv3|" + id) * 90)) % 360;
+  return "background-color:hsl(" + h1 + ",50%,36%);"
+    + "background-image:"
+    + "linear-gradient(135deg,hsl(" + h2 + ",68%,56%) 0%,transparent 58%),"
+    + "radial-gradient(circle at 80% 20%,hsl(" + h3 + ",72%,62%) 0%,transparent 44%),"
+    + "linear-gradient(160deg,transparent 42%,hsl(" + h1 + ",62%,22%) 100%);";
+}
+
+function fmtVideoDuration(sec) {
+  const m = Math.floor(sec / 60), s = sec % 60;
+  return m + ":" + String(s).padStart(2, "0");
+}
+
+function videoAuthorOf(typeId, bandName, seed) {
+  const k = seed || bandName || "";
+  if (typeId === "critic") return VIDEO_CRITIC_ACCOUNTS[Math.floor(seededUnit("au|c|" + k) * VIDEO_CRITIC_ACCOUNTS.length) % VIDEO_CRITIC_ACCOUNTS.length];
+  if (typeId === "chart") return VIDEO_CHART_ACCOUNTS[Math.floor(seededUnit("au|h|" + k) * VIDEO_CHART_ACCOUNTS.length) % VIDEO_CHART_ACCOUNTS.length];
+  if (typeId === "bandofficial") return (bandName || "乐队") + "官方";
+  const pool = window.BILI_USERNAMES || [];
+  if (!pool.length) return "某位用户";
+  return pool[Math.floor(seededUnit("au|u|" + k) * pool.length) % pool.length];
+}
 
 // 生成一期平台视频列表（确定性），并返回结算信息
 function buildPlatformFeed(week) {
@@ -259,9 +291,11 @@ function buildPlatformFeed(week) {
     // 标题取摘要首句，正文保留完整观点
     const firstSentence = (summary.split(/[。！？!?]/)[0] || summary).trim();
     const title = firstSentence.length > 34 ? firstSentence.slice(0, 34) + "…" : firstSentence;
+    const author = videoAuthorOf(t.id, bandName, "pf_" + week + "_" + i);
+    const duration = 150 + Math.floor(rnd("dur" + i) * 720);
     videos.push({
       id: "pf_" + week + "_" + i,
-      type: t.id, typeName: t.name, related,
+      type: t.id, typeName: t.name, related, author, duration,
       title,
       summary, band: bandName, album: albumName, song: songName,
       sentiment, rank, views,

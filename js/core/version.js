@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.5",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "视频平台改为图片式封面卡片：上方为色块封面，下方依次显示播放量、弹幕数、视频时长、标题与 UP 主，更贴近真实视频站版面。",
+      "超大播放量改用「亿」为单位显示，避免数字换行。",
+    ],
+  },
+  {
     version: "1.3.4",
     date: "2026-11-26",
     size: "小更新",

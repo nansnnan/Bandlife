@@ -1211,14 +1211,22 @@ function renderVideoPlatform() {
   const feed = settleVideoPlatform();
   const mine = (Game.videos || []).filter(v => v.status === "published").slice().reverse();
 
+  const compactNum = n => {
+    n = Math.round(n || 0);
+    if (n >= 10000000) return (n / 100000000).toFixed(2).replace(/\.?0+$/, "") + "亿";
+    if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, "") + "万";
+    return String(n);
+  };
   const card = v => `
     <div class="bf-video" data-action="video-open" data-id="${v.id}" data-src="${v.id.startsWith("pf_") ? "feed" : "mine"}">
-      <div class="bf-thumb"><span class="bf-dur">视频</span></div>
-      <div class="bf-info">
-        <div class="bf-title">${escapeHtml(v.title)}</div>
-        <div class="bf-meta">${v.typeName ? escapeHtml(v.typeName) : ""} · ${formatNumber(Math.round(v.views || 0))} 播放</div>
-        <div class="bf-summary">${escapeHtml((v.summary || "").slice(0, 60))}</div>
+      <div class="bf-thumb" style="${videoCoverStyle(v.id)}"></div>
+      <div class="bf-stat">
+        <span class="bf-stat-play">▶ ${compactNum(v.views)}</span>
+        <span class="bf-stat-dm">💬 ${compactNum(v.comments)}</span>
+        <span class="bf-stat-time">${fmtVideoDuration(v.duration || 180)}</span>
       </div>
+      <div class="bf-title">${escapeHtml(v.title)}</div>
+      <div class="bf-author">UP ${escapeHtml(v.author || (Game.band ? Game.band.name + "官方" : "乐队官方"))}</div>
     </div>`;
 
   const list = tab === "mine" ? mine : feed;
@@ -1248,7 +1256,7 @@ function renderVideoDetail(el, detail) {
     <div class="bf-detail">
       <div class="bf-player"><div class="bf-play-icon">▶</div><div class="bf-play-meta">${formatNumber(v.views || 0)} 播放 · ${v.typeName || "视频"}</div></div>
       <div class="bf-detail-title">${escapeHtml(v.title)}</div>
-      <div class="bf-detail-meta">${escapeHtml(v.band || "乐队官方")} · ${formatNumber(v.likes || 0)} 点赞 · ${formatNumber(v.comments || 0)} 评论</div>
+      <div class="bf-detail-meta">UP ${escapeHtml(v.author || v.band || "乐队官方")} · ${formatNumber(v.views || 0)} 播放 · ${formatNumber(v.likes || 0)} 点赞 · ${formatNumber(v.comments || 0)} 弹幕 · ${fmtVideoDuration(v.duration || 180)}</div>
       <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary)}</p></div>
       <div class="bf-comment-title">评论 ${cmts.short.length + cmts.long.length}</div>
       <div class="bf-comments">
