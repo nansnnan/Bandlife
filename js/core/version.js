@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.3",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "修正「工作室」导航图标无法显示的问题。",
+      "视频平台播放量改为重尾分布：多数视频播放量中等，少数视频成为爆款，播放量远高于同期其他内容。",
+    ],
+  },
+  {
     version: "1.3.2",
     date: "2026-11-26",
     size: "小更新",

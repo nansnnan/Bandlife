@@ -238,7 +238,15 @@ function buildPlatformFeed(week) {
       sentiment = r < 0.55 ? "pos" : (r < 0.8 ? "neutral" : "neg");
     }
     if (t.id === "chart") rank = 1 + Math.floor(rnd("rank" + i) * 10);
-    const views = Math.round((30000 + rnd("v" + i) * 40000) * (related ? 1 : 0.6) * videoUserFactor());
+    // 播放量呈重尾分布：多数视频中等，少数成为爆款
+    const viral = rnd("viral" + i);
+    let mult;
+    if (viral > 0.93) mult = 8 + rnd("vm1" + i) * 22;        // 爆款
+    else if (viral > 0.78) mult = 2.2 + rnd("vm2" + i) * 2.6; // 较热门
+    else mult = 0.25 + rnd("vm3" + i) * 0.85;                 // 普通
+    // 专业乐评与其他乐队官方内容更容易获得高播放
+    if (t.id === "critic" || t.id === "bandofficial") mult *= 1 + rnd("boost" + i) * 0.6;
+    const views = Math.round(50000 * mult * (related ? 1 : 0.6) * videoUserFactor());
     videos.push({
       id: "pf_" + week + "_" + i,
       type: t.id, typeName: t.name, related,
