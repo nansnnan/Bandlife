@@ -153,9 +153,13 @@ function publishVideo(videoId) {
 
   const unedited = v.status === "unedited";
   const q = unedited ? clamp(25 + rand(0, 10), 10, 40) : v.quality;
-  const fame = (Game.stats.reputation || 50) + Math.sqrt(Math.max(0, Game.stats.totalFans || 0)) / 20;
-  const baseViews = Math.round((q * 1200 + fame * 800) * randf(0.8, 1.3) * videoUserFactor());
-  v.views = unedited ? Math.round(baseViews * 0.45) : baseViews;
+  const users = videoUserBase();
+  const fame = (Game.stats.reputation || 50) / 100;                       // 0~1
+  const fansFactor = clamp(Math.sqrt(Math.max(0, Game.stats.totalFans || 0)) / 800, 0.15, 3);
+  // 成片质量决定触达率（约 0.5%~22%），再乘名气与粉丝系数
+  const reach = clamp(q / 450, 0.005, 0.22);
+  const baseViews = Math.round(users * reach * (0.4 + fame * 0.8) * fansFactor * randf(0.8, 1.25));
+  v.views = unedited ? Math.round(baseViews * 0.35) : baseViews;
   v.likes = Math.round(v.views * (0.03 + q / 4000));
   v.comments = Math.round(v.views * (0.008 + q / 12000));
   v.status = "published";
@@ -318,16 +322,27 @@ function buildPlatformFeed(week) {
       sentiment = r < 0.55 ? "pos" : (r < 0.8 ? "neutral" : "neg");
     }
     if (t.id === "chart") rank = 1 + Math.floor(rnd("rank" + i) * 10);
-    // 播放量呈重尾分布：绝大多数普通，极少数成为现象级爆款
+    // 播放量由「平台用户数 × 触达率 × 人均观看次数」决定，天然受用户规模约束
+    const users = videoUserBase();
     const viral = rnd("viral" + i);
-    let mult;
-    if (viral > 0.975) mult = 500 + rnd("vm0" + i) * 3000;      // 现象级爆款（数千万至上亿）
-    else if (viral > 0.90) mult = 25 + rnd("vm1" + i) * 180;    // 大爆款（百万级）
-    else if (viral > 0.74) mult = 3 + rnd("vm2" + i) * 9;       // 较热门
-    else mult = 0.2 + rnd("vm3" + i) * 1.4;                     // 普通
+    let reach, watch;
+    if (viral > 0.975) {          // 现象级爆款：10%~26% 的用户看过
+      reach = 0.08 + rnd("rc0" + i) * 0.12;
+      watch = 1.1 + rnd("wc0" + i) * 1.1;
+    } else if (viral > 0.90) {    // 大爆款：2%~7%
+      reach = 0.015 + rnd("rc1" + i) * 0.035;
+      watch = 1.05 + rnd("wc1" + i) * 0.75;
+    } else if (viral > 0.74) {    // 较热门：0.4%~1.6%
+      reach = 0.003 + rnd("rc2" + i) * 0.009;
+      watch = 1 + rnd("wc2" + i) * 0.6;
+    } else {                      // 普通：0.03%~0.2%
+      reach = 0.0002 + rnd("rc3" + i) * 0.0013;
+      watch = 1 + rnd("wc3" + i) * 0.3;
+    }
+    let views = users * reach * watch * (related ? 1 : 0.6);
     // 专业乐评与其他乐队官方内容更容易获得高播放
-    if (t.id === "critic" || t.id === "bandofficial") mult *= 1 + rnd("boost" + i) * 0.8;
-    const views = Math.round(50000 * mult * (related ? 1 : 0.6) * videoUserFactor());
+    if (t.id === "critic" || t.id === "bandofficial") views *= 1 + rnd("boost" + i) * 0.5;
+    views = Math.round(views);
     // 标题取摘要首句，正文保留完整观点
     const firstSentence = (summary.split(/[。！？!?]/)[0] || summary).trim();
     const title = firstSentence.length > 34 ? firstSentence.slice(0, 34) + "…" : firstSentence;
