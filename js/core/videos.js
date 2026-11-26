@@ -379,6 +379,7 @@ function buildPlatformFeed(week) {
       type: t.id,
       typeName: subKind === "mv" ? "官方MV" : subKind === "trailer" ? "官方预告" : subKind === "doc" ? "官方纪录" : t.name,
       subtype: subKind, related, author, duration,
+      commentCount: Math.round(views * (0.004 + rnd("cm" + i) * 0.012)),
       title,
       summary, band: bandName, album: albumName, song: songName,
       sentiment, rank, views,
@@ -474,8 +475,12 @@ function videoCommentList(video) {
   // 与乐队无关的视频使用生活区评论池，避免出现乐队相关评价
   const related = video.related !== false && video.type !== "other";
   const pool = (related ? window.VIDEO_COMMENTS : (window.VIDEO_COMMENTS_OTHER || window.VIDEO_COMMENTS));
-  const short = pickN(pool.short, 6, "s");
-  const long = pickN(pool.long || [], 3, "l");
+  // 评论条数与播放量成正比：热度越高，展示的评论越多（3~24 条）
+  const total = Math.max(3, Math.min(24, Math.round((video.commentCount || video.comments || 0) / 400 + 3)));
+  const longCount = Math.max(1, Math.round(total * 0.28));
+  const shortCount = Math.max(1, total - longCount);
+  const short = pickN(pool.short, shortCount, "s");
+  const long = pickN(pool.long || [], longCount, "l");
   const fill = t => related
     ? t.replace(/\{band\}/g, video.band || "这支乐队")
        .replace(/\{album\}/g, video.album || "这张专辑")

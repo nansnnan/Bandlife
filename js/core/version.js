@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.13",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "视频平台评论数量改为与播放量成正比，详情页按热度展示 4~24 条评论，评论标题显示真实评论总数（超出部分标注「展示部分」）。",
+    ],
+  },
+  {
     version: "1.3.12",
     date: "2026-11-26",
     size: "小更新",

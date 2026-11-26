@@ -1307,7 +1307,7 @@ function renderVideoDetail(el, detail) {
       <div class="bf-detail-title">${escapeHtml(v.title)}</div>
       <div class="bf-detail-meta">UP ${escapeHtml(v.author || v.band || "乐队官方")} · ${formatNumber(v.views || 0)} 播放 · ${formatNumber(v.likes || 0)} 点赞 · ${formatNumber(v.comments || 0)} 弹幕 · ${fmtVideoDuration(v.duration || 180)}</div>
       <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary || "暂无简介")}</p></div>
-      <div class="bf-comment-title">评论 ${cmts.short.length + cmts.long.length}</div>
+      <div class="bf-comment-title">评论 ${formatNumber(v.commentCount || v.comments || (cmts.short.length + cmts.long.length))}${(v.commentCount || 0) > (cmts.short.length + cmts.long.length) ? "（展示部分）" : ""}</div>
       <div class="bf-comments">
         ${(() => {
           const pool = window.BILI_USERNAMES || [];
