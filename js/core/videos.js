@@ -210,12 +210,20 @@ function buildPlatformFeed(week) {
     .sort((a, b) => a.o - b.o)
     .map(x => x.id);
   let relIdx = 0;
+  const usedTpl = {};   // 同一期内同类摘要不重复
   for (let i = 0; i < N; i++) {
     // 50% 与乐队有关，50% 无关
     const related = i % 2 === 0;
     const typeId = related ? relSeq[relIdx++] : "other";
     const t = VIDEO_FEED_TYPES.find(x => x.id === typeId);
-    const tpl = pick(window.VIDEO_SUMMARY[t.id] || window.VIDEO_SUMMARY.other, "s" + i);
+    const tplPool = window.VIDEO_SUMMARY[t.id] || window.VIDEO_SUMMARY.other;
+    if (!usedTpl[t.id]) usedTpl[t.id] = new Set();
+    let tpl = null;
+    for (let k = 0; k < 25; k++) {
+      const idx = Math.floor(rnd("s" + i + "_" + k) * tplPool.length) % tplPool.length;
+      if (!usedTpl[t.id].has(idx)) { usedTpl[t.id].add(idx); tpl = tplPool[idx]; break; }
+    }
+    if (!tpl) tpl = pick(tplPool, "s" + i);
     let rel = null, bandName = "", albumName = "", songName = "";
     if (related && allRels.length) {
       rel = allRels[Math.floor(rnd("r" + i) * allRels.length) % allRels.length];
@@ -238,19 +246,23 @@ function buildPlatformFeed(week) {
       sentiment = r < 0.55 ? "pos" : (r < 0.8 ? "neutral" : "neg");
     }
     if (t.id === "chart") rank = 1 + Math.floor(rnd("rank" + i) * 10);
-    // 播放量呈重尾分布：多数视频中等，少数成为爆款
+    // 播放量呈重尾分布：绝大多数普通，极少数成为现象级爆款
     const viral = rnd("viral" + i);
     let mult;
-    if (viral > 0.93) mult = 8 + rnd("vm1" + i) * 22;        // 爆款
-    else if (viral > 0.78) mult = 2.2 + rnd("vm2" + i) * 2.6; // 较热门
-    else mult = 0.25 + rnd("vm3" + i) * 0.85;                 // 普通
+    if (viral > 0.975) mult = 500 + rnd("vm0" + i) * 3000;      // 现象级爆款（数千万至上亿）
+    else if (viral > 0.90) mult = 25 + rnd("vm1" + i) * 180;    // 大爆款（百万级）
+    else if (viral > 0.74) mult = 3 + rnd("vm2" + i) * 9;       // 较热门
+    else mult = 0.2 + rnd("vm3" + i) * 1.4;                     // 普通
     // 专业乐评与其他乐队官方内容更容易获得高播放
-    if (t.id === "critic" || t.id === "bandofficial") mult *= 1 + rnd("boost" + i) * 0.6;
+    if (t.id === "critic" || t.id === "bandofficial") mult *= 1 + rnd("boost" + i) * 0.8;
     const views = Math.round(50000 * mult * (related ? 1 : 0.6) * videoUserFactor());
+    // 标题取摘要首句，正文保留完整观点
+    const firstSentence = (summary.split(/[。！？!?]/)[0] || summary).trim();
+    const title = firstSentence.length > 34 ? firstSentence.slice(0, 34) + "…" : firstSentence;
     videos.push({
       id: "pf_" + week + "_" + i,
       type: t.id, typeName: t.name, related,
-      title: summary.slice(0, 34) + (summary.length > 34 ? "…" : ""),
+      title,
       summary, band: bandName, album: albumName, song: songName,
       sentiment, rank, views,
       likes: Math.round(views * 0.04), comments: Math.round(views * 0.01),

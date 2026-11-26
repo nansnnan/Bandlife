@@ -1252,7 +1252,19 @@ function renderVideoDetail(el, detail) {
       <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary)}</p></div>
       <div class="bf-comment-title">评论 ${cmts.short.length + cmts.long.length}</div>
       <div class="bf-comments">
-        ${[...cmts.long, ...cmts.short].map((t, i) => `<div class="bf-comment"><div class="bf-avatar"></div><div class="bf-c-body"><div class="bf-c-name">用户${1000 + Math.floor(seededUnit("bfu|" + v.id + "|" + i) * 9000)}</div><div class="bf-c-text">${escapeHtml(t)}</div></div></div>`).join("")}
+        ${(() => {
+          const pool = window.BILI_USERNAMES || [];
+          const used = new Set();
+          const nameOf = i => {
+            if (!pool.length) return "用户" + (1000 + i);
+            for (let k = 0; k < pool.length; k++) {
+              const idx = Math.floor(seededUnit("bfu|" + v.id + "|" + i + "|" + k) * pool.length) % pool.length;
+              if (!used.has(idx)) { used.add(idx); return pool[idx]; }
+            }
+            return pool[0];
+          };
+          return [...cmts.long, ...cmts.short].map((t, i) => `<div class="bf-comment"><div class="bf-avatar"></div><div class="bf-c-body"><div class="bf-c-name">${escapeHtml(nameOf(i))}</div><div class="bf-c-text">${escapeHtml(t)}</div></div></div>`).join("");
+        })()}
       </div>
     </div>
   `;
