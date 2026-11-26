@@ -34,10 +34,24 @@ function awardAnnualStats(bandName, year) {
     .reduce((s, r) => s + (r.plays || 0), 0);
   const songPlays = rels.filter(r => r.releaseType === "单曲")
     .reduce((s, r) => s + (r.plays || 0), 0);
-  const scored = rels.map(r => (r.avgScore != null ? r.avgScore : (r.quality != null ? r.quality / 10 : 0)));
+  const scoreOf = r => (r.avgScore != null ? r.avgScore : (r.quality != null ? r.quality / 10 : 0));
+  const scored = rels.map(scoreOf);
   const avg = scored.length ? scored.reduce((a, b) => a + b, 0) / scored.length : 0;
   const best = scored.length ? Math.max(...scored) : 0;
-  return { plays, albumPlays, songPlays, avg, best, count: rels.length };
+
+  const workName = r => (r.album || r.name || "");
+  const albumRels = rels.filter(r => r.releaseType === "专辑" || r.releaseType === "EP");
+  const songRels = rels.filter(r => r.releaseType === "单曲");
+  const bestAlbumRel = albumRels.slice().sort((a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0)))[0];
+  const bestSongRel = songRels.slice().sort((a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0)))[0];
+  const bestWorkRel = rels.slice().sort((a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0)))[0];
+
+  return {
+    plays, albumPlays, songPlays, avg, best, count: rels.length,
+    bestAlbum: bestAlbumRel ? workName(bestAlbumRel) : null,
+    bestSong: bestSongRel ? workName(bestSongRel) : null,
+    bestWork: bestWorkRel ? workName(bestWorkRel) : null,
+  };
 }
 
 function awardCandidates(year) {
@@ -91,6 +105,21 @@ function awardIsEligible(awardId, c, year) {
   return true;
 }
 
+// 各奖项对应的获奖作品（乐队类奖项不展示作品）
+function awardWorkFor(awardId, c) {
+  const s = c.stats;
+  switch (awardId) {
+    case "album": return s.bestAlbum;
+    case "song": return s.bestSong;
+    case "live":
+    case "lyric":
+    case "compose":
+    case "produce":
+    case "breakthrough": return s.bestWork;
+    default: return null;   // band / newcomer / popular 仅显示乐队名
+  }
+}
+
 // ===== 生成提名（11 月） =====
 function generateAwardNominations(year) {
   const cands = awardCandidates(year);
@@ -104,7 +133,10 @@ function generateAwardNominations(year) {
       .map(c => ({ c, score: awardScore(aw.id, c, year) }))
       .sort((a, b) => b.score - a.score)
       .slice(0, AWARD_NOMINEE_COUNT)
-      .map(x => ({ id: x.c.id, name: x.c.name, style: x.c.style, score: Math.round(x.score) }));
+      .map(x => ({
+        id: x.c.id, name: x.c.name, style: x.c.style, score: Math.round(x.score),
+        work: awardWorkFor(aw.id, x.c),
+      }));
     return { id: aw.id, name: aw.name, desc: aw.desc, nominees: ranked };
   });
   return { year, list };

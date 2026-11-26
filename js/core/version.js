@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.86",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "金曲奖除「年度最佳乐队」「年度最佳新人」「年度最受欢迎乐队」外，其余奖项改为先展示获奖作品名、再展示乐队名（如《无限引擎》发光曲线）。",
+      "竞争对手页面中，非中文名称的乐队统一在原名后括注中文译名（如 Plasmagica（幻彩魔法）），列表、详情与金曲奖同步生效。",
+    ],
+  },
+  {
     version: "1.2.85",
     date: "2026-11-26",
     size: "小更新",

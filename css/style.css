@@ -917,3 +917,4 @@ select { cursor: pointer; }
 @media (max-width: 640px) {
   .award-history-list { grid-template-columns: 1fr; }
 }
+.award-work { color: var(--accent-2); margin-right: 2px; }

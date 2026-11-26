@@ -65,3 +65,30 @@ window.RIVAL_BANDS = [
 
 // 台湾地级市补充（用于出道地区，附件 sheet 中台湾仅列"台湾省"）
 window.TAIWAN_CITIES = ["台北市", "新北市", "台中市", "台南市", "高雄市", "基隆市", "桃园市", "新竹市", "嘉义市", "苗栗县", "彰化县", "南投县", "云林县", "屏东县", "宜兰县", "花莲县", "台东县", "澎湖县", "金门县", "连江县"];
+
+// 非中文乐队的中文译名（仅用于界面展示，不改变数据键名）
+window.RIVAL_NAME_CN = {
+  "結束バンド": "结束乐队",
+  "放課後ティータイム": "放学后茶会",
+  "MyGO（CRYCHIC）": "迷子与残响",
+  "Poppin'Party": "跃动派对",
+  "Roselia": "蔷薇利亚",
+  "Afterglow": "余晖",
+  "Pastel*Palettes": "粉彩调色板",
+  "Hello, Happy World!": "哈啰，快乐世界",
+  "Morfonica": "幻形",
+  "RAISE A SUILEN": "升幕",
+  "Ave Mujica": "万福缪西卡",
+  "Black Stones": "黑石",
+  "Trapnest": "陷阱巢",
+  "ギヴン": "赐予",
+  "トゲナシトゲアリ": "无刺虎头蜂",
+  "Plasmagica": "幻彩魔法",
+  "Chinese Football": "中国足球",
+};
+
+// 乐队展示名：非中文乐队附中文译名
+function displayBandName(name) {
+  const cn = window.RIVAL_NAME_CN && window.RIVAL_NAME_CN[name];
+  return cn ? `${name}（${cn}）` : name;
+}

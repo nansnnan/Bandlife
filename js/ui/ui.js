@@ -697,8 +697,10 @@ function renderAwards() {
 
   const nomineeRow = (n, isWinner) => {
     const isMe = playerName && n.name === playerName;
+    const bandLabel = escapeHtml(displayBandName(n.name));
+    const label = n.work ? `<span class="award-work">《${escapeHtml(n.work)}》</span>${bandLabel}` : bandLabel;
     return `<div class="award-nominee ${isWinner ? "winner" : ""} ${isMe ? "me" : ""}">
-      <span class="award-nom-name">${escapeHtml(n.name)}${isMe ? ' <span class="badge badge-purple">你</span>' : ""}</span>
+      <span class="award-nom-name">${label}${isMe ? ' <span class="badge badge-purple">你</span>' : ""}</span>
       <span class="award-nom-style">${escapeHtml(n.style || "")}</span>
       ${isWinner ? '<span class="badge badge-gold">金奖</span>' : ""}
     </div>`;
@@ -751,7 +753,7 @@ function renderAwards() {
          ${history.map(h => `<div class="award-history-year">
            <div class="award-history-title">第 ${h.year} 届</div>
            <div class="award-history-list">
-             ${h.winners.map(w => `<div class="award-history-item"><span class="ah-award">${escapeHtml(w.award)}</span><span class="ah-band">${escapeHtml(w.band)}</span></div>`).join("")}
+             ${h.winners.map(w => `<div class="award-history-item"><span class="ah-award">${escapeHtml(w.award)}</span><span class="ah-band">${escapeHtml(displayBandName(w.band))}</span></div>`).join("")}
            </div>
          </div>`).join("")}
        </div>`
@@ -777,7 +779,7 @@ function renderRivals() {
     if (!r.active) {
       return `<div class="rival-card dim">
         <div class="rival-row">
-          <div class="rival-name">${escapeHtml(r.name)}</div>
+          <div class="rival-name">${escapeHtml(displayBandName(r.name))}</div>
           <span class="badge">未出道</span>
         </div>
         <div class="rival-sub">${escapeHtml(r.style)} · ${escapeHtml(r.origin || "")}</div>
@@ -788,7 +790,7 @@ function renderRivals() {
     const fans = Math.round(r.fans || 0);
     return `<div class="rival-card clickable" data-action="rival-detail" data-name="${escapeHtml(r.name)}">
       <div class="rival-row">
-        <div class="rival-name">${escapeHtml(r.name)}</div>
+        <div class="rival-name">${escapeHtml(displayBandName(r.name))}</div>
         <span class="badge badge-blue">出道</span>
       </div>
       <div class="rival-sub">${escapeHtml(r.style)} · ${escapeHtml(r.origin || "")} · 成立于 ${formed}</div>
@@ -869,7 +871,7 @@ function renderRivalDetail(name) {
       <button class="btn-time" data-action="rival-back">← 返回列表</button>
     </div>
     <div class="card">
-      <div class="card-title">${escapeHtml(r.name)}</div>
+      <div class="card-title">${escapeHtml(displayBandName(r.name))}</div>
       <div class="rival-detail-meta">
         <div>风格：${escapeHtml(r.style)}</div>
         <div>成立：${formed}</div>
