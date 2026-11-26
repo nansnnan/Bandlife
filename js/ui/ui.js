@@ -1218,10 +1218,15 @@ function renderVideoStudio() {
 
     ${edited.length ? `<div class="section-title">可发布（${edited.length}）</div>
       <div class="video-list">${edited.map(v => `
-        <div class="video-row">
+        <div class="video-row col">
           <div class="vr-main"><b>${escapeHtml(v.targetName)}</b> · ${v.typeName}</div>
           <div class="vr-sub">剪辑：${v.editName} · 成片质量 ${v.quality}</div>
-          <button class="btn btn-primary btn-sm" data-action="video-publish" data-id="${v.id}">发布到官方账号</button>
+          <input class="input" id="vt-title-${v.id}" maxlength="40" placeholder="视频标题"
+                 value="${escapeHtml(v.targetName + ' ' + v.typeName)}">
+          <textarea class="input" id="vt-desc-${v.id}" rows="2" maxlength="200" placeholder="视频简介（可选）"></textarea>
+          <div class="vr-actions">
+            <button class="btn btn-primary btn-sm" data-action="video-publish" data-id="${v.id}">发布到官方账号</button>
+          </div>
         </div>`).join("")}</div>` : ""}
 
     ${published.length ? `<div class="section-title">已发布（${published.length}）</div>
@@ -1301,7 +1306,7 @@ function renderVideoDetail(el, detail) {
       <div class="bf-player"><div class="bf-play-icon">▶</div><div class="bf-play-meta">${formatNumber(v.views || 0)} 播放 · ${v.typeName || "视频"}</div></div>
       <div class="bf-detail-title">${escapeHtml(v.title)}</div>
       <div class="bf-detail-meta">UP ${escapeHtml(v.author || v.band || "乐队官方")} · ${formatNumber(v.views || 0)} 播放 · ${formatNumber(v.likes || 0)} 点赞 · ${formatNumber(v.comments || 0)} 弹幕 · ${fmtVideoDuration(v.duration || 180)}</div>
-      <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary)}</p></div>
+      <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary || "暂无简介")}</p></div>
       <div class="bf-comment-title">评论 ${cmts.short.length + cmts.long.length}</div>
       <div class="bf-comments">
         ${(() => {

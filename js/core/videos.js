@@ -146,10 +146,12 @@ function editVideo(videoId, levelId) {
 }
 
 // ===== 发布视频到乐队官方账号 =====
-function publishVideo(videoId) {
+function publishVideo(videoId, userTitle, userSummary) {
   const v = (Game.videos || []).find(x => x.id === videoId);
   if (!v) return { ok: false, msg: "视频不存在" };
   if (v.status !== "edited" && v.status !== "unedited") return { ok: false, msg: "该视频当前不可发布" };
+  v.title = (userTitle && userTitle.trim()) || (v.targetName + " " + v.typeName);
+  v.summary = (userSummary && userSummary.trim()) || ("《" + v.targetName + "》" + v.typeName + "。");
 
   const unedited = v.status === "unedited";
   const q = unedited ? clamp(25 + rand(0, 10), 10, 40) : v.quality;
@@ -444,6 +446,7 @@ function settleVideoPlatform() {
   if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [], infWeek: -1 };
   if (Game.videoPlatform.week === day) return Game.videoPlatform.videos;
   const videos = buildPlatformFeed(day);
+  archiveRivalVideos(videos);
   // 列表每日刷新，影响结算保持每周一次，避免播放量增长过快
   const wk = Math.floor(day / 7);
   if (Game.videoPlatform.infWeek !== wk) {
@@ -485,42 +488,25 @@ function videoCommentList(video) {
   };
 }
 
-// ===== 竞争对手的视频平台主页 =====
+// ===== 竞争对手视频档案：只收录真实出现在视频平台上的内容 =====
+function archiveRivalVideos(videos) {
+  if (!Game.rivalVideoArchive) Game.rivalVideoArchive = {};
+  for (const v of (videos || [])) {
+    if (v.type !== "bandofficial") continue;     // 只有乐队官方账号发布的内容属于该乐队
+    if (!v.band) continue;
+    const list = Game.rivalVideoArchive[v.band] || (Game.rivalVideoArchive[v.band] = []);
+    if (list.some(x => x.id === v.id)) continue;
+    list.unshift({
+      id: v.id, type: v.type, typeName: v.typeName, subtype: v.subtype,
+      title: v.title, views: v.views, duration: v.duration,
+      day: Game.dayIndex, band: v.band,
+    });
+    if (list.length > 40) list.pop();
+  }
+}
+
 function rivalVideoList(rival) {
   if (!rival) return [];
-  const users = videoUserBase();
-  const rels = (rival.releases || []).slice()
-    .sort((a, b) => (b.dayIndex || 0) - (a.dayIndex || 0))
-    .slice(0, 24);
-  const out = [];
-  rels.forEach((rel, i) => {
-    const seed = "rv|" + rival.name + "|" + (rel.id || (rel.name + rel.dayIndex));
-    const base = Math.max(rel.plays || 0, 1000);
-    const cap = v => Math.max(30, Math.round(Math.min(v, users * 0.3 || v)));
-    out.push({
-      id: "rv_" + i + "_mv", type: "mv", typeName: "MV",
-      title: rival.name + "《" + rel.name + "》官方MV",
-      views: cap(base * (0.08 + seededUnit(seed + "mv") * 0.4)),
-      duration: rel.duration || 240, day: rel.dayIndex, band: rival.name,
-    });
-    if ((rel.releaseType === "专辑" || rel.releaseType === "EP") && i % 3 === 0) {
-      out.push({
-        id: "rv_" + i + "_doc", type: "doc", typeName: "纪录片",
-        title: rival.name + "《" + rel.name + "》制作纪录片",
-        views: cap(base * (0.05 + seededUnit(seed + "doc") * 0.2)),
-        duration: 900 + Math.floor(seededUnit(seed + "d") * 900),
-        day: rel.dayIndex, band: rival.name,
-      });
-    }
-    if (i % 5 === 2) {
-      out.push({
-        id: "rv_" + i + "_tr", type: "trailer", typeName: "预告片",
-        title: rival.name + "《" + rel.name + "》预告",
-        views: cap(base * (0.02 + seededUnit(seed + "tr") * 0.08)),
-        duration: 30 + Math.floor(seededUnit(seed + "t") * 30),
-        day: rel.dayIndex, band: rival.name,
-      });
-    }
-  });
-  return out.sort((a, b) => (b.day || 0) - (a.day || 0));
+  const list = (Game.rivalVideoArchive && Game.rivalVideoArchive[rival.name]) || [];
+  return list.slice();
 }

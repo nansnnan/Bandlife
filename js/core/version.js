@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.11",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "自制视频发布时可自定义标题与简介，内容会显示在乐队官方账号与视频详情页。",
+      "竞争对手的视频平台主页改为真实内容：只显示该乐队确实在视频平台发布过的官方视频，不再随机生成。",
+    ],
+  },
+  {
     version: "1.3.10",
     date: "2026-11-26",
     size: "小更新",

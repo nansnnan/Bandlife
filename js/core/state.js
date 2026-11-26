@@ -1,6 +1,6 @@
 // 核心状态管理 + 工具函数 + 常量
 
-const GAME_VERSION = "1.3.10";
+const GAME_VERSION = "1.3.11";
 const START_YEAR = 2000, START_MONTH = 1, START_DAY = 1;
 
 // 全局游戏状态
@@ -16,6 +16,7 @@ const Game = {
   events: [],             // 事件日志 [{day, text}]
   stats: { totalPlays: 0, totalFans: 0, reputation: 50, totalSales: 0 },
   awards: { nominations: null, results: null, history: [] },  // 金曲奖
+  rivalVideoArchive: {},   // 竞争对手在视频平台发布过的内容
   rng: Math.random,       // 可替换的随机源
 };
 
@@ -109,7 +110,8 @@ function loadGame() {
       if (!Game.awards) Game.awards = { nominations: null, results: null, history: [] };
       if (!Game.studio) Game.studio = { level: 1 };
       if (!Game.videos) Game.videos = [];
-      if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [] };
+      if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [], infWeek: -1 };
+      if (!Game.rivalVideoArchive) Game.rivalVideoArchive = {};
       return true;
     }
   } catch (e) { /* 忽略 */ }

@@ -174,7 +174,10 @@ function bindEvents() {
         renderVideoStudio(); renderTopbar(); break;
       }
       case "video-publish": {
-        const r = publishVideo(target.dataset.id);
+        const vid = target.dataset.id;
+        const tEl = document.getElementById("vt-title-" + vid);
+        const dEl = document.getElementById("vt-desc-" + vid);
+        const r = publishVideo(vid, tEl ? tEl.value : "", dEl ? dEl.value : "");
         if (!r.ok) { alert(r.msg); break; }
         alert(r.unedited
           ? "已发布未剪辑视频，播放量偏低，乐队评价下降。"
