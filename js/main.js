@@ -151,6 +151,54 @@ function bindEvents() {
       case "open-release":
         openRelease(target.dataset.id); break;
 
+      // 工作室
+      case "studio-upgrade": {
+        const r = upgradeStudio();
+        if (!r.ok) { alert(r.msg); break; }
+        renderStudio(); renderTopbar(); break;
+      }
+
+      // 视频制作
+      case "video-start": {
+        const type = target.dataset.type;
+        const sel = document.getElementById("video-target-" + type);
+        const targetId = sel ? sel.value : "";
+        if (!targetId) { alert("请选择制作对象"); break; }
+        const r = startVideo(type, targetId);
+        if (!r.ok) { alert(r.msg); break; }
+        renderVideoStudio(); break;
+      }
+      case "video-edit": {
+        const r = editVideo(target.dataset.id, target.dataset.level);
+        if (!r.ok) { alert(r.msg); break; }
+        renderVideoStudio(); renderTopbar(); break;
+      }
+      case "video-publish": {
+        const r = publishVideo(target.dataset.id);
+        if (!r.ok) { alert(r.msg); break; }
+        alert(r.unedited
+          ? "已发布未剪辑视频，播放量偏低，乐队评价下降。"
+          : `已发布，播放量约 ${r.video.views.toLocaleString()}。`);
+        renderVideoStudio(); break;
+      }
+
+      // 视频平台
+      case "video-tab":
+        window._videoTab = target.dataset.tab; window._videoDetail = null;
+        renderVideoPlatform(); break;
+      case "video-open": {
+        const id = target.dataset.id;
+        const src = target.dataset.src;
+        const pool = src === "mine"
+          ? (Game.videos || [])
+          : ((Game.videoPlatform && Game.videoPlatform.videos) || []);
+        const v = pool.find(x => x.id === id);
+        if (v) { window._videoDetail = { video: v }; renderVideoPlatform(); }
+        break;
+      }
+      case "video-back":
+        window._videoDetail = null; renderVideoPlatform(); break;
+
       // 训练
       case "train":
         handleTrain(target.dataset.member, target.dataset.days); break;

@@ -55,8 +55,12 @@ function calcSongQuality(song) {
   const voc = s.vocal + t.vocal * 2;
   // 歌词是否填写（自定义歌词加分）
   const lyricBonus = song.lyrics && song.lyrics.trim().length > 20 ? 8 : 0;
-  const quality = comp * 0.25 + lyr * 0.22 + arr * 0.20 + perf * 0.15 + voc * 0.18 + lyricBonus + randf(-8, 8);
-  return clamp(Math.round(quality), 5, 99);
+  const bandQuality = clamp(comp * 0.25 + lyr * 0.22 + arr * 0.20 + perf * 0.15 + voc * 0.18 + lyricBonus + randf(-8, 8), 5, 99);
+  // 乐队能力占 65%，工作室等级自带质量占 35%
+  const sq = typeof studioQuality === "function" ? studioQuality() : 45;
+  const bw = typeof STUDIO_BAND_WEIGHT === "number" ? STUDIO_BAND_WEIGHT : 0.65;
+  const sw = typeof STUDIO_WEIGHT === "number" ? STUDIO_WEIGHT : 0.35;
+  return clamp(Math.round(bandQuality * bw + sq * sw), 5, 99);
 }
 
 // ===== 发布作品 =====

@@ -1,6 +1,6 @@
 // 核心状态管理 + 工具函数 + 常量
 
-const GAME_VERSION = "1.2.89";
+const GAME_VERSION = "1.3.0";
 const START_YEAR = 2000, START_MONTH = 1, START_DAY = 1;
 
 // 全局游戏状态
@@ -107,6 +107,9 @@ function loadGame() {
       const data = JSON.parse(s);
       Object.assign(Game, data);
       if (!Game.awards) Game.awards = { nominations: null, results: null, history: [] };
+      if (!Game.studio) Game.studio = { level: 1 };
+      if (!Game.videos) Game.videos = [];
+      if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [] };
       return true;
     }
   } catch (e) { /* 忽略 */ }

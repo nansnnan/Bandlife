@@ -11,6 +11,10 @@ function initGame(mode, bandData) {
   Game.events = [];
   Game.stats = { totalPlays: 0, totalFans: 0, reputation: 50, totalSales: 0 };
   Game.rivals = initRivals();
+  Game.studio = { level: 1 };          // 初始为初级工作室
+  Game.videos = [];                     // 视频（制作中 / 待剪辑 / 已发布）
+  Game.videoPlatform = { week: -1, videos: [] };
+  Game.awards = { nominations: null, results: null, history: [] };
   addEvent("乐队生涯从 2000 年 1 月 1 日开始。");
   addEvent(`乐队「${Game.band.name}」正式成立，风格：${Game.band.style}。`);
   if (mode === "real") {
@@ -173,6 +177,8 @@ function advanceTime(days) {
     if (typeof checkSongProgress === "function") checkSongProgress();
     // 金曲奖日程（11/1 提名、12/15 颁奖）
     if (typeof checkAwardSchedule === "function") checkAwardSchedule();
+    // 视频制作进度
+    if (typeof checkVideoProgress === "function") checkVideoProgress();
   }
   updateRivalActivity();
   saveGame();
@@ -235,6 +241,8 @@ function tickWeekly() {
 
 // 每月更新：市场与名气变化
 function tickMonthly() {
+  // 工作室租金与维护费
+  if (typeof studioMonthlyCharge === "function") studioMonthlyCharge();
   // 乐队名气随作品累积缓慢变化
   if (Game.releases.length) {
     const avgQuality = Game.releases.reduce((s, r) => s + r.quality, 0) / Game.releases.length;

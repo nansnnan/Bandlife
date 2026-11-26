@@ -210,6 +210,9 @@ function renderGameView(name) {
     "train": renderTrain,
     "rivals": renderRivals,
     "awards": renderAwards,
+    "studio": renderStudio,
+    "video-studio": renderVideoStudio,
+    "video-platform": renderVideoPlatform,
   };
   if (map[name]) map[name]();
 }
@@ -1060,3 +1063,188 @@ function openRelease(id) {
 
 // 暴露给 player.js 使用
 window.showReleaseDetail = null;
+
+// ===== 工作室 =====
+function renderStudio() {
+  const el = document.querySelector('[data-game-view="studio"]');
+  if (!el) return;
+  if (!Game.studio) Game.studio = { level: 1 };
+  const level = studioLevel();
+  const cur = studioInfo();
+  const next = level < STUDIO_LEVELS.length ? STUDIO_LEVELS[level] : null;
+  const money = Game.finance.balance || 0;
+
+  const rows = STUDIO_LEVELS.map(s => {
+    const active = s.level === level;
+    return `<div class="studio-lv ${active ? "active" : ""}">
+      <span class="slv-name">${active ? "▶ " : ""}${s.level} 级 · ${escapeHtml(s.name)}</span>
+      <span class="slv-q">质量 ${s.quality}</span>
+      <span class="slv-cost">租金 ${formatNumber(s.rent)} / 维护 ${formatNumber(s.maintain)}</span>
+    </div>`;
+  }).join("");
+
+  el.innerHTML = `
+    <div class="section-title">🎛️ 工作室</div>
+    <div class="studio-hint">工作室等级影响歌曲质量：乐队能力占 65%，工作室占 35%。等级越高，作品底子越好，但每月租金与维护费也越高。</div>
+    <div class="card studio-card">
+      <div class="studio-head">
+        <div>
+          <div class="card-title">${escapeHtml(cur.name)}</div>
+          <div class="studio-desc">${escapeHtml(cur.desc)}</div>
+        </div>
+        <div class="studio-badge">${level} / 8 级</div>
+      </div>
+      <div class="studio-metrics">
+        <div class="sm-item"><span>工作室质量</span><b>${cur.quality}</b></div>
+        <div class="sm-item"><span>月租金</span><b>¥${formatNumber(cur.rent)}</b></div>
+        <div class="sm-item"><span>月维护费</span><b>¥${formatNumber(cur.maintain)}</b></div>
+        <div class="sm-item"><span>每月合计</span><b>¥${formatNumber(cur.rent + cur.maintain)}</b></div>
+      </div>
+      <div class="studio-quality-note">歌曲质量 = 乐队能力 × 65% + 工作室质量 × 35%</div>
+      ${next ? `<button class="btn btn-primary" data-action="studio-upgrade">
+        升级到「${escapeHtml(next.name)}」（¥${formatNumber(next.upgradeCost)}）
+      </button>` : `<div class="studio-max">已达最高等级</div>`}
+      <div class="studio-balance">当前资金：¥${formatNumber(money)}</div>
+    </div>
+    <div class="section-title">等级一览</div>
+    <div class="studio-levels">${rows}</div>
+  `;
+}
+
+// ===== 视频制作 =====
+function renderVideoStudio() {
+  const el = document.querySelector('[data-game-view="video-studio"]');
+  if (!el) return;
+  if (!Game.videos) Game.videos = [];
+
+  const songOpts = (Game.songs || []).filter(s => !s.inProgress)
+    .map(s => `<option value="${s.id}">《${escapeHtml(s.name)}》</option>`).join("");
+  const relOpts = (Game.releases || [])
+    .map(r => `<option value="${r.id}">${escapeHtml(r.releaseType)}《${escapeHtml(r.name)}》</option>`).join("");
+
+  const making = Game.videos.filter(v => v.status === "making");
+  const unedited = Game.videos.filter(v => v.status === "unedited");
+  const edited = Game.videos.filter(v => v.status === "edited");
+  const published = Game.videos.filter(v => v.status === "published");
+
+  const typeCard = (t, selectHtml) => `
+    <div class="card video-type-card">
+      <div class="vt-head"><b>${t.name}</b><span>约 ${t.days} 天</span></div>
+      <div class="vt-desc">${escapeHtml(t.desc)}</div>
+      ${selectHtml}
+    </div>`;
+
+  const editBtns = v => Object.values(VIDEO_EDIT_LEVELS).map(lv => `
+    <button class="btn btn-sm ${lv.cost > 0 ? "" : "btn-ghost"}" data-action="video-edit" data-id="${v.id}" data-level="${lv.id}">
+      ${lv.name}（${lv.cost ? "¥" + formatNumber(lv.cost) : "免费"}，质量 ${lv.quality}）
+    </button>`).join("");
+
+  el.innerHTML = `
+    <div class="section-title">🎬 视频制作</div>
+    <div class="video-hint">制作完成后需剪辑方可发布。自我剪辑免费但质量一般，外包剪辑等级越高成片质量越好、价格越贵。</div>
+
+    <div class="section-title">新建视频</div>
+    <div class="grid grid-3">
+      ${typeCard(VIDEO_TYPES.mv, `
+        <select id="video-target-mv" class="input">${songOpts || '<option value="">（暂无可用歌曲）</option>'}</select>
+        <button class="btn btn-primary btn-sm" data-action="video-start" data-type="mv">开始制作 MV</button>`)}
+      ${typeCard(VIDEO_TYPES.trailer, `
+        <select id="video-target-trailer" class="input">${relOpts || '<option value="">（暂无已发布作品）</option>'}</select>
+        <button class="btn btn-primary btn-sm" data-action="video-start" data-type="trailer">开始制作预告片</button>`)}
+      ${typeCard(VIDEO_TYPES.doc, `
+        <select id="video-target-doc" class="input">${relOpts || '<option value="">（暂无已发布作品）</option>'}</select>
+        <button class="btn btn-primary btn-sm" data-action="video-start" data-type="doc">开始制作纪录片</button>`)}
+    </div>
+
+    ${making.length ? `<div class="section-title">制作中（${making.length}）</div>
+      <div class="video-list">${making.map(v => `
+        <div class="video-row">
+          <div class="vr-main"><b>${escapeHtml(v.targetName)}</b> · ${v.typeName}</div>
+          <div class="vr-sub">预计 ${Math.max(0, v.dueDay - Game.dayIndex)} 天后完成</div>
+          <span class="badge badge-blue">制作中</span>
+        </div>`).join("")}</div>` : ""}
+
+    ${unedited.length ? `<div class="section-title">待剪辑（${unedited.length}）</div>
+      <div class="video-list">${unedited.map(v => `
+        <div class="video-row col">
+          <div class="vr-main"><b>${escapeHtml(v.targetName)}</b> · ${v.typeName}</div>
+          <div class="vr-sub">未经剪辑的视频，直接发布将大幅影响乐队评价。</div>
+          <div class="vr-actions">${editBtns(v)}</div>
+        </div>`).join("")}</div>` : ""}
+
+    ${edited.length ? `<div class="section-title">可发布（${edited.length}）</div>
+      <div class="video-list">${edited.map(v => `
+        <div class="video-row">
+          <div class="vr-main"><b>${escapeHtml(v.targetName)}</b> · ${v.typeName}</div>
+          <div class="vr-sub">剪辑：${v.editName} · 成片质量 ${v.quality}</div>
+          <button class="btn btn-primary btn-sm" data-action="video-publish" data-id="${v.id}">发布到官方账号</button>
+        </div>`).join("")}</div>` : ""}
+
+    ${published.length ? `<div class="section-title">已发布（${published.length}）</div>
+      <div class="video-list">${published.map(v => `
+        <div class="video-row">
+          <div class="vr-main"><b>${escapeHtml(v.targetName)}</b> · ${v.typeName}${v.unedited ? ' <span class="badge badge-red">未剪辑</span>' : ""}</div>
+          <div class="vr-sub">播放 ${formatNumber(v.views)} · 点赞 ${formatNumber(v.likes)} · 评论 ${formatNumber(v.comments)}</div>
+        </div>`).join("")}</div>` : ""}
+  `;
+}
+
+// ===== 视频平台 =====
+function renderVideoPlatform() {
+  const el = document.querySelector('[data-game-view="video-platform"]');
+  if (!el) return;
+  const tab = window._videoTab || "feed";
+
+  if (window._videoDetail) {
+    renderVideoDetail(el, window._videoDetail);
+    return;
+  }
+
+  const feed = settleVideoPlatform();
+  const mine = (Game.videos || []).filter(v => v.status === "published").slice().reverse();
+
+  const card = v => `
+    <div class="bf-video" data-action="video-open" data-id="${v.id}" data-src="${v.id.startsWith("pf_") ? "feed" : "mine"}">
+      <div class="bf-thumb"><span class="bf-dur">视频</span></div>
+      <div class="bf-info">
+        <div class="bf-title">${escapeHtml(v.title)}</div>
+        <div class="bf-meta">${v.typeName ? escapeHtml(v.typeName) : ""} · ${formatNumber(Math.round(v.views || 0))} 播放</div>
+        <div class="bf-summary">${escapeHtml((v.summary || "").slice(0, 60))}</div>
+      </div>
+    </div>`;
+
+  const list = tab === "mine" ? mine : feed;
+
+  el.innerHTML = `
+    <div class="bf-top">
+      <div class="bf-logo">📺 视频平台</div>
+      <div class="bf-tabs">
+        <button class="bf-tab ${tab === "feed" ? "active" : ""}" data-action="video-tab" data-tab="feed">推荐</button>
+        <button class="bf-tab ${tab === "mine" ? "active" : ""}" data-action="video-tab" data-tab="mine">我的账号</button>
+      </div>
+    </div>
+    <div class="bf-hint">${tab === "mine"
+      ? "乐队官方账号：在此查看已发布的视频。发布未经剪辑的视频会大幅影响乐队评价。"
+      : "本期推荐视频，专业乐评、大众听感、音乐分享、排行榜与其他乐队动态。"}</div>
+    ${list.length ? `<div class="bf-grid">${list.map(card).join("")}</div>`
+      : `<div class="award-empty-big">${tab === "mine" ? "还没有发布任何视频，去「视频制作」制作并发布吧。" : "暂无视频。"}</div>`}
+  `;
+}
+
+function renderVideoDetail(el, detail) {
+  const v = detail.video;
+  const cmts = videoCommentList(v);
+  el.innerHTML = `
+    <div class="bf-back" data-action="video-back">← 返回视频列表</div>
+    <div class="bf-detail">
+      <div class="bf-player"><div class="bf-play-icon">▶</div><div class="bf-play-meta">${formatNumber(v.views || 0)} 播放 · ${v.typeName || "视频"}</div></div>
+      <div class="bf-detail-title">${escapeHtml(v.title)}</div>
+      <div class="bf-detail-meta">${escapeHtml(v.band || "乐队官方")} · ${formatNumber(v.likes || 0)} 点赞 · ${formatNumber(v.comments || 0)} 评论</div>
+      <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary)}</p></div>
+      <div class="bf-comment-title">评论 ${cmts.short.length + cmts.long.length}</div>
+      <div class="bf-comments">
+        ${[...cmts.long, ...cmts.short].map((t, i) => `<div class="bf-comment"><div class="bf-avatar"></div><div class="bf-c-body"><div class="bf-c-name">用户${1000 + Math.floor(seededUnit("bfu|" + v.id + "|" + i) * 9000)}</div><div class="bf-c-text">${escapeHtml(t)}</div></div></div>`).join("")}
+      </div>
+    </div>
+  `;
+}
