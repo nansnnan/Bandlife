@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.87",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "「年度最佳单曲」「年度最佳作词」「年度最佳作曲」改为从当年发布的专辑（含 EP）曲目中评选，提名与获奖均展示该曲目名。",
+      "当金曲奖新闻与国家级 / 国家重要级新闻出现在同一期时，金曲奖让出版位：有 1 篇则退至第二位，2 篇及以上退至第三位。",
+    ],
+  },
+  {
     version: "1.2.86",
     date: "2026-11-26",
     size: "小更新",

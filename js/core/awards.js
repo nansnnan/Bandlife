@@ -3,11 +3,11 @@
 const GOLDEN_AWARDS = [
   { id: "band", name: "年度最佳乐队", desc: "综合年度表现最为突出的乐队" },
   { id: "album", name: "年度最佳专辑", desc: "年度最受好评的专辑" },
-  { id: "song", name: "年度最佳单曲", desc: "年度传唱度最高的单曲" },
+  { id: "song", name: "年度最佳单曲", desc: "年度专辑中传唱度最高的一首" },
   { id: "newcomer", name: "年度最佳新人", desc: "出道三年内的新锐乐队" },
   { id: "live", name: "年度最佳现场", desc: "最具感染力的现场表现" },
-  { id: "lyric", name: "年度最佳作词", desc: "歌词最见功力的作品" },
-  { id: "compose", name: "年度最佳作曲", desc: "旋律与编曲最为出色" },
+  { id: "lyric", name: "年度最佳作词", desc: "年度专辑中歌词最见功力的一首" },
+  { id: "compose", name: "年度最佳作曲", desc: "年度专辑中旋律与编曲最出色的一首" },
   { id: "produce", name: "年度最佳制作", desc: "制作水准最高的作品" },
   { id: "breakthrough", name: "年度最佳风格突破", desc: "在风格上勇于突破的乐队" },
   { id: "popular", name: "年度最受欢迎乐队", desc: "人气最高的乐队" },
@@ -40,16 +40,24 @@ function awardAnnualStats(bandName, year) {
   const best = scored.length ? Math.max(...scored) : 0;
 
   const workName = r => (r.album || r.name || "");
+  const byScore = (a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0));
+  // 专辑类（含 EP）作品
   const albumRels = rels.filter(r => r.releaseType === "专辑" || r.releaseType === "EP");
-  const songRels = rels.filter(r => r.releaseType === "单曲");
-  const bestAlbumRel = albumRels.slice().sort((a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0)))[0];
-  const bestSongRel = songRels.slice().sort((a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0)))[0];
-  const bestWorkRel = rels.slice().sort((a, b) => (scoreOf(b) * 1e6 + (b.plays || 0)) - (scoreOf(a) * 1e6 + (a.plays || 0)))[0];
+  // 当年专辑中的曲目（单曲奖、作词、作曲均从这些曲目中产生）
+  const albumTrackRels = albumRels.slice();
+  const bestAlbumRel = albumRels.slice().sort(byScore)[0];
+  const bestTrackRel = albumTrackRels.slice().sort(byScore)[0];
+  const bestWorkRel = rels.slice().sort(byScore)[0];
+  const trackPlays = albumTrackRels.reduce((s, r) => s + (r.plays || 0), 0);
+  const trackScores = albumTrackRels.map(scoreOf);
+  const trackAvg = trackScores.length ? trackScores.reduce((a, b) => a + b, 0) / trackScores.length : 0;
+  const trackBest = trackScores.length ? Math.max(...trackScores) : 0;
 
   return {
     plays, albumPlays, songPlays, avg, best, count: rels.length,
+    trackPlays, trackAvg, trackBest, trackCount: albumTrackRels.length,
     bestAlbum: bestAlbumRel ? workName(bestAlbumRel) : null,
-    bestSong: bestSongRel ? workName(bestSongRel) : null,
+    bestSong: bestTrackRel ? (bestTrackRel.name || "") : null,
     bestWork: bestWorkRel ? workName(bestWorkRel) : null,
   };
 }
@@ -81,11 +89,11 @@ function awardScore(awardId, c, year) {
   switch (awardId) {
     case "band": base = s.plays * 0.75 + s.avg * 900; break;
     case "album": base = s.albumPlays * 1.0 + s.best * 400; break;
-    case "song": base = s.songPlays * 1.0 + s.best * 300; break;
+    case "song": base = s.trackPlays * 1.0 + s.trackBest * 420; break;
     case "newcomer": base = s.plays * 0.6 + s.avg * 1200; break;
     case "live": base = s.plays * 0.5 + s.avg * 1400; break;
-    case "lyric": base = s.avg * 1600 + s.best * 500; break;
-    case "compose": base = s.avg * 1500 + s.plays * 0.15; break;
+    case "lyric": base = s.trackAvg * 1600 + s.trackBest * 620; break;
+    case "compose": base = s.trackAvg * 1500 + s.trackPlays * 0.18; break;
     case "produce": base = s.avg * 1500 + s.best * 600; break;
     case "breakthrough": base = s.avg * 1200 + s.plays * 0.3; break;
     case "popular": base = Math.sqrt(Math.max(0, c.fans)) * 120; break;
@@ -101,7 +109,7 @@ function awardIsEligible(awardId, c, year) {
     return year - foundedYear <= 3;
   }
   if (awardId === "album") return c.stats.albumPlays > 0;
-  if (awardId === "song") return c.stats.songPlays > 0;
+  if (awardId === "song" || awardId === "lyric" || awardId === "compose") return (c.stats.trackCount || 0) > 0;
   return true;
 }
 
@@ -110,10 +118,10 @@ function awardWorkFor(awardId, c) {
   const s = c.stats;
   switch (awardId) {
     case "album": return s.bestAlbum;
-    case "song": return s.bestSong;
-    case "live":
+    case "song":
     case "lyric":
-    case "compose":
+    case "compose": return s.bestSong;     // 当年专辑中的一首曲目
+    case "live":
     case "produce":
     case "breakthrough": return s.bestWork;
     default: return null;   // band / newcomer / popular 仅显示乐队名

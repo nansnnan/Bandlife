@@ -784,11 +784,18 @@ function generateNewsIssue(week) {
     }
   }
   if (awardLead) {
-    leads.unshift(awardLead);
+    // 同期若有国家级 / 国家重要级（level=major）长讯，金曲奖让出版位至第二或第三
+    const isNational = l => l.level === "major" || (l.level === "festival" && (l._prio || 0) >= 80);
+    const majorCount = leads.filter(isNational).length;
+    const insertAt = majorCount >= 2 ? 2 : (majorCount === 1 ? 1 : 0);
+    leads.splice(Math.min(insertAt, leads.length), 0, awardLead);
     // 保持长讯总数 5 篇，优先移除末尾的非社会长讯，避免挤占社会版面
     while (leads.length > 5) {
       let idx = -1;
-      for (let i = leads.length - 1; i >= 1; i--) { if (!leads[i].social) { idx = i; break; } }
+      for (let i = leads.length - 1; i >= 0; i--) {
+        if (leads[i] === awardLead) continue;   // 保留金曲奖长讯
+        if (!leads[i].social) { idx = i; break; }
+      }
       if (idx < 0) break;
       leads.splice(idx, 1);
     }
