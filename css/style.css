@@ -221,7 +221,16 @@ select { cursor: pointer; }
   display: flex;
   flex-direction: column;
   gap: 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.16) transparent;
+  overscroll-behavior: contain;
 }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.16); border-radius: 3px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
 .nav-item {
   display: flex;
   align-items: center;
@@ -627,8 +636,15 @@ select { cursor: pointer; }
     border-right: none;
     z-index: 60;
     background: var(--bg-2);
+    justify-content: flex-start;
+    gap: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
   }
-  .nav-item { flex-direction: column; padding: 4px 2px; gap: 2px; border-radius: 8px; }
+  .sidebar::-webkit-scrollbar { display: none; }
+  .nav-item { flex: 0 0 auto; min-width: 58px; flex-direction: column; padding: 4px 2px; gap: 2px; border-radius: 8px; }
   .nav-item span { font-size: 18px; }
   .nav-item .nav-label { display: block; font-size: 9px; line-height: 1; }
 

@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.1",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "导航栏支持滚动：桌面端左侧功能栏可上下滚动，移动端底部导航可左右滑动，避免功能项超出一屏。",
+    ],
+  },
+  {
     version: "1.3.0",
     date: "2026-11-26",
     size: "中更新",
