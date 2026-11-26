@@ -29,6 +29,16 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.8",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "修复视频平台中与乐队无关的视频混入乐队相关评论的问题，无关视频改用生活区评论池。",
+      "新增视频摘要 15 条、视频平台评论 15 条。",
+      "同步扩充乐评、播放器评论、乐坛与地方新闻模板共 115 条。",
+    ],
+  },
+  {
     version: "1.3.7",
     date: "2026-11-26",
     size: "小更新",

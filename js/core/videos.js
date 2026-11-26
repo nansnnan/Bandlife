@@ -453,9 +453,17 @@ function videoCommentList(video) {
     }
     return out;
   };
-  const short = pickN(window.VIDEO_COMMENTS.short, 6, "s");
-  const long = pickN(window.VIDEO_COMMENTS.long, 3, "l");
-  const fill = t => t.replace(/\{band\}/g, video.band || "这支乐队").replace(/\{album\}/g, video.album || "这张专辑").replace(/\{song\}/g, video.song || "这首歌").replace(/\{style\}/g, "独立音乐");
+  // 与乐队无关的视频使用生活区评论池，避免出现乐队相关评价
+  const related = video.related !== false && video.type !== "other";
+  const pool = (related ? window.VIDEO_COMMENTS : (window.VIDEO_COMMENTS_OTHER || window.VIDEO_COMMENTS));
+  const short = pickN(pool.short, 6, "s");
+  const long = pickN(pool.long || [], 3, "l");
+  const fill = t => related
+    ? t.replace(/\{band\}/g, video.band || "这支乐队")
+       .replace(/\{album\}/g, video.album || "这张专辑")
+       .replace(/\{song\}/g, video.song || "这首歌")
+       .replace(/\{style\}/g, "独立音乐")
+    : t;
   return {
     short: short.map(fill),
     long: long.map(fill),
