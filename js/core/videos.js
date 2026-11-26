@@ -484,3 +484,43 @@ function videoCommentList(video) {
     long: long.map(fill),
   };
 }
+
+// ===== 竞争对手的视频平台主页 =====
+function rivalVideoList(rival) {
+  if (!rival) return [];
+  const users = videoUserBase();
+  const rels = (rival.releases || []).slice()
+    .sort((a, b) => (b.dayIndex || 0) - (a.dayIndex || 0))
+    .slice(0, 24);
+  const out = [];
+  rels.forEach((rel, i) => {
+    const seed = "rv|" + rival.name + "|" + (rel.id || (rel.name + rel.dayIndex));
+    const base = Math.max(rel.plays || 0, 1000);
+    const cap = v => Math.max(30, Math.round(Math.min(v, users * 0.3 || v)));
+    out.push({
+      id: "rv_" + i + "_mv", type: "mv", typeName: "MV",
+      title: rival.name + "《" + rel.name + "》官方MV",
+      views: cap(base * (0.08 + seededUnit(seed + "mv") * 0.4)),
+      duration: rel.duration || 240, day: rel.dayIndex, band: rival.name,
+    });
+    if ((rel.releaseType === "专辑" || rel.releaseType === "EP") && i % 3 === 0) {
+      out.push({
+        id: "rv_" + i + "_doc", type: "doc", typeName: "纪录片",
+        title: rival.name + "《" + rel.name + "》制作纪录片",
+        views: cap(base * (0.05 + seededUnit(seed + "doc") * 0.2)),
+        duration: 900 + Math.floor(seededUnit(seed + "d") * 900),
+        day: rel.dayIndex, band: rival.name,
+      });
+    }
+    if (i % 5 === 2) {
+      out.push({
+        id: "rv_" + i + "_tr", type: "trailer", typeName: "预告片",
+        title: rival.name + "《" + rel.name + "》预告",
+        views: cap(base * (0.02 + seededUnit(seed + "tr") * 0.08)),
+        duration: 30 + Math.floor(seededUnit(seed + "t") * 30),
+        day: rel.dayIndex, band: rival.name,
+      });
+    }
+  });
+  return out.sort((a, b) => (b.day || 0) - (a.day || 0));
+}

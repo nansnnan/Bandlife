@@ -778,6 +778,7 @@ function renderAwards() {
 
 function renderRivals() {
   const el = document.querySelector('[data-game-view="rivals"]');
+  if (window._rivalVideoName) { renderRivalVideos(window._rivalVideoName); return; }
   const all = (Game.rivals || []).slice().sort((a, b) => (a.activeDay || 0) - (b.activeDay || 0));
   const shown = all.filter(r => r.active);
   const upcoming = all.filter(r => !r.active);
@@ -820,6 +821,7 @@ function renderRivals() {
 }
 
 function renderRivalDetail(name) {
+  window._rivalVideoName = null;
   const el = document.querySelector('[data-game-view="rivals"]');
   const r = (Game.rivals || []).find(x => x.name === name);
   if (!r) { renderRivals(); return; }
@@ -888,11 +890,53 @@ function renderRivalDetail(name) {
         <div>粉丝：${formatNumber(Math.round(r.fans || 0))}</div>
       </div>
       ${r.desc ? `<div class="rival-desc">${escapeHtml(r.desc)}</div>` : ""}
+      <button class="btn btn-secondary btn-sm" data-action="rival-videos" data-name="${escapeHtml(r.name)}" style="margin-top:12px;">查看视频平台主页</button>
     </div>
     <div class="section-title">已发布专辑（${albums.length}）</div>
     <div class="rival-items">${albHtml}</div>
     <div class="section-title">已发布单曲（${singles.length}）</div>
     <div class="rival-items">${sinHtml}</div>
+  `;
+}
+
+function renderRivalVideos(name) {
+  const el = document.querySelector('[data-game-view="rivals"]');
+  const r = (Game.rivals || []).find(x => x.name === name);
+  if (!r) { window._rivalVideoName = null; renderRivals(); return; }
+  const head = `<div class="rival-detail-head"><button class="btn-time" data-action="rival-videos-back">← 返回详情</button></div>`;
+  if (typeof videoPlatformOnline === "function" && !videoPlatformOnline()) {
+    el.innerHTML = head + `<div class="award-empty-big">视频平台暂未上线，预计 2009 年 7 月 1 日上线。</div>`;
+    return;
+  }
+  const videos = rivalVideoList(r);
+  const compact = n => {
+    n = Math.round(n || 0);
+    if (n >= 10000000) return (n / 100000000).toFixed(2).replace(/\.?0+$/, "") + "亿";
+    if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, "") + "万";
+    return String(n);
+  };
+  const card = v => `
+    <div class="bf-video">
+      <div class="bf-thumb" style="${videoCoverStyle(v.id)}"></div>
+      <div class="bf-stat">
+        <span>▶ ${compact(v.views)}</span>
+        <span>💬 ${compact(Math.round(v.views * 0.01))}</span>
+        <span class="bf-stat-time">${fmtVideoDuration(v.duration || 180)}</span>
+      </div>
+      <div class="bf-title">${escapeHtml(v.title)}</div>
+      <div class="bf-author">UP ${escapeHtml(v.band)}官方</div>
+    </div>`;
+  el.innerHTML = `
+    ${head}
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">${escapeHtml(displayBandName(r.name))} · 视频主页</div>
+      <div class="rival-detail-meta">
+        <div>视频数：${videos.length}</div>
+        <div>总播放：${formatNumber(videos.reduce((n, v) => n + (v.views || 0), 0))}</div>
+        <div>粉丝：${formatNumber(Math.round(r.fans || 0))}</div>
+      </div>
+    </div>
+    ${videos.length ? `<div class="bf-grid">${videos.map(card).join("")}</div>` : `<div class="award-empty-big">该乐队还没有发布视频。</div>`}
   `;
 }
 

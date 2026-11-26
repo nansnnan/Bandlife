@@ -182,6 +182,17 @@ function bindEvents() {
         renderVideoStudio(); break;
       }
 
+      // 竞争对手视频主页
+      case "rival-videos":
+        window._rivalVideoName = target.dataset.name;
+        renderRivals(); break;
+      case "rival-videos-back": {
+        const nm = window._rivalVideoName;
+        window._rivalVideoName = null;
+        if (nm) renderRivalDetail(nm); else renderRivals();
+        break;
+      }
+
       // 视频平台
       case "video-tab":
         window._videoTab = target.dataset.tab; window._videoDetail = null;
