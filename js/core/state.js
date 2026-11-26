@@ -1,6 +1,6 @@
 // 核心状态管理 + 工具函数 + 常量
 
-const GAME_VERSION = "1.2.84";
+const GAME_VERSION = "1.2.85";
 const START_YEAR = 2000, START_MONTH = 1, START_DAY = 1;
 
 // 全局游戏状态
@@ -15,6 +15,7 @@ const Game = {
   rivals: [],             // 39 个竞争对手的运行时状态
   events: [],             // 事件日志 [{day, text}]
   stats: { totalPlays: 0, totalFans: 0, reputation: 50, totalSales: 0 },
+  awards: { nominations: null, results: null, history: [] },  // 金曲奖
   rng: Math.random,       // 可替换的随机源
 };
 
@@ -105,6 +106,7 @@ function loadGame() {
     if (s) {
       const data = JSON.parse(s);
       Object.assign(Game, data);
+      if (!Game.awards) Game.awards = { nominations: null, results: null, history: [] };
       return true;
     }
   } catch (e) { /* 忽略 */ }

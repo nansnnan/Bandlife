@@ -874,3 +874,46 @@ select { cursor: pointer; }
 .rival-track-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rival-track-plays { color: var(--text-faint); }
 .rival-track-score { color: var(--accent); min-width: 32px; text-align: right; }
+
+/* ===== 金曲奖 ===== */
+.award-hint { color: var(--text-faint); font-size: 12px; line-height: 1.7; margin-bottom: 14px; }
+.award-status {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 14px; margin-bottom: 14px;
+}
+.award-status.done { background: rgba(255,215,0,0.06); border-color: rgba(255,215,0,0.25); }
+.award-status-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.award-status.done .award-status-title { color: #ffd700; }
+.award-status-sub { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+.award-card { display: flex; flex-direction: column; gap: 8px; }
+.award-title { font-size: 15px; font-weight: 600; }
+.award-desc { font-size: 12px; color: var(--text-faint); }
+.award-nominees { display: flex; flex-direction: column; gap: 6px; }
+.award-nominee {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px; border-radius: 8px;
+  background: rgba(255,255,255,0.03); font-size: 13px;
+}
+.award-nominee.winner {
+  background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.35);
+}
+.award-nominee.me { box-shadow: 0 0 0 1px rgba(124,92,255,0.5) inset; }
+.award-nom-name { flex: 1; }
+.award-nom-style { font-size: 11px; color: var(--text-faint); }
+.award-empty { font-size: 12px; color: var(--text-faint); padding: 4px 0; }
+.award-empty-big {
+  padding: 32px 16px; text-align: center; color: var(--text-dim);
+  font-size: 13px; background: rgba(255,255,255,0.02);
+  border: 1px dashed var(--border); border-radius: 10px; margin-bottom: 16px;
+}
+.badge-gold { background: rgba(255,215,0,0.2); color: #ffd700; }
+.award-history { display: flex; flex-direction: column; gap: 12px; }
+.award-history-year { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 10px 14px; }
+.award-history-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--accent-2); }
+.award-history-list { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; }
+.award-history-item { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; }
+.ah-award { color: var(--text-faint); }
+.ah-band { color: var(--text); }
+@media (max-width: 640px) {
+  .award-history-list { grid-template-columns: 1fr; }
+}

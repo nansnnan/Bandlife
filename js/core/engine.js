@@ -171,6 +171,8 @@ function advanceTime(days) {
     if (Game.dayIndex % 30 === 0) tickMonthly();
     // 创作中的歌曲到期则完成
     if (typeof checkSongProgress === "function") checkSongProgress();
+    // 金曲奖日程（11/1 提名、12/15 颁奖）
+    if (typeof checkAwardSchedule === "function") checkAwardSchedule();
   }
   updateRivalActivity();
   saveGame();
@@ -764,6 +766,34 @@ function generateNewsIssue(week) {
     const al = albumsOf(bObj.name); const la = al.length ? pick(al, "bsa" + i) : "新专辑";
     items.push({ band: true, text: tpl.replace(/\{band\}/g, bObj.name).replace(/\{style\}/g, bObj.style).replace(/\{album\}/g, la).replace(/\{city\}/g, pick(cities, "bsc" + i)) });
   }
+
+  // ===== 金曲奖：提名（11/1）与颁奖（12/15）所在的一周 =====
+  let awardLead = null, awardShort = null;
+  for (let i = 0; i < 7; i++) {
+    const dd = dayToDate(startDay + i);
+    const AW = Game.awards || {};
+    if (dd.month === 11 && dd.day === 1 && AW.nominations && AW.nominations.year === dd.year) {
+      const n = awardNominationNews(AW.nominations);
+      awardLead = { title: n.long.title, body: n.long.body, social: false };
+      awardShort = n.short;
+    }
+    if (dd.month === 12 && dd.day === 15 && AW.results && AW.results.year === dd.year) {
+      const n = awardResultNews(AW.results);
+      awardLead = { title: n.long.title, body: n.long.body, social: false };
+      awardShort = n.short;
+    }
+  }
+  if (awardLead) {
+    leads.unshift(awardLead);
+    // 保持长讯总数 5 篇，优先移除末尾的非社会长讯，避免挤占社会版面
+    while (leads.length > 5) {
+      let idx = -1;
+      for (let i = leads.length - 1; i >= 1; i--) { if (!leads[i].social) { idx = i; break; } }
+      if (idx < 0) break;
+      leads.splice(idx, 1);
+    }
+  }
+  if (awardShort) items.unshift({ band: true, text: awardShort });
 
   const metaKw = ["沙盒模式","乐队生涯","资金无限","自由创作","正式成立"];
   // 本周动态并入「乐坛快讯」，不再单独成块

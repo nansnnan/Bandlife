@@ -209,6 +209,7 @@ function renderGameView(name) {
     "tour": renderTour,
     "train": renderTrain,
     "rivals": renderRivals,
+    "awards": renderAwards,
   };
   if (map[name]) map[name]();
 }
@@ -683,6 +684,86 @@ function rivalFormedDate(r) {
   }
   const d = dayToDate(r.activeDay || 0);
   return d.year + "-" + String(d.month).padStart(2, "0") + "-" + String(d.day).padStart(2, "0");
+}
+
+// ===== 金曲奖 =====
+function renderAwards() {
+  const el = document.querySelector('[data-game-view="awards"]');
+  const d = dayToDate(Game.dayIndex);
+  const aw = Game.awards || {};
+  const nom = aw.nominations;
+  const res = aw.results;
+  const playerName = Game.band ? Game.band.name : null;
+
+  const nomineeRow = (n, isWinner) => {
+    const isMe = playerName && n.name === playerName;
+    return `<div class="award-nominee ${isWinner ? "winner" : ""} ${isMe ? "me" : ""}">
+      <span class="award-nom-name">${escapeHtml(n.name)}${isMe ? ' <span class="badge badge-purple">你</span>' : ""}</span>
+      <span class="award-nom-style">${escapeHtml(n.style || "")}</span>
+      ${isWinner ? '<span class="badge badge-gold">金奖</span>' : ""}
+    </div>`;
+  };
+
+  const awardCard = (a) => {
+    const winner = a.winner || null;
+    return `<div class="card award-card">
+      <div class="award-title">${escapeHtml(a.name)}</div>
+      <div class="award-desc">${escapeHtml(a.desc || "")}</div>
+      <div class="award-nominees">
+        ${a.nominees.map(n => nomineeRow(n, winner && winner.name === n.name)).join("")}
+        ${!a.nominees.length ? '<div class="award-empty">本年度暂无符合条件的提名</div>' : ""}
+      </div>
+    </div>`;
+  };
+
+  let statusHtml = "";
+  if (nom && nom.year === d.year && !res) {
+    statusHtml = `<div class="award-status">
+      <div class="award-status-title">📌 第 ${nom.year} 届金曲奖 · 提名公布</div>
+      <div class="award-status-sub">提名期进行中，颁奖典礼定于 12 月 15 日举行。</div>
+    </div>`;
+  } else if (res && res.year === d.year) {
+    statusHtml = `<div class="award-status done">
+      <div class="award-status-title">🏆 第 ${res.year} 届金曲奖 · 已揭晓</div>
+      <div class="award-status-sub">颁奖典礼已于 12 月 15 日举行，金奖以金色标记。</div>
+    </div>`;
+  } else if (d.month < 11) {
+    statusHtml = `<div class="award-status">
+      <div class="award-status-title">第 ${d.year} 届金曲奖 · 尚未开始</div>
+      <div class="award-status-sub">提名将于今年 11 月 1 日公布，12 月 15 日颁奖。</div>
+    </div>`;
+  } else {
+    statusHtml = `<div class="award-status">
+      <div class="award-status-title">第 ${d.year} 届金曲奖 · 等待提名</div>
+      <div class="award-status-sub">提名将于 11 月 1 日公布。</div>
+    </div>`;
+  }
+
+  const list = res ? res.list : (nom ? nom.list : []);
+  const bodyHtml = list.length
+    ? `<div class="grid grid-2">${list.map(awardCard).join("")}</div>`
+    : `<div class="award-empty-big">本年度金曲奖尚未开始评选。每年 11 月 1 日公布提名，12 月 15 日颁奖。</div>`;
+
+  const history = (aw.history || []).slice(0, 5);
+  const historyHtml = history.length
+    ? `<div class="section-title">往届获奖</div>
+       <div class="award-history">
+         ${history.map(h => `<div class="award-history-year">
+           <div class="award-history-title">第 ${h.year} 届</div>
+           <div class="award-history-list">
+             ${h.winners.map(w => `<div class="award-history-item"><span class="ah-award">${escapeHtml(w.award)}</span><span class="ah-band">${escapeHtml(w.band)}</span></div>`).join("")}
+           </div>
+         </div>`).join("")}
+       </div>`
+    : "";
+
+  el.innerHTML = `
+    <div class="section-title">🏆 金曲奖</div>
+    <div class="award-hint">每年 11 月 1 日—11 月 30 日提名，每项提名五支乐队；12 月 15 日颁奖，每项产生一个金奖。提名可获得少量名气与粉丝，金奖则可获得大量名气、粉丝与奖金。</div>
+    ${statusHtml}
+    ${bodyHtml}
+    ${historyHtml}
+  `;
 }
 
 function renderRivals() {
