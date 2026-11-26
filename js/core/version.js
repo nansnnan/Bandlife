@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.6",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "视频时长按类型区分：专业乐评约 10~35 分钟、大众听感约 1~3.5 分钟、排行榜约 8~23 分钟；音乐分享的整轨视频与专辑总时长一致、单曲视频与单曲时长一致；MV 与歌曲时长一致、预告片 30~60 秒、纪录片 15~40 分钟。",
+    ],
+  },
+  {
     version: "1.3.5",
     date: "2026-11-26",
     size: "小更新",

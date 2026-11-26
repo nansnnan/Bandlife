@@ -163,7 +163,12 @@ function publishVideo(videoId) {
   v.unedited = unedited;
   v.quality = q;
   v.author = (Game.band ? Game.band.name : "乐队") + "官方";
-  v.duration = v.type === "doc" ? 900 + rand(0, 900) : (v.type === "trailer" ? 60 + rand(0, 60) : 180 + rand(0, 180));
+  if (v.type === "doc") v.duration = 900 + rand(0, 1500);           // 纪录片：15~40 分钟
+  else if (v.type === "trailer") v.duration = 30 + rand(0, 30);     // 预告片：30~60 秒
+  else {
+    const song = (Game.songs || []).find(x => x.id === v.targetId);  // MV：与歌曲时长一致
+    v.duration = song && song.duration ? song.duration : 180 + rand(0, 60);
+  }
 
   if (unedited) {
     // 直接发布未剪辑视频：大幅减少乐队评价
@@ -199,6 +204,29 @@ function videoCoverStyle(id) {
     + "linear-gradient(135deg,hsl(" + h2 + ",68%,56%) 0%,transparent 58%),"
     + "radial-gradient(circle at 80% 20%,hsl(" + h3 + ",72%,62%) 0%,transparent 44%),"
     + "linear-gradient(160deg,transparent 42%,hsl(" + h1 + ",62%,22%) 100%);";
+}
+
+// 作品总时长（专辑/EP 为整张曲目时长之和，单曲为自身时长）
+function releaseTotalDuration(rel) {
+  if (!rel) return 240;
+  if (rel.songs && rel.songs.length) {
+    return rel.songs.reduce((s, x) => s + (x.duration || 240), 0);
+  }
+  if (rel.album && (rel.releaseType === "专辑" || rel.releaseType === "EP")) {
+    let total = 0, found = 0;
+    for (const r of (Game.rivals || [])) {
+      for (const x of (r.releases || [])) {
+        if (x.bandName === rel.bandName && x.album === rel.album) { total += (x.duration || 240); found++; }
+      }
+    }
+    for (const x of (Game.releases || [])) {
+      if (x.album === rel.album && x.bandName === rel.bandName && x.songs) {
+        return x.songs.reduce((s, y) => s + (y.duration || 240), 0);
+      }
+    }
+    if (found) return total;
+  }
+  return rel.duration || 240;
 }
 
 function fmtVideoDuration(sec) {
@@ -258,7 +286,16 @@ function buildPlatformFeed(week) {
     if (!tpl) tpl = pick(tplPool, "s" + i);
     let rel = null, bandName = "", albumName = "", songName = "";
     if (related && allRels.length) {
-      rel = allRels[Math.floor(rnd("r" + i) * allRels.length) % allRels.length];
+      let relPool = allRels;
+      if (t.id === "share") {
+        // 摘要为整轨/歌单时优先选专辑，为单曲分享时优先选单曲
+        const wantAlbum = /整轨|全专|全曲|专辑分享|歌单|播放列表/.test(tpl || "");
+        const filtered = allRels.filter(x => wantAlbum
+          ? (x.releaseType === "专辑" || x.releaseType === "EP")
+          : x.releaseType === "单曲");
+        if (filtered.length) relPool = filtered;
+      }
+      rel = relPool[Math.floor(rnd("r" + i) * relPool.length) % relPool.length];
       bandName = rel.bandName || rel.name;
       albumName = rel.album || rel.name;
       songName = rel.name;
@@ -292,7 +329,27 @@ function buildPlatformFeed(week) {
     const firstSentence = (summary.split(/[。！？!?]/)[0] || summary).trim();
     const title = firstSentence.length > 34 ? firstSentence.slice(0, 34) + "…" : firstSentence;
     const author = videoAuthorOf(t.id, bandName, "pf_" + week + "_" + i);
-    const duration = 150 + Math.floor(rnd("dur" + i) * 720);
+    let duration;
+    if (t.id === "critic") {
+      duration = 600 + Math.floor(rnd("dur" + i) * 1500);            // 深度解析：10~35 分钟
+    } else if (t.id === "casual") {
+      duration = 60 + Math.floor(rnd("dur" + i) * 150);              // 简要听感：1~3.5 分钟
+    } else if (t.id === "share") {
+      const wantAlbum = /整轨|全专|全曲|专辑分享|歌单|播放列表/.test(tpl || "");
+      if (rel && wantAlbum && (rel.releaseType === "专辑" || rel.releaseType === "EP")) {
+        duration = releaseTotalDuration(rel);                        // 整轨：与专辑总时长一致
+      } else if (rel) {
+        duration = rel.duration || 240;                              // 单曲：与单曲时长一致
+      } else {
+        duration = 240 + Math.floor(rnd("dur" + i) * 120);
+      }
+    } else if (t.id === "chart") {
+      duration = 480 + Math.floor(rnd("dur" + i) * 900);             // 排行榜：8~23 分钟
+    } else if (t.id === "bandofficial") {
+      duration = 120 + Math.floor(rnd("dur" + i) * 480);             // 官方内容：2~10 分钟
+    } else {
+      duration = 120 + Math.floor(rnd("dur" + i) * 780);             // 生活区：2~15 分钟
+    }
     videos.push({
       id: "pf_" + week + "_" + i,
       type: t.id, typeName: t.name, related, author, duration,
