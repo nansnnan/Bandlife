@@ -155,10 +155,23 @@ function generateAwardNominations(year) {
 }
 
 // ===== 颁奖（12 月 15 日） =====
+// 按提名得分加权随机选出金奖（高分更可能获奖，但不固定为第一名）
+function pickAwardWinner(nominees, seed) {
+  if (!nominees || !nominees.length) return null;
+  const weights = nominees.map(n => Math.max(1, n.score || 1));
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = seededUnit(seed) * total;
+  for (let i = 0; i < nominees.length; i++) {
+    r -= weights[i];
+    if (r <= 0) return nominees[i];
+  }
+  return nominees[nominees.length - 1];
+}
+
 function resolveAwardWinners(nomination) {
   const list = nomination.list.map(aw => {
     if (!aw.nominees.length) return { ...aw, winner: null };
-    const winner = aw.nominees[0];
+    const winner = pickAwardWinner(aw.nominees, "win|" + nomination.year + "|" + aw.id);
     return { ...aw, winner };
   });
   return { year: nomination.year, list };
@@ -291,7 +304,9 @@ function checkAwardSchedule() {
       Game.awards.history = Game.awards.history || [];
       Game.awards.history.unshift({
         year,
-        winners: res.list.filter(a => a.winner).map(a => ({ award: a.name, band: a.winner.name })),
+        winners: res.list.filter(a => a.winner).map(a => ({
+          award: a.name, band: a.winner.name, work: a.winner.work || null,
+        })),
       });
       if (Game.awards.history.length > 30) Game.awards.history.pop();
       addEvent(`第${awardEdition(year)}届金曲奖颁奖典礼落幕，十个奖项各归其主。`);

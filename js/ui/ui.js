@@ -761,7 +761,7 @@ function renderAwards() {
          ${history.map(h => `<div class="award-history-year">
            <div class="award-history-title">第 ${awardEdition(h.year)} 届（${h.year} 年）</div>
            <div class="award-history-list">
-             ${h.winners.map(w => `<div class="award-history-item"><span class="ah-award">${escapeHtml(w.award)}</span><span class="ah-band">${escapeHtml(displayBandName(w.band))}</span></div>`).join("")}
+             ${h.winners.map(w => `<div class="award-history-item"><span class="ah-award">${escapeHtml(w.award)}</span><span class="ah-band">${w.work ? "《" + escapeHtml(w.work) + "》" : ""}${escapeHtml(displayBandName(w.band))}</span></div>`).join("")}
            </div>
          </div>`).join("")}
        </div>`

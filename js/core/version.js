@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.12",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "金曲奖获奖改为按提名得分加权随机产生，不再固定由提名第一位获奖。",
+      "金曲奖往届记录补全获奖作品名（如《无限引擎》发光曲线），作品类奖项不再只显示乐队名。",
+    ],
+  },
+  {
     version: "1.3.11",
     date: "2026-11-26",
     size: "小更新",
