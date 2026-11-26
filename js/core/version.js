@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.2.89",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "新闻界面不再出现金曲奖相关报道，恢复原有版面；金曲奖的提名、颁奖、奖励与页面展示均保持不变。",
+    ],
+  },
+  {
     version: "1.2.88",
     date: "2026-11-26",
     size: "小更新",
