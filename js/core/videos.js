@@ -13,6 +13,62 @@ const VIDEO_EDIT_LEVELS = {
   elite: { id: "elite", name: "顶级外包", quality: 90, cost: 300000, desc: "顶级制作团队，效果最佳" },
 };
 
+// ===== 视频平台上线时间与用户规模 =====
+const VIDEO_PLATFORM_OPEN = { year: 2009, month: 7, day: 1 };
+
+// 平台用户规模曲线（年份, 用户数）。2020–2022 为爆发式增长期，2026 年达 4 亿。
+const VIDEO_USER_CURVE = [
+  [2009.5, 200000],
+  [2010, 600000],
+  [2012, 5000000],
+  [2015, 50000000],
+  [2018, 110000000],
+  [2020, 160000000],
+  [2021, 210000000],
+  [2022, 280000000],   // 爆炸式增长
+  [2023, 330000000],
+  [2024, 360000000],
+  [2025, 385000000],
+  [2026, 400000000],
+  [2028, 445000000],
+  [2030, 490000000],
+  [2035, 570000000],
+  [2040, 660000000],
+  [2050, 820000000],
+];
+
+function videoPlatformOpenDay() {
+  return dateToDay(VIDEO_PLATFORM_OPEN.year, VIDEO_PLATFORM_OPEN.month, VIDEO_PLATFORM_OPEN.day);
+}
+function videoPlatformOnline() {
+  return Game.dayIndex >= videoPlatformOpenDay();
+}
+
+// 当前平台用户数（按时间在曲线上插值）
+function videoUserBase() {
+  if (!videoPlatformOnline()) return 0;
+  const d = dayToDate(Game.dayIndex);
+  const y = d.year + (d.month - 1) / 12 + (d.day - 1) / 365;
+  const C = VIDEO_USER_CURVE;
+  if (y <= C[0][0]) return C[0][1];
+  if (y >= C[C.length - 1][0]) return C[C.length - 1][1];
+  for (let i = 0; i < C.length - 1; i++) {
+    const a = C[i], b = C[i + 1];
+    if (y >= a[0] && y <= b[0]) {
+      const t = (y - a[0]) / (b[0] - a[0]);
+      return Math.round(a[1] * Math.pow(b[1] / a[1], t));
+    }
+  }
+  return C[C.length - 1][1];
+}
+
+// 播放量系数：以 2026 年 4 亿用户为基准 1
+function videoUserFactor() {
+  const base = videoUserBase();
+  if (!base) return 0.01;
+  return Math.max(0.02, base / 400000000);
+}
+
 // ===== 制作视频 =====
 function startVideo(typeId, targetId) {
   const t = VIDEO_TYPES[typeId];
@@ -98,7 +154,7 @@ function publishVideo(videoId) {
   const unedited = v.status === "unedited";
   const q = unedited ? clamp(25 + rand(0, 10), 10, 40) : v.quality;
   const fame = (Game.stats.reputation || 50) + Math.sqrt(Math.max(0, Game.stats.totalFans || 0)) / 20;
-  const baseViews = Math.round((q * 1200 + fame * 800) * randf(0.8, 1.3));
+  const baseViews = Math.round((q * 1200 + fame * 800) * randf(0.8, 1.3) * videoUserFactor());
   v.views = unedited ? Math.round(baseViews * 0.45) : baseViews;
   v.likes = Math.round(v.views * (0.03 + q / 4000));
   v.comments = Math.round(v.views * (0.008 + q / 12000));
@@ -182,7 +238,7 @@ function buildPlatformFeed(week) {
       sentiment = r < 0.55 ? "pos" : (r < 0.8 ? "neutral" : "neg");
     }
     if (t.id === "chart") rank = 1 + Math.floor(rnd("rank" + i) * 10);
-    const views = Math.round((5000 + rnd("v" + i) * 90000) * (related ? 1 : 0.6));
+    const views = Math.round((30000 + rnd("v" + i) * 40000) * (related ? 1 : 0.6) * videoUserFactor());
     videos.push({
       id: "pf_" + week + "_" + i,
       type: t.id, typeName: t.name, related,
@@ -248,6 +304,7 @@ function applyVideoInfluence(v) {
 
 // 每周结算一次平台影响
 function settleVideoPlatform() {
+  if (!videoPlatformOnline()) return [];
   const week = Math.floor(Game.dayIndex / 7);
   if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [] };
   if (Game.videoPlatform.week === week) return Game.videoPlatform.videos;

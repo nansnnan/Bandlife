@@ -1005,3 +1005,4 @@ select { cursor: pointer; }
   .studio-metrics { grid-template-columns: repeat(2, 1fr); }
   .bf-grid { grid-template-columns: 1fr; }
 }
+.bf-users { color: var(--text-dim); margin-left: 6px; }

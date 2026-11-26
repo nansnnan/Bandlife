@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.2",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "视频平台改为 2009 年 7 月 1 日上线，此前进入页面会提示“暂未上线，预计 2009 年 7 月 1 日上线”。",
+      "视频平台用户规模随时间增长：上线初期较少，2020—2022 年爆发式增长，2026 年达到 4 亿，之后继续增长；用户越多，视频播放量越高。",
+    ],
+  },
+  {
     version: "1.3.1",
     date: "2026-11-26",
     size: "小更新",

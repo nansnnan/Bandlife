@@ -1195,6 +1195,14 @@ function renderVideoPlatform() {
   if (!el) return;
   const tab = window._videoTab || "feed";
 
+  if (typeof videoPlatformOnline === "function" && !videoPlatformOnline()) {
+    el.innerHTML = `
+      <div class="section-title">📺 视频平台</div>
+      <div class="award-empty-big">视频平台暂未上线，预计 2009 年 7 月 1 日上线。</div>
+    `;
+    return;
+  }
+
   if (window._videoDetail) {
     renderVideoDetail(el, window._videoDetail);
     return;
@@ -1225,7 +1233,8 @@ function renderVideoPlatform() {
     </div>
     <div class="bf-hint">${tab === "mine"
       ? "乐队官方账号：在此查看已发布的视频。发布未经剪辑的视频会大幅影响乐队评价。"
-      : "本期推荐视频，专业乐评、大众听感、音乐分享、排行榜与其他乐队动态。"}</div>
+      : "本期推荐视频，专业乐评、大众听感、音乐分享、排行榜与其他乐队动态。"}
+      <span class="bf-users">平台用户约 ${formatNumber(videoUserBase())} 人</span></div>
     ${list.length ? `<div class="bf-grid">${list.map(card).join("")}</div>`
       : `<div class="award-empty-big">${tab === "mine" ? "还没有发布任何视频，去「视频制作」制作并发布吧。" : "暂无视频。"}</div>`}
   `;
