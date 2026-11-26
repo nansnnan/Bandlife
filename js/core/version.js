@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.14",
+    date: "2026-11-26",
+    size: "小更新",
+    items: [
+      "修复竞争对手详情页与评分网站平均评分对不上的问题：评分种子统一按「乐队 + 专辑 + 曲名」生成，两处结果完全一致。",
+    ],
+  },
+  {
     version: "1.3.13",
     date: "2026-11-26",
     size: "小更新",

@@ -37,6 +37,8 @@ function collectAllRatingTracks() {
         quality: rel.quality,
         dayIndex: rel.dayIndex,
         isRival: true,
+        ratings: rel.ratings,       // 复用竞争对手页已算出的评分，保证两处一致
+        avgScore: rel.avgScore,
       });
     }
   }

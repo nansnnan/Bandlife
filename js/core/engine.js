@@ -364,8 +364,9 @@ function generateRatings(release) {
   const ratings = [];
   for (const pf of window.RATING_PLATFORMS) {
     const base = release.quality;
-    // 平台口味偏差（基于 id + 平台名的确定性种子，保证同一作品评分稳定不变）
-    const u = seededUnit(String(release.id || release.name) + "|" + pf.name);
+    // 平台口味偏差：种子按「乐队 + 专辑 + 曲名」组合，保证各页面看到的同一首作品评分一致
+    const seedKey = (release.bandName || "") + "|" + (release.album || release.name || "") + "|" + (release.name || release.id || "");
+    const u = seededUnit(seedKey + "|" + pf.name);
     const bias = pf.type === "媒体乐评" ? (-4 + u * 6) : (-3 + u * 6);
     let score = clamp(base + bias, 0, 100);
     // 映射到平台分数制度
