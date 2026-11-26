@@ -263,9 +263,12 @@ function buildPlatformFeed(week) {
   for (const r of (Game.rivals || [])) if (r.active) bandNames.push(r.name);
 
   const videos = [];
-  const N = 12;
-  // 6 个有关视频覆盖全部五类（其中一类出现两次），顺序按周确定性打乱
-  const relSeq = ["critic", "casual", "share", "chart", "bandofficial", "critic"]
+  const N = 18;
+  // 9 个有关视频覆盖全部五类（多出的按类循环补足），顺序按周期确定性打乱
+  const baseTypes = ["critic", "casual", "share", "chart", "bandofficial"];
+  const seqBuild = [];
+  for (let k = 0; k < Math.ceil(N / 2); k++) seqBuild.push(baseTypes[k % baseTypes.length]);
+  const relSeq = seqBuild
     .map((id, k) => ({ id, o: rnd("seq" + k) }))
     .sort((a, b) => a.o - b.o)
     .map(x => x.id);
@@ -292,7 +295,7 @@ function buildPlatformFeed(week) {
         const wantAlbum = /整轨|全专|全曲|专辑分享|歌单|播放列表/.test(tpl || "");
         const filtered = allRels.filter(x => wantAlbum
           ? (x.releaseType === "专辑" || x.releaseType === "EP")
-          : x.releaseType === "单曲");
+          : true);   // 单曲分享：任意一首均可，专辑曲目同样计入
         if (filtered.length) relPool = filtered;
       }
       rel = relPool[Math.floor(rnd("r" + i) * relPool.length) % relPool.length];
@@ -329,7 +332,7 @@ function buildPlatformFeed(week) {
     const firstSentence = (summary.split(/[。！？!?]/)[0] || summary).trim();
     const title = firstSentence.length > 34 ? firstSentence.slice(0, 34) + "…" : firstSentence;
     const author = videoAuthorOf(t.id, bandName, "pf_" + week + "_" + i);
-    let duration;
+    let duration, subKind = null;
     if (t.id === "critic") {
       duration = 600 + Math.floor(rnd("dur" + i) * 1500);            // 深度解析：10~35 分钟
     } else if (t.id === "casual") {
@@ -346,13 +349,19 @@ function buildPlatformFeed(week) {
     } else if (t.id === "chart") {
       duration = 480 + Math.floor(rnd("dur" + i) * 900);             // 排行榜：8~23 分钟
     } else if (t.id === "bandofficial") {
-      duration = 120 + Math.floor(rnd("dur" + i) * 480);             // 官方内容：2~10 分钟
+      // 其他乐队官方也会制作 MV、预告片与纪录片，时长基准与自制视频一致
+      const sub = rnd("sub" + i);
+      if (sub < 0.5) { subKind = "mv"; duration = rel ? (rel.duration || 240) : 240; }
+      else if (sub < 0.78) { subKind = "trailer"; duration = 30 + Math.floor(rnd("dur" + i) * 30); }
+      else { subKind = "doc"; duration = 900 + Math.floor(rnd("dur" + i) * 900); }
     } else {
       duration = 120 + Math.floor(rnd("dur" + i) * 780);             // 生活区：2~15 分钟
     }
     videos.push({
       id: "pf_" + week + "_" + i,
-      type: t.id, typeName: t.name, related, author, duration,
+      type: t.id,
+      typeName: subKind === "mv" ? "官方MV" : subKind === "trailer" ? "官方预告" : subKind === "doc" ? "官方纪录" : t.name,
+      subtype: subKind, related, author, duration,
       title,
       summary, band: bandName, album: albumName, song: songName,
       sentiment, rank, views,
@@ -416,12 +425,17 @@ function applyVideoInfluence(v) {
 // 每周结算一次平台影响
 function settleVideoPlatform() {
   if (!videoPlatformOnline()) return [];
-  const week = Math.floor(Game.dayIndex / 7);
-  if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [] };
-  if (Game.videoPlatform.week === week) return Game.videoPlatform.videos;
-  const videos = buildPlatformFeed(week);
-  videos.forEach(applyVideoInfluence);
-  Game.videoPlatform = { week, videos };
+  const day = Game.dayIndex;
+  if (!Game.videoPlatform) Game.videoPlatform = { week: -1, videos: [], infWeek: -1 };
+  if (Game.videoPlatform.week === day) return Game.videoPlatform.videos;
+  const videos = buildPlatformFeed(day);
+  // 列表每日刷新，影响结算保持每周一次，避免播放量增长过快
+  const wk = Math.floor(day / 7);
+  if (Game.videoPlatform.infWeek !== wk) {
+    videos.forEach(applyVideoInfluence);
+    Game.videoPlatform.infWeek = wk;
+  }
+  Game.videoPlatform = { week: day, videos, infWeek: Game.videoPlatform.infWeek };
   saveGame();
   return videos;
 }
