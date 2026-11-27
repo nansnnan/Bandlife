@@ -29,6 +29,15 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.16",
+    date: "2026-11-27",
+    size: "小更新",
+    items: [
+      "修复横屏低高度下开始页面内容被裁切的问题：菜单区改为可滚动，内容不足一屏时仍居中显示，导入导出按钮与版本号不再缺失。",
+      "新增横屏低高度适配：在较矮的屏幕上自动压缩主菜单的字号与间距。",
+    ],
+  },
+  {
     version: "1.3.15",
     date: "2026-11-26",
     size: "小更新",

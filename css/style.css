@@ -88,9 +88,16 @@ select { cursor: pointer; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: flex-start;
+  gap: 36px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 16px;
+  box-sizing: border-box;
 }
+/* 内容不足一屏时靠上下 auto 外边距居中；超出时可整体滚动 */
+.menu-logo { margin-top: auto; }
+.menu-footer { margin-bottom: auto; }
 .menu-logo { text-align: center; animation: fadeInUp 0.8s ease; }
 .logo-graphic {
   font-size: 64px;
@@ -105,7 +112,7 @@ select { cursor: pointer; }
 }
 .logo-sub { color: var(--text-dim); letter-spacing: 4px; margin-top: 8px; font-size: 14px; }
 .menu-buttons { display: flex; flex-direction: column; gap: 16px; width: 280px; animation: fadeInUp 0.8s 0.15s ease both; }
-.menu-footer { position: absolute; bottom: 24px; color: var(--text-faint); font-size: 12px; }
+.menu-footer { position: static; color: var(--text-faint); font-size: 12px; }
 
 .btn-primary, .btn-secondary {
   padding: 14px 24px;
@@ -694,6 +701,20 @@ select { cursor: pointer; }
 
   /* ===== 事件日志 ===== */
   .event-log { max-height: 200px; }
+}
+
+/* ===== 横屏低高度：主菜单压缩排版，避免内容被裁切 ===== */
+@media (max-height: 600px) {
+  .menu-content { gap: 14px; padding: 10px 16px; }
+  .logo-graphic { font-size: 38px; }
+  .menu-logo h1 { font-size: 32px; letter-spacing: 4px; margin-top: 2px; }
+  .logo-sub { font-size: 11px; margin-top: 4px; letter-spacing: 2px; }
+  .menu-buttons { gap: 8px; width: 240px; }
+  .menu-buttons .btn-primary,
+  .menu-buttons .btn-secondary { padding: 10px 16px; font-size: 14px; }
+  .menu-save-actions { margin-top: 0; gap: 8px; }
+  .save-hint { font-size: 10px; line-height: 1.4; margin: 4px 0; max-height: 3.2em; overflow-y: auto; }
+  .menu-footer { font-size: 11px; }
 }
 
 /* ===== 排行榜（播放器榜单） ===== */
