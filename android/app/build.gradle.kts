@@ -10,7 +10,7 @@ android {
         applicationId = "cc.bandgame.bandlife"
         minSdk = 23
         targetSdk = 36
-        versionCode = 15
+        versionCode = 16
         versionName = "1.3.15"
     }
 

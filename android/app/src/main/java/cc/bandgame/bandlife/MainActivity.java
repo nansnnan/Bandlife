@@ -45,7 +45,19 @@ public class MainActivity extends Activity {
         }
 
         web.setBackgroundColor(0xFF0F0F1A);
-        web.setWebViewClient(new WebViewClient());
+        web.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                // 兜底：若页面宽度超出可视区域（部分设备不按 viewport 自动缩放），按比例整体缩小
+                view.evaluateJavascript(
+                        "(function(){try{" +
+                        "var vw=window.innerWidth||document.documentElement.clientWidth;" +
+                        "var cw=document.documentElement.scrollWidth||0;" +
+                        "if(vw>0&&cw>vw+2){document.documentElement.style.zoom=(vw/cw);}" +
+                        "}catch(e){}})()", null);
+            }
+        });
         web.setOverScrollMode(View.OVER_SCROLL_NEVER);
         web.loadUrl("file:///android_asset/index.html");
         setContentView(web);

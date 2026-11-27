@@ -11,7 +11,8 @@ cp "$GAME/index.html" "$ASSETS/"
 cp -r "$GAME/css" "$GAME/js" "$GAME/music" "$ASSETS/"
 
 # 桌面端排版：固定视口宽度，WebView 整体缩放
-sed -i 's|content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"|content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"|' "$ASSETS/index.html"
+# 桌面端排版：固定 1024 视口且不指定 initial-scale，由 WebView 自动缩放适配屏幕
+sed -i 's|content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"|content="width=1024, user-scalable=no"|' "$ASSETS/index.html"
 
 cd "$ROOT"
 JAVA_HOME=/usr/lib/jvm/java-17-openjdk-arm64 \
