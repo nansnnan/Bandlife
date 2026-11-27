@@ -1,2 +1,6 @@
 .aicode/
 *.apk
+
+.cache-electron/
+
+*.zip
