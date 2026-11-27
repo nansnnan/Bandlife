@@ -27,9 +27,10 @@ const VENUE_SIZES = {
 };
 
 // ===== 创建巡演 =====
-function createTour(cities, size, tourName) {
+function createTour(cities, size, tourName, setlist) {
   const sizeCfg = VENUE_SIZES[size] || VENUE_SIZES["小型"];
   const totalCost = cities.length * sizeCfg.cost;
+  const songs = (setlist || []).map(x => ({ id: x.id, name: x.name, duration: x.duration || 240 }));
 
   // 预计收入
   const reputation = Game.stats.reputation;
@@ -46,8 +47,34 @@ function createTour(cities, size, tourName) {
     totalIncome,
     dayIndex: Game.dayIndex,
     days: cities.length * 3,  // 每个城市约 3 天
+    setlist: songs,
+    setDuration: songs.reduce((n, x) => n + x.duration, 0),
   };
   return tour;
+}
+
+// 可用的演出曲目：全部已发布作品中的歌曲（含专辑曲目）
+function tourAvailableSongs() {
+  const out = [];
+  for (const rel of (Game.releases || [])) {
+    for (const s of (rel.songs || [])) {
+      out.push({
+        id: s.id || (rel.id + "_" + s.name),
+        name: s.name,
+        duration: s.duration || 240,
+        album: rel.name,
+      });
+    }
+  }
+  return out;
+}
+
+// 巡演录像时长：曲目总长再加 20~30 分钟（换场、互动、返场）
+function tourFootageDuration(tour) {
+  const base = (tour.setDuration != null)
+    ? tour.setDuration
+    : (tour.setlist || []).reduce((n, x) => n + (x.duration || 240), 0);
+  return Math.max(1800, base + (20 + Math.floor(seededUnit("live|" + tour.id) * 10)) * 60);
 }
 
 // ===== 执行巡演 =====
@@ -72,6 +99,22 @@ function startTour(tour) {
   const repGain = clamp(Math.round(tour.cities.length * (1 + rep / 100) * randf(0.5, 1.5)), 1, 15);
   Game.stats.reputation = clamp(Game.stats.reputation + repGain, 5, 100);
   Game.stats.totalFans += Math.round(tour.totalIncome / 100);
+
+  // 记录巡演（供巡演录像使用）
+  if (!Game.tours) Game.tours = [];
+  Game.tours.unshift({
+    id: tour.id,
+    name: tour.name,
+    cities: tour.cities.map(c => c.name),
+    size: tour.size,
+    dayIndex: Game.dayIndex,
+    days: tour.days,
+    setlist: tour.setlist || [],
+    setDuration: tour.setDuration || 0,
+    footageDuration: tourFootageDuration(tour),
+    income: actualIncome,
+  });
+  if (Game.tours.length > 40) Game.tours.length = 40;
 
   // 推进时间
   advanceTime(tour.days);

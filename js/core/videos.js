@@ -4,6 +4,8 @@ const VIDEO_TYPES = {
   mv:      { id: "mv",      name: "MV",     days: 30, desc: "为某首歌曲拍摄音乐视频" },
   trailer: { id: "trailer", name: "预告片", days: 25, desc: "专辑发布前的预告影像" },
   doc:     { id: "doc",     name: "纪录片", days: 90, desc: "记录专辑制作过程的纪录片" },
+  album:   { id: "album",   name: "整轨专辑", days: 30, desc: "整张专辑连续播放的影像，时长与专辑总时长一致" },
+  live:    { id: "live",    name: "巡演录像", days: 20, desc: "记录一整场巡演的现场录像，时长约为曲目总长再加 20~30 分钟" },
 };
 
 const VIDEO_EDIT_LEVELS = {
@@ -83,6 +85,14 @@ function startVideo(typeId, targetId) {
     target = (Game.releases || []).find(r => r.id === targetId);
     if (!target) return { ok: false, msg: "请选择一张已发布的专辑或 EP" };
     targetName = target.name; targetKind = "release";
+  } else if (typeId === "album") {
+    target = (Game.releases || []).find(r => r.id === targetId && r.releaseType !== "单曲");
+    if (!target) return { ok: false, msg: "请选择一张已发布的专辑或 EP" };
+    targetName = target.name; targetKind = "release";
+  } else if (typeId === "live") {
+    target = (Game.tours || []).find(t => t.id === targetId);
+    if (!target) return { ok: false, msg: "请选择一场巡演记录" };
+    targetName = target.name; targetKind = "tour";
   } else {
     target = (Game.releases || []).find(r => r.id === targetId);
     if (!target) return { ok: false, msg: "请选择一张已发布的专辑" };
@@ -96,6 +106,7 @@ function startVideo(typeId, targetId) {
     targetId, targetName, targetKind,
     startDay: Game.dayIndex,
     dueDay: Game.dayIndex + t.days,
+    duration: videoTargetDuration(typeId, target),   // 预计成片时长（秒）
     status: "making",
     editLevel: null,
     quality: 0,
@@ -194,6 +205,7 @@ const VIDEO_FEED_TYPES = [
   { id: "share",       name: "音乐分享",   related: true },
   { id: "chart",       name: "音乐排行",   related: true },
   { id: "bandofficial",name: "乐队官方",   related: true },
+  { id: "fanlive",     name: "现场录像",   related: true },
   { id: "other",       name: "生活区",     related: false },
 ];
 
@@ -235,6 +247,16 @@ function releaseTotalDuration(rel) {
   return rel.duration || 240;
 }
 
+// 成片时长：整轨专辑 = 专辑总时长；巡演录像 = 曲目总时长 + 20~30 分钟
+function videoTargetDuration(typeId, target) {
+  if (typeId === "album") return releaseTotalDuration(target);
+  if (typeId === "live") {
+    const setLen = (target.setlist || []).reduce((n, x) => n + (x.duration || 240), 0);
+    return Math.max(1800, setLen + (20 + Math.floor(seededUnit("live|" + target.id) * 10)) * 60);
+  }
+  return 240;
+}
+
 function fmtVideoDuration(sec) {
   const m = Math.floor(sec / 60), s = sec % 60;
   return m + ":" + String(s).padStart(2, "0");
@@ -271,7 +293,7 @@ function buildPlatformFeed(week) {
   const videos = [];
   const N = 18;
   // 9 个有关视频覆盖全部五类（多出的按类循环补足），顺序按周期确定性打乱
-  const baseTypes = ["critic", "casual", "share", "chart", "bandofficial"];
+  const baseTypes = ["critic", "casual", "share", "chart", "bandofficial", "fanlive"];
   const seqBuild = [];
   for (let k = 0; k < Math.ceil(N / 2); k++) seqBuild.push(baseTypes[k % baseTypes.length]);
   const relSeq = seqBuild
@@ -366,22 +388,41 @@ function buildPlatformFeed(week) {
     } else if (t.id === "chart") {
       duration = 480 + Math.floor(rnd("dur" + i) * 900);             // 排行榜：8~23 分钟
     } else if (t.id === "bandofficial") {
-      // 其他乐队官方也会制作 MV、预告片与纪录片，时长基准与自制视频一致
+      // 其他乐队官方也会制作 MV、预告片、纪录片与巡演实录，时长基准与自制视频一致
       const sub = rnd("sub" + i);
-      if (sub < 0.5) { subKind = "mv"; duration = rel ? (rel.duration || 240) : 240; }
-      else if (sub < 0.78) { subKind = "trailer"; duration = 30 + Math.floor(rnd("dur" + i) * 30); }
-      else { subKind = "doc"; duration = 900 + Math.floor(rnd("dur" + i) * 900); }
+      if (sub < 0.40) { subKind = "mv"; duration = rel ? (rel.duration || 240) : 240; }
+      else if (sub < 0.62) { subKind = "trailer"; duration = 30 + Math.floor(rnd("dur" + i) * 30); }
+      else if (sub < 0.82) { subKind = "doc"; duration = 900 + Math.floor(rnd("dur" + i) * 900); }
+      else {
+        // 官方巡演实录：完整版，曲目总长再加 20~30 分钟
+        subKind = "tour";
+        const bandRels = allRels.filter(x => (x.bandName || x.name) === bandName).slice(0, 20);
+        const est = bandRels.reduce((n, x) => n + (x.duration || 240), 0) || 4800;
+        duration = Math.max(1800, est + (20 + Math.floor(rnd("dur" + i) * 10)) * 60);
+      }
+    } else if (t.id === "fanlive") {
+      // 大众录制的现场片段：时长较短
+      duration = 60 + Math.floor(rnd("dur" + i) * 840);
     } else {
       duration = 120 + Math.floor(rnd("dur" + i) * 780);             // 生活区：2~15 分钟
+    }
+    // 巡演录像使用专属文案
+    let finalTitle = title, finalSummary = summary;
+    if (t.id === "bandofficial" && subKind === "tour") {
+      finalTitle = (bandName || "这支乐队") + " 巡演实录 完整版";
+      finalSummary = (bandName || "这支乐队") + "官方发布巡演实录完整版，完整收录当晚曲目与返场，官方机位拍摄。";
+    } else if (t.id === "fanlive") {
+      finalTitle = "【现场】" + (bandName || "乐队") + " 巡演片段";
+      finalSummary = "在台下拍的" + (bandName || "乐队") + "巡演现场片段，镜头有点晃，但气氛是真的。";
     }
     videos.push({
       id: "pf_" + week + "_" + i,
       type: t.id,
-      typeName: subKind === "mv" ? "官方MV" : subKind === "trailer" ? "官方预告" : subKind === "doc" ? "官方纪录" : t.name,
+      typeName: subKind === "mv" ? "官方MV" : subKind === "trailer" ? "官方预告" : subKind === "doc" ? "官方纪录" : subKind === "tour" ? "官方巡演实录" : t.name,
       subtype: subKind, related, author, duration,
       commentCount: Math.round(views * (0.004 + rnd("cm" + i) * 0.012)),
-      title,
-      summary, band: bandName, album: albumName, song: songName,
+      title: finalTitle,
+      summary: finalSummary, band: bandName, album: albumName, song: songName,
       sentiment, rank, views,
       likes: Math.round(views * 0.04), comments: Math.round(views * 0.01),
       releaseId: rel ? rel.id : null,
@@ -436,6 +477,9 @@ function applyVideoInfluence(v) {
       const r = rivalRel.rival;
       r.fans = Math.round((r.fans || 0) * (1 + 0.004 * scale) + 100);
     }
+  } else if (v.type === "fanlive") {
+    // 大众现场录像：小幅带动播放
+    target.plays = Math.round((target.plays || 0) * (1 + 0.012 * scale) + 300 * scale);
   }
   // casual / other：基本无影响
 }

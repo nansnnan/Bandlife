@@ -980,6 +980,7 @@ function handleTrain(memberId, days) {
 function renderTour() {
   const el = document.querySelector('[data-game-view="tour"]');
   const cityMap = getCitiesByProvince();
+  const songList = tourAvailableSongs();
   el.innerHTML = `
     <div class="section-title">巡演</div>
     <div class="card">
@@ -1011,6 +1012,20 @@ function renderTour() {
         </div>
       </div>
       <button class="btn-time" data-action="tour-add" style="width:100%;margin-bottom:12px;">+ 添加到巡演列表</button>
+      <div class="form-group" style="margin-bottom:12px;">
+        <label>演出曲目（至少 15 首，已选 <b id="tour-song-count">0</b> / ${songList.length}）</label>
+        <div style="display:flex;gap:8px;margin-bottom:8px;">
+          <button class="mini-btn" data-action="tour-songs-all">全选</button>
+          <button class="mini-btn" data-action="tour-songs-none">清空</button>
+        </div>
+        <div id="tour-song-list" style="max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:8px;">
+          ${songList.length ? songList.map((sg, i) => `
+            <label class="opt-item" style="display:flex;gap:8px;padding:6px 4px;">
+              <input type="checkbox" class="tour-song-cb" data-id="${escapeHtml(sg.id)}" data-name="${escapeHtml(sg.name)}" data-dur="${sg.duration}">
+              <span>${escapeHtml(sg.name)}<span style="color:var(--text-faint);font-size:12px;"> · ${escapeHtml(sg.album || "")}</span></span>
+            </label>`).join("") : `<div style="color:var(--text-faint);padding:8px;">暂无已发布歌曲，请先发布作品。</div>`}
+        </div>
+      </div>
       <div id="tour-list" style="margin-bottom:12px;"></div>
       <div id="tour-summary" style="color:var(--text-dim);font-size:13px;margin-bottom:12px;"></div>
       <button class="btn-primary" data-action="tour-start" style="width:100%;">开始巡演</button>
@@ -1027,6 +1042,13 @@ function renderTour() {
   document.getElementById("tour-city").addEventListener("change", updateTourCounty);
   window._tourCities = [];
   renderTourList();
+  const syncCount = () => {
+    const n = document.querySelectorAll(".tour-song-cb:checked").length;
+    const c = document.getElementById("tour-song-count");
+    if (c) c.textContent = n;
+  };
+  document.querySelectorAll(".tour-song-cb").forEach(cb => cb.addEventListener("change", syncCount));
+  syncCount();
 }
 
 function updateTourCity() {
@@ -1086,9 +1108,18 @@ function handleTourAdd() {
 function handleTourStart() {
   const cities = window._tourCities || [];
   if (!cities.length) { alert("请先添加演出城市"); return; }
+  const picked = [...document.querySelectorAll(".tour-song-cb:checked")].map(cb => ({
+    id: cb.dataset.id,
+    name: cb.dataset.name,
+    duration: Number(cb.dataset.dur) || 240,
+  }));
+  if (picked.length < 15) {
+    alert(`演出曲目至少 15 首（含专辑曲目），当前已选 ${picked.length} 首。`);
+    return;
+  }
   const size = document.getElementById("tour-size").value;
   const name = document.getElementById("tour-name").value.trim();
-  const tour = createTour(cities, size, name);
+  const tour = createTour(cities, size, name, picked);
   const res = startTour(tour);
   if (!res.ok) { alert(res.msg); return; }
   window._tourCities = [];
@@ -1165,6 +1196,10 @@ function renderVideoStudio() {
     .map(s => `<option value="${s.id}">《${escapeHtml(s.name)}》</option>`).join("");
   const relOpts = (Game.releases || [])
     .map(r => `<option value="${r.id}">${escapeHtml(r.releaseType)}《${escapeHtml(r.name)}》</option>`).join("");
+  const albumOpts = (Game.releases || []).filter(r => r.releaseType !== "单曲")
+    .map(r => `<option value="${r.id}">${escapeHtml(r.releaseType)}《${escapeHtml(r.name)}》· ${fmtVideoDuration(releaseTotalDuration(r))}</option>`).join("");
+  const tourOpts = (Game.tours || [])
+    .map(t => `<option value="${t.id}">${escapeHtml(t.name)}（${(t.setlist || []).length} 首 · 录像约 ${fmtVideoDuration(t.footageDuration || tourFootageDuration(t))}）</option>`).join("");
 
   const making = Game.videos.filter(v => v.status === "making");
   const unedited = Game.videos.filter(v => v.status === "unedited");
@@ -1198,6 +1233,12 @@ function renderVideoStudio() {
       ${typeCard(VIDEO_TYPES.doc, `
         <select id="video-target-doc" class="input">${relOpts || '<option value="">（暂无已发布作品）</option>'}</select>
         <button class="btn btn-primary btn-sm" data-action="video-start" data-type="doc">开始制作纪录片</button>`)}
+      ${typeCard(VIDEO_TYPES.album, `
+        <select id="video-target-album" class="input">${albumOpts || '<option value="">（暂无已发布专辑）</option>'}</select>
+        <button class="btn btn-primary btn-sm" data-action="video-start" data-type="album">开始制作整轨专辑</button>`)}
+      ${typeCard(VIDEO_TYPES.live, `
+        <select id="video-target-live" class="input">${tourOpts || '<option value="">（暂无巡演记录）</option>'}</select>
+        <button class="btn btn-primary btn-sm" data-action="video-start" data-type="live">开始制作巡演录像</button>`)}
     </div>
 
     ${making.length ? `<div class="section-title">制作中（${making.length}）</div>
@@ -1297,13 +1338,75 @@ function renderVideoPlatform() {
   `;
 }
 
+// ===== 视频详情页播放器 =====
+let videoPlayer = { id: null, pos: 0, dur: 0, timer: null };
+
+function stopVideoPlayer() {
+  if (videoPlayer.timer) clearInterval(videoPlayer.timer);
+  videoPlayer = { id: null, pos: 0, dur: 0, timer: null };
+}
+
+function updateVideoProgress() {
+  const bar = document.getElementById("bf-progress-bar");
+  const time = document.getElementById("bf-time");
+  const dur = videoPlayer.dur || 0;
+  if (bar) bar.style.width = (dur ? (videoPlayer.pos / dur) * 100 : 0) + "%";
+  if (time) time.textContent = fmtVideoDuration(Math.floor(videoPlayer.pos)) + " / " + fmtVideoDuration(dur);
+}
+
+function toggleVideoPlay(id, dur) {
+  const player = document.getElementById("bf-player");
+  const icon = document.getElementById("bf-play-icon");
+  // 正在播放同一视频 → 暂停
+  if (videoPlayer.id === id && videoPlayer.timer) {
+    clearInterval(videoPlayer.timer);
+    videoPlayer.timer = null;
+    if (player) player.classList.remove("playing");
+    if (icon) icon.textContent = "▶";
+    return;
+  }
+  if (videoPlayer.id !== id) { stopVideoPlayer(); videoPlayer.id = id; videoPlayer.pos = 0; }
+  videoPlayer.dur = dur;
+  const step = () => {
+    videoPlayer.pos += Math.max(1, videoPlayer.dur / 240);   // 约 4 倍速推进
+    if (videoPlayer.pos >= videoPlayer.dur) {
+      videoPlayer.pos = videoPlayer.dur;
+      updateVideoProgress();
+      stopVideoPlayer();
+      const p = document.getElementById("bf-player");
+      const ic = document.getElementById("bf-play-icon");
+      if (p) p.classList.remove("playing");
+      if (ic) ic.textContent = "▶";
+      return;
+    }
+    updateVideoProgress();
+  };
+  updateVideoProgress();
+  videoPlayer.timer = setInterval(step, 200);
+  if (player) player.classList.add("playing");
+  if (icon) icon.textContent = "❚❚";
+}
+
+function seekVideo(id, dur, ratio) {
+  if (videoPlayer.id !== id) { stopVideoPlayer(); videoPlayer.id = id; videoPlayer.dur = dur; }
+  videoPlayer.dur = dur;
+  videoPlayer.pos = clamp(ratio, 0, 1) * dur;
+  updateVideoProgress();
+}
+
 function renderVideoDetail(el, detail) {
+  stopVideoPlayer();
   const v = detail.video;
   const cmts = videoCommentList(v);
   el.innerHTML = `
     <div class="bf-back" data-action="video-back">← 返回视频列表</div>
     <div class="bf-detail">
-      <div class="bf-player"><div class="bf-play-icon">▶</div><div class="bf-play-meta">${formatNumber(v.views || 0)} 播放 · ${v.typeName || "视频"}</div></div>
+      <div class="bf-player" id="bf-player" data-action="video-toggle" data-id="${escapeHtml(v.id)}" data-dur="${v.duration || 180}" style="${videoCoverStyle(v.id)}">
+        <div class="bf-play-icon" id="bf-play-icon">▶</div>
+        <div class="bf-play-meta">${formatNumber(v.views || 0)} 播放 · ${v.typeName || "视频"}</div>
+        <div class="bf-progress" id="bf-progress" data-action="video-seek" data-id="${escapeHtml(v.id)}" data-dur="${v.duration || 180}"><div class="bf-progress-bar" id="bf-progress-bar"></div></div>
+        <div class="bf-time" id="bf-time">0:00 / ${fmtVideoDuration(v.duration || 180)}</div>
+      </div>
       <div class="bf-detail-title">${escapeHtml(v.title)}</div>
       <div class="bf-detail-meta">UP ${escapeHtml(v.author || v.band || "乐队官方")} · ${formatNumber(v.views || 0)} 播放 · ${formatNumber(v.likes || 0)} 点赞 · ${formatNumber(v.comments || 0)} 弹幕 · ${fmtVideoDuration(v.duration || 180)}</div>
       <div class="bf-summary-block"><div class="bf-summary-label">视频简介</div><p>${escapeHtml(v.summary || "暂无简介")}</p></div>

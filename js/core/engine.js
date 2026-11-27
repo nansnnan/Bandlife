@@ -15,6 +15,7 @@ function initGame(mode, bandData) {
   Game.videos = [];                     // 视频（制作中 / 待剪辑 / 已发布）
   Game.videoPlatform = { week: -1, videos: [], infWeek: -1 };
   Game.rivalVideoArchive = {};
+  Game.tours = [];
   Game.awards = { nominations: null, results: null, history: [] };
   addEvent("乐队生涯从 2000 年 1 月 1 日开始。");
   addEvent(`乐队「${Game.band.name}」正式成立，风格：${Game.band.style}。`);

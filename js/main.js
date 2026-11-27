@@ -185,6 +185,32 @@ function bindEvents() {
         renderVideoStudio(); break;
       }
 
+      // 视频详情页播放
+      case "video-toggle":
+        toggleVideoPlay(target.dataset.id, Number(target.dataset.dur) || 180);
+        break;
+      case "video-seek": {
+        const rect = target.getBoundingClientRect();
+        const ratio = rect.width ? (e.clientX - rect.left) / rect.width : 0;
+        seekVideo(target.dataset.id, Number(target.dataset.dur) || 180, ratio);
+        break;
+      }
+
+      // 巡演选歌
+      case "tour-songs-all": {
+        document.querySelectorAll(".tour-song-cb").forEach(cb => { cb.checked = true; });
+        const n = document.querySelectorAll(".tour-song-cb:checked").length;
+        const c = document.getElementById("tour-song-count");
+        if (c) c.textContent = n;
+        break;
+      }
+      case "tour-songs-none": {
+        document.querySelectorAll(".tour-song-cb").forEach(cb => { cb.checked = false; });
+        const c = document.getElementById("tour-song-count");
+        if (c) c.textContent = 0;
+        break;
+      }
+
       // 竞争对手视频主页
       case "rival-videos":
         window._rivalVideoName = target.dataset.name;
