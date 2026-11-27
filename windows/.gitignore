@@ -1,3 +1,7 @@
 build/
 build-neu/
 node_modules/
+build-legacy-lite/
+build-legacy/
+build-neu/
+build/
