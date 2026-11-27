@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.18",
+    date: "2026-11-27",
+    size: "小更新",
+    items: [
+      "修复音乐播放器中展开专辑后点击曲目却按整张专辑播放的问题：现在每首歌都按单曲播放，时长与评论区各自独立。",
+    ],
+  },
+  {
     version: "1.3.17",
     date: "2026-11-27",
     size: "小更新",

@@ -133,7 +133,8 @@ function buildCharts() {
     albums.push({
       key: "own||" + rel.id, bandName: rel.bandName || Game.band.name, album: rel.name,
       plays: rel.plays || 0, sales: rel.sales || 0, releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: false,
-      tracks: rel.songs.map(s => ({ name: s.name, playId: rel.id })),
+      // 展开曲目按单曲播放（playId 指向歌曲本身，而非整张专辑）
+      tracks: rel.songs.map(s => ({ name: s.name, playId: s.id || (rel.id + "_" + s.name) })),
     });
   }
   const map = {};
@@ -177,7 +178,7 @@ function buildLibrary() {
     albums.push({
       key: "own||" + rel.id, album: rel.name, bandName: rel.bandName || Game.band.name,
       releaseType: rel.releaseType, dayIndex: rel.dayIndex, isRival: false,
-      tracks: rel.songs.map((sg, i) => ({ name: sg.name, playId: rel.id, idx: i })),
+      tracks: rel.songs.map((sg, i) => ({ name: sg.name, playId: sg.id || (rel.id + "_" + sg.name), idx: i })),
     });
     rel.songs.forEach(sg => {
       songs.push({ id: sg.id || (rel.id + "_" + sg.name), name: sg.name, bandName: rel.bandName || Game.band.name, album: rel.name, dayIndex: rel.dayIndex });
