@@ -102,6 +102,16 @@ function buildCharts() {
         dayIndex: rel.dayIndex, quality: song.quality, isRival: false,
         style: rel.style, releaseType: rel.releaseType,
         share, jitter, duration: song.duration, lyrics: song.lyrics || "", source: rel,
+        // 每首歌独立的评论来源，避免同一专辑内所有歌曲共用评论
+        commentSource: {
+          id: "song|" + rel.id + "|" + (song.id || song.name),
+          name: song.name,
+          bandName: rel.bandName || Game.band.name,
+          style: rel.style,
+          quality: song.quality,
+          dayIndex: rel.dayIndex,
+          comments: Math.round((rel.comments || 0) * share),
+        },
       });
     });
   }
@@ -346,12 +356,14 @@ function renderPlayerDetail(track) {
   const jitter = track.jitter || 1;
   const plays = Math.round((source.plays ?? track.plays ?? 0) * share * jitter);
   const likes = source.likes ?? track.likes;
-  const totalComments = source.comments ?? track.comments;
+  const cs = track.commentSource || source;
+  const totalComments = cs.comments ?? source.comments ?? track.comments;
   // 生成评论列表（基于真实评论总数，评论数为 0 时不生成）
   const commentCount = Math.min(20, Math.round(totalComments / 50));
-  let comments = source.commentList || [];
+  // 歌曲级评论源为临时对象（不写回专辑缓存），专辑级仍复用缓存
+  let comments = track.commentSource ? [] : (source.commentList || []);
   if (!comments.length && commentCount > 0) {
-    comments = generateComments(source, commentCount);
+    comments = generateComments(cs, commentCount);
   }
   const progress = Math.round(Player.progress * 100);
   const curSec = Math.round(Player.progress * track.duration);
@@ -454,7 +466,7 @@ function playTrack(id) {
       releaseType: s.releaseType, duration: s.duration || 240,
       likes: s.source.likes, comments: s.source.comments,
       lyrics: s.lyrics || "", source: s.source, isRival: s.isRival, quality: s.quality,
-      share: s.share || 1, jitter: s.jitter || 1,
+      share: s.share || 1, jitter: s.jitter || 1, commentSource: s.commentSource || null,
     };
   } else {
     const tracks = collectAllTracks();

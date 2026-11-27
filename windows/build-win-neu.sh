@@ -25,7 +25,7 @@ rm -rf "$OUT/tmp"
 cat > "$APP/resources/neutralino.config.json" <<'JSON'
 {
   "applicationId": "cc.bandgame.bandlife",
-  "version": "1.3.16",
+  "version": "1.3.17",
   "defaultMode": "window",
   "port": 38217,
   "documentRoot": "/",

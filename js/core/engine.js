@@ -429,30 +429,35 @@ function generateComments(release, count) {
   const quality = (release.quality || 50) / 100;
   const negProb = quality < 0.4 ? 0.4 : quality < 0.6 ? 0.18 : 0.05;
   const posKeys = ["resonance", "resonance", "resonance", "nostalgic", "sad", "humor", "punchline"];
+  // 用确定性种子，保证同一条目评论稳定、不同歌曲互不相同
+  const seedKey = String(release.id || release.name || "x");
+  const rnd = salt => seededUnit("cmt|" + seedKey + "|" + salt);
   const usedText = new Set();
-  const userPool = shuffle(U);
+  const userPool = (U || []).map((u, i) => ({ u, k: rnd("u" + i) }))
+    .sort((a, b) => a.k - b.k).map(x => x.u);
   const spanDays = Math.max(1, Game.dayIndex - (release.dayIndex || 0));
   const list = [];
   for (let i = 0; i < count; i++) {
-    const isNeg = Game.rng() < negProb;
+    const isNeg = rnd("n" + i) < negProb;
     let pool;
     if (isNeg) pool = T.negative;
-    else if (Game.rng() < 0.18) pool = T.short;
-    else pool = T[posKeys[Math.floor(Game.rng() * posKeys.length)]];
+    else if (rnd("p" + i) < 0.18) pool = T.short;
+    else pool = T[posKeys[Math.floor(rnd("k" + i) * posKeys.length)]];
     let tpl = null;
     for (let t = 0; t < 12; t++) {
-      const cand = pick(pool);
+      const cand = pool[Math.floor(rnd("c" + i + "_" + t) * pool.length) % pool.length];
       if (!usedText.has(cand)) { tpl = cand; usedText.add(cand); break; }
     }
-    if (!tpl) tpl = pick(pool);
+    if (!tpl) tpl = pool[Math.floor(rnd("f" + i) * pool.length) % pool.length];
     const text = tpl
       .replace(/\{song\}/g, release.name)
       .replace(/\{band\}/g, release.bandName || Game.band?.name || "")
       .replace(/\{style\}/g, release.style || "")
       .replace(/\{album\}/g, release.name);
-    const day = Game.dayIndex - Math.floor(Game.rng() * spanDays);
-    const likes = Math.round(Math.pow(Game.rng(), 4) * 15000);
-    const user = userPool[i % userPool.length] + (i >= userPool.length ? (Math.floor(i / userPool.length) + 1) : "");
+    const day = Game.dayIndex - Math.floor(rnd("d" + i) * spanDays);
+    const likes = Math.round(Math.pow(rnd("l" + i), 4) * 15000);
+    const pool2 = userPool.length ? userPool : ["听众"];
+    const user = pool2[i % pool2.length] + (i >= pool2.length ? (Math.floor(i / pool2.length) + 1) : "");
     list.push({ user, text, likes, time: formatDateShort(day) });
   }
   list.sort((a, b) => b.likes - a.likes);

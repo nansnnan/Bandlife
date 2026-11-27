@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.17",
+    date: "2026-11-27",
+    size: "小更新",
+    items: [
+      "修复自己创作的 EP / 专辑中，各首歌曲的播放器评论区显示完全相同评论的问题，现在每首歌都有独立的评论内容与数量。",
+    ],
+  },
+  {
     version: "1.3.16",
     date: "2026-11-27",
     size: "小更新",
