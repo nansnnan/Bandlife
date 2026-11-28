@@ -29,6 +29,14 @@ function updateSizeLabel(changeCount) {
 // 每条：{ version, date, size, items: [润色后的更新条目] }
 window.UPDATE_LOGS = [
   {
+    version: "1.3.19",
+    date: "2026-11-27",
+    size: "小更新",
+    items: [
+      "修复专辑销售款未计入预算的问题：数字与实体专辑每日售出的收入现在会结算进乐队预算，并计入总收入统计（实体专辑按售价结算，制作成本仍在发布时预付）。",
+    ],
+  },
+  {
     version: "1.3.18",
     date: "2026-11-27",
     size: "小更新",

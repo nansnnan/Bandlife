@@ -325,10 +325,12 @@ function growSales(rel, days) {
   const heat = Math.pow(Math.max(1, rel.plays || 0), 0.5);
   rel.salesDigital = rel.salesDigital || 0;
   rel.salesPhysical = rel.salesPhysical || 0;
+  let units = 0;
   if (rel.saleMode === "数字") {
     const priceF = Math.max(0.2, 1 - rel.price / 60);
     const unit = (rel.quality / 100) * heat * 0.08 * priceF * days;
-    rel.salesDigital += Math.round(unit * randf(0.7, 1.3));
+    units = Math.round(unit * randf(0.7, 1.3));
+    rel.salesDigital += units;
   } else {
     if ((rel.stock || 0) <= 0) {
       rel.sales = (rel.salesDigital || 0) + (rel.salesPhysical || 0);
@@ -336,12 +338,25 @@ function growSales(rel, days) {
     }
     const priceF = Math.max(0.2, 1 - rel.price / 400);
     const unit = (rel.quality / 100) * heat * 0.03 * priceF * days;
-    let add = Math.round(unit * randf(0.7, 1.3));
-    add = Math.min(add, rel.stock);
-    rel.salesPhysical += add;
-    rel.stock -= add;
+    units = Math.round(unit * randf(0.7, 1.3));
+    units = Math.min(units, rel.stock);
+    rel.salesPhysical += units;
+    rel.stock -= units;
   }
   rel.sales = (rel.salesDigital || 0) + (rel.salesPhysical || 0);
+  // 销售收入计入预算（实体制作成本已在发布时预付，此处按售价结算）
+  if (units > 0) settleSalesIncome(units * (rel.price || 0));
+}
+
+// 专辑销售款入账
+function settleSalesIncome(income) {
+  const amount = Math.round(income || 0);
+  if (amount <= 0) return;
+  if (!Game.finance) Game.finance = { balance: 0, totalIncome: 0, totalExpense: 0 };
+  Game.finance.totalIncome = (Game.finance.totalIncome || 0) + amount;
+  if (Game.mode === "real") {
+    Game.finance.balance += amount;
+  }
 }
 
 function likeRate(quality) {
